@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+out/units/
+out/*.log
+out/*.bak-*
+
+20260922T172249_32024R1689_3f672e3e/

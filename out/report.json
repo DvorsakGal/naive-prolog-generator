@@ -1,0 +1,196 @@
+{
+  "syntax": {
+    "ran": true,
+    "ok": true,
+    "returncode": 0,
+    "errors": 0,
+    "warnings": 0,
+    "detail": ""
+  },
+  "coverage": {
+    "units_selected": 285,
+    "units_without_snippet": 0,
+    "missing_units": [],
+    "total_facts": 2468,
+    "distinct_predicates": 18,
+    "unit_facts_present": 285,
+    "unit_facts_unexpected": 95,
+    "predicates": {
+      "references/2": 1174,
+      "obligation/3": 445,
+      "unit/3": 403,
+      "condition/2": 123,
+      "definition/2": 88,
+      "requirement/3": 85,
+      "title/2": 44,
+      "prohibition/3": 32,
+      "applies_to/2": 24,
+      "exempt/3": 13,
+      "penalty/3": 12,
+      "deadline/2": 11,
+      "exemption/3": 4,
+      "permission/3": 3,
+      "condition/3": 3,
+      "deadline/3": 2,
+      "empowered/3": 1,
+      "power/3": 1
+    }
+  },
+  "references": {
+    "truth_edges": 1128,
+    "emitted_edges": 1167,
+    "chunk": {
+      "true_positives": 1071,
+      "false_positives": 33,
+      "false_negatives": 57,
+      "precision": 0.97,
+      "recall": 0.949,
+      "f1": 0.96
+    },
+    "strict": {
+      "true_positives": 818,
+      "false_positives": 16,
+      "false_negatives": 310,
+      "precision": 0.981,
+      "recall": 0.725,
+      "f1": 0.834
+    },
+    "units_with_chunk_errors": 11,
+    "units_with_strict_errors": 21,
+    "orphan_source_atoms": [
+      "art_1",
+      "art_100_par_1",
+      "art_100_par_2",
+      "art_100_par_3",
+      "art_100_par_4",
+      "art_100_par_6",
+      "art_100_par_7",
+      "art_101_par_2",
+      "art_101_par_3",
+      "art_101_par_4"
+    ],
+    "worst_chunks": [
+      {
+        "unit": "celex:32024R1689/oj#chp_1",
+        "kind": "chp",
+        "missed": [
+          "'celex:32002L0058/oj'",
+          "'celex:32019R1020/oj'",
+          "anx_1_sec_2",
+          "art_102",
+          "art_103"
+        ],
+        "spurious": [
+          "'celex:32024R1689/oj#anx_1/sec_2'",
+          "'celex:32024R1689/oj#art_10/par_5'",
+          "'celex:32024R1689/oj#art_102'",
+          "'celex:32024R1689/oj#art_103'",
+          "'celex:32024R1689/oj#art_104'"
+        ]
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_2",
+        "kind": "chp",
+        "missed": [
+          "anx_2",
+          "art_27",
+          "art_49",
+          "art_5",
+          "art_5_par_1_unp_1_pnt_h"
+        ],
+        "spurious": [
+          "'celex:32024R1689/oj#anx_2'",
+          "'celex:32024R1689/oj#art_27'",
+          "'celex:32024R1689/oj#art_49'",
+          "'celex:32024R1689/oj#art_5'",
+          "'celex:32024R1689/oj#art_5/par_1/unp_1/pnt_h'"
+        ]
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_9/sec_3",
+        "kind": "chp",
+        "missed": [
+          "'celex:32019R1020/oj#art_11'",
+          "'celex:32019R1020/oj#art_18'",
+          "'celex:32019R1020/oj#art_21/par_6'",
+          "'celex:32019R1020/oj#chp_6'",
+          "art_77"
+        ],
+        "spurious": [
+          "'celex:32024R1689/oj#chp_9/sec_3'"
+        ]
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_6",
+        "kind": "chp",
+        "missed": [
+          "art_58",
+          "art_60_par_1",
+          "art_61",
+          "art_95"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_3/sec_2",
+        "kind": "chp",
+        "missed": [
+          "art_14_par_1",
+          "art_14_par_2",
+          "art_14_par_3"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_3/sec_3",
+        "kind": "chp",
+        "missed": [
+          "art_26_par_1",
+          "art_26_par_2",
+          "art_27_par_1"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_7",
+        "kind": "chp",
+        "missed": [
+          "'celex:32024R1689/oj'",
+          "art_7"
+        ],
+        "spurious": [
+          "act"
+        ]
+      },
+      {
+        "unit": "celex:32024R1689/oj#chp_3/sec_4",
+        "kind": "chp",
+        "missed": [
+          "art_37",
+          "chp_3_sec_4"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "celex:32024R1689/oj#anx_5",
+        "kind": "anx",
+        "missed": [
+          "art_47"
+        ],
+        "spurious": [
+          "'celex:32024R1689/oj#art_47'"
+        ]
+      },
+      {
+        "unit": "celex:32024R1689/oj#anx_12",
+        "kind": "anx",
+        "missed": [
+          "art_53_par_1_unp_1_pnt_b"
+        ],
+        "spurious": [
+          "'celex:32024R1689/oj#art_53/par_1/unp_1/pnt_b'"
+        ]
+      }
+    ]
+  }
+}
