@@ -13,6 +13,8 @@ it performs no analysis of its own.
 **Latest run:** 285/285 units, clean `swipl` consult, 2,468 facts, reference-graph
 F1 **0.960**, 26.6 min, 0 failures.
 
+**Interactive graph can be accessed [here](https://claude.ai/artifact/FqtHQsD6zjuNzK8ozT2qdo).**
+
 ## Quick start
 
 ```bash

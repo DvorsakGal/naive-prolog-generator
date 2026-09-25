@@ -63,10 +63,17 @@ free on local-ish infrastructure, so the pipeline can be re-run freely as the pr
 tuned. That matters more than it sounds: the *only* lever in a naive pipeline is the
 prompt, so iteration speed on that one lever is the whole development loop.
 
-**What we give up.** Cross-act semantic relations — e.g. that the AI Act's "risk
-management system" relates to GDPR Article 35's "data protection impact assessment" —
-cannot be inferred, only pointed at. That is an acceptable and explicitly-noted limitation
-of the baseline, and a clear target for the next iteration.
+**What this does not do.** External acts are pointed at, not modelled — which is the
+intended behaviour, not a shortfall. Every cross-act citation survives as an edge carrying
+the annotators' own stable address, `references(art_26, 'celex:32016R0679/oj#art_35')`, so
+"AI Act Article 26 refers to GDPR Article 35" is fully represented and resolves back to
+EUR-Lex or to any future run that does model GDPR. The finished ontology carries 110 such
+provision-level edges and 296 act-level ones, across 120 distinct instruments.
+
+What is genuinely absent is any *semantic* claim about the referenced content — an
+assertion that the AI Act's "risk management system" is conceptually related to GDPR
+Article 35's "data protection impact assessment". Deriving that would mean modelling GDPR
+itself, which is a different deliverable.
 
 ---
 
