@@ -123,5 +123,9 @@ Ranked by expected gain, all deliberately excluded from the baseline:
 2. **Fix the predicate schema** — declare the predicate set and arities up front instead
    of suggesting them.
 3. **Split container units** before generation, so chapters get article-level treatment.
-4. **Feed definitions as context** — Article 3's 68 definitions are generated in isolation
-   and never reach the calls that use those terms.
+4. **Feed definitions as context** — and first *obtain* them. Only 3 of Article 3's 68
+   definitions exist as units in this corpus (points 1, 49(b), 49(c)); `units/` is a
+   reference closure, so it holds the provisions something pointed at, not all of them.
+   The other 65 are recoverable from the whole-act unit, where Article 3 is a contiguous
+   17,201-character block. Those definitions then need to reach the calls that use the
+   terms.

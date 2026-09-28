@@ -24,3 +24,6 @@ real_time_rbi_system(S) :-
 * Every step in the transformation to FOL pipeline should be deterministic, only stochastic part should be the LLM call, since it's a black box. So batching, orchestreation etc. needs to be completely deterministic, consistent and transparent
 * Because of that pipeline documentation should be more detailed and well explained what is going on
 * Without last 2 points (determinism and good documentation) we cannot gain experimental insights
+
+### Experimental viewpoint
+* With full determinism and consistency of the pipeline (minus LLM calls) we can start answering questions like how much context per call should we give the LLM, how to batch, orchestration etc.
