@@ -27,6 +27,11 @@ class Unit:
     celex: str
     bind: str
     xml: str
+    # Character offsets of this unit within its source document. Added for v3:
+    # they give exact structural containment (chp_3 contains art_9), which id
+    # prefixes cannot express because 'chp_3' and 'art_9' are sibling fragments.
+    start: int = -1
+    end: int = -1
 
     @property
     def fragment(self) -> str:
@@ -44,6 +49,23 @@ class Unit:
     @property
     def size(self) -> int:
         return len(self.xml)
+
+    @property
+    def span(self) -> tuple[int, int] | None:
+        """(start, end) in the source document, or None if not recorded."""
+        return (self.start, self.end) if self.start >= 0 and self.end > self.start else None
+
+    def contains(self, other: "Unit") -> bool:
+        """True if this unit's text span strictly encloses another's."""
+        a, b = self.span, other.span
+        if a is None or b is None or self.doc_id != other.doc_id:
+            return False
+        return a[0] <= b[0] and b[1] <= a[1] and a != b
+
+    @property
+    def doc_id(self) -> str:
+        """The document part of the uid, without the fragment."""
+        return self.uid.split("#")[0]
 
     def refs(self) -> list[str]:
         """Annotated cross-reference targets, in order of appearance, with duplicates."""
@@ -72,6 +94,8 @@ def load_units(units_dir: Path) -> list[Unit]:
                 celex=attrs.get("celex", ""),
                 bind=attrs.get("bind", ""),
                 xml=xml,
+                start=int(attrs.get("start", -1)),
+                end=int(attrs.get("end", -1)),
             )
         )
     return units

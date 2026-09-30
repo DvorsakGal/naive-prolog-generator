@@ -130,6 +130,45 @@ RIGHT -- decomposed into conditions a query can evaluate:
       :- pred name/arity, gloss('...'), source('<this unit id>').
 - Never redefine a signature predicate with a different arity.
 
+## NAMING GRAMMAR -- follow this exactly for predicates you invent
+
+You are one of many independent calls, each formalising a different provision, and none
+of you can see the others' output. If two calls name the same concept differently, the
+rules cannot connect: a rule mentioning permitted_use_x will never match a fact written
+as x_is_permitted. It will not error -- it will just silently never be true.
+
+So invented names are not free choices. Build every one from this grammar:
+
+  MODALITY      prohibited_<thing>      something the act forbids
+                permitted_<thing>       something the act allows
+                required_<thing>        something the act mandates
+                exempt_<thing>          something the act excludes from a rule
+
+  PURPOSE       objective_<purpose>     a permitted purpose or objective
+                                        e.g. objective_localise_suspect
+
+  PROPERTY      <adjective>(X)          a property of one entity
+                                        e.g. real_time(S), high_risk(S)
+
+  ACT/EVENT     <verb>_<object>(A, B)   one party doing something to something
+                                        e.g. places_on_market(P, S)
+
+  DUTY          must_<verb>(Actor, X)   an obligation on a named actor
+                                        e.g. must_notify(Authority, S)
+
+  CONDITION     <noun>_applies(X)       a circumstance that holds
+                                        e.g. urgency_applies(S)
+
+Further constraints:
+- The <thing> part names the SUBJECT MATTER, never the article number. Write
+  prohibited_social_scoring, never prohibited_art_5_1_c. A concept that two articles
+  both talk about must come out with the same name in both.
+- Never abbreviate. Write remote_biometric_identification, not rbi or rt_rbi. Two calls
+  will not invent the same abbreviation, but they will agree on the full words.
+- Singular, not plural. British spelling (authorised, not authorized).
+- Order the words as the grammar shows: modality first, then subject
+  (prohibited_social_scoring, not social_scoring_prohibited).
+
 ## Provenance -- REQUIRED
 
 For every rule head you define, emit one provenance fact naming the unit it came from:

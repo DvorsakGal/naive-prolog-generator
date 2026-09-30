@@ -205,6 +205,156 @@ def analyse(ontology: Path) -> dict:
     }
 
 
+# --------------------------------------------------------------------- v3 addition
+
+STOPWORDS = {"a", "an", "the", "of", "to", "for", "in", "on", "by", "is", "are",
+             "that", "which", "and", "or", "as", "with", "its", "their"}
+
+# Vocabulary-declaration syntax, not domain predicates. `:- pred foo/1, gloss('x'),
+# source('y').` is a directive whose own functors would otherwise be scraped as
+# predicates named pred/gloss/source and counted as invented vocabulary.
+DECL_SYNTAX = {"pred", "gloss", "source", "declared", "provenance", "references",
+               "discontiguous", "dynamic", "module", "use_module", "ensure_loaded"}
+MODALITIES = ("prohibited_", "permitted_", "required_", "exempt_", "objective_",
+              "must_")
+
+
+def _tokens(name: str) -> frozenset[str]:
+    return frozenset(w for w in name.split("_") if w and w not in STOPWORDS)
+
+
+def _gloss_key(gloss: str) -> str:
+    words = [w for w in re.sub(r"[^a-z0-9 ]", " ", gloss.lower()).split()
+             if w not in STOPWORDS]
+    return " ".join(sorted(words))
+
+
+def check_cross_file(out_dir: Path) -> dict:
+    """Is the namespace SHARED across provisions, or did each call invent its own?
+
+    WHY THIS EXISTS (v3)
+    --------------------
+    Every other check in this file is per-file. A set of provisions can each be
+    perfectly internally consistent -- clean syntax, link integrity 1.0, no vacuous
+    negations -- while still failing as one ontology, because call 1 named a concept
+    permitted_use_rt_rbi and call 2 named the same concept permitted_rrbis_use.
+    Nothing errors. The rules simply never connect.
+
+    A per-file linter scores that situation identically to a good one, which makes a
+    large run impossible to judge. This check is what distinguishes them.
+
+    Signature predicates are excluded: those were handed to every call, so agreement
+    on them proves nothing. Only predicates the calls INVENTED are measured.
+
+    INTERPRETING `fragmentation`. It is the share of invented predicates used in only
+    one file, which is an UPPER BOUND on the problem rather than a defect count: many
+    predicates are legitimately provision-specific (prohibited_social_scoring belongs
+    to Article 5 and nowhere else). A high value means "could be fragmented", not "is
+    broken". The `alias_candidates` list is the part a human can actually review, and
+    the cross-file appearance of central concepts (high_risk_ai_system) is the part
+    that shows convergence working.
+    """
+    sig_path = out_dir / "signature.pl"
+    rules_dir = out_dir / "rules"
+    if not sig_path.exists() or not rules_dir.exists():
+        return {"ran": False, "note": "need signature.pl and rules/"}
+
+    sig_names = {n for n, _ in re.findall(
+        r"declared\(\s*([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)", sig_path.read_text("utf-8"))}
+    sig_names |= {n for n, _ in re.findall(
+        r":-\s*pred\s+([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)", sig_path.read_text("utf-8"))}
+
+    # Per-file: which predicates does it declare, define, and reference?
+    declared_in: dict[str, set[str]] = defaultdict(set)
+    glosses: dict[str, list[tuple[str, str]]] = defaultdict(list)  # gloss_key -> [(name, file)]
+    used_in: dict[str, set[str]] = defaultdict(set)
+
+    files = sorted(rules_dir.glob("*.pl"))
+    for f in files:
+        src = f.read_text(encoding="utf-8")
+        for m in re.finditer(
+                r":-\s*pred\s+([a-z_][A-Za-z0-9_]*)\s*/\s*\d+\s*,\s*gloss\(\s*'((?:[^']|'')*)'",
+                src):
+            name, gloss = m.group(1), m.group(2)
+            if name not in sig_names and name not in DECL_SYNTAX:
+                declared_in[name].add(f.name)
+                glosses[_gloss_key(gloss)].append((name, f.name))
+        for clause in split_clauses(src):
+            head, body = split_head_body(clause)
+            ind = indicator(head if head.endswith(")") else head + ".")
+            if ind and ind[0] not in DECL_SYNTAX and ind[0] not in sig_names:
+                used_in[ind[0]].add(f.name)
+            if body:
+                for nm, _a, _n in body_goals(body):
+                    if nm not in sig_names and nm not in DECL_SYNTAX:
+                        used_in[nm].add(f.name)
+
+    invented = sorted(set(declared_in) | set(used_in))
+    shared = [n for n in invented if len(used_in.get(n, set())) > 1]
+    single = [n for n in invented if len(used_in.get(n, set())) <= 1]
+
+    # Alias candidates -- the same concept under two names.
+    aliases: list[dict] = []
+    for key, entries in glosses.items():
+        names = {n for n, _ in entries}
+        if len(names) > 1:
+            aliases.append({"reason": "identical gloss", "names": sorted(names),
+                            "gloss": key[:70]})
+    def _modality(name: str) -> str:
+        for m in MODALITIES:
+            if name.startswith(m):
+                return m
+        return ""
+
+    seen_pairs = set()
+    for i, a in enumerate(invented):
+        ta = _tokens(a)
+        if len(ta) < 2:
+            continue
+        for b in invented[i + 1:]:
+            tb = _tokens(b)
+            if len(tb) < 2:
+                continue
+            # A different modality is a DIFFERENT CONCEPT, not an alias:
+            # permitted_x and prohibited_x are supposed to be distinct predicates.
+            # Without this guard the grammar we just introduced would make the alias
+            # count go UP, because it puts near-identical stems on opposite modalities.
+            ma, mb = _modality(a), _modality(b)
+            if ma and mb and ma != mb:
+                continue
+            j = len(ta & tb) / len(ta | tb)
+            if j >= 0.6 and (a, b) not in seen_pairs:
+                seen_pairs.add((a, b))
+                aliases.append({"reason": f"token overlap {j:.2f}", "names": [a, b]})
+
+    # Descriptive, not a score: the grammar also permits un-prefixed PROPERTY and ACT
+    # forms (causes_significant_harm, employs_subliminal_techniques), so the absence
+    # of a modality prefix is not itself a violation.
+    modality_prefixed = [n for n in invented if n.startswith(MODALITIES)]
+
+    # A real, unambiguous grammar violation: the grammar says name the SUBJECT MATTER,
+    # never the article or annex number. A predicate called annex_3_ai_system cannot
+    # be reused by another provision talking about the same concept.
+    numbered = sorted(n for n in invented
+                      if re.search(r"(^|_)(art|article|anx|annex)_?\d", n))
+    frag = len(single) / len(invented) if invented else 0.0
+
+    return {
+        "ran": True,
+        "files": len(files),
+        "invented_predicates": len(invented),
+        "shared_across_files": len(shared),
+        "single_file_only": len(single),
+        "fragmentation": round(frag, 3),
+        "modality_prefixed": len(modality_prefixed),
+        "violations_number_in_name": numbered,
+        "n_violations_number_in_name": len(numbered),
+        "alias_candidates": aliases[:20],
+        "n_alias_candidates": len(aliases),
+        "shared_sample": sorted(shared)[:15],
+    }
+
+
 def check_syntax(ontology: Path) -> dict:
     if not shutil.which("swipl"):
         return {"ran": False, "note": "swipl not on PATH; skipped"}
@@ -218,10 +368,41 @@ def check_syntax(ontology: Path) -> dict:
             "detail": "\n".join(err.splitlines()[:15])}
 
 
-def check_references(ontology: Path, units_dir: Path, articles: list[str] | None) -> dict:
-    """Carried over from v1: emitted references/2 against the <ref> ground truth."""
+def _prf(tp: int, fp: int, fn: int) -> dict:
+    pr = tp / (tp + fp) if tp + fp else 0.0
+    rc = tp / (tp + fn) if tp + fn else 0.0
+    return {"true_positives": tp, "false_positives": fp, "false_negatives": fn,
+            "precision": round(pr, 3), "recall": round(rc, 3),
+            "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0.0}
+
+
+def _refs_in(text: str) -> set[str]:
+    out = set()
+    for clause in split_clauses(text):
+        if indicator(clause) != ("references", 2):
+            continue
+        m = re.match(r"references\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)\s*\.", clause.strip())
+        if m:
+            out.add(m.group(2))
+    return out
+
+
+def check_references(ontology: Path, units_dir: Path, articles: list[str] | None,
+                     rules_dir: Path | None = None) -> dict:
+    """Emitted references/2 against the <ref> ground truth.
+
+    Two scores, for the same reason as v1:
+
+    * chunk  -- per rule FILE: did the call recover the references in the provision it
+      was shown? Attribution-free, and the metric to read.
+    * strict -- additionally requires references/2's FIRST argument to be the unit id.
+      A call given the whole of Article 5 legitimately attributes a reference to the
+      sub-provision carrying it ('...#art_5/par_2'), which is BETTER provenance but
+      scores as a miss here. Reported for information only.
+    """
     units = select_provisions(units_dir, articles)
     truth = {u.uid: set(u.refs()) for u in units}
+
     emitted: dict[str, set[str]] = defaultdict(set)
     for clause in split_clauses(ontology.read_text(encoding="utf-8")):
         if indicator(clause) != ("references", 2):
@@ -229,16 +410,29 @@ def check_references(ontology: Path, units_dir: Path, articles: list[str] | None
         m = re.match(r"references\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)\s*\.", clause.strip())
         if m:
             emitted[m.group(1)].add(m.group(2))
-    tp = fp = fn = 0
+
+    s_tp = s_fp = s_fn = 0
     for uid, want in truth.items():
         got = emitted.get(uid, set())
-        tp, fp, fn = tp + len(want & got), fp + len(got - want), fn + len(want - got)
-    pr = tp / (tp + fp) if tp + fp else 0.0
-    rc = tp / (tp + fn) if tp + fn else 0.0
+        s_tp, s_fp, s_fn = s_tp + len(want & got), s_fp + len(got - want), s_fn + len(want - got)
+
+    c_tp = c_fp = c_fn = 0
+    per_unit = []
+    if rules_dir is not None:
+        for u in units:
+            f = rules_dir / f"{u.safe_name()}.pl"
+            if not f.exists():
+                continue
+            want, got = set(u.refs()), _refs_in(f.read_text(encoding="utf-8"))
+            c_tp += len(want & got); c_fp += len(got - want); c_fn += len(want - got)
+            if want - got or got - want:
+                per_unit.append({"unit": u.fragment, "missed": sorted(want - got)[:4],
+                                 "spurious": sorted(got - want)[:4]})
+
     return {"truth_edges": sum(len(v) for v in truth.values()),
             "emitted_edges": sum(len(v) for v in emitted.values()),
-            "precision": round(pr, 3), "recall": round(rc, 3),
-            "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0.0}
+            "chunk": _prf(c_tp, c_fp, c_fn), "strict": _prf(s_tp, s_fp, s_fn),
+            "units_imperfect": len(per_unit), "worst": per_unit[:8]}
 
 
 def main() -> int:
@@ -256,7 +450,9 @@ def main() -> int:
     arts = None if a.articles == "all" else [s.strip() for s in a.articles.split(",")]
 
     report = {"syntax": check_syntax(ontology), **analyse(ontology),
-              "references": check_references(ontology, Path(a.units), arts)}
+              "references": check_references(ontology, Path(a.units), arts,
+                                            Path(a.out) / "rules"),
+              "cross_file": check_cross_file(Path(a.out))}
     (Path(a.out) / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     if a.json:
@@ -296,10 +492,38 @@ def main() -> int:
     if pv["missing"]:
         print(f"  MISSING               {pv['missing']}")
 
+    cf = report["cross_file"]
+    print("\n== 5. cross-file namespace consistency (v3) ==")
+    if not cf.get("ran"):
+        print(f"  {cf['note']}")
+    else:
+        print(f"  rule files             {cf['files']}")
+        print(f"  invented predicates    {cf['invented_predicates']} "
+              f"(signature predicates excluded -- agreement there proves nothing)")
+        print(f"  shared across files    {cf['shared_across_files']}")
+        print(f"  used in one file only  {cf['single_file_only']}")
+        print(f"  FRAGMENTATION          {cf['fragmentation']}  (0 = fully shared, 1 = no sharing)")
+        print("    ^ an UPPER BOUND on the problem, not a defect count: a predicate like")
+        print("      prohibited_social_scoring legitimately belongs to one provision only.")
+        print("      The reviewable signal is the alias list below.")
+        print(f"  modality-prefixed      {cf['modality_prefixed']}/{cf['invented_predicates']}"
+              f"  (descriptive: PROPERTY/ACT forms are un-prefixed by design)")
+        print(f"  GRAMMAR VIOLATIONS     {cf['n_violations_number_in_name']}"
+              f"  (article/annex number baked into a predicate name)")
+        for v in cf["violations_number_in_name"][:6]:
+            print(f"    {v}")
+        print(f"  alias candidates       {cf['n_alias_candidates']}")
+        for al in cf["alias_candidates"][:8]:
+            print(f"    {al['reason']:<22} {' ~ '.join(al['names'])}")
+
     r = report["references"]
-    print("\n== 5. reference graph (carried from v1) ==")
-    print(f"  truth {r['truth_edges']}  emitted {r['emitted_edges']}  "
-          f"P {r['precision']}  R {r['recall']}  F1 {r['f1']}")
+    ch, st = r["chunk"], r["strict"]
+    print("\n== 6. reference graph (carried from v1) ==")
+    print(f"  truth {r['truth_edges']}  emitted {r['emitted_edges']}")
+    print(f"  chunk-level   P {ch['precision']}  R {ch['recall']}  F1 {ch['f1']}"
+          f"   ({r['units_imperfect']} units imperfect)")
+    print(f"  + source atom P {st['precision']}  R {st['recall']}  F1 {st['f1']}"
+          f"   (reads low by design -- see docstring)")
 
     print(f"\nfull report: {Path(a.out) / 'report.json'}")
     return 0 if s.get("ok", True) else 1

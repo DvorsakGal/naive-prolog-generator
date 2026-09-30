@@ -36,10 +36,86 @@ def article_key(fragment: str) -> str | None:
     return head if ARTICLE_RE.match(head) else None
 
 
-def select_provisions(units_dir: Path, articles: list[str] | None = None) -> list[Unit]:
-    """One unit per requested article: the container if present, else its leaves.
+DEFAULT_COVERAGE_THRESHOLD = 0.6
 
-    `articles` is a list like ['art_5', 'art_6']. None selects every article in the act.
+
+def _merged_span_length(spans: list[tuple[int, int]]) -> int:
+    """Total length covered by a set of possibly-overlapping spans."""
+    merged: list[list[int]] = []
+    for s, e in sorted(spans):
+        if merged and s <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], e)
+        else:
+            merged.append([s, e])
+    return sum(e - s for s, e in merged)
+
+
+def deduplicate_overlaps(
+    candidates: list[Unit], threshold: float = DEFAULT_COVERAGE_THRESHOLD
+) -> tuple[list[Unit], list[dict]]:
+    """Remove structural overlap, returning (kept, decisions).
+
+    THE PROBLEM THIS SOLVES (v3 fix)
+    --------------------------------
+    Chapter and article units overlap: `chp_3` (108k chars) physically contains
+    Articles 8-15, which are also selected in their own right. Processing both means
+    the same provision gets two independent formalisations under two different
+    predicate vocabularies -- the worst possible input to a rule base.
+
+    Id prefixes cannot detect this, because `chp_3` and `art_9` are sibling
+    fragments. Character spans can, and exactly.
+
+    THE RULE
+    --------
+    For every container (a unit whose span encloses other candidates), measure how
+    much of it the contained units actually cover:
+
+      * coverage >= threshold -> drop the CONTAINER. The fine-grained articles are
+        better input and they already cover it.
+      * coverage <  threshold -> keep the container, drop the contained units. The
+        articles barely cover it, so dropping the container would lose text. This is
+        the case for Chapter I, only 6% covered by the four Article 1-4 fragments
+        the corpus happens to carry.
+
+    Either way the result is a partition: no character of the act is processed twice.
+    Both decisions are returned so the caller can report them.
+    """
+    decisions: list[dict] = []
+    dropped: set[str] = set()
+
+    containers = [c for c in candidates if any(c.contains(o) for o in candidates)]
+    for c in sorted(containers, key=lambda u: -(u.end - u.start)):
+        if c.uid in dropped:
+            continue
+        inner = [o for o in candidates if c.contains(o) and o.uid not in dropped]
+        if not inner:
+            continue
+        total = c.end - c.start
+        covered = _merged_span_length([(o.start, o.end) for o in inner])
+        ratio = covered / total if total else 0.0
+        if ratio >= threshold:
+            dropped.add(c.uid)
+            decisions.append({"action": "dropped_container", "unit": c.fragment,
+                              "coverage": round(ratio, 3), "n_inner": len(inner),
+                              "chars": total})
+        else:
+            for o in inner:
+                dropped.add(o.uid)
+            decisions.append({"action": "dropped_inner", "unit": c.fragment,
+                              "coverage": round(ratio, 3), "n_inner": len(inner),
+                              "chars": total})
+    return [u for u in candidates if u.uid not in dropped], decisions
+
+
+def select_provisions(
+    units_dir: Path,
+    articles: list[str] | None = None,
+    threshold: float = DEFAULT_COVERAGE_THRESHOLD,
+    return_decisions: bool = False,
+):
+    """One unit per requested article, with structural overlap removed.
+
+    `articles` is a list like ['art_5', 'art_6']. None selects every article.
     Output is sorted by (kind, number) so runs are order-stable.
     """
     units = [u for u in load_units(units_dir) if u.celex == ROOT_CELEX and u.fragment]
@@ -56,13 +132,16 @@ def select_provisions(units_dir: Path, articles: list[str] | None = None) -> lis
     if missing:
         raise ValueError(f"no units found for: {missing}")
 
-    out: list[Unit] = []
+    candidates: list[Unit] = []
     for key in wanted:
         if key in by_id:
-            out.append(by_id[key])          # the complete article
+            candidates.append(by_id[key])       # the complete article
         else:
-            out.extend(sorted(groups[key], key=lambda u: u.fragment))  # fall back to parts
-    return sorted(out, key=_order)
+            candidates.extend(sorted(groups[key], key=lambda u: u.fragment))
+
+    kept, decisions = deduplicate_overlaps(candidates, threshold)
+    kept = sorted(kept, key=_order)
+    return (kept, decisions) if return_decisions else kept
 
 
 def _order(u: Unit) -> tuple:
@@ -79,11 +158,24 @@ if __name__ == "__main__":
     p.add_argument("--units", default="20260922T172249_32024R1689_3f672e3e/units")
     p.add_argument("--articles", default="art_5",
                    help="comma-separated (e.g. art_5,art_6); 'all' for every article")
+    p.add_argument("--threshold", type=float, default=DEFAULT_COVERAGE_THRESHOLD,
+                   help="coverage above which a container is dropped in favour of its parts")
+    p.add_argument("--verbose", action="store_true")
     a = p.parse_args()
 
     arts = None if a.articles == "all" else [s.strip() for s in a.articles.split(",")]
-    sel = select_provisions(Path(a.units), arts)
+    sel, decisions = select_provisions(Path(a.units), arts, a.threshold,
+                                       return_decisions=True)
     total = sum(u.size for u in sel)
+    if decisions:
+        print("overlap removal (v3):")
+        for d in decisions:
+            verb = ("dropped container" if d["action"] == "dropped_container"
+                    else "kept container, dropped its parts")
+            print(f"  {d['unit']:<14} {verb:<34} coverage {d['coverage']:>5.0%} "
+                  f"({d['n_inner']} inner, {d['chars']:,} chars)")
+        print()
     print(f"{len(sel)} provisions, {total:,} chars (~{total // 4:,} tokens)")
-    for u in sel:
-        print(f"  {u.fragment:<38} {u.size:>7,}B  refs={len(set(u.refs())):>3}")
+    if a.verbose:
+        for u in sel:
+            print(f"  {u.fragment:<38} {u.size:>7,}B  refs={len(set(u.refs())):>3}")
