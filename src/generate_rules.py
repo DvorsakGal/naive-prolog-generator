@@ -24,7 +24,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
 from llm import Client, LLMConfig, append_log  # noqa: E402
-from prompt_v2 import build_rules_messages  # noqa: E402
+from prompt_v2 import DEFAULT_PEDANTRY, PEDANTRY, build_rules_messages  # noqa: E402
 from select_provisions import select_provisions  # noqa: E402
 from select_units import Unit  # noqa: E402
 from signature import parse_declarations, signature_sha  # noqa: E402
@@ -54,22 +54,23 @@ def load_signature(out_dir: Path) -> tuple[str, dict]:
 
 async def one(unit: Unit, signature: str, sig_sha: str, client: Client,
               http: httpx.AsyncClient, out_dir: Path, log_path: Path,
-              force: bool, progress: dict) -> None:
+              force: bool, pedantry: int, progress: dict) -> None:
     dest = out_dir / f"{unit.safe_name()}.pl"
     if dest.exists() and not force:
-        # Skip only if the existing file was generated against THIS signature.
-        # Otherwise it is stale: its rules may reference predicates that the
-        # current vocabulary no longer declares.
+        # Skip only if the existing file was generated against THIS signature
+        # AND at this pedantry level. Otherwise it is stale: its rules may
+        # reference predicates the current vocabulary no longer declares, or be
+        # transcribed at a different level of detail than the run asked for.
         head = dest.read_text(encoding="utf-8")[:400]
-        if f"% signature: {sig_sha}" in head:
+        if f"% signature: {sig_sha}" in head and f"% pedantry  : {pedantry}" in head:
             progress["skipped"] += 1
             return
         progress["stale"] += 1
 
-    messages = build_rules_messages(signature, unit.xml)
+    messages = build_rules_messages(signature, unit.xml, pedantry)
     text, rec = await client.call(http, messages, label=f"rules:{unit.fragment}")
     rec.meta = {"unit": unit.uid, "input_chars": unit.size,
-                "n_refs": len(set(unit.refs()))}
+                "n_refs": len(set(unit.refs())), "pedantry": pedantry}
     append_log(log_path, rec)
 
     if not rec.ok:
@@ -81,6 +82,7 @@ async def one(unit: Unit, signature: str, sig_sha: str, client: Client,
         f"% unit      : {unit.uid}\n"
         f"% source    : {unit.path.name}\n"
         f"% model     : {client.cfg.model}\n"
+        f"% pedantry  : {pedantry}\n"
         f"% prompt sha: {rec.prompt_sha}\n"
         f"% signature: {sig_sha}\n"
         f"% cached    : {rec.cached}\n"
@@ -107,6 +109,7 @@ async def main_async(args: argparse.Namespace) -> int:
     print(f"  signature : {len(parse_declarations(signature))} predicates, "
           f"sha {meta['signature_sha256'][:12]}")
     print(f"  provisions: {len(units)}, {total:,} chars (~{total // 4:,} tokens)")
+    print(f"  pedantry  : {args.pedantry}  (1 = terse, 5 = exhaustive)")
     print(f"  model     : {args.model}  concurrency {args.concurrency}\n")
 
     cfg = LLMConfig(model=args.model, host=args.host, concurrency=args.concurrency)
@@ -117,7 +120,7 @@ async def main_async(args: argparse.Namespace) -> int:
     async with httpx.AsyncClient() as http:
         await asyncio.gather(*[
             one(u, signature, meta["signature_sha256"], client, http,
-                rules_dir, log_path, args.force, progress)
+                rules_dir, log_path, args.force, args.pedantry, progress)
             for u in units
         ])
 
@@ -133,6 +136,10 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", default="out_v2")
     p.add_argument("--articles", default="art_5",
                    help="comma-separated article ids, or 'all'")
+    p.add_argument("--pedantry", type=int, default=DEFAULT_PEDANTRY,
+                   choices=sorted(PEDANTRY),
+                   help="how exhaustively to transcribe a provision: "
+                        "1 = terse, 3 = one goal per stated conjunct, 5 = exhaustive")
     p.add_argument("--model", default=LLMConfig.model)
     p.add_argument("--host", default=LLMConfig.host)
     p.add_argument("--concurrency", type=int, default=3,

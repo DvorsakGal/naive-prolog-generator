@@ -1,0 +1,57 @@
+{
+  "syntax": {
+    "ran": true,
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singleton_warnings": 0,
+    "detail": ""
+  },
+  "clauses": 158,
+  "rule_heads": 13,
+  "declared_predicates": 108,
+  "abox_primitives": {
+    "count": 99,
+    "sample": [
+      "ai_literacy/1",
+      "ai_office/1",
+      "ai_regulatory_sandbox/1",
+      "ai_system/1",
+      "authorised_representative/1",
+      "based_on_objective_and_verifiable_facts/1",
+      "based_solely_on_profiling/1",
+      "biometric_categorisation_system/1",
+      "biometric_data/1",
+      "biometric_identification/1",
+      "biometric_verification/1",
+      "causes_significant_harm/1"
+    ]
+  },
+  "link_integrity": {
+    "body_goals": 59,
+    "resolved": 58,
+    "dangling": 1,
+    "vacuous_negations": 0,
+    "score": 0.983,
+    "dangling_detail": [
+      {
+        "in_rule": "deployment_purpose_confirm_identity/1",
+        "goal": "objective_in_objectives/1"
+      }
+    ],
+    "vacuous_detail": []
+  },
+  "arity_collisions": {},
+  "provenance": {
+    "rule_heads": 13,
+    "with_provenance": 13,
+    "missing": []
+  },
+  "references": {
+    "truth_edges": 11,
+    "emitted_edges": 9,
+    "precision": 1.0,
+    "recall": 0.818,
+    "f1": 0.9
+  }
+}

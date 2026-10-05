@@ -9,7 +9,12 @@
 #   ./run_v2.sh                       # default scope: Article 5
 #   ./run_v2.sh --articles art_5,art_6
 #   ./run_v2.sh --articles all        # every article in the act
+#   ./run_v2.sh --pedantry 5          # 0 = off (default, best on Art 5), 1-5 = dial
 #   ARTICLES=art_5 FORCE=1 ./run_v2.sh   # ignore cache, regenerate
+#
+# PEDANTRY sweeps: use ./sweep_pedantry.sh, which holds the signature fixed so
+# only Phase B varies. Setting --pedantry here rebuilds the signature per level
+# too, which is fine for a one-off but confounds a comparison.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -18,6 +23,7 @@ OUT="${OUT:-out_v2}"
 UNITS="${UNITS:-20260922T172249_32024R1689_3f672e3e/units}"
 ARTICLES="${ARTICLES:-art_5}"
 MODEL="${MODEL:-gpt-oss:120b-cloud}"
+PEDANTRY="${PEDANTRY:-0}"
 FORCE_FLAG=""
 [ "${FORCE:-0}" = "1" ] && FORCE_FLAG="--force"
 
@@ -26,12 +32,13 @@ while [ $# -gt 0 ]; do
   case "$1" in
     --articles) ARTICLES="$2"; shift 2 ;;
     --model)    MODEL="$2";    shift 2 ;;
+    --pedantry) PEDANTRY="$2"; shift 2 ;;
     --force)    FORCE_FLAG="--force"; shift ;;
     *) echo "unknown flag: $1" >&2; exit 2 ;;
   esac
 done
 
-echo "scope=$ARTICLES  model=$MODEL  out=$OUT"
+echo "scope=$ARTICLES  model=$MODEL  pedantry=$PEDANTRY  out=$OUT"
 echo
 
 echo "== Phase 0/4: slice provisions out of the whole-act unit (deterministic) =="
@@ -44,7 +51,7 @@ echo
 
 echo "== Phase B 2/4: generate rules, 1 LLM call per provision =="
 $PY src/generate_rules.py --units "$UNITS" --out "$OUT" \
-    --articles "$ARTICLES" --model "$MODEL" $FORCE_FLAG
+    --articles "$ARTICLES" --model "$MODEL" --pedantry "$PEDANTRY" $FORCE_FLAG
 echo
 
 echo "== Phase C 3/4: assemble the ontology (deterministic) =="

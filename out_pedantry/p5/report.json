@@ -1,0 +1,101 @@
+{
+  "syntax": {
+    "ran": true,
+    "ok": false,
+    "errors": 1,
+    "warnings": 20,
+    "singleton_warnings": 10,
+    "detail": "Warning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:352:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:360:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:368:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:376:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:384:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:392:\nWarning:    Singleton variables: [Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:488:\nWarning:    Singleton variables: [Provider]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_pedantry/p5/ontology.pl:491:"
+  },
+  "clauses": 227,
+  "rule_heads": 23,
+  "declared_predicates": 128,
+  "abox_primitives": {
+    "count": 107,
+    "sample": [
+      "ai_literacy/1",
+      "ai_office/1",
+      "ai_regulatory_sandbox/1",
+      "ai_system/1",
+      "appreciably_impairs_informed_decision/2",
+      "authorisation_rejected/1",
+      "authorised_representative/1",
+      "based_on_characteristics/1",
+      "based_solely_on_profiling/1",
+      "biometric_categorisation_system/1",
+      "biometric_data/1",
+      "biometric_identification/1"
+    ]
+  },
+  "link_integrity": {
+    "body_goals": 209,
+    "resolved": 197,
+    "dangling": 12,
+    "vacuous_negations": 0,
+    "score": 0.943,
+    "dangling_detail": [
+      {
+        "in_rule": "exploits_vulnerability/2",
+        "goal": "target_of/2"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "prohibited_action/1",
+        "goal": "leads_to_detrimental_treatment/3"
+      },
+      {
+        "in_rule": "allowed_objective/2",
+        "goal": "relates_to_crime/2"
+      },
+      {
+        "in_rule": "must_confirm_identity/2",
+        "goal": "specifically_targeted/1"
+      },
+      {
+        "in_rule": "must_comply_fundamental_rights_impact_assessment/1",
+        "goal": "fundamental_rights_impact_assessment_completed/1"
+      },
+      {
+        "in_rule": "commission_provides_template/1",
+        "goal": "annual_report_template/0"
+      },
+      {
+        "in_rule": "commission_publish_annual_report/1",
+        "goal": "aggregated_report/1"
+      }
+    ],
+    "vacuous_detail": []
+  },
+  "arity_collisions": {},
+  "provenance": {
+    "rule_heads": 23,
+    "with_provenance": 23,
+    "missing": []
+  },
+  "references": {
+    "truth_edges": 11,
+    "emitted_edges": 9,
+    "precision": 1.0,
+    "recall": 0.818,
+    "f1": 0.9
+  }
+}
