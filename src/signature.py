@@ -25,6 +25,7 @@ from prompt_v2 import build_signature_messages  # noqa: E402
 from slice import SPECS, slice_one  # noqa: E402
 
 PRED_DECL_RE = re.compile(r":-\s*pred\s+([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)")
+SOURCE_RE = re.compile(r"source\(\s*'([^']*)'\s*\)")
 
 
 def parse_declarations(text: str) -> list[tuple[str, int]]:
@@ -36,19 +37,65 @@ def signature_sha(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def cited_items(text: str) -> set[str]:
+    """The item labels a signature's source(...) annotations point at.
+
+    The model is inconsistent about the format -- '29' in one run, '3.29' in another,
+    and a full unit id in Phase B output. Take the last dot-separated component, which
+    is the item label in every form seen.
+    """
+    return {raw.strip().split(".")[-1].strip() for raw in SOURCE_RE.findall(text)}
+
+
+def coverage_report(text: str, items: tuple[str, ...]) -> dict:
+    """Which of the slice's own enumerated items the signature actually declares.
+
+    Deliberately NOT a hardcoded count: `items` comes from the slice spec's item_re,
+    so a different act or a different slice is checked against its own enumeration.
+    An empty `items` (a slice with no enumeration) makes this a no-op.
+    """
+    expected = list(dict.fromkeys(items))          # de-duplicated, order preserved
+    cited = cited_items(text)
+    missing = [i for i in expected if i not in cited]
+    return {
+        "expected": len(expected),
+        "cited": len(expected) - len(missing),
+        "missing": missing,
+        "ratio": round((len(expected) - len(missing)) / len(expected), 3) if expected else None,
+    }
+
+
+def print_coverage(cov: dict, slice_name: str) -> None:
+    """One terminal block so a gap is visible without reading signature.pl."""
+    if cov["expected"] == 0:
+        return
+    print(f"\n== coverage check: {slice_name} ==")
+    print(f"  items in slice        {cov['expected']}")
+    print(f"  items with a source   {cov['cited']}  ({cov['ratio']:.0%})")
+    if not cov["missing"]:
+        print("  OK -- every item in the slice is accounted for")
+        return
+    print(f"  NOT DECLARED          {len(cov['missing'])}: {', '.join(cov['missing'])}")
+    print("  These items produced no declaration, so they are absent from the frozen")
+    print("  vocabulary. Phase B will invent its own names for them, inconsistently")
+    print("  across calls. Resample Phase A with --force if that matters.")
+
+
 async def build(args: argparse.Namespace) -> int:
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     sig_path = out_dir / "signature.pl"
+
+    sl = slice_one(Path(args.units), SPECS[args.slice])
 
     if sig_path.exists() and not args.force:
         text = sig_path.read_text(encoding="utf-8")
         decls = parse_declarations(text)
         print(f"signature.pl already exists ({len(decls)} predicates, "
               f"sha {signature_sha(text)[:12]}). Use --force to rebuild.")
+        print_coverage(coverage_report(text, sl.items), sl.name)
         return 0
 
-    sl = slice_one(Path(args.units), SPECS[args.slice])
     print(f"input slice : {sl.name}  {sl.n_items} items  {len(sl.text):,} chars  "
           f"sha {sl.sha256[:12]}")
 
@@ -98,6 +145,7 @@ async def build(args: argparse.Namespace) -> int:
         "cached": rec.cached,
         "n_declarations": len(decls),
         "declarations": [f"{n}/{a}" for n, a in decls],
+        "item_coverage": coverage_report(full, sl.items),
     }
     (out_dir / "signature.meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
@@ -110,6 +158,7 @@ async def build(args: argparse.Namespace) -> int:
     print(f"  cached       : {rec.cached}")
     if dupes:
         print(f"  WARNING: predicates declared at two arities: {dupes}")
+    print_coverage(meta["item_coverage"], sl.name)
     return 0
 
 

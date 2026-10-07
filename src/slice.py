@@ -70,6 +70,11 @@ class Slice:
     unit_id: str
     text: str
     n_items: int
+    # The slice's own enumeration labels, captured by the spec's item_re -- '1'..'68'
+    # for Article 3's definitions. Phase A's coverage check compares the signature's
+    # source(...) values against these, so the check is driven by the slice's own
+    # structure rather than by a count hardcoded for one act.
+    items: tuple[str, ...] = ()
 
     @property
     def sha256(self) -> str:
@@ -104,13 +109,15 @@ def slice_one(units_dir: Path, spec: SliceSpec) -> Slice:
         raise ValueError(f"{spec.name}: end marker {spec.end_marker!r} not found after start")
 
     body = text[start:end]
-    n_items = len(re.findall(spec.item_re, body))
+    found = [m if isinstance(m, str) else m[0] for m in re.findall(spec.item_re, body)]
+    n_items = len(found)
     if n_items != spec.expect_items:
         raise ValueError(
             f"{spec.name}: found {n_items} items, spec expects {spec.expect_items}. "
             "Refusing to continue -- the corpus or the spec has changed."
         )
-    return Slice(name=spec.name, unit_id=spec.unit_id, text=body, n_items=n_items)
+    return Slice(name=spec.name, unit_id=spec.unit_id, text=body, n_items=n_items,
+                 items=tuple(found))
 
 
 def write_slices(units_dir: Path, out_dir: Path, names: list[str] | None = None) -> list[Slice]:

@@ -1,0 +1,159 @@
+{
+  "syntax": {
+    "ran": true,
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singleton_warnings": 0,
+    "detail": ""
+  },
+  "clauses": 261,
+  "rule_heads": 28,
+  "declared_predicates": 110,
+  "abox_primitives": {
+    "count": 96,
+    "sample": [
+      "ai_literacy/1",
+      "ai_office/1",
+      "ai_regulatory_sandbox/1",
+      "ai_system/1",
+      "annex3_ai_system/1",
+      "applicable_union_harmonisation_requirements/1",
+      "authorised_representative/1",
+      "based_on_objective_verifiable_facts/1",
+      "biometric_categorisation_system/1",
+      "biometric_data/1",
+      "biometric_identification/1",
+      "biometric_verification/1"
+    ]
+  },
+  "link_integrity": {
+    "body_goals": 74,
+    "resolved": 74,
+    "dangling": 0,
+    "vacuous_negations": 0,
+    "score": 1.0,
+    "dangling_detail": [],
+    "vacuous_detail": []
+  },
+  "arity_collisions": {},
+  "provenance": {
+    "rule_heads": 28,
+    "with_provenance": 28,
+    "missing": []
+  },
+  "references": {
+    "truth_edges": 60,
+    "emitted_edges": 58,
+    "chunk": {
+      "true_positives": 58,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "precision": 1.0,
+      "recall": 0.967,
+      "f1": 0.983
+    },
+    "strict": {
+      "true_positives": 44,
+      "false_positives": 0,
+      "false_negatives": 16,
+      "precision": 1.0,
+      "recall": 0.733,
+      "f1": 0.846
+    },
+    "units_imperfect": 2,
+    "worst": [
+      {
+        "unit": "art_5",
+        "missed": [
+          "celex:32024R1689/oj#art_5"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_6",
+        "missed": [
+          "celex:32024R1689/oj"
+        ],
+        "spurious": []
+      }
+    ]
+  },
+  "cross_file": {
+    "ran": true,
+    "files": 5,
+    "invented_predicates": 56,
+    "shared_across_files": 2,
+    "single_file_only": 54,
+    "fragmentation": 0.964,
+    "modality_prefixed": 28,
+    "violations_number_in_name": [
+      "annex3_ai_system",
+      "covered_by_annex1"
+    ],
+    "n_violations_number_in_name": 2,
+    "alias_candidates": [
+      {
+        "reason": "token overlap 0.60",
+        "names": [
+          "permitted_support_human_assessment",
+          "used_to_support_human_assessment"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "required_accessibility_compliance",
+          "required_compliance"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "required_compliance",
+          "required_compliance_with_requirements"
+        ]
+      },
+      {
+        "reason": "token overlap 0.60",
+        "names": [
+          "required_quality_management_system",
+          "required_risk_management_system"
+        ]
+      },
+      {
+        "reason": "token overlap 0.60",
+        "names": [
+          "required_risk_management_step",
+          "required_risk_management_system"
+        ]
+      },
+      {
+        "reason": "token overlap 0.60",
+        "names": [
+          "required_risk_management_step",
+          "required_testing_for_risk_management"
+        ]
+      },
+      {
+        "reason": "token overlap 0.60",
+        "names": [
+          "required_risk_management_system",
+          "required_testing_for_risk_management"
+        ]
+      },
+      {
+        "reason": "token overlap 0.75",
+        "names": [
+          "required_risk_management_system",
+          "risk_management_system"
+        ]
+      }
+    ],
+    "n_alias_candidates": 8,
+    "shared_sample": [
+      "high_risk_ai_system",
+      "risk_management_system"
+    ]
+  }
+}
