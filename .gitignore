@@ -3,13 +3,9 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# v1 outputs: per-unit snippets and logs are derived; ontology.pl and report.json are kept
-out/units/
-out/*.log
-out/*.bak-*
-
-# v2: raw LLM responses, content-addressed by prompt hash. Derived and bulky.
-out_v2/cache/
+# Raw LLM responses, content-addressed by prompt hash. Derived and bulky, but deleting
+# them means the next run re-pays for every call.
+out/cache/
 
 # Source corpus (182 MB), produced by the Datapact extractor. Not vendored here.
 20260922T172249_32024R1689_3f672e3e/

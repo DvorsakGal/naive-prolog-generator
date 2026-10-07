@@ -1,11 +1,17 @@
 """Phase A -- build the predicate vocabulary, then freeze it.
 
 The signature is the namespace every Phase B call writes into. It is produced by ONE
-LLM call over Article 3's definitions, written to out_v2/signature.pl, and content-
-hashed. Phase B refuses to run against a signature whose hash is not recorded in the
-manifest, so a signature can never change silently underneath a set of rules.
+LLM call over the definitions article, written to signature.pl, and content-hashed.
+Phase B refuses to run against a signature whose hash is not the one recorded here, so
+the vocabulary can never change silently underneath a set of clauses already written
+against it.
 
-Freezing is the point. See prompt_v2.py for why.
+Freezing is the point. See prompts.py for why.
+
+The input is `structure.definitions_unit()`, which asserts the definition count before
+returning. An earlier version silently dropped definitions 29-34, and since every
+later call is written against whatever this file contains, a short vocabulary is the
+one failure that propagates into all 125 downstream calls.
 """
 from __future__ import annotations
 
@@ -15,22 +21,39 @@ import hashlib
 import json
 import re
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
 from llm import Client, LLMConfig, append_log  # noqa: E402
-from prompt_v2 import build_signature_messages  # noqa: E402
-from slice import SPECS, slice_one  # noqa: E402
+from prolog import (DECL_SYNTAX, DECLARED_RE, PRED_DECL_RE, body_goals,  # noqa: E402
+                    head_indicator, split_clauses, split_head_body)
+from prompts import build_signature_messages  # noqa: E402
+from structure import AI_ACT, definitions_unit  # noqa: E402
 
-PRED_DECL_RE = re.compile(r":-\s*pred\s+([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)")
+PRED_INDICATOR_RE = re.compile(r":-\s*pred\s+([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)")
 SOURCE_RE = re.compile(r"source\(\s*'([^']*)'\s*\)")
 
 
 def parse_declarations(text: str) -> list[tuple[str, int]]:
     """The (name, arity) pairs a signature declares, in order of appearance."""
-    return [(n, int(a)) for n, a in PRED_DECL_RE.findall(text)]
+    return [(n, int(a)) for n, a in PRED_INDICATOR_RE.findall(text)]
+
+
+def signature_names(*texts: str) -> set[str]:
+    """Predicate names a frozen vocabulary declares, in either written form.
+
+    Accepts both `:- pred f/1, ...` (as Phase A and B write it) and `declared(f/1, ...)`
+    (as assembly rewrites it), so the same function works on signature.pl and on the
+    assembled program.
+    """
+    names: set[str] = set()
+    for text in texts:
+        names |= {n for n, _a, _g in PRED_DECL_RE.findall(text)}
+        names |= {n for n, _a, _g in DECLARED_RE.findall(text)}
+    return names
 
 
 def signature_sha(text: str) -> str:
@@ -48,11 +71,11 @@ def cited_items(text: str) -> set[str]:
 
 
 def coverage_report(text: str, items: tuple[str, ...]) -> dict:
-    """Which of the slice's own enumerated items the signature actually declares.
+    """Which of the definitions article's own enumerated items the signature declares.
 
-    Deliberately NOT a hardcoded count: `items` comes from the slice spec's item_re,
-    so a different act or a different slice is checked against its own enumeration.
-    An empty `items` (a slice with no enumeration) makes this a no-op.
+    Deliberately NOT a hardcoded count: `items` are the labels the slice itself
+    carries, captured by ActConfig.definitions_item_re, so another act is checked
+    against its own enumeration. Empty `items` makes this a no-op.
     """
     expected = list(dict.fromkeys(items))          # de-duplicated, order preserved
     cited = cited_items(text)
@@ -86,17 +109,17 @@ async def build(args: argparse.Namespace) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     sig_path = out_dir / "signature.pl"
 
-    sl = slice_one(Path(args.units), SPECS[args.slice])
+    sl = definitions_unit(Path(args.units))
 
     if sig_path.exists() and not args.force:
         text = sig_path.read_text(encoding="utf-8")
         decls = parse_declarations(text)
         print(f"signature.pl already exists ({len(decls)} predicates, "
               f"sha {signature_sha(text)[:12]}). Use --force to rebuild.")
-        print_coverage(coverage_report(text, sl.items), sl.name)
+        print_coverage(coverage_report(text, sl.items), sl.fragment)
         return 0
 
-    print(f"input slice : {sl.name}  {sl.n_items} items  {len(sl.text):,} chars  "
+    print(f"input slice : {sl.fragment}  {len(sl.items)} items  {sl.size:,} chars  "
           f"sha {sl.sha256[:12]}")
 
     cfg = LLMConfig(model=args.model, host=args.host, concurrency=1)
@@ -104,7 +127,7 @@ async def build(args: argparse.Namespace) -> int:
     messages = build_signature_messages(sl.text)
 
     async with httpx.AsyncClient() as http:
-        text, rec = await client.call(http, messages, label=f"signature:{sl.name}")
+        text, rec = await client.call(http, messages, label=f"signature:{sl.fragment}")
     append_log(out_dir / "run.jsonl", rec)
 
     if not rec.ok:
@@ -114,16 +137,17 @@ async def build(args: argparse.Namespace) -> int:
     decls = parse_declarations(text)
     header = (
         "% ============================================================\n"
-        "% FROZEN SIGNATURE -- the predicate vocabulary for v2.\n"
+        "% FROZEN SIGNATURE -- the predicate vocabulary for this program.\n"
         "%\n"
         "% Generated by ONE LLM call over the definitions article, then frozen.\n"
         "% Every Phase B rule-generation call receives this file verbatim, so all\n"
         "% Phase B calls are mutually independent and order-free.\n"
         "%\n"
-        f"% source slice : {sl.name} ({sl.n_items} items)\n"
+        f"% source slice : {sl.fragment} ({len(sl.items)} items)\n"
         f"% slice sha256 : {sl.sha256}\n"
-        f"% source unit  : {sl.unit_id}\n"
+        f"% source unit  : {sl.uid}\n"
         f"% model        : {cfg.model} (temperature {cfg.temperature}, seed {cfg.seed})\n"
+        f"% definitions  : Article {AI_ACT.definitions_article}\n"
         f"% prompt sha   : {rec.prompt_sha}\n"
         f"% declarations : {len(decls)}\n"
         "%\n"
@@ -135,7 +159,7 @@ async def build(args: argparse.Namespace) -> int:
 
     full = sig_path.read_text(encoding="utf-8")
     meta = {
-        "slice": sl.name,
+        "slice": sl.fragment,
         "slice_sha256": sl.sha256,
         "signature_sha256": signature_sha(full),
         "model": cfg.model,
@@ -158,15 +182,14 @@ async def build(args: argparse.Namespace) -> int:
     print(f"  cached       : {rec.cached}")
     if dupes:
         print(f"  WARNING: predicates declared at two arities: {dupes}")
-    print_coverage(meta["item_coverage"], sl.name)
+    print_coverage(meta["item_coverage"], sl.fragment)
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Phase A -- build and freeze the signature.")
     p.add_argument("--units", default="20260922T172249_32024R1689_3f672e3e/units")
-    p.add_argument("--out", default="out_v2")
-    p.add_argument("--slice", default="art_3_definitions", choices=sorted(SPECS))
+    p.add_argument("--out", default="out")
     p.add_argument("--model", default=LLMConfig.model)
     p.add_argument("--host", default=LLMConfig.host)
     p.add_argument("--force", action="store_true", help="rebuild even if signature.pl exists")
@@ -175,3 +198,74 @@ def build_parser() -> argparse.ArgumentParser:
 
 if __name__ == "__main__":
     sys.exit(asyncio.run(build(build_parser().parse_args())))
+
+
+# ------------------------------------------------- the inventory Phase B2 works from
+
+@dataclass
+class Invented:
+    """One predicate Phase B introduced because the frozen vocabulary lacked it.
+
+    `used_in` is what matters for reconciliation: a name three provisions already
+    agree on is a better canonical choice than a better-sounding name used once.
+    """
+
+    name: str
+    arity: int
+    glosses: list[str] = field(default_factory=list)
+    declared_in: set[str] = field(default_factory=set)
+    used_in: set[str] = field(default_factory=set)
+
+    @property
+    def key(self) -> str:
+        return f"{self.name}/{self.arity}"
+
+    @property
+    def gloss(self) -> str:
+        return self.glosses[0] if self.glosses else ""
+
+
+def collect_invented(signature_text: str, rules_dir: Path) -> tuple[list[Invented], int]:
+    """Every predicate the Phase B calls introduced, with usage, from rules/*.pl.
+
+    Signature predicates are excluded: those were handed to every call, so agreement
+    on them proves nothing and reconciling them would be reconciling Phase A's work.
+
+    Returns (inventory sorted by name, number of rule files read). Used by
+    `reconcile.py` to build the merge call's input and by `lint.py` to measure how
+    fragmented the namespace is -- the same extraction, so the two can never disagree
+    about what counts as invented.
+    """
+    sig_names = signature_names(signature_text)
+    found: dict[tuple[str, int], Invented] = {}
+
+    def entry(name: str, arity: int) -> Invented:
+        return found.setdefault((name, arity), Invented(name=name, arity=arity))
+
+    files = sorted(rules_dir.glob("*.pl")) if rules_dir.exists() else []
+    for f in files:
+        src = f.read_text(encoding="utf-8")
+        for name, arity, gloss in PRED_DECL_RE.findall(src):
+            if name in sig_names or name in DECL_SYNTAX:
+                continue
+            e = entry(name, int(arity))
+            e.declared_in.add(f.name)
+            g = gloss.replace("''", "'").strip()
+            if g and g not in e.glosses:
+                e.glosses.append(g)
+        for clause in split_clauses(src):
+            if clause.lstrip().startswith(":-"):
+                # A directive, not a clause. `:- pred foo/1, gloss(..), source(..)`
+                # splits into an empty head and a body, and scanning that body as
+                # goals records foo at arity 0 alongside its real arity -- inflating
+                # the inventory and splitting one predicate into two entries.
+                continue
+            head, body = split_head_body(clause)
+            ind = head_indicator(clause)
+            if ind and ind[0] not in sig_names and ind[0] not in DECL_SYNTAX:
+                entry(*ind).used_in.add(f.name)
+            for nm, ar, _neg in body_goals(body or ""):
+                if nm not in sig_names and nm not in DECL_SYNTAX:
+                    entry(nm, ar).used_in.add(f.name)
+
+    return sorted(found.values(), key=lambda i: (i.name, i.arity)), len(files)

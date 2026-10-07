@@ -2,7 +2,7 @@
 
 DETERMINISM CONTRACT
 --------------------
-Everything in v2 except this module is a pure function of its inputs. This module is
+Everything in the pipeline except this module is a pure function of its inputs. This
 not, and cannot be made so: temperature 0 reduces variation but does not guarantee
 byte-identical responses from the same prompt. We therefore make the LLM step
 *replayable* rather than deterministic:
@@ -19,6 +19,14 @@ It does not give reproducibility of a *fresh* run, and the documentation says so
 Rate limiting: Ollama's cloud endpoint returns 429 above ~4 concurrent requests. A 429
 is a pacing signal, not a failure of the unit, so it is retried with backoff without
 consuming one of the call's error retries.
+
+RUNAWAY GENERATION. A v3 run produced 86,890 completion tokens for one article whose
+siblings each produced ~4,000, and it cost 225 s unnoticed. Over 125 calls that is the
+difference between a 40-minute run and an unexplained multi-hour one. `num_predict`
+caps it, and a response that hits the cap is reported as FAILED rather than written
+out: a truncated completion ends mid-clause, and half a clause in a Prolog file is
+worse than no clause. The cap is part of the cache identity, so raising it re-runs
+exactly the calls it affects and nothing else.
 """
 from __future__ import annotations
 
@@ -58,10 +66,14 @@ class LLMConfig:
     retries: int = 3
     backoff: float = 3.0
     max_throttle: int = 12
+    # ~4x the largest healthy completion observed on this corpus. Generous enough that
+    # no legitimate article hits it, tight enough that a loop is caught in ~1 minute.
+    num_predict: int = 16384
 
     def cache_identity(self) -> dict:
         """Only the fields that can change the model's output -- not host or pacing."""
-        return {"model": self.model, "temperature": self.temperature, "seed": self.seed}
+        return {"model": self.model, "temperature": self.temperature,
+                "seed": self.seed, "num_predict": self.num_predict}
 
 
 @dataclass
@@ -78,6 +90,7 @@ class CallRecord:
     prompt_tokens: int | None = None
     completion_tokens: int | None = None
     wall_s: float = 0.0
+    truncated: bool = False
     error: str | None = None
     meta: dict = field(default_factory=dict)
 
@@ -112,6 +125,11 @@ class Client:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self._sem = asyncio.Semaphore(cfg.concurrency)
 
+    def _truncation_error(self, rec: CallRecord) -> str:
+        return (f"truncated: hit num_predict={self.cfg.num_predict} "
+                f"({rec.completion_tokens} completion tokens). The completion ends "
+                f"mid-clause and was not written. Raise num_predict or split the input.")
+
     def _cache_path(self, key: str) -> Path:
         return self.cache_dir / f"{key}.json"
 
@@ -131,7 +149,8 @@ class Client:
                 "model": self.cfg.model,
                 "stream": False,
                 "messages": messages,
-                "options": {"temperature": self.cfg.temperature, "seed": self.cfg.seed},
+                "options": {"temperature": self.cfg.temperature, "seed": self.cfg.seed,
+                            "num_predict": self.cfg.num_predict},
             },
             timeout=1800.0,
         )
@@ -149,9 +168,14 @@ class Client:
 
         hit = self.cached_response(key)
         if hit is not None:
-            rec.cached = rec.ok = True
+            rec.cached = True
             rec.prompt_tokens = hit.get("prompt_eval_count")
             rec.completion_tokens = hit.get("eval_count")
+            rec.truncated = hit.get("done_reason") == "length"
+            if rec.truncated:
+                rec.error = self._truncation_error(rec)
+                return "", rec
+            rec.ok = True
             return strip_fences(hit.get("message", {}).get("content", "")), rec
 
         async with self._sem:
@@ -167,12 +191,18 @@ class Client:
                     # costs an API call.
                     self._cache_path(key).write_text(
                         json.dumps(data, ensure_ascii=False), encoding="utf-8")
-                    rec.ok = True
                     rec.attempts = attempt
                     rec.throttled = throttled
                     rec.prompt_tokens = data.get("prompt_eval_count")
                     rec.completion_tokens = data.get("eval_count")
                     rec.wall_s = round(time.monotonic() - started, 2)
+                    rec.truncated = data.get("done_reason") == "length"
+                    if rec.truncated:
+                        # Not retried: at temperature 0 the same prompt loops the same
+                        # way. Raise num_predict or split the provision.
+                        rec.error = self._truncation_error(rec)
+                        return "", rec
+                    rec.ok = True
                     return strip_fences(content), rec
                 except RateLimited as exc:
                     throttled += 1
