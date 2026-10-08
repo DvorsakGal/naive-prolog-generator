@@ -1,0 +1,19 @@
+{
+  "n_invented_input": 1469,
+  "n_rule_files": 125,
+  "signature_2_sha256": "362d4e4377ec780a963573f30d930b5d35eb31845547d8c2e8582a094190a813",
+  "combined_sha256": "835a6d55688184e8efa41e499cd49eace0c13572c8ebd52ffc66d4fad12ea27b",
+  "model": "gpt-oss:120b-cloud",
+  "prompt_sha": "c5702261c1a022e744327d101e4feaa67948bcf5c26bcf37f1bb49a2cda70452",
+  "cached": false,
+  "n_declarations": 0,
+  "checks": {
+    "n_aliases": 0,
+    "cross_arity": [],
+    "chained": [],
+    "unknown_source": [],
+    "self_alias": [],
+    "merged_away": 0,
+    "canonical_names": 0
+  }
+}

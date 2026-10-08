@@ -5,8 +5,9 @@ A pipeline that turns Regulation (EU) 2024/1689 (the AI Act) into one Prolog pro
 everything else.
 
 Requirements and intent: [`requirements-overview.md`](requirements-overview.md).
-Design rationale for this version, including what was rejected and why:
-[`v4_plan.md`](v4_plan.md).
+Design rationale, including what was rejected and why: [`v4_plan.md`](v4_plan.md).
+Results of the first full-act run, and the mistakes in it:
+[`v4_results.md`](v4_results.md).
 
 ---
 

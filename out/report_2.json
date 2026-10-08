@@ -1,0 +1,652 @@
+{
+  "pass": 2,
+  "coverage": {
+    "work_units": 125,
+    "articles": 112,
+    "annexes": 13,
+    "with_rule_file": 125,
+    "missing_rule_file": [],
+    "n_missing": 0,
+    "score": 1.0,
+    "slicer_validated": 99,
+    "slicer_checked": 99,
+    "slicer_differ": []
+  },
+  "syntax": {
+    "ran": true,
+    "ok": true,
+    "errors": 0,
+    "warnings": 22,
+    "singleton_warnings": 11,
+    "detail": "Warning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:2048:\nWarning:    Singleton variables: [S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:2888:\nWarning:    Singleton variables: [S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:4664:\nWarning:    Singleton variables: [Commission]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:5480:\nWarning:    Singleton variables: [AO]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:5484:\nWarning:    Singleton variables: [AO]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:5500:\nWarning:    Singleton variables: [AO]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:5672:\nWarning:    Singleton variables: [Sandbox]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out/ai_act_2.pl:5866:"
+  },
+  "clauses": 4907,
+  "rule_heads": 798,
+  "declared_predicates": 1225,
+  "input_slots": {
+    "count": 543,
+    "sample": [
+      "access_necessary_for_conformity/1",
+      "accessibility_requirements_conform/1",
+      "accessible_language_and_format/1",
+      "accreditation_certificate/1",
+      "act_concerns_ai_system/2",
+      "activity_pursuant_to/2",
+      "administrative_fine/1",
+      "adopt_implementing_act/2",
+      "adopting_implementing_act/1",
+      "adoption_of_detailed_measures_applies/1",
+      "adopts_technical_specifications_and_testing_standards/2",
+      "advisory_forum/1"
+    ]
+  },
+  "link_integrity": {
+    "body_goals": 2492,
+    "resolved": 2448,
+    "dangling": 40,
+    "vacuous_negations": 4,
+    "score": 0.982,
+    "dangling_detail": [
+      {
+        "in_rule": "permitted_human_assisted_assessment_ai_system/1",
+        "goal": "used_to_support_human_assessment/1"
+      },
+      {
+        "in_rule": "permitted_medical_or_safety_reason_ai_system/1",
+        "goal": "intended_for_medical_or_safety_reason/1"
+      },
+      {
+        "in_rule": "permitted_law_enforcement_labeling_ai_system/1",
+        "goal": "law_enforcement_labeling/1"
+      },
+      {
+        "in_rule": "permitted_adopt_delegated_act/2",
+        "goal": "protection_not_decreased_applies/0"
+      },
+      {
+        "in_rule": "required_quality_criteria_for_data_set/1",
+        "goal": "testing_data_set/1"
+      },
+      {
+        "in_rule": "required_design_for_human_oversight/1",
+        "goal": "effective_oversight_possible/1"
+      },
+      {
+        "in_rule": "required_provide_information/2",
+        "goal": "high_rrisk_ai_system/1"
+      },
+      {
+        "in_rule": "inform/2",
+        "goal": "actor/1"
+      },
+      {
+        "in_rule": "permitted_notify/2",
+        "goal": "requirements_satisfied/1"
+      },
+      {
+        "in_rule": "must_consult/2",
+        "goal": "objection_raised/1"
+      },
+      {
+        "in_rule": "must_decide_authorisation/2",
+        "goal": "objection_raised/1"
+      },
+      {
+        "in_rule": "stakeholder/1",
+        "goal": "civil_society_organisation/1"
+      },
+      {
+        "in_rule": "stakeholder/1",
+        "goal": "industry/1"
+      },
+      {
+        "in_rule": "stakeholder/1",
+        "goal": "academia/1"
+      },
+      {
+        "in_rule": "must_submit_annual_report/2",
+        "goal": "sandbox_established_since_one_year/1"
+      }
+    ],
+    "vacuous_detail": [
+      {
+        "in_rule": "permitted_notified_body_activity/1",
+        "goal": "objection_raised/1"
+      },
+      {
+        "in_rule": "required_fine_for_ai_practice_prohibition/2",
+        "goal": "undertaking/1"
+      },
+      {
+        "in_rule": "required_fine_for_operator_obligation_non_compliance/2",
+        "goal": "undertaking/1"
+      },
+      {
+        "in_rule": "required_fine_for_misleading_information/2",
+        "goal": "undertaking/1"
+      }
+    ]
+  },
+  "discrimination": {
+    "rules_judged": 946,
+    "non_discriminating": 493,
+    "single_goal": 326,
+    "multi_goal": 167,
+    "rate": 0.521,
+    "multi_goal_rate": 0.177,
+    "note": "lower bound: only plain conjunctive bodies are judged. multi_goal is the defect -- one type check per argument, constraining nothing. single_goal is mostly legitimate subtype rules (operator(O) :- provider(O)) and is reported separately, not folded in.",
+    "sample_multi_goal": [
+      {
+        "head": "must_comply/2",
+        "unit": "celex:32024R1689/oj#art_1",
+        "goals": 2,
+        "clause": "must_comply(Operator, S) :- operator(Operator), high_risk_ai_system(S)."
+      },
+      {
+        "head": "required_provide_guidelines/1",
+        "unit": "celex:32024R1689/oj#art_6",
+        "goals": 2,
+        "clause": "required_provide_guidelines(C) :- commission(C), date_deadline('2026-02-02')."
+      },
+      {
+        "head": "required_adopt_delegated_act/2",
+        "unit": "celex:32024R1689/oj#art_6",
+        "goals": 2,
+        "clause": "required_adopt_delegated_act(C, amend_conditions) :- commission(C), delegated_act_authorised_by('art_97')."
+      },
+      {
+        "head": "required_adopt_delegated_act/2",
+        "unit": "celex:32024R1689/oj#art_6",
+        "goals": 2,
+        "clause": "required_adopt_delegated_act(C, delete_conditions) :- commission(C), delegated_act_authorised_by('art_97')."
+      },
+      {
+        "head": "required_take_into_account/2",
+        "unit": "celex:32024R1689/oj#art_7",
+        "goals": 2,
+        "clause": "required_take_into_account(C, Cr) :- commission(C), criterion(Cr)."
+      },
+      {
+        "head": "must_ensure_compliance/2",
+        "unit": "celex:32024R1689/oj#art_8",
+        "goals": 2,
+        "clause": "must_ensure_compliance(P, S) :- provider(P), high_risk_ai_system(S)."
+      },
+      {
+        "head": "permitted_integration_of_testing_and_reporting/2",
+        "unit": "celex:32024R1689/oj#art_8",
+        "goals": 2,
+        "clause": "permitted_integration_of_testing_and_reporting(P, S) :- provider(P), high_risk_ai_system(S)."
+      },
+      {
+        "head": "required_risk_management_system/2",
+        "unit": "celex:32024R1689/oj#art_9",
+        "goals": 3,
+        "clause": "required_risk_management_system(Provider, System) :- provider(Provider), high_risk_ai_system(System), risk_management_system(_)."
+      },
+      {
+        "head": "required_risk_management_step/2",
+        "unit": "celex:32024R1689/oj#art_9",
+        "goals": 2,
+        "clause": "required_risk_management_step(System, identification_and_analysis_of_known_and_foreseeable_risks) :- high_risk_ai_system(System), risk_management_syst"
+      },
+      {
+        "head": "required_risk_management_step/2",
+        "unit": "celex:32024R1689/oj#art_9",
+        "goals": 2,
+        "clause": "required_risk_management_step(System, estimation_and_evaluation_of_risks) :- high_risk_ai_system(System), risk_management_system(_)."
+      },
+      {
+        "head": "required_risk_management_step/2",
+        "unit": "celex:32024R1689/oj#art_9",
+        "goals": 2,
+        "clause": "required_risk_management_step(System, evaluation_of_other_risks_from_post_market_monitoring) :- high_risk_ai_system(System), risk_management_system(_)"
+      },
+      {
+        "head": "required_risk_management_step/2",
+        "unit": "celex:32024R1689/oj#art_9",
+        "goals": 2,
+        "clause": "required_risk_management_step(System, adoption_of_appropriate_and_targeted_measures) :- high_risk_ai_system(System), risk_management_system(_)."
+      }
+    ],
+    "sample_single_goal": [
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- provider(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- product_manufacturer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- deployer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- authorised_representative(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- importer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- distributor(O)."
+      }
+    ]
+  },
+  "arity_collisions": {
+    "required_consult": [
+      2,
+      3
+    ],
+    "permitted_testing_in_real_world_conditions": [
+      1,
+      2
+    ],
+    "must_safeguard_confidentiality": [
+      1,
+      2
+    ],
+    "permitted_adopt_delegated_act": [
+      1,
+      2
+    ],
+    "obtained_information": [
+      1,
+      2
+    ],
+    "must_ensure_corrective_action": [
+      1,
+      2
+    ],
+    "liability": [
+      1,
+      2
+    ],
+    "must_inform": [
+      2,
+      3
+    ],
+    "required_quality_management_system": [
+      1,
+      2
+    ],
+    "required_information_item": [
+      2,
+      3
+    ],
+    "must_supply_information": [
+      2,
+      3
+    ],
+    "compliance_deadline": [
+      2,
+      3
+    ],
+    "must_adopt_implementing_acts": [
+      1,
+      2
+    ],
+    "required_recall": [
+      2,
+      3
+    ],
+    "must_notify_decision": [
+      2,
+      3
+    ],
+    "required_keep_documentation": [
+      1,
+      3
+    ],
+    "informed_consent_obtained": [
+      1,
+      2
+    ],
+    "required_corrective_action": [
+      2,
+      3
+    ],
+    "required_compliance": [
+      1,
+      2
+    ],
+    "logs_under_control": [
+      1,
+      2
+    ],
+    "must_cooperate": [
+      2,
+      3
+    ],
+    "required_take_into_account_requirements": [
+      1,
+      2
+    ]
+  },
+  "provenance": {
+    "rule_heads": 798,
+    "with_provenance": 765,
+    "missing": [
+      "assessment_performed/2",
+      "combination_of_support_activities_efficient/1",
+      "commission_requested_standardisation/1",
+      "competent_authority/1",
+      "condition_common_specifications_adoptable/1",
+      "cooperate_with/3",
+      "criteria_amount_of_computation/1",
+      "criteria_input_output_modalities/1",
+      "criteria_number_of_parameters/1",
+      "criteria_quality_of_data_set/1",
+      "excluded_from_electronic_instructions/1",
+      "exempt_fundamental_rights_impact_assessment/1",
+      "general_purpose_ai_model_provider/1",
+      "high_impact_capabilities/1",
+      "inform/2"
+    ]
+  },
+  "references": {
+    "units_scored": 125,
+    "truth_edges": 1063,
+    "emitted_edges": 1028,
+    "chunk": {
+      "true_positives": 1023,
+      "false_positives": 5,
+      "false_negatives": 40,
+      "precision": 0.995,
+      "recall": 0.962,
+      "f1": 0.978
+    },
+    "strict": {
+      "true_positives": 1023,
+      "false_positives": 5,
+      "false_negatives": 40,
+      "precision": 0.995,
+      "recall": 0.962,
+      "f1": 0.978
+    },
+    "units_imperfect": 29,
+    "worst": [
+      {
+        "unit": "art_2",
+        "missed": [
+          "celex:32002L0058/oj"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_5",
+        "missed": [
+          "celex:32024R1689/oj#art_5"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_6",
+        "missed": [
+          "celex:32024R1689/oj#art_6"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_10",
+        "missed": [
+          "celex:32024R1689/oj"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_21",
+        "missed": [
+          "celex:32024R1689/oj#art_21"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_43",
+        "missed": [
+          "celex:32024R1689/oj#art_43/par_1",
+          "celex:32024R1689/oj#art_43/par_1/unp_2/pnt_a",
+          "celex:32024R1689/oj#art_43/par_2"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_52",
+        "missed": [
+          "celex:32024R1689/oj#anx_13",
+          "celex:32024R1689/oj#art_51/par_1/unp_1/pnt_a",
+          "celex:32024R1689/oj#art_52/par_2",
+          "celex:32024R1689/oj#art_52/par_4"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_53",
+        "missed": [
+          "celex:32019L0790/oj#art_4/par_3",
+          "celex:32024R1689/oj#art_53"
+        ],
+        "spurious": []
+      }
+    ]
+  },
+  "namespace": {
+    "ran": true,
+    "files": 125,
+    "invented_predicates": 1471,
+    "shared_across_files": 70,
+    "single_file_only": 1401,
+    "fragmentation": 0.952,
+    "modality_prefixed": 770,
+    "violations_number_in_name": [
+      "annex_3_ai_system",
+      "annex_3_point_1_a",
+      "covered_by_annex_1",
+      "covered_by_annex_3",
+      "decision_refers_to_art_76_par_3",
+      "deployer_of_annex3_pnt5",
+      "falls_under_art_5",
+      "falls_under_art_50",
+      "listed_in_annex3_pnt1",
+      "listed_in_annex3_pnt2_8",
+      "listed_in_annex_3",
+      "listed_in_annex_3_pnt_2",
+      "listed_in_annex_3_point",
+      "meets_conditions_art_51",
+      "non_compliance_with_requirements_other_than_art5",
+      "objection_under_art_60_par_4_b",
+      "obtained_under_art_55",
+      "required_application_of_art79",
+      "requirements_laid_down_in_art_31",
+      "requirements_laid_down_in_art_31_applies",
+      "risk_within_meaning_of_art_79",
+      "use_information_art13"
+    ],
+    "n_violations_number_in_name": 22,
+    "alias_candidates": [
+      {
+        "reason": "identical gloss",
+        "names": [
+          "act_concerns_ai_system",
+          "concerns"
+        ],
+        "gloss": "act ai concerns delegated given system"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "appointed_for_evaluation",
+          "independent_expert"
+        ],
+        "gloss": "appointed evaluation expert independent"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "failed_to_comply_with_measure",
+          "infringement_c"
+        ],
+        "gloss": "commission comply failed measure provider requested"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "free_open_source_license",
+          "open_source_model"
+        ],
+        "gloss": "ai free licence model open released source under"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "general_purpose_ai_model_provider",
+          "provider_of_general_purpose_ai_model"
+        ],
+        "gloss": "ai general model provider purpose"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "institution",
+          "union_entity"
+        ],
+        "gloss": "agency body institution office union"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "permitted_reliance_on_codes_of_practice",
+          "permitted_rely_on_codes_of_practice"
+        ],
+        "gloss": "codes compliance demonstrate may practice provider rely"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "provider_of",
+          "provides_model"
+        ],
+        "gloss": "ai general model provider purpose supplies"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "required_authorised_representative_enablement",
+          "required_enable_authorised_representative"
+        ],
+        "gloss": "authorised enable mandated must perform provider representative tasks"
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "required_authorised_representative_task",
+          "required_perform_task"
+        ],
+        "gloss": "authorised mandated must perform representative task"
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "accreditation_certificate",
+          "accreditation_certificate_exists"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "act_is_delegated",
+          "adopt_delegated_act"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "act_is_delegated",
+          "delegated_act"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "act_is_delegated",
+          "delegated_act_authorised_by"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "administrative_fine",
+          "exempt_administrative_fine"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "adopt_delegated_act",
+          "delegated_act"
+        ]
+      },
+      {
+        "reason": "token overlap 0.75",
+        "names": [
+          "adopt_delegated_act",
+          "permitted_adopt_delegated_act"
+        ]
+      },
+      {
+        "reason": "token overlap 0.75",
+        "names": [
+          "adopt_delegated_act",
+          "required_adopt_delegated_act"
+        ]
+      },
+      {
+        "reason": "token overlap 0.67",
+        "names": [
+          "adopt_implementing_act",
+          "implementing_act"
+        ]
+      },
+      {
+        "reason": "token overlap 0.75",
+        "names": [
+          "adopt_implementing_act",
+          "must_adopt_implementing_act"
+        ]
+      }
+    ],
+    "n_alias_candidates": 352,
+    "shared_sample": [
+      "accreditation_certificate",
+      "adopt_delegated_act",
+      "affected_person",
+      "agreement",
+      "annex_3_ai_system",
+      "board",
+      "commission",
+      "committee",
+      "competent_authority",
+      "concerns",
+      "decision",
+      "delegated_act",
+      "established_in_union",
+      "european_data_protection_supervisor",
+      "financial_institution"
+    ]
+  }
+}

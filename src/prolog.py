@@ -34,8 +34,17 @@ PRED_DECL_RE = re.compile(
 DECLARED_RE = re.compile(
     r"declared\(\s*([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)\s*,\s*'((?:[^']|'')*)'")
 
-# Control constructs are not predicates of the domain.
-CONTROL = {",", ";", "->", "\\+", "!", "true", "fail", "not"}
+# Control constructs and builtins are not predicates of the domain, so a body goal
+# naming one is not a dangling reference. `false/0` was missing and got reported as
+# dangling in a rule the model wrote as `head :- ..., false.` -- which is valid, and
+# deliberate: it is how you write a condition that must never hold.
+CONTROL = {",", ";", "->", "\\+", "!", "not",
+           "true", "false", "fail", "halt",
+           "is", "forall", "findall", "bagof", "setof", "between", "succ",
+           "member", "memberchk", "length", "append", "nth0", "nth1", "msort",
+           "sort", "atom", "number", "var", "nonvar", "ground", "functor", "arg",
+           "copy_term", "assertz", "asserta", "retract", "dif",
+           "format", "write", "writeln", "nl", "print_message"}
 
 # Declaration and bookkeeping functors. Without this set they get scraped as domain
 # predicates: a run once reported `pred`, `gloss` and `source` as invented vocabulary.
@@ -44,13 +53,47 @@ DECL_SYNTAX = {"pred", "gloss", "source", "declared", "provenance", "references"
                "ensure_loaded"}
 
 
+def strip_comments(text: str) -> str:
+    """Remove % comments, quote-aware, including TRAILING ones.
+
+    An earlier version dropped only lines that START with %, which is wrong: the model
+    writes trailing comments on goal lines --
+
+        provider(Provider),      % Provider appears at least twice
+
+    -- and the comment text then got scanned as three body goals (`appears`, `at`,
+    `least`), reported as dangling references. SWI-Prolog loads such a file without
+    complaint, so nothing but this parser was ever confused by it.
+    """
+    out: list[str] = []
+    for line in text.splitlines():
+        in_q, cut = False, None
+        i = 0
+        while i < len(line):
+            ch = line[i]
+            if in_q:
+                if ch == "'":
+                    if i + 1 < len(line) and line[i + 1] == "'":
+                        i += 2
+                        continue
+                    in_q = False
+            elif ch == "'":
+                in_q = True
+            elif ch == "%":
+                cut = i
+                break
+            i += 1
+        out.append(line if cut is None else line[:cut])
+    return "\n".join(out)
+
+
 def split_clauses(text: str) -> list[str]:
     """Split Prolog source into clauses on top-level '.' terminators.
 
     Quote- and paren-aware, so a period inside 'text like this. And this.' or inside a
-    nested term does not split. Lines starting with % are dropped first.
+    nested term does not split. Comments are stripped first, trailing ones included.
     """
-    src = "\n".join(l for l in text.splitlines() if not l.lstrip().startswith("%"))
+    src = strip_comments(text)
     clauses: list[str] = []
     buf: list[str] = []
     in_quote, depth, i = False, 0, 0

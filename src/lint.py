@@ -207,8 +207,25 @@ def check_discrimination(rules: list[tuple[tuple[str, int], str, str]],
         The first conjoins conditions and is a real definition. The second only
         declares the types of its own arguments and adds nothing to its head.
 
-    The check is deliberately conservative: it reports a lower bound. A rule it does
-    not flag may still be weak; a rule it flags is weak by construction.
+    TWO SHAPES, REPORTED SEPARATELY
+    -------------------------------
+    A flagged body with ONE goal is usually a subtype rule, and those are legitimate:
+
+        operator(O) :- provider(O).      % Article 3(8): an operator is a provider,
+        operator(O) :- importer(O).      % a product manufacturer, a deployer, ...
+
+    That is a type union written as clauses, which is how you express it in Prolog.
+    A flagged body with TWO OR MORE goals is the real defect, because each goal types
+    a different argument and none of them constrains the others:
+
+        required_risk_management_system(P, S) :- provider(P), high_risk_ai_system(S).
+
+    `multi_goal` is therefore the number to read, and `single_goal` is reported beside
+    it rather than folded in, because folding them together roughly doubles the figure
+    with cases that are mostly correct.
+
+    The check is otherwise conservative: it reports a lower bound. A rule it does not
+    flag may still be weak; a multi-goal rule it flags is weak by construction.
     """
     flagged: list[dict] = []
     judged = 0
@@ -233,15 +250,24 @@ def check_discrimination(rules: list[tuple[tuple[str, int], str, str]],
         flagged.append({
             "head": f"{ind[0]}/{ind[1]}",
             "unit": provenance_of.get(ind, "?"),
+            "goals": len(conj),
             "clause": re.sub(r"\s+", " ", f"{head} :- {body}.")[:150],
         })
+    single = [f for f in flagged if f["goals"] == 1]
+    multi = [f for f in flagged if f["goals"] > 1]
     return {
         "rules_judged": judged,
         "non_discriminating": len(flagged),
+        "single_goal": len(single),
+        "multi_goal": len(multi),
         "rate": round(len(flagged) / judged, 3) if judged else 0.0,
-        "note": ("lower bound: only plain conjunctive bodies are judged, and only "
-                 "bodies that do nothing but type each head argument once are flagged"),
-        "sample": flagged[:15],
+        "multi_goal_rate": round(len(multi) / judged, 3) if judged else 0.0,
+        "note": ("lower bound: only plain conjunctive bodies are judged. multi_goal is "
+                 "the defect -- one type check per argument, constraining nothing. "
+                 "single_goal is mostly legitimate subtype rules (operator(O) :- "
+                 "provider(O)) and is reported separately, not folded in."),
+        "sample_multi_goal": multi[:12],
+        "sample_single_goal": single[:6],
     }
 
 
@@ -525,12 +551,18 @@ def main() -> int:
     di = report["discrimination"]
     print("\n== 4. discrimination -- do rule bodies TEST anything? ==")
     print(f"  conjunctive rules judged  {di['rules_judged']}")
-    print(f"  NON-DISCRIMINATING        {di['non_discriminating']}   RATE {di['rate']}")
-    print("    ^ the body only types each head argument once, so it restates the")
-    print("      provision's scope instead of the test the provision imposes. These")
-    print("      score perfectly on every other check in this report.")
-    print(f"    ({di['note']})")
-    for f in di["sample"][:8]:
+    print(f"  MULTI-GOAL, no constraint {di['multi_goal']}   RATE {di['multi_goal_rate']}")
+    print("    ^ THE DEFECT. Each goal types a different head argument and none")
+    print("      constrains another, so the body restates the provision's scope")
+    print("      instead of the test it imposes. These score perfectly on every")
+    print("      other check in this report.")
+    for f in di.get("sample_multi_goal", [])[:8]:
+        print(f"    {f['unit'].split('#')[-1]:<10} {f['clause']}")
+    print(f"  single-goal bodies        {di['single_goal']}")
+    print("    ^ mostly legitimate: a type union written as clauses. Reported")
+    print("      separately because folding it in would roughly double the figure")
+    print("      with cases that are correct.")
+    for f in di.get("sample_single_goal", [])[:3]:
         print(f"    {f['unit'].split('#')[-1]:<10} {f['clause']}")
 
     print("\n== 5. vocabulary ==")
