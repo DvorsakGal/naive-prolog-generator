@@ -1,0 +1,137 @@
+{
+  "n_invented_input": 1096,
+  "n_rule_files": 125,
+  "threshold": 0.6,
+  "pairs_proposed": 213,
+  "pairs_answered": 213,
+  "pairs_unanswered": 0,
+  "answer_rate": 1.0,
+  "verdict_same": 23,
+  "verdict_different": 190,
+  "groups": 16,
+  "names_merged": 20,
+  "fingerprint": "f60af79639089d28b6324427f13da511a393b127e3eec7946b95b91eaa0f007f",
+  "signature_2_sha256": "e611168d3dd5e0dd6864380d667fd3c78b14b67c7efe1517b97587c40081a0c9",
+  "combined_sha256": "58e38705e9c73a9544b26bad9a5800681f39e7ee543b83f5b600690c8280f095",
+  "model": "gpt-oss:120b-cloud",
+  "batches": 3,
+  "decisions": [
+    {
+      "canonical": "adheres_to_code_of_practice/1",
+      "merged": [
+        "adheres_to_approved_code_of_practice/1"
+      ],
+      "gloss": "provider adheres to an approved code of practice"
+    },
+    {
+      "canonical": "annex_3_ai_system/1",
+      "merged": [
+        "listed_in_annex_3/1"
+      ],
+      "gloss": "AI system listed in annex 3"
+    },
+    {
+      "canonical": "annex_3_pnt_1_a/1",
+      "merged": [
+        "annex_3_pnt_1_a_applies/1"
+      ],
+      "gloss": "systems referred to in annex\u202f3 point\u202f1\u202f(a)"
+    },
+    {
+      "canonical": "complies_with_harmonised_standard/1",
+      "merged": [
+        "complies_with_european_harmonised_standard/1"
+      ],
+      "gloss": "provider complies with a European harmonised standard"
+    },
+    {
+      "canonical": "condition_b/1",
+      "merged": [
+        "required_condition_b/1"
+      ],
+      "gloss": "Condition (b) for adopting common specifications is satisfied"
+    },
+    {
+      "canonical": "general_purpose_ai_model_provider/1",
+      "merged": [
+        "provides_general_purpose_ai_model/1",
+        "provider_of_general_purpose_ai_model/1"
+      ],
+      "gloss": "provider of a general\u2011purpose AI model"
+    },
+    {
+      "canonical": "high_risk_ai_system/1",
+      "merged": [
+        "required_high_risk_ai_system/1",
+        "high_risk_ai_system_applies/1"
+      ],
+      "gloss": "high\u2011risk AI system"
+    },
+    {
+      "canonical": "meets_requirements_art_31/1",
+      "merged": [
+        "required_requirements_of_art_31/1"
+      ],
+      "gloss": "meets the requirements laid down in article 31"
+    },
+    {
+      "canonical": "member_state/1",
+      "merged": [
+        "member_state_applies/1"
+      ],
+      "gloss": "Member State of the Union"
+    },
+    {
+      "canonical": "must_adopt/2",
+      "merged": [
+        "must_adopt_in_accordance/2"
+      ],
+      "gloss": "Commission shall adopt implementing acts in accordance with the examination procedure"
+    },
+    {
+      "canonical": "must_designate_or_establish/2",
+      "merged": [
+        "must_establish_or_designate/2"
+      ],
+      "gloss": "Member State shall designate or establish a notifying authority"
+    },
+    {
+      "canonical": "must_make_publicly_available/2",
+      "merged": [
+        "must_make_list_publicly_available/2"
+      ],
+      "gloss": "obligation to make a list publicly available"
+    },
+    {
+      "canonical": "obtained_information/2",
+      "merged": [
+        "information_obtained_by/2"
+      ],
+      "gloss": "information obtained by authority"
+    },
+    {
+      "canonical": "required_risk_management_system/1",
+      "merged": [
+        "risk_management_system/1"
+      ],
+      "gloss": "risk management system required"
+    },
+    {
+      "canonical": "safety_component_ai_system/1",
+      "merged": [
+        "act_concerns_safety_component_ai_system/1"
+      ],
+      "gloss": "AI system that is a safety component"
+    },
+    {
+      "canonical": "union_harmonisation_legislation_applies/1",
+      "merged": [
+        "listed_in_union_harmonisation_legislation/1",
+        "covered_by_union_harmonisation_legislation/1",
+        "related_to_product_covered_by_harmonisation_legislation/1"
+      ],
+      "gloss": "legislation listed in annex I"
+    }
+  ],
+  "unanswered_sample": []
+}

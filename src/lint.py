@@ -43,14 +43,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from prolog import (body_goals, head_indicator, indicator, simple_conjuncts,  # noqa: E402
-                    split_clauses, split_head_body, variables)
-from signature import collect_invented  # noqa: E402
+                    split_clauses, split_head_body, strip_comments, variables)
+
+# Quoted atoms are blanked before scanning for bad tokens, so 'within 10_years' in a
+# gloss is not reported as code.
+_QUOTED_OUT = re.compile(r"'(?:[^']|'')*'")
+from signature import MODALITIES, alias_candidates, collect_invented  # noqa: E402
 from structure import phase_b_units, validate  # noqa: E402
 
-STOPWORDS = {"a", "an", "the", "of", "to", "for", "in", "on", "by", "is", "are",
-             "that", "which", "and", "or", "as", "with", "its", "their"}
-MODALITIES = ("prohibited_", "permitted_", "required_", "exempt_", "objective_",
-              "must_")
 BOOKKEEPING = ("declared", "provenance", "references", "alias")
 
 
@@ -273,23 +273,6 @@ def check_discrimination(rules: list[tuple[tuple[str, int], str, str]],
 
 # ---------------------------------------------------------------------- 9. namespace
 
-def _tokens(name: str) -> frozenset[str]:
-    return frozenset(w for w in name.split("_") if w and w not in STOPWORDS)
-
-
-def _gloss_key(gloss: str) -> str:
-    words = [w for w in re.sub(r"[^a-z0-9 ]", " ", gloss.lower()).split()
-             if w not in STOPWORDS]
-    return " ".join(sorted(words))
-
-
-def _modality(name: str) -> str:
-    for m in MODALITIES:
-        if name.startswith(m):
-            return m
-    return ""
-
-
 def check_namespace(out_dir: Path, rules_dir: Path) -> dict:
     """Is the vocabulary SHARED across provisions, or did each call invent its own?
 
@@ -327,38 +310,12 @@ def check_namespace(out_dir: Path, rules_dir: Path) -> dict:
     shared = [i for i in inv if len(i.used_in) > 1]
     single = [i for i in inv if len(i.used_in) <= 1]
 
-    aliases: list[dict] = []
-    by_gloss: dict[str, set[str]] = defaultdict(set)
-    for i in inv:
-        if i.gloss:
-            by_gloss[_gloss_key(i.gloss)].add(i.name)
-    for key, group in by_gloss.items():
-        if len(group) > 1:
-            aliases.append({"reason": "identical gloss", "names": sorted(group),
-                            "gloss": key[:70]})
-
-    seen: set[tuple[str, str]] = set()
-    uniq = sorted(set(names))
-    for idx, a in enumerate(uniq):
-        ta = _tokens(a)
-        if len(ta) < 2:
-            continue
-        for b in uniq[idx + 1:]:
-            tb = _tokens(b)
-            if len(tb) < 2:
-                continue
-            # Opposite modalities are a DIFFERENT concept, not an alias:
-            # permitted_x and prohibited_x are supposed to be distinct predicates.
-            # Without this guard the naming forms we hand the calls would make the
-            # alias count go UP, because they put identical stems on opposite
-            # modalities.
-            ma, mb = _modality(a), _modality(b)
-            if ma and mb and ma != mb:
-                continue
-            j = len(ta & tb) / len(ta | tb)
-            if j >= 0.6 and (a, b) not in seen:
-                seen.add((a, b))
-                aliases.append({"reason": f"token overlap {j:.2f}", "names": [a, b]})
+    # The SAME generator reconcile.py proposes pairs from, so the number reported here
+    # is exactly the number of pairs that would be adjudicated. Before this was
+    # shared, the linter counted name-level pairs including cross-arity ones, which
+    # are not aliases by construction, and reported 410 where 311 would be acted on.
+    cands = alias_candidates(inv)
+    aliases = [{"reason": c.reason, "names": [c.a.key, c.b.key]} for c in cands]
 
     # A real, unambiguous violation of the naming forms: name the SUBJECT MATTER, never
     # the article or annex number. A predicate called annex_3_ai_system cannot be
@@ -382,6 +339,38 @@ def check_namespace(out_dir: Path, rules_dir: Path) -> dict:
 
 
 # ------------------------------------------------------------------------- 2. syntax
+
+# A token that looks like an atom but cannot be one: Prolog reads `10_years` as the
+# number 10 followed by the variable `_years`. Matched outside quoted atoms only.
+BAD_TOKEN_RE = re.compile(r"(?<![A-Za-z0-9_])(\d+_[A-Za-z_][A-Za-z0-9_]*)")
+
+
+def check_tokens(program: Path) -> dict:
+    """Find atoms and functors that cannot be atoms, and say where.
+
+    WHY THIS EXISTS
+    ---------------
+    swipl reports these as `Syntax error: Operator expected` at a column offset, which
+    does not name the offending token and takes a while to interpret. The cause is
+    always the same and is trivially findable: a functor beginning with a digit, which
+    the model reaches for when writing durations (`10_years`, `10_days`,
+    `10_years_after(System)`).
+
+    It is also the one defect class that my own clause parser does NOT notice -- it
+    happily reads such a clause, so every other check in this report scores text that
+    Prolog refuses to load. Naming the token is the difference between a two-minute fix
+    and a confusing report.
+    """
+    hits: list[dict] = []
+    for n, line in enumerate(strip_comments(program.read_text(encoding="utf-8"))
+                             .splitlines(), start=1):
+        for m in BAD_TOKEN_RE.finditer(_QUOTED_OUT.sub("''", line)):
+            hits.append({"line": n, "token": m.group(1),
+                         "context": line.strip()[:110]})
+    return {"count": len(hits),
+            "tokens": sorted({h["token"] for h in hits}),
+            "detail": hits[:12]}
+
 
 def check_syntax(program: Path) -> dict:
     if not shutil.which("swipl"):
@@ -504,6 +493,7 @@ def main() -> int:
         "pass": a.pass_,
         "coverage": check_coverage(out_dir, units_dir, rules_dir, annexes),
         "syntax": check_syntax(program),
+        "tokens": check_tokens(program),
         **analyse(program),
         "references": check_references(program, units_dir, rules_dir, annexes),
         "namespace": check_namespace(out_dir, rules_dir),
@@ -529,12 +519,29 @@ def main() -> int:
     if cov["slicer_differ"]:
         print(f"  SLICER DISAGREES      {cov['slicer_differ']}")
 
+    tk = report["tokens"]
     print("\n== 2. syntax ==")
     print(f"  {s['note']}" if not s.get("ran") else
           f"  consult {'OK' if s['ok'] else 'FAILED'}  errors={s['errors']} "
           f"warnings={s['warnings']} singletons={s['singleton_warnings']}")
+    if tk["count"]:
+        print(f"  INVALID ATOMS         {tk['count']} occurrences of "
+              f"{len(tk['tokens'])} token(s) that cannot be atoms:")
+        print(f"    {', '.join(tk['tokens'])}")
+        print("    ^ an atom or functor must start with a lowercase letter. Prolog")
+        print("      reads 10_years as the number 10 then the variable _years, so the")
+        print("      whole clause fails to load. This is what swipl reports as")
+        print("      'Operator expected'. Write years(10) instead.")
+        for h in tk["detail"][:5]:
+            print(f"    line {h['line']:<6} {h['context']}")
     if s.get("detail"):
         print("  " + s["detail"].replace("\n", "\n  "))
+    if s.get("ran") and not s["ok"]:
+        print()
+        print("  !! THE PROGRAM DOES NOT LOAD. Every number below was computed by this")
+        print("     file's own parser, which is more permissive than Prolog, so they")
+        print("     describe text that swipl rejects. Fix the syntax before reading")
+        print("     them as results.")
 
     print("\n== 3. link integrity ==")
     print(f"  body goals            {li['body_goals']}")
@@ -602,7 +609,7 @@ def main() -> int:
         for v in ns.get("violations_number_in_name", [])[:6]:
             print(f"    {v}")
         print(f"  alias candidates       {ns.get('n_alias_candidates')}  "
-              f"(candidates for reconcile.py, not defects)")
+              f"(the pairs reconcile.py would adjudicate, not defects)")
         for al in ns.get("alias_candidates", [])[:8]:
             print(f"    {al['reason']:<22} {' ~ '.join(al['names'])}")
 

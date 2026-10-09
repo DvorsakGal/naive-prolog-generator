@@ -34,7 +34,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
-from llm import Client, LLMConfig, append_log  # noqa: E402
+from llm import Client, LLMConfig, append_log, cache_key  # noqa: E402
 from prompts import build_rules_messages  # noqa: E402
 from signature import parse_declarations, signature_sha  # noqa: E402
 from structure import WorkUnit, phase_b_units, strict_check  # noqa: E402
@@ -85,16 +85,30 @@ async def one(unit: WorkUnit, signature: str, sig_sha: str, client: Client,
               http: httpx.AsyncClient, rules_dir: Path, log_path: Path,
               force: bool, progress: dict) -> None:
     dest = rules_dir / f"{unit.safe_name()}.pl"
+    messages = build_rules_messages(signature, unit.as_xml())
+    # STALENESS IS KEYED ON THE CALL KEY, NOT THE SIGNATURE HASH.
+    #
+    # The call key covers the model, temperature, seed, num_predict AND the full
+    # prompt text -- everything that can change the response. The signature is part
+    # of the prompt, so this subsumes the old signature check.
+    #
+    # Keying on the signature hash alone was wrong, and silently so: editing the
+    # Phase B prompt left every existing rule file looking current, so a prompt
+    # experiment reused the previous prompt's output and reported it as a result.
+    # The response cache in llm.py would have missed correctly -- but this skip
+    # short-circuits before reaching it.
+    key = cache_key(client.cfg, messages)
+    stamp = f"% call key   : {key}"
     if dest.exists() and not force:
-        # Skip only if the existing file was generated against THIS vocabulary.
-        # Otherwise it is stale: its goals may call predicates the current
-        # vocabulary no longer declares.
-        if f"% signature : {sig_sha}" in dest.read_text(encoding="utf-8")[:600]:
+        # Searched over the WHOLE file, not a fixed prefix. The header's `title` line
+        # is variable length -- an annex title can carry a full <ref> id -- and a
+        # 600-character window pushed the stamp out of range for 7 of 125 units, which
+        # then regenerated on every single run.
+        if stamp in dest.read_text(encoding="utf-8"):
             progress["skipped"] += 1
             return
         progress["stale"] += 1
 
-    messages = build_rules_messages(signature, unit.as_xml())
     text, rec = await client.call(http, messages, label=f"rules:{unit.fragment}")
     rec.meta = {"unit": unit.uid, "input_chars": unit.size,
                 "n_refs": len(set(unit.refs())), "breadcrumb": unit.breadcrumb}
@@ -108,13 +122,13 @@ async def one(unit: WorkUnit, signature: str, sig_sha: str, client: Client,
 
     header = (
         f"% unit       : {unit.uid}\n"
-        f"% title      : {unit.title}\n"
         f"% context    : {unit.breadcrumb}\n"
         f"% slice sha  : {unit.sha256}\n"
         f"% model      : {client.cfg.model}\n"
-        f"% prompt sha : {rec.prompt_sha}\n"
-        f"% signature : {sig_sha}\n"
+        f"% signature  : {sig_sha}\n"
+        f"% call key   : {key}\n"
         f"% cached     : {rec.cached}\n"
+        f"% title      : {unit.title}\n"
     )
     dest.write_text(header + text + "\n", encoding="utf-8")
     progress["done"] += 1

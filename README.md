@@ -87,8 +87,10 @@ cannot see each other still connect.
 
    ── then, optionally, the second pass ──
 
-  out/rules/*.pl ──► PHASE B2  reconcile.py  ★ LLM CALL #127 ★
-                     one call over every predicate Phase B invented
+  out/rules/*.pl ──► PHASE B2  reconcile.py  ★ ~4 LLM CALLS ★
+                     mechanical pass proposes candidate pairs;
+                     batched calls give one verdict per pair;
+                     surviving names chosen in code by usage count
                                │
                                ▼
                      signature_2.pl  (canonical names + alias/2 facts)
@@ -185,12 +187,31 @@ similar as strings and are *different legal obligations*, while
 *are* the same act. No threshold separates those, so an automatic merge either corrupts
 the program silently or misses what it was built for.
 
-So reconciliation is **one LLM call** that sees every invented predicate and gloss at
-once, chooses canonical names, and emits `alias/2` facts for what it merged. Its output
-is frozen and hashed exactly like Phase A's, so every pass-2 call is still a pure
-function of `(slice, frozen vocabulary)`. Both passes stay on disk, and `--both` prints
-them side by side — the question "did pinning the names help?" is answered by the report,
-not by argument.
+It does not follow that the model should also *find* the pairs. The first version asked
+it to, handing over all 1,469 invented predicates in one call, and it returned a single
+comment line and no Prolog — an open-ended search over 1,469 names has a costless null
+answer. See [`v4_results.md` §3](v4_results.md).
+
+So reconciliation is split by what each side is good at:
+
+1. **Propose** (mechanical) — every pair of invented predicates with the same arity, the
+   same modality, and either an identical gloss or ≥0.6 token overlap. Cheap, exhaustive,
+   high recall, no judgement. 311 pairs on the first run.
+2. **Adjudicate** (the LLM, batched) — one *forced* verdict per pair, `same` or
+   `different`. A pair with no verdict is reported as unanswered rather than silently
+   read as "different", so a non-answer cannot pass as a result.
+3. **Canonicalise** (mechanical) — union the `same` verdicts into groups with union-find,
+   then pick each group's surviving name by usage count. "Prefer the name most provisions
+   already use" needs no judgement, and leaving it to the model only adds a way for two
+   batches to disagree about one group.
+
+The output is frozen and hashed exactly like Phase A's, so every pass-2 call is still a
+pure function of `(slice, frozen vocabulary)`. Both passes stay on disk, and `--both`
+prints them side by side.
+
+**Read that comparison against the noise floor.** Two runs with identical inputs differ
+by ±14 on shared predicates and ±58 on alias candidates ([`v4_results.md`
+§4](v4_results.md)), so a small improvement is not evidence of one.
 
 ---
 
@@ -330,7 +351,7 @@ rather than written out, because a truncated completion ends mid-clause.
 | `src/prompts.py` | A, B, B2 | — | **the three prompts — this is the method** |
 | `src/signature.py` | A | **yes** | builds and freezes the vocabulary; also owns the invented-predicate inventory |
 | `src/rules.py` | B | **yes** | one call per article or annex, either pass |
-| `src/reconcile.py` | B2 | **yes** | one call that merges duplicate invented names |
+| `src/reconcile.py` | B2 | **yes** | proposes candidate pairs, adjudicates them in batches, canonicalises in code |
 | `src/assemble.py` | C | no | builds `ai_act.pl` |
 | `src/lint.py` | D | no | the nine checks |
 | `src/prolog.py` | C, D | — | quote-aware Prolog source handling, shared |

@@ -26,7 +26,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from prolog import head_indicator, rewrite_declarations, split_clauses  # noqa: E402
+from prolog import (head_indicator, normalise, rewrite_declarations,  # noqa: E402
+                    split_clauses, well_formed)
 from structure import phase_b_units  # noqa: E402
 
 PASS_DIRS = {1: "rules", 2: "rules_2"}
@@ -45,14 +46,31 @@ def assemble(out_dir: Path, units_dir: Path, which_pass: int = 1,
     preds: dict[tuple[str, int], int] = {}
     declared: set[tuple[str, int]] = set()
     stats = {"declarations": 0, "clauses_read": 0, "clauses_kept": 0, "duplicates": 0,
-             "unparsed": 0, "sources": 0, "missing_rule_files": []}
+             "unparsed": 0, "sources": 0, "missing_rule_files": [],
+             "repaired": 0, "malformed": []}
 
     def absorb(label: str, raw: str) -> None:
         text, n = rewrite_declarations(raw)
         stats["declarations"] += n
         kept: list[str] = []
-        for clause in split_clauses(text):
+        for raw in split_clauses(text):
             stats["clauses_read"] += 1
+            clause = normalise(raw)
+            if clause != raw:
+                stats["repaired"] += 1
+            # ONE BAD CLAUSE MUST NOT TAKE THE PROGRAM DOWN.
+            #
+            # A model occasionally emits an extra closing parenthesis in a deeply
+            # nested term. swipl then rejects that clause, `consult` reports an error,
+            # and the whole run stops -- so 4,000 good clauses were being discarded
+            # over 2 typos in one article. A malformed clause is dropped and RECORDED
+            # instead, which degrades the program by exactly the clauses at fault and
+            # says which they were.
+            why = well_formed(clause)
+            if why is not None:
+                stats["malformed"].append({"source": label, "reason": why,
+                                           "clause": re.sub(r"\s+", " ", clause)[:120]})
+                continue
             ind = head_indicator(clause)
             if ind is None:
                 stats["unparsed"] += 1
@@ -123,6 +141,7 @@ def assemble(out_dir: Path, units_dir: Path, which_pass: int = 1,
             fh.write("\n".join(clauses))
             fh.write("\n\n")
 
+    stats["n_malformed"] = len(stats["malformed"])
     stats["input_slots"] = len(underived)
     stats["distinct_predicates"] = len(preds)
     stats["output"] = str(dest)
@@ -146,6 +165,14 @@ if __name__ == "__main__":
     print(f"declarations    : {st['declarations']} rewritten to declared/3")
     print(f"clauses         : {st['clauses_kept']} kept "
           f"({st['duplicates']} duplicates, {st['unparsed']} unparsed)")
+    if st["repaired"]:
+        print(f"repaired        : {st['repaired']} doubled terminators ('..' -> '.')")
+    if st["malformed"]:
+        print(f"DROPPED         : {st['n_malformed']} malformed clause(s) -- the rest of "
+              f"the program is unaffected")
+        for m in st["malformed"][:6]:
+            print(f"                  {m['source'].split('#')[-1]:<12} {m['reason']}")
+            print(f"                    {m['clause'][:96]}")
     print(f"predicates      : {st['distinct_predicates']}")
     print(f"input slots     : {st['input_slots']} declared :- dynamic")
     if st["missing_rule_files"]:

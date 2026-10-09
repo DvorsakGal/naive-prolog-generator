@@ -14,8 +14,22 @@
 #   FORCE=1 ./run.sh                # ignore cached responses and regenerate
 #
 # Env: OUT, UNITS, MODEL, CONCURRENCY.
-set -euo pipefail
+set -uo pipefail
 cd "$(dirname "$0")"
+
+# Each phase is checked explicitly rather than relying on `set -e`, so a stop looks
+# like a stop. A lint failure used to abort the script between pass 1 and Phase B2,
+# which left no ai_act_2.pl and no explanation -- it read as a crash.
+step () {
+  local label="$1"; shift
+  if ! "$@"; then
+    echo
+    echo "!! STOPPED at: $label"
+    echo "   The phase above reported a failure, so later phases were not run."
+    echo "   Nothing downstream is built on a program that does not load."
+    exit 1
+  fi
+}
 
 PY=venv/bin/python
 OUT="${OUT:-out}"
@@ -51,25 +65,29 @@ echo
 
 # --- Phase 0: the work list, and the check that the slicer still agrees with the corpus
 echo "== Phase 0: derive the work list from the act's structure (deterministic) =="
-$PY src/structure.py --units "$UNITS" $ANNEX_FLAG
+step "Phase 0 (work list)" $PY src/structure.py --units "$UNITS" $ANNEX_FLAG
 echo
 
 # --- Phase A: one call over the definitions article, frozen and hashed
 echo "== Phase A: build and freeze the vocabulary (1 LLM call) =="
-$PY src/signature.py --units "$UNITS" --out "$OUT" --model "$MODEL" $FORCE_FLAG
+step "Phase A (vocabulary)" \
+  $PY src/signature.py --units "$UNITS" --out "$OUT" --model "$MODEL" $FORCE_FLAG
 echo
 
 run_pass () {
   local n="$1"
   echo "== Phase B pass $n: write clauses, 1 LLM call per article or annex =="
-  $PY src/rules.py --units "$UNITS" --out "$OUT" --pass "$n" \
-      --model "$MODEL" --concurrency "$CONCURRENCY" $ONLY_FLAG $ANNEX_FLAG $FORCE_FLAG
+  step "Phase B pass $n (clauses)" \
+    $PY src/rules.py --units "$UNITS" --out "$OUT" --pass "$n" \
+        --model "$MODEL" --concurrency "$CONCURRENCY" $ONLY_FLAG $ANNEX_FLAG $FORCE_FLAG
   echo
   echo "== Phase C pass $n: assemble the Prolog program (deterministic) =="
-  $PY src/assemble.py --units "$UNITS" --out "$OUT" --pass "$n" $ANNEX_FLAG
+  step "Phase C pass $n (assemble)" \
+    $PY src/assemble.py --units "$UNITS" --out "$OUT" --pass "$n" $ANNEX_FLAG
   echo
   echo "== Phase D pass $n: lint (deterministic) =="
-  $PY src/lint.py --units "$UNITS" --out "$OUT" --pass "$n" $ANNEX_FLAG
+  step "Phase D pass $n (lint)" \
+    $PY src/lint.py --units "$UNITS" --out "$OUT" --pass "$n" $ANNEX_FLAG
   echo
 }
 
@@ -78,8 +96,9 @@ if [ "$BOTH" = "1" ] || [ "$RUN_PASS" = "1" ]; then
 fi
 
 if [ "$BOTH" = "1" ] || [ "$RUN_PASS" = "2" ]; then
-  echo "== Phase B2: reconcile the names pass 1 invented (1 LLM call) =="
-  $PY src/reconcile.py --out "$OUT" --model "$MODEL" $FORCE_FLAG
+  echo "== Phase B2: adjudicate candidate pairs of invented names (batched LLM calls) =="
+  step "Phase B2 (reconcile)" \
+    $PY src/reconcile.py --out "$OUT" --model "$MODEL" $FORCE_FLAG
   echo
   run_pass 2
 fi

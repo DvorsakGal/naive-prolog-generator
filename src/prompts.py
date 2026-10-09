@@ -7,8 +7,8 @@ SIGNATURE_PROMPT  (Phase A)  runs once over the definitions article and produces
 RULES_PROMPT      (Phase B)  runs once per article or annex. It receives the *frozen*
                              vocabulary verbatim plus one slice of the act, and writes
                              Prolog clauses using that vocabulary.
-RECONCILE_PROMPT  (Phase B2) runs once over every predicate Phase B invented, and
-                             decides which of them are the same thing under two names.
+RECONCILE_PROMPT  (Phase B2) adjudicates candidate pairs of invented predicates,
+                             one explicit verdict per pair, in batches.
 
 Freezing the vocabulary between phases is what makes Phase B calls mutually
 independent: each one is a pure function of (slice, frozen vocabulary), so they run in
@@ -16,15 +16,28 @@ any order, in parallel, and reproducibly from cache. If Phase B instead accumula
 vocabulary as it went, call N would depend on calls 1..N-1's stochastic output -- no
 parallelism, no cache, and no way to attribute a failure at call 90 to anything.
 
-WHY RECONCILIATION IS ONE CALL AND NOT A STRING-SIMILARITY PASS
----------------------------------------------------------------
+HOW RECONCILIATION IS SPLIT, AND WHY IT IS SPLIT THAT WAY
+---------------------------------------------------------
 Merging invented names by string overlap fails in both directions on this corpus.
 `required_quality_management_system` and `required_risk_management_system` are ~88%
 similar as strings and are different legal obligations, so any threshold low enough to
 catch the genuine pair `must_publish_annual_report` / `must_submit_annual_report`
 (0.67 token overlap) also merges those two -- silently, while improving every metric
-you would use to notice. The distinction is semantic, so it goes to the one component
-that can make it, with all the names and glosses visible at once.
+you would use to notice. The distinction is semantic.
+
+It does not follow that the model should also FIND the pairs. The first version of this
+prompt handed over all 1,469 invented predicates and asked which were duplicates. It
+returned one comment line -- "No duplicate predicate names with identical arity were
+identified" -- and nothing else, because an open-ended search over 1,469 names has a
+costless null answer, and because the prompt's own caution section gave it a reason to
+take that answer.
+
+So the work is split by what each side is good at. The mechanical pass PROPOSES: same
+arity, same modality, overlapping tokens or an identical gloss -- cheap, exhaustive,
+high recall, no judgement. The model ADJUDICATES, one forced verdict per pair, in
+batches. And the canonical name is then chosen in CODE from usage counts, because
+"prefer the name most provisions already use" needs no judgement at all and leaving it
+to the model only adds a way for batches to disagree with each other.
 
 TERMINOLOGY
 -----------
@@ -187,27 +200,64 @@ of you can see the others' output. If two calls name the same thing differently,
 clauses cannot connect: a goal `permitted_use_x(S)` will never match a fact written as
 `x_is_permitted(S)`. It will not raise an error -- it will just silently never succeed.
 
-So the names you introduce are not free choices. Build each one from these forms:
+So the names you introduce are not free choices. Build each one from these forms.
+**The arity is part of the form.** A predicate's identity in Prolog is its name AND its
+number of arguments, so must_inform/2 and must_inform/3 are two unrelated predicates
+that merely share a spelling: a goal written with one can never match a clause written
+with the other, and nothing will error.
 
-  MODALITY      prohibited_<thing>      something the act forbids
-                permitted_<thing>       something the act allows
-                required_<thing>        something the act mandates
-                exempt_<thing>          something the act excludes from a rule
+  FORM                            ARITY   ARGUMENTS
+  ------------------------------- ------- --------------------------------------------
+  prohibited_<thing>(X)             1     the thing forbidden
+  permitted_<thing>(X)              1     the thing allowed
+  required_<thing>(X)               1     the thing the requirement is about
+  exempt_<thing>(X)                 1     the thing excluded
+  objective_<purpose>(X)            1     the thing pursuing the purpose
+  <adjective>(X)                    1     the thing described
+  <noun>_applies(X)                 1     the thing the circumstance holds of
+  must_<verb>(Actor, Object)        2     who is obliged, what about
+  <verb>_<object>(Actor, Object)    2     who acts, what they act on
 
-  PURPOSE       objective_<purpose>     a permitted purpose or objective
-                                        e.g. objective_localise_suspect
+Examples: prohibited_social_scoring(S), required_risk_management_system(S),
+real_time(S), urgency_applies(S), must_notify(Authority, S),
+places_on_market(Provider, S).
 
-  DESCRIPTION   <adjective>(X)          one argument, the thing described
-                                        e.g. real_time(S), high_risk(S)
+## ARITY -- two rules, because getting this wrong is invisible
 
-  ACT/EVENT     <verb>_<object>(A, B)   one party doing something to something
-                                        e.g. places_on_market(P, S)
+**1. A duty on a named party is always `must_<verb>(Actor, Object)`, never
+`required_<thing>` with two arguments.** `required_<thing>` is always unary. If the
+provision names who is obliged, use the `must_` form:
 
-  DUTY          must_<verb>(Actor, X)   an obligation on a named party
-                                        e.g. must_notify(Authority, S)
+    WRONG   required_compliance(Operator, S)       % required_ with 2 arguments
+    RIGHT   must_comply(Operator, S)
 
-  CONDITION     <noun>_applies(X)       a circumstance that holds
-                                        e.g. urgency_applies(S)
+**2. Never add an argument to fit extra detail. Use a compound term instead.** If an
+obligation needs a third thing -- what was communicated, which document, which
+deadline -- it goes inside the Object argument, so the arity stays 2:
+
+    WRONG   must_inform(Body, Authority, quality_management_system_approval)
+            must_inform(Importer, Provider, Representative, Authority, System)
+
+    RIGHT   must_inform(Body, approval(quality_management_system))
+            must_inform(Importer, nonconformity(System))
+            must_inform(Provider, nonconformity(System))
+
+Three independent calls wrote `must_inform` at arity 2, 3 and 5 in one earlier run, so
+sixteen articles produced a name that looks shared and is not. Pick the form's arity and
+put everything else in a term.
+
+**3. Every atom and every functor starts with a lowercase letter.** Never a digit, never
+an underscore. This is Prolog's lexical rule, not a style preference: `10_years` is read
+as the number `10` followed by the variable `_years`, which is a syntax error, and the
+whole clause fails to load.
+
+Durations, counts and deadlines are the case this comes up in. Put the number in its own
+argument:
+
+    WRONG   period(10_years_after(System))      keep_for(10_years)      within(10_days)
+    RIGHT   period(years(10), after(System))    keep_for(years(10))     within(days(10))
+
+If you need a bare quantity, a number on its own is fine: `years(10)`, `percent(3)`.
 
 Further constraints:
 - The <thing> part names the SUBJECT MATTER, never the article or annex number. Write
@@ -280,75 +330,82 @@ RULES_USER = """\
 # -------------------------------------------------------------------------- Phase B2
 
 RECONCILE_PROMPT = """\
-You are merging duplicate predicate names in a Prolog program that encodes an EU
-regulation.
+You are deciding whether pairs of Prolog predicate names mean the same thing.
 
-The program was written by many independent calls, one per provision, none of which
-could see the others' output. Each was given a frozen signature, and each introduced
-new predicates where the signature had no name for something. Those introductions
-drifted: the same thing often acquired two or three names.
+The program they come from encodes an EU regulation. It was written by many independent
+calls, one per provision, none of which could see the others' output. Each introduced
+new predicates where the frozen vocabulary had no name for something, and those
+introductions drifted: the same thing often acquired two or three names.
 
-You will receive every introduced predicate, with its arity, its gloss, how many
-provisions used it, and which ones. Your job is to decide which names denote the SAME
-thing and choose one canonical name for each such group.
+A mechanical pass has already found every pair that is *similar enough to be worth
+checking* -- same arity, same modality, overlapping words or an identical gloss. It
+cannot tell which pairs are genuine, because the distinction is semantic. That is your
+only job.
 
-## What to emit
+## Your output: one verdict per pair, for every pair
 
-First, a declaration for every canonical name you choose:
+For each numbered pair you are given, emit exactly one line:
 
-    :- pred canonical_name/arity, gloss('short paraphrase'), source('reconciled').
+    same(information_obtained/1, obtained_information/1).
+    different(required_quality_management_system/2, required_risk_management_system/2).
 
-Then, one alias fact for every name that is NOT canonical, pointing at the name that
-replaces it:
+Rules:
+- Emit a verdict for EVERY pair you are shown. A pair with no verdict is an error, not
+  an implicit "different".
+- Keep the two predicate indicators exactly as given, in the order given.
+- Do not choose a canonical name, do not emit declarations, do not emit alias facts, do
+  not reorder the pairs. Deciding which name survives is done mechanically from usage
+  counts after you answer.
 
-    alias(required_compliance_with_requirements/1, required_compliance/1).
-    alias(required_ensuring_compliance/1, required_compliance/1).
+## `same` means: one thing, two names
 
-Do not emit an alias from a name to itself. Do not emit rules or provenance facts.
+The two names denote the same thing, such that a clause written with one should be able
+to match a goal written with the other.
 
-## Choosing the canonical name
+    information_obtained/1  ~  obtained_information/1              SAME, word order only
+    edps/1  ~  european_data_protection_supervisor/1               SAME, abbreviation
+    must_publish_annual_report/2  ~  must_submit_annual_report/2   SAME, one act, two verbs
+    confidentiality_obligation/1 ~ confidentiality_obligation_applies/1
+                                                                   SAME, suffix only
 
-- Prefer the name that is already used by the most provisions. Agreement that already
-  exists is worth more than a better-sounding name.
-- On a tie, prefer the shorter name that still states the subject matter in full words.
-- The canonical name must obey the same forms the calls were given: modality prefix
-  first (prohibited_, permitted_, required_, exempt_, objective_, must_), subject matter
-  spelled out, no abbreviations, no article or annex numbers, singular, British spelling.
-- Only merge names with the SAME arity. Two predicates with different arities are
-  different predicates; leave both alone.
+## `different` means: two things that happen to look alike
 
-## DO NOT MERGE THINGS THAT ARE MERELY SIMILAR
+    required_quality_management_system/2 ~ required_risk_management_system/2
+        DIFFERENT. Quality management and risk management are separate obligations in
+        separate articles.
 
-This is the part that matters, and the reason a human is not doing it with a regex.
-Names that look almost identical are often different legal obligations:
+    initiator_is_council/1  ~  revoker_is_council/1
+        DIFFERENT. Initiating and revoking are opposite acts, even with one gloss.
 
-  required_quality_management_system  vs  required_risk_management_system
-      DIFFERENT. Quality management and risk management are separate obligations in
-      separate articles. Do not merge them.
+    required_terminate_mandate/2 ~ required_terminate_mandate_if_contrary/2
+        DIFFERENT. The second is conditional; the first is not.
 
-  prohibited_social_scoring  vs  permitted_social_scoring
-      DIFFERENT. Opposite modalities are never aliases of each other.
+    annex_3_ai_system/1  ~  high_risk_ai_system_annex3_a/1
+        Judge on the glosses. If both name the systems listed in Annex III, SAME.
 
-  required_risk_management_system  vs  risk_management_system
-      DIFFERENT. One is a duty, the other is the thing the duty is about.
+## How to decide
 
-  must_publish_annual_report  vs  must_submit_annual_report
-      SAME. One act described with two verbs.
+Read both glosses. If they describe the same obligation, act, party or property, answer
+`same`. If either name adds a condition, a qualifier, a different verb, or a different
+subject matter that the other lacks, answer `different`.
 
-A wrong merge is worse than a missed one. A missed merge leaves two names that each
-still mean what they say; a wrong merge produces a program that looks better connected
-and answers queries incorrectly, and nothing downstream can detect it. When the glosses
-do not make it clear that two names denote the same thing, leave them separate.
+A wrong `same` is worse than a wrong `different`: merging two obligations produces a
+program that looks better connected and answers queries incorrectly, and nothing
+downstream can detect it. So when the glosses genuinely do not settle it, answer
+`different` -- but answer. Most of these pairs are decidable from their glosses, and
+answering `different` to all of them would mean the pass did nothing.
 
 ## Output format
 
-Plain Prolog only. No prose, no markdown fences, no commentary. Declarations first,
-then alias facts. Comments starting with % are allowed for grouping.
+Plain Prolog only. No prose, no markdown fences, no commentary, no blank-line grouping.
+One `same(...)` or `different(...)` line per pair, in the order the pairs were given.
 """
 
 RECONCILE_USER = """\
-=== PREDICATES INTRODUCED BY PHASE B ({n} names over {n_files} provisions) ===
-{inventory}"""
+=== {n} CANDIDATE PAIRS (batch {batch} of {batches}) ===
+Emit one same(...) or different(...) line for each.
+
+{pairs}"""
 
 
 # ------------------------------------------------------------------------- builders
@@ -368,9 +425,10 @@ def build_rules_messages(signature: str, unit_xml: str) -> list[dict]:
     ]
 
 
-def build_reconcile_messages(inventory: str, n: int, n_files: int) -> list[dict]:
+def build_reconcile_messages(pairs: str, n: int, batch: int,
+                             batches: int) -> list[dict]:
     return [
         {"role": "system", "content": RECONCILE_PROMPT},
         {"role": "user", "content": RECONCILE_USER.format(
-            inventory=inventory, n=n, n_files=n_files)},
+            pairs=pairs, n=n, batch=batch, batches=batches)},
     ]

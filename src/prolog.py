@@ -333,3 +333,53 @@ def variables(text: str) -> set[str]:
     """Variable names in a term. Quoted atoms are removed first, so an atom like
     'Commission decisions' does not contribute a variable called Commission."""
     return set(_VAR.findall(_QUOTED.sub("''", text)))
+
+
+TRAILING_DOTS = re.compile(r"\.{2,}\s*$")
+
+
+def normalise(clause: str) -> str:
+    """Repair the one malformed shape that is unambiguous: a doubled terminator.
+
+    A model occasionally writes `references(a, b)..`. There is exactly one reading of
+    that, so collapsing it is a transcription fix rather than a judgement, and the
+    alternative is discarding a clause whose content is fine.
+    """
+    return TRAILING_DOTS.sub(".", clause)
+
+
+def well_formed(clause: str) -> str | None:
+    """None if the clause is well formed, else a short reason.
+
+    Only checks what can be decided without a Prolog reader: balanced quotes, and
+    balanced parentheses and brackets outside quotes. That covers the malformed output
+    actually seen -- an extra closing paren in a deeply nested term -- and it is the
+    check that lets ONE bad clause be dropped instead of taking the whole program down
+    with it.
+    """
+    depth, in_q = 0, False
+    i = 0
+    while i < len(clause):
+        ch = clause[i]
+        if in_q:
+            if ch == "'":
+                if i + 1 < len(clause) and clause[i + 1] == "'":
+                    i += 2
+                    continue
+                in_q = False
+        elif ch == "'":
+            in_q = True
+        elif ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth -= 1
+            if depth < 0:
+                return "unbalanced: an extra closing parenthesis or bracket"
+        i += 1
+    if in_q:
+        return "unbalanced: unterminated quoted atom"
+    if depth > 0:
+        return f"unbalanced: {depth} unclosed parenthesis or bracket"
+    if not clause.rstrip().endswith("."):
+        return "no terminating period"
+    return None

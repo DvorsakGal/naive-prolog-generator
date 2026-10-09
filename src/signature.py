@@ -269,3 +269,116 @@ def collect_invented(signature_text: str, rules_dir: Path) -> tuple[list[Invente
                     entry(nm, ar).used_in.add(f.name)
 
     return sorted(found.values(), key=lambda i: (i.name, i.arity)), len(files)
+
+
+# ------------------------------------------------------- candidate pairs for Phase B2
+
+STOPWORDS = {"a", "an", "the", "of", "to", "for", "in", "on", "by", "is", "are",
+             "that", "which", "and", "or", "as", "with", "its", "their"}
+MODALITIES = ("prohibited_", "permitted_", "required_", "exempt_", "objective_",
+              "must_")
+OVERLAP_THRESHOLD = 0.6
+
+
+def _tokens(name: str) -> frozenset[str]:
+    return frozenset(w for w in name.split("_") if w and w not in STOPWORDS)
+
+
+def gloss_key(gloss: str) -> str:
+    words = [w for w in re.sub(r"[^a-z0-9 ]", " ", gloss.lower()).split()
+             if w not in STOPWORDS]
+    return " ".join(sorted(words))
+
+
+def _modality(name: str) -> str:
+    for m in MODALITIES:
+        if name.startswith(m):
+            return m
+    return ""
+
+
+@dataclass
+class Candidate:
+    """A pair of invented predicates that MIGHT be the same thing under two names.
+
+    Candidates are generated mechanically and are deliberately over-inclusive: the
+    point is recall. Deciding which ones are genuine is semantic -- token overlap
+    cannot tell quality management from risk management -- so that decision is made by
+    the adjudication call in reconcile.py, one explicit verdict per pair.
+    """
+
+    a: Invented
+    b: Invented
+    reason: str
+    score: float
+
+    @property
+    def arity(self) -> int:
+        return self.a.arity
+
+    @property
+    def key(self) -> tuple[str, str]:
+        return (self.a.key, self.b.key)
+
+
+def alias_candidates(inv: list[Invented],
+                     threshold: float = OVERLAP_THRESHOLD) -> list[Candidate]:
+    """Pairs worth adjudicating, most similar first.
+
+    Three rules, each of which exists because of a specific false positive:
+
+    * SAME ARITY ONLY. foo/1 and foo/2 are different predicates, so they cannot be
+      aliases of each other and merging them would be wrong by construction. (An
+      arity DISAGREEMENT is a separate defect, reported by the linter's arity-collision
+      check and fixed in the Phase B prompt, not here.)
+    * SAME MODALITY, or no modality on at least one side. permitted_x and prohibited_x
+      share every token but are opposites. Without this guard the naming forms we hand
+      the calls would make the candidate count go UP, because they put identical stems
+      on opposite modalities.
+    * At least two meaningful tokens on each side, so one-word names do not pair with
+      everything that contains that word.
+    """
+    out: list[Candidate] = []
+    seen: set[tuple[str, str]] = set()
+
+    by_gloss: dict[tuple[str, int], set[str]] = {}
+    for i in inv:
+        if i.gloss:
+            by_gloss.setdefault((gloss_key(i.gloss), i.arity), set()).add(i.key)
+
+    index = {i.key: i for i in inv}
+    for (_g, _ar), group in by_gloss.items():
+        members = sorted(group)
+        for x in range(len(members)):
+            for y in range(x + 1, len(members)):
+                pair = (members[x], members[y])
+                if pair not in seen:
+                    seen.add(pair)
+                    out.append(Candidate(index[pair[0]], index[pair[1]],
+                                         "identical gloss", 1.0))
+
+    ordered = sorted(inv, key=lambda i: (i.name, i.arity))
+    for x, a in enumerate(ordered):
+        ta = _tokens(a.name)
+        if len(ta) < 2:
+            continue
+        for b in ordered[x + 1:]:
+            if b.arity != a.arity:
+                continue
+            tb = _tokens(b.name)
+            if len(tb) < 2:
+                continue
+            ma, mb = _modality(a.name), _modality(b.name)
+            if ma and mb and ma != mb:
+                continue
+            j = len(ta & tb) / len(ta | tb)
+            if j < threshold:
+                continue
+            pair = tuple(sorted((a.key, b.key)))
+            if pair in seen:
+                continue
+            seen.add(pair)
+            out.append(Candidate(index[pair[0]], index[pair[1]],
+                                 f"token overlap {j:.2f}", j))
+
+    return sorted(out, key=lambda c: (-c.score, c.a.key, c.b.key))
