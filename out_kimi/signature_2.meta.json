@@ -1,0 +1,1049 @@
+{
+  "n_invented_input": 2894,
+  "n_rule_files": 125,
+  "threshold": 0.6,
+  "pairs_proposed": 629,
+  "pairs_answered": 627,
+  "pairs_unanswered": 2,
+  "answer_rate": 0.997,
+  "verdict_same": 192,
+  "verdict_different": 435,
+  "groups": 141,
+  "names_merged": 173,
+  "fingerprint": "2d2e2b8614918b438195ecab883cf747aadd5345d6cc75c0672f349cce2c1cb5",
+  "signature_2_sha256": "dcc2055921ada90e6bf31bbd2b006f4fb01da26f59c9d80c9dc6b6afc6608ffc",
+  "combined_sha256": "adbed136f38c7482ee6fd87f3986d41e96f24e1417807110948db9f1940b9c05",
+  "model": "moonshotai/kimi-k2.6",
+  "batches": 8,
+  "decisions": [
+    {
+      "canonical": "action_taken/2",
+      "merged": [
+        "action_taken_by/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "ai_safety_component/1",
+      "merged": [
+        "safety_component_of_ai_system/1",
+        "concerning_ai_safety_component/1"
+      ],
+      "gloss": "AI system that is a safety component within the meaning of the AI Act"
+    },
+    {
+      "canonical": "annex_3_point_1_applies/1",
+      "merged": [
+        "listed_in_annex_3_point_1/1"
+      ],
+      "gloss": "system listed in Annex III point 1"
+    },
+    {
+      "canonical": "annex_3_point_6_applies/1",
+      "merged": [
+        "listed_in_annex_3_point_6/1"
+      ],
+      "gloss": "system listed in Annex III point 6"
+    },
+    {
+      "canonical": "annex_3_point_7_applies/1",
+      "merged": [
+        "listed_in_annex_3_point_7/1"
+      ],
+      "gloss": "system listed in Annex III point 7"
+    },
+    {
+      "canonical": "appropriate_safeguards/1",
+      "merged": [
+        "appropriate_safeguards_implemented/1"
+      ],
+      "gloss": "appropriate and applicable safeguards under Union law are implemented"
+    },
+    {
+      "canonical": "approved_quality_management_system/1",
+      "merged": [
+        "quality_management_system_approval/1"
+      ],
+      "gloss": "approval of a quality management system"
+    },
+    {
+      "canonical": "based_solely_on_profiling/1",
+      "merged": [
+        "solely_based_on_profiling/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "before_placing_on_market_or_putting_into_service/1",
+      "merged": [
+        "before_putting_into_service/1",
+        "prior_to_placing_on_market_or_putting_into_service/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "carried_out_by/2",
+      "merged": [
+        "tasks_carried_out_by/2"
+      ],
+      "gloss": "tasks carried out by specified party"
+    },
+    {
+      "canonical": "certificate_supplement/1",
+      "merged": [
+        "supplement_to_certificate/1"
+      ],
+      "gloss": "supplement to a certificate"
+    },
+    {
+      "canonical": "chapter_3_section_2/1",
+      "merged": [
+        "requirements_chapter_3_section_2_met/1",
+        "requirements_in_chapter_3_section_2_apply/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "commission_decides/2",
+      "merged": [
+        "commission_decides_authorisation/2"
+      ],
+      "gloss": "Commission decides whether authorisation is justified"
+    },
+    {
+      "canonical": "commission_objection/1",
+      "merged": [
+        "objection_raised_by_commission/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "condition_add_anx_3/2",
+      "merged": [
+        "condition_remove_anx_3/2"
+      ],
+      "gloss": "conditions for adding or modifying use-cases in Annex 3"
+    },
+    {
+      "canonical": "confidentiality_obligations/1",
+      "merged": [
+        "confidentiality_obligations_apply/1"
+      ],
+      "gloss": "appropriate confidentiality obligations in place"
+    },
+    {
+      "canonical": "conformity_assessment_activity/1",
+      "merged": [
+        "conformity_assessment_body_activity/1"
+      ],
+      "gloss": "activity performed under conformity assessment"
+    },
+    {
+      "canonical": "conformity_assessment_fees/0",
+      "merged": [
+        "fees_for_conformity_assessment/0"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "conformity_assessment_procedure/1",
+      "merged": [
+        "conformity_assessment_procedure_carried_out/1"
+      ],
+      "gloss": "conformity assessment procedure carried out by provider"
+    },
+    {
+      "canonical": "corrective_action/2",
+      "merged": [
+        "corrective_action_taken/2",
+        "corrective_action_required/2",
+        "corrective_action_required_for_system/2"
+      ],
+      "gloss": "corrective action taken by operator for AI systems made available"
+    },
+    {
+      "canonical": "covers_sensitive_operational_data/1",
+      "merged": [
+        "sensitive_operational_data_included/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "criminal_offence/1",
+      "merged": [
+        "serious_criminal_offence/1"
+      ],
+      "gloss": "offence listed in Annex II of the AI Act"
+    },
+    {
+      "canonical": "data_protection_authority/1",
+      "merged": [
+        "national_data_protection_authority/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "data_training_requirement_met/1",
+      "merged": [
+        "training_data_requirement_met/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "deemed_justified/1",
+      "merged": [
+        "measure_deemed_justified/1"
+      ],
+      "gloss": "authorisation deemed justified after no objection period"
+    },
+    {
+      "canonical": "delegated_act/1",
+      "merged": [
+        "delegated_act_concerning/1"
+      ],
+      "gloss": "act adopted under delegated powers"
+    },
+    {
+      "canonical": "delegated_act/2",
+      "merged": [
+        "adopting_delegated_act/2",
+        "delegated_act_concerning/2"
+      ],
+      "gloss": "delegated act concerning specified subject matter"
+    },
+    {
+      "canonical": "deployer_can_interpret_output/1",
+      "merged": [
+        "enables_deployer_to_interpret_output/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "deployer_can_use_appropriately/1",
+      "merged": [
+        "enables_deployer_to_use_appropriately/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "deployer_instructions_for_use_applicable/1",
+      "merged": [
+        "deployer_instructions_for_use/1"
+      ],
+      "gloss": "instructions for use for the deployer"
+    },
+    {
+      "canonical": "deployer_public_authority/1",
+      "merged": [
+        "public_authority_deployer/1"
+      ],
+      "gloss": "deployer that is or acts on behalf of a public authority"
+    },
+    {
+      "canonical": "drawn_up/1",
+      "merged": [
+        "drawn_up_correctly/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "duration_of_infringement/1",
+      "merged": [
+        "infringement_duration/1"
+      ],
+      "gloss": "duration of the infringement for fine calculation"
+    },
+    {
+      "canonical": "energy_consumption/1",
+      "merged": [
+        "known_energy_consumption/1",
+        "estimated_energy_consumption/1"
+      ],
+      "gloss": "known or estimated energy consumption of the model"
+    },
+    {
+      "canonical": "established_in_union/1",
+      "merged": [
+        "located_in_union/1",
+        "established_or_located_in_union/1"
+      ],
+      "gloss": "established in the Union"
+    },
+    {
+      "canonical": "established_under_national_law/1",
+      "merged": [
+        "must_be_established_under_national_law/1"
+      ],
+      "gloss": "entity established under national law of a Member State"
+    },
+    {
+      "canonical": "eu_declaration_of_conformity/1",
+      "merged": [
+        "declaration_of_conformity/1"
+      ],
+      "gloss": "EU declaration of conformity for an AI system"
+    },
+    {
+      "canonical": "exempt_military_defence_national_security_output/1",
+      "merged": [
+        "output_used_for_military_defence_national_security/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "experience_and_knowledge_of/2",
+      "merged": [
+        "experience_and_knowledge_required/2"
+      ],
+      "gloss": "experience and knowledge relating to specified matters"
+    },
+    {
+      "canonical": "free_and_open_source_licence/1",
+      "merged": [
+        "free_open_source_licence/1",
+        "released_under_free_and_open_source_licence/1"
+      ],
+      "gloss": "made available under free and open-source licence"
+    },
+    {
+      "canonical": "general_purpose_ai_model_provider/1",
+      "merged": [
+        "general_purpose_ai_model_supplied/1",
+        "provider_of_general_purpose_ai_model/1"
+      ],
+      "gloss": "third party supplies general-purpose AI model"
+    },
+    {
+      "canonical": "gravity_of_infringement/1",
+      "merged": [
+        "infringement_gravity/1"
+      ],
+      "gloss": "gravity of the infringement for fine calculation"
+    },
+    {
+      "canonical": "high_risk_ai_system/1",
+      "merged": [
+        "high_risk_ai_systems/1"
+      ],
+      "gloss": "AI system listed in Annex III"
+    },
+    {
+      "canonical": "high_risk_ai_system_referred_in_annex_3_point_2/1",
+      "merged": [
+        "high_risk_ai_system_intended_for_use_in_annex_3_point_2/1"
+      ],
+      "gloss": "high-risk AI system intended for use in area listed in Annex III point 2"
+    },
+    {
+      "canonical": "human_oversight_measures_technical/1",
+      "merged": [
+        "human_oversight_measures_assessment/1"
+      ],
+      "gloss": "human oversight measures and technical measures to facilitate output interpretation"
+    },
+    {
+      "canonical": "implementing_act/1",
+      "merged": [
+        "implementing_act_concerning/1"
+      ],
+      "gloss": "implementing act concerning AI safety components"
+    },
+    {
+      "canonical": "implementing_acts/2",
+      "merged": [
+        "adopting_implementing_acts/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "in_course_of_testing/2",
+      "merged": [
+        "identified_in_course_of_testing/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "inform_parties/2",
+      "merged": [
+        "must_inform_parties/2"
+      ],
+      "gloss": "provider must inform relevant parties about corrective action"
+    },
+    {
+      "canonical": "input_output_modality/1",
+      "merged": [
+        "input_output_modality_format/1"
+      ],
+      "gloss": "modality and format of inputs and outputs"
+    },
+    {
+      "canonical": "integration_technical_means/1",
+      "merged": [
+        "technical_integration_means/1"
+      ],
+      "gloss": "technical means required for model integration into AI systems"
+    },
+    {
+      "canonical": "isolated_data_processing_environment/1",
+      "merged": [
+        "protected_data_processing_environment/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "issued_certificate/2",
+      "merged": [
+        "certificate_issued_by/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "judicial_proceedings/2",
+      "merged": [
+        "initiated_judicial_proceedings/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "law_enforcement_immigration_asylum_authority/1",
+      "merged": [
+        "used_by_law_enforcement_border_immigration_asylum_authority/1",
+        "law_enforcement_border_immigration_asylum_authority/1"
+      ],
+      "gloss": "authority using high-risk AI systems in sensitive domains"
+    },
+    {
+      "canonical": "law_enforcement_migration_asylum_border_control_area/1",
+      "merged": [
+        "used_for_purposes_of_law_enforcement_migration_border_control_or_asylum/1"
+      ],
+      "gloss": "system used in areas of law enforcement, migration, asylum and border control management"
+    },
+    {
+      "canonical": "logs_under_control/2",
+      "merged": [
+        "under_control/2"
+      ],
+      "gloss": "logs of high-risk AI system are under provider control"
+    },
+    {
+      "canonical": "made_available_on_market/2",
+      "merged": [
+        "made_available_on_union_market/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "may_impose_fine/2",
+      "merged": [
+        "may_impose_administrative_fine/2"
+      ],
+      "gloss": "Commission may impose a fine on a provider"
+    },
+    {
+      "canonical": "may_initiate_dialogue/2",
+      "merged": [
+        "may_initiate_structured_dialogue/2"
+      ],
+      "gloss": "AI Office may initiate structured dialogue with provider"
+    },
+    {
+      "canonical": "may_invite/2",
+      "merged": [
+        "may_invite_to_adhere/2"
+      ],
+      "gloss": "permission to invite participation"
+    },
+    {
+      "canonical": "may_rely_on_code_of_practice/2",
+      "merged": [
+        "may_rely_on_codes_of_practice/2"
+      ],
+      "gloss": "provider may rely on code of practice to demonstrate compliance"
+    },
+    {
+      "canonical": "may_request_access/2",
+      "merged": [
+        "request_for_access/2"
+      ],
+      "gloss": "authority may request access to model"
+    },
+    {
+      "canonical": "measures_adopted/2",
+      "merged": [
+        "mitigation_measures_adopted/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "measures_taken/2",
+      "merged": [
+        "corrective_measures_taken/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "meets_requirements/2",
+      "merged": [
+        "entirely_meets_requirements/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "must_adopt_implementing_acts/2",
+      "merged": [
+        "shall_adopt_implementing_acts/2"
+      ],
+      "gloss": "Commission shall adopt implementing acts specifying detailed arrangements"
+    },
+    {
+      "canonical": "must_cooperate_with_authorities/2",
+      "merged": [
+        "must_cooperate/2",
+        "must_cooperate_with_authority/2"
+      ],
+      "gloss": "distributor must cooperate with competent authorities"
+    },
+    {
+      "canonical": "must_draw_up_declaration_of_conformity/2",
+      "merged": [
+        "must_draw_up_declaration/2"
+      ],
+      "gloss": "provider must draw up EU declaration of conformity"
+    },
+    {
+      "canonical": "must_encourage_and_facilitate/2",
+      "merged": [
+        "must_encourage_and_facilitate_codes/2"
+      ],
+      "gloss": "obligation to encourage and facilitate an activity"
+    },
+    {
+      "canonical": "must_ensure_confidentiality/1",
+      "merged": [
+        "ensure_confidentiality/1"
+      ],
+      "gloss": "ensure confidentiality of information and data"
+    },
+    {
+      "canonical": "must_have_quality_management_system/2",
+      "merged": [
+        "must_maintain_quality_management_system/2",
+        "must_comply_with_quality_management_system/2"
+      ],
+      "gloss": "provider must have quality management system complying with Article 17"
+    },
+    {
+      "canonical": "must_inform_commission_and_member_states/2",
+      "merged": [
+        "must_inform_commission_and_states/2"
+      ],
+      "gloss": "market surveillance authority shall inform Commission and other Member States of non-compliance beyond national territory"
+    },
+    {
+      "canonical": "must_keep_list_up_to_date/2",
+      "merged": [
+        "must_ensure_list_up_to_date/2"
+      ],
+      "gloss": "Commission shall ensure the list is kept up to date"
+    },
+    {
+      "canonical": "must_keep_up_to_date/2",
+      "merged": [
+        "shall_keep_up_to_date/2"
+      ],
+      "gloss": "obligation to maintain current information after registration"
+    },
+    {
+      "canonical": "must_lodge_application/2",
+      "merged": [
+        "must_lodge_technical_documentation_application/2"
+      ],
+      "gloss": "provider must lodge application with notified body"
+    },
+    {
+      "canonical": "must_maintain_risk_management_system/2",
+      "merged": [
+        "must_establish_risk_management_system/2",
+        "must_implement_risk_management_system/2"
+      ],
+      "gloss": "provider must maintain risk management system for high-risk AI system"
+    },
+    {
+      "canonical": "must_make_publicly_available/2",
+      "merged": [
+        "shall_make_publicly_available/2",
+        "shall_make_available_to_public/2"
+      ],
+      "gloss": "notified body must make list publicly available"
+    },
+    {
+      "canonical": "must_provide_information/2",
+      "merged": [
+        "must_provide_information_on_request/2",
+        "must_provide_certificate_information/2"
+      ],
+      "gloss": "obligation to provide information upon request"
+    },
+    {
+      "canonical": "must_register_information/2",
+      "merged": [
+        "must_register_with_information/2"
+      ],
+      "gloss": "provider or deployer must submit and keep up to date specified information upon registration"
+    },
+    {
+      "canonical": "must_report/2",
+      "merged": [
+        "must_submit_report/2"
+      ],
+      "gloss": "Member State shall report to Commission"
+    },
+    {
+      "canonical": "must_report_serious_incident/2",
+      "merged": [
+        "must_report_serious_incidents/2"
+      ],
+      "gloss": "provider or prospective provider must report serious incident to market surveillance authority"
+    },
+    {
+      "canonical": "must_submit_annual_report/2",
+      "merged": [
+        "must_publish_annual_report/2"
+      ],
+      "gloss": "authority must submit annual report to Commission"
+    },
+    {
+      "canonical": "must_take_corrective_action/2",
+      "merged": [
+        "must_take_corrective_actions/2"
+      ],
+      "gloss": "provider must take corrective action for non-conforming high-risk AI system"
+    },
+    {
+      "canonical": "must_take_into_account/2",
+      "merged": [
+        "shall_take_into_account/2"
+      ],
+      "gloss": "obligation to consider specified requirements when adopting delegated acts"
+    },
+    {
+      "canonical": "must_take_into_account_sme_needs/2",
+      "merged": [
+        "must_take_into_account_sme_interests/2"
+      ],
+      "gloss": "obligation to take into account specific interests and needs of SME providers"
+    },
+    {
+      "canonical": "must_take_restriction_measures/2",
+      "merged": [
+        "must_take_restrictive_measures/2",
+        "must_ensure_restrictive_measures/2"
+      ],
+      "gloss": "market surveillance authority must take measures to restrict or prohibit"
+    },
+    {
+      "canonical": "national_law_provides_otherwise/1",
+      "merged": [
+        "applicable_union_or_national_law_provides_otherwise/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "national_public_authority_or_body/1",
+      "merged": [
+        "relevant_national_public_authority/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "natural_person/1",
+      "merged": [
+        "natural_or_legal_person/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "nature_of_infringement/1",
+      "merged": [
+        "infringement_nature/1"
+      ],
+      "gloss": "nature of the infringement for fine calculation"
+    },
+    {
+      "canonical": "new_conformity_assessment_needed/2",
+      "merged": [
+        "new_conformity_assessment_required/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "non_compliance_art_5/1",
+      "merged": [
+        "non_compliance_due_to_art_5/1",
+        "non_compliance_prohibited_practices/1",
+        "non_compliance_with_prohibited_ai_practices/1"
+      ],
+      "gloss": "non-compliance with prohibition of AI practices in Article 5"
+    },
+    {
+      "canonical": "non_compliance_art_50/1",
+      "merged": [
+        "non_compliance_with_art_50/1"
+      ],
+      "gloss": "non-compliance with Article 50"
+    },
+    {
+      "canonical": "non_compliance_harmonised_standards/1",
+      "merged": [
+        "harmonised_standards_non_compliant/1"
+      ],
+      "gloss": "shortcomings in harmonised standards or common specifications conferring presumption of conformity"
+    },
+    {
+      "canonical": "not_high_risk_under_art_6_par_3/1",
+      "merged": [
+        "not_high_risk_under_article_6_par_3/1"
+      ],
+      "gloss": "provider concluded not high-risk under Article 6(3)"
+    },
+    {
+      "canonical": "notified_body_for_assessment/2",
+      "merged": [
+        "notified_body_responsible_for_conformity_assessment/2"
+      ],
+      "gloss": "notified body is responsible for conformity assessment procedures"
+    },
+    {
+      "canonical": "only_authorised_persons_access/1",
+      "merged": [
+        "only_authorised_persons_have_access/1"
+      ],
+      "gloss": "only authorised persons have access"
+    },
+    {
+      "canonical": "other_authority/1",
+      "merged": [
+        "other_competent_authority/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "other_market_surveillance_authority/1",
+      "merged": [
+        "relevant_market_surveillance_authority/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "permitted_testing_in_real_world_conditions/1",
+      "merged": [
+        "testing_in_real_world_conditions_permitted/1"
+      ],
+      "gloss": "testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes is permitted"
+    },
+    {
+      "canonical": "placed_or_put_into_service_by/2",
+      "merged": [
+        "initially_placed_on_market_or_put_into_service/2"
+      ],
+      "gloss": "initial provider placed AI system on market or put it into service"
+    },
+    {
+      "canonical": "planned_cessation/1",
+      "merged": [
+        "planned_cessation_activity/1"
+      ],
+      "gloss": "cessation is planned rather than immediate"
+    },
+    {
+      "canonical": "point_of_contact/2",
+      "merged": [
+        "point_of_contact_of_provider/2"
+      ],
+      "gloss": "point of contact of the provider of the general-purpose AI model"
+    },
+    {
+      "canonical": "post_market_monitoring/2",
+      "merged": [
+        "post_market_monitoring_relevant/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "post_market_monitoring_plan/1",
+      "merged": [
+        "must_base_on_post_market_monitoring_plan/1"
+      ],
+      "gloss": "post-market monitoring system shall be based on a post-market monitoring plan"
+    },
+    {
+      "canonical": "power_to_adopt_delegated_acts/1",
+      "merged": [
+        "empowered_to_adopt_delegated_acts/1"
+      ],
+      "gloss": "authority to adopt delegated acts conferred on the Commission"
+    },
+    {
+      "canonical": "product_covered_by_harmonisation_legislation/1",
+      "merged": [
+        "product_covered_by_union_harmonisation_legislation/1"
+      ],
+      "gloss": "product covered by Union harmonisation legislation listed in Annex I Section 1"
+    },
+    {
+      "canonical": "prospective_provider/1",
+      "merged": [
+        "provider_or_prospective_provider/1",
+        "applying_provider_or_prospective_provider/1"
+      ],
+      "gloss": "entity intending to place an AI system on the market"
+    },
+    {
+      "canonical": "publicly_available/1",
+      "merged": [
+        "made_publicly_available/1"
+      ],
+      "gloss": "made accessible to the public"
+    },
+    {
+      "canonical": "purpose_protect_health_safety_rights/1",
+      "merged": [
+        "protect_fundamental_rights_health_safety/1"
+      ],
+      "gloss": "ensure high level of protection of health, safety, fundamental rights, democracy, rule of law and environmental protection"
+    },
+    {
+      "canonical": "qualified_alert/1",
+      "merged": [
+        "required_qualified_alert/1"
+      ],
+      "gloss": "alert from the scientific panel to the AI Office"
+    },
+    {
+      "canonical": "quality_management_system/1",
+      "merged": [
+        "quality_management_system_satisfies_requirements/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "reasonable_means_exhausted/2",
+      "merged": [
+        "all_other_reasonable_means_exhausted/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "reasoned_request/2",
+      "merged": [
+        "reasoned_request_made/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "reference_published_in_official_journal/1",
+      "merged": [
+        "harmonised_standard_references_published/1",
+        "references_published_in_official_journal/1"
+      ],
+      "gloss": "references of harmonised standards published in Official Journal"
+    },
+    {
+      "canonical": "referred_to_in_annex_3/1",
+      "merged": [
+        "referred_in_annex_3_point_5/1",
+        "referred_in_annex_3_point_1_a/1"
+      ],
+      "gloss": "system referred to in Annex 3"
+    },
+    {
+      "canonical": "registered_with_information_specified/1",
+      "merged": [
+        "registered_with_information_specified_in_annex_9/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "relevant_authority/1",
+      "merged": [
+        "consulted_relevant_authority/1"
+      ],
+      "gloss": "market surveillance authority consulted relevant national public authority"
+    },
+    {
+      "canonical": "requirements_in_chapter_3_section_2/1",
+      "merged": [
+        "chapter_3_section_2_requirements/1",
+        "complies_with_chapter_3_section_2/1",
+        "requirements_chapter_iii_section_2/1",
+        "compliance_with_chapter_3_section_2/1",
+        "other_requirements_of_chapter_3_section_2_applied/1",
+        "requirements_chapter_3_section_2/1",
+        "requirements_of_chapter_3_section_2/1"
+      ],
+      "gloss": "high-risk AI system complies with Chapter III Section 2 requirements"
+    },
+    {
+      "canonical": "retention_period/2",
+      "merged": [
+        "law_retention_period/2"
+      ],
+      "gloss": "period for which logs must be kept"
+    },
+    {
+      "canonical": "risk_to_health_safety_or_rights/1",
+      "merged": [
+        "risk_to_health_safety_or_fundamental_rights/1"
+      ],
+      "gloss": "presents risk to health, safety, persons, fundamental rights or public interest"
+    },
+    {
+      "canonical": "risk_within_art_79_1/1",
+      "merged": [
+        "presents_risk_within_meaning_art_79_1/1"
+      ],
+      "gloss": "high-risk AI system presents a risk within meaning of Article 79(1)"
+    },
+    {
+      "canonical": "sensitive_operational_data_law_enforcement/1",
+      "merged": [
+        "sensitive_operational_data_in_relation_to_law_enforcement/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "significant_risk_fundamental_rights/1",
+      "merged": [
+        "significant_risk_to_fundamental_rights/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "significant_risk_health/1",
+      "merged": [
+        "significant_risk_safety/1",
+        "significant_risk_to_health_and_safety/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "simplified_quality_management_system_applies/1",
+      "merged": [
+        "simplified_quality_management_system/1"
+      ],
+      "gloss": "quality management system complied with in a simplified manner"
+    },
+    {
+      "canonical": "sme_or_start_up/1",
+      "merged": [
+        "sme_including_start_up/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "statement_of_conformity/1",
+      "merged": [
+        "statement_of_conformity_issued/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "sub_group/1",
+      "merged": [
+        "standing_sub_group/1"
+      ],
+      "gloss": "sub-group of the Board"
+    },
+    {
+      "canonical": "supervised_within/2",
+      "merged": [
+        "supervised_within_sandbox/2"
+      ],
+      "gloss": "testing is supervised within a sandbox"
+    },
+    {
+      "canonical": "supervising_sandbox/2",
+      "merged": [
+        "authority_supervising_sandbox/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "systemic_risk_present/1",
+      "merged": [
+        "systemic_risk_presents/1"
+      ],
+      "gloss": "general-purpose AI model presents systemic risks"
+    },
+    {
+      "canonical": "tacit_extension_applies/1",
+      "merged": [
+        "tacit_extension/1"
+      ],
+      "gloss": "automatic extension of delegation period"
+    },
+    {
+      "canonical": "targeted_risk_management_measures/1",
+      "merged": [
+        "appropriate_risk_management_measures/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "technical_documentation/1",
+      "merged": [
+        "required_technical_documentation/1",
+        "required_technical_documentation_section_1/1",
+        "required_technical_documentation_for_downstream_provider/1"
+      ],
+      "gloss": "technical documentation of AI system"
+    },
+    {
+      "canonical": "tests_satisfactory/2",
+      "merged": [
+        "provider_tests_satisfactory/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "training_data_information/1",
+      "merged": [
+        "training_testing_validation_information/1"
+      ],
+      "gloss": "information on data used for training, testing and validation"
+    },
+    {
+      "canonical": "under_responsibility/2",
+      "merged": [
+        "under_responsibility_of_distributor/2"
+      ],
+      "gloss": "system under responsibility of distributor"
+    },
+    {
+      "canonical": "union_harmonisation_legislation/1",
+      "merged": [
+        "union_harmonisation_legislation_period/1"
+      ],
+      "gloss": "instrument of Union harmonisation legislation listed in Annex I"
+    },
+    {
+      "canonical": "union_institution/1",
+      "merged": [
+        "union_institution_body_office_agency/1",
+        "union_institution_body_office_or_agency/1"
+      ],
+      "gloss": "Union institution body office or agency"
+    }
+  ],
+  "unanswered_sample": [
+    [
+      "must_take_into_account/2",
+      "must_take_into_account_sme_needs/2"
+    ],
+    [
+      "health_safety_fundamental_rights/1",
+      "risk_to_health_safety_or_rights/1"
+    ]
+  ]
+}

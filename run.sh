@@ -13,7 +13,19 @@
 #   ./run.sh --no-annexes           # 112 articles, no annexes
 #   FORCE=1 ./run.sh                # ignore cached responses and regenerate
 #
-# Env: OUT, UNITS, MODEL, CONCURRENCY.
+#   PROVIDER=openrouter MODEL=deepseek/deepseek-v4-pro OUT=out_deepseek ./run.sh --both
+#                                   # a consensus-scoring peer, via OpenRouter
+#
+# Env: OUT, UNITS, MODEL, PROVIDER, REASONING, CONCURRENCY.
+#   PROVIDER   ollama (default) or openrouter. OpenRouter needs OPENROUTER_API_KEY in
+#              the environment; the scripts stop before Phase 0 if it is missing.
+#   REASONING  openrouter only. Reasoning effort sent with every call, default none,
+#              so the peers translate under the same conditions gpt-oss did.
+#
+# Peer runs: the folder must already hold signature.pl and signature.meta.json copied
+# from the candidate's run, so pass 1 is written against the same frozen vocabulary.
+# Phase A sees the file and skips. Phase B2 then reconciles the PEER'S OWN pass-1
+# names, so pass 2 does not inherit the candidate's invented vocabulary.
 set -uo pipefail
 cd "$(dirname "$0")"
 
@@ -35,6 +47,8 @@ PY=venv/bin/python
 OUT="${OUT:-out}"
 UNITS="${UNITS:-20260922T172249_32024R1689_3f672e3e/units}"
 MODEL="${MODEL:-gpt-oss:120b-cloud}"
+PROVIDER="${PROVIDER:-ollama}"
+REASONING="${REASONING:-none}"
 CONCURRENCY="${CONCURRENCY:-3}"
 
 RUN_PASS=1
@@ -51,6 +65,8 @@ while [ $# -gt 0 ]; do
     --only)        ONLY="$2"; shift 2 ;;
     --no-annexes)  ANNEX_FLAG="--no-annexes"; shift ;;
     --model)       MODEL="$2"; shift 2 ;;
+    --provider)    PROVIDER="$2"; shift 2 ;;
+    --reasoning)   REASONING="$2"; shift 2 ;;
     --concurrency) CONCURRENCY="$2"; shift 2 ;;
     --force)       FORCE_FLAG="--force"; shift ;;
     *) echo "unknown flag: $1" >&2; exit 2 ;;
@@ -60,7 +76,9 @@ done
 ONLY_FLAG=""
 [ -n "$ONLY" ] && ONLY_FLAG="--only $ONLY"
 
-echo "out=$OUT  model=$MODEL  concurrency=$CONCURRENCY  pass=$RUN_PASS  both=$BOTH"
+LLM_FLAGS="--model $MODEL --provider $PROVIDER --reasoning $REASONING"
+
+echo "out=$OUT  provider=$PROVIDER  model=$MODEL  reasoning=$REASONING  concurrency=$CONCURRENCY  pass=$RUN_PASS  both=$BOTH"
 echo
 
 # --- Phase 0: the work list, and the check that the slicer still agrees with the corpus
@@ -71,7 +89,7 @@ echo
 # --- Phase A: one call over the definitions article, frozen and hashed
 echo "== Phase A: build and freeze the vocabulary (1 LLM call) =="
 step "Phase A (vocabulary)" \
-  $PY src/signature.py --units "$UNITS" --out "$OUT" --model "$MODEL" $FORCE_FLAG
+  $PY src/signature.py --units "$UNITS" --out "$OUT" $LLM_FLAGS $FORCE_FLAG
 echo
 
 run_pass () {
@@ -79,7 +97,7 @@ run_pass () {
   echo "== Phase B pass $n: write clauses, 1 LLM call per article or annex =="
   step "Phase B pass $n (clauses)" \
     $PY src/rules.py --units "$UNITS" --out "$OUT" --pass "$n" \
-        --model "$MODEL" --concurrency "$CONCURRENCY" $ONLY_FLAG $ANNEX_FLAG $FORCE_FLAG
+        $LLM_FLAGS --concurrency "$CONCURRENCY" $ONLY_FLAG $ANNEX_FLAG $FORCE_FLAG
   echo
   echo "== Phase C pass $n: assemble the Prolog program (deterministic) =="
   step "Phase C pass $n (assemble)" \
@@ -98,7 +116,7 @@ fi
 if [ "$BOTH" = "1" ] || [ "$RUN_PASS" = "2" ]; then
   echo "== Phase B2: adjudicate candidate pairs of invented names (batched LLM calls) =="
   step "Phase B2 (reconcile)" \
-    $PY src/reconcile.py --out "$OUT" --model "$MODEL" $FORCE_FLAG
+    $PY src/reconcile.py --out "$OUT" $LLM_FLAGS $FORCE_FLAG
   echo
   run_pass 2
 fi

@@ -1,0 +1,736 @@
+{
+  "pass": 2,
+  "coverage": {
+    "work_units": 125,
+    "articles": 112,
+    "annexes": 13,
+    "with_rule_file": 125,
+    "missing_rule_file": [],
+    "n_missing": 0,
+    "score": 1.0,
+    "slicer_validated": 99,
+    "slicer_checked": 99,
+    "slicer_differ": []
+  },
+  "syntax": {
+    "ran": true,
+    "ok": true,
+    "errors": 0,
+    "warnings": 303,
+    "singleton_warnings": 155,
+    "detail": "Warning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2155:\nWarning:    Singleton variables: [M,S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2183:\nWarning:    Singleton variables: [A]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2184:\nWarning:    Singleton variables: [A]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2208:\nWarning:    Singleton variables: [S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2209:\nWarning:    Singleton variables: [S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2285:\nWarning:    Singleton variables: [Context,Target]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2565:\nWarning:    Singleton variables: [S]\nWarning: /Users/galdvorsak/Documents/IJS/code_dirs/naive_prolog_generator/out_kimi/ai_act_2.pl:2593:"
+  },
+  "tokens": {
+    "count": 0,
+    "tokens": [],
+    "detail": []
+  },
+  "clauses": 5990,
+  "rule_heads": 1109,
+  "declared_predicates": 1402,
+  "input_slots": {
+    "count": 427,
+    "sample": [
+      "academia/1",
+      "accessibility_disability/1",
+      "accompanied_by_eu_declaration_of_conformity/1",
+      "accompanied_by_instructions_for_use/1",
+      "accreditation_certificate_attesting_compliance/2",
+      "action_taken/2",
+      "actions_pursuant_to_article_24_paragraphs/1",
+      "additional_periods_of_months/2",
+      "adequate_safeguards_fundamental_rights/1",
+      "adversarial_testing_measures/1",
+      "advise_classification_general/2",
+      "advise_classification_systemic_risk/2"
+    ]
+  },
+  "link_integrity": {
+    "body_goals": 4985,
+    "resolved": 3446,
+    "dangling": 1470,
+    "vacuous_negations": 69,
+    "score": 0.691,
+    "dangling_detail": [
+      {
+        "in_rule": "applies_to/1",
+        "goal": "output_used_in_union/1"
+      },
+      {
+        "in_rule": "applies_to/1",
+        "goal": "affected_person/1"
+      },
+      {
+        "in_rule": "must_ensure_ai_literacy/2",
+        "goal": "staff_or_representative/2"
+      },
+      {
+        "in_rule": "must_ensure_ai_literacy/2",
+        "goal": "deals_with_operation_or_use/2"
+      },
+      {
+        "in_rule": "must_ensure_ai_literacy/2",
+        "goal": "under_authority/2"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "technical_knowledge/1"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "experience/1"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "education/1"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "training/1"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "context_of_use/2"
+      },
+      {
+        "in_rule": "relevant_staff_factors/2",
+        "goal": "target_persons/2"
+      },
+      {
+        "in_rule": "prohibited_subliminal_manipulative_deceptive_system/1",
+        "goal": "deploys_subliminal_techniques/1"
+      },
+      {
+        "in_rule": "prohibited_subliminal_manipulative_deceptive_system/1",
+        "goal": "beyond_consciousness/1"
+      },
+      {
+        "in_rule": "prohibited_subliminal_manipulative_deceptive_system/1",
+        "goal": "objective_or_effect_distort_behaviour/1"
+      },
+      {
+        "in_rule": "prohibited_subliminal_manipulative_deceptive_system/1",
+        "goal": "appreciably_impair_informed_decision/1"
+      }
+    ],
+    "vacuous_detail": [
+      {
+        "in_rule": "must_publish_annual_report/2",
+        "goal": "includes_sensitive_operational_data/1"
+      },
+      {
+        "in_rule": "deletion_does_not_decrease_protection/1",
+        "goal": "decreases_overall_protection_health_safety_rights/2"
+      },
+      {
+        "in_rule": "corrigibility_criterion/1",
+        "goal": "easily_corrigible_or_reversible/1"
+      },
+      {
+        "in_rule": "existing_union_law_redress_criterion/1",
+        "goal": "claims_for_damages/1"
+      },
+      {
+        "in_rule": "mitigation_control_measures/1",
+        "goal": "risk_eliminated/1"
+      },
+      {
+        "in_rule": "bias_detection_correction_necessary/1",
+        "goal": "bias_detection_fulfilled_by_other_data/1"
+      },
+      {
+        "in_rule": "not_transmitted_transferred_accessed/1",
+        "goal": "transmitted/1"
+      },
+      {
+        "in_rule": "not_transmitted_transferred_accessed/1",
+        "goal": "transferred/1"
+      },
+      {
+        "in_rule": "not_transmitted_transferred_accessed/1",
+        "goal": "accessed_by_other_parties/1"
+      },
+      {
+        "in_rule": "applies_only_to_testing_data/1",
+        "goal": "uses_training_techniques/1"
+      },
+      {
+        "in_rule": "must_not_place_non_conforming/2",
+        "goal": "brought_into_conformity/1"
+      },
+      {
+        "in_rule": "must_ensure_storage_transport_compliance/2",
+        "goal": "jeopardises_compliance/2"
+      },
+      {
+        "in_rule": "must_not_make_available_until_conformity/2",
+        "goal": "brought_into_conformity/1"
+      },
+      {
+        "in_rule": "must_request_authorisation/2",
+        "goal": "initial_identification_exception/2"
+      },
+      {
+        "in_rule": "no_conflict_of_interest/1",
+        "goal": "conflict_of_interest_with_conformity_assessment_bodies/1"
+      }
+    ]
+  },
+  "discrimination": {
+    "rules_judged": 1342,
+    "non_discriminating": 346,
+    "single_goal": 245,
+    "multi_goal": 101,
+    "rate": 0.258,
+    "multi_goal_rate": 0.075,
+    "note": "lower bound: only plain conjunctive bodies are judged. multi_goal is the defect -- one type check per argument, constraining nothing. single_goal is mostly legitimate subtype rules (operator(O) :- provider(O)) and is reported separately, not folded in.",
+    "sample_multi_goal": [
+      {
+        "head": "must_provide_template/2",
+        "unit": "celex:32024R1689/oj#art_5",
+        "goals": 10,
+        "clause": "must_provide_template(commission, annual_report_template) :- commission(commission), provides_template(commission), to_member_states(commission), to_n"
+      },
+      {
+        "head": "must_indicate_contact_details/2",
+        "unit": "celex:32024R1689/oj#art_16",
+        "goals": 2,
+        "clause": "must_indicate_contact_details(P, S) :- provider(P), high_risk_ai_system(S)."
+      },
+      {
+        "head": "must_have_quality_management_system/2",
+        "unit": "celex:32024R1689/oj#art_16",
+        "goals": 2,
+        "clause": "must_have_quality_management_system(P, S) :- provider(P), high_risk_ai_system(S)."
+      },
+      {
+        "head": "must_ensure_accessibility/2",
+        "unit": "celex:32024R1689/oj#art_16",
+        "goals": 2,
+        "clause": "must_ensure_accessibility(P, S) :- provider(P), high_risk_ai_system(S)."
+      },
+      {
+        "head": "must_take_into_account_contractual_requirements/2",
+        "unit": "celex:32024R1689/oj#art_25",
+        "goals": 2,
+        "clause": "must_take_into_account_contractual_requirements(ai_office, Sector) :- may_develop_voluntary_model_terms(ai_office), specific_sector(Sector)."
+      },
+      {
+        "head": "must_take_into_account_contractual_requirements/2",
+        "unit": "celex:32024R1689/oj#art_25",
+        "goals": 2,
+        "clause": "must_take_into_account_contractual_requirements(ai_office, BusinessCase) :- may_develop_voluntary_model_terms(ai_office), business_case(BusinessCase)."
+      },
+      {
+        "head": "modifies_intended_purpose/2",
+        "unit": "?",
+        "goals": 2,
+        "clause": "modifies_intended_purpose(T, S) :- deployer(T), intended_purpose_changed(S)."
+      },
+      {
+        "head": "modifies_intended_purpose/2",
+        "unit": "?",
+        "goals": 2,
+        "clause": "modifies_intended_purpose(T, S) :- distributor(T), intended_purpose_changed(S)."
+      },
+      {
+        "head": "modifies_intended_purpose/2",
+        "unit": "?",
+        "goals": 2,
+        "clause": "modifies_intended_purpose(T, S) :- importer(T), intended_purpose_changed(S)."
+      },
+      {
+        "head": "modifies_intended_purpose/2",
+        "unit": "?",
+        "goals": 2,
+        "clause": "modifies_intended_purpose(T, S) :- other_third_party(T), intended_purpose_changed(S)."
+      },
+      {
+        "head": "component_of/2",
+        "unit": "celex:32024R1689/oj#art_111",
+        "goals": 2,
+        "clause": "component_of(S, P) :- ai_safety_component(S), product_covered_by_harmonisation_legislation(P)."
+      },
+      {
+        "head": "must_assign_human_oversight/2",
+        "unit": "celex:32024R1689/oj#art_26",
+        "goals": 2,
+        "clause": "must_assign_human_oversight(D, S) :- deployer(D), high_risk_ai_system(S)."
+      }
+    ],
+    "sample_single_goal": [
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- provider(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- product_manufacturer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- deployer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- authorised_representative(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- importer(O)."
+      },
+      {
+        "head": "operator/1",
+        "unit": "8",
+        "goals": 1,
+        "clause": "operator(O) :- distributor(O)."
+      }
+    ]
+  },
+  "arity_collisions": {
+    "instructions_for_use": [
+      1,
+      2
+    ],
+    "new_conformity_assessment_required": [
+      1,
+      3
+    ],
+    "must_supply_information": [
+      2,
+      3
+    ],
+    "satisfies_requirements": [
+      1,
+      2
+    ],
+    "must_inform_providers_within_days": [
+      2,
+      3
+    ],
+    "delegated_act": [
+      1,
+      2
+    ],
+    "product_manufacturer_considered_provider": [
+      1,
+      2
+    ],
+    "confidentiality_obligations_apply": [
+      0,
+      1
+    ],
+    "fine_amount": [
+      2,
+      3
+    ],
+    "general_purpose_ai_model_provider": [
+      1,
+      2
+    ],
+    "must_take_corrective_action": [
+      2,
+      3
+    ],
+    "may_rely_on_code_of_practice": [
+      1,
+      2
+    ],
+    "must_submit_report_within_months": [
+      2,
+      3
+    ],
+    "may_provide_technical_support": [
+      2,
+      3
+    ],
+    "must_comply_with_requirements": [
+      1,
+      2
+    ],
+    "must_demonstrate_alternative_compliance": [
+      1,
+      2
+    ],
+    "must_comply_with_registration_obligations": [
+      1,
+      2
+    ],
+    "objection_raised": [
+      1,
+      3
+    ],
+    "reasoned_request": [
+      2,
+      3
+    ],
+    "power_to_adopt_delegated_acts_amend_annexes": [
+      0,
+      1
+    ],
+    "takes_effect": [
+      1,
+      2
+    ],
+    "report_deadline": [
+      2,
+      3
+    ],
+    "must_appoint_authorised_representative": [
+      1,
+      2
+    ],
+    "notification_details": [
+      1,
+      2
+    ]
+  },
+  "provenance": {
+    "rule_heads": 1109,
+    "with_provenance": 1033,
+    "missing": [
+      "accreditation_certificate_notification/2",
+      "additional_information_url/2",
+      "adequate_corrective_action_taken/3",
+      "authorised_representative_details/2",
+      "authorised_representative_for/2",
+      "becomes_high_risk_after_modification/1",
+      "certificate_copy/2",
+      "certificate_details/2",
+      "clearly_specified_not_to_change_into_high_risk/2",
+      "commission_objection/1",
+      "common_specifications_cover_all_requirements/1",
+      "complies_with_requirements/1",
+      "comprises_risk_management_steps/1",
+      "contractual_arrangement_obligations_allocated/2",
+      "corrective_action_required_for/1"
+    ]
+  },
+  "references": {
+    "units_scored": 125,
+    "truth_edges": 1063,
+    "emitted_edges": 1045,
+    "chunk": {
+      "true_positives": 1038,
+      "false_positives": 1,
+      "false_negatives": 25,
+      "precision": 0.999,
+      "recall": 0.976,
+      "f1": 0.988
+    },
+    "strict": {
+      "true_positives": 1014,
+      "false_positives": 1,
+      "false_negatives": 49,
+      "precision": 0.999,
+      "recall": 0.954,
+      "f1": 0.976
+    },
+    "units_imperfect": 19,
+    "worst": [
+      {
+        "unit": "art_2",
+        "missed": [
+          "celex:32024R1689/oj#art_2/par_1"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_5",
+        "missed": [
+          "celex:32024R1689/oj#art_5",
+          "celex:32024R1689/oj#art_5/par_4"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_6",
+        "missed": [
+          "celex:32024R1689/oj",
+          "celex:32024R1689/oj#art_6"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_8",
+        "missed": [
+          "celex:32024R1689/oj"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_9",
+        "missed": [
+          "celex:32024R1689/oj#art_9"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_22",
+        "missed": [
+          "celex:32024R1689/oj#art_22/par_3/unp_1/pnt_b"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_26",
+        "missed": [
+          "celex:32024R1689/oj#art_26/par_10"
+        ],
+        "spurious": []
+      },
+      {
+        "unit": "art_40",
+        "missed": [
+          "celex:32024R1689/oj"
+        ],
+        "spurious": []
+      }
+    ]
+  },
+  "namespace": {
+    "ran": true,
+    "files": 125,
+    "invented_predicates": 2614,
+    "shared_across_files": 166,
+    "single_file_only": 2448,
+    "fragmentation": 0.936,
+    "modality_prefixed": 373,
+    "violations_number_in_name": [
+      "actions_pursuant_to_article_24_paragraphs",
+      "adheres_to_article_53_only",
+      "annex_3_point_1_applies",
+      "annex_3_point_8_applies",
+      "article_46_par_1_applies",
+      "article_5_applies",
+      "article_78_confidentiality_applies",
+      "carrying_out_activities_pursuant_art_8_par_1",
+      "commission_empowered_to_amend_annex_5",
+      "condition_add_anx_3",
+      "condition_art_6_par_3",
+      "condition_remove_anx_3",
+      "conformity_assessment_procedure_annex_7",
+      "covers_article_53_obligations",
+      "covers_article_55_obligations",
+      "covers_obligations_art_55_par_1",
+      "criteria_annex_13_applies",
+      "declaration_contains_annex_5_information",
+      "deploys_annex_3_point_5_b_or_c_system",
+      "documentation_for_art_18",
+      "established_under_art_57_par_1",
+      "eu_declaration_of_conformity_referred_in_art_47",
+      "evaluation_art_92",
+      "exempt_from_art_53_1_a",
+      "exempt_from_art_53_1_b",
+      "falls_under_art_50",
+      "falls_under_art_5_or_50",
+      "high_risk_ai_system_referred_in_annex_3",
+      "high_risk_ai_system_referred_in_annex_3_point_2",
+      "high_risk_under_art_6_par_1",
+      "information_obtained_under_art_55",
+      "intended_use_in_annex_3_area",
+      "listed_in_annex_3",
+      "listed_in_annex_3_point_2",
+      "meets_conditions_art_51",
+      "meets_requirements_art_31",
+      "minimum_logging_for_annex_3_point_1_a",
+      "must_use_annex_7_procedure",
+      "non_compliance_art_5",
+      "non_compliance_art_50",
+      "non_compliance_art_5_reason",
+      "not_high_risk_under_art_6_par_3",
+      "notification_referred_to_in_art_79_5",
+      "obtained_under_article_21",
+      "offence_referred_in_annex_2",
+      "power_to_adopt_delegated_acts_amend_annex_4",
+      "power_to_adopt_delegated_acts_subject_to_annex_7",
+      "preparatory_task_to_annex_3_assessment",
+      "product_covered_by_union_harmonisation_legislation_annex_1_sec_2",
+      "prohibited_practice_art_5",
+      "quality_management_documentation_referred_in_art_17",
+      "referred_to_in_annex_3",
+      "referred_to_in_art_57_par_1_or_2",
+      "registered_under_art_49_par_4",
+      "registered_under_art_60",
+      "registered_under_art_60_par_4_c",
+      "registered_under_article_49_par_5",
+      "requirement_art_31",
+      "requirements_of_art_31",
+      "risk_within_art_79_1",
+      "specified_in_art_26_par_8",
+      "technical_documentation_contains_annex_4_elements",
+      "technical_documentation_referred_in_art_11"
+    ],
+    "n_violations_number_in_name": 63,
+    "alias_candidates": [
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "appropriate_statistical_properties/1",
+          "statistical_properties_appropriate/1"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "certificate_issued_by/2",
+          "issued_certificate/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "documented_impartiality_procedures/1",
+          "documented_procedures_for_impartiality/1"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "drawn_up/2",
+          "drawn_up_by/2"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "ensure_confidentiality/1",
+          "must_ensure_confidentiality/1"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "financial_institution/1",
+          "financial_institution_provider/1"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "fine_consideration/2",
+          "fine_consideration_factor/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "general_purpose_ai_model_provider/1",
+          "provider_of_general_purpose_ai_model/1"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "information_obtained/2",
+          "obtained_information/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "measures_taken/2",
+          "measures_taken_for/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "member_states/1",
+          "to_member_states/1"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "must_enable_authorised_representative/2",
+          "must_enable_tasks/2"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "must_encourage_and_facilitate_codes_of_practice/2",
+          "must_encourage_codes_of_practice/2"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "must_provide_information/2",
+          "must_provide_information_upon_request/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "objection_period/2",
+          "period_for_objection/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "prospective_provider/1",
+          "provider_or_prospective_provider/1"
+        ]
+      },
+      {
+        "reason": "identical gloss",
+        "names": [
+          "reasoned_request/2",
+          "reasoned_request_made/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "significant_risk_fundamental_rights/1",
+          "significant_risk_to_fundamental_rights/1"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "single_contact_point/2",
+          "single_point_of_contact_for/2"
+        ]
+      },
+      {
+        "reason": "token overlap 1.00",
+        "names": [
+          "technical_limitations_on_reuse/1",
+          "technical_limitations_reuse/1"
+        ]
+      }
+    ],
+    "n_alias_candidates": 417,
+    "shared_sample": [
+      "action_taken",
+      "additional_reference",
+      "advisory_forum",
+      "affected_person",
+      "ai_safety_component",
+      "annex_3_point_1_applies",
+      "applies_to",
+      "appropriate_safeguards",
+      "approved_quality_management_system",
+      "authorisation_rejected",
+      "based_solely_on_profiling",
+      "before_placing_on_market",
+      "before_placing_on_market_or_putting_into_service",
+      "brought_into_conformity",
+      "carried_out_by"
+    ]
+  }
+}

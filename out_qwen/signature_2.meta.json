@@ -1,0 +1,543 @@
+{
+  "n_invented_input": 1541,
+  "n_rule_files": 125,
+  "threshold": 0.6,
+  "pairs_proposed": 304,
+  "pairs_answered": 304,
+  "pairs_unanswered": 0,
+  "answer_rate": 1.0,
+  "verdict_same": 108,
+  "verdict_different": 196,
+  "groups": 71,
+  "names_merged": 96,
+  "fingerprint": "1d077bf2d7d6b19b3e0f2298a58ad5fe1b2371532e54a49f230d3e6e3fd61e60",
+  "signature_2_sha256": "506e0fa0d8e03f49d83a6019e10e0780e998b082ea5df04ec6d8ac977339a9a4",
+  "combined_sha256": "e4753a31cf344adab4695e31db94c98c6773178c8fbc88c7d117d5f457f38571",
+  "model": "qwen/qwen3.7-max",
+  "batches": 4,
+  "decisions": [
+    {
+      "canonical": "adopting_act_concerning_ai_safety_component/2",
+      "merged": [
+        "adopting_delegated_act_concerning_safety_component_ai_system/2"
+      ],
+      "gloss": "adoption of an act concerning an AI system that is a safety component"
+    },
+    {
+      "canonical": "ai_safety_component/1",
+      "merged": [
+        "ai_system_safety_component/1",
+        "concerns_ai_system_as_safety_component/1",
+        "concerns_ai_system_which_is_safety_component/1"
+      ],
+      "gloss": "AI system which is a safety component within the meaning of this Regulation"
+    },
+    {
+      "canonical": "before_placing_on_market_or_service/1",
+      "merged": [
+        "before_placing_on_market_or_putting_into_service/1",
+        "before_placing_on_market/1",
+        "prior_to_placing_on_market_or_putting_into_service/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "ce_marking_indicates_compliance_with_other_law/1",
+      "merged": [
+        "must_indicate_other_law_compliance_in_ce_marking/1"
+      ],
+      "gloss": "CE marking indicates fulfilment of other Union law requirements"
+    },
+    {
+      "canonical": "commission_activity_pursuant_to_art_8_par_1/1",
+      "merged": [
+        "activity_pursuant_to_directive_2014_90_art_8_par_1/1"
+      ],
+      "gloss": "activity carried out by the Commission pursuant to Article 8(1) of Directive 2014/90/EU"
+    },
+    {
+      "canonical": "compliant_but_risky_ai_system/1",
+      "merged": [
+        "finding_of_compliant_but_risky_system/1"
+      ],
+      "gloss": "high-risk AI system that complies with the regulation but presents a risk"
+    },
+    {
+      "canonical": "conformity_assessment_carried_out/1",
+      "merged": [
+        "conformity_assessment_carried_out_by_provider/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "covered_by_annex_i/1",
+      "merged": [
+        "covered_by_annex_i_legislation/1"
+      ],
+      "gloss": "product or AI system covered by Union harmonisation legislation listed in Annex I"
+    },
+    {
+      "canonical": "covered_by_union_harmonisation_legislation/1",
+      "merged": [
+        "union_harmonisation_legislation_applies/1",
+        "union_harmonisation_legislation_product/1",
+        "product_covered_by_union_harmonisation_legislation/1",
+        "related_to_product_covered_by_union_harmonisation_legislation/1"
+      ],
+      "gloss": "high-risk AI system covered by Union harmonisation legislation listed in Annex I Section A"
+    },
+    {
+      "canonical": "designation_suspended_or_restricted/1",
+      "merged": [
+        "designation_restricted_suspended_or_withdrawn/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "does_not_represent_parties/1",
+      "merged": [
+        "must_not_represent_parties/1"
+      ],
+      "gloss": "body or personnel do not represent parties engaged in design, development, marketing or use"
+    },
+    {
+      "canonical": "established_under_national_law/1",
+      "merged": [
+        "must_be_established_under_national_law/1"
+      ],
+      "gloss": "notified body established under national law of a Member State"
+    },
+    {
+      "canonical": "financial_fraud_detection_purpose/1",
+      "merged": [
+        "purpose_is_financial_fraud_detection/1"
+      ],
+      "gloss": "purpose of detecting financial fraud"
+    },
+    {
+      "canonical": "financial_institution/1",
+      "merged": [
+        "financial_institution_provider/1"
+      ],
+      "gloss": "provider that is a financial institution subject to Union financial services law"
+    },
+    {
+      "canonical": "free_and_open_source_licence/1",
+      "merged": [
+        "released_under_free_open_source_licence/1",
+        "makes_accessible_under_free_and_open_source_licence/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "general_purpose_ai_model_provider/1",
+      "merged": [
+        "supplies_general_purpose_ai_model/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "high_risk/1",
+      "merged": [
+        "found_high_risk/1",
+        "classified_as_high_risk/1"
+      ],
+      "gloss": "AI system found to be high-risk during evaluation"
+    },
+    {
+      "canonical": "high_risk_ai_system/1",
+      "merged": [
+        "high_risk_ai_system_applies/1",
+        "regulation_applies_to_high_risk_system/1"
+      ],
+      "gloss": "AI system classified as high-risk under the regulation"
+    },
+    {
+      "canonical": "high_risk_ai_system_annex_3_point_1/1",
+      "merged": [
+        "annex_3_point_1_system/1"
+      ],
+      "gloss": "high-risk AI system listed in Annex III point 1"
+    },
+    {
+      "canonical": "high_risk_ai_system_annex_iii/1",
+      "merged": [
+        "high_risk_ai_system_listed_in_annex_3/1",
+        "high_risk_ai_system_listed_in_annex_iii/1"
+      ],
+      "gloss": "AI system listed in Annex III as high-risk"
+    },
+    {
+      "canonical": "identification_number_in_promotional_material/1",
+      "merged": [
+        "must_indicate_identification_number_in_promotional_material/1"
+      ],
+      "gloss": "notified body number indicated in promotional material mentioning CE compliance"
+    },
+    {
+      "canonical": "independent_of_operator_with_economic_interest/2",
+      "merged": [
+        "must_be_independent_of_operator_with_economic_interest/2"
+      ],
+      "gloss": "notified body is independent of operators with economic interest in assessed systems"
+    },
+    {
+      "canonical": "large_scale_it_system_component/1",
+      "merged": [
+        "component_of_large_scale_it_system/1"
+      ],
+      "gloss": "AI system that is a component of a large-scale IT system listed in Annex X"
+    },
+    {
+      "canonical": "logging_capability/1",
+      "merged": [
+        "required_logging_capability/1"
+      ],
+      "gloss": "technical capability to record events automatically"
+    },
+    {
+      "canonical": "meets_requirements_of_art_31/1",
+      "merged": [
+        "meets_article_31_requirements/1",
+        "satisfies_article_31_requirements/1"
+      ],
+      "gloss": "entity satisfies requirements laid down in Article 31"
+    },
+    {
+      "canonical": "must_affix_ce_marking_to_packaging_or_documentation/1",
+      "merged": [
+        "ce_marking_on_packaging_or_documentation/1"
+      ],
+      "gloss": "CE marking affixed to packaging or accompanying documentation"
+    },
+    {
+      "canonical": "must_affix_ce_marking_visibly_legibly_indelibly/1",
+      "merged": [
+        "ce_marking_affixed_visibly_legibly_indelibly/1"
+      ],
+      "gloss": "CE marking affixed in visible, legible and indelible manner"
+    },
+    {
+      "canonical": "must_allow_surveillance_access/2",
+      "merged": [
+        "must_allow_access_to_documentation/2",
+        "must_grant_access_to_documentation/2"
+      ],
+      "gloss": "obligation to grant immediate access to technical documentation upon request"
+    },
+    {
+      "canonical": "must_comply_with_registration/2",
+      "merged": [
+        "must_comply_with_registration_obligations/2"
+      ],
+      "gloss": "authorised representative must comply with registration obligations or ensure correctness"
+    },
+    {
+      "canonical": "must_cooperate_with_authorities/2",
+      "merged": [
+        "must_cooperate_with_other_authorities/2",
+        "must_cooperate_with_competent_authorities/2"
+      ],
+      "gloss": "authorised representative must cooperate with competent authorities on risk mitigation"
+    },
+    {
+      "canonical": "must_encourage_code_of_conduct/2",
+      "merged": [
+        "must_facilitate_code_of_conduct/2"
+      ],
+      "gloss": "obligation to encourage drawing up of codes of conduct"
+    },
+    {
+      "canonical": "must_ensure_cybersecurity_protection/2",
+      "merged": [
+        "must_ensure_cybersecurity_resilience/2"
+      ],
+      "gloss": "provider must ensure cybersecurity for model and infrastructure"
+    },
+    {
+      "canonical": "must_ensure_data_relevance/2",
+      "merged": [
+        "must_ensure_input_data_relevance/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "must_ensure_product_compliance/2",
+      "merged": [
+        "must_ensure_compliance_with_requirements/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "must_ensure_single_contact_point/2",
+      "merged": [
+        "must_designate_single_point_of_contact/2"
+      ],
+      "gloss": "Member State obligation regarding single contact point designation"
+    },
+    {
+      "canonical": "must_evaluate_national_measure/2",
+      "merged": [
+        "must_evaluate_national_measures/2"
+      ],
+      "gloss": "Commission obligation to evaluate a national measure"
+    },
+    {
+      "canonical": "must_inform_of_risk/2",
+      "merged": [
+        "must_inform_provider_or_importer_of_risk/2",
+        "must_immediately_inform_authorities_of_risk/2"
+      ],
+      "gloss": "importer must inform provider, representative and authorities if system presents risk"
+    },
+    {
+      "canonical": "must_inform_termination/2",
+      "merged": [
+        "must_inform_about_termination/2"
+      ],
+      "gloss": "authorised representative must inform authority and notified body about mandate termination"
+    },
+    {
+      "canonical": "must_keep_documentation/2",
+      "merged": [
+        "must_keep_technical_documentation/2",
+        "must_keep_up_to_date/2",
+        "must_keep_technical_documentation_up_to_date/2"
+      ],
+      "gloss": "authorised representative must keep documentation at disposal of authorities for specified period"
+    },
+    {
+      "canonical": "must_provide_information/2",
+      "merged": [
+        "must_provide_compliance_information/2",
+        "must_provide_conformity_information/2",
+        "must_provide_information_on_request/2",
+        "must_provide_information_to_authority/2",
+        "must_provide_information_to_commission/2",
+        "must_provide_information_to_national_authority/2"
+      ],
+      "gloss": "authorised representative must provide information to demonstrate conformity upon reasoned request"
+    },
+    {
+      "canonical": "must_report_serious_incident/2",
+      "merged": [
+        "must_inform_of_serious_incident/2"
+      ],
+      "gloss": "provider must report serious incidents and corrective measures to AI Office and authorities"
+    },
+    {
+      "canonical": "must_require_compliance_action/2",
+      "merged": [
+        "must_require_corrective_action/2"
+      ],
+      "gloss": "market surveillance authority must require provider to take compliance action"
+    },
+    {
+      "canonical": "must_safeguard_impartiality/1",
+      "merged": [
+        "must_safeguard_objectivity_and_impartiality/1",
+        "organised_to_safeguard_objectivity_and_impartiality/1"
+      ],
+      "gloss": "Board obligation regarding organisation and operation"
+    },
+    {
+      "canonical": "must_stop_use/2",
+      "merged": [
+        "must_stop_use_on_authorisation_rejection/2"
+      ],
+      "gloss": "authority must stop use if authorisation refused"
+    },
+    {
+      "canonical": "must_submit_annual_report/2",
+      "merged": [
+        "must_prepare_annual_report/2",
+        "must_submit_annual_report_on_post_rbi/2"
+      ],
+      "gloss": "National authority must submit annual report on RBI use to Commission"
+    },
+    {
+      "canonical": "must_supply_information/2",
+      "merged": [
+        "must_supply_requested_information/2"
+      ],
+      "gloss": "Provider or representative must supply requested information"
+    },
+    {
+      "canonical": "must_take_corrective_action/2",
+      "merged": [
+        "must_take_corrective_actions/2"
+      ],
+      "gloss": "provider must take corrective action for AI systems on market"
+    },
+    {
+      "canonical": "must_treat_information_confidentially/2",
+      "merged": [
+        "must_treat_confidentially/2"
+      ],
+      "gloss": "information obtained under article must be treated confidentially"
+    },
+    {
+      "canonical": "must_use_digital_ce_marking/1",
+      "merged": [
+        "digital_ce_marking/1"
+      ],
+      "gloss": "CE marking in digital form"
+    },
+    {
+      "canonical": "not_involved_in_design/1",
+      "merged": [
+        "must_not_be_involved_in_design/1"
+      ],
+      "gloss": "body or personnel not directly involved in design of high-risk AI systems"
+    },
+    {
+      "canonical": "not_involved_in_development/1",
+      "merged": [
+        "must_not_be_involved_in_development/1"
+      ],
+      "gloss": "body or personnel not directly involved in development of high-risk AI systems"
+    },
+    {
+      "canonical": "not_involved_in_marketing/1",
+      "merged": [
+        "must_not_be_involved_in_marketing/1"
+      ],
+      "gloss": "body or personnel not directly involved in marketing of high-risk AI systems"
+    },
+    {
+      "canonical": "not_involved_in_use/1",
+      "merged": [
+        "must_not_be_involved_in_use/1"
+      ],
+      "gloss": "body or personnel not directly involved in use of high-risk AI systems"
+    },
+    {
+      "canonical": "parameters_publicly_available/1",
+      "merged": [
+        "publicly_available_parameters/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "point_of_contact/2",
+      "merged": [
+        "indicates_point_of_contact/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "presents_risk/1",
+      "merged": [
+        "risk_presents/1"
+      ],
+      "gloss": "presents a risk within the meaning of Article 79(1)"
+    },
+    {
+      "canonical": "prohibited_practice_infringement/1",
+      "merged": [
+        "infringement_of_prohibited_ai_practice/1"
+      ],
+      "gloss": "non-compliance with prohibition in Article 5"
+    },
+    {
+      "canonical": "provides_general_purpose_ai_model/2",
+      "merged": [
+        "provider_of_general_purpose_ai_model/2"
+      ],
+      "gloss": "provider develops or places a general-purpose AI model on the market"
+    },
+    {
+      "canonical": "public_authority_use/1",
+      "merged": [
+        "intended_for_public_authority_use/1"
+      ],
+      "gloss": "AI system intended to be used by public authorities"
+    },
+    {
+      "canonical": "reasoned_request/2",
+      "merged": [
+        "reasoned_request_made/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "relevant_market_surveillance_authority/1",
+      "merged": [
+        "market_surveillance_authority_designated/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "required_technical_documentation_content/1",
+      "merged": [
+        "required_technical_documentation_elements/1"
+      ],
+      "gloss": "content requirements for technical documentation of general-purpose AI models"
+    },
+    {
+      "canonical": "requirements_of_chapter_3_section_2/1",
+      "merged": [
+        "meets_chapter_3_section_2_requirements/1"
+      ],
+      "gloss": "requirements set out in Chapter III Section 2 of this Regulation"
+    },
+    {
+      "canonical": "sets_period/1",
+      "merged": [
+        "sets_period_for_provision/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "single_point_of_contact/1",
+      "merged": [
+        "designated_as_single_contact_point/1"
+      ],
+      "gloss": "market surveillance authority designated as contact point"
+    },
+    {
+      "canonical": "solely_profiling_based/1",
+      "merged": [
+        "based_solely_on_profiling_or_personality/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "sufficient_reason_to_consider_non_compliant/2",
+      "merged": [
+        "sufficient_reason_to_consider_non_compliance/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "training_computation/2",
+      "merged": [
+        "cumulative_training_computation/2"
+      ],
+      "gloss": "cumulative amount of computation used for training measured in floating point operations"
+    },
+    {
+      "canonical": "travel_document_verification_purpose/1",
+      "merged": [
+        "purpose_is_travel_document_verification/1"
+      ],
+      "gloss": "purpose of verifying travel documents"
+    },
+    {
+      "canonical": "union_body/1",
+      "merged": [
+        "union_institution_body_office_or_agency/1",
+        "union_institution_or_body/1"
+      ],
+      "gloss": "Union institution, body, office or agency"
+    },
+    {
+      "canonical": "urgency_applies/1",
+      "merged": [
+        "urgency_situation_applies/1"
+      ],
+      "gloss": "Duly justified case of urgency permitting deferred registration or authorisation"
+    }
+  ],
+  "unanswered_sample": []
+}

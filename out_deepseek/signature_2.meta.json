@@ -1,0 +1,278 @@
+{
+  "n_invented_input": 1807,
+  "n_rule_files": 125,
+  "threshold": 0.6,
+  "pairs_proposed": 310,
+  "pairs_answered": 310,
+  "pairs_unanswered": 0,
+  "answer_rate": 1.0,
+  "verdict_same": 43,
+  "verdict_different": 267,
+  "groups": 36,
+  "names_merged": 41,
+  "fingerprint": "462c954906fd12477461ec0235cf837f493db0d26c38ef03bbe422a4ecdfc9e3",
+  "signature_2_sha256": "20837a9e93a85078348b1c19048deffaabc76419b936f9513fbebc0479408102",
+  "combined_sha256": "57b2a4ca401076415de53c372c8061cd1af049bdf0f05d4e65104a9d23e370e3",
+  "model": "deepseek/deepseek-v4-pro",
+  "batches": 4,
+  "decisions": [
+    {
+      "canonical": "adverse_legal_effect_decision/1",
+      "merged": [
+        "produces_adverse_legal_effect/1"
+      ],
+      "gloss": "decision producing adverse legal effect based solely on system output"
+    },
+    {
+      "canonical": "annex_3_point_1_a_system/1",
+      "merged": [
+        "referred_to_in_annex_3_point_1_a/1"
+      ],
+      "gloss": "high-risk AI system referred to in Annex III point 1(a)"
+    },
+    {
+      "canonical": "annex_3_point_2_system/1",
+      "merged": [
+        "system_listed_under_point_2_of_annex_3/1"
+      ],
+      "gloss": "high-risk AI system listed in Annex III point 2"
+    },
+    {
+      "canonical": "bias_mitigation_measures_identified/1",
+      "merged": [
+        "bias_mitigation_measures_required/1"
+      ],
+      "gloss": "measures to detect, prevent and mitigate biases are identified"
+    },
+    {
+      "canonical": "contains_eu_declaration_of_conformity/1",
+      "merged": [
+        "eu_declaration_of_conformity_accompanies/1",
+        "accompanied_by_eu_declaration_of_conformity/1"
+      ],
+      "gloss": "documentation includes a copy of the EU declaration of conformity"
+    },
+    {
+      "canonical": "established_in_third_country/1",
+      "merged": [
+        "established_under_third_country_law/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "evaluation_finds_high_risk/2",
+      "merged": [
+        "finds_risk_after_evaluation/2"
+      ],
+      "gloss": "evaluation finds AI system is high-risk"
+    },
+    {
+      "canonical": "experts_designated_by_member_states/1",
+      "merged": [
+        "designated_representatives_of_member_states/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "extension_of_scope/1",
+      "merged": [
+        "extension_of_scope_applies/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "fine_cap/2",
+      "merged": [
+        "fine_amount_cap/2"
+      ],
+      "gloss": "maximum fine for an infringement"
+    },
+    {
+      "canonical": "for_substantial_public_interest/1",
+      "merged": [
+        "condition_substantial_public_interest/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "free_and_open_source_licence/1",
+      "merged": [
+        "released_under_free_open_source_licence/1"
+      ],
+      "gloss": "released under free and open-source licence"
+    },
+    {
+      "canonical": "high_risk_ai_system/1",
+      "merged": [
+        "high_risk_ai_system_listed_in_annex_3/1",
+        "annex_3_system/1",
+        "annex_3_high_risk_ai_system/1"
+      ],
+      "gloss": "AI system listed in Annex III"
+    },
+    {
+      "canonical": "human_oversight_aims_to_prevent_risks/1",
+      "merged": [
+        "oversight_aims_to_prevent_or_minimise_risks/1"
+      ],
+      "gloss": "human oversight aims to prevent or minimise risks"
+    },
+    {
+      "canonical": "involved_in_application/1",
+      "merged": [
+        "involved_in_application_of_regulation/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "law_enforcement_migration_asylum_border/1",
+      "merged": [
+        "law_enforcement_migration_asylum_border_system/1"
+      ],
+      "gloss": "system in areas of law enforcement, migration, asylum and border control management"
+    },
+    {
+      "canonical": "made_available_on_union_market/2",
+      "merged": [
+        "placed_on_market_or_made_available_in/2"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "must_comply_with_registration/2",
+      "merged": [
+        "must_comply_with_registration_obligations/2"
+      ],
+      "gloss": "authorised representative must comply with registration obligations"
+    },
+    {
+      "canonical": "must_document_impartiality_structure/1",
+      "merged": [
+        "must_implement_impartiality_structure/1"
+      ],
+      "gloss": "notified body must document a structure to safeguard impartiality"
+    },
+    {
+      "canonical": "must_immediately_inform/2",
+      "merged": [
+        "immediately_inform/2"
+      ],
+      "gloss": "entity must immediately inform others"
+    },
+    {
+      "canonical": "must_inform_commission_and_member_states/2",
+      "merged": [
+        "must_notify_commission_and_member_states/2"
+      ],
+      "gloss": "Member State must inform Commission and other Member States"
+    },
+    {
+      "canonical": "must_prepare_annual_report/1",
+      "merged": [
+        "must_publish_annual_report/1"
+      ],
+      "gloss": "Commission must publish annual report on use"
+    },
+    {
+      "canonical": "must_report_serious_incident/2",
+      "merged": [
+        "must_report_serious_incidents/2"
+      ],
+      "gloss": "provider must report serious incident to market surveillance authority"
+    },
+    {
+      "canonical": "must_take_corrective_actions/2",
+      "merged": [
+        "must_take_corrective_action/2"
+      ],
+      "gloss": "provider must take necessary corrective actions and provide information"
+    },
+    {
+      "canonical": "offers_conformity_assessment_activities/1",
+      "merged": [
+        "concerns_conformity_assessment_activities/1",
+        "description_of_conformity_assessment_activities/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "only_authorised_persons_access/1",
+      "merged": [
+        "only_authorised_persons_have_access/1"
+      ],
+      "gloss": "only authorised persons have access with confidentiality obligations"
+    },
+    {
+      "canonical": "open_source_exception_applies/1",
+      "merged": [
+        "free_and_open_source_exception/1"
+      ],
+      "gloss": "exception for free and open-source models applies"
+    },
+    {
+      "canonical": "parameters_publicly_available/1",
+      "merged": [
+        "parameters_made_publicly_available/1"
+      ],
+      "gloss": ""
+    },
+    {
+      "canonical": "presumed_conformity/1",
+      "merged": [
+        "presumed_conformity_with_requirements/1"
+      ],
+      "gloss": "system or model presumed to conform to requirements"
+    },
+    {
+      "canonical": "requires_conformity_assessment/1",
+      "merged": [
+        "requires_third_party_conformity_assessment/1"
+      ],
+      "gloss": "required to undergo third-party conformity assessment"
+    },
+    {
+      "canonical": "residual_risk_acceptable/1",
+      "merged": [
+        "overall_residual_risk_acceptable/1"
+      ],
+      "gloss": "residual risk judged acceptable"
+    },
+    {
+      "canonical": "risk_presenting_system/1",
+      "merged": [
+        "ai_system_presenting_risk/1"
+      ],
+      "gloss": "high-risk AI system presenting a risk under Article 79(1)"
+    },
+    {
+      "canonical": "sandbox_may_include_real_world_testing/1",
+      "merged": [
+        "testing_may_include_real_world_conditions/1"
+      ],
+      "gloss": "sandbox may include testing in real world conditions"
+    },
+    {
+      "canonical": "supervised_within/2",
+      "merged": [
+        "supervised_within_sandbox/2"
+      ],
+      "gloss": "testing is supervised within a sandbox"
+    },
+    {
+      "canonical": "systemic_risk_classification_applies/1",
+      "merged": [
+        "advising_on_classification_systemic_risk/1",
+        "general_purpose_ai_model_with_systemic_risk/1"
+      ],
+      "gloss": "general-purpose AI model classified as having systemic risk"
+    },
+    {
+      "canonical": "tested_for_risk_management/1",
+      "merged": [
+        "tested_to_identify_risk_management_measures/1"
+      ],
+      "gloss": "tested to identify risk management measures"
+    }
+  ],
+  "unanswered_sample": []
+}

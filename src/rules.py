@@ -34,7 +34,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
-from llm import Client, LLMConfig, append_log, cache_key  # noqa: E402
+from llm import Client, LLMConfig, PROVIDERS, REASONING_LEVELS, append_log, cache_key  # noqa: E402
 from prompts import build_rules_messages  # noqa: E402
 from signature import parse_declarations, signature_sha  # noqa: E402
 from structure import WorkUnit, phase_b_units, strict_check  # noqa: E402
@@ -162,7 +162,8 @@ async def main_async(args: argparse.Namespace) -> int:
     print(f"  output     : {rules_dir}")
     print(f"  model      : {args.model}  concurrency {args.concurrency}\n")
 
-    cfg = LLMConfig(model=args.model, host=args.host, concurrency=args.concurrency,
+    cfg = LLMConfig(model=args.model, host=args.host, provider=args.provider,
+                    reasoning=args.reasoning, concurrency=args.concurrency,
                     num_predict=args.num_predict)
     client = Client(cfg, out_dir / "cache")
     progress = {"done": 0, "failed": 0, "skipped": 0, "stale": 0, "failures": []}
@@ -195,6 +196,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--no-annexes", action="store_true")
     p.add_argument("--model", default=LLMConfig.model)
     p.add_argument("--host", default=LLMConfig.host)
+    p.add_argument("--provider", default=LLMConfig.provider, choices=PROVIDERS,
+                   help="ollama (default) or openrouter; openrouter reads "
+                        "OPENROUTER_API_KEY from the environment")
+    p.add_argument("--reasoning", default=LLMConfig.reasoning, choices=REASONING_LEVELS,
+                   help="openrouter only: reasoning effort, default none")
     p.add_argument("--concurrency", type=int, default=3,
                    help="Ollama cloud returns 429 above ~4")
     p.add_argument("--num-predict", type=int, default=LLMConfig.num_predict,

@@ -16,6 +16,13 @@ apart from a goal that is simply broken.
 """
 from __future__ import annotations
 
+import bisect
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
 import re
 
 HEAD_RE = re.compile(r"^([a-z][A-Za-z0-9_]*)\s*\(")
@@ -383,3 +390,125 @@ def well_formed(clause: str) -> str | None:
     if not clause.rstrip().endswith("."):
         return "no terminating period"
     return None
+
+
+# ------------------------------------------------------------ the authoritative check
+
+# A tiny SWI-Prolog program that reads a file term by term and prints, for each term,
+# either `ok <char offset>` or `bad <char offset> <message>`. The offsets are what
+# Python needs: it knows where every clause starts in the file it wrote, so an offset
+# maps to exactly one clause.
+#
+# After a syntax error SWI's reader resynchronises at the next full stop. That can
+# swallow the start of the FOLLOWING clause when the broken one has, say, an open
+# quote. So a clause counts as accepted only if a successful read STARTED inside it;
+# a clause nobody read and nobody blamed is reported as swallowed and dropped too.
+_READER_CHECK = r"""
+:- initialization(main, main).
+main :-
+    current_prolog_flag(argv, [File]),
+    open(File, read, S, [encoding(utf8)]),
+    loop(S, -1, 0),
+    close(S).
+loop(S, LastBad, Repeats) :-
+    catch(read_term(S, T, [term_position(P), syntax_errors(error)]), E, true),
+    (   var(E)
+    ->  (   T == end_of_file
+        ->  true
+        ;   stream_position_data(char_count, P, C),
+            format("ok ~d~n", [C]),
+            loop(S, LastBad, Repeats)
+        )
+    ;   (   E = error(syntax_error(Msg), file(_, _, _, C))     % file streams
+        ->  true
+        ;   E = error(syntax_error(Msg), stream(_, _, _, C))   % other streams
+        ->  true
+        ;   E = error(syntax_error(Msg), _)
+        ->  C = -1
+        ;   Msg = E, C = -1
+        ),
+        format("bad ~d ~q~n", [C, Msg]),
+        (   C == LastBad
+        ->  R is Repeats + 1
+        ;   R = 0
+        ),
+        (   R > 2 -> true ; loop(S, C, R) )   % guard against a reader that cannot advance
+    ).
+"""
+
+_SWIPL = shutil.which("swipl")
+_warned_no_swipl = False
+
+
+def reader_check(clauses: list[str]) -> list[str | None]:
+    """Run each clause through SWI-Prolog's own reader. One entry per clause: None if
+    it is accepted, else a short reason.
+
+    `well_formed` is a cheap pre-filter for the one malformation gpt-oss produced
+    (unbalanced parentheses). Other models produce other ones -- DeepSeek wrote an
+    unquoted `celex:32024R1689`, which balances perfectly and is a syntax error -- and
+    guessing them one at a time is a losing game. The reader that will load the file
+    is the only authority on what it will load, so it is asked, once per rule file.
+
+    If swipl is not installed every clause passes, with one warning on stderr; the
+    lint step then reports the same absence under `syntax.ran = false`.
+    """
+    global _warned_no_swipl
+    if not clauses:
+        return []
+    if _SWIPL is None:
+        if not _warned_no_swipl:
+            print("prolog.reader_check: swipl not found; clauses are not reader-checked",
+                  file=sys.stderr)
+            _warned_no_swipl = True
+        return [None] * len(clauses)
+
+    starts: list[int] = []
+    buf: list[str] = []
+    pos = 0
+    for c in clauses:
+        starts.append(pos)
+        chunk = c.rstrip() + "\n\n"
+        buf.append(chunk)
+        pos += len(chunk)
+
+    with tempfile.TemporaryDirectory() as td:
+        src = Path(td) / "clauses.txt"   # not .pl: swipl would consult it as a script
+        chk = Path(td) / "check.pl"
+        src.write_text("".join(buf), encoding="utf-8")
+        chk.write_text(_READER_CHECK, encoding="utf-8")
+        proc = subprocess.run([_SWIPL, "-q", str(chk), "--", str(src)],
+                              capture_output=True, text=True, timeout=120)
+
+    # The reader is sequential: a bad term begins at the first clause not yet read,
+    # whatever offset the error itself is reported at. (An unterminated quote is
+    # detected at end of file, far from the clause that opened it.) So blame goes to
+    # the cursor. A later error whose offset still falls inside an already-blamed
+    # clause is the reader resynchronising within that same clause -- the splitter
+    # can fuse two source lines into one clause when it mis-tracks a quote -- and is
+    # not a second clause's fault. Clauses the reader never reached are dropped as
+    # swallowed by the loop below.
+    reasons: list[str | None] = [None] * len(clauses)
+    read_ok: set[int] = set()
+    cursor = 0
+    n = len(clauses)
+    for line in proc.stdout.splitlines():
+        parts = line.split(" ", 2)
+        if len(parts) < 2:
+            continue
+        kind, off = parts[0], int(parts[1])
+        idx = bisect.bisect_right(starts, off) - 1 if off >= 0 else cursor
+        if idx < cursor:
+            continue                       # inside a clause already settled
+        if kind == "ok":
+            if idx < n:
+                read_ok.add(idx)
+                cursor = idx + 1
+        elif kind == "bad" and cursor < n:
+            msg = parts[2] if len(parts) > 2 else "syntax error"
+            reasons[cursor] = f"swipl: {msg}"
+            cursor += 1
+    for i in range(n):
+        if reasons[i] is None and i not in read_ok:
+            reasons[i] = "swipl: not read -- swallowed by a preceding syntax error"
+    return reasons

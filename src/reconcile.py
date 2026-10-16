@@ -57,7 +57,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
-from llm import Client, LLMConfig, append_log, cache_key  # noqa: E402
+from llm import Client, LLMConfig, PROVIDERS, REASONING_LEVELS, append_log, cache_key  # noqa: E402
 from prompts import build_reconcile_messages  # noqa: E402
 from signature import (Candidate, alias_candidates, collect_invented,  # noqa: E402
                        parse_declarations, signature_sha)
@@ -70,6 +70,13 @@ ALIAS_RE = re.compile(
     r"([a-z_][A-Za-z0-9_]*)\s*/\s*(\d+)\s*\)")
 
 DEFAULT_BATCH = 80
+# Below this answer rate the step fails and stops the run. Above it, unanswered pairs
+# are warned about, recorded in signature_2.meta.json, and treated as `different`.
+# An unattended peer run should not stop over 2 slipped pairs in 629 (Kimi did exactly
+# that: one skipped line, one pair substituted for another); it should stop if a model
+# returns a comment instead of verdicts, which is what the first version of this
+# prompt got back.
+MIN_ANSWER_RATE = 0.95
 
 
 def format_pairs(batch: list[Candidate]) -> str:
@@ -184,7 +191,8 @@ async def build(args: argparse.Namespace) -> int:
 
     batches = [cands[i:i + args.batch] for i in range(0, len(cands), args.batch)]
 
-    cfg = LLMConfig(model=args.model, host=args.host, concurrency=args.concurrency,
+    cfg = LLMConfig(model=args.model, host=args.host, provider=args.provider,
+                    reasoning=args.reasoning, concurrency=args.concurrency,
                     num_predict=args.num_predict)
     batch_messages = [
         build_reconcile_messages(format_pairs(b), len(b), k + 1, len(batches))
@@ -322,18 +330,22 @@ async def build(args: argparse.Namespace) -> int:
     print(f"  groups formed     {len(decisions)}")
     print(f"  names merged away {merged}")
     print(f"  sha256            {meta['signature_2_sha256'][:12]}")
+    rate_ok = meta["answer_rate"] >= args.min_answer_rate
     if unanswered:
-        print(f"  WARNING {len(unanswered)} pairs got no verdict. They are treated as")
-        print( "          'different' by omission, which is the failure mode this")
-        print( "          design exists to make visible. Re-run with --force, or a")
-        print( "          smaller --batch, before reading the pass-2 comparison.")
+        print(f"  {'WARNING' if rate_ok else 'FAILED '} {len(unanswered)} pairs got no "
+              f"verdict (answer rate {meta['answer_rate']}, floor {args.min_answer_rate}).")
+        print( "          They are treated as 'different' by omission and are listed in")
+        print( "          signature_2.meta.json under unanswered_sample.")
+        if not rate_ok:
+            print( "          Too many to accept. Re-run with --force, or a smaller --batch,")
+            print( "          before reading the pass-2 comparison.")
         for k in unanswered[:5]:
             print(f"            {k[0]} ~ {k[1]}")
     if decisions:
         print("\n  largest groups:")
         for d in sorted(decisions, key=lambda x: -len(x["merged"]))[:8]:
             print(f"    {d['canonical']:<44} <- {', '.join(d['merged'][:3])}")
-    return 1 if unanswered else 0
+    return 0 if rate_ok else 1
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -342,11 +354,18 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", default="out")
     p.add_argument("--model", default=LLMConfig.model)
     p.add_argument("--host", default=LLMConfig.host)
+    p.add_argument("--provider", default=LLMConfig.provider, choices=PROVIDERS,
+                   help="ollama (default) or openrouter; openrouter reads "
+                        "OPENROUTER_API_KEY from the environment")
+    p.add_argument("--reasoning", default=LLMConfig.reasoning, choices=REASONING_LEVELS,
+                   help="openrouter only: reasoning effort, default none")
     p.add_argument("--batch", type=int, default=DEFAULT_BATCH,
                    help="pairs per call; smaller batches answer more reliably")
     p.add_argument("--concurrency", type=int, default=3)
     p.add_argument("--threshold", type=float, default=0.6,
                    help="token-overlap floor for proposing a pair")
+    p.add_argument("--min-answer-rate", type=float, default=MIN_ANSWER_RATE,
+                   help="fail the step if fewer than this fraction of pairs got a verdict")
     p.add_argument("--num-predict", type=int, default=LLMConfig.num_predict)
     p.add_argument("--force", action="store_true",
                    help="rebuild even if signature_2.pl exists")

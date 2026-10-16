@@ -27,7 +27,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
-from llm import Client, LLMConfig, append_log  # noqa: E402
+from llm import Client, LLMConfig, PROVIDERS, REASONING_LEVELS, append_log  # noqa: E402
 from prolog import (DECL_SYNTAX, DECLARED_RE, PRED_DECL_RE, body_goals,  # noqa: E402
                     head_indicator, split_clauses, split_head_body)
 from prompts import build_signature_messages  # noqa: E402
@@ -122,7 +122,8 @@ async def build(args: argparse.Namespace) -> int:
     print(f"input slice : {sl.fragment}  {len(sl.items)} items  {sl.size:,} chars  "
           f"sha {sl.sha256[:12]}")
 
-    cfg = LLMConfig(model=args.model, host=args.host, concurrency=1)
+    cfg = LLMConfig(model=args.model, host=args.host, provider=args.provider,
+                    reasoning=args.reasoning, concurrency=1)
     client = Client(cfg, out_dir / "cache")
     messages = build_signature_messages(sl.text)
 
@@ -192,6 +193,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", default="out")
     p.add_argument("--model", default=LLMConfig.model)
     p.add_argument("--host", default=LLMConfig.host)
+    p.add_argument("--provider", default=LLMConfig.provider, choices=PROVIDERS,
+                   help="ollama (default) or openrouter; openrouter reads "
+                        "OPENROUTER_API_KEY from the environment")
+    p.add_argument("--reasoning", default=LLMConfig.reasoning, choices=REASONING_LEVELS,
+                   help="openrouter only: reasoning effort, default none")
     p.add_argument("--force", action="store_true", help="rebuild even if signature.pl exists")
     return p
 

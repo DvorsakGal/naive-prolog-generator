@@ -1,0 +1,204 @@
+{
+  "n_invented_input": 991,
+  "n_rule_files": 125,
+  "threshold": 0.6,
+  "pairs_proposed": 152,
+  "pairs_answered": 152,
+  "pairs_unanswered": 0,
+  "answer_rate": 1.0,
+  "verdict_same": 27,
+  "verdict_different": 125,
+  "groups": 26,
+  "names_merged": 27,
+  "fingerprint": "1fa98294e04bd93419e9408f471bb4d3db80885b57d376c366bfff7c977defa7",
+  "signature_2_sha256": "20af6ed0b1f8a87e6f7fdd798b016b57f18097bb41ffe9a5fb9b0dfce569ff6e",
+  "combined_sha256": "7f753e9f3c1fb8188eb17a0b14b4a1d4bf0bdc8508310d98c2acdbda0c272e75",
+  "model": "google/gemini-3.8-flash",
+  "batches": 2,
+  "decisions": [
+    {
+      "canonical": "adequate_corrective_action_taken/2",
+      "merged": [
+        "takes_adequate_corrective_action/2"
+      ],
+      "gloss": "operator has taken adequate corrective action for the AI system"
+    },
+    {
+      "canonical": "annex_3_point_2_system/1",
+      "merged": [
+        "listed_in_annex_iii_point_2/1"
+      ],
+      "gloss": "AI system listed in Annex III point 2 (critical infrastructure)"
+    },
+    {
+      "canonical": "authorised_representative_of/2",
+      "merged": [
+        "authorised_representative_of_provider/2"
+      ],
+      "gloss": "authorised representative for an AI system or provider"
+    },
+    {
+      "canonical": "biometrics_annex_3_1_a/1",
+      "merged": [
+        "annex_3_point_1_a_system/1"
+      ],
+      "gloss": "High-risk AI system referred to in Annex III point 1(a)"
+    },
+    {
+      "canonical": "causal_link_established_or_likely/2",
+      "merged": [
+        "causal_link_suspected_or_established/2"
+      ],
+      "gloss": "causal link established or reasonably likely between AI system and serious incident"
+    },
+    {
+      "canonical": "commission/1",
+      "merged": [
+        "european_commission/1"
+      ],
+      "gloss": "European Commission"
+    },
+    {
+      "canonical": "complies_with_chapter_3_section_2/1",
+      "merged": [
+        "compliant_with_chapter_3_section_2/1"
+      ],
+      "gloss": "system complies with Chapter III Section 2 requirements"
+    },
+    {
+      "canonical": "concerns_ai_safety_component/1",
+      "merged": [
+        "concerning_ai_safety_component/1"
+      ],
+      "gloss": "delegated act concerns AI systems that are safety components"
+    },
+    {
+      "canonical": "control_of_logs/2",
+      "merged": [
+        "logs_under_control/2"
+      ],
+      "gloss": "provider has control over logs of an AI system"
+    },
+    {
+      "canonical": "covers_union_harmonisation_legislation_annex_i/1",
+      "merged": [
+        "covered_by_union_harmonisation_legislation_annex_i/1"
+      ],
+      "gloss": "system is covered by Union harmonisation legislation listed in Annex I"
+    },
+    {
+      "canonical": "deemed_justified/1",
+      "merged": [
+        "deemed_justified_derogation/1"
+      ],
+      "gloss": "derogation authorisation deemed justified after objection deadline"
+    },
+    {
+      "canonical": "formal_non_compliance/2",
+      "merged": [
+        "finding_formal_non_compliance/2"
+      ],
+      "gloss": "AI system exhibits formal non-compliance under Article 83(1)"
+    },
+    {
+      "canonical": "market_surveillance_authority_for/2",
+      "merged": [
+        "competent_market_surveillance_authority/2"
+      ],
+      "gloss": "authority acting as market surveillance authority for an AI system or entity"
+    },
+    {
+      "canonical": "must_comply/2",
+      "merged": [
+        "must_comply_with/2"
+      ],
+      "gloss": "actor must comply with specified obligations"
+    },
+    {
+      "canonical": "must_decide/2",
+      "merged": [
+        "must_decide_justification/2"
+      ],
+      "gloss": "The Commission must decide on the justification of the authorisation"
+    },
+    {
+      "canonical": "must_report/2",
+      "merged": [
+        "must_submit_report/2"
+      ],
+      "gloss": "actor must report an event to an authority"
+    },
+    {
+      "canonical": "must_submit_annual_report/2",
+      "merged": [
+        "must_publish_annual_report/2"
+      ],
+      "gloss": "actor must submit annual report on use to recipient"
+    },
+    {
+      "canonical": "national_measure/2",
+      "merged": [
+        "national_measure_taken/2"
+      ],
+      "gloss": "Member State has taken measures regarding system presenting risk"
+    },
+    {
+      "canonical": "non_compliant/1",
+      "merged": [
+        "non_compliant_with_requirements/1"
+      ],
+      "gloss": "AI system does not comply with requirements and obligations"
+    },
+    {
+      "canonical": "permitted_extension/2",
+      "merged": [
+        "permitted_extension_period/2"
+      ],
+      "gloss": "Permitted extension of certificate validity"
+    },
+    {
+      "canonical": "permitted_initiate_structured_dialogue/2",
+      "merged": [
+        "permitted_initiate_dialogue/2"
+      ],
+      "gloss": "AI Office may initiate structured dialogue with provider of general-purpose AI model"
+    },
+    {
+      "canonical": "permitted_testing_in_real_world_conditions/2",
+      "merged": [
+        "authorising_testing_in_real_world_conditions/2"
+      ],
+      "gloss": "entity is permitted to conduct real-world testing of a system outside sandboxes"
+    },
+    {
+      "canonical": "provider_of_general_purpose_ai_model/1",
+      "merged": [
+        "general_purpose_ai_model_provider/1"
+      ],
+      "gloss": "entity is a provider of a general-purpose AI model"
+    },
+    {
+      "canonical": "system_covered_by_annex_1/1",
+      "merged": [
+        "covered_by_annex_1_legislation/1",
+        "covered_by_annex_one_legislation/1"
+      ],
+      "gloss": "AI system covered by Annex I"
+    },
+    {
+      "canonical": "technical_documentation/1",
+      "merged": [
+        "required_technical_documentation/1"
+      ],
+      "gloss": "technical documentation of an AI system"
+    },
+    {
+      "canonical": "union_institution_body_office_agency/1",
+      "merged": [
+        "union_institution_body_office_or_agency/1"
+      ],
+      "gloss": "Union institution, body, office or agency"
+    }
+  ],
+  "unanswered_sample": []
+}

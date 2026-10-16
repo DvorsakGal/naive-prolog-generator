@@ -27,12 +27,41 @@ caps it, and a response that hits the cap is reported as FAILED rather than writ
 out: a truncated completion ends mid-clause, and half a clause in a Prolog file is
 worse than no clause. The cap is part of the cache identity, so raising it re-runs
 exactly the calls it affects and nothing else.
+
+TWO PROVIDERS
+-------------
+`ollama`      -- the local daemon or Ollama cloud, POST {host}/api/chat. The original
+                 and default. gpt-oss ran here.
+`openrouter`  -- POST https://openrouter.ai/api/v1/chat/completions, OpenAI-compatible.
+                 Used for the consensus-scoring peers (Gemini, DeepSeek, Qwen, Kimi,
+                 Mistral), so one client reaches every family with the same prompt.
+
+The API key is read from the environment variable OPENROUTER_API_KEY at client start,
+and from nowhere else. It is never part of the cache key, the run log or any file the
+pipeline writes.
+
+The two providers return differently shaped JSON. The raw response is cached as-is,
+and `parse_response` recognises either shape, so an old Ollama cache entry and a new
+OpenRouter one are read by the same code path.
+
+REASONING. The peers are hybrid reasoning models; gpt-oss was not asked to reason.
+Reasoning tokens are billed as output and count against max_tokens, so left on they
+would both inflate cost and change what is being compared. The OpenRouter request
+therefore carries `reasoning: {"effort": <cfg.reasoning>}`, default "none", which
+OpenRouter maps to the nearest level a model supports. The setting is part of the
+cache identity for OpenRouter calls.
+
+CACHE COMPATIBILITY. `provider` and `reasoning` enter the cache identity ONLY for
+OpenRouter calls. For Ollama the identity is byte-identical to what it was before this
+field existed, so every recorded gpt-oss response in out/ and out_2/ still hits, and
+no rule file there is reported stale.
 """
 from __future__ import annotations
 
 import asyncio
 import hashlib
 import json
+import os
 import random
 import re
 import time
@@ -43,6 +72,10 @@ import httpx
 
 DEFAULT_MODEL = "gpt-oss:120b-cloud"
 DEFAULT_HOST = "http://localhost:11434"
+OPENROUTER_HOST = "https://openrouter.ai/api/v1"
+OPENROUTER_KEY_VAR = "OPENROUTER_API_KEY"
+PROVIDERS = ("ollama", "openrouter")
+REASONING_LEVELS = ("none", "minimal", "low", "medium", "high", "xhigh", "max")
 FENCE_RE = re.compile(r"^\s*```[a-zA-Z]*\s*\n(.*?)\n?\s*```\s*$", re.DOTALL)
 
 
@@ -60,6 +93,10 @@ class LLMConfig:
 
     model: str = DEFAULT_MODEL
     host: str = DEFAULT_HOST
+    provider: str = "ollama"
+    # OpenRouter only. "none" disables reasoning; unsupported levels are mapped by
+    # OpenRouter to the nearest one the model offers.
+    reasoning: str = "none"
     temperature: float = 0.0
     seed: int = 0
     concurrency: int = 3
@@ -70,10 +107,29 @@ class LLMConfig:
     # no legitimate article hits it, tight enough that a loop is caught in ~1 minute.
     num_predict: int = 16384
 
+    def __post_init__(self):
+        if self.provider not in PROVIDERS:
+            raise ValueError(f"provider must be one of {PROVIDERS}, got {self.provider!r}")
+        if self.reasoning not in REASONING_LEVELS:
+            raise ValueError(f"reasoning must be one of {REASONING_LEVELS}, "
+                             f"got {self.reasoning!r}")
+        if self.provider == "openrouter" and self.host == DEFAULT_HOST:
+            # The Ollama default host makes no sense for OpenRouter; swap it unless
+            # the caller set one explicitly. frozen=True, so go through object.
+            object.__setattr__(self, "host", OPENROUTER_HOST)
+
     def cache_identity(self) -> dict:
-        """Only the fields that can change the model's output -- not host or pacing."""
-        return {"model": self.model, "temperature": self.temperature,
-                "seed": self.seed, "num_predict": self.num_predict}
+        """Only the fields that can change the model's output -- not host or pacing.
+
+        For Ollama this dict is unchanged from before `provider` existed, on purpose:
+        it keeps every recorded gpt-oss response addressable.
+        """
+        ident = {"model": self.model, "temperature": self.temperature,
+                 "seed": self.seed, "num_predict": self.num_predict}
+        if self.provider != "ollama":
+            ident["provider"] = self.provider
+            ident["reasoning"] = self.reasoning
+        return ident
 
 
 @dataclass
@@ -116,14 +172,42 @@ def prompt_sha(messages: list[dict]) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def parse_response(data: dict) -> tuple[str, int | None, int | None, bool]:
+    """(content, prompt_tokens, completion_tokens, truncated) from either provider.
+
+    OpenAI-compatible responses carry `choices`; Ollama's carry `message` at the top
+    level. Cached entries of both shapes exist side by side, so the shape is detected
+    from the data rather than from the current config.
+    """
+    if "choices" in data:                                   # OpenRouter / OpenAI shape
+        choice = (data.get("choices") or [{}])[0]
+        if choice.get("error"):
+            raise ValueError(f"provider error: {choice['error']}")
+        usage = data.get("usage") or {}
+        return (choice.get("message", {}).get("content") or "",
+                usage.get("prompt_tokens"), usage.get("completion_tokens"),
+                choice.get("finish_reason") == "length")
+    return (data.get("message", {}).get("content") or "",   # Ollama shape
+            data.get("prompt_eval_count"), data.get("eval_count"),
+            data.get("done_reason") == "length")
+
+
 class Client:
-    """Cached, rate-limit-aware chat client."""
+    """Cached, rate-limit-aware chat client. One class, two providers."""
 
     def __init__(self, cfg: LLMConfig, cache_dir: Path):
         self.cfg = cfg
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self._sem = asyncio.Semaphore(cfg.concurrency)
+        self._api_key = ""
+        if cfg.provider == "openrouter":
+            self._api_key = os.environ.get(OPENROUTER_KEY_VAR, "").strip()
+            if not self._api_key:
+                # Fail here, before Phase 0 has run, not on the first call.
+                raise SystemExit(
+                    f"provider is openrouter but {OPENROUTER_KEY_VAR} is not set.\n"
+                    f"    export {OPENROUTER_KEY_VAR}=sk-or-...")
 
     def _truncation_error(self, rec: CallRecord) -> str:
         return (f"truncated: hit num_predict={self.cfg.num_predict} "
@@ -142,22 +226,53 @@ class Client:
         except json.JSONDecodeError:
             return None  # a truncated write; treat as a miss and overwrite
 
-    async def _post(self, client: httpx.AsyncClient, messages: list[dict]) -> dict:
-        resp = await client.post(
+    def _request(self, messages: list[dict]) -> tuple[str, dict, dict]:
+        """(url, headers, json body) for this provider. Same prompt, same knobs."""
+        if self.cfg.provider == "openrouter":
+            return (
+                f"{self.cfg.host}/chat/completions",
+                {"Authorization": f"Bearer {self._api_key}",
+                 "Content-Type": "application/json"},
+                {
+                    "model": self.cfg.model,
+                    "stream": False,
+                    "messages": messages,
+                    "temperature": self.cfg.temperature,
+                    "seed": self.cfg.seed,
+                    "max_tokens": self.cfg.num_predict,
+                    "reasoning": {"effort": self.cfg.reasoning},
+                },
+            )
+        return (
             f"{self.cfg.host}/api/chat",
-            json={
+            {},
+            {
                 "model": self.cfg.model,
                 "stream": False,
                 "messages": messages,
                 "options": {"temperature": self.cfg.temperature, "seed": self.cfg.seed,
                             "num_predict": self.cfg.num_predict},
             },
-            timeout=1800.0,
         )
+
+    async def _post(self, client: httpx.AsyncClient, messages: list[dict]) -> dict:
+        url, headers, body = self._request(messages)
+        resp = await client.post(url, json=body, headers=headers, timeout=1800.0)
         if resp.status_code == 429:
             raise RateLimited(float(resp.headers.get("retry-after", 0) or 0))
-        resp.raise_for_status()
-        return resp.json()
+        if resp.status_code >= 400:
+            # Keep the provider's own explanation. `raise_for_status` alone reports
+            # "400 Bad Request" and a link to MDN, which says nothing about WHICH
+            # parameter a provider rejected -- Gemini returned exactly that for a
+            # reasoning setting it does not accept, and the run log had no way to
+            # say so.
+            body = resp.text.strip().replace("\n", " ")
+            raise ValueError(f"HTTP {resp.status_code} from {url}: {body[:600]}")
+        data = resp.json()
+        if isinstance(data, dict) and data.get("error") and "choices" not in data:
+            # OpenRouter can return a 200 whose body is only an error object.
+            raise ValueError(f"provider error: {data['error']}")
+        return data
 
     async def call(
         self, client: httpx.AsyncClient, messages: list[dict], label: str
@@ -169,14 +284,13 @@ class Client:
         hit = self.cached_response(key)
         if hit is not None:
             rec.cached = True
-            rec.prompt_tokens = hit.get("prompt_eval_count")
-            rec.completion_tokens = hit.get("eval_count")
-            rec.truncated = hit.get("done_reason") == "length"
+            content, rec.prompt_tokens, rec.completion_tokens, rec.truncated = \
+                parse_response(hit)
             if rec.truncated:
                 rec.error = self._truncation_error(rec)
                 return "", rec
             rec.ok = True
-            return strip_fences(hit.get("message", {}).get("content", "")), rec
+            return strip_fences(content), rec
 
         async with self._sem:
             attempt, throttled = 1, 0
@@ -184,19 +298,19 @@ class Client:
                 started = time.monotonic()
                 try:
                     data = await self._post(client, messages)
-                    content = data.get("message", {}).get("content", "")
-                    if not content.strip():
+                    content, p_tok, c_tok, truncated = parse_response(data)
+                    if not content.strip() and not truncated:
                         raise ValueError("empty response")
-                    # Write the raw response before parsing, so a parse bug never
-                    # costs an API call.
+                    # Write the raw response before anything else, so a parse bug
+                    # never costs an API call.
                     self._cache_path(key).write_text(
                         json.dumps(data, ensure_ascii=False), encoding="utf-8")
                     rec.attempts = attempt
                     rec.throttled = throttled
-                    rec.prompt_tokens = data.get("prompt_eval_count")
-                    rec.completion_tokens = data.get("eval_count")
+                    rec.prompt_tokens = p_tok
+                    rec.completion_tokens = c_tok
                     rec.wall_s = round(time.monotonic() - started, 2)
-                    rec.truncated = data.get("done_reason") == "length"
+                    rec.truncated = truncated
                     if rec.truncated:
                         # Not retried: at temperature 0 the same prompt loops the same
                         # way. Raise num_predict or split the provision.

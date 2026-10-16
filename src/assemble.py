@@ -26,8 +26,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from prolog import (head_indicator, normalise, rewrite_declarations,  # noqa: E402
-                    split_clauses, well_formed)
+from prolog import (head_indicator, normalise, reader_check,  # noqa: E402
+                    rewrite_declarations, split_clauses, well_formed)
 from structure import phase_b_units  # noqa: E402
 
 PASS_DIRS = {1: "rules", 2: "rules_2"}
@@ -52,24 +52,39 @@ def assemble(out_dir: Path, units_dir: Path, which_pass: int = 1,
     def absorb(label: str, raw: str) -> None:
         text, n = rewrite_declarations(raw)
         stats["declarations"] += n
-        kept: list[str] = []
-        for raw in split_clauses(text):
+
+        def drop(clause: str, why: str) -> None:
+            stats["malformed"].append({"source": label, "reason": why,
+                                       "clause": re.sub(r"\s+", " ", clause)[:120]})
+
+        # ONE BAD CLAUSE MUST NOT TAKE THE PROGRAM DOWN.
+        #
+        # A model occasionally emits a clause swipl rejects: gpt-oss wrote an extra
+        # closing parenthesis in a nested term; DeepSeek wrote an unquoted
+        # `celex:32024R1689`. `consult` then reports an error, the lint step stops
+        # the run, and 4,000 good clauses are discarded over one typo. A malformed
+        # clause is dropped and RECORDED instead, which degrades the program by
+        # exactly the clauses at fault and says which they were.
+        #
+        # Two gates. `well_formed` is a cheap balance check with readable reasons.
+        # `reader_check` is SWI-Prolog's own reader and is the authority: it catches
+        # whatever the next model invents without this file having to predict it.
+        candidates: list[str] = []
+        for raw_clause in split_clauses(text):
             stats["clauses_read"] += 1
-            clause = normalise(raw)
-            if clause != raw:
+            clause = normalise(raw_clause)
+            if clause != raw_clause:
                 stats["repaired"] += 1
-            # ONE BAD CLAUSE MUST NOT TAKE THE PROGRAM DOWN.
-            #
-            # A model occasionally emits an extra closing parenthesis in a deeply
-            # nested term. swipl then rejects that clause, `consult` reports an error,
-            # and the whole run stops -- so 4,000 good clauses were being discarded
-            # over 2 typos in one article. A malformed clause is dropped and RECORDED
-            # instead, which degrades the program by exactly the clauses at fault and
-            # says which they were.
             why = well_formed(clause)
             if why is not None:
-                stats["malformed"].append({"source": label, "reason": why,
-                                           "clause": re.sub(r"\s+", " ", clause)[:120]})
+                drop(clause, why)
+                continue
+            candidates.append(clause)
+
+        kept: list[str] = []
+        for clause, why in zip(candidates, reader_check(candidates)):
+            if why is not None:
+                drop(clause, why)
                 continue
             ind = head_indicator(clause)
             if ind is None:
