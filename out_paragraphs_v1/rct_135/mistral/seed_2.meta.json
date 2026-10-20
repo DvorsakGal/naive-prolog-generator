@@ -1,0 +1,13 @@
+{
+ "key": "eaa7b198cbc462be2c13ab04a28b87fd90978eb755eac28e0b9e936b6858b6a5",
+ "model": "mistralai/mistral-large-4-0",
+ "provider": "openrouter",
+ "reasoning": "none",
+ "seed": 2,
+ "cached": false,
+ "prompt_tokens": 1387,
+ "completion_tokens": 838,
+ "wall_s": 34.71,
+ "truncated": false,
+ "chars_out": 3694
+}

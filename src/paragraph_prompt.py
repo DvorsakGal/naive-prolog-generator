@@ -28,6 +28,14 @@ No signature is supplied, so the model names everything itself. No provenance or
 references are asked for, because the model is not told where the text comes from.
 The harness is responsible for recording which text went in.
 
+EXPORT LIST (revised after the first 75-call run)
+------------------------------------------------
+The first version said "export every predicate you define" and separately "declare
+inputs dynamic". 31 of 75 outputs then failed to load, 88 of 96 load errors being an
+export of a predicate with no clauses: the models exported their inputs too. Six more
+were export entries written as full terms. One output in 75 had an actual syntax error.
+The prompt now states the rule from both sides and names the consequence.
+
 MODULE NAME
 -----------
 The model has to pick the module name, since the prompt cannot name the text. It is
@@ -72,8 +80,9 @@ does not contain.
 
 ## The module
 
-The entire output is one module. The first line is the module declaration, which
-exports every predicate the module defines:
+The entire output is one module. The first line is the module declaration. Its export
+list names every predicate that has at least one clause in this module, as name/arity,
+and nothing else:
 
     :- module(risk_management_process, [
         risk_management_system/1,
@@ -82,11 +91,12 @@ exports every predicate the module defines:
     ]).
 
 - Choose a short lower_snake_case module name from the subject matter of the text.
-- Export every predicate you define, as name/arity. Nothing else goes in the list.
-- Every predicate called in a rule body must be defined in this module, or be a
-  predicate you clearly intend as an input (a fact about the world the text does not
-  settle). Declare each such input predicate with `:- dynamic name/arity.` so the
-  module loads without warnings.
+- The export list contains ONLY name/arity pairs, never a term with arguments, and ONLY
+  predicates that have a clause below. An export with no clause is a load error.
+- A predicate you call but do not define is an input: a fact about the world the text
+  does not settle. Declare each input with `:- dynamic name/arity.` and do NOT export
+  it. Every predicate in a rule body is therefore either defined and exported, or
+  declared dynamic and not exported.
 - Comments starting with % are allowed for grouping.
 
 ## Naming -- follow this exactly

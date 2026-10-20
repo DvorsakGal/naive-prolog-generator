@@ -154,7 +154,10 @@ _INFIX = {
     "*": (400, "yfx"), "/": (400, "yfx"),
     "^": (200, "xfy"), ":": (200, "xfy"),
 }
-_PREFIX = {"\\+": (900, "fy"), "-": (200, "fy")}
+_PREFIX = {"\\+": (900, "fy"), "-": (200, "fy"), ":-": (1200, "fx"), "?-": (1200, "fx"),
+           # directive operators, so `:- dynamic a/1, b/2.` reads as SWI reads it
+           "dynamic": (1150, "fx"), "discontiguous": (1150, "fx"), "multifile": (1150, "fx"),
+           "table": (1150, "fx"), "initialization": (1150, "fx"), "module_transparent": (1150, "fx")}
 
 
 class _Parser:
@@ -240,12 +243,12 @@ class _Parser:
                 self.expect("}")
                 return Compound("{}", (inner,)), 0
             if t.text in _PREFIX:
-                prec, _ = _PREFIX[t.text]
+                prec, typ = _PREFIX[t.text]
                 nxt = self.peek()
                 if t.text == "-" and nxt is not None and nxt.kind == "num":
                     self.next()
                     return Num("-" + nxt.text), 0
-                arg = self.parse(prec)
+                arg = self.parse(prec if typ == "fy" else prec - 1)
                 return Compound(t.text, (arg,)), prec
             if t.text == "!":
                 return Atom("!"), 0

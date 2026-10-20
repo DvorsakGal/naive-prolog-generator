@@ -1,0 +1,13 @@
+{
+ "key": "ae4f1cbc3c3432dda3f2e1daa82f736faa5484b674cb9d3687737c58d01ada04",
+ "model": "qwen/qwen3.7-max",
+ "provider": "openrouter",
+ "reasoning": "none",
+ "seed": 3,
+ "cached": false,
+ "prompt_tokens": 1549,
+ "completion_tokens": 981,
+ "wall_s": 16.65,
+ "truncated": false,
+ "chars_out": 3441
+}
