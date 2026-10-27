@@ -1,0 +1,13 @@
+{
+ "key": "461e8decc1df17e2df6cbdfc230484038c23d21415e966b29cd7f35fb3e6bd01",
+ "model": "moonshotai/kimi-k2.6",
+ "provider": "openrouter",
+ "reasoning": "none",
+ "seed": 3,
+ "cached": false,
+ "prompt_tokens": 1559,
+ "completion_tokens": 887,
+ "wall_s": 10.42,
+ "truncated": false,
+ "chars_out": 3408
+}

@@ -1,0 +1,60 @@
+{
+ "key": "a24341df690bac012942230064583a59c3b44b877fb7cc99327ff05c132cf5c6",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B models the content requirements (Chapter 3 compliance, information for authorities, Annex IV elements) with more detail and a proper opt-in condition, while module A uses thin stubs; B's drawing-up rule uses odd negated conditions.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Module B models the content requirements (Chapter 3 compliance, information for authorities, Annex IV elements) with more detail and a proper opt-in condition, while module A uses thin stubs; B's drawing-up rule uses odd negated conditions.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

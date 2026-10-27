@@ -1,0 +1,30 @@
+{
+ "key": "8d7f43798e353c32ae5e513aa18ba093092678cb6ada33f5fa92ffb1ce43d7f9",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A treats the transparency obligations as bare facts and ties arrangements to the code only loosely, while B makes them rules over obligations and uses different, partly mis-specified body conditions.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A treats the transparency obligations as bare facts and ties arrangements to the code only loosely, while B makes them rules over obligations and uses different, partly mis-specified body conditio",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

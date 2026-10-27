@@ -1,0 +1,60 @@
+{
+ "key": "30ad49deb182d9da126f6715909095077cd7133519cda9b6fe793d5d16618761",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same sentences with similar structure; B is less specific (e.g. it drops the chapter 3 requirement and recipient parties, and the conformity-assessment purpose), and it conditions drawing up on placing on market or putting into service, which A omits.\"}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same sentences with similar structure; B is less specific (e.g. it drops the chapter 3 requirement and recipient parties, and the conformity-assessment purpose), and it conditions drawing up on placing on market or putting into service, which A omits.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

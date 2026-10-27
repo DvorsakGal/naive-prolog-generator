@@ -1,0 +1,30 @@
+{
+ "key": "bde724a304b5e816c42b7b414bb048a28819bf5919720e35646e90931e079010",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially capture the Commission's permission to encourage and facilitate Union-level codes of practice, with the mandatory-obligation preamble and the objectives modelled differently; B links encourage and facilitate to an objective, while A splits them into separate predicates and gives looser supporting rules.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both partially capture the Commission's permission to encourage and facilitate Union-level codes of practice, with the mandatory-obligation preamble and the objectives modelled differently; B links encourage and facilitate to an objective, while A splits them into separate predicates and gives loose",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

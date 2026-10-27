@@ -1,0 +1,60 @@
+{
+ "key": "4398516436940ab130f544805c9ffc26bdc95e85a0c0e3f782d03404adae3021",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same sentences with similar structure; they differ in detail, notably A makes the Annex IV content duty conditional on not being simplified, and A's simplification rule is circular, while B states the minimum content unconditionally and adds a provider actor.\"}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same sentences with similar structure; they differ in detail, notably A makes the Annex IV content duty conditional on not being simplified, and A's simplification rule is circular, while B states the minimum content unconditionally and adds a provider actor.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

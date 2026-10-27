@@ -1,0 +1,42 @@
+{
+ "key": "a0f271423d99a6a2063035da4052fba0c993c3a2fa23fc6fb7afc7379dc3bd3f",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the three sentences only partially; A's marking rules are loosely structured, and B ties the obligation to the system and the exemption to that system, while A attaches the exemption to the provider.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the three sentences only partially; A's marking rules are loosely structured, and B ties the obligation to the system and the exemption to that system, while A attaches the exemption to the provider.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

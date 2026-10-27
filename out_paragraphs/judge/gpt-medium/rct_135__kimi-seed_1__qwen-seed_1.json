@@ -1,0 +1,30 @@
+{
+ "key": "37d99dca7f8324328cbc37a01a491e44ef6fdc0261485e6dd207ffc98eadcc0a",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission's permission to encourage or facilitate Union-level codes of practice, but they differ on key conditions and links within the long purpose clause, especially the treatment of manipulated content and how accessibility, cooperation, dissemination, authenticity, and provenance relate\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both modules capture the Commission's permission to encourage or facilitate Union-level codes of practice, but they differ on key conditions and links within the long purpose clause, especially the treatment of manipulated content and how accessibility, cooperation, dissemination, authenticity, and ",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "key": "079b7109b8a22063bfe5feba2ade942f4b80c9597e04c0c2d3591921d32b25e2",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A requires drawing up when the system is placed on the market or put into service, while B requires it only when the system is not yet placed or in service (closer to 'before'); B also adds a drawn-up condition for keeping up to date.\"}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Sentence 1 differs: A requires drawing up when the system is placed on the market or put into service, while B requires it only when the system is not yet placed or in service (closer to 'before'); B also adds a drawn-up condition for keeping up to date.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
+ }
+}

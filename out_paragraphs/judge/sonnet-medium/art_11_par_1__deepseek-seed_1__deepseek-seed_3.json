@@ -1,0 +1,60 @@
+{
+ "key": "c311c2305c9d0f0df976d97ead1ced09103cd0d81588111272f0b8362cd86110",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all six sentences with similar partial renderings. They differ mainly in the Annex IV rule (B negates the SME exception in must_contain, A does not) and in how fully each captures the Commission's duty to establish the form and the \\\"before placing on market\\\" condition.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules cover all six sentences with similar partial renderings. They differ mainly in the Annex IV rule (B negates the SME exception in must_contain, A does not) and in how fully each captures the Commission's duty to establish the form and the \"before placing on market\" condition.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_1"
+ }
+}

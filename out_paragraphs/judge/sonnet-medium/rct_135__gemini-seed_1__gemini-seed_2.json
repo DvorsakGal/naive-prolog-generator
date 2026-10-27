@@ -1,0 +1,30 @@
+{
+ "key": "7a849067e3b77a8231b1d012e8059e6012900a56ec0e320ba921bdcfe9946ce2",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the without-prejudice clause and the Commission's permission to encourage and facilitate Union-level codes. B also models detection and labelling, value chain cooperation, and authenticity checks, while A's objective is just a tautology on the code; the two also differ in how the objective is structured.\",\n  \"overall_alt\": \"none\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the without-prejudice clause and the Commission's permission to encourage and facilitate Union-level codes. B also models detection and labelling, value chain cooperation, and authenticity checks, while A's objective is just a tautology on the code; the two also differ in how the object",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_1"
+ }
+}

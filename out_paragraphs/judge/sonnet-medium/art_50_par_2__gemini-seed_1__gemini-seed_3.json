@@ -1,0 +1,42 @@
+{
+ "key": "5bb5f0a0abe80af10349f9d4fe97262d66af99bf450adfb2f7dd565bb272dfd8",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same obligations and exemptions. B models the 'taking into account' factors explicitly, while A leaves them out, and A's 'no substantial alteration' exemption is negation-as-failure and so applies by default.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules encode the same obligations and exemptions. B models the 'taking into account' factors explicitly, while A leaves them out, and A's 'no substantial alteration' exemption is negation-as-failure and so applies by default.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
+ }
+}

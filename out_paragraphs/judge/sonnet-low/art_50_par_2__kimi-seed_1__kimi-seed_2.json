@@ -1,0 +1,42 @@
+{
+ "key": "0486e11d04f20f8004a0f06a0b0d87806421a3cf8ce9a647d3ee4f89bdb24b81",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same three obligations and exemptions with only detail differences: A models marking and technical solutions with more explicit arguments and input predicates, while B uses simpler, self-derived predicates that are trivially true.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the same three obligations and exemptions with only detail differences: A models marking and technical solutions with more explicit arguments and input predicates, while B uses simpler, self-derived predicates that are trivially true.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

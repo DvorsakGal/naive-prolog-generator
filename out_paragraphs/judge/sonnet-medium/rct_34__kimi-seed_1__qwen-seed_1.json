@@ -1,0 +1,48 @@
+{
+ "key": "26697c8e84e7921afa4f55d9ed678910d090db841b1f465d09597c1ddfb1d2e1",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same four sentences only partially and with similar structure; A models evidence-regard and the authorisation conditions in more detail, while B uses mostly trivial facts and stub rules (e.g. provided_otherwise_in_regulation is always true).\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the same four sentences only partially and with similar structure; A models evidence-regard and the authorisation conditions in more detail, while B uses mostly trivial facts and stub rules (e.g. provided_otherwise_in_regulation is always true).",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

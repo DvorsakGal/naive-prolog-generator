@@ -1,0 +1,48 @@
+{
+ "key": "abf39898f109111d6fc75f0f51bdefbaf2198eeaebae0887031439a8a83319dc",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with similar partial renderings; A ties responsible use to all constraints and uses a disjunction of threat/victim/perpetrator, while B requires all three, defines the situation predicates differently, and its reference-database rule ignores the database.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences with similar partial renderings; A ties responsible use to all constraints and uses a disjunction of threat/victim/perpetrator, while B requires all three, defines the situation predicates differently, and its reference-database rule ignores the database.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "f725e08c4bdab43b837cb37fa63cc6188d4eae04bdc81f82637486db16cb1bc6",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models more of the marking and technical-solution details, while B is more abstract and extends the sentence-3 exemptions to the technical-solution obligation as well.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A models more of the marking and technical-solution details, while B is more abstract and extends the sentence-3 exemptions to the technical-solution obligation as well.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

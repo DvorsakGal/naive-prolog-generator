@@ -1,0 +1,30 @@
+{
+ "key": "9f7697c740af7051962948e64499d07498e754c8925438b7c0a283211e0cbeab",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission's permission and the mandatory/applicable transparency obligations but omits the detailed implementation purpose and practical-arrangements content that B includes.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission's permission and the mandatory/applicable transparency obligations but omits the detailed implementation purpose and practical-arrangements content that B includes.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_1"
+ }
+}

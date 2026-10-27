@@ -135,17 +135,65 @@ Design:
   summary reports how often they gave the same overall label.
 - A/B order is randomised per pair with a fixed seed and recorded, so position bias
   shows as noise, not as a tilt.
-- The judge reasons at low effort. It is the only call in the study with reasoning on.
+- The judge reasons, default medium effort. It is the only call in the study with reasoning on.
+  Whether the level matters is measured first: one text at low and at medium, then the
+  judge-agreement table says how often the labels differ.
 - Pairs: within-model, the 3 seed pairs per text and model (75); across models, seed 1
   of each model, all 10 pairs per text (50). 125 calls per judge, a few dollars.
 - Every call is cached and logged like the rest of the pipeline.
 
-Outputs: `out_paragraphs/judge/<judge>/<text>__<a>__<b>.json`, `summary.json`, and
+Outputs: `out_paragraphs/judge/<judge>-<reasoning>/<text>__<a>__<b>.json`, `summary.json`, and
 `judge_agreement.json` when two judges have run.
 
 Manual review: the `review/<id>.md` files, read by a person. This is where the lead's
 "look at what they output and tell me what you find" is answered; the metrics are
 support for that, not a replacement.
+
+### Reading a judgement file
+
+Each pair produces one file, `out_paragraphs/judge/<judge>-<reasoning>/<text>__<a>__<b>.json`.
+The filename fixes the labels: `a` is the first module named, `b` the second. For
+`art_50_par_2__mistral-seed_1__qwen-seed_1.json`, a is Mistral and b is Qwen, always.
+
+Before building the prompt the script flips a coin (seeded, so reproducible). Heads: the
+judge is shown a as "Module A" and b as "Module B". Tails: the other way round. This is
+position-bias control. If the judge favours whatever it reads first, that favour lands on
+both models equally often instead of always on the one named first. The coin's result is
+stored as `swapped`.
+
+That creates two labelings of the same pair, and the file resolves them like this:
+
+| field | labeling | meaning |
+|---|---|---|
+| `a`, `b` | file | the two modules, as in the filename |
+| `coverage_a`, `coverage_b` | file | judged share of sentences each module captures (full = 1, partial = 0.5) |
+| `agreement` | symmetric | share of jointly captured sentences the judge says mean the same |
+| `judgement` | file | one row per sentence; `a`/`b` in each row refer to the file's a and b |
+| `overall` | symmetric | `same`, `mostly_same` or `different` |
+| `swapped` | - | whether the judge saw them in the opposite order |
+| `judge_frame` | - | which module the judge called "A" and which "B" |
+| `note` | judge | the judge's one-sentence explanation, in ITS OWN A/B labeling |
+| `raw` | judge | the judge's verbatim answer |
+
+Everything numeric and the per-sentence rows are in the file's labeling, so they can be
+read straight off against the filename. The one exception is `note`: it is free text
+written by the judge, and its "A" and "B" cannot be safely rewritten. `judge_frame` is
+there to decode it. In the example above:
+
+```
+"swapped": true,
+"judge_frame": {"A": "qwen/seed_1", "B": "mistral/seed_1"},
+"coverage_a": 1.0,      <- Mistral
+"coverage_b": 0.5,      <- Qwen
+"note": "B models the marking obligation ... more faithfully; A's exemptions ..."
+```
+
+so the note's "B" is Mistral and its "A" is Qwen, consistent with Mistral's coverage of
+1.0. If you only use the numbers and the rows, `judge_frame` can be ignored.
+
+The first 50 files were written with the rows in the judge's labeling, which made them
+look inconsistent with the coverage numbers. They were rewritten in place into the
+file's labeling on 2026-10-23; no call was repeated.
 
 ## What would count as a finding
 

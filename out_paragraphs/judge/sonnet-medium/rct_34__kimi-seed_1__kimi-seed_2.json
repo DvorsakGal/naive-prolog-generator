@@ -1,0 +1,48 @@
+{
+ "key": "6ad49211e19d7cedff2a2f84ecef410aaa4a72434af433fe588ea15fb71a3b41",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with comparable partial fidelity; B is more detailed on limits and authorisation (e.g. ties the scope limits to evidence), while A uses simpler, partly vacuous bodies.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences with comparable partial fidelity; B is more detailed on limits and authorisation (e.g. ties the scope limits to evidence), while A uses simpler, partly vacuous bodies.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

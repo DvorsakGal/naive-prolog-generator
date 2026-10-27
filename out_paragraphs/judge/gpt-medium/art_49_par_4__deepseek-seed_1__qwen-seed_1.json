@@ -1,0 +1,60 @@
+{
+ "key": "6b355f06e786738a688792fe1572b7ce3823cd34ace52a48a9ae7b7536667fc6",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"they align on the registration-information lists, but differ on the access rule, especially the Commission condition and how the restricted sections are identified\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "they align on the registration-information lists, but differ on the access rule, especially the Commission condition and how the restricted sections are identified",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

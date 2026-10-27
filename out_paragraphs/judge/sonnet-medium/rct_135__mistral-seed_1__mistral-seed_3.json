@@ -1,0 +1,30 @@
+{
+ "key": "1f1a243c167a2b175433e2c8d9e6802066f1f72f8a40a9b92306b8e32f4e2cc9",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the Commission's permission to encourage codes of practice and their purposes in nearly the same way, but B also states the transparency obligations as mandatory and fully applicable facts, while A leaves that out of its exports, and B's may_encourage_codes_of_practice requires a commission input fact.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both model the Commission's permission to encourage codes of practice and their purposes in nearly the same way, but B also states the transparency obligations as mandatory and fully applicable facts, while A leaves that out of its exports, and B's may_encourage_codes_of_practice requires a commissi",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_1"
+ }
+}

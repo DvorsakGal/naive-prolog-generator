@@ -1,0 +1,42 @@
+{
+ "key": "54ac3ca7dd75f12c2790a71709894f142ee35058a8a3bb88a3bbd08f907e39d0",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A and B both try to cover all three sentences, but they differ throughout on who bears the obligation and on whether marking and technical properties are consequences of the duty or conditions for it.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A and B both try to cover all three sentences, but they differ throughout on who bears the obligation and on whether marking and technical properties are consequences of the duty or conditions for it.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_3"
+ }
+}

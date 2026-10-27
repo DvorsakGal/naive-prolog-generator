@@ -1,0 +1,60 @@
+{
+ "key": "9ed79db16bf36413bc81161cf1933a333347925382cda7710b8887997e4b1ed4",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "gemini/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is sentence 1, where A ties the rule to Article 49 registrations while B models the secure non-public EU-database section more directly, so they capture overlapping but not identical conditions\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "the main difference is sentence 1, where A ties the rule to Article 49 registrations while B models the secure non-public EU-database section more directly, so they capture overlapping but not identical conditions",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

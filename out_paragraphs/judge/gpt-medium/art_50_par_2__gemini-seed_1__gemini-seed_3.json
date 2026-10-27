@@ -1,0 +1,42 @@
+{
+ "key": "81d1655cbc60883e4f78d48dc863a819329588f8509e69677f441af6c669c3e9",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is that module B represents the detailed feasibility and take-into-account requirements for technical solutions in sentence 2, while module A largely collapses them to technical feasibility.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "the main difference is that module B represents the detailed feasibility and take-into-account requirements for technical solutions in sentence 2, while module A largely collapses them to technical feasibility.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
+ }
+}

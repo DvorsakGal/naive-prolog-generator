@@ -1,0 +1,60 @@
+{
+ "key": "a8c1a258effdd59f24a7166934097e50277406bf60c47ea4aef291a08255e71f",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module A mainly weakens sentence 1 by missing the explicit 'before placing on the market or putting into service' timing, while otherwise the modules mostly align with only minor detail omissions\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "module A mainly weakens sentence 1 by missing the explicit 'before placing on the market or putting into service' timing, while otherwise the modules mostly align with only minor detail omissions",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_1"
+ }
+}

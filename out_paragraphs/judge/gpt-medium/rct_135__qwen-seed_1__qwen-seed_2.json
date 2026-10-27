@@ -1,0 +1,30 @@
+{
+ "key": "f4caf4f87626ba5413f3d243deb579cf841b7ad78cd9bccaf426048a49a25325",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"B makes content and practical arrangements more explicit, while A ties supported arrangements more directly to accessibility and cooperation.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "note": "B makes content and practical arrangements more explicit, while A ties supported arrangements more directly to accessibility and cooperation.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
+ }
+}

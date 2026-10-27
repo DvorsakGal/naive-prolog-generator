@@ -1,0 +1,48 @@
+{
+ "key": "c5250ed05765cc4ad92c40859da1a90ba5cb9f48251e5a678441afa3df0ce985",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the conditions with a per-use chain, including the registration exemption and the link between the assessment and the use. B's rules are loosely linked: registration and assessment are trivially true, the exemption is missing, and the variables are unconnected.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.875,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "A models the conditions with a per-use chain, including the registration exemption and the link between the assessment and the use. B's rules are loosely linked: registration and assessment are trivially true, the exemption is missing, and the variables are unconnected.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "deepseek/seed_1"
+ }
+}

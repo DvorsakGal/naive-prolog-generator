@@ -1,0 +1,60 @@
+{
+ "key": "fae6860fdb2546ea2f3164865767bc0b5a25e116d19c9ddf58ecb78ee9bd07e0",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B ties each information item to a single Article 49 paragraph (49(4) for item d, an apparent mismatch), while A applies all items to all systems and expands point ranges; access is modelled slightly differently.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B ties each information item to a single Article 49 paragraph (49(4) for item d, an apparent mismatch), while A applies all items to all systems and expands point ranges; access is modelled slightly differently.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

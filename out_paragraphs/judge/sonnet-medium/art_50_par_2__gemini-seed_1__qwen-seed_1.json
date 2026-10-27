@@ -1,0 +1,42 @@
+{
+ "key": "8635a667947c0e9554e1e988448653283e2781c316b52b7efe69bc375ddc9c6b",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the obligation as marked_and_detectable_output without machine-readable or detectability properties, whereas B has a second rule with those properties (but its first rule is a fact-free obligation); B also treats the two non-alteration exemptions separately and applies exemptions to the provider rather than the system.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A models the obligation as marked_and_detectable_output without machine-readable or detectability properties, whereas B has a second rule with those properties (but its first rule is a fact-free obligation); B also treats the two non-alteration exemptions separately and applies exemptions to the pro",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

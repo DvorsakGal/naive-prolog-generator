@@ -1,0 +1,42 @@
+{
+ "key": "f5c959b980ee374fa7f3f818bdf4c0b8b7837ab51f37fdf9eab299c173b9e7f3",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the marking requirement (machine-readable, detectable) and the technical-solution qualities (effective, interoperable, robust, reliable, feasibility, factors) explicitly, while B omits these and only encodes the exemption-gated obligation; the exemptions are similar in both.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A models the marking requirement (machine-readable, detectable) and the technical-solution qualities (effective, interoperable, robust, reliable, feasibility, factors) explicitly, while B omits these and only encodes the exemption-gated obligation; the exemptions are similar in both.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
+ }
+}

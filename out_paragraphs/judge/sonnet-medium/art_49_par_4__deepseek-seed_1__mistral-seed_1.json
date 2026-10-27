@@ -1,0 +1,60 @@
+{
+ "key": "f3621b8102fcfe7d7457cf19a6f443c33f71d89a8ab2aa075dbc18cc05b197ae",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same registration scope, information lists and access restriction; A enumerates the individual annex points explicitly while B uses opaque atoms and ties each list to a particular Article 49 paragraph, which the text does not state.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the same registration scope, information lists and access restriction; A enumerates the individual annex points explicitly while B uses opaque atoms and ties each list to a particular Article 49 paragraph, which the text does not state.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

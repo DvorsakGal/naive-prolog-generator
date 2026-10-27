@@ -1,0 +1,60 @@
+{
+ "key": "a7789c9b001e88258eb4f8be49fe1fa75e9be3447e33214ef5aa6bd4a9f4eb88",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover every sentence in much the same way. B adds a provider as the obligated party and splits out recipients, while A states obligations on documents and has a weaker link to the Article 11(1) form. The differences are minor.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover every sentence in much the same way. B adds a provider as the obligated party and splits out recipients, while A states obligations on documents and has a weaker link to the Article 11(1) form. The differences are minor.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_3"
+ }
+}

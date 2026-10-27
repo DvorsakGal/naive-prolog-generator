@@ -1,0 +1,30 @@
+{
+ "key": "59bc75d8b443843832adf2141bd8e9c9d8df6a3b53ec1466e0889870af0573e8",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both model the Commission's permission to encourage and facilitate Union-level codes of practice plus the transparency obligation rules. A merges encourage and facilitate into one predicate and adds objective predicates about detection and labelling; B splits encourage and facilitate and makes its objective trivial.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both model the Commission's permission to encourage and facilitate Union-level codes of practice plus the transparency obligation rules. A merges encourage and facilitate into one predicate and adds objective predicates about detection and labelling; B splits encourage and facilitate and makes its o",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

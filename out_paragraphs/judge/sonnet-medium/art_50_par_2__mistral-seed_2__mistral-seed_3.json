@@ -1,0 +1,42 @@
+{
+ "key": "ddc91e9b077d93581bdc735893e76a58c9e834f3bee90cbbb19a51e65a4b1050",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"A wires the exemptions into the marking obligation via exempt_from_marking, while B defines the exemptions separately and never links them to must_mark_output (obligation_applies is not used), and B also adds stub predicates for the quality properties.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "A wires the exemptions into the marking obligation via exempt_from_marking, while B defines the exemptions separately and never links them to must_mark_output (obligation_applies is not used), and B also adds stub predicates for the quality properties.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

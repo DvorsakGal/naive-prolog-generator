@@ -1,0 +1,42 @@
+{
+ "key": "9d026ff29a3c9d9b73749e7169dc46d860542533d041bb8c39b0b8a88f54b0ae",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the exemptions the same way; they differ in how marking and technical-solution properties are modelled (A takes the provider as the subject of the exemption and the output as the object, B uses the system and wraps outputs in terms, and the two put the feasibility and consideration conditions in different places).\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "Both capture the exemptions the same way; they differ in how marking and technical-solution properties are modelled (A takes the provider as the subject of the exemption and the output as the object, B uses the system and wraps outputs in terms, and the two put the feasibility and consideration cond",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_3"
+ }
+}

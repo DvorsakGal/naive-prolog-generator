@@ -1,0 +1,42 @@
+{
+ "key": "5a02b20840821d58bb986b763f9a2abb6130a13162a6f77f93d45a55da5d05b0",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"The exemptions in sentence 3 match; for sentences 1 and 2, A derives the marking and solution properties from the obligation, while B makes them input facts or conditions and adds a second must_mark_output clause that is weakly connected to the text.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "The exemptions in sentence 3 match; for sentences 1 and 2, A derives the marking and solution properties from the obligation, while B makes them input facts or conditions and adds a second must_mark_output clause that is weakly connected to the text.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "key": "19a5696b3d527643dedb069230c69fdefc0ccceae693983191b592d06e219245",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B models the sentences more faithfully (explicit minimum-contents rule, SME option and form-use condition), while A adds odd conditions such as contents required only when simplification is not allowed, and its drawing-up rule lacks the before-timing.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Module B models the sentences more faithfully (explicit minimum-contents rule, SME option and form-use condition), while A adds odd conditions such as contents required only when simplification is not allowed, and its drawing-up rule lacks the before-timing.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

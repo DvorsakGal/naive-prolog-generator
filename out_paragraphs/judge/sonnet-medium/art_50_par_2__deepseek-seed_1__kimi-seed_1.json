@@ -1,0 +1,42 @@
+{
+ "key": "f02377c1996ca43a802658d16a5abd8646c84887565432a91123d126a03a5d59",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A states the marking and detectability requirements explicitly as body conditions, while B only derives them trivially from the obligation; both model the exemptions with some flaws, and B lists the feasibility factors without real content.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A states the marking and detectability requirements explicitly as body conditions, while B only derives them trivially from the obligation; both model the exemptions with some flaws, and B lists the feasibility factors without real content.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

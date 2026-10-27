@@ -1,0 +1,60 @@
+{
+ "key": "f5d417f9c4a4ae9e3a0579e848320a0f7756cc8b57291627f4335491f6242b68",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_2",
+ "b": "deepseek/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same six provisions overall, but A is weaker on timing and some conditions while B often generalises or omits recipients and the specific Article 11(1) form link.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same six provisions overall, but A is weaker on timing and some conditions while B often generalises or omits recipients and the specific Article 11(1) form link.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_3"
+ }
+}

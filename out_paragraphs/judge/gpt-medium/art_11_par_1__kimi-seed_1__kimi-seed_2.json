@@ -1,0 +1,60 @@
+{
+ "key": "7503a635f0a0351f2c624834f148869a40868356636ddeb3fae6612944939c44",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Module A often states purposes as descriptive facts while module B more explicitly encodes obligations, most clearly for sentence 2.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Module A often states purposes as descriptive facts while module B more explicitly encodes obligations, most clearly for sentence 2.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

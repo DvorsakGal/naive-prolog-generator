@@ -1,0 +1,48 @@
+{
+ "key": "a3d6a9337c0fb1da259f0778f7a0d5d19f1d8171957c81ad4f63bdbaf242fdc9",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules give similar rough, partial encodings of each sentence; they differ in detail, e.g. A models the registration exemption and takes the use case as a parameter in the reference-database predicate, while B ties the elements to listed situations and omits the exemption.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules give similar rough, partial encodings of each sentence; they differ in detail, e.g. A models the registration exemption and takes the use case as a parameter in the reference-database predicate, while B ties the elements to listed situations and omits the exemption.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_1"
+ }
+}

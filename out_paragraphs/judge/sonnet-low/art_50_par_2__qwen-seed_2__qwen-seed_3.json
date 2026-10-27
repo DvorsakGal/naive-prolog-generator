@@ -1,0 +1,42 @@
+{
+ "key": "60e142004285976508abf24ae79082a0a3b21edb25c9fce612b33683ee7bcebd",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules share the same structure and the same gaps; A separately models AI systems and general-purpose AI systems and has a marking rule over outputs, while B ties everything to the provider and derives the format and detectability predicates circularly from the obligation.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules share the same structure and the same gaps; A separately models AI systems and general-purpose AI systems and has a marking rule over outputs, while B ties everything to the provider and derives the format and detectability predicates circularly from the obligation.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
+ }
+}

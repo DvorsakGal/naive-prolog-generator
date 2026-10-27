@@ -1,0 +1,42 @@
+{
+ "key": "a21a9c90c386a39c084c20abfbc4d07ca808c8593ba00c133238dffb82df799e",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 differs: A's exemption for 'does not substantially alter' is wrongly encoded (negation as failure on a self-recursive predicate), while B encodes it directly; A also restricts content types and B adds a separate required_marking predicate.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Sentence 3 differs: A's exemption for 'does not substantially alter' is wrongly encoded (negation as failure on a self-recursive predicate), while B encodes it directly; A also restricts content types and B adds a separate required_marking predicate.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

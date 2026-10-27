@@ -1,0 +1,42 @@
+{
+ "key": "ea24d82777ed4a0bf9f28f7857bf8bfe35e04695a562bc89bafaefe1d1905da2",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"The exemptions in sentence 3 are modelled the same way; for sentences 1 and 2 they differ in structure: A treats marking as a provider-output relation with a separate rule, B uses system and format objects and derives the properties effective, robust and so on from feasibility.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "The exemptions in sentence 3 are modelled the same way; for sentences 1 and 2 they differ in structure: A treats marking as a provider-output relation with a separate rule, B uses system and format objects and derives the properties effective, robust and so on from feasibility.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_3"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "key": "e66454cb0b19dfe93c415310e18061cc592aedde6b239a690fde340436725a8f",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same four sentences only partially; B models the authority and the registered database more explicitly and A is more schematic, with trivial rules for the strictly-necessary and evidence predicates.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules capture the same four sentences only partially; B models the authority and the registered database more explicitly and A is more schematic, with trivial rules for the strictly-necessary and evidence predicates.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

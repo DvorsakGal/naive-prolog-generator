@@ -1,0 +1,42 @@
+{
+ "key": "028167fb7e9311065061b45246e3a72e3f4b11c560e72bd65e7ace17c15731bd",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A often places generation and exemption conditions on providers, while B places them on systems and structures the technical-solution obligation differently.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "different",
+ "note": "A often places generation and exemption conditions on providers, while B places them on systems and structures the technical-solution obligation differently.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_3"
+ }
+}

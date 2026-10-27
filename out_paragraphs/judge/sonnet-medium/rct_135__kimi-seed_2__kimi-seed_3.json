@@ -1,0 +1,30 @@
+{
+ "key": "dfc29ff5130a7a429c127361dbc0a4152123a0179bed0a2599645c3017e5eb81",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "kimi/seed_2",
+ "b": "kimi/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice, the detection and labelling purpose, and the practical arrangements. A models the actor and content relations more closely, while B models the arrangements as a single supports_practical_arrangements predicate and ties the codes to the Union level.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate codes of practice, the detection and labelling purpose, and the practical arrangements. A models the actor and content relations more closely, while B models the arrangements as a single supports_practical_arrangements predicate an",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_3"
+ }
+}

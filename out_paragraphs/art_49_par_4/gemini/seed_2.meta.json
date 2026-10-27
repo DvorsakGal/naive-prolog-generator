@@ -1,0 +1,13 @@
+{
+ "key": "0d90da2f4505094b5249bcb2779940251a5a95b19b4ba7598f30c989eaf4c530",
+ "model": "google/gemini-3.8-flash",
+ "provider": "openrouter",
+ "reasoning": "minimal",
+ "seed": 2,
+ "cached": false,
+ "prompt_tokens": 1635,
+ "completion_tokens": 1447,
+ "wall_s": 15.44,
+ "truncated": false,
+ "chars_out": 4740
+}

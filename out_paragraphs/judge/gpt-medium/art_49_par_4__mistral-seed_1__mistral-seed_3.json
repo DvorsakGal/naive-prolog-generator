@@ -1,0 +1,60 @@
+{
+ "key": "afc155b0ba3c36be93149dbe4f00d37179b5c62ef263b77f1eaba0f891d90bb8",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A leaves the applicability of items (a) to (d) abstract, while B ties them to specific Article 49 registrations and even places item (d) under 49(4), so they disagree on the conditions for most captured sentences.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.167,
+ "overall": "different",
+ "note": "A leaves the applicability of items (a) to (d) abstract, while B ties them to specific Article 49 registrations and even places item (d) under 49(4), so they disagree on the conditions for most captured sentences.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_1"
+ }
+}

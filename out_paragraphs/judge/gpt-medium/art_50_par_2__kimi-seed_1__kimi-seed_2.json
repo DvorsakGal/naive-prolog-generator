@@ -1,0 +1,42 @@
+{
+ "key": "2874b60e0e351538f699e61fade0f40a548daf6678d453d068462b6886ed716d",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the marking duty and the exemptions, but they differ materially on the technical-solution sentence and on whether the non-alteration exemption requires both input and semantics to be unchanged or allows either.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "Both modules cover the marking duty and the exemptions, but they differ materially on the technical-solution sentence and on whether the non-alteration exemption requires both input and semantics to be unchanged or allows either.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

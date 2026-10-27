@@ -1,0 +1,42 @@
+{
+ "key": "8c0561af9e17347f7b7d644e0e865ad3fc760c82d0b67cc1352e3844f203ebaf",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"module A encodes most of the substantive conditions and qualities while module B often states only a bare obligation or exemption structure, so they differ in content on all three sentences\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "module A encodes most of the substantive conditions and qualities while module B often states only a bare obligation or exemption structure, so they differ in content on all three sentences",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
+ }
+}

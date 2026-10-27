@@ -1,0 +1,48 @@
+{
+ "key": "f56a8673462a3d5f0f865d86a5e6f7943cb83ce0623a49b00e12d149a98e4161",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A includes an evidence-or-indications condition in sentence 2 and makes authorisation depend on its fuller permitted-use conditions in sentence 3, while B omits the evidence condition and uses different, weaker preconditions for authorisation.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "A includes an evidence-or-indications condition in sentence 2 and makes authorisation depend on its fuller permitted-use conditions in sentence 3, while B omits the evidence condition and uses different, weaker preconditions for authorisation.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

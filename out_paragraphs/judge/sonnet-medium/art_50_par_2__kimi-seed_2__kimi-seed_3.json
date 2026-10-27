@@ -1,0 +1,42 @@
+{
+ "key": "c81098202cd086c89fc794d9ae1f509febe84c2fa65e551e35c0e0cae34bb487",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_2",
+ "b": "kimi/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture all three sentences with similar partial coverage; B splits marking into separate obligations and its content-type and technical-solution conditions are modelled differently from A's.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules capture all three sentences with similar partial coverage; B splits marking into separate obligations and its content-type and technical-solution conditions are modelled differently from A's.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_3"
+ }
+}

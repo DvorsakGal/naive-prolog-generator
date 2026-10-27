@@ -1,0 +1,30 @@
+{
+ "key": "00b6db0959656df8412f7572cbd69021e60f302ef966ae5ce98cdbafe89e8816",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission permission and several implementation aims but omits the mandatory/full-applicability point, while B includes that point and drawing up of codes but weakens or omits parts such as the artificially generated or manipulated content focus and the public-distinguish detail.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission permission and several implementation aims but omits the mandatory/full-applicability point, while B includes that point and drawing up of codes but weakens or omits parts such as the artificially generated or manipulated content focus and the public-distinguish detail.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

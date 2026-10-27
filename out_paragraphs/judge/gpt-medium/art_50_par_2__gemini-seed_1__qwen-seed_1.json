@@ -1,0 +1,42 @@
+{
+ "key": "42eeac5b16416c925fadcf2dfcff067be9ae0fb15ca479416225fa7214af9442",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules aim at the same three rules, but A bundles key requirements around systems while B distributes them across providers, outputs and separate predicates, so they differ on parties and conditions.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both modules aim at the same three rules, but A bundles key requirements around systems while B distributes them across providers, outputs and separate predicates, so they differ on parties and conditions.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "291f11137611225b450222468d8e0771cdb48cd00140f833f5097c95d3a59baa",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B models the technical-solution considerations (content specificities, costs, state of the art) and the exemptions more completely, while A omits the considerations and encodes the exemptions with flawed logic (e.g. the non-alteration exemption is incorrectly defined).\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B models the technical-solution considerations (content specificities, costs, state of the art) and the exemptions more completely, while A omits the considerations and encodes the exemptions with flawed logic (e.g. the non-alteration exemption is incorrectly defined).",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "3af2350e72bc4101a039e074a022223626103219fe33c2a09a4906062fdcfa4f",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_2",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A restricts the marking obligation to general-purpose AI providers and its marking rules are self-recursive, so the marking conditions are never actually required; B requires marking and detectability directly and has a more coherent exemption structure.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "A restricts the marking obligation to general-purpose AI providers and its marking rules are self-recursive, so the marking conditions are never actually required; B requires marking and detectability directly and has a more coherent exemption structure.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_2"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "key": "ca891f1475b4d918ceb35cbe59517d64e6b054bbdc3d05b442dc35ab913773a4",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"they match on the four annex-information list items, but differ on the main registration rule and the access rule, especially the Article 49/71/74 conditions and who is granted access\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "they match on the four annex-information list items, but differ on the main registration rule and the access rule, especially the Article 49/71/74 conditions and who is granted access",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_1"
+ }
+}

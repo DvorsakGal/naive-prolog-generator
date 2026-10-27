@@ -1,0 +1,12 @@
+{
+ "key": "916e28e50651ac102c8a5c08c9d62c9784a1cd94bfb4cc815dbd7999545b5069",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\" overall\":\"mostly_same\",\"note\":\"B maps each information item to a specific Article 49 paragraph, which A does not do; A also lets any high-risk system get any item and defines the high-risk system itself differently.\"}",
+ "error": "judgement not parseable"
+}

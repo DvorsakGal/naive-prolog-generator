@@ -1,0 +1,48 @@
+{
+ "key": "ad937948b5e0eaf02afc8a226cbe9f939dcb1210f9e84ab0d673ab4291269c1d",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules target the same four provisions, but they differ systematically in conditions and modality, especially on deployment/authorisation details and how use-case and situation constraints are represented\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both modules target the same four provisions, but they differ systematically in conditions and modality, especially on deployment/authorisation details and how use-case and situation constraints are represented",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_1"
+ }
+}

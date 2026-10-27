@@ -1,0 +1,42 @@
+{
+ "key": "b31721c6927eac2f7bf288ad0a99737ba3bea26edc982f2ba7bab05a2f51aad8",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A ties duties more closely to a provider's specific system and includes more of the feasibility/state-of-the-art qualifiers, while B is broader and omits several conditions and exception details.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "A ties duties more closely to a provider's specific system and includes more of the feasibility/state-of-the-art qualifiers, while B is broader and omits several conditions and exception details.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_2"
+ }
+}

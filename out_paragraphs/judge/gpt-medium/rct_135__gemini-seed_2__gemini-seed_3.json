@@ -1,0 +1,30 @@
+{
+ "key": "649f5dfe1508160f1316ba81dbd3d5d157be18121583ee598ddff036fefc911d",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the purpose of effective implementation for detection and labelling of AI-manipulated content, while B mainly captures the Commission's permission to encourage or facilitate Union-level codes without those substantive conditions or the detailed practical arrangements.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the purpose of effective implementation for detection and labelling of AI-manipulated content, while B mainly captures the Commission's permission to encourage or facilitate Union-level codes without those substantive conditions or the detailed practical arrangements.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

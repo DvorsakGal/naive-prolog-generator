@@ -1,0 +1,60 @@
+{
+ "key": "55b584c41e06417ca3b4b0908053b4f7a3cefd3bd9c24e035ae01a78294a90e5",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same sentences with similar structure. B drops the Article 11(1) form binding in sentence 6 and treats 'up to date' as bare existence of documentation. A adds a provider relation and a circular before-placement helper.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same sentences with similar structure. B drops the Article 11(1) form binding in sentence 6 and treats 'up to date' as bare existence of documentation. A adds a provider relation and a circular before-placement helper.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

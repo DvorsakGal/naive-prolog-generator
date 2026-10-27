@@ -1,0 +1,30 @@
+{
+ "key": "bcbb4b5b03bff472f1b0fa98d7790496e17d2921d58646eab91bbe8b0b4a0cf8",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially model the Commission's permission to encourage codes of practice at Union level with the same objectives, but B also represents the mandatory transparency obligations (the 'without prejudice' clause) and the Commission and Union-level conditions, while A's rules are loosely built and omit the Commission as a checked party.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both partially model the Commission's permission to encourage codes of practice at Union level with the same objectives, but B also represents the mandatory transparency obligations (the 'without prejudice' clause) and the Commission and Union-level conditions, while A's rules are loosely built and ",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

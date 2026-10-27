@@ -1,0 +1,60 @@
+{
+ "key": "219172a0d33d945ae34b398cbe7821cc8841b56fda3970106c844cdce591fc87",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules largely match on the registration scope and listed information, but they differ on access control, with A effectively allowing all national authorities rather than only those referred to in Article 74(8).\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules largely match on the registration scope and listed information, but they differ on access control, with A effectively allowing all national authorities rather than only those referred to in Article 74(8).",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

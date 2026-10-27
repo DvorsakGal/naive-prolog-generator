@@ -1,0 +1,48 @@
+{
+ "key": "7ac10a27f798f09459fefcd4c85c653ddf26727d51eda90c3c53b31080c1697e",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 is the main difference: A defines authorised_use as requiring a completed assessment and registration, while B models the assessment and registration as obligations that depend on authorised_use, which reverses the dependency.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "Sentence 3 is the main difference: A defines authorised_use as requiring a completed assessment and registration, while B models the assessment and registration as obligations that depend on authorised_use, which reverses the dependency.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
+ }
+}

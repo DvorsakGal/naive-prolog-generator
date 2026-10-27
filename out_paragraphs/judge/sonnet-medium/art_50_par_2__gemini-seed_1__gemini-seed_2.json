@@ -1,0 +1,42 @@
+{
+ "key": "2d2aec79e2f72182b06e9d5e54b7f448c9b7014b9aea9116385f8661b944c50a",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 2 differs: A models the technical-solution requirements as a rule with feasibility and consideration conditions, while B only states an unconditioned effective_technical_solution obligation; A also links providers to systems explicitly.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Sentence 2 differs: A models the technical-solution requirements as a rule with feasibility and consideration conditions, while B only states an unconditioned effective_technical_solution obligation; A also links providers to systems explicitly.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_2"
+ }
+}

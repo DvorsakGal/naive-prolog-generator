@@ -1,0 +1,30 @@
+{
+ "key": "ca84f20379b6b1761c67076a513745ee4636a33001f181c9cd85320a2fc23ed7",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the Commission's permission and the purposes of the codes of practice, but B also states the 'without prejudice' clause as facts about the transparency obligations (A omits it) and constrains its purposes with extra dynamic relations, while A asserts them unconditionally given a code.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both model the Commission's permission and the purposes of the codes of practice, but B also states the 'without prejudice' clause as facts about the transparency obligations (A omits it) and constrains its purposes with extra dynamic relations, while A asserts them unconditionally given a code.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

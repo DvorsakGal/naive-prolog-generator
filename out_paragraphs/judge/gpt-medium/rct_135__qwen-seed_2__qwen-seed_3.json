@@ -1,0 +1,30 @@
+{
+ "key": "b56842b0450e143d556f04a5dad6c7c93a250107936fe8905c7da7d6c9066d2a",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission's permission to encourage and facilitate Union-level codes of practice, but they differ in how they represent the supporting arrangements and the final link to enabling the public to distinguish AI-generated content\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both modules capture the Commission's permission to encourage and facilitate Union-level codes of practice, but they differ in how they represent the supporting arrangements and the final link to enabling the public to distinguish AI-generated content",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
+ }
+}

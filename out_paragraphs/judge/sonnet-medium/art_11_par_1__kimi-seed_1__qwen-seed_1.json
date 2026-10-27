@@ -1,0 +1,60 @@
+{
+ "key": "866fee9eb2fbd3bbf3bec7d8787e9673037431759959130fc782a398bfb8f9f9",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all six sentences with similar structure; B adds a provider role and clear-and-comprehensive condition and models the Commission's form for small and microenterprises more specifically, while A is more generic.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules cover all six sentences with similar structure; B adds a provider role and clear-and-comprehensive condition and models the Commission's form for small and microenterprises more specifically, while A is more generic.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

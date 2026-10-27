@@ -1,0 +1,48 @@
+{
+ "key": "72e293429d9cdfdbfb2cbd541dcedf18615cfa5f420e554110ee19caa79c2e00",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences. B models the elements to consider and the reference-database requirement more faithfully, while A uses derived predicates that are looser (for example, authorisation and the impact assessment are derived circularly).\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all four sentences. B models the elements to consider and the reference-database requirement more faithfully, while A uses derived predicates that are looser (for example, authorisation and the impact assessment are derived circularly).",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_2"
+ }
+}

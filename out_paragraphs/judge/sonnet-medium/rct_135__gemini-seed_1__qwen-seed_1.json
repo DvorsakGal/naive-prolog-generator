@@ -1,0 +1,30 @@
+{
+ "key": "6a5d59e0deeab40901a82b90d882e4b91910c6c9d60264669f9de6f0cac81b83",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially capture the single sentence (Commission may encourage and facilitate Union-level codes, mandatory transparency obligations, support arrangements, public distinguishing AI content) but structure the objectives differently; B ties the permission to the implementation objective and A models separate encourage/facilitate predicates.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both partially capture the single sentence (Commission may encourage and facilitate Union-level codes, mandatory transparency obligations, support arrangements, public distinguishing AI content) but structure the objectives differently; B ties the permission to the implementation objective and A mod",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

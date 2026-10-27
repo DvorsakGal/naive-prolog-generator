@@ -1,0 +1,48 @@
+{
+ "key": "d27dcbd2644aef53f074192c2e98976e3bb299a9169ef2b26bdf36dfa96b7b37",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the targeted individual, the scope types, and the completed-assessment and registered-in-database conditions as explicit predicates; B uses near-empty rules with no completed-assessment or registration condition, and with identical bodies for all the scope and regard rules.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models the targeted individual, the scope types, and the completed-assessment and registered-in-database conditions as explicit predicates; B uses near-empty rules with no completed-assessment or registration condition, and with identical bodies for all the scope and regard rules.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_3"
+ }
+}

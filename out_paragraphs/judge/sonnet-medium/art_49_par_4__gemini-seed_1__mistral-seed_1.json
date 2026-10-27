@@ -1,0 +1,60 @@
+{
+ "key": "24baa0dc02e34a7d6eccef9f0db0818deea5dd88431309f6c663b937887fe404",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B ties each information item to a specific Article 49 paragraph and requires the secure section itself, whereas A lists permitted items for any covered registration and does not express the secure non-public section; A also gets Annex VIII points for (a) as 1-5, 7, 10, which are correct.\"}",
+ "coverage_a": 0.917,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B ties each information item to a specific Article 49 paragraph and requires the secure section itself, whereas A lists permitted items for any covered registration and does not express the secure non-public section; A also gets Annex VIII points for (a) as 1-5, 7, 10, which are correct.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "key": "9e0c0e9978c8fec1858a94615d16bbf8c7c63bb3e7f34de23c92358f29d58c1e",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"The main difference is that A models sentence 3 as preconditions for authorisation, while B turns them into duties attached to an already authorised use, and B is also more specific than A about use cases in sentence 4.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "The main difference is that A models sentence 3 as preconditions for authorisation, while B turns them into duties attached to an already authorised use, and B is also more specific than A about use cases in sentence 4.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
+ }
+}

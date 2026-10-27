@@ -1,0 +1,46 @@
+{
+ "draw_seed": 42,
+ "recital_chars": [
+  600,
+  1800
+ ],
+ "paragraph_chars": [
+  500,
+  1800
+ ],
+ "pinned": [
+  "art_50/par_2"
+ ],
+ "texts": [
+  {
+   "id": "rct_135",
+   "kind": "recital",
+   "source": "recital (135)",
+   "chars": 661
+  },
+  {
+   "id": "rct_34",
+   "kind": "recital",
+   "source": "recital (34)",
+   "chars": 1389
+  },
+  {
+   "id": "art_11_par_1",
+   "kind": "paragraph",
+   "source": "celex:32024R1689/oj#art_11/par_1",
+   "chars": 1100
+  },
+  {
+   "id": "art_49_par_4",
+   "kind": "paragraph",
+   "source": "celex:32024R1689/oj#art_49/par_4",
+   "chars": 793
+  },
+  {
+   "id": "art_50_par_2",
+   "kind": "paragraph",
+   "source": "celex:32024R1689/oj#art_50/par_2",
+   "chars": 915
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "key": "7affc841bc9a8a0ebe03c073971e1dfe1186e181a2437a6f0198c66cbe8615bf",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A tends to fold the text into permission/authorisation predicates with extra prerequisites, while B states the listed duties and limits more directly but often as separate or overbroad rules.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "different",
+ "note": "A tends to fold the text into permission/authorisation predicates with extra prerequisites, while B states the listed duties and limits more directly but often as separate or overbroad rules.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

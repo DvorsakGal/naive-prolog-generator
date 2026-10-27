@@ -1,0 +1,42 @@
+{
+ "key": "204f2672daed9e3dd5f1d84f9957ff9b4b81cd0e4b99eda7cf7d5f0398e699b2",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the same obligation and exemptions; A applies them to the provider with circular property rules, while B applies them to the AI system and includes general-purpose AI systems and a state-of-the-art/standards link.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both model the same obligation and exemptions; A applies them to the provider with circular property rules, while B applies them to the AI system and includes general-purpose AI systems and a state-of-the-art/standards link.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_3"
+ }
+}

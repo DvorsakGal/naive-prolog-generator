@@ -169,6 +169,8 @@ are not in the text, do not use \\+; state the positive condition instead.
 - Quote atoms containing punctuation in single quotes; double any internal apostrophe.
 - Every clause ends with a period.
 - Prefer several short clauses over one clause with a very long body.
+
+Don't use SWI_Prolog extensions, and do not use any library modules. The output must be a simple First-Order-Logic encoding.
 """
 
 PARAGRAPH_USER = """\

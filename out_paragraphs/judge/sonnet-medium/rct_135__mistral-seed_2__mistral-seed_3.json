@@ -1,0 +1,30 @@
+{
+ "key": "2f8a1a77232b6352596adc8ddc0a2a8d8f304e513ee23d9950e14f7ef4c4d5c0",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission and the code purposes in much the same way. A adds supports/facilitates/enables input predicates, while B states the purposes as bare facts conditioned only on the code existing.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission and the code purposes in much the same way. A adds supports/facilitates/enables input predicates, while B states the purposes as bare facts conditioned only on the code existing.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

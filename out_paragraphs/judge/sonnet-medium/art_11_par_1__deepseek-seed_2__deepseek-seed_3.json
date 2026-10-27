@@ -1,0 +1,60 @@
+{
+ "key": "91fec9f142248b645fb67a7651fef96e095800aa1afa3f470f250e816e0881fc",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_2",
+ "b": "deepseek/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same six sentences with near-identical structure; B adds an entity argument and helper predicates (responsible entity, assessment information), while A lacks the 'before' ordering and mixes up variables in must_provide_information.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same six sentences with near-identical structure; B adds an entity argument and helper predicates (responsible entity, assessment information), while A lacks the 'before' ordering and mixes up variables in must_provide_information.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_3"
+ }
+}

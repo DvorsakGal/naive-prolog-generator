@@ -1,0 +1,12 @@
+{
+ "key": "0e15e767b2c46bbe16be574351b5dc56664bf232ebe19e6f8ff1b2cd57c59f94",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    ...\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission, the Union-level codes and their purposes only in part. A models the permission with Union-level and obligation conditions, while B uses flat purpose predicates and omits the Union-level condition.\"\n}\n\nCorrection: the output must contain only the one sentence entry, with no ellipsis:\n\n{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission, the Union-level codes and their purposes only in part. A models the permission with Union-level and obligation conditions, while B uses flat purpose predicates and omits the Union-level condition.\"\n}",
+ "error": "judgement not parseable"
+}

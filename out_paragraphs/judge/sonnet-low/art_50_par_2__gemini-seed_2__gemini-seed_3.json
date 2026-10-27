@@ -1,0 +1,42 @@
+{
+ "key": "5ef123948a82d83d49d2975f3a52e29f066c8a9b9c257b2eb5d8f1c720fc3b77",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_2",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 differs: A's exemption for 'does not substantially alter' is written as negation-as-failure with a circular rule, so it applies to nearly any system, while B models it as a direct fact; sentence 2 is only weakly captured by both.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Sentence 3 differs: A's exemption for 'does not substantially alter' is written as negation-as-failure with a circular rule, so it applies to nearly any system, while B models it as a direct fact; sentence 2 is only weakly captured by both.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_2"
+ }
+}

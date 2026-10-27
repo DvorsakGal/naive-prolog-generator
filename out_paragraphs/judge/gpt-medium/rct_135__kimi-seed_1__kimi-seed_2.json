@@ -1,0 +1,30 @@
+{
+ "key": "316520da992f885095b0aba8e03d21f3121de4a90e531cc9edaa0d6be1e7496b",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures more of the sentence's links to manipulated content and supporting arrangements, while B narrows the implementation purpose mainly to artificially generated content and represents the details differently.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures more of the sentence's links to manipulated content and supporting arrangements, while B narrows the implementation purpose mainly to artificially generated content and represents the details differently.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

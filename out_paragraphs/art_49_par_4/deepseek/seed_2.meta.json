@@ -1,0 +1,13 @@
+{
+ "key": "dd586ae1d555012ae4e11d959857a9b0ce34f55ff878a85e51130aff88cd0ea9",
+ "model": "deepseek/deepseek-v4-pro",
+ "provider": "openrouter",
+ "reasoning": "none",
+ "seed": 2,
+ "cached": false,
+ "prompt_tokens": 1581,
+ "completion_tokens": 975,
+ "wall_s": 9.47,
+ "truncated": false,
+ "chars_out": 3490
+}

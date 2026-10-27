@@ -1,0 +1,60 @@
+{
+ "key": "2e641378adf6c690d56eb975081f494108f8cbc1656098a7310a7a3c780edbc1",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is generally more specific about conditions and beneficiaries, while A often states the same obligations more broadly.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "B is generally more specific about conditions and beneficiaries, while A often states the same obligations more broadly.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

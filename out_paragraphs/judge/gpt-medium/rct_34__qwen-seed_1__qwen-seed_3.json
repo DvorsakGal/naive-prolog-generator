@@ -1,0 +1,48 @@
+{
+ "key": "a795d20ae6e386dcfcc7eea3ac3cda8fbf1fbcd596de12fd4ec809e48f74ba4d",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same four sentences in broad outline, but B often omits conditions or specifics that A includes and they do not match exactly on the represented conditions.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "both modules cover the same four sentences in broad outline, but B often omits conditions or specifics that A includes and they do not match exactly on the represented conditions.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_3"
+ }
+}

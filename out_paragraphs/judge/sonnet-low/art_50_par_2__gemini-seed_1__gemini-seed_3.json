@@ -1,0 +1,42 @@
+{
+ "key": "127d02579bba6254b6d30c3b154bba1290861be8552853874086a340bc4219ce",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture all three sentences with the same structure; they differ in detail, such as how the technical-solution conditions are modelled and how the 'does not substantially alter' exemption is encoded (B uses negation, so it is nearly always true).\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules capture all three sentences with the same structure; they differ in detail, such as how the technical-solution conditions are modelled and how the 'does not substantially alter' exemption is encoded (B uses negation, so it is nearly always true).",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_3"
+ }
+}

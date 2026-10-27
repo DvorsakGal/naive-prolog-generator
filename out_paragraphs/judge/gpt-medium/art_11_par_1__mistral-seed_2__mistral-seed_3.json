@@ -1,0 +1,60 @@
+{
+ "key": "59ffbd5c78d5ca4b0507ab9a35aae3f6b8a5ca31738e18ce9971a1e49fed3890",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same six provisions, but B more often omits key links or actions while A is usually closer; both are also only partial on the timing and documentation-purpose details.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same six provisions, but B more often omits key links or actions while A is usually closer; both are also only partial on the timing and documentation-purpose details.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

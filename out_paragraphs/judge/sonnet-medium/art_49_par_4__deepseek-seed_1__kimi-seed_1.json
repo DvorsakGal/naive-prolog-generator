@@ -1,0 +1,60 @@
+{
+ "key": "b6ef7ab77aa4ddec14bd84f1390bcfb5567f1bdc651a2516e3524add04a087be",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the registration obligation and information lists similarly; A adds extra applicable_for conditions and restricts access to a single section, while B ties access to Article 49(4) restricted sections and lets any national authority qualify via article_74_8.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both model the registration obligation and information lists similarly; A adds extra applicable_for conditions and restricts access to a single section, while B ties access to Article 49(4) restricted sections and lets any national authority qualify via article_74_8.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "deepseek/seed_1"
+ }
+}

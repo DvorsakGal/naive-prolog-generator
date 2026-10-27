@@ -1,0 +1,30 @@
+{
+ "key": "21f7989d54e108b3ddf3a41bb23ff3f67381818de271c9ce7586bbb2057c3916",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially capture the single sentence with the same structure (Commission may encourage and facilitate Union-level codes, supports arrangements); they differ in detail: A links the public-distinction predicate to a public fact and leaves dissemination and authenticity checks unconstrained, while B ties them to value-chain actors and to the code's purpose.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both partially capture the single sentence with the same structure (Commission may encourage and facilitate Union-level codes, supports arrangements); they differ in detail: A links the public-distinction predicate to a public fact and leaves dissemination and authenticity checks unconstrained, whil",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_1"
+ }
+}

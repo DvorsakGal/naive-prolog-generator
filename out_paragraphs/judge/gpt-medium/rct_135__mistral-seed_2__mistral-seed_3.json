@@ -1,0 +1,30 @@
+{
+ "key": "57e16423681dc3cc5c876ce44df300cd5bac563b44cf8554e26e06aa6bd78aea",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both capture the Commission's permission and the codes' general purpose, but A adds a separate mandatory-obligation fact and purpose structure while B omits the without-prejudice clause and represents the subsidiary aims more loosely.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Both capture the Commission's permission and the codes' general purpose, but A adds a separate mandatory-obligation fact and purpose structure while B omits the without-prejudice clause and represents the subsidiary aims more loosely.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

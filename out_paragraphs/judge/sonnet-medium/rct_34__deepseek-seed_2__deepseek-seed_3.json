@@ -1,0 +1,48 @@
+{
+ "key": "c0bf34142694899b34df1448bd1d19f2d6f6ce944876eb62ef7ed6237273485f",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "deepseek/seed_2",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 is structured differently: A defines must_take_into_account per situation and makes responsible_use depend on the other conditions, while B ties responsible_use to the three must_take_into_account elements; B also adds an exemption from registration, whereas A's registration check is trivial.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "Sentence 1 is structured differently: A defines must_take_into_account per situation and makes responsible_use depend on the other conditions, while B ties responsible_use to the three must_take_into_account elements; B also adds an exemption from registration, whereas A's registration check is triv",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_2"
+ }
+}

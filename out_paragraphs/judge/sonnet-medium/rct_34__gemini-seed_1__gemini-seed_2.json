@@ -1,0 +1,48 @@
+{
+ "key": "64fd989ee65e9cb47b0506f248a19f655aa5fcb64ad50299db0fbdd4ff27ca98",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B ties authorisation to permitted_use and includes the threat/victim/perpetrator evidence condition, while A keeps authorisation separate and omits that evidence element; the two also differ in how they use the situation-consideration rules.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B ties authorisation to permitted_use and includes the threat/victim/perpetrator evidence condition, while A keeps authorisation separate and omits that evidence element; the two also differ in how they use the situation-consideration rules.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_1"
+ }
+}

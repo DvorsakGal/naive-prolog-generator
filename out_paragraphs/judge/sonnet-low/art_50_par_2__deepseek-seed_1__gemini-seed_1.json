@@ -1,0 +1,42 @@
+{
+ "key": "d1e33f69ff3ade17a7b2edd53ab4fdeb1830cb430002b578929cc1d743b56c1f",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B captures the machine-readable marking and detectability requirement in sentence 1, which A reduces to an unspecified obligation term, and the two differ in how they model the feasibility and quality criteria in sentence 2.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "B captures the machine-readable marking and detectability requirement in sentence 1, which A reduces to an unspecified obligation term, and the two differ in how they model the feasibility and quality criteria in sentence 2.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "deepseek/seed_1"
+ }
+}

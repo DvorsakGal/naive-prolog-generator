@@ -34,8 +34,10 @@ DESIGN CHOICES
   folders exist.
 * A/B order is randomised per pair with a fixed seed and recorded, so position bias
   shows up as noise rather than as a systematic tilt toward A.
-* The judge may reason (default effort low). Judging is the one place in this study
-  where that is wanted, and it is the only call where reasoning is on.
+* The judge reasons, default effort medium. Judging is the one place in this study
+  where that is wanted, and it is the only call where reasoning is on. Whether the
+  level matters is itself measured: run one text at low and at medium and read the
+  judge-agreement table.
 * Every call goes through llm.Client: cached, logged, replayable.
 
 WHICH PAIRS
@@ -45,9 +47,11 @@ WHICH PAIRS
 Total 125 calls per judge.
 
 Outputs:
-    out_paragraphs/judge/<judge-label>/<text>__<a>__<b>.json     one per pair
-    out_paragraphs/judge/<judge-label>/summary.json
-    out_paragraphs/judge/judge_agreement.json                     when 2+ judges exist
+    out_paragraphs/judge/<judge>-<reasoning>/<text>__<a>__<b>.json   one per pair
+    out_paragraphs/judge/<judge>-<reasoning>/summary.json
+    out_paragraphs/judge/judge_agreement.json                          when 2+ judge runs exist
+The folder carries the reasoning level, so a low and a medium run of the same judge sit
+side by side and the agreement table compares them like two judges.
 """
 from __future__ import annotations
 
@@ -57,7 +61,7 @@ import json
 import random
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
@@ -195,6 +199,13 @@ def parse_judgement(text: str, n_sentences: int) -> dict | None:
 SCORE = {"full": 1.0, "partial": 0.5, "none": 0.0}
 
 
+def unswap_rows(rows: list[dict], swapped: bool) -> list[dict]:
+    """Rows as the judge wrote them -> rows in the file's a/b frame."""
+    if not swapped:
+        return rows
+    return [{"n": r["n"], "a": r["b"], "b": r["a"], "agree": r["agree"]} for r in rows]
+
+
 def score_pair(j: dict, n_sentences: int, swapped: bool) -> dict:
     """Coverage per side (in the ORIGINAL a/b order, undoing the swap) and agreement."""
     rows = j["sentences"]
@@ -232,7 +243,10 @@ async def run(args: argparse.Namespace) -> int:
     cfg = LLMConfig(provider=provider, model=model, reasoning=args.reasoning, temperature=0.0,
                     seed=0, concurrency=args.concurrency, num_predict=8192)
     client = Client(cfg, root / "cache")
-    jdir = root / "judge" / args.judge
+    # One folder per (judge, reasoning level), so low and medium can be compared side
+    # by side instead of overwriting each other.
+    jlabel = f"{args.judge}-{args.reasoning}"
+    jdir = root / "judge" / jlabel
     jdir.mkdir(parents=True, exist_ok=True)
     log_path = root / "run.jsonl"
 
@@ -246,7 +260,7 @@ async def run(args: argparse.Namespace) -> int:
     rng = random.Random(ORDER_SEED)
     order = {(p[1], p[2], p[3]): rng.random() < 0.5 for p in pairs}      # True = swap A/B
 
-    print(f"judge {args.judge} ({model}, reasoning {args.reasoning})  pairs {len(pairs)}  "
+    print(f"judge {jlabel} ({model}, reasoning {args.reasoning})  pairs {len(pairs)}  "
           f"({sum(p[0] == 'within' for p in pairs)} within, {sum(p[0] == 'across' for p in pairs)} across)")
     for tid in sorted(texts):
         print(f"  {tid:<14} {len(sentences[tid]):>2} sentences")
@@ -286,7 +300,13 @@ async def run(args: argparse.Namespace) -> int:
             print(f"  UNPARSED {tid} {la} ~ {lb}", file=sys.stderr)
         else:
             out.update(score_pair(j, len(sentences[tid]), swapped))
-            out["judgement"] = j["sentences"]
+            # Store the per-sentence rows in the FILE's frame (a = `la`, b = `lb`), the
+            # same frame as coverage_a/coverage_b. The judge saw the modules in the
+            # order given by `swapped`; its raw answer is kept verbatim under `raw`, and
+            # `judge_frame` says which module it called A and which B, because the free
+            # text `note` is in the judge's frame and cannot be mechanically rewritten.
+            out["judgement"] = unswap_rows(j["sentences"], swapped)
+            out["judge_frame"] = {"A": lb if swapped else la, "B": la if swapped else lb}
             progress["done"] += 1
             print(f"  {tid:<14} {kind:<6} {la:<16} ~ {lb:<16} {'cache' if rec.cached else 'call '}  "
                   f"{out['overall']:<11} agree {out['agreement'] if out['agreement'] is not None else '-':<5} "
@@ -298,7 +318,7 @@ async def run(args: argparse.Namespace) -> int:
 
     print(f"\ndone={progress['done']} already-present={progress['present']} "
           f"failed={progress['failed']} unparsed={progress['unparsed']}")
-    summarise(root, args.judge)
+    summarise(root, jlabel)
     return 1 if progress["failed"] or progress["unparsed"] else 0
 
 
@@ -361,32 +381,66 @@ def summarise(root: Path, judge: str) -> None:
     print("  agreement = share of sentences both modules capture that the judge says mean the same.")
     print("  coverage  = judged share of the text's sentences a model's module represents (full=1, partial=0.5).")
 
-    # judge agreement, if another judge has run
+    # judge-vs-judge comparison, if another judge run exists. Compared on what varies:
+    # the per-sentence cells. The overall label is reported too, with the label
+    # distribution beside it, because a judge that puts every pair in one category
+    # agrees with itself trivially.
+    label_dist = Counter(r["overall"] for r in rows)
+    print(f"\n  overall-label distribution for {judge}: {dict(label_dist)}")
     others = [d for d in (root / "judge").iterdir() if d.is_dir() and d.name != judge and (d / "summary.json").exists()]
     if others:
         agreement = {}
         for od in others:
-            same = total = 0
+            cells = cells_same = agree_cells = agree_same = labels = labels_same = 0
+            cov_diff, agr_diff = [], []
             for f in jdir.glob("*__*.json"):
                 g = od / f.name
-                if g.exists():
-                    x, y = json.loads(f.read_text()), json.loads(g.read_text())
-                    if "overall" in x and "overall" in y:
-                        total += 1
-                        same += x["overall"] == y["overall"]
-            if total:
-                agreement[f"{judge}~{od.name}"] = {"pairs": total, "same_overall_label": round(same / total, 3)}
-        (root / "judge" / "judge_agreement.json").write_text(json.dumps(agreement, indent=1), encoding="utf-8")
-        print("\n== judge agreement on the overall label ==")
-        for k, v in agreement.items():
-            print(f"  {k:<16} {v['same_overall_label']:.3f} over {v['pairs']} pairs")
+                if not g.exists():
+                    continue
+                x, y = json.loads(f.read_text()), json.loads(g.read_text())
+                if "judgement" not in x or "judgement" not in y:
+                    continue
+                labels += 1
+                labels_same += x["overall"] == y["overall"]
+                rx = {r["n"]: r for r in x["judgement"]}
+                ry = {r["n"]: r for r in y["judgement"]}
+                for n in set(rx) & set(ry):
+                    cells += 1
+                    cells_same += (rx[n]["a"], rx[n]["b"]) == (ry[n]["a"], ry[n]["b"])
+                    if rx[n]["agree"] != "na" and ry[n]["agree"] != "na":
+                        agree_cells += 1
+                        agree_same += rx[n]["agree"] == ry[n]["agree"]
+                cov_diff += [abs(x["coverage_a"] - y["coverage_a"]), abs(x["coverage_b"] - y["coverage_b"])]
+                if x["agreement"] is not None and y["agreement"] is not None:
+                    agr_diff.append(abs(x["agreement"] - y["agreement"]))
+            if labels:
+                agreement[f"{judge}~{od.name}"] = {
+                    "pairs": labels,
+                    "same_overall_label": round(labels_same / labels, 3),
+                    "same_coverage_cell": round(cells_same / cells, 3) if cells else None,
+                    "same_agree_cell": round(agree_same / agree_cells, 3) if agree_cells else None,
+                    "mean_abs_coverage_diff": mean(cov_diff),
+                    "mean_abs_agreement_diff": mean(agr_diff),
+                }
+        if agreement:
+            (root / "judge" / "judge_agreement.json").write_text(json.dumps(agreement, indent=1), encoding="utf-8")
+            print("\n== judge vs judge (same pairs, two judge runs) ==")
+            print(f"  {'runs':<28}{'pairs':>6}{'label':>8}{'cov cell':>10}{'agree cell':>12}{'|d cov|':>9}{'|d agr|':>9}")
+            for k, v in agreement.items():
+                print(f"  {k:<28}{v['pairs']:>6}{v['same_overall_label']:>8.3f}{v['same_coverage_cell']:>10.3f}"
+                      f"{v['same_agree_cell']:>12.3f}{v['mean_abs_coverage_diff']:>9.3f}{v['mean_abs_agreement_diff']:>9.3f}")
+            print("  label      = share of pairs given the same overall label (uninformative if one label dominates)")
+            print("  cov cell   = share of per-sentence (a, b) coverage cells that are identical")
+            print("  agree cell = share of per-sentence yes/no agreement cells that are identical")
+            print("  |d cov|, |d agr| = mean absolute difference in per-module coverage and per-pair agreement")
 
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="LLM judge over the paragraph-study outputs.")
     p.add_argument("--dir", default=str(OUT))
     p.add_argument("--judge", choices=sorted(JUDGES), default=DEFAULT_JUDGE)
-    p.add_argument("--reasoning", default="low")
+    p.add_argument("--reasoning", default="medium",
+                   help="judge reasoning effort; low vs medium is worth comparing on one text first")
     p.add_argument("--kind", choices=("within", "across", "both"), default="both")
     p.add_argument("--only", default="", help="comma-separated text ids")
     p.add_argument("--concurrency", type=int, default=4)
@@ -398,6 +452,6 @@ def build_parser() -> argparse.ArgumentParser:
 if __name__ == "__main__":
     a = build_parser().parse_args()
     if a.summary_only:
-        summarise(Path(a.dir), a.judge)
+        summarise(Path(a.dir), f"{a.judge}-{a.reasoning}")
         sys.exit(0)
     sys.exit(asyncio.run(run(a)))

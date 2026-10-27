@@ -1,0 +1,48 @@
+{
+ "key": "b4f642cf95a51e8c075b0f8a73f49b2c8b6434024f859c2c8d7956ee901e1eb5",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They largely align, but B represents sentence 2 more completely while A represents sentence 4 more accurately and completely.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "They largely align, but B represents sentence 2 more completely while A represents sentence 4 more accurately and completely.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_3"
+ }
+}

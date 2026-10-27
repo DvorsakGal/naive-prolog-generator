@@ -1,0 +1,42 @@
+{
+ "key": "feef375354beb981db6c299bcee43401aef23790f7582554e1996610d32b05f9",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A wires the exemptions into the marking and technical-solution obligations via a negation check, whereas B defines the exemptions and a separate obligation_applies but leaves must_mark_output and must_ensure_technical_solution independent of them.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A wires the exemptions into the marking and technical-solution obligations via a negation check, whereas B defines the exemptions and a separate obligation_applies but leaves must_mark_output and must_ensure_technical_solution independent of them.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
+ }
+}

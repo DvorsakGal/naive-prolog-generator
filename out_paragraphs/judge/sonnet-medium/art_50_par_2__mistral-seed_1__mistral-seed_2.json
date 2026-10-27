@@ -1,0 +1,42 @@
+{
+ "key": "0cf9f49b45628bbd972b8ede1c241e2a89f0bd43aaf04b6397c02599944ca870",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A states the marking and technical-solution requirements as explicit body conditions (marked, detectable, effective, etc.), while B reduces them to vacuous self-referential facts; the exemptions are similar, though A also wires them into must_mark_output.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A states the marking and technical-solution requirements as explicit body conditions (marked, detectable, effective, etc.), while B reduces them to vacuous self-referential facts; the exemptions are similar, though A also wires them into must_mark_output.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_2"
+ }
+}

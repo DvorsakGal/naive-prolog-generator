@@ -1,0 +1,42 @@
+{
+ "key": "42b0705b46ec165281dd95267f4192bbc95938490a50e89c02bbc1df41222549",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is sentence 2: module A makes the technical-solution qualities depend on feasibility and accounting factors, while module B treats those factors as properties of every obligated system rather than as qualifiers on the obligation\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "the main difference is sentence 2: module A makes the technical-solution qualities depend on feasibility and accounting factors, while module B treats those factors as properties of every obligated system rather than as qualifiers on the obligation",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

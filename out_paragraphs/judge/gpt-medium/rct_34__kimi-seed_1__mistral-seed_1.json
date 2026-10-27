@@ -1,0 +1,48 @@
+{
+ "key": "47f56cc1c8f5fc8537bc73270ee614836e968f21f47b5b1a9a66c9048c4e0a06",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is more schematic and often misses the modal or relational structure, while B models more of the stated conditions but sometimes changes the exact requirement.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "A is more schematic and often misses the modal or relational structure, while B models more of the stated conditions but sometimes changes the exact requirement.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

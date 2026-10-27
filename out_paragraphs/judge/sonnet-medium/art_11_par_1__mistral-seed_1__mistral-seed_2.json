@@ -1,0 +1,60 @@
+{
+ "key": "b073a136b83c77749232a99161eb5672ab7f232c292c35a38b3b6b403196a6a3",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules are structurally very similar. A's up-to-date rule is vacuous (it only checks that documentation exists), whereas B requires a kept_up_to_date fact. B ties the information-provision rule to chapter_3 and a single authority, and has a less explicit Commission rule.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules are structurally very similar. A's up-to-date rule is vacuous (it only checks that documentation exists), whereas B requires a kept_up_to_date fact. B ties the information-provision rule to chapter_3 and a single authority, and has a less explicit Commission rule.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

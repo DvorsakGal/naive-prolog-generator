@@ -1,0 +1,30 @@
+{
+ "key": "c2bc3448107b942b5e1ddc42d8d6008c92a26056031f0068b463f60a95b27571",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A includes Commission facilitation and Union-level codes but models the downstream conditions loosely, while B omits facilitation and Union level and instead encodes the purposes more directly.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A includes Commission facilitation and Union-level codes but models the downstream conditions loosely, while B omits facilitation and Union level and instead encodes the purposes more directly.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

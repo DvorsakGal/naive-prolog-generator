@@ -1,0 +1,42 @@
+{
+ "key": "dee1f9292e4e49e9e694a3cec7e09c6d501947763ae6115dc7d07631f1034eed",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A restricts the marking obligation to general-purpose AI systems and has a self-recursive marking rule, while B states the core obligation more faithfully but folds the exemptions into a looser applicability condition.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "A restricts the marking obligation to general-purpose AI systems and has a self-recursive marking rule, while B states the core obligation more faithfully but folds the exemptions into a looser applicability condition.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_1"
+ }
+}

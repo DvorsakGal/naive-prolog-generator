@@ -1,0 +1,42 @@
+{
+ "key": "317a01a81485324feb2c79c5500d3920d598d3aafc5e5822571ff265babd35ff",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same three sentences with the same obligations and exemptions. B models the exemptions more precisely (negated substantial alteration, specific authorised purposes), while A's exemption conditions are muddled and its factor predicates are trivially derived.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same three sentences with the same obligations and exemptions. B models the exemptions more precisely (negated substantial alteration, specific authorised purposes), while A's exemption conditions are muddled and its factor predicates are trivially derived.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

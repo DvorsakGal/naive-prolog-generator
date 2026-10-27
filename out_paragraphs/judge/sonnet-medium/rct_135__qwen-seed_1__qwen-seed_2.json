@@ -1,0 +1,30 @@
+{
+ "key": "c73b5d98d64c6db6b7dd108c7818728fce1c28f31969f9e33a87a11d8b8c7aa7",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the Commission's permission to encourage and facilitate Union-level codes, with nearly identical structure; B makes practical arrangements and content explicit arguments, while A leaves them looser, and A's union_level_code_of_practice is undefined while B defines union_level.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both model the Commission's permission to encourage and facilitate Union-level codes, with nearly identical structure; B makes practical arrangements and content explicit arguments, while A leaves them looser, and A's union_level_code_of_practice is undefined while B defines union_level.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
+ }
+}

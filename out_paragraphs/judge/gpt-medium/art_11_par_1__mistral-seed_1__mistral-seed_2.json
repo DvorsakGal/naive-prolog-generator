@@ -1,0 +1,60 @@
+{
+ "key": "6775f7369240c7366fe99d30d36fe56cdf21d5cad3add4f4b26dbfa0ad6ebdbf",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is generally more specific about Annex IV and the Article 11(1) form, while module A often states the broader idea without those conditions.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "module B is generally more specific about Annex IV and the Article 11(1) form, while module A often states the broader idea without those conditions.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

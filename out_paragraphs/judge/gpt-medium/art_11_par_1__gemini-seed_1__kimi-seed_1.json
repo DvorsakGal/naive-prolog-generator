@@ -1,0 +1,60 @@
+{
+ "key": "a852424c14dcaa4a9bb3ff9a228d0d672f657e52a1b53f57f4f187eda2b5003e",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "gemini/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is more detailed but mishandles some conditions such as 'before' and 'opts', while B is more schematic and omits several specifics, especially in sentences 2 and 3.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A is more detailed but mishandles some conditions such as 'before' and 'opts', while B is more schematic and omits several specifics, especially in sentences 2 and 3.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

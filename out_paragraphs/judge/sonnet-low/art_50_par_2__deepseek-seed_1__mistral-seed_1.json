@@ -1,0 +1,42 @@
+{
+ "key": "e515cf1199581c49e6e433b3939f8648eb535bad0a977dc92e90b566a7a89d93",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B models the sentence 2 considerations (content specificities, costs, state of the art) and the exemptions more completely, while A omits those considerations and has a flawed exemption encoding.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B models the sentence 2 considerations (content specificities, costs, state of the art) and the exemptions more completely, while A omits those considerations and has a flawed exemption encoding.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

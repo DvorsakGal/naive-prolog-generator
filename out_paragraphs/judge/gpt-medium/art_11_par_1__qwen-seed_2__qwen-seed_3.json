@@ -1,0 +1,60 @@
+{
+ "key": "3e8f0d0ef1945dc7556f382f39d97491279226a3868e7955058525327a045fc4",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is generally more specific, while B omits or weakens conditions especially for the timing in sentence 1 and the form details in sentences 4 and 6.\"\n}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "A is generally more specific, while B omits or weakens conditions especially for the timing in sentence 1 and the form details in sentences 4 and 6.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "key": "0419dad8f1be234746d918ed1912af5d487402a08fd6c4552fdb176d4d9055c5",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules try to cover the same four provisions, but B often drops or reshapes conditions that A includes, especially in sentence 1, the necessity limits in sentence 2, and the per-situation requirement in sentence 4.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "Both modules try to cover the same four provisions, but B often drops or reshapes conditions that A includes, especially in sentence 1, the necessity limits in sentence 2, and the per-situation requirement in sentence 4.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
+ }
+}

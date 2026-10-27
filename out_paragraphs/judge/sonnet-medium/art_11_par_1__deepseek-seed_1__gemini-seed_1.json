@@ -1,0 +1,60 @@
+{
+ "key": "ca1bea56263cfb2a0b51b395564c9518cf45c0483340f30de1fc24dae39cee14",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all six sentences with similar structure; B adds extra conditions (placed on market as a precondition, a not-simplified condition on must_contain, circular simplified-manner logic), while A treats the obligations more directly but loses the timing and the compliance details.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both cover all six sentences with similar structure; B adds extra conditions (placed on market as a precondition, a not-simplified condition on must_contain, circular simplified-manner logic), while A treats the obligations more directly but loses the timing and the compliance details.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "deepseek/seed_1"
+ }
+}

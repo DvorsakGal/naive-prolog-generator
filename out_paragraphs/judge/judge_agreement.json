@@ -1,0 +1,18 @@
+{
+ "gpt-medium~sonnet-medium": {
+  "pairs": 122,
+  "same_overall_label": 0.525,
+  "same_coverage_cell": 0.555,
+  "same_agree_cell": 0.454,
+  "mean_abs_coverage_diff": 0.104,
+  "mean_abs_agreement_diff": 0.541
+ },
+ "gpt-medium~sonnet-low": {
+  "pairs": 25,
+  "same_overall_label": 0.6,
+  "same_coverage_cell": 0.573,
+  "same_agree_cell": 0.373,
+  "mean_abs_coverage_diff": 0.15,
+  "mean_abs_agreement_diff": 0.6
+ }
+}

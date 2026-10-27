@@ -1,0 +1,42 @@
+{
+ "key": "9e24bff72452abab2e4df7637001fe9a23af29af0ad5541651f6182793a369a7",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A models most duties and exemptions at the AI-system level and derives properties from the obligation, while B often attaches them to providers and treats sentence 2's feasibility and consideration factors differently.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A models most duties and exemptions at the AI-system level and derives properties from the obligation, while B often attaches them to providers and treats sentence 2's feasibility and consideration factors differently.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

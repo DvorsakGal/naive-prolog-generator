@@ -1,0 +1,48 @@
+{
+ "key": "ec8eedfa95623cb3bb313f6dbe9336cd92b409b7a1dcae4b4081ffb0cc5b9b1e",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture all four sentences only partially, with similar structure; they differ in how authorisation is modelled (A as a derived authorised_use predicate, B as separate obligations with the 'unless provided otherwise' exception) and in how the limits and elements are encoded.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "Both modules capture all four sentences only partially, with similar structure; they differ in how authorisation is modelled (A as a derived authorised_use predicate, B as separate obligations with the 'unless provided otherwise' exception) and in how the limits and elements are encoded.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

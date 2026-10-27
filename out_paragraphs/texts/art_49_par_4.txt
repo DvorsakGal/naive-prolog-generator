@@ -1,0 +1,6 @@
+For high-risk AI systems referred to in Annex III, points (1), (6) and (7), in the areas of law enforcement, migration, asylum and border control management, the registration referred to in Article 49(1), Article 49(2), Article 49(3) shall be in a secure non-public section of the EU database referred to in Article 71 and shall include only the following information, as applicable, referred to in:
+(a) Annex VIII, points (1) to (10), with the exception of points 6, 8 and 9;
+(b) Section B, points 1 to 5, and points 8 and 9 of Annex VIII;
+(c) Annex VIII, points (1) to (3);
+(d) Annex IX, points (1), (2), (3) and (5).
+Only the Commission and national authorities referred to in Article 74(8) shall have access to the respective restricted sections of the EU database listed in Article 49(4).

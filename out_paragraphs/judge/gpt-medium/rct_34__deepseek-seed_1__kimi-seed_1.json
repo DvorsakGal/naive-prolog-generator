@@ -1,0 +1,48 @@
+{
+ "key": "6a6c178ecfedc3dfcd7f460fc004cb322e9e1faeee2a5b53c307836870dc0489",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B encodes the sentence-specific conditions and exceptions much more explicitly, while A gives looser and often unlinked versions of the same topics.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "B encodes the sentence-specific conditions and exceptions much more explicitly, while A gives looser and often unlinked versions of the same topics.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

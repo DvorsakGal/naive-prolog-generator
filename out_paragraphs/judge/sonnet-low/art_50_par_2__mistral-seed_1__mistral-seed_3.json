@@ -1,0 +1,42 @@
+{
+ "key": "10b8b392dae30dbae2333fb47508b8e97670609eaef4d6e7124313afaa4e5077",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B encodes the sentence 2 quality criteria (effective, interoperable, robust, reliable, feasibility, cost, state of the art) as conditions while A only names a technical solution, and for sentence 1 A makes marking a duty subject to exemptions, whereas B has two clashing must_mark_output definitions that require marked/detectable in one clause.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "B encodes the sentence 2 quality criteria (effective, interoperable, robust, reliable, feasibility, cost, state of the art) as conditions while A only names a technical solution, and for sentence 1 A makes marking a duty subject to exemptions, whereas B has two clashing must_mark_output definitions ",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_1"
+ }
+}

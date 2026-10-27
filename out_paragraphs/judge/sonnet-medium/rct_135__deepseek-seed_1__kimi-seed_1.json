@@ -1,0 +1,30 @@
+{
+ "key": "9241e95ae9286e772098f3347a88a3c4bb04b4a91ccb3b666f22bc5f521c8ab6",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially capture the single sentence (the Commission may encourage and facilitate Union-level codes of practice supporting detection, labelling, cooperation and distinguishing AI content), but A ties the permission to a body of transparency obligations and objective chains, while B uses separate encourage/facilitate predicates plus mandatory/applicability facts and loosely structured practical-arrangement clauses.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both partially capture the single sentence (the Commission may encourage and facilitate Union-level codes of practice supporting detection, labelling, cooperation and distinguishing AI content), but A ties the permission to a body of transparency obligations and objective chains, while B uses separa",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

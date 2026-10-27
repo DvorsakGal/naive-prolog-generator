@@ -1,0 +1,42 @@
+{
+ "key": "64a32fdf4d8a65283289bcd786eee045fbd84dc3976526bf59a2dcddfebb6135",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"B models the content types, the machine-readable and detectable requirements, and the exemptions in more faithful detail. A's exemptions are loose and its two must_mark_output clauses do not combine the marking requirement with the exemption.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "B models the content types, the machine-readable and detectable requirements, and the exemptions in more faithful detail. A's exemptions are loose and its two must_mark_output clauses do not combine the marking requirement with the exemption.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

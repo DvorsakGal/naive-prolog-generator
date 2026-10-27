@@ -1,0 +1,48 @@
+{
+ "key": "9571a5e5e64759c7ce360d01ec010086ad7d6df2359843edaed1cebe61c94cae",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A also requires responsible_and_proportionate_use inside permitted_use, which B leaves out. A's reference-database rule ties the use case to the situation, and B's rule only requires that some situation exists.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A also requires responsible_and_proportionate_use inside permitted_use, which B leaves out. A's reference-database rule ties the use case to the situation, and B's rule only requires that some situation exists.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_3"
+ }
+}

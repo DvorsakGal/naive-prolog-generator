@@ -1,0 +1,48 @@
+{
+ "key": "36d3907b25e24dd20ae34b8440067353e46d9bf181e86fa2145183338e6fd928",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the evidence about threats, victims and perpetrator explicitly, whereas B collapses it into one generic evidence predicate. A also requires narrowly_defined_situation, while B does not. Otherwise the two have the same structure.\"}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models the evidence about threats, victims and perpetrator explicitly, whereas B collapses it into one generic evidence predicate. A also requires narrowly_defined_situation, while B does not. Otherwise the two have the same structure.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_3"
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "judge": "sonnet-medium",
+ "pairs": 122,
+ "within_by_model": {
+  "deepseek": {
+   "n": 15,
+   "agreement": 0.728,
+   "same": 0,
+   "mostly_same": 15,
+   "different": 0
+  },
+  "gemini": {
+   "n": 15,
+   "agreement": 0.831,
+   "same": 0,
+   "mostly_same": 15,
+   "different": 0
+  },
+  "kimi": {
+   "n": 15,
+   "agreement": 0.9,
+   "same": 0,
+   "mostly_same": 15,
+   "different": 0
+  },
+  "mistral": {
+   "n": 14,
+   "agreement": 0.792,
+   "same": 0,
+   "mostly_same": 14,
+   "different": 0
+  },
+  "qwen": {
+   "n": 15,
+   "agreement": 0.844,
+   "same": 0,
+   "mostly_same": 15,
+   "different": 0
+  }
+ },
+ "across_by_text": {
+  "art_11_par_1": {
+   "n": 10,
+   "agreement": 0.917,
+   "same": 0,
+   "mostly_same": 10,
+   "different": 0
+  },
+  "art_49_par_4": {
+   "n": 10,
+   "agreement": 0.95,
+   "same": 0,
+   "mostly_same": 10,
+   "different": 0
+  },
+  "art_50_par_2": {
+   "n": 10,
+   "agreement": 0.867,
+   "same": 0,
+   "mostly_same": 10,
+   "different": 0
+  },
+  "rct_135": {
+   "n": 8,
+   "agreement": 0.25,
+   "same": 0,
+   "mostly_same": 7,
+   "different": 1
+  },
+  "rct_34": {
+   "n": 10,
+   "agreement": 0.9,
+   "same": 0,
+   "mostly_same": 10,
+   "different": 0
+  }
+ },
+ "across_by_model_pair": {
+  "deepseek~gemini": {
+   "n": 5,
+   "agreement": 0.683,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "deepseek~kimi": {
+   "n": 5,
+   "agreement": 0.683,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "deepseek~mistral": {
+   "n": 4,
+   "agreement": 1.0,
+   "same": 0,
+   "mostly_same": 4,
+   "different": 0
+  },
+  "deepseek~qwen": {
+   "n": 5,
+   "agreement": 0.75,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "gemini~kimi": {
+   "n": 5,
+   "agreement": 0.767,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "gemini~mistral": {
+   "n": 5,
+   "agreement": 0.8,
+   "same": 0,
+   "mostly_same": 4,
+   "different": 1
+  },
+  "gemini~qwen": {
+   "n": 5,
+   "agreement": 0.817,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "kimi~mistral": {
+   "n": 5,
+   "agreement": 0.767,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "kimi~qwen": {
+   "n": 5,
+   "agreement": 0.8,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "mistral~qwen": {
+   "n": 4,
+   "agreement": 1.0,
+   "same": 0,
+   "mostly_same": 4,
+   "different": 0
+  }
+ },
+ "coverage_by_model": {
+  "deepseek": 0.585,
+  "gemini": 0.733,
+  "kimi": 0.548,
+  "mistral": 0.643,
+  "qwen": 0.557
+ },
+ "across_all": {
+  "n": 48,
+  "agreement": 0.799,
+  "same": 0,
+  "mostly_same": 47,
+  "different": 1
+ },
+ "within_all": {
+  "n": 74,
+  "agreement": 0.819,
+  "same": 0,
+  "mostly_same": 74,
+  "different": 0
+ }
+}

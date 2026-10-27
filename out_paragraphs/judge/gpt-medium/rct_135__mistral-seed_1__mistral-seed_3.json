@@ -1,0 +1,30 @@
+{
+ "key": "eb017b686f32861f7cd81e6f08d314495fb4610b8ba9b409399d0930a486279f",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B captures the transparency-obligations background clause while A does not, and both only partially represent the main permission by omitting or weakening parts such as facilitation and some conditions.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "B captures the transparency-obligations background clause while A does not, and both only partially represent the main permission by omitting or weakening parts such as facilitation and some conditions.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_1"
+ }
+}

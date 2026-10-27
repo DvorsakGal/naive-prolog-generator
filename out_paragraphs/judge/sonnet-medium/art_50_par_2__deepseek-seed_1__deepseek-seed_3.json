@@ -1,0 +1,42 @@
+{
+ "key": "231a9501718492c3346e5d49996f50bab5e1af7262ff7d72f9010d376ac45fbb",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B states the marking and detectability obligation in one rule, while A restricts it to general-purpose systems and has self-recursive marking rules; the two also differ in how they model technical feasibility and the exemptions.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "B states the marking and detectability obligation in one rule, while A restricts it to general-purpose systems and has self-recursive marking rules; the two also differ in how they model technical feasibility and the exemptions.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_1"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "key": "6f29346c8ef8e0c3b2d010b420ca3b8a5afb2ca7aa0e4ac34e67d864a19fa5f1",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module A states the information sets and access rules only in broad terms, without the article-specific applicability or exclusivity, while module B maps most items to specific Article 49 registrations but misstates the Annex IX item.\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Module A states the information sets and access rules only in broad terms, without the article-specific applicability or exclusivity, while module B maps most items to specific Article 49 registrations but misstates the Annex IX item.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

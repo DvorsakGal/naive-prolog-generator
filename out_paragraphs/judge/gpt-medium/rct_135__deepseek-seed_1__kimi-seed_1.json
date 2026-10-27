@@ -1,0 +1,30 @@
+{
+ "key": "bc8733908248c530ba8276cd6cff1ae78d4c5e8b0de263a72e506176b3e33ef8",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A ties the Commission's permission to implementation objectives and even a public duty to distinguish, while B separately states the permission and the transparency-obligation background but misses manipulated content and does not connect the pieces in the same way.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A ties the Commission's permission to implementation objectives and even a public duty to distinguish, while B separately states the permission and the transparency-obligation background but misses manipulated content and does not connect the pieces in the same way.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

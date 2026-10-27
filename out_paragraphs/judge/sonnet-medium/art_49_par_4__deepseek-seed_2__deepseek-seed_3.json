@@ -1,0 +1,60 @@
+{
+ "key": "a37a4ecae370c301f9fa8d35e96090ed91a03d9950417b58074f0c6961c173b1",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_2",
+ "b": "deepseek/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the registration scope and the information lists, but B is looser (no Article 49 link, no 'only' constraint, and access given to any national authority rather than only Article 74(8) ones), whereas A models these more faithfully.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both encode the registration scope and the information lists, but B is looser (no Article 49 link, no 'only' constraint, and access given to any national authority rather than only Article 74(8) ones), whereas A models these more faithfully.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_3"
+ }
+}

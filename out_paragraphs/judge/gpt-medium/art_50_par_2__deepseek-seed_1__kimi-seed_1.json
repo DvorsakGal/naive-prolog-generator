@@ -1,0 +1,42 @@
+{
+ "key": "c36b9a682d526d7604a8f5d7e90532fc5bee82ddc776f89c86dec034ae42dbd2",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A ties duties and exemptions to provider-system relations but omits several qualifications, while B includes more of the listed factors and the semantics exemption yet weakens the provider-to-system linkage and narrows the marking/detectability requirement.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A ties duties and exemptions to provider-system relations but omits several qualifications, while B includes more of the listed factors and the semantics exemption yet weakens the provider-to-system linkage and narrows the marking/detectability requirement.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

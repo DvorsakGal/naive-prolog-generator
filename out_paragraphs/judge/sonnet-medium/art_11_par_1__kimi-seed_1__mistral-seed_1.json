@@ -1,0 +1,60 @@
+{
+ "key": "dbd749a06d2a6fd48b777599cdae3e908d21fb62a380fa6bcdb41675f3a4e7d9",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A requires drawing up when the system is already placed on the market or in service, and treats up-to-date as a separate rule with no condition, while B uses negated 'before' conditions and a separate up-to-date predicate that checks a kept_up_to_date fact. The remaining sentences are encoded similarly.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Sentence 1 differs: A requires drawing up when the system is already placed on the market or in service, and treats up-to-date as a separate rule with no condition, while B uses negated 'before' conditions and a separate up-to-date predicate that checks a kept_up_to_date fact. The remaining sentence",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

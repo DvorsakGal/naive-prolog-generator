@@ -1,0 +1,48 @@
+{
+ "key": "de75c4994fece0dd774e0cf916e73fcf7682cc6ff802060444a5a13f5340399f",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 is modelled the same way in both. They differ on the strict-necessity limit in sentence 2: B requires period, geographic and personal scope limits plus evidence, while A only checks evidence about threats, victims and perpetrator and ignores the scope limits. A's registration and impact-assessment rules also carry extra arguments and an extra database condition.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "Sentence 1 is modelled the same way in both. They differ on the strict-necessity limit in sentence 2: B requires period, geographic and personal scope limits plus evidence, while A only checks evidence about threats, victims and perpetrator and ignores the scope limits. A's registration and impact-a",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_3"
+ }
+}

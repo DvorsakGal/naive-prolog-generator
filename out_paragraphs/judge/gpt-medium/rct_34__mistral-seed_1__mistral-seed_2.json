@@ -1,0 +1,48 @@
+{
+ "key": "d102ceeabe6619d15f5e4d14a7fd3fd13b716aa1c98b90b812c738771172482f",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A often states descriptive or loosely derived conditions, while B more often uses explicit must-rules, and they diverge especially on sentence 3 where B does not encode authorisation as conditional on assessment and registration.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A often states descriptive or loosely derived conditions, while B more often uses explicit must-rules, and they diverge especially on sentence 3 where B does not encode authorisation as conditional on assessment and registration.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_2"
+ }
+}

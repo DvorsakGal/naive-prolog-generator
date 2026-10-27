@@ -1,0 +1,42 @@
+{
+ "key": "8a1eb060b1657bd3aa8cb26ece2dfbc02c76bf61f80cc8b60313680af934af91",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules capture the main marking obligation, but B represents the feasibility factors in sentence 2 more explicitly while A stays closer to the sentence 3 exemptions about input alteration and legal authorisation\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "both modules capture the main marking obligation, but B represents the feasibility factors in sentence 2 more explicitly while A stays closer to the sentence 3 exemptions about input alteration and legal authorisation",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_2"
+ }
+}

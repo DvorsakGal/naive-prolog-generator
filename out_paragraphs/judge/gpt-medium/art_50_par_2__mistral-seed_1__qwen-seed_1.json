@@ -1,0 +1,42 @@
+{
+ "key": "66f3588e1b7222647ed9e5e816bcae08e7580308b94cdcfa42fddcb71aff7be5",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models the obligation and exemptions more specifically, while B uses broader provider-level rules and omits or weakens several textual conditions.\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A models the obligation and exemptions more specifically, while B uses broader provider-level rules and omits or weakens several textual conditions.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

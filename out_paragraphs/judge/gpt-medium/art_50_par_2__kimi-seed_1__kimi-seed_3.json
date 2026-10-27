@@ -1,0 +1,42 @@
+{
+ "key": "934a45075c3cf04b364a37bbf301ba9f0ce1f3254d2bee4ef424bdb6917fbe89",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both modules cover the same three provisions, but they diverge materially on the technical-solution requirement and on the scope of the exemption for systems that do not substantially alter deployer input or its semantics.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "different",
+ "note": "Both modules cover the same three provisions, but they diverge materially on the technical-solution requirement and on the scope of the exemption for systems that do not substantially alter deployer input or its semantics.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
+ }
+}

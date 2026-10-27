@@ -1,0 +1,60 @@
+{
+ "key": "ab9eb13c0547c5b7333f3790ce6dd163381b971007e82407f019656d2b81065e",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"module B repeatedly adds or changes conditions not in the text, especially around Annex IV, simplified provision, and use of the Article 11(1) form\"\n}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 0.5,
+ "overall": "different",
+ "note": "module B repeatedly adds or changes conditions not in the text, especially around Annex IV, simplified provision, and use of the Article 11(1) form",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_1"
+ }
+}

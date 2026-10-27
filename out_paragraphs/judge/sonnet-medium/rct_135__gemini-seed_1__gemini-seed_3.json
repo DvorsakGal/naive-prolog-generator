@@ -1,0 +1,30 @@
+{
+ "key": "a778b5cac24ac76f9bdeabbfc1fd36850a5e932f76e31f0ebac3c81f131a33c2",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "gemini/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage drawing up Union-level codes and the transparency obligations' mandatory status, but B models the practical arrangements (accessibility, value chain, dissemination, authenticity) in more detail, while A's treatment is vague.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage drawing up Union-level codes and the transparency obligations' mandatory status, but B models the practical arrangements (accessibility, value chain, dissemination, authenticity) in more detail, while A's treatment is vague.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
+ }
+}

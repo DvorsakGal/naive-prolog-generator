@@ -1,0 +1,30 @@
+{
+ "key": "8500dad275579bb03522c0ef113c12869ebacc98a77d4abda76d762d462b553b",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"different\",\"note\":\"A has the Commission's permission as a bare commission(C) check and lists the code purposes as separate facts, while B ties the permission to Union-level codes with objective conditions, but both only partly capture the sentence and differ in structure and detail.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A has the Commission's permission as a bare commission(C) check and lists the code purposes as separate facts, while B ties the permission to Union-level codes with objective conditions, but both only partly capture the sentence and differ in structure and detail.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

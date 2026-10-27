@@ -1,0 +1,30 @@
+{
+ "key": "082b57238ffa41d4af368e0e5a67ef7c81f98b5dfc24bd0919708bfc6a85736e",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission both encouraging and facilitating Union-level codes but misses the manipulated-content part, while B captures the manipulated-content purpose chain but omits facilitation and the Union-level aspect.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission both encouraging and facilitating Union-level codes but misses the manipulated-content part, while B captures the manipulated-content purpose chain but omits facilitation and the Union-level aspect.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

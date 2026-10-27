@@ -1,0 +1,30 @@
+{
+ "key": "ce664490d8bb26e81d84176600d6c35ca452d29543927996e5def7296c84c10e",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially model the Commission's permission to encourage and facilitate codes of practice with the stated objectives, but A states the commission's permission explicitly and separates mandatory/applicability facts, while B merges encourage and facilitate, ignores the commission constant (variable), and adds extra rules for cooperation, authenticity and provenance.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both partially model the Commission's permission to encourage and facilitate codes of practice with the stated objectives, but A states the commission's permission explicitly and separates mandatory/applicability facts, while B merges encourage and facilitate, ignores the commission constant (variab",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_1"
+ }
+}

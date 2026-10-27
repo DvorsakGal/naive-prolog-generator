@@ -1,0 +1,30 @@
+{
+ "key": "07503d4c04bdb98078440ca67c4f5946a35901219daa8ef32c3f13c6949ecb49",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A models detection and labelling of generated and manipulated content, the public distinguishing content, and the value-chain actions as separate predicates, while B folds the practical arrangements into one predicate and omits manipulated content.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A models detection and labelling of generated and manipulated content, the public distinguishing content, and the value-chain actions as separate predicates, while B folds the practical arrangemen",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_1"
+ }
+}

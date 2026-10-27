@@ -1,0 +1,30 @@
+{
+ "key": "7ab924ea82c39b8c347b0e1ba0bd3bf20faa607732fa22eeb70e4336d76ffee9",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission\u2019s permissive role and purposes but omits the mandatory/full-applicability qualifier and turns the public-distinguishing aim into an obligation, while B separately represents the qualifier concepts and support purposes but links the parts more loosely.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission\u2019s permissive role and purposes but omits the mandatory/full-applicability qualifier and turns the public-distinguishing aim into an obligation, while B separately represents the qualifier concepts and support purposes but links the parts more loosely.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

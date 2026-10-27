@@ -1,0 +1,48 @@
+{
+ "key": "0fb47b15a2bc39be02f72ae723c095ac90d90683ef5171865cc51607d1bc3793",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same four provisions overall, but B models the sentence 3 authorization conditions more faithfully while A is looser, and they differ in how they represent the reference-database requirement.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "both modules cover the same four provisions overall, but B models the sentence 3 authorization conditions more faithfully while A is looser, and they differ in how they represent the reference-database requirement.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

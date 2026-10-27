@@ -1,0 +1,42 @@
+{
+ "key": "881f6693c53689a80dfd58d92a2ae017d3f95f302e22737781ec977772235bcf",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A's marking obligation never requires machine-readable marking or detectability and its exemptions are one-place flags, whereas Module B models the machine-readable and detectable conditions and the exemptions in more detail, though its marking rule is inconsistent (a second clause lacks the marking conditions).\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Module A's marking obligation never requires machine-readable marking or detectability and its exemptions are one-place flags, whereas Module B models the machine-readable and detectable conditions and the exemptions in more detail, though its marking rule is inconsistent (a second clause lacks the ",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "1241458149501a081cd4af7c23401f45b0ea2dadcc1f692b62a63540e4589c1a",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the content types, the marking obligation and the exemptions in more detail, including the deployer input data and the specific criminal-offence purposes. B is coarser: its marking rules are split and it treats the exemption conditions as flat, provider-level predicates.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models the content types, the marking obligation and the exemptions in more detail, including the deployer input data and the specific criminal-offence purposes. B is coarser: its marking rules are split and it treats the exemption conditions as flat, provider-level predicates.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

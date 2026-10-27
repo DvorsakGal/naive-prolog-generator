@@ -1,0 +1,60 @@
+{
+ "key": "ac7b489b3f9b47f0ee34fa165316a36b7f62c8c0cc1dadebfccf661a91b65f06",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "deepseek/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A treats the Annex VIII/IX items as applicability-conditioned information blocks, while B makes them generally applicable, and B also wrongly applies the Article 74(8) condition to the Commission.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A treats the Annex VIII/IX items as applicability-conditioned information blocks, while B makes them generally applicable, and B also wrongly applies the Article 74(8) condition to the Commission.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "deepseek/seed_1"
+ }
+}

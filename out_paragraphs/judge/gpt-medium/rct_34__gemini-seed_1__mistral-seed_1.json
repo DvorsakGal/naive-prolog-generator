@@ -1,0 +1,48 @@
+{
+ "key": "092a9b9b9b004780ebeb2bfe43edbf2498da3bd3114983d684008029833c2fbf",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B folds earlier responsibility and use-limit conditions into permission and authorisation, while A weakens the authorisation clause and models the reference-database requirement differently.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "different",
+ "note": "B folds earlier responsibility and use-limit conditions into permission and authorisation, while A weakens the authorisation clause and models the reference-database requirement differently.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

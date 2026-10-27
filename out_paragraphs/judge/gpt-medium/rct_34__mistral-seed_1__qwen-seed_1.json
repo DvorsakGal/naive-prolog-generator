@@ -1,0 +1,48 @@
+{
+ "key": "3e488263753e05ea3fdc6f683c6b11adb07c5aa25df6a74fe92eb67a3c4ad428",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both modules touch all four sentences, but they differ on key modality and structure: A misses the authorization-only-if relation in sentence 3, while B weakens or recasts several obligations and changes the subject of sentence 4.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Both modules touch all four sentences, but they differ on key modality and structure: A misses the authorization-only-if relation in sentence 3, while B weakens or recasts several obligations and changes the subject of sentence 4.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

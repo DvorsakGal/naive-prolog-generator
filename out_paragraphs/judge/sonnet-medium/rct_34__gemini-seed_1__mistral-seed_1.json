@@ -1,0 +1,48 @@
+{
+ "key": "f7a4bb665d59dd2843a337c771e7b5697e7ffd059c2795943f403da4a17c3976",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences, but A's rules are loose and partly circular (e.g. the impact assessment is derived from the authority's existence, and the evidence predicates are trivial), while B models the conditions more cleanly with a registered-or-exempt rule.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all four sentences, but A's rules are loose and partly circular (e.g. the impact assessment is derived from the authority's existence, and the evidence predicates are trivial), while B models the conditions more cleanly with a registered-or-exempt rule.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

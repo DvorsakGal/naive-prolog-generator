@@ -1,0 +1,30 @@
+{
+ "key": "3192880cdc081a165f31ed32e010fdfc28cd881ce67ab8774c59968296464c0e",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module B includes the mandatory and fully applicable transparency-obligations clause that Module A omits, and both modules only partially capture the remaining purpose and support details.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Module B includes the mandatory and fully applicable transparency-obligations clause that Module A omits, and both modules only partially capture the remaining purpose and support details.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

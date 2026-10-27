@@ -1,0 +1,48 @@
+{
+ "key": "7034cb5be89c0843b30836e8a014e5e35ce86ddc8b8b1369f79c81de35bab488",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with similar partial structure; B is more detailed on limits tied to evidence and uses a broader must_be_authorised, while A encodes the strictly-necessary limits and the regard-to evidence as separate predicates with trivial bodies.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences with similar partial structure; B is more detailed on limits tied to evidence and uses a broader must_be_authorised, while A encodes the strictly-necessary limits and the regard-to evidence as separate predicates with trivial bodies.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_1"
+ }
+}

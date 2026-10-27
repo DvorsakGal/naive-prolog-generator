@@ -1,0 +1,42 @@
+{
+ "key": "47ef2074372e11971f384442250dff1a6aa4ded90c97cdf66aaedbb053c2e79a",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "kimi/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same three sentences with similar structure; they differ in detail, such as how the exemption for unaltered input is modelled (A lacks proper negation and treats it as positive), and how technical-solution factors are encoded.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the same three sentences with similar structure; they differ in detail, such as how the exemption for unaltered input is modelled (A lacks proper negation and treats it as positive), and how technical-solution factors are encoded.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
+ }
+}

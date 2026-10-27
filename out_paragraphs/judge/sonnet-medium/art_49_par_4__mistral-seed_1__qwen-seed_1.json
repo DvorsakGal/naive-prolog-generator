@@ -1,0 +1,60 @@
+{
+ "key": "d43c0ccda2eab0692da0b17523db66cb7c5214f1d958ac3141be2dc2fa3f49cb",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "mistral/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the information as queries over numbered annex points, but its point list for (a) includes 7 and 10 and its Section B and (c) rules are not tied to Articles 49(1)-(3). B uses opaque placeholder atoms and ties items (a)-(c) to Articles 49(1)-(3), but maps (d) to Article 49(4), which the text does not state, and restricts access to the Article 49(4)-listed sections.\"}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models the information as queries over numbered annex points, but its point list for (a) includes 7 and 10 and its Section B and (c) rules are not tied to Articles 49(1)-(3). B uses opaque placeholder atoms and ties items (a)-(c) to Articles 49(1)-(3), but maps (d) to Article 49(4), which the text",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

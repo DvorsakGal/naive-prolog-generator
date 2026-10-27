@@ -1,0 +1,30 @@
+{
+ "key": "dd4831b3a06edd0bd41b597a1114a082b06c717aed799e92afdf790bb5ad9caf",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "qwen/seed_2",
+ "b": "qwen/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes with the same sub-purposes, but A states mandatory/applicable facts as constants and defines the public-distinction purpose over the public, whereas B ties these to codes and obligations.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes with the same sub-purposes, but A states mandatory/applicable facts as constants and defines the public-distinction purpose over the public, whereas B ties these to codes and obligations.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
+ }
+}

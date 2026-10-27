@@ -1,0 +1,42 @@
+{
+ "key": "77061de376bb1fdb9784715750cd81b21335407d97f7e4c077a294ae2dcdbcf1",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "mistral/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B checks marking and detectability and each technical-solution quality as conditions in its rules, while A only derives them trivially from the obligation. B also adds a second must_mark_output clause with exemptions, whereas A keeps its exemption logic in a separate obligation_applies predicate.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B checks marking and detectability and each technical-solution quality as conditions in its rules, while A only derives them trivially from the obligation. B also adds a second must_mark_output clause with exemptions, whereas A keeps its exemption logic in a separate obligation_applies predicate.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
+ }
+}

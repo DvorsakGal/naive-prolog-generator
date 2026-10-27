@@ -1,0 +1,30 @@
+{
+ "key": "3dabdccaeac9571013f2c8662f69b8bd765b829ea37c3e93d47a109e38f50f3b",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "deepseek/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially model the Commission's permission to encourage and facilitate codes of practice with objectives; A splits encourage/facilitate and models the mandatory/applicability clause, while B merges them and chains the objectives together with different structure and added conditions.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both partially model the Commission's permission to encourage and facilitate codes of practice with objectives; A splits encourage/facilitate and models the mandatory/applicability clause, while B merges them and chains the objectives together with different structure and added conditions.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_1"
+ }
+}

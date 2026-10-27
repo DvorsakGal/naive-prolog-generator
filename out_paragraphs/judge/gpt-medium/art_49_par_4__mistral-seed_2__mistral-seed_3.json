@@ -1,0 +1,60 @@
+{
+ "key": "98286f9a91a902d041aacee24972b472287771c45304a3ba9c830ea2ed785a13",
+ "kind": "within",
+ "text": "art_49_par_4",
+ "a": "mistral/seed_2",
+ "b": "mistral/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A treats all four information categories as applying to every covered high-risk AI system, while B makes each category separately applicable.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.167,
+ "overall": "different",
+ "note": "A treats all four information categories as applying to every covered high-risk AI system, while B makes each category separately applicable.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_3"
+ }
+}

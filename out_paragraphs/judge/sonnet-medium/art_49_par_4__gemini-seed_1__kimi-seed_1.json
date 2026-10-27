@@ -1,0 +1,60 @@
+{
+ "key": "8a50a513976fd4c15ba4048d6c256bb4c6c2902ccbccc0a96dce7d9135eac77a",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "gemini/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same provisions, but A's registration_includes depends on extra applicable_for conditions and has a weaker secure-section link, while B ties information to the registration and the restricted systems and lists the Annex VIII points explicitly.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both cover the same provisions, but A's registration_includes depends on extra applicable_for conditions and has a weaker secure-section link, while B ties information to the registration and the restricted systems and lists the Annex VIII points explicitly.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

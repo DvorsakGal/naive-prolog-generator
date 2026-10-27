@@ -1,0 +1,42 @@
+{
+ "key": "0927ca318450c863695f9baf8e483b0a1b6d925892b2314d0beeaef26528c5b4",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "qwen/seed_1",
+ "b": "qwen/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"The exemptions in sentence 3 are the same in both modules. For sentences 1 and 2, A treats machine-readability and detectability as extra conditions in a second rule, and B derives them circularly from the obligation. A requires the technical properties as preconditions, while B derives them circularly from the obligation and does not apply the exemption in A's version.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "The exemptions in sentence 3 are the same in both modules. For sentences 1 and 2, A treats machine-readability and detectability as extra conditions in a second rule, and B derives them circularly from the obligation. A requires the technical properties as preconditions, while B derives them circula",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
+ }
+}

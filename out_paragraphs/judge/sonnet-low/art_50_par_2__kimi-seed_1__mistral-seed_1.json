@@ -1,0 +1,42 @@
+{
+ "key": "091b13cddde8014fe324090af8a77e5f5c29b892c09fc0d6a4b71bc4529376c3",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "low",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all three sentences only partially; B models the technical-solution conditions and exemptions in more detail but with a flawed must_mark_output clause, while A uses trivial placeholder rules and conflates the exemption conditions.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all three sentences only partially; B models the technical-solution conditions and exemptions in more detail but with a flawed must_mark_output clause, while A uses trivial placeholder rules and conflates the exemption conditions.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "key": "afd4a81448e3660d7fda34384515fb8bb6b6ea644b866278af371a5eabb0751a",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission\u2019s permission to encourage and facilitate Union-level codes and some implementation details but misses the mandatory/full-applicability qualifier, while B captures that qualifier and the purposes of the codes but misses facilitation and Union-level scope in the main permission.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission\u2019s permission to encourage and facilitate Union-level codes and some implementation details but misses the mandatory/full-applicability qualifier, while B captures that qualifier and the purposes of the codes but misses facilitation and Union-level scope in the main permissi",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "mistral/seed_1"
+ }
+}
