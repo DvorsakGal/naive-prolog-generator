@@ -1,0 +1,42 @@
+{
+ "key": "68f69876aeeadb3cb13fa9a75829445e3e9767fbd67bc4e6ecf39b7ab33981c4",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "opus/seed_1",
+ "b": "opus/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same three rules; they differ in detail: A makes the substantial-alteration check always fail (so non-altering systems are always exempt) and ties feasibility to the system, while B ties feasibility to the technical solution and models the deployer as a parameter.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules encode the same three rules; they differ in detail: A makes the substantial-alteration check always fail (so non-altering systems are always exempt) and ties feasibility to the system, while B ties feasibility to the technical solution and models the deployer as a parameter.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_3",
+  "B": "opus/seed_1"
+ }
+}

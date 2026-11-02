@@ -1,0 +1,48 @@
+{
+ "key": "eeccf17d5ea467e8553698d7552bce3acc2a5b040e3b155ed972a2f735fc0f70",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences. They differ mainly in sentence 3, where A makes the impact assessment and registration derivable from the authority's presence rather than as independent conditions, and in sentence 1, where each frames responsible use differently.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences. They differ mainly in sentence 3, where A makes the impact assessment and registration derivable from the authority's presence rather than as independent conditions, and in sentence 1, where each frames responsible use differently.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "opus/seed_1"
+ }
+}

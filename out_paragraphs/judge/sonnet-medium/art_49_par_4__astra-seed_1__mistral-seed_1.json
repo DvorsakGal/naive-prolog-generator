@@ -1,0 +1,60 @@
+{
+ "key": "39d63ae9b368f9b800b82fdca6205d4e81cb0517aa6c030a19850e20ed12c4f8",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with the same structure; they differ in detail: A lists Annex VIII points explicitly (including 4, 5, 7, 10, with 6, 8, 9 excluded) and adds a prohibition, while B uses opaque atoms and mismatches the information to Article 49 paragraphs (incl. a nonsensical 49(4) mapping).\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both cover the same sentences with the same structure; they differ in detail: A lists Annex VIII points explicitly (including 4, 5, 7, 10, with 6, 8, 9 excluded) and adds a prohibition, while B uses opaque atoms and mismatches the information to Article 49 paragraphs (incl. a nonsensical 49(4) mappi",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

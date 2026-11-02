@@ -1,26 +1,26 @@
 {
- "key": "1e50425cfe9ae83522bd4bfc8508efaa31168a05218a01a8fd84a772a03a055f",
+ "key": "b1c92e4dee94ef58d9712652acde461400e3fa7bb6df8ecf91d4285fcbdb91c8",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "deepseek/seed_1",
  "b": "deepseek/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the same classification and information lists. A ties registration to Article 49(1)-(3) with an 'only' rule, while B omits the Article 49 reference and the 'only' restriction. For access, A grants the Commission unconditionally and national authorities only if they are Article 74(8) authorities, while B requires Article 74(8) status for both.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the same classification and information lists, but A ties registration to the system and requires article_71, while B ties it to registration records for Article 49(1)-(3). They also differ on access: A requires article_74_8 for both the Commission and national authorities, while B requires it only for national authorities.\"}",
  "coverage_a": 0.833,
- "coverage_b": 0.917,
+ "coverage_b": 0.833,
  "jointly_captured": 6,
- "agreement": 0.833,
+ "agreement": 0.667,
  "overall": "mostly_same",
- "note": "Both encode the same classification and information lists. A ties registration to Article 49(1)-(3) with an 'only' rule, while B omits the Article 49 reference and the 'only' restriction. For access, A grants the Commission unconditionally and national authorities only if they are Article 74(8) auth",
+ "note": "Both encode the same classification and information lists, but A ties registration to the system and requires article_71, while B ties it to registration records for Article 49(1)-(3). They also differ on access: A requires article_74_8 for both the Commission and national authorities, while B requi",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 2,
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_2",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_2"
  }
 }

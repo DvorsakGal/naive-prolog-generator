@@ -1,42 +1,42 @@
 {
- "key": "0cf9f49b45628bbd972b8ede1c241e2a89f0bd43aaf04b6397c02599944ca870",
+ "key": "9d11c1ac7f77ae6e1e744d426719a416b07629725a617d00aafe4d20e5968ae2",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "mistral/seed_1",
  "b": "mistral/seed_2",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A states the marking and technical-solution requirements as explicit body conditions (marked, detectable, effective, etc.), while B reduces them to vacuous self-referential facts; the exemptions are similar, though A also wires them into must_mark_output.\"}",
- "coverage_a": 1.0,
- "coverage_b": 0.5,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 exemptions match, but A's marking and technical-solution rules make the machine-readable, detectable and quality properties trivially true, whereas B requires them as conditions; B also adds a second must_mark_output clause that excludes exempt cases.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
  "jointly_captured": 3,
  "agreement": 0.333,
  "overall": "mostly_same",
- "note": "A states the marking and technical-solution requirements as explicit body conditions (marked, detectable, effective, etc.), while B reduces them to vacuous self-referential facts; the exemptions are similar, though A also wires them into must_mark_output.",
+ "note": "Sentence 3 exemptions match, but A's marking and technical-solution rules make the machine-readable, detectable and quality properties trivially true, whereas B requires them as conditions; B also adds a second must_mark_output clause that excludes exempt cases.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "mistral/seed_2"
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
  }
 }

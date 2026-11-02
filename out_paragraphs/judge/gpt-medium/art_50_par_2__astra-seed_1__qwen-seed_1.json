@@ -1,0 +1,42 @@
+{
+ "key": "a6c611ff0522a50ffd7b35aeaa080ea0f059cf7eb33d6be2ed86741570af30d5",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module A closely models the provider/system scope, output conditions, technical-quality obligations, and extent-based exemptions, while module B gives a looser provider-level version that omits key content-type, state-of-the-art, and exemption details.\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Module A closely models the provider/system scope, output conditions, technical-quality obligations, and extent-based exemptions, while module B gives a looser provider-level version that omits key content-type, state-of-the-art, and exemption details.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

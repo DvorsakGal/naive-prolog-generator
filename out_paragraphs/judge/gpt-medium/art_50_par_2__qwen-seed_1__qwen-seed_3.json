@@ -1,26 +1,26 @@
 {
- "key": "028167fb7e9311065061b45246e3a72e3f4b11c560e72bd65e7ace17c15731bd",
+ "key": "7fcdf3b9cd179e841cd8e8b85cc0c946b9023de26c92de74539e0de7274cc481",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "qwen/seed_1",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A often places generation and exemption conditions on providers, while B places them on systems and structures the technical-solution obligation differently.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B repeatedly attaches system-level conditions and exemptions to providers, and in sentence 2 the modules capture different parts of the obligation.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
- "agreement": 0.333,
+ "agreement": 0.0,
  "overall": "different",
- "note": "A often places generation and exemption conditions on providers, while B places them on systems and structures the technical-solution obligation differently.",
+ "note": "B repeatedly attaches system-level conditions and exemptions to providers, and in sentence 2 the modules capture different parts of the obligation.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_1"
  }
 }

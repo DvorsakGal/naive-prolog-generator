@@ -1,0 +1,42 @@
+{
+ "key": "c69851000512f397c7c034aeeed1bc63681fc73d235c8aaa814e1b3650551c0e",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "gemini/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B captures the marking and detectability duty more fully (separate machine-readable and detectable obligations, explicit GPAI handling), while A collapses it into a single atom. B's exemption for non-altering systems is over-broad because it exempts any AI system that lacks recorded substantial alteration.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B captures the marking and detectability duty more fully (separate machine-readable and detectable obligations, explicit GPAI handling), while A collapses it into a single atom. B's exemption for non-altering systems is over-broad because it exempts any AI system that lacks recorded substantial alte",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "opus/seed_1"
+ }
+}

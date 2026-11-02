@@ -1,0 +1,60 @@
+{
+ "key": "100fc3f65932107beb8a8e0bdba9d037c24688c236ae6ee7b4b39ec6fd3264d7",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra/seed_1",
+ "b": "deepseek/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module B closely models the obligations and conditions in each sentence, while module A repeatedly omits or alters key conditions such as timing, opt-in choice, and the correct actor.\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Module B closely models the obligations and conditions in each sentence, while module A repeatedly omits or alters key conditions such as timing, opt-in choice, and the correct actor.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "astra/seed_1"
+ }
+}

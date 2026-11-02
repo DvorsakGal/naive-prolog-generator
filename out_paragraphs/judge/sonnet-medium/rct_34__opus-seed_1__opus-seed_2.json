@@ -1,0 +1,48 @@
+{
+ "key": "6ffeaf0306f20aba7d45c050efe9bd5e3d0c62a8da27f096c0ea0c20dbe28a34",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "opus/seed_1",
+ "b": "opus/seed_2",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 is essentially identical in both. They differ in detail on sentences 2-4: A covers evidence of threats, victims and perpetrator, requires law-enforcement-authority status, and models the reference database per use case; B covers the specifically-targeted condition and omits those details.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "Sentence 1 is essentially identical in both. They differ in detail on sentences 2-4: A covers evidence of threats, victims and perpetrator, requires law-enforcement-authority status, and models the reference database per use case; B covers the specifically-targeted condition and omits those details.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "opus/seed_2"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "key": "b4b0592a9704cc33986e92efeb49574974a0c9520b6db1bc609cddfaa35d2ed1",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "astra/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both capture the Commission\u2019s permitted support for Union-level codes and the listed aims, but both miss the 'without prejudice' qualifier and differ on which actors and cooperation conditions are represented.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Both capture the Commission\u2019s permitted support for Union-level codes and the listed aims, but both miss the 'without prejudice' qualifier and differ on which actors and cooperation conditions are represented.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_1"
+ }
+}

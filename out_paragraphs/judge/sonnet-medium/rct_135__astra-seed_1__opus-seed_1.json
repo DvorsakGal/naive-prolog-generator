@@ -1,0 +1,30 @@
+{
+ "key": "6ac63883d7a5c7bd94482eacfe3f06445b8074eab091e6d35023ce72d7718a96",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the mandatory transparency obligations, the Commission's permission to encourage and facilitate codes, and the objectives. A requires union level and uses one generic obligation predicate. B leaves union level as a derived fact, adds an appropriate-accessibility condition, and restricts cooperation to actors that disseminate or check content.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the mandatory transparency obligations, the Commission's permission to encourage and facilitate codes, and the objectives. A requires union level and uses one generic obligation predicate. B leaves union level as a derived fact, adds an appropriate-accessibility condition, and restricts",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "astra/seed_1"
+ }
+}

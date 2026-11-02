@@ -1,19 +1,19 @@
 {
- "key": "ca8f816e2e11506e399a5cbbf8471c36503af8d5c61354b085036c480e944a9e",
+ "key": "cdfbd7fa9e5b1c82885003af99c254b1a7292e371fddbc850e035ea2dca05893",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both modules cover the secure-registration and access themes, but B ties the Annex information sets to specific Article 49 paragraphs (including Annex IX to 49(4)) while A leaves applicability generic and models access as a single secure section.\"\n}",
- "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules largely match on the secure-registration and included-information rules, but B states the access restriction in a less precise way than A by tying it only to a single secure section rather than the respective Article 49(4) restricted sections.\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.917,
  "jointly_captured": 6,
- "agreement": 0.167,
- "overall": "different",
- "note": "Both modules cover the secure-registration and access themes, but B ties the Annex information sets to specific Article 49 paragraphs (including Annex IX to 49(4)) while A leaves applicability generic and models access as a single secure section.",
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules largely match on the secure-registration and included-information rules, but B states the access restriction in a less precise way than A by tying it only to a single secure section rather than the respective Article 49(4) restricted sections.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -24,37 +24,37 @@
   },
   {
    "n": 2,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 4,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 5,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

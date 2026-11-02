@@ -1,0 +1,30 @@
+{
+ "key": "4a44d6980c507efe3da28aceab04d47d9817f7a3b9e301a4c6aaac027e774c82",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the Commission's permission to encourage and facilitate codes, but A adds union-level and content conditions to the permission, while B keeps the permission unconditional. They also model the cooperation objectives differently: A treats dissemination, authenticity and provenance checks as separate alternatives, while B requires both checks together.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both model the Commission's permission to encourage and facilitate codes, but A adds union-level and content conditions to the permission, while B keeps the permission unconditional. They also model the cooperation objectives differently: A treats dissemination, authenticity and provenance checks as",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_1"
+ }
+}

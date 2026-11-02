@@ -1,48 +1,48 @@
 {
- "key": "fae6860fdb2546ea2f3164865767bc0b5a25e116d19c9ddf58ecb78ee9bd07e0",
+ "key": "00999b4de2216257f4cb0cbfab00e51600ac34eaf5673527eaa17f6140aeae5d",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B ties each information item to a single Article 49 paragraph (49(4) for item d, an apparent mismatch), while A applies all items to all systems and expands point ranges; access is modelled slightly differently.\"}",
- "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A maps each information list to an article number (including 49(4) for item d) and uses opaque atoms, while B expands the actual point numbers per Annex but ties access only to the secure section.\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.583,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "B ties each information item to a single Article 49 paragraph (49(4) for item d, an apparent mismatch), while A applies all items to all systems and expands point ranges; access is modelled slightly differently.",
+ "note": "A maps each information list to an article number (including 49(4) for item d) and uses opaque atoms, while B expands the actual point numbers per Annex but ties access only to the secure section.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

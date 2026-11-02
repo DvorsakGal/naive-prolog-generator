@@ -1,0 +1,42 @@
+{
+ "key": "3f5b1b227b5003d3c4e9f7463498d1fb208305df91a5ab111da1243628eac6c2",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "astra/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same obligations and exemptions; they differ in detail, such as how the scope and extent of the exemption is modelled and how the standards link to the state of the art is expressed.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules encode the same obligations and exemptions; they differ in detail, such as how the scope and extent of the exemption is modelled and how the standards link to the state of the art is expressed.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "e55302d67a609df0b61d8308103d38604394fc838be6f4f664704dc235dd976a",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "opus/seed_1",
+ "b": "opus/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both mark outputs and exempt systems that do not substantially alter input, which wrongly exempts almost everything; B states the sentence-2 quality duty fully, with the four properties inside the obligation and an exemption guard, while A moves the four properties into a separate technical_solution_standard_met predicate.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both mark outputs and exempt systems that do not substantially alter input, which wrongly exempts almost everything; B states the sentence-2 quality duty fully, with the four properties inside the obligation and an exemption guard, while A moves the four properties into a separate technical_solution",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_2",
+  "B": "opus/seed_1"
+ }
+}

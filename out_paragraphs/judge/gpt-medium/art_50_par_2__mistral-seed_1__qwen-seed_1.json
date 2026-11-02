@@ -1,42 +1,42 @@
 {
- "key": "66f3588e1b7222647ed9e5e816bcae08e7580308b94cdcfa42fddcb71aff7be5",
+ "key": "63e7cc777c96d4e1e45fe2182a692d9e8590231caad2e6347b0453b98ff28a52",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "mistral/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models the obligation and exemptions more specifically, while B uses broader provider-level rules and omits or weakens several textual conditions.\"\n}",
- "coverage_a": 0.833,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B makes the technical-solution factors and exemption details more explicit, while A states them more loosely and at a more generic provider-level.\"\n}",
+ "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
- "agreement": 0.0,
+ "agreement": 0.333,
  "overall": "different",
- "note": "A models the obligation and exemptions more specifically, while B uses broader provider-level rules and omits or weakens several textual conditions.",
+ "note": "B makes the technical-solution factors and exemption details more explicit, while A states them more loosely and at a more generic provider-level.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
  }
 }

@@ -1,19 +1,19 @@
 {
- "key": "81d1655cbc60883e4f78d48dc863a819329588f8509e69677f441af6c669c3e9",
+ "key": "80f0506eab85d5ff08f24cbe1695da1f13947fdecfe91c11d99c724c10c53e85",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is that module B represents the detailed feasibility and take-into-account requirements for technical solutions in sentence 2, while module A largely collapses them to technical feasibility.\"\n}",
- "coverage_a": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules represent the marking duty and the exemptions similarly, but module A captures more of the sentence 2 qualification factors while module B reduces that duty mainly to technical feasibility.\"\n}",
+ "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 0.667,
  "overall": "mostly_same",
- "note": "the main difference is that module B represents the detailed feasibility and take-into-account requirements for technical solutions in sentence 2, while module A largely collapses them to technical feasibility.",
+ "note": "Both modules represent the marking duty and the exemptions similarly, but module A captures more of the sentence 2 qualification factors while module B reduces that duty mainly to technical feasibility.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_3",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_3"
  }
 }

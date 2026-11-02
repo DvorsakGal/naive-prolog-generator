@@ -1,32 +1,32 @@
 {
- "key": "37dbd6817ebe18c698b5dc48419fb9492a1a87007a2aa950d78d0824d8c6d155",
+ "key": "edc5a4edd96664afe33503c36bd2e45a8632f53d7ce14bd07711f786076ea6cb",
  "kind": "within",
  "text": "rct_34",
  "a": "deepseek/seed_1",
  "b": "deepseek/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both modules target the same four topics, but module B systematically weakens or omits key conditions and links that module A represents more directly.\"\n}",
- "coverage_a": 0.5,
- "coverage_b": 0.875,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A ties the requirements more closely to the listed situations but misses the registration exception in sentence 3, while B omits some sentence 1 conditions and models the authorisation and reference-database requirements differently.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
  "jointly_captured": 4,
- "agreement": 0.0,
+ "agreement": 0.25,
  "overall": "different",
- "note": "Both modules target the same four topics, but module B systematically weakens or omits key conditions and links that module A represents more directly.",
+ "note": "A ties the requirements more closely to the listed situations but misses the registration exception in sentence 3, while B omits some sentence 1 conditions and models the authorisation and reference-database requirements differently.",
  "sentences_judged": 4,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "full",
-   "agree": "no"
+   "b": "partial",
+   "agree": "yes"
   },
   {
    "n": 3,
@@ -37,12 +37,12 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_2",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_2"
  }
 }

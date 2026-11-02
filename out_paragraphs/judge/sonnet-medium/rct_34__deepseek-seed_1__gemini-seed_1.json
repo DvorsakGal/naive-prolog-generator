@@ -1,38 +1,38 @@
 {
- "key": "c5250ed05765cc4ad92c40859da1a90ba5cb9f48251e5a678441afa3df0ce985",
+ "key": "57b11d1c820d20b78a3c06a11623341de469bd7a86f534586e0a22f72d634fb3",
  "kind": "across",
  "text": "rct_34",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the conditions with a per-use chain, including the registration exemption and the link between the assessment and the use. B's rules are loosely linked: registration and assessment are trivially true, the exemption is missing, and the variables are unconnected.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B captures the exemption from registration (\\\"unless provided otherwise\\\") and ties authorisation to permitted use, while A's registration and assessment predicates are trivially true and it has no exemption.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.875,
+ "coverage_b": 0.625,
  "jointly_captured": 4,
- "agreement": 0.75,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "A models the conditions with a per-use chain, including the registration exemption and the link between the assessment and the use. B's rules are loosely linked: registration and assessment are trivially true, the exemption is missing, and the variables are unconnected.",
+ "note": "B captures the exemption from registration (\"unless provided otherwise\") and ties authorisation to permitted use, while A's registration and assessment predicates are trivially true and it has no exemption.",
  "sentences_judged": 4,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
    "a": "partial",
    "b": "full",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 4,
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
  }
 }

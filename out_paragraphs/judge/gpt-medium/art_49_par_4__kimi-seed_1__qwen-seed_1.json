@@ -1,19 +1,19 @@
 {
- "key": "2a81150ab384f1a1e3c5f03d5d9a659d47a4fb7efd1aa66d2ba8d1ba6e6dce16",
+ "key": "aec9fea9cd4b42acf6729d4d5cc674d8d39d3f695f13f964e0ab6176e6ffb3cd",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A ties the rule more explicitly to Article 49 and a specific secure section, while B omits that linkage and states the secure-section and access rules more loosely.\"\n}",
- "coverage_a": 0.833,
- "coverage_b": 0.833,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same provision broadly, but B models the Article 49/applicability structure more explicitly while A overgeneralizes the information and access rules.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
  "jointly_captured": 6,
- "agreement": 0.667,
+ "agreement": 0.0,
  "overall": "mostly_same",
- "note": "A ties the rule more explicitly to Article 49 and a specific secure section, while B omits that linkage and states the secure-section and access rules more loosely.",
+ "note": "Both modules cover the same provision broadly, but B models the Article 49/applicability structure more explicitly while A overgeneralizes the information and access rules.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -24,27 +24,27 @@
   },
   {
    "n": 2,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 5,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 6,
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
  }
 }

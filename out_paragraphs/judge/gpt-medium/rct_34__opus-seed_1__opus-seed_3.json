@@ -1,0 +1,48 @@
+{
+ "key": "9ca1b715a864a4d1cc216491106883f8a7a6d7de467ba6396e9de4b52e9f7556",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "opus/seed_1",
+ "b": "opus/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same main areas, but A includes the responsible/proportionate-use objective, evidence-based necessity limits and use-case framing, while B includes specific targeting and models the reference-database condition differently\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "both modules cover the same main areas, but A includes the responsible/proportionate-use objective, evidence-based necessity limits and use-case framing, while B includes specific targeting and models the reference-database condition differently",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "opus/seed_3"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "key": "e48bb6b3ef7c745078f9816e0fba35e2725f69e7f6053b5caffe1e33016624be",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "gemini/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A often shifts duties to providers or leaves key Annex IV/Article 11 form details underspecified, while B states the duties on the documentation/form more directly.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.333,
+ "overall": "different",
+ "note": "A often shifts duties to providers or leaves key Annex IV/Article 11 form details underspecified, while B states the duties on the documentation/form more directly.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

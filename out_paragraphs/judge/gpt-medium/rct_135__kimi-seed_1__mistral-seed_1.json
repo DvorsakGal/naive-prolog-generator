@@ -1,19 +1,19 @@
 {
- "key": "082b57238ffa41d4af368e0e5a67ef7c81f98b5dfc24bd0919708bfc6a85736e",
+ "key": "aa2c353722cc9932c09bcd576a22237451e10f629cddde1eb2c374c760a1bdb8",
  "kind": "across",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission both encouraging and facilitating Union-level codes but misses the manipulated-content part, while B captures the manipulated-content purpose chain but omits facilitation and the Union-level aspect.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A omits key parts of the main permission such as facilitation and Union level but includes manipulated content, while B captures encourage and facilitate at Union level but narrows the obligations to artificially generated content and restructures the downstream cooperation/authenticity parts differently.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A captures the Commission both encouraging and facilitating Union-level codes but misses the manipulated-content part, while B captures the manipulated-content purpose chain but omits facilitation and the Union-level aspect.",
+ "note": "A omits key parts of the main permission such as facilitation and Union level but includes manipulated content, while B captures encourage and facilitate at Union level but narrows the obligations to artificially generated content and restructures the downstream cooperation/authenticity parts differ",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

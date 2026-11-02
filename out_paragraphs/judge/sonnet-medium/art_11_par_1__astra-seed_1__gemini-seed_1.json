@@ -1,0 +1,60 @@
+{
+ "key": "6d80b97bf1f195a0359e32c8db9cd5fe4372ca8db96194ae7fde776aec1bcbeb",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A encodes the chp_3 requirement and the information content in its terms, while B uses bare predicates over the documentation and omits chp_3, Annex IV and the clear and comprehensive form details; the two agree on structure.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.917,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Module A encodes the chp_3 requirement and the information content in its terms, while B uses bare predicates over the documentation and omits chp_3, Annex IV and the clear and comprehensive form details; the two agree on structure.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

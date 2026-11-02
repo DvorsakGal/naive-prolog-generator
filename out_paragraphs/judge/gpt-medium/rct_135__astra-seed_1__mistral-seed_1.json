@@ -1,0 +1,30 @@
+{
+ "key": "ef20ab22a4ef60c6a1a9243a90c15f0f1fdde371c38dcd39254438d253a6c2cc",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the full permission and purposes of Union-level codes of practice, while B omits facilitation/Union-level detail and shifts disseminating/checking from actor-related cooperation into separate code purposes.\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the full permission and purposes of Union-level codes of practice, while B omits facilitation/Union-level detail and shifts disseminating/checking from actor-related cooperation into separate code purposes.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

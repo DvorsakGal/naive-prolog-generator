@@ -1,60 +1,60 @@
 {
- "key": "8c21546bd543c808358c21dc1b3fea5acc6f2c6a3469c158b2ef39dcbf659ddb",
+ "key": "de36625c1f2ebed469cfe20143d1720114064c341f317101b3dabd50ff1defa0",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "mistral/seed_2",
  "b": "mistral/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules have the same high-risk definition and access structure. B encodes the information items as structured terms gated by a registration_applies condition, while A uses opaque predicates with no condition. B's Commission rule is also more concrete.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A encodes the specific information items in terms (with an applicability condition) and ties access to the database, while B leaves the information as opaque input predicates and links the Article 71 database less explicitly.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "coverage_b": 1.0,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules have the same high-risk definition and access structure. B encodes the information items as structured terms gated by a registration_applies condition, while A uses opaque predicates with no condition. B's Commission rule is also more concrete.",
+ "note": "A encodes the specific information items in terms (with an applicability condition) and ties access to the database, while B leaves the information as opaque input predicates and links the Article 71 database less explicitly.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_2",
-  "B": "mistral/seed_3"
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
  }
 }

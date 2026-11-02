@@ -1,19 +1,19 @@
 {
- "key": "ddc91e9b077d93581bdc735893e76a58c9e834f3bee90cbbb19a51e65a4b1050",
+ "key": "baf4c5f91a5e2f0dfffc56d66c31216037a34ce7607d1a21e928106ed91eea69",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "mistral/seed_2",
  "b": "mistral/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"A wires the exemptions into the marking obligation via exempt_from_marking, while B defines the exemptions separately and never links them to must_mark_output (obligation_applies is not used), and B also adds stub predicates for the quality properties.\"}",
- "coverage_a": 0.5,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B builds the exemptions into must_mark_output and must_ensure_technical_solution, while A keeps them separate in an obligation_applies predicate; the two also model the exemption details slightly differently.\"}",
+ "coverage_a": 0.667,
  "coverage_b": 0.667,
  "jointly_captured": 3,
- "agreement": 0.667,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "A wires the exemptions into the marking obligation via exempt_from_marking, while B defines the exemptions separately and never links them to must_mark_output (obligation_applies is not used), and B also adds stub predicates for the quality properties.",
+ "note": "B builds the exemptions into must_mark_output and must_ensure_technical_solution, while A keeps them separate in an obligation_applies predicate; the two also model the exemption details slightly differently.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -30,13 +30,13 @@
   },
   {
    "n": 3,
-   "a": "partial",
+   "a": "full",
    "b": "full",
-   "agree": "no"
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_3",
-  "B": "mistral/seed_2"
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_3"
  }
 }

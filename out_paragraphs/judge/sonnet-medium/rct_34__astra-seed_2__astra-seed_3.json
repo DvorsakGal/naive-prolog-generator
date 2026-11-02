@@ -1,0 +1,48 @@
+{
+ "key": "7b710b46d39ca48f7009c8a078653e56c241c64cc9edfca99c589e080240382a",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all four sentences with the same obligations; they differ in detail, e.g. A links the consideration of the evidence to strictly_necessary_limit and B ties the targeted individual to the use, and B's rule for sentence 4 requires use_case and situation facts.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules cover all four sentences with the same obligations; they differ in detail, e.g. A links the consideration of the evidence to strictly_necessary_limit and B ties the targeted individual to the use, and B's rule for sentence 4 requires use_case and situation facts.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_3"
+ }
+}

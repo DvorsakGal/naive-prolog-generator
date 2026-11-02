@@ -1,19 +1,19 @@
 {
- "key": "afd4a81448e3660d7fda34384515fb8bb6b6ea644b866278af371a5eabb0751a",
+ "key": "49d8747e35dfab55acfcee978c7a9784694ce81c51966e62809b7710bc33f2d5",
  "kind": "across",
  "text": "rct_135",
  "a": "deepseek/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission\u2019s permission to encourage and facilitate Union-level codes and some implementation details but misses the mandatory/full-applicability qualifier, while B captures that qualifier and the purposes of the codes but misses facilitation and Union-level scope in the main permission.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A omits or weakens key parts such as facilitation and Union level and misreads the dissemination/authenticity clause, while B captures facilitation and Union level but omits the without-prejudice mandatory/full-applicability caveat.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A captures the Commission\u2019s permission to encourage and facilitate Union-level codes and some implementation details but misses the mandatory/full-applicability qualifier, while B captures that qualifier and the purposes of the codes but misses facilitation and Union-level scope in the main permissi",
+ "note": "A omits or weakens key parts such as facilitation and Union level and misreads the dissemination/authenticity clause, while B captures facilitation and Union level but omits the without-prejudice mandatory/full-applicability caveat.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

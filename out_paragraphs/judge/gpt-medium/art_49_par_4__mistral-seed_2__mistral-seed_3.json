@@ -1,19 +1,19 @@
 {
- "key": "98286f9a91a902d041aacee24972b472287771c45304a3ba9c830ea2ed785a13",
+ "key": "be1db216b30807dd1fb3e35ac733f4792a73580662a303068ac113ef67c87263",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "mistral/seed_2",
  "b": "mistral/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A treats all four information categories as applying to every covered high-risk AI system, while B makes each category separately applicable.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same scheme, but B drops the item-specific applicability structure for the Annex VIII/IX information and is looser about the Article 49/71 registration linkage\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.833,
  "jointly_captured": 6,
  "agreement": 0.167,
- "overall": "different",
- "note": "A treats all four information categories as applying to every covered high-risk AI system, while B makes each category separately applicable.",
+ "overall": "mostly_same",
+ "note": "both modules cover the same scheme, but B drops the item-specific applicability structure for the Annex VIII/IX information and is looser about the Article 49/71 registration linkage",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_2",
-  "B": "mistral/seed_3"
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
  }
 }

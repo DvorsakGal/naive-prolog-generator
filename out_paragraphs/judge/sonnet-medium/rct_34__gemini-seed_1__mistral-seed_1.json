@@ -1,48 +1,48 @@
 {
- "key": "f7a4bb665d59dd2843a337c771e7b5697e7ffd059c2795943f403da4a17c3976",
+ "key": "1c7b68fb6fa12fca620ff57456b1fe49f54a7c1c10afda4d61ea632c4661f2ee",
  "kind": "across",
  "text": "rct_34",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences, but A's rules are loose and partly circular (e.g. the impact assessment is derived from the authority's existence, and the evidence predicates are trivial), while B models the conditions more cleanly with a registered-or-exempt rule.\"}",
- "coverage_a": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"different\",\"note\":\"A models the sentences as conjunctive permission rules with an explicit registration exemption, while B uses trivially circular rules that mislocate conditions (for example, impact assessment is derived from authority presence, and responsible use only from situation listing).\"}",
+ "coverage_a": 0.75,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 1.0,
- "overall": "mostly_same",
- "note": "Both cover all four sentences, but A's rules are loose and partly circular (e.g. the impact assessment is derived from the authority's existence, and the evidence predicates are trivial), while B models the conditions more cleanly with a registered-or-exempt rule.",
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A models the sentences as conjunctive permission rules with an explicit registration exemption, while B uses trivially circular rules that mislocate conditions (for example, impact assessment is derived from authority presence, and responsible use only from situation listing).",
  "sentences_judged": 4,
  "judgement": [
   {
    "n": 1,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
  }
 }

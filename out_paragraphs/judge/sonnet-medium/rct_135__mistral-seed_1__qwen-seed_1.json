@@ -1,12 +1,30 @@
 {
- "key": "0e15e767b2c46bbe16be574351b5dc56664bf232ebe19e6f8ff1b2cd57c59f94",
+ "key": "124dde8befa1288ee19238834d406152ec88d2922055ed5034dad315073fbfdb",
  "kind": "across",
  "text": "rct_135",
  "a": "mistral/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    ...\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission, the Union-level codes and their purposes only in part. A models the permission with Union-level and obligation conditions, while B uses flat purpose predicates and omits the Union-level condition.\"\n}\n\nCorrection: the output must contain only the one sentence entry, with no ellipsis:\n\n{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission, the Union-level codes and their purposes only in part. A models the permission with Union-level and obligation conditions, while B uses flat purpose predicates and omits the Union-level condition.\"\n}",
- "error": "judgement not parseable"
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially cover the sentence. A has the Commission's permission as a bare commission check, with no Union level and no facilitate. A also encodes the code objectives as structured terms and treats dissemination and authenticity checking as code contents. B adds Union-level conditions and a separate facilitate rule, but treats dissemination and authenticity checking as value chain actor properties and loosely defines the other predicates.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both partially cover the sentence. A has the Commission's permission as a bare commission check, with no Union level and no facilitate. A also encodes the code objectives as structured terms and treats dissemination and authenticity checking as code contents. B adds Union-level conditions and a sepa",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "qwen/seed_1"
+ }
 }

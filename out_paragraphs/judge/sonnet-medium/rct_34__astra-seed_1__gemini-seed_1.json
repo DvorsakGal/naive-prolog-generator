@@ -1,0 +1,48 @@
+{
+ "key": "c4fe29933bf59a0099058a88626480c3abfeb29c5d8b44026968835e4c8411bd",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models permitted/authorised use as a single conjunction with all conditions, while B uses separate 'required_*' obligation predicates; B's authorisation prerequisites are weaker and the sentence 3 rule is split, with registration exemption handled differently.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models permitted/authorised use as a single conjunction with all conditions, while B uses separate 'required_*' obligation predicates; B's authorisation prerequisites are weaker and the sentence 3 rule is split, with registration exemption handled differently.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "astra/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "d06366628b3b67349b62952a0477ce26a57ef98686581122dce729ffc2ce8aea",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all three sentences. A's exemptions are separate predicates, and its second must_mark_output clause drops the marking and detectability conditions, so it is weaker. B integrates the exemptions into the obligation scope, and its non-substantial-alteration exemption is clearer.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both cover all three sentences. A's exemptions are separate predicates, and its second must_mark_output clause drops the marking and detectability conditions, so it is weaker. B integrates the exemptions into the obligation scope, and its non-substantial-alteration exemption is clearer.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "astra/seed_1"
+ }
+}

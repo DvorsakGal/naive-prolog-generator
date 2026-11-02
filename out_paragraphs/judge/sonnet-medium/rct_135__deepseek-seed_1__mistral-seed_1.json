@@ -1,12 +1,30 @@
 {
- "key": "8e59ddc0d46b8b887f479207ea799c0f0b94064c25153fead668c18ff30f47a3",
+ "key": "aa8edb0f24376b9faf3533cdd13972ed4ced1e19a21626aec315058a238a9747",
  "kind": "across",
  "text": "rct_135",
  "a": "deepseek/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"none\", \"b\": \"none\", \"agree\": \"na\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission to encourage codes of practice only partially, but A makes the permission depend on transparency obligations and the content, while B states the mandatory nature and a set of purpose facts.\"\n}\n\nCorrection: the text has only one sentence. The corrected output is:\n\n{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A makes the Commission's permission depend on conditions and models the objectives as rules, while B states the 'without prejudice' mandatory/applicable facts and lists the purposes of the codes as separate facts.\"\n}",
- "error": "judgement not parseable"
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"different\",\"note\":\"A states the transparency obligations as mandatory and fully applicable and lists the code purposes as separate facts, but its permission rule only checks that a commission exists. B ties the Commission's permission to detection and labelling obligations and builds the objectives as rules with invented conditions, and it omits the mandatory/fully applicable statement.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A states the transparency obligations as mandatory and fully applicable and lists the code purposes as separate facts, but its permission rule only checks that a commission exists. B ties the Commission's permission to detection and labelling obligations and builds the objectives as rules with inven",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "deepseek/seed_1"
+ }
 }

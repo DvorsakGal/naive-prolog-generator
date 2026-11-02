@@ -1,0 +1,48 @@
+{
+ "key": "c4a172b4e1a4f138f533f9358e7b8c4c82a4e98eb690e158ddfbdcba975cf612",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is generally looser and omits several qualifiers, while B includes more of the text's conditions but sometimes shifts the modality or links the conditions differently.\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "A is generally looser and omits several qualifiers, while B includes more of the text's conditions but sometimes shifts the modality or links the conditions differently.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

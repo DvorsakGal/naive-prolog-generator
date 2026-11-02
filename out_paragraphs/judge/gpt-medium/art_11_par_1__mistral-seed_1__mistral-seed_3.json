@@ -1,30 +1,30 @@
 {
- "key": "19150d26b99e97d999dc9c5868db821730952e90ce076c7653ebf03697a761f7",
+ "key": "9874de9877b131e0ac2d0bc34cb40270f32e62dfaaddd731e7aca380d42ce1d4",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "mistral/seed_1",
  "b": "mistral/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Module B is more explicit about Annex IV and Article 11(1) conditions, while Module A is looser on those details and both handle the sentence 1 timing requirement imperfectly.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is less specific on the documentation-content and form-use conditions, especially omitting details like clear and comprehensive information and the Annex IV link\"\n}",
+ "coverage_a": 0.917,
+ "coverage_b": 0.75,
  "jointly_captured": 6,
- "agreement": 0.667,
+ "agreement": 0.5,
  "overall": "mostly_same",
- "note": "Module B is more explicit about Annex IV and Article 11(1) conditions, while Module A is looser on those details and both handle the sentence 1 timing requirement imperfectly.",
+ "note": "module B is less specific on the documentation-content and form-use conditions, especially omitting details like clear and comprehensive information and the Annex IV link",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   },
@@ -32,11 +32,11 @@
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "full",
    "agree": "yes"
   },
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_3",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
  }
 }

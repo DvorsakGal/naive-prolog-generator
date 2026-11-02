@@ -1,19 +1,19 @@
 {
- "key": "8d7f43798e353c32ae5e513aa18ba093092678cb6ada33f5fa92ffb1ce43d7f9",
+ "key": "85c7f6e74b211d7d218ca8842d96be4e7f572b098754ca9544dbc27764ae471a",
  "kind": "across",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A treats the transparency obligations as bare facts and ties arrangements to the code only loosely, while B makes them rules over obligations and uses different, partly mis-specified body conditions.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes supporting detection and labelling; A ties the mandatory and fully-applicable status to a transparency_obligation and treats the Commission as an input entity, while B states the status as bare facts, hardcodes the commission, and models practical arrangements with a different structure.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "mostly_same",
- "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A treats the transparency obligations as bare facts and ties arrangements to the code only loosely, while B makes them rules over obligations and uses different, partly mis-specified body conditio",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes supporting detection and labelling; A ties the mandatory and fully-applicable status to a transparency_obligation and treats the Commission as an input entity, while B states the status as bare facts, hardcodes th",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
  }
 }

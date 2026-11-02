@@ -1,19 +1,19 @@
 {
- "key": "ebe7be8eff76d4b00accfad1126ec77cfdc1b6d48bc84bc913f9885028d00c57",
+ "key": "79db620a4b3c4a41af84774ddbe613aaa24a6dd3f1f36c160406429160680a7e",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is more explicitly deontic but often omits specifics such as Chapter 3 or Annex IV details, while B includes more of those specifics but often encodes them as descriptive predicates or extra body conditions.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A usually includes more of the sentence-specific conditions and references while B more often encodes only the general obligation or permission without those details.\"\n}",
  "coverage_a": 0.75,
- "coverage_b": 0.583,
+ "coverage_b": 0.75,
  "jointly_captured": 6,
- "agreement": 0.167,
- "overall": "mostly_same",
- "note": "A is more explicitly deontic but often omits specifics such as Chapter 3 or Annex IV details, while B includes more of those specifics but often encodes them as descriptive predicates or extra body conditions.",
+ "agreement": 0.333,
+ "overall": "different",
+ "note": "A usually includes more of the sentence-specific conditions and references while B more often encodes only the general obligation or permission without those details.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -37,7 +37,7 @@
   {
    "n": 4,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -49,12 +49,12 @@
   {
    "n": 6,
    "a": "full",
-   "b": "partial",
-   "agree": "no"
+   "b": "full",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
  }
 }

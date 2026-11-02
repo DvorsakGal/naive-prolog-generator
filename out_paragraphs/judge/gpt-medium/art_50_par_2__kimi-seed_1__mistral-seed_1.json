@@ -1,19 +1,19 @@
 {
- "key": "6cd260e3828f34ff05cbccf9ee62340de2230d396b1324c0b2937213a65df056",
+ "key": "c5153a0d78d393fb32153dc577aa3a828777e355f15102f75c50995f78cd7bbe",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They share the core marking regime, but differ on whether the exemption scope reaches the technical-solution duty and on how the non-substantial-alteration exemption is formulated.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the marking duty and technical-solution requirements, but they differ most on the exemptions, especially how non-substantial alteration and the provider/system linkage are represented\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
- "agreement": 0.333,
+ "agreement": 0.667,
  "overall": "mostly_same",
- "note": "They share the core marking regime, but differ on whether the exemption scope reaches the technical-solution duty and on how the non-substantial-alteration exemption is formulated.",
+ "note": "both modules cover the marking duty and technical-solution requirements, but they differ most on the exemptions, especially how non-substantial alteration and the provider/system linkage are represented",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -26,7 +26,7 @@
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 3,
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

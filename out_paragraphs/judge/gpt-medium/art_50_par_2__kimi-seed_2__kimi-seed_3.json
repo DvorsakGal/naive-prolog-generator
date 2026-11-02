@@ -1,19 +1,19 @@
 {
- "key": "cb86b93bfdc6094cafa6df90ace69a23af29e1a2d21c50f6c63394f180385f1c",
+ "key": "0f9c166d4ac06f7065c3e064b37220c56225cd705019b1d3f47cebd27f523c9e",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "kimi/seed_2",
  "b": "kimi/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules encode the same core marking, technical-solution, and exemption scheme, but both simplify details such as the provider-to-system link and the exact feasibility and technical-standards qualifications.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same three obligations/exemptions overall, but B links the marking details to the output more loosely and the exemption conditions are modeled with slightly different extra constraints.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules encode the same core marking, technical-solution, and exemption scheme, but both simplify details such as the provider-to-system link and the exact feasibility and technical-standards qualifications.",
+ "note": "Both modules cover the same three obligations/exemptions overall, but B links the marking details to the output more loosely and the exemption conditions are modeled with slightly different extra constraints.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_3"
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_2"
  }
 }

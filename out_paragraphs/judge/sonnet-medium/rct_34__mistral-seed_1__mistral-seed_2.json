@@ -1,19 +1,19 @@
 {
- "key": "72e293429d9cdfdbfb2cbd541dcedf18615cfa5f420e554110ee19caa79c2e00",
+ "key": "da9733c4b90ab1a0f7e0382894a809037186268e8958a17430a938f4ca116c97",
  "kind": "within",
  "text": "rct_34",
  "a": "mistral/seed_1",
  "b": "mistral/seed_2",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences. B models the elements to consider and the reference-database requirement more faithfully, while A uses derived predicates that are looser (for example, authorisation and the impact assessment are derived circularly).\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models each obligation with explicit authority/system/scope arguments, while B uses single-argument predicates whose bodies make conclusions trivially derivable and conflate authorisation, impact assessment and registration.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.75,
+ "coverage_b": 0.875,
  "jointly_captured": 4,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both cover all four sentences. B models the elements to consider and the reference-database requirement more faithfully, while A uses derived predicates that are looser (for example, authorisation and the impact assessment are derived circularly).",
+ "note": "A models each obligation with explicit authority/system/scope arguments, while B uses single-argument predicates whose bodies make conclusions trivially derivable and conflate authorisation, impact assessment and registration.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -31,7 +31,7 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "mistral/seed_2"
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_1"
  }
 }

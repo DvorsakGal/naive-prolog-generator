@@ -1,19 +1,19 @@
 {
- "key": "7f2a2c7374d98fcade7d52458b0f77a9714da672aa87bef28953a3eb5b192756",
+ "key": "c7e9026cf5abf112664b404a9d24d00cfccb5d22669052e962233b1533874748",
  "kind": "within",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "kimi/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice and the support for practical arrangements, but A adds manipulated content, labels the transparency obligations as mandatory and fully applicable, and models the public more explicitly, while B is coarser and ignores manipulated content.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice and the supporting arrangements; B models obligations and the drawing-up act more explicitly (including manipulated content), while A omits manipulated content and uses looser variable bindings.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice and the support for practical arrangements, but A adds manipulated content, labels the transparency obligations as mandatory and fully applicable, and models the public more explicitly, while B is coar",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice and the supporting arrangements; B models obligations and the drawing-up act more explicitly (including manipulated content), while A omits manipulated content and uses looser variable bindings.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_3",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
  }
 }

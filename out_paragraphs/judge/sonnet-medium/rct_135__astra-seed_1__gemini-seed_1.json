@@ -1,0 +1,30 @@
+{
+ "key": "d27b9970733a005fb17de2c6e8c6ad1f496ef257b44ba804fc7e8c7b4eafa3c3",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice and the mandatory transparency obligations, but they differ in detail: A merges encourage and facilitate into one predicate and its objectives are loosely linked, while B separates them and models the objectives and value-chain cooperation in more detail.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate codes of practice and the mandatory transparency obligations, but they differ in detail: A merges encourage and facilitate into one predicate and its objectives are loosely linked, while B separates them and models the objectives a",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "astra/seed_1"
+ }
+}

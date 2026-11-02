@@ -1,19 +1,19 @@
 {
- "key": "17a2df92de99a84898a84ed878fb05b2bf14632d88b4a78eaa66adf1836149a1",
+ "key": "2db891e4a85c9a210f79fd140676cdf2244bc276cb8cf60eb904aaf0fb6ebfa0",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "mistral/seed_2",
  "b": "mistral/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules target the same three duties/exemptions, but B states the marking/solution requirements more explicitly while A folds exemptions into the main duties and omits some details such as machine-readable/detectable output features and parts of the alteration exception.\"\n}",
- "coverage_a": 1.0,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module A models the marking qualities and most exemption structure in more detail, while Module B leaves out key sentence 1 and 2 content and formulates the exemptions differently.\"\n}",
+ "coverage_a": 0.667,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 0.0,
- "overall": "mostly_same",
- "note": "Both modules target the same three duties/exemptions, but B states the marking/solution requirements more explicitly while A folds exemptions into the main duties and omits some details such as machine-readable/detectable output features and parts of the alteration exception.",
+ "overall": "different",
+ "note": "Module A models the marking qualities and most exemption structure in more detail, while Module B leaves out key sentence 1 and 2 content and formulates the exemptions differently.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -24,19 +24,19 @@
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_3",
-  "B": "mistral/seed_2"
+  "A": "mistral/seed_2",
+  "B": "mistral/seed_3"
  }
 }

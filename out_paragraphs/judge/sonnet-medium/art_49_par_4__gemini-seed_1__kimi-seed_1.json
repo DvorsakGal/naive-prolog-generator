@@ -1,49 +1,49 @@
 {
- "key": "8a50a513976fd4c15ba4048d6c256bb4c6c2902ccbccc0a96dce7d9135eac77a",
+ "key": "933fa25d327b099ef149d2d8ccc44b3e55aff9e3bf8c35168ee53bf26eccd9c1",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "kimi/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same provisions, but A's registration_includes depends on extra applicable_for conditions and has a weaker secure-section link, while B ties information to the registration and the restricted systems and lists the Annex VIII points explicitly.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A wrongly lists Annex VIII points 1-5, 7, 10 for sentence 2 (including 7, excluding 6, 8, 9 correctly but the others differently from B's 1-5,7,10 equivalent), while B uses a generic applicable_for gate and ties access to a single section; both are broadly similar.\"}",
  "coverage_a": 0.833,
- "coverage_b": 0.5,
+ "coverage_b": 0.75,
  "jointly_captured": 6,
- "agreement": 0.667,
+ "agreement": 0.833,
  "overall": "mostly_same",
- "note": "Both cover the same provisions, but A's registration_includes depends on extra applicable_for conditions and has a weaker secure-section link, while B ties information to the registration and the restricted systems and lists the Annex VIII points explicitly.",
+ "note": "Module A wrongly lists Annex VIII points 1-5, 7, 10 for sentence 2 (including 7, excluding 6, 8, 9 correctly but the others differently from B's 1-5,7,10 equivalent), while B uses a generic applicable_for gate and ties access to a single section; both are broadly similar.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 5,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
  }
 }

@@ -1,0 +1,42 @@
+{
+ "key": "19ca1b18b3101f7794e7c178ad12eb56c51219e921e7db47ae101f9f70f5ac95",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture all three sentences with the same structure, but they model the sentence 3 exemptions differently: A scopes them by extent of output, while B ties them to a function and treats data and semantics alteration as separate alternative exemptions.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules capture all three sentences with the same structure, but they model the sentence 3 exemptions differently: A scopes them by extent of output, while B ties them to a function and treats data and semantics alteration as separate alternative exemptions.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_2"
+ }
+}

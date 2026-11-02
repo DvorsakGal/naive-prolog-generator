@@ -1,0 +1,48 @@
+{
+ "key": "31a6342d6d7ef6ca0e6f06e2ccb6c1b9ce2bb73a18e96478134dc16c8debfa3c",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with similar content. B models the authorisation prerequisites (impact assessment, registration, exception) more cleanly and adds responsible/proportionate objectives, while A is more tangled and has circular or redundant rules.\"}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences with similar content. B models the authorisation prerequisites (impact assessment, registration, exception) more cleanly and adds responsible/proportionate objectives, while A is more tangled and has circular or redundant rules.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "astra/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "d65901f3ae7410e2dd806817fe506b634322b799d0a60a11d2987cf8af508e38",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules represent the main marking and technical-quality obligations similarly, but they differ on the exemptions, especially because A collapses non-substantial alteration of input data and semantics into one condition while B separates them and adds broader function-scoping requirements.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both modules represent the main marking and technical-quality obligations similarly, but they differ on the exemptions, especially because A collapses non-substantial alteration of input data and semantics into one condition while B separates them and adds broader function-scoping requirements.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_2"
+ }
+}

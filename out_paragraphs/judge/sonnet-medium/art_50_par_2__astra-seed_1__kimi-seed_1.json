@@ -1,0 +1,42 @@
+{
+ "key": "fba5e8bb1e70f3e19dce4f17d4065c92e9c4356850d10f3322b54377ea02def2",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the same obligations and exemptions, but B represents the marking, detectability, quality and consideration factors more explicitly, while A reduces them to unary predicates derived from the obligation, and A's exemptions are less faithful (e.g. requiring assistive function and standard editing together).\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both model the same obligations and exemptions, but B represents the marking, detectability, quality and consideration factors more explicitly, while A reduces them to unary predicates derived from the obligation, and A's exemptions are less faithful (e.g. requiring assistive function and standard e",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "astra/seed_1"
+ }
+}

@@ -13,6 +13,9 @@ Only the Commission and national authorities referred to in Article 74(8) shall 
 
 | output | loads | module | clauses | preds | inputs | coverage | violations |
 |---|---|---|---|---|---|---|---|
+| astra/seed_1 | yes | restricted_database_registration | 41 | 13 | 11 | 0.774 | 0 |
+| astra/seed_2 | yes | restricted_registration | 38 | 13 | 13 | 0.742 | 0 |
+| astra/seed_3 | yes | restricted_database_registration | 39 | 14 | 10 | 0.71 | 0 |
 | deepseek/seed_1 | yes | high_risk_ai_registration | 17 | 10 | 13 | 0.742 | 13 |
 | deepseek/seed_2 | NO | high_risk_ai_registration | 20 | 12 | 11 | 0.742 | 7 |
 | deepseek/seed_3 | NO | high_risk_ai_registration | 14 | 11 | 9 | 0.645 | 11 |
@@ -25,11 +28,376 @@ Only the Commission and national authorities referred to in Article 74(8) shall 
 | mistral/seed_1 | yes | high_risk_ai_registration | 12 | 7 | 10 | 0.839 | 8 |
 | mistral/seed_2 | yes | high_risk_ai_registration | 19 | 4 | 13 | 0.806 | 8 |
 | mistral/seed_3 | NO | high_risk_ai_registration | 19 | 4 | 11 | 0.774 | 6 |
+| opus/seed_1 | yes | secure_registration_law_enforcement | 31 | 12 | 7 | 0.742 | 7 |
+| opus/seed_2 | yes | secure_registration_law_enforcement | 32 | 9 | 8 | 0.774 | 3 |
+| opus/seed_3 | yes | restricted_registration_law_enforcement_migration | 22 | 10 | 7 | 0.71 | 5 |
 | qwen/seed_1 | yes | secure_registration_requirements | 19 | 9 | 13 | 0.677 | 11 |
 | qwen/seed_2 | NO | secure_registration_requirements | 12 | 5 | 10 | 0.742 | 17 |
 | qwen/seed_3 | yes | secure_registration_requirements | 15 | 6 | 9 | 0.71 | 5 |
 
-Within-model (3 seeds): deepseek: J_preds 0.156, J_clauses 0.029, consensus 0.153; gemini: J_preds 0.253, J_clauses 0.0, consensus 0.0; kimi: J_preds 0.145, J_clauses 0.03, consensus 0.038; mistral: J_preds 0.4, J_clauses 0.154, consensus 0.083; qwen: J_preds 0.256, J_clauses 0.01, consensus 0.093
+Within-model (3 seeds): astra: J_preds 0.456, J_clauses 0.018, consensus 0.075; deepseek: J_preds 0.156, J_clauses 0.029, consensus 0.153; gemini: J_preds 0.253, J_clauses 0.0, consensus 0.0; kimi: J_preds 0.145, J_clauses 0.03, consensus 0.038; mistral: J_preds 0.4, J_clauses 0.154, consensus 0.083; opus: J_preds 0.13, J_clauses 0.0, consensus 0.035; qwen: J_preds 0.256, J_clauses 0.01, consensus 0.093
+
+## astra seed 1
+
+```prolog
+:- module(restricted_database_registration, [
+    restricted_registration_applies/1,
+    covered_annex_point_applies/1,
+    covered_area_applies/1,
+    covered_registration_reference_applies/1,
+    listed_information_applies/1,
+    required_registration_location/1,
+    secure/1,
+    non_public/1,
+    required_registration_information/1,
+    permitted_registration_information/1,
+    prohibited_registration_information/1,
+    permitted_database_access/1,
+    prohibited_database_access/1
+]).
+
+:- dynamic high_risk/1.
+:- dynamic refers_to_annex_point/2.
+:- dynamic operates_in_area/2.
+:- dynamic registers_system/2.
+:- dynamic refers_to_article/2.
+:- dynamic applicable_information_applies/1.
+:- dynamic registration_information_applies/1.
+:- dynamic commission/1.
+:- dynamic national_authority/1.
+:- dynamic respective_restricted_section_applies/1.
+:- dynamic database_access_applies/1.
+
+covered_annex_point_applies(annex_iii(point(1))).
+covered_annex_point_applies(annex_iii(point(6))).
+covered_annex_point_applies(annex_iii(point(7))).
+
+covered_area_applies(law_enforcement).
+covered_area_applies(migration).
+covered_area_applies(asylum).
+covered_area_applies(border_control_management).
+
+covered_registration_reference_applies(article(49, 1)).
+covered_registration_reference_applies(article(49, 2)).
+covered_registration_reference_applies(article(49, 3)).
+
+restricted_registration_applies(Registration) :-
+    registers_system(Registration, System),
+    high_risk(System),
+    refers_to_annex_point(System, Point),
+    covered_annex_point_applies(Point),
+    operates_in_area(System, Area),
+    covered_area_applies(Area),
+    refers_to_article(Registration, Reference),
+    covered_registration_reference_applies(Reference).
+
+required_registration_location(registration_location(Registration, Section)) :-
+    restricted_registration_applies(Registration),
+    Section = secure_non_public_section(eu_database(article(71))).
+
+secure(secure_non_public_section(eu_database(article(71)))).
+non_public(secure_non_public_section(eu_database(article(71)))).
+
+listed_information_applies(annex_viii(point(1))).
+listed_information_applies(annex_viii(point(2))).
+listed_information_applies(annex_viii(point(3))).
+listed_information_applies(annex_viii(point(4))).
+listed_information_applies(annex_viii(point(5))).
+listed_information_applies(annex_viii(point(7))).
+listed_information_applies(annex_viii(point(10))).
+
+listed_information_applies(annex_viii(section_b, point(1))).
+listed_information_applies(annex_viii(section_b, point(2))).
+listed_information_applies(annex_viii(section_b, point(3))).
+listed_information_applies(annex_viii(section_b, point(4))).
+listed_information_applies(annex_viii(section_b, point(5))).
+listed_information_applies(annex_viii(section_b, point(8))).
+listed_information_applies(annex_viii(section_b, point(9))).
+
+% Annex VIII points (1) to (3) are also expressly listed separately.
+listed_information_applies(annex_viii(point(1))).
+listed_information_applies(annex_viii(point(2))).
+listed_information_applies(annex_viii(point(3))).
+
+listed_information_applies(annex_ix(point(1))).
+listed_information_applies(annex_ix(point(2))).
+listed_information_applies(annex_ix(point(3))).
+listed_information_applies(annex_ix(point(5))).
+
+required_registration_information(inclusion(Registration, Information)) :-
+    restricted_registration_applies(Registration),
+    listed_information_applies(Information),
+    applicable_information_applies(inclusion(Registration, Information)).
+
+permitted_registration_information(inclusion(Registration, Information)) :-
+    restricted_registration_applies(Registration),
+    listed_information_applies(Information),
+    applicable_information_applies(inclusion(Registration, Information)).
+
+prohibited_registration_information(inclusion(Registration, Information)) :-
+    restricted_registration_applies(Registration),
+    registration_information_applies(inclusion(Registration, Information)),
+    \+ permitted_registration_information(inclusion(Registration, Information)).
+
+permitted_database_access(access(Actor, Section)) :-
+    commission(Actor),
+    respective_restricted_section_applies(access(Actor, Section)),
+    refers_to_article(Section, article(49, 4)).
+
+permitted_database_access(access(Actor, Section)) :-
+    national_authority(Actor),
+    refers_to_article(Actor, article(74, 8)),
+    respective_restricted_section_applies(access(Actor, Section)),
+    refers_to_article(Section, article(49, 4)).
+
+prohibited_database_access(access(Actor, Section)) :-
+    database_access_applies(access(Actor, Section)),
+    refers_to_article(Section, article(49, 4)),
+    \+ permitted_database_access(access(Actor, Section)).
+```
+
+## astra seed 2
+
+```prolog
+:- module(restricted_registration, [
+    restricted_registration_applies/1,
+    annex_point_applies/1,
+    regulated_area_applies/1,
+    registration_reference_applies/1,
+    required_registration_location/1,
+    secure/1,
+    non_public/1,
+    permitted_information_reference/1,
+    permitted_registration_information/1,
+    required_registration_information/1,
+    prohibited_registration_information/1,
+    permitted_access/1,
+    prohibited_access/1
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system/1.
+:- dynamic annex_reference_applies/1.
+:- dynamic area_applies/1.
+:- dynamic registration_applies/1.
+:- dynamic information_applicable/1.
+:- dynamic registration_information_applies/1.
+:- dynamic commission/1.
+:- dynamic national_authority/1.
+:- dynamic article_reference_applies/1.
+:- dynamic restricted_section/1.
+:- dynamic respective_section_applies/1.
+:- dynamic access_applies/1.
+
+annex_point_applies(1).
+annex_point_applies(6).
+annex_point_applies(7).
+
+regulated_area_applies(law_enforcement).
+regulated_area_applies(migration).
+regulated_area_applies(asylum).
+regulated_area_applies(border_control_management).
+
+registration_reference_applies(article(49, 1)).
+registration_reference_applies(article(49, 2)).
+registration_reference_applies(article(49, 3)).
+
+restricted_registration_applies(Registration) :-
+    registration_applies(registration(Registration, System, Reference)),
+    registration_reference_applies(Reference),
+    artificial_intelligence_system(System),
+    high_risk(System),
+    annex_reference_applies(reference(System, annex(iii), point(Point))),
+    annex_point_applies(Point),
+    area_applies(area(System, Area)),
+    regulated_area_applies(Area).
+
+required_registration_location(
+    location(Registration, section(secure_non_public, eu_database(article(71))))
+) :-
+    restricted_registration_applies(Registration).
+
+secure(section(secure_non_public, eu_database(article(71)))).
+non_public(section(secure_non_public, eu_database(article(71)))).
+
+% Item (a): points 1 to 10, except 6, 8 and 9.
+permitted_information_reference(annex(viii, point(1))).
+permitted_information_reference(annex(viii, point(2))).
+permitted_information_reference(annex(viii, point(3))).
+permitted_information_reference(annex(viii, point(4))).
+permitted_information_reference(annex(viii, point(5))).
+permitted_information_reference(annex(viii, point(7))).
+permitted_information_reference(annex(viii, point(10))).
+
+% Item (b).
+permitted_information_reference(annex(viii, section(b), point(1))).
+permitted_information_reference(annex(viii, section(b), point(2))).
+permitted_information_reference(annex(viii, section(b), point(3))).
+permitted_information_reference(annex(viii, section(b), point(4))).
+permitted_information_reference(annex(viii, section(b), point(5))).
+permitted_information_reference(annex(viii, section(b), point(8))).
+permitted_information_reference(annex(viii, section(b), point(9))).
+
+% Item (c) repeats Annex VIII points 1 to 3, represented above.
+
+% Item (d).
+permitted_information_reference(annex(ix, point(1))).
+permitted_information_reference(annex(ix, point(2))).
+permitted_information_reference(annex(ix, point(3))).
+permitted_information_reference(annex(ix, point(5))).
+
+permitted_registration_information(information(Registration, Reference)) :-
+    restricted_registration_applies(Registration),
+    permitted_information_reference(Reference),
+    information_applicable(information(Registration, Reference)).
+
+required_registration_information(information(Registration, Reference)) :-
+    permitted_registration_information(information(Registration, Reference)).
+
+prohibited_registration_information(information(Registration, Reference)) :-
+    restricted_registration_applies(Registration),
+    registration_information_applies(information(Registration, Reference)),
+    \+ permitted_registration_information(information(Registration, Reference)).
+
+permitted_access(access(Actor, Section)) :-
+    commission(Actor),
+    restricted_section(Section),
+    article_reference_applies(reference(Section, article(49, 4))),
+    respective_section_applies(section(Actor, Section)).
+
+permitted_access(access(Actor, Section)) :-
+    national_authority(Actor),
+    article_reference_applies(reference(Actor, article(74, 8))),
+    restricted_section(Section),
+    article_reference_applies(reference(Section, article(49, 4))),
+    respective_section_applies(section(Actor, Section)).
+
+prohibited_access(access(Actor, Section)) :-
+    access_applies(access(Actor, Section)),
+    restricted_section(Section),
+    article_reference_applies(reference(Section, article(49, 4))),
+    \+ permitted_access(access(Actor, Section)).
+```
+
+## astra seed 3
+
+```prolog
+:- module(restricted_database_registration, [
+    covered_annex_reference_applies/1,
+    covered_area_applies/1,
+    covered_registration_reference_applies/1,
+    restricted_registration_applies/1,
+    required_registration_location/1,
+    secure/1,
+    non_public/1,
+    permitted_information/1,
+    permitted_registration_information/1,
+    required_registration_information/1,
+    prohibited_registration_information/1,
+    restricted_section_applies/1,
+    permitted_access/1,
+    prohibited_access/1
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system/1.
+:- dynamic refers_to/2.
+:- dynamic operates_in_area/2.
+:- dynamic registers_system/2.
+:- dynamic relevant_information_applies/1.
+:- dynamic commission/1.
+:- dynamic national_authority/1.
+:- dynamic respective_section_applies/1.
+:- dynamic seeks_access/2.
+
+covered_annex_reference_applies(annex_iii(point(1))).
+covered_annex_reference_applies(annex_iii(point(6))).
+covered_annex_reference_applies(annex_iii(point(7))).
+
+covered_area_applies(law_enforcement).
+covered_area_applies(migration).
+covered_area_applies(asylum).
+covered_area_applies(border_control_management).
+
+covered_registration_reference_applies(article(49, point(1))).
+covered_registration_reference_applies(article(49, point(2))).
+covered_registration_reference_applies(article(49, point(3))).
+
+restricted_registration_applies(Registration) :-
+    registers_system(Registration, System),
+    artificial_intelligence_system(System),
+    high_risk(System),
+    refers_to(System, AnnexReference),
+    covered_annex_reference_applies(AnnexReference),
+    operates_in_area(System, Area),
+    covered_area_applies(Area),
+    refers_to(Registration, RegistrationReference),
+    covered_registration_reference_applies(RegistrationReference).
+
+required_registration_location(
+    location(Registration, secure_non_public_section(european_union_database(article(71))))
+) :-
+    restricted_registration_applies(Registration).
+
+secure(secure_non_public_section(european_union_database(article(71)))).
+non_public(secure_non_public_section(european_union_database(article(71)))).
+
+% Annex VIII, points 1 to 10, excluding points 6, 8 and 9.
+permitted_information(annex_viii(point(1))).
+permitted_information(annex_viii(point(2))).
+permitted_information(annex_viii(point(3))).
+permitted_information(annex_viii(point(4))).
+permitted_information(annex_viii(point(5))).
+permitted_information(annex_viii(point(7))).
+permitted_information(annex_viii(point(10))).
+
+% Annex VIII, Section B.
+permitted_information(annex_viii(section_b, point(1))).
+permitted_information(annex_viii(section_b, point(2))).
+permitted_information(annex_viii(section_b, point(3))).
+permitted_information(annex_viii(section_b, point(4))).
+permitted_information(annex_viii(section_b, point(5))).
+permitted_information(annex_viii(section_b, point(8))).
+permitted_information(annex_viii(section_b, point(9))).
+
+% The separately specified Annex VIII points 1 to 3 are included above.
+
+permitted_information(annex_ix(point(1))).
+permitted_information(annex_ix(point(2))).
+permitted_information(annex_ix(point(3))).
+permitted_information(annex_ix(point(5))).
+
+permitted_registration_information(inclusion(Registration, Information)) :-
+    restricted_registration_applies(Registration),
+    permitted_information(Information),
+    relevant_information_applies(inclusion(Registration, Information)).
+
+required_registration_information(inclusion(Registration, Information)) :-
+    permitted_registration_information(inclusion(Registration, Information)).
+
+prohibited_registration_information(inclusion(Registration, Information)) :-
+    restricted_registration_applies(Registration),
+    \+ permitted_registration_information(inclusion(Registration, Information)).
+
+restricted_section_applies(Section) :-
+    refers_to(Section, restricted_section(european_union_database, article(49, point(4)))).
+
+permitted_access(access(Actor, Section)) :-
+    restricted_section_applies(Section),
+    commission(Actor),
+    respective_section_applies(access(Actor, Section)).
+
+permitted_access(access(Actor, Section)) :-
+    restricted_section_applies(Section),
+    national_authority(Actor),
+    refers_to(Actor, article(74, point(8))),
+    respective_section_applies(access(Actor, Section)).
+
+prohibited_access(access(Actor, Section)) :-
+    restricted_section_applies(Section),
+    seeks_access(Actor, Section),
+    \+ permitted_access(access(Actor, Section)).
+```
 
 ## deepseek seed 1
 
@@ -1285,6 +1653,250 @@ permitted_access_to_restricted_section(A, Section) :-
 :- dynamic restricted_section/2.
 :- dynamic national_authority/1.
 :- dynamic article_74_8/1.
+```
+
+## opus seed 1
+
+```prolog
+:- module(secure_registration_law_enforcement, [
+    sensitive_area_system/1,
+    required_secure_non_public_registration/1,
+    registration_section/2,
+    permitted_registration_information/1,
+    registration_information_item/2,
+    permitted_restricted_section_access/1
+]).
+
+:- dynamic high_risk/1.
+:- dynamic annex_iii_point/2.
+:- dynamic area/2.
+:- dynamic registration/3.
+:- dynamic commission/1.
+:- dynamic national_authority_article_74_8/1.
+:- dynamic applicable_information/2.
+
+% High-risk systems in Annex III points 1, 6, 7 in sensitive areas
+sensitive_area_system(S) :-
+    high_risk(S),
+    annex_iii_point(S, point(N)),
+    member_point(N),
+    area(S, A),
+    sensitive_area(A).
+
+member_point(1).
+member_point(6).
+member_point(7).
+
+sensitive_area(law_enforcement).
+sensitive_area(migration).
+sensitive_area(asylum).
+sensitive_area(border_control_management).
+
+registration_article(article(49, paragraph(1))).
+registration_article(article(49, paragraph(2))).
+registration_article(article(49, paragraph(3))).
+
+required_secure_non_public_registration(R) :-
+    registration(R, S, Article),
+    registration_article(Article),
+    sensitive_area_system(S).
+
+registration_section(R, secure_non_public_section(eu_database(article(71)))) :-
+    required_secure_non_public_registration(R).
+
+% Permitted information items
+annex_viii_point(N) :- between_points(1, 10, N), \+ excluded_annex_viii_point(N).
+excluded_annex_viii_point(6).
+excluded_annex_viii_point(8).
+excluded_annex_viii_point(9).
+
+between_points(L, H, L) :- L =< H.
+between_points(L, H, N) :- L < H, L1 is L + 1, between_points(L1, H, N).
+
+registration_information_item(letter(a), annex_viii(point(N))) :- annex_viii_point(N).
+registration_information_item(letter(b), annex_viii(section_b(point(N)))) :- between_points(1, 5, N).
+registration_information_item(letter(b), annex_viii(section_b(point(8)))).
+registration_information_item(letter(b), annex_viii(section_b(point(9)))).
+registration_information_item(letter(c), annex_viii(point(N))) :- between_points(1, 3, N).
+registration_information_item(letter(d), annex_ix(point(1))).
+registration_information_item(letter(d), annex_ix(point(2))).
+registration_information_item(letter(d), annex_ix(point(3))).
+registration_information_item(letter(d), annex_ix(point(5))).
+
+% Only the listed information, as applicable
+permitted_registration_information(info(R, Item)) :-
+    required_secure_non_public_registration(R),
+    registration_information_item(_Letter, Item),
+    applicable_information(R, Item).
+
+% Access restricted to Commission and Article 74(8) authorities
+permitted_restricted_section_access(access(Actor, restricted_section(eu_database(article(49, paragraph(4)))))) :-
+    commission(Actor).
+permitted_restricted_section_access(access(Actor, restricted_section(eu_database(article(49, paragraph(4)))))) :-
+    national_authority_article_74_8(Actor).
+```
+
+## opus seed 2
+
+```prolog
+:- module(secure_registration_law_enforcement, [
+    sensitive_area_high_risk_system/1,
+    required_secure_non_public_registration/1,
+    registered_in/2,
+    permitted_registration_information/1,
+    includes_information/2,
+    permitted_restricted_section_access/1,
+    has_access/2
+]).
+
+:- dynamic high_risk_ai_system/1.
+:- dynamic annex_iii_point/2.
+:- dynamic area/2.
+:- dynamic registration/2.
+:- dynamic applicable_information/2.
+:- dynamic commission/1.
+:- dynamic national_authority_article_74_8/1.
+:- dynamic restricted_section/1.
+
+% High-risk AI systems in Annex III points 1, 6, 7 in sensitive areas
+sensitive_area_high_risk_system(S) :-
+    high_risk_ai_system(S),
+    annex_iii_listed(S),
+    sensitive_area(S).
+
+annex_iii_listed(S) :- annex_iii_point(S, 1).
+annex_iii_listed(S) :- annex_iii_point(S, 6).
+annex_iii_listed(S) :- annex_iii_point(S, 7).
+
+sensitive_area(S) :- area(S, law_enforcement).
+sensitive_area(S) :- area(S, migration).
+sensitive_area(S) :- area(S, asylum).
+sensitive_area(S) :- area(S, border_control_management).
+
+% Registration under Article 49(1), (2), (3) in secure non-public section
+required_secure_non_public_registration(R) :-
+    registration(R, S),
+    sensitive_area_high_risk_system(S).
+
+registered_in(R, secure_non_public_section(eu_database)) :-
+    required_secure_non_public_registration(R).
+
+% Permitted information items
+% (a) Annex VIII points 1 to 10 except 6, 8, 9
+permitted_registration_information(annex_viii(1)).
+permitted_registration_information(annex_viii(2)).
+permitted_registration_information(annex_viii(3)).
+permitted_registration_information(annex_viii(4)).
+permitted_registration_information(annex_viii(5)).
+permitted_registration_information(annex_viii(7)).
+permitted_registration_information(annex_viii(10)).
+% (b) Annex VIII Section B points 1 to 5, 8, 9
+permitted_registration_information(annex_viii_section_b(1)).
+permitted_registration_information(annex_viii_section_b(2)).
+permitted_registration_information(annex_viii_section_b(3)).
+permitted_registration_information(annex_viii_section_b(4)).
+permitted_registration_information(annex_viii_section_b(5)).
+permitted_registration_information(annex_viii_section_b(8)).
+permitted_registration_information(annex_viii_section_b(9)).
+% (c) Annex VIII points 1 to 3 (covered above)
+% (d) Annex IX points 1, 2, 3, 5
+permitted_registration_information(annex_ix(1)).
+permitted_registration_information(annex_ix(2)).
+permitted_registration_information(annex_ix(3)).
+permitted_registration_information(annex_ix(5)).
+
+% Registration includes only permitted information, as applicable
+includes_information(R, I) :-
+    required_secure_non_public_registration(R),
+    applicable_information(R, I),
+    permitted_registration_information(I).
+
+% Only Commission and Article 74(8) national authorities have access
+permitted_restricted_section_access(A) :- commission(A).
+permitted_restricted_section_access(A) :- national_authority_article_74_8(A).
+
+has_access(A, Section) :-
+    restricted_section(Section),
+    permitted_restricted_section_access(A).
+```
+
+## opus seed 3
+
+```prolog
+:- module(restricted_registration_law_enforcement_migration, [
+    restricted_registration_applies/1,
+    required_secure_non_public_section/1,
+    must_include_only/2,
+    permitted_registration_information/1,
+    permitted_access_restricted_section/1,
+    prohibited_access_restricted_section/1
+]).
+
+:- dynamic high_risk_ai_system/1.
+:- dynamic annex_iii_point/2.
+:- dynamic area/2.
+:- dynamic registration/2.
+:- dynamic commission/1.
+:- dynamic national_authority_article_74_8/1.
+:- dynamic seeks_access/2.
+
+% Scope: Annex III points 1, 6, 7 systems in law enforcement, migration, asylum, border control
+restricted_area(law_enforcement).
+restricted_area(migration).
+restricted_area(asylum).
+restricted_area(border_control_management).
+
+restricted_annex_point(1).
+restricted_annex_point(6).
+restricted_annex_point(7).
+
+restricted_registration_applies(S) :-
+    high_risk_ai_system(S),
+    annex_iii_point(S, N),
+    restricted_annex_point(N),
+    area(S, A),
+    restricted_area(A).
+
+% Registration under Article 49(1), (2), (3) goes to secure non-public section of EU database (Article 71)
+registration_article(article(49, 1)).
+registration_article(article(49, 2)).
+registration_article(article(49, 3)).
+
+required_secure_non_public_section(registration(S, Art)) :-
+    restricted_registration_applies(S),
+    registration(S, Art),
+    registration_article(Art).
+
+must_include_only(registration(S, Art), information(I)) :-
+    required_secure_non_public_section(registration(S, Art)),
+    permitted_registration_information(I).
+
+% (a) Annex VIII points 1 to 10 except 6, 8, 9
+permitted_registration_information(annex_viii(N)) :-
+    member_point(N, [1, 2, 3, 4, 5, 7, 10]).
+% (b) Annex VIII Section B points 1 to 5, 8 and 9
+permitted_registration_information(annex_viii_section_b(N)) :-
+    member_point(N, [1, 2, 3, 4, 5, 8, 9]).
+% (c) Annex VIII points 1 to 3
+permitted_registration_information(annex_viii(N)) :-
+    member_point(N, [1, 2, 3]).
+% (d) Annex IX points 1, 2, 3 and 5
+permitted_registration_information(annex_ix(N)) :-
+    member_point(N, [1, 2, 3, 5]).
+
+member_point(X, [X|_]).
+member_point(X, [_|T]) :-
+    member_point(X, T).
+
+% Access to restricted sections (Article 49(4)): only Commission and Article 74(8) authorities
+permitted_access_restricted_section(P) :-
+    commission(P).
+permitted_access_restricted_section(P) :-
+    national_authority_article_74_8(P).
+
+prohibited_access_restricted_section(P) :-
+    seeks_access(P, restricted_section(eu_database)),
+    \+ permitted_access_restricted_section(P).
 ```
 
 ## qwen seed 1

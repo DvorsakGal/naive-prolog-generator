@@ -1,19 +1,19 @@
 {
- "key": "4398516436940ab130f544805c9ffc26bdc95e85a0c0e3f782d03404adae3021",
+ "key": "bb00ebff354506e3af9a42050fde3f167d3785ce1d48ef0caef51cb93ae4b248",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "kimi/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same sentences with similar structure; they differ in detail, notably A makes the Annex IV content duty conditional on not being simplified, and A's simplification rule is circular, while B states the minimum content unconditionally and adds a provider actor.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with similar structure; B adds an odd negation on Annex IV content and a mis-modelled SME actor equal to the system, while A models provider links and a separate SME permission.\"}",
  "coverage_a": 0.583,
- "coverage_b": 0.667,
+ "coverage_b": 0.583,
  "jointly_captured": 6,
  "agreement": 0.833,
  "overall": "mostly_same",
- "note": "Both modules cover the same sentences with similar structure; they differ in detail, notably A makes the Annex IV content duty conditional on not being simplified, and A's simplification rule is circular, while B states the minimum content unconditionally and adds a provider actor.",
+ "note": "Both cover the same sentences with similar structure; B adds an odd negation on Annex IV content and a mis-modelled SME actor equal to the system, while A models provider links and a separate SME permission.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -43,7 +43,7 @@
   {
    "n": 5,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

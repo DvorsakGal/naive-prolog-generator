@@ -1,0 +1,60 @@
+{
+ "key": "a6426800d7643e9b366496efb89e8c47364b718e157714fdbe12654ae36f480a",
+ "kind": "across",
+ "text": "art_49_par_4",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 6 differs: A names the Article 49(4) restricted sections, while B grants access only to the secure non-public section. B's registration_includes is also not tied to the registration articles, and A does not require the Annex III point 1/6/7 link in the same way.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.917,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Sentence 6 differs: A names the Article 49(4) restricted sections, while B grants access only to the secure non-public section. B's registration_includes is also not tied to the registration articles, and A does not require the Annex III point 1/6/7 link in the same way.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

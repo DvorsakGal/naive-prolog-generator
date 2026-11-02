@@ -1,0 +1,48 @@
+{
+ "key": "bcd1d8008f86105331315facfe9bf1bd5e943a3b13bb356fd98ac849fca8b320",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "mistral/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same core rules on deployment purpose and authorisation, but A is weaker and less exact on the take-into-account and reference-database conditions.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "both modules cover the same core rules on deployment purpose and authorisation, but A is weaker and less exact on the take-into-account and reference-database conditions.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "opus/seed_1"
+ }
+}

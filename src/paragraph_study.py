@@ -49,6 +49,17 @@ MODELS = {
     "gemini":   ("openrouter", "google/gemini-3.8-flash", "minimal"),   # cannot be disabled
     "mistral":  ("openrouter", "mistralai/mistral-large-4-0", "none"),
     "gpt-oss":  ("ollama", "gpt-oss:120b-cloud", "none"),              # Ollama default reasoning on
+    # Frontier arm (approved 2026-10-30, $30 budget). Same prompt, same settings except
+    # that both endpoints refuse reasoning "none" ("Reasoning is mandatory for this
+    # endpoint"), so they run at "minimal", the same rule Gemini follows: the lowest
+    # level the model allows. OpenRouter maps it to the nearest supported level.
+    "opus":     ("openrouter", "anthropic/claude-opus-5.5", "minimal"),
+    "astra":    ("openrouter", "openai/gpt-6-astra", "minimal"),
+    # Reasoning arm: same models at medium effort. Separate labels so the outputs sit in
+    # their own folders (<text>/astra-medium/) and the metrics and judge treat them as
+    # distinct models, which is what makes the minimal-vs-medium comparison possible.
+    "opus-medium":  ("openrouter", "anthropic/claude-opus-5.5", "medium"),
+    "astra-medium": ("openrouter", "openai/gpt-6-astra", "medium"),
 }
 DEFAULT_MODELS = ["deepseek", "kimi", "qwen", "gemini", "mistral"]
 DEFAULT_SEEDS = [1, 2, 3]

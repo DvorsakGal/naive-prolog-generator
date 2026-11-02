@@ -1,0 +1,42 @@
+{
+ "key": "67cded4461e611774d708cf38243697fa2298d757c2c7477c61e429694a38920",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all three sentences with similar structure; A models exemptions as separate predicates and adds a duplicate must_mark_output clause, while B uses must_ensure with structured terms. In B the 'does not substantially alter' exemption fires for any AI system not known to alter input, which differs slightly in detail.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all three sentences with similar structure; A models exemptions as separate predicates and adds a duplicate must_mark_output clause, while B uses must_ensure with structured terms. In B the 'does not substantially alter' exemption fires for any AI system not known to alter input, which di",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "opus/seed_1"
+ }
+}

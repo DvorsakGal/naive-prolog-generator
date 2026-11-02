@@ -1,19 +1,19 @@
 {
- "key": "c73b5d98d64c6db6b7dd108c7818728fce1c28f31969f9e33a87a11d8b8c7aa7",
+ "key": "5128ebf72d63f6d205c67c2b8138ffbcdc95977309a0fe78b78f5504b0bd7bbe",
  "kind": "within",
  "text": "rct_135",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the Commission's permission to encourage and facilitate Union-level codes, with nearly identical structure; B makes practical arrangements and content explicit arguments, while A leaves them looser, and A's union_level_code_of_practice is undefined while B defines union_level.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same core (Commission may encourage and facilitate Union-level codes, purposes, value-chain actors), differing only in detail: A links arrangements to content and mechanisms via separate predicates, while B ties supports_practical_arrangements to the accessibility and cooperation arrangements and leaves content out of the dissemination predicates.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both model the Commission's permission to encourage and facilitate Union-level codes, with nearly identical structure; B makes practical arrangements and content explicit arguments, while A leaves them looser, and A's union_level_code_of_practice is undefined while B defines union_level.",
+ "note": "Both modules capture the same core (Commission may encourage and facilitate Union-level codes, purposes, value-chain actors), differing only in detail: A links arrangements to content and mechanisms via separate predicates, while B ties supports_practical_arrangements to the accessibility and cooper",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_2"
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_1"
  }
 }

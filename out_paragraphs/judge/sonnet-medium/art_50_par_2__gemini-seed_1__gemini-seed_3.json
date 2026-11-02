@@ -1,19 +1,19 @@
 {
- "key": "5bb5f0a0abe80af10349f9d4fe97262d66af99bf450adfb2f7dd565bb272dfd8",
+ "key": "ae81a0b1b69bdc99ff115792c05f644c1cad5ec25dcb97f15896ca902b2f33fc",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same obligations and exemptions. B models the 'taking into account' factors explicitly, while A leaves them out, and A's 'no substantial alteration' exemption is negation-as-failure and so applies by default.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same three sentences with similar structure. They differ in detail: A models the 'taking into account' factors explicitly, while B has a trivial technical-feasibility check and a circular substantially_alters rule.\"}",
  "coverage_a": 0.833,
  "coverage_b": 0.833,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules encode the same obligations and exemptions. B models the 'taking into account' factors explicitly, while A leaves them out, and A's 'no substantial alteration' exemption is negation-as-failure and so applies by default.",
+ "note": "Both modules capture the same three sentences with similar structure. They differ in detail: A models the 'taking into account' factors explicitly, while B has a trivial technical-feasibility check and a circular substantially_alters rule.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_3",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_3"
  }
 }

@@ -1,19 +1,19 @@
 {
- "key": "1241458149501a081cd4af7c23401f45b0ea2dadcc1f692b62a63540e4589c1a",
+ "key": "c1d5f870f53db20329cd86c9885a16906a721fc19574e4cb36f1bc4af451e831",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "mistral/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the content types, the marking obligation and the exemptions in more detail, including the deployer input data and the specific criminal-offence purposes. B is coarser: its marking rules are split and it treats the exemption conditions as flat, provider-level predicates.\"}",
- "coverage_a": 0.833,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"B models the marking obligation, the technical-solution considerations and the exemptions more faithfully; A's exemptions apply to any single condition, its technical-solution considerations are trivial stubs, and its marking rules are split so they do not clearly require marking.\"}",
+ "coverage_a": 1.0,
  "coverage_b": 0.5,
  "jointly_captured": 3,
- "agreement": 1.0,
+ "agreement": 0.333,
  "overall": "mostly_same",
- "note": "A models the content types, the marking obligation and the exemptions in more detail, including the deployer input data and the specific criminal-offence purposes. B is coarser: its marking rules are split and it treats the exemption conditions as flat, provider-level predicates.",
+ "note": "B models the marking obligation, the technical-solution considerations and the exemptions more faithfully; A's exemptions apply to any single condition, its technical-solution considerations are trivial stubs, and its marking rules are split so they do not clearly require marking.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -24,19 +24,19 @@
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "mistral/seed_1"
  }
 }

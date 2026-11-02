@@ -1,26 +1,26 @@
 {
- "key": "1a2ab5c5c95ce9a4fe30920760de3a8ef27df4b59fd594ffa9fba6e995e9afbb",
+ "key": "1c73cfd498d3d0dfc9f0c6dc66e03955c49037929b074521c8a09e6e5cce81a6",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_1",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They mostly align, but B weakens or alters some recipient/purpose details while A omits the small/microenterprise targeting of the Commission\u2019s form.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same provisions overall, but B is less specific about the special simplified form and makes sentence 5 broader, while A is less complete on the information to be provided under sentence 2.\"\n}",
  "coverage_a": 0.667,
  "coverage_b": 0.667,
  "jointly_captured": 6,
- "agreement": 0.5,
+ "agreement": 0.333,
  "overall": "mostly_same",
- "note": "They mostly align, but B weakens or alters some recipient/purpose details while A omits the small/microenterprise targeting of the Commission\u2019s form.",
+ "note": "Both modules cover the same provisions overall, but B is less specific about the special simplified form and makes sentence 5 broader, while A is less complete on the information to be provided under sentence 2.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 2,
@@ -44,17 +44,17 @@
    "n": 5,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 6,
    "a": "full",
-   "b": "partial",
-   "agree": "no"
+   "b": "full",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_1"
  }
 }

@@ -1,0 +1,48 @@
+{
+ "key": "40a4af9fcecd4ed4b50a83e96b7d5754ef1c3bc0925b3bd23757bb22c1a83742",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "gemini/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A models responsible and proportionate use as a rule over listed situations that requires three considerations, whereas B has obligations to take the elements into account and an empty covered_use wrapper. The other sentences are modelled similarly.\"}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "Sentence 1 differs: A models responsible and proportionate use as a rule over listed situations that requires three considerations, whereas B has obligations to take the elements into account and an empty covered_use wrapper. The other sentences are modelled similarly.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "opus/seed_1"
+ }
+}

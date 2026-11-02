@@ -1,19 +1,19 @@
 {
- "key": "068cb84ab175aa0473115b4aaf9b123a7758b4e7c7f9227102d5a3cfed27fadc",
+ "key": "624ac3d11f5ea49cfca4e64d190a94001d0e28cbe73b96c3ddb1920ed34700d5",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is usually more explicit about recipients, forms and conformity-assessment context, while A is often broader and omits some of those details.\"\n}",
- "coverage_a": 0.583,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is generally less specific, especially about recipients and conformity-assessment purpose, while A captures those details more often.\"\n}",
+ "coverage_a": 0.667,
  "coverage_b": 0.583,
  "jointly_captured": 6,
- "agreement": 0.667,
+ "agreement": 0.5,
  "overall": "mostly_same",
- "note": "B is usually more explicit about recipients, forms and conformity-assessment context, while A is often broader and omits some of those details.",
+ "note": "B is generally less specific, especially about recipients and conformity-assessment purpose, while A captures those details more often.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -38,7 +38,7 @@
    "n": 4,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 5,
@@ -48,13 +48,13 @@
   },
   {
    "n": 6,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
  }
 }

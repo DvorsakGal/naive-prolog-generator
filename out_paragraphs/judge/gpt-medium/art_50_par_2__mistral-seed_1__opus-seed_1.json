@@ -1,0 +1,42 @@
+{
+ "key": "cfbbb90efe7b35de147be8f0c6324737a4fbdb6ac647187a4543fc6ceb105a66",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "mistral/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules target the same marking regime and exemptions, but A misses some content details and does not clearly extend the exemption to the technical-solution duty, while B builds the exemptions into the duties and compresses the criminal-law authorization condition differently.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both modules target the same marking regime and exemptions, but A misses some content details and does not clearly extend the exemption to the technical-solution duty, while B builds the exemptions into the duties and compresses the criminal-law authorization condition differently.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "opus/seed_1"
+ }
+}

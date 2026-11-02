@@ -1,19 +1,19 @@
 {
- "key": "53ef365a73d7cc3016bacf22d0bb315903833bae6aff8b122c3f8f8c08f589b6",
+ "key": "e87f007912692a1eec4be8b43d3df853f2d5484bc2ce1b5e28fcd8274d93c278",
  "kind": "across",
  "text": "rct_34",
  "a": "gemini/seed_1",
  "b": "kimi/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences, but A is a coherent rule set (permitted_use, authorised_use with an exemption branch), while B is looser, with unbound variables and an authorisation rule that omits the 'unless otherwise provided' exemption in its main path.\"}",
- "coverage_a": 0.875,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same four sentences with similar partial coverage; B folds them into a compact permitted_use/authorised_use chain, while A uses many helper predicates and a buggy duplicated must_be_authorised.\"}",
+ "coverage_a": 0.625,
  "coverage_b": 0.5,
  "jointly_captured": 4,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both cover all four sentences, but A is a coherent rule set (permitted_use, authorised_use with an exemption branch), while B is looser, with unbound variables and an authorisation rule that omits the 'unless otherwise provided' exemption in its main path.",
+ "note": "Both capture the same four sentences with similar partial coverage; B folds them into a compact permitted_use/authorised_use chain, while A uses many helper predicates and a buggy duplicated must_be_authorised.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -30,19 +30,19 @@
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "gemini/seed_1"
  }
 }

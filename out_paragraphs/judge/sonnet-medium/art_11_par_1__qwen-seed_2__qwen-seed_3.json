@@ -1,19 +1,19 @@
 {
- "key": "5b90a4984fd600bc759cf06a1960adc28e4a2fa2534e43e6484a6bc8666f886b",
+ "key": "f65677ed72cd2b1aaba49d03546d1d68c19727952782118cfc254e54ede023c5",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_2",
  "b": "qwen/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A conditions the drawing-up obligation on the system being placed on the market or put into service, and A's form predicates carry extra descriptors, while B uses constant form atoms and an unconditional timing obligation.\"}",
- "coverage_a": 0.583,
- "coverage_b": 0.75,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules share the same predicates and structure. B adds conditions and helper predicates (placed_on_market, targeted_at_small_and_microenterprises, referred_to_in_article_11_1) that are undefined, so B's rules cannot succeed. A uses fixed constants for the form and for the timing, and ignores the conformity-assessment purpose.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
  "jointly_captured": 6,
- "agreement": 0.833,
+ "agreement": 0.333,
  "overall": "mostly_same",
- "note": "A conditions the drawing-up obligation on the system being placed on the market or put into service, and A's form predicates carry extra descriptors, while B uses constant form atoms and an unconditional timing obligation.",
+ "note": "Both modules share the same predicates and structure. B adds conditions and helper predicates (placed_on_market, targeted_at_small_and_microenterprises, referred_to_in_article_11_1) that are undefined, so B's rules cannot succeed. A uses fixed constants for the form and for the timing, and ignores t",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -37,24 +37,24 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 5,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_3",
-  "B": "qwen/seed_2"
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_3"
  }
 }

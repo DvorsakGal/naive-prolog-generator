@@ -1,26 +1,26 @@
 {
- "key": "564e2f1205de952d511f99589425618dd8bcda04dcd5939ed324050273e403cd",
+ "key": "802d985808e63f5e9f8790381e843fa84ebc00a7b9d8488aa408ed580fc01084",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "kimi/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all six sentences with similar rules. They differ mainly on sentence 1: A uses a provider and a placed-or-in-service condition, while B encodes a 'before' term and no provider. Sentence 2 also differs in detail, since A adds a clear_and_comprehensive helper.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all sentences at a similar level; B assigns obligations to a provider and adds extra conditions (a provider relation, clear_and_comprehensive), and splits sentence 1 into separate predicates, while A uses documentation-level predicates with fewer added conditions.\"}",
  "coverage_a": 0.75,
- "coverage_b": 0.75,
+ "coverage_b": 0.583,
  "jointly_captured": 6,
- "agreement": 0.833,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules cover all six sentences with similar rules. They differ mainly on sentence 1: A uses a provider and a placed-or-in-service condition, while B encodes a 'before' term and no provider. Sentence 2 also differs in detail, since A adds a clear_and_comprehensive helper.",
+ "note": "Both cover all sentences at a similar level; B assigns obligations to a provider and adds extra conditions (a provider relation, clear_and_comprehensive), and splits sentence 1 into separate predicates, while A uses documentation-level predicates with fewer added conditions.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -37,13 +37,13 @@
   {
    "n": 4,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
  }
 }

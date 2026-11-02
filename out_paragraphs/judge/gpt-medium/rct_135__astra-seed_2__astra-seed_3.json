@@ -1,0 +1,30 @@
+{
+ "key": "57fcf9389c7644dd060feea4b339942e336010637408db57cd9030ea234d3b98",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission\u2019s permission and the code-of-practice objectives, but they differ in key conditions and neither represents the 'without prejudice' qualification fully\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both modules capture the Commission\u2019s permission and the code-of-practice objectives, but they differ in key conditions and neither represents the 'without prejudice' qualification fully",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_2"
+ }
+}

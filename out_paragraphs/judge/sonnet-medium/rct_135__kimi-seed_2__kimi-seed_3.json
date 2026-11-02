@@ -1,19 +1,19 @@
 {
- "key": "dfc29ff5130a7a429c127361dbc0a4152123a0179bed0a2599645c3017e5eb81",
+ "key": "c7dd132ac867e12592a82b4a9db7a35b2ccd8fffe71c288839e1fdb6a0b8a283",
  "kind": "within",
  "text": "rct_135",
  "a": "kimi/seed_2",
  "b": "kimi/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice, the detection and labelling purpose, and the practical arrangements. A models the actor and content relations more closely, while B models the arrangements as a single supports_practical_arrangements predicate and ties the codes to the Union level.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice plus the supporting arrangements, but they model details differently (A uses obligation categories and actor predicates, B uses content-parameterised obligations and actor pairs); A also drops the 'as appropriate' qualifier while B includes it.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the Commission's permission to encourage and facilitate codes of practice, the detection and labelling purpose, and the practical arrangements. A models the actor and content relations more closely, while B models the arrangements as a single supports_practical_arrangements predicate an",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice plus the supporting arrangements, but they model details differently (A uses obligation categories and actor predicates, B uses content-parameterised obligations and actor pairs); A also drops the 'as ",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_3"
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_2"
  }
 }

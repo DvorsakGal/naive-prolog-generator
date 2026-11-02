@@ -1,0 +1,30 @@
+{
+ "key": "4f59640a6c1f7653594718359db07519cb46e96b74938e85e3689e12c4c1169c",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "opus/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission, the Union-level codes and the mandatory transparency obligations. A models the practical arrangements in more detail (accessible detection mechanism, cooperation with actors). B chains the objectives together and ties them to transparency obligations on AI-generated content, which the text does not state.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission, the Union-level codes and the mandatory transparency obligations. A models the practical arrangements in more detail (accessible detection mechanism, cooperation with actors). B chains the objectives together and ties them to transparency obligations on AI-g",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "opus/seed_3"
+ }
+}

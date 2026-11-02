@@ -1,0 +1,30 @@
+{
+ "key": "23a3df4332ce5ed7d4481ecb1026b14da42c95867c211657808d711f54327a02",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission to encourage and facilitate Union-level codes and their objectives, but B also states that the transparency obligations are mandatory and fully applicable and models the Commission as an explicit party. A's rules have convoluted conditions and never name the Commission as a distinct actor.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes and their objectives, but B also states that the transparency obligations are mandatory and fully applicable and models the Commission as an explicit party. A's rules have convoluted conditions and never name the ",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "opus/seed_1"
+ }
+}

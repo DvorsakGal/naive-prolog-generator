@@ -1,26 +1,26 @@
 {
- "key": "6a5e11094b7f6409a804c118240f09b48f8c267b3753cab75d1b35789d8ce5b1",
+ "key": "b5aa90ad1ddd977eb375821bdc297c9a194506a2d70b32a5060636597020089e",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B restricts Annex III to points 1, 6 and 7 and encodes the specific Annex VIII point numbers, whereas A treats Annex III generically and uses opaque information-category atoms; the access rules are essentially the same.\"}",
- "coverage_a": 0.5,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the Annex III points 1, 6 and 7 restriction and the specific point numbers in the information rules, while B treats Annex III generically and uses opaque atoms for the information sets.\"}",
+ "coverage_a": 0.75,
  "coverage_b": 0.5,
  "jointly_captured": 6,
- "agreement": 0.833,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "B restricts Annex III to points 1, 6 and 7 and encodes the specific Annex VIII point numbers, whereas A treats Annex III generically and uses opaque information-category atoms; the access rules are essentially the same.",
+ "note": "A models the Annex III points 1, 6 and 7 restriction and the specific point numbers in the information rules, while B treats Annex III generically and uses opaque atoms for the information sets.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -30,19 +30,19 @@
   },
   {
    "n": 3,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
  }
 }

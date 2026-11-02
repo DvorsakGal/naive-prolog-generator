@@ -1,0 +1,48 @@
+{
+ "key": "85d87e54656152150a152b3cd2abac037f192e4e296ab39817b97a794bcab11e",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with similar structure; B models authorisation prerequisites and the registration exception more explicitly, and its reference-database rule links a specific database to use case and situation, while A is more skeletal and its authorisation rules are circular.\"}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover the same four sentences with similar structure; B models authorisation prerequisites and the registration exception more explicitly, and its reference-database rule links a specific database to use case and situation, while A is more skeletal and its authorisation rules are circular.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "astra/seed_1"
+ }
+}

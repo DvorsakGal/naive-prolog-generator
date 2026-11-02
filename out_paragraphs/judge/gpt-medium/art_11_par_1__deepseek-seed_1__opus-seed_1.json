@@ -1,0 +1,60 @@
+{
+ "key": "da63dcc8bb48dc2d93cd771cc4d60fa6e58503b601cbe24175cb052e7491ff55",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "deepseek/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A frequently adds or alters conditions from the text, while B is generally closer but omits several details, so they do not state the same things sentence by sentence.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 6,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A frequently adds or alters conditions from the text, while B is generally closer but omits several details, so they do not state the same things sentence by sentence.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "opus/seed_1"
+ }
+}

@@ -1,24 +1,24 @@
 {
- "key": "d27dcbd2644aef53f074192c2e98976e3bb299a9169ef2b26bdf36dfa96b7b37",
+ "key": "12ba484a2870fef4a63d92d69e8ee4e156c8f5b9fc5f1adbef3b47913f61241e",
  "kind": "within",
  "text": "rct_34",
  "a": "mistral/seed_2",
  "b": "mistral/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the targeted individual, the scope types, and the completed-assessment and registered-in-database conditions as explicit predicates; B uses near-empty rules with no completed-assessment or registration condition, and with identical bodies for all the scope and regard rules.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B models the authorisation conditions (completed FRIA, registered in database) and the reference database as explicit conditions, while A only encodes them as head-only obligations with the completion and registration facts missing from the bodies, and A adds a responsible_use/proportionate_use rule.\"}",
  "coverage_a": 0.75,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 1.0,
+ "agreement": 0.75,
  "overall": "mostly_same",
- "note": "A models the targeted individual, the scope types, and the completed-assessment and registered-in-database conditions as explicit predicates; B uses near-empty rules with no completed-assessment or registration condition, and with identical bodies for all the scope and regard rules.",
+ "note": "Module B models the authorisation conditions (completed FRIA, registered in database) and the reference database as explicit conditions, while A only encodes them as head-only obligations with the completion and registration facts missing from the bodies, and A adds a responsible_use/proportionate_u",
  "sentences_judged": 4,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
@@ -32,17 +32,17 @@
    "n": 3,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_2",
-  "B": "mistral/seed_3"
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_2"
  }
 }

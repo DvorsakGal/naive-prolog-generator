@@ -1,19 +1,19 @@
 {
- "key": "f725e08c4bdab43b837cb37fa63cc6188d4eae04bdc81f82637486db16cb1bc6",
+ "key": "8892c0a161ec3311f33b0a5b53d59648a5fcefce210cb7f86c5b1e2b5a7511dd",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models more of the marking and technical-solution details, while B is more abstract and extends the sentence-3 exemptions to the technical-solution obligation as well.\"\n}",
- "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A states broader but less detailed duties and applies the exemptions to both obligations, while B models the technical-solution details more explicitly and ties the exemptions only to the marking obligation.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.833,
  "jointly_captured": 3,
  "agreement": 0.0,
  "overall": "different",
- "note": "A models more of the marking and technical-solution details, while B is more abstract and extends the sentence-3 exemptions to the technical-solution obligation as well.",
+ "note": "A states broader but less detailed duties and applies the exemptions to both obligations, while B models the technical-solution details more explicitly and ties the exemptions only to the marking obligation.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -25,18 +25,18 @@
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
  }
 }

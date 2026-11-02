@@ -1,0 +1,42 @@
+{
+ "key": "6be0369871e4ac87b4a8222b9d8490e12cbcc2055e5d3c7db394c469d445abfa",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules target the same provision, but B models the AI-system/content-type structure and law-enforcement qualifier more explicitly while A ties several points to providers and omits or weakens key qualifiers, so they differ on every sentence.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both modules target the same provision, but B models the AI-system/content-type structure and law-enforcement qualifier more explicitly while A ties several points to providers and omits or weakens key qualifiers, so they differ on every sentence.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "opus/seed_1"
+ }
+}

@@ -1,25 +1,25 @@
 {
- "key": "f32c1e1d8263b8a6e76c6839a62be199ca3ce356e29cf40b66936abc8eb6e2c7",
+ "key": "0349f4425d3002a61a9bdc1e611a0f7a5547019ee25fd39effce540c67732507",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "deepseek/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module A is generally closer to the text, while Module B often weakens the modality or adds incorrect conditions and party mappings.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules target the same six provisions, but A often omits key conditions like timing or opting for simplification and sometimes adds extra constraints, while B is generally closer to the text.\"\n}",
  "coverage_a": 0.5,
- "coverage_b": 0.75,
+ "coverage_b": 0.833,
  "jointly_captured": 6,
- "agreement": 0.0,
- "overall": "different",
- "note": "Module A is generally closer to the text, while Module B often weakens the modality or adds incorrect conditions and party mappings.",
+ "agreement": 0.167,
+ "overall": "mostly_same",
+ "note": "Both modules target the same six provisions, but A often omits key conditions like timing or opting for simplification and sometimes adds extra constraints, while B is generally closer to the text.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
@@ -50,11 +50,11 @@
    "n": 6,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_3",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_3"
  }
 }

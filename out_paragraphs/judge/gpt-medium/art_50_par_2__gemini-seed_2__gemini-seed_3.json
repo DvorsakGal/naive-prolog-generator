@@ -1,19 +1,19 @@
 {
- "key": "785fc474226535a274cca5c0e51ee59f7ce0d32bfdbfb0590b35e48a0730a743",
+ "key": "4a04408781bb3f44b2058be376d52c8c0913ba380e47c487c2523c3832d95c27",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "gemini/seed_2",
  "b": "gemini/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A links duties to a provider-system relation and includes more of the feasibility/content-type conditions, while B states broader less specific obligations and omits several sentence conditions.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same three obligations/exemptions, but A is broader and omits several conditions and qualifiers that B represents more explicitly\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 0.0,
- "overall": "different",
- "note": "A links duties to a provider-system relation and includes more of the feasibility/content-type conditions, while B states broader less specific obligations and omits several sentence conditions.",
+ "overall": "mostly_same",
+ "note": "both modules cover the same three obligations/exemptions, but A is broader and omits several conditions and qualifiers that B represents more explicitly",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_3",
-  "B": "gemini/seed_2"
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_3"
  }
 }

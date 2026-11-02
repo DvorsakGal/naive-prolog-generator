@@ -1,0 +1,60 @@
+{
+ "key": "5ddc20edfe56dae0ebf00349c83f12a4f5064f5b0358097e490927106e603500",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B adds extra conditions, for example requiring the system to be already placed on the market or in service, and spells out chp_3 requirements and authorities in sentence 2. A captures sentence 2 only as vague objective predicates.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.917,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B adds extra conditions, for example requiring the system to be already placed on the market or in service, and spells out chp_3 requirements and authorities in sentence 2. A captures sentence 2 only as vague objective predicates.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

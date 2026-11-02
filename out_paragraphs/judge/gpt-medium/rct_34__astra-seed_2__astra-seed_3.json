@@ -1,0 +1,48 @@
+{
+ "key": "d527bd0f15d5b79c258833aa9dc5ae99c188ed97f9f2790a431afd1eeef97733",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A adds an unstated requests_use condition to the authorisation prerequisites in sentence 3, while B states those conditions more directly.\"\n}",
+ "coverage_a": 0.875,
+ "coverage_b": 1.0,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "A adds an unstated requests_use condition to the authorisation prerequisites in sentence 3, while B states those conditions more directly.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_3"
+ }
+}

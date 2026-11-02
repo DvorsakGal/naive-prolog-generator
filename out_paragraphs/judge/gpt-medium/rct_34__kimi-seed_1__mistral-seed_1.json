@@ -1,19 +1,19 @@
 {
- "key": "47f56cc1c8f5fc8537bc73270ee614836e968f21f47b5b1a9a66c9048c4e0a06",
+ "key": "e85cc2b31a5942a15f8f2bc223aa20eed844977400598a4e64478d52e325de7e",
  "kind": "across",
  "text": "rct_34",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is more schematic and often misses the modal or relational structure, while B models more of the stated conditions but sometimes changes the exact requirement.\"\n}",
- "coverage_a": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B generally weakens or abstracts away the text\u2019s specific conditions, while A is more detailed but sometimes adds extra restrictions or reverses an 'only if' condition into a simple 'if' rule.\"\n}",
+ "coverage_a": 0.625,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 0.25,
- "overall": "mostly_same",
- "note": "A is more schematic and often misses the modal or relational structure, while B models more of the stated conditions but sometimes changes the exact requirement.",
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "B generally weakens or abstracts away the text\u2019s specific conditions, while A is more detailed but sometimes adds extra restrictions or reverses an 'only if' condition into a simple 'if' rule.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -32,17 +32,17 @@
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "mistral/seed_1"
  }
 }

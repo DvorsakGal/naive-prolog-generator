@@ -1,0 +1,30 @@
+{
+ "key": "bbb0d70fd3edcbeff2ef65748804931f03f8961d8a0c20f2184eabefe485da44",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "opus/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "note": "none",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_2",
+  "B": "opus/seed_1"
+ }
+}

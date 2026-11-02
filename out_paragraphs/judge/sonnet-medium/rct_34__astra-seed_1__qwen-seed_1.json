@@ -1,0 +1,48 @@
+{
+ "key": "c53a8f64bc819855f83fb042c474a81bc34b17ecfed6e1d738a91d0b0cc80edb",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences with similar structure; A models the situation-use link, authority and exception more faithfully, while B uses loosely connected rules (e.g. the exception predicate is trivially true, so registration is never required).\"}",
+ "coverage_a": 0.875,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all four sentences with similar structure; A models the situation-use link, authority and exception more faithfully, while B uses loosely connected rules (e.g. the exception predicate is trivially true, so registration is never required).",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

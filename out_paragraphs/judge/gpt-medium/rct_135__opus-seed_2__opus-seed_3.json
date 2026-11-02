@@ -1,0 +1,30 @@
+{
+ "key": "b29ade6e4801b4e2d637baa50cb817b08937d9f5b16489838c87186989dbe535",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_2",
+ "b": "opus/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A includes more of the specific practical-arrangements/cooperation details, while B abstracts those away and also does not attach the permission as clearly to the Commission.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A includes more of the specific practical-arrangements/cooperation details, while B abstracts those away and also does not attach the permission as clearly to the Commission.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_2",
+  "B": "opus/seed_3"
+ }
+}

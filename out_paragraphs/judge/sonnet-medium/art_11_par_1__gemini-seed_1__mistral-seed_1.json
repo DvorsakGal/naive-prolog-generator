@@ -1,43 +1,43 @@
 {
- "key": "0fa143fe79ca7a78603345f39b791077752faa483e0ffdeec752db93455d9da6",
+ "key": "035dc3e6c749808449617deab21bf96ac0418b5bf72ba1270fe005f7680bd7b9",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all sentences with similar structure; B models the before-placement and up-to-date conditions and the compliance details more concretely, while A uses generic rules whose bodies only check that a high-risk system's documentation exists.\"}",
- "coverage_a": 0.833,
- "coverage_b": 0.75,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A encodes the specific content of the documentation duties (chapter 3 compliance, authorities, Annex IV, timing negation) in separate predicates, while module B uses generic predicates with the same body that do not capture the content.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.917,
  "jointly_captured": 6,
- "agreement": 1.0,
+ "agreement": 0.833,
  "overall": "mostly_same",
- "note": "Both cover all sentences with similar structure; B models the before-placement and up-to-date conditions and the compliance details more concretely, while A uses generic rules whose bodies only check that a high-risk system's documentation exists.",
+ "note": "Module A encodes the specific content of the documentation duties (chapter 3 compliance, authorities, Annex IV, timing negation) in separate predicates, while module B uses generic predicates with the same body that do not capture the content.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
  }
 }

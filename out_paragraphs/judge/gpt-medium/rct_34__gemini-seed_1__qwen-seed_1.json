@@ -1,19 +1,19 @@
 {
- "key": "387d6886da0770ecad5859c00f33706d546f9510448e4b4a0ae2cb00acc3f6e0",
+ "key": "c999c844fd9ed111d3d26b02606897ba17907f2935e44794bfc210cf0f5bce80",
  "kind": "across",
  "text": "rct_34",
  "a": "gemini/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same four topics, but B turns several requirements into permission or authorisation conditions while A states them as separate duties, so they often differ in modality and added conditions.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A mainly turns the text into conditions for permitted or authorised use, while B states separate must-rules and omits or loosens some links such as authorisation and the specific reference-database constraints.\"\n}",
  "coverage_a": 0.625,
- "coverage_b": 0.625,
+ "coverage_b": 0.75,
  "jointly_captured": 4,
  "agreement": 0.0,
- "overall": "mostly_same",
- "note": "Both modules cover the same four topics, but B turns several requirements into permission or authorisation conditions while A states them as separate duties, so they often differ in modality and added conditions.",
+ "overall": "different",
+ "note": "A mainly turns the text into conditions for permitted or authorised use, while B states separate must-rules and omits or loosens some links such as authorisation and the specific reference-database constraints.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -25,24 +25,24 @@
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
  }
 }

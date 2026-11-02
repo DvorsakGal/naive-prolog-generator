@@ -1,0 +1,30 @@
+{
+ "key": "8c8258727ebd51bef83fb4e2192b493011dea1316c559a741882ad87af70b905",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate Union-level codes, the mandatory transparency obligations and the purposes; A hard-codes cooperation partners and requires union_level, while B makes the obligation conditions and value-chain actors vaguer and gives the distinguish-purpose a different condition.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes, the mandatory transparency obligations and the purposes; A hard-codes cooperation partners and requires union_level, while B makes the obligation conditions and value-chain actors vaguer and gives the distinguish",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

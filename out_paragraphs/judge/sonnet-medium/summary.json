@@ -1,38 +1,52 @@
 {
  "judge": "sonnet-medium",
- "pairs": 122,
+ "pairs": 209,
  "within_by_model": {
+  "astra": {
+   "n": 15,
+   "agreement": 0.867,
+   "same": 4,
+   "mostly_same": 11,
+   "different": 0
+  },
   "deepseek": {
    "n": 15,
-   "agreement": 0.728,
+   "agreement": 0.678,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "gemini": {
    "n": 15,
-   "agreement": 0.831,
+   "agreement": 0.853,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "kimi": {
    "n": 15,
-   "agreement": 0.9,
+   "agreement": 0.944,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "mistral": {
    "n": 14,
-   "agreement": 0.792,
+   "agreement": 0.815,
    "same": 0,
+   "mostly_same": 14,
+   "different": 0
+  },
+  "opus": {
+   "n": 15,
+   "agreement": 0.822,
+   "same": 1,
    "mostly_same": 14,
    "different": 0
   },
   "qwen": {
    "n": 15,
-   "agreement": 0.844,
+   "agreement": 0.856,
    "same": 0,
    "mostly_same": 15,
    "different": 0
@@ -40,45 +54,87 @@
  },
  "across_by_text": {
   "art_11_par_1": {
-   "n": 10,
-   "agreement": 0.917,
+   "n": 21,
+   "agreement": 0.857,
    "same": 0,
-   "mostly_same": 10,
+   "mostly_same": 21,
    "different": 0
   },
   "art_49_par_4": {
-   "n": 10,
-   "agreement": 0.95,
+   "n": 21,
+   "agreement": 0.944,
    "same": 0,
-   "mostly_same": 10,
+   "mostly_same": 21,
    "different": 0
   },
   "art_50_par_2": {
-   "n": 10,
-   "agreement": 0.867,
+   "n": 21,
+   "agreement": 0.794,
    "same": 0,
-   "mostly_same": 10,
+   "mostly_same": 21,
    "different": 0
   },
   "rct_135": {
-   "n": 8,
-   "agreement": 0.25,
+   "n": 21,
+   "agreement": 0.333,
    "same": 0,
-   "mostly_same": 7,
+   "mostly_same": 20,
    "different": 1
   },
   "rct_34": {
-   "n": 10,
-   "agreement": 0.9,
+   "n": 21,
+   "agreement": 0.821,
    "same": 0,
-   "mostly_same": 10,
-   "different": 0
+   "mostly_same": 20,
+   "different": 1
   }
  },
  "across_by_model_pair": {
+  "astra~deepseek": {
+   "n": 5,
+   "agreement": 0.483,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "astra~gemini": {
+   "n": 5,
+   "agreement": 0.733,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "astra~kimi": {
+   "n": 5,
+   "agreement": 1.0,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "astra~mistral": {
+   "n": 5,
+   "agreement": 0.867,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "astra~opus": {
+   "n": 5,
+   "agreement": 0.767,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "astra~qwen": {
+   "n": 5,
+   "agreement": 0.8,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
   "deepseek~gemini": {
    "n": 5,
-   "agreement": 0.683,
+   "agreement": 0.733,
    "same": 0,
    "mostly_same": 5,
    "different": 0
@@ -91,36 +147,50 @@
    "different": 0
   },
   "deepseek~mistral": {
-   "n": 4,
-   "agreement": 1.0,
+   "n": 5,
+   "agreement": 0.75,
    "same": 0,
    "mostly_same": 4,
+   "different": 1
+  },
+  "deepseek~opus": {
+   "n": 5,
+   "agreement": 0.667,
+   "same": 0,
+   "mostly_same": 5,
    "different": 0
   },
   "deepseek~qwen": {
    "n": 5,
-   "agreement": 0.75,
+   "agreement": 0.717,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "gemini~kimi": {
    "n": 5,
-   "agreement": 0.767,
+   "agreement": 0.833,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "gemini~mistral": {
    "n": 5,
-   "agreement": 0.8,
+   "agreement": 0.533,
    "same": 0,
    "mostly_same": 4,
    "different": 1
   },
+  "gemini~opus": {
+   "n": 5,
+   "agreement": 0.95,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
   "gemini~qwen": {
    "n": 5,
-   "agreement": 0.817,
+   "agreement": 0.617,
    "same": 0,
    "mostly_same": 5,
    "different": 0
@@ -132,40 +202,63 @@
    "mostly_same": 5,
    "different": 0
   },
+  "kimi~opus": {
+   "n": 5,
+   "agreement": 0.9,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
   "kimi~qwen": {
    "n": 5,
-   "agreement": 0.8,
+   "agreement": 0.75,
+   "same": 0,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "mistral~opus": {
+   "n": 5,
+   "agreement": 0.7,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "mistral~qwen": {
-   "n": 4,
-   "agreement": 1.0,
+   "n": 5,
+   "agreement": 0.667,
    "same": 0,
-   "mostly_same": 4,
+   "mostly_same": 5,
+   "different": 0
+  },
+  "opus~qwen": {
+   "n": 5,
+   "agreement": 0.833,
+   "same": 0,
+   "mostly_same": 5,
    "different": 0
   }
  },
  "coverage_by_model": {
-  "deepseek": 0.585,
-  "gemini": 0.733,
-  "kimi": 0.548,
-  "mistral": 0.643,
-  "qwen": 0.557
+  "astra": 0.828,
+  "deepseek": 0.593,
+  "gemini": 0.72,
+  "kimi": 0.577,
+  "mistral": 0.65,
+  "opus": 0.772,
+  "qwen": 0.567
  },
  "across_all": {
-  "n": 48,
-  "agreement": 0.799,
+  "n": 105,
+  "agreement": 0.75,
   "same": 0,
-  "mostly_same": 47,
-  "different": 1
+  "mostly_same": 103,
+  "different": 2
  },
  "within_all": {
-  "n": 74,
-  "agreement": 0.819,
-  "same": 0,
-  "mostly_same": 74,
+  "n": 104,
+  "agreement": 0.834,
+  "same": 5,
+  "mostly_same": 99,
   "different": 0
  }
 }

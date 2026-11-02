@@ -1,0 +1,48 @@
+{
+ "key": "ff3839d3ec5449896f4166be215bfa279fc412cc62b8ddf04ab2d3663568cbeb",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all four sentences with similar structure. B's authorisation rule is looser, and it omits the 'unless provided otherwise' exemption from its final must_be_authorised rule. A models the exemption as a registration alternative, and A's necessity limits are simpler.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both cover all four sentences with similar structure. B's authorisation rule is looser, and it omits the 'unless provided otherwise' exemption from its final must_be_authorised rule. A models the exemption as a registration alternative, and A's necessity limits are simpler.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

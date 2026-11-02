@@ -1,19 +1,19 @@
 {
- "key": "d35341a7650ea8c6612d9e4f208090b1eb40f88a9c669a2055409d16573d3be4",
+ "key": "9123fac22840e6f6da2a661511bd0250c29bfb5e62aff6ce352b88a62ad7c086",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "kimi/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A often misstates conditions or parties, especially the timing and SME simplification rules, while B is generally closer to the text.\"\n}",
- "coverage_a": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A generally models the obligations more directly, while B often weakens or alters them by dropping modality or adding incorrect conditions, especially around Annex IV simplification and form use.\"\n}",
+ "coverage_a": 0.583,
  "coverage_b": 0.75,
  "jointly_captured": 6,
  "agreement": 0.167,
- "overall": "mostly_same",
- "note": "A often misstates conditions or parties, especially the timing and SME simplification rules, while B is generally closer to the text.",
+ "overall": "different",
+ "note": "A generally models the obligations more directly, while B often weakens or alters them by dropping modality or adding incorrect conditions, especially around Annex IV simplification and form use.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -48,13 +48,13 @@
   },
   {
    "n": 6,
-   "a": "partial",
+   "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

@@ -1,60 +1,60 @@
 {
- "key": "24baa0dc02e34a7d6eccef9f0db0818deea5dd88431309f6c663b937887fe404",
+ "key": "d9b28a7614139969a08ba642c315cd868f99082cee5d509990fde374062d27b7",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B ties each information item to a specific Article 49 paragraph and requires the secure section itself, whereas A lists permitted items for any covered registration and does not express the secure non-public section; A also gets Annex VIII points for (a) as 1-5, 7, 10, which are correct.\"}",
- "coverage_a": 0.917,
- "coverage_b": 0.667,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A maps each information item to a specific Article 49 paragraph (including 49(4)) and models the secure non-public section, while B treats the items as a flat permitted list, expands the Annex VIII points explicitly, and does not model the secure section.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
  "jointly_captured": 6,
- "agreement": 1.0,
+ "agreement": 0.833,
  "overall": "mostly_same",
- "note": "B ties each information item to a specific Article 49 paragraph and requires the secure section itself, whereas A lists permitted items for any covered registration and does not express the secure non-public section; A also gets Annex VIII points for (a) as 1-5, 7, 10, which are correct.",
+ "note": "A maps each information item to a specific Article 49 paragraph (including 49(4)) and models the secure non-public section, while B treats the items as a flat permitted list, expands the Annex VIII points explicitly, and does not model the secure section.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 6,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
  }
 }

@@ -1,0 +1,42 @@
+{
+ "key": "0e9bc58d12f35b0662d6fe3884f50524e5ac482579def92a3471d18b1bffc4fe",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "astra/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They mostly align, but differ on sentence 2 because B makes the relevant-technical-standards reflection part of what providers must take into account, while A represents that reflection separately.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "They mostly align, but differ on sentence 2 because B makes the relevant-technical-standards reflection part of what providers must take into account, while A represents that reflection separately.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_1"
+ }
+}

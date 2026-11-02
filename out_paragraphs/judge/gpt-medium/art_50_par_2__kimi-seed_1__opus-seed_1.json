@@ -1,0 +1,42 @@
+{
+ "key": "0cd9c67a9290f67987150e3694e367a04362126747b731279c7bc3c88b559ba3",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A ties duties to providers of particular synthetic-content systems and bundles the technical-solution requirements into the obligation, while B omits the provider-to-system link and models several required qualifications as standalone facts rather than the same conditioned obligations.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "different",
+ "note": "A ties duties to providers of particular synthetic-content systems and bundles the technical-solution requirements into the obligation, while B omits the provider-to-system link and models several required qualifications as standalone facts rather than the same conditioned obligations.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

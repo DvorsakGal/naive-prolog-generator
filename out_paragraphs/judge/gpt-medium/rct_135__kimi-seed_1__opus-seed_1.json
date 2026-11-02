@@ -1,0 +1,30 @@
+{
+ "key": "11b497c0912ba921b3d749684796ddbc1cca07aa429fee81337832aad13a10b3",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"both partially capture the Commission's permission to encourage and facilitate Union-level codes of practice and their purposes, while both miss details like the 'without prejudice' linkage and the manipulated-content element\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "note": "both partially capture the Commission's permission to encourage and facilitate Union-level codes of practice and their purposes, while both miss details like the 'without prejudice' linkage and the manipulated-content element",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

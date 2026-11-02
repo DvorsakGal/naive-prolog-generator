@@ -1,0 +1,42 @@
+{
+ "key": "dcccc6686944df03ad9a64c750b8391057a024fe80164314e71f30263730c076",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "opus/seed_2",
+ "b": "opus/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules align on the marking obligation and its exemptions, but module A ties the required technical-solution qualities directly to the provider obligation while module B separates the quality standard from the obligation.\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "both modules align on the marking obligation and its exemptions, but module A ties the required technical-solution qualities directly to the provider obligation while module B separates the quality standard from the obligation.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_3",
+  "B": "opus/seed_2"
+ }
+}

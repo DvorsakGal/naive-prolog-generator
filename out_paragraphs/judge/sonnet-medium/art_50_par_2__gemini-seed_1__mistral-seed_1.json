@@ -1,31 +1,31 @@
 {
- "key": "67bb4c979ea665d1af94805531d1e3ce954d6ceee014c9373c080cbad5a27bff",
+ "key": "d12632f307b394fc4cebef3403eacd5d15b3a950b0417ef689cd724d2bfeeafe",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models marking and detectability explicitly and has detailed exemptions and technical-solution conditions, while B abstracts the marked/detectable content into a term and uses coarser predicates for the technical requirements.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the marking obligation as a bare must_ensure fact and makes the technical-solution obligation conditional on the quality predicate, while B encodes marking and quality properties as body conditions and models exemptions per-provider with more detail.\"}",
  "coverage_a": 0.667,
- "coverage_b": 1.0,
+ "coverage_b": 0.667,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "A models marking and detectability explicitly and has detailed exemptions and technical-solution conditions, while B abstracts the marked/detectable content into a term and uses coarser predicates for the technical requirements.",
+ "note": "A models the marking obligation as a bare must_ensure fact and makes the technical-solution obligation conditional on the quality predicate, while B encodes marking and quality properties as body conditions and models exemptions per-provider with more detail.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
  }
 }

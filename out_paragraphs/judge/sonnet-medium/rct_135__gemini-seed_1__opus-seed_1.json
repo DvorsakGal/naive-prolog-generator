@@ -1,0 +1,30 @@
+{
+ "key": "dd2d79641be638b9dc7b91b9147f1c8f3b28e2a6babaceb06f14a08a0398d826",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the mandatory obligations, the Commission's permission to encourage and facilitate Union-level codes, and the objectives. A adds extra conditions, a default code fact and an odd objective chain, while B models arrangements as cooperation types and separates encourage from facilitate.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the mandatory obligations, the Commission's permission to encourage and facilitate Union-level codes, and the objectives. A adds extra conditions, a default code fact and an odd objective chain, while B models arrangements as cooperation types and separates encourage from facilitate.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "opus/seed_1"
+ }
+}

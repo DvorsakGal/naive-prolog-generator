@@ -1,19 +1,19 @@
 {
- "key": "333637dead8ec52e58ca966b54ea0b4ed5bc6cd0fc0ecd72bcc40fb74897612f",
+ "key": "278786c8250a61fd7c76047a7fe400327380c5ea783a810a0afe06c99f71b109",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They match on the Annex VIII/IX information lists, but differ on the main registration rule and the access rule, especially article references, database-section details, and who exactly gets access.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A captures the secure non-public EU database aspect more directly while B captures the Article 49 registration linkage more directly, and they differ on whether the Commission is also constrained by the Article 74(8) condition for access.\"\n}",
  "coverage_a": 0.833,
  "coverage_b": 0.833,
  "jointly_captured": 6,
  "agreement": 0.667,
  "overall": "mostly_same",
- "note": "They match on the Annex VIII/IX information lists, but differ on the main registration rule and the access rule, especially article references, database-section details, and who exactly gets access.",
+ "note": "A captures the secure non-public EU database aspect more directly while B captures the Article 49 registration linkage more directly, and they differ on whether the Commission is also constrained by the Article 74(8) condition for access.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
  }
 }

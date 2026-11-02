@@ -1,19 +1,19 @@
 {
- "key": "26697c8e84e7921afa4f55d9ed678910d090db841b1f465d09597c1ddfb1d2e1",
+ "key": "4cc9fb8681793429410c3abf99b43801d438e7ec54736a4525a962822f217861",
  "kind": "across",
  "text": "rct_34",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same four sentences only partially and with similar structure; A models evidence-regard and the authorisation conditions in more detail, while B uses mostly trivial facts and stub rules (e.g. provided_otherwise_in_regulation is always true).\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all four sentences only partially. B adds a must_be_authorised rule that makes authorisation depend on the assessment and registration, whereas A's assessment and registration rules do not link to authorisation. B also models the evidence and scope limits more elaborately.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 1.0,
+ "agreement": 0.75,
  "overall": "mostly_same",
- "note": "Both capture the same four sentences only partially and with similar structure; A models evidence-regard and the authorisation conditions in more detail, while B uses mostly trivial facts and stub rules (e.g. provided_otherwise_in_regulation is always true).",
+ "note": "Both modules cover all four sentences only partially. B adds a must_be_authorised rule that makes authorisation depend on the assessment and registration, whereas A's assessment and registration rules do not link to authorisation. B also models the evidence and scope limits more elaborately.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -32,7 +32,7 @@
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
  }
 }

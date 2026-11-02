@@ -1,19 +1,19 @@
 {
- "key": "9bc95e2095ea2a7fc87654b689886a36ba78f961cc9578ffaf702c7744771133",
+ "key": "9c2139cb2b156a9260f08d17ec82dc64db1d267609b3a1f408ee4335c14d3fa2",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same permitted points and access rules; A represents the information items as terms with an explicit registration-article check, B uses separate predicates and also exposes a secure_non_public_section predicate.\"}",
- "coverage_a": 0.833,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the same eligibility, point lists and access rules; A links information to registrations via facts and gives a separate secure-section predicate, while B uses a union of point lists, so details differ slightly.\"}",
+ "coverage_a": 0.917,
  "coverage_b": 0.833,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules encode the same permitted points and access rules; A represents the information items as terms with an explicit registration-article check, B uses separate predicates and also exposes a secure_non_public_section predicate.",
+ "note": "Both encode the same eligibility, point lists and access rules; A links information to registrations via facts and gives a separate secure-section predicate, while B uses a union of point lists, so details differ slightly.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "gemini/seed_3"
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
  }
 }

@@ -1,0 +1,30 @@
+{
+ "key": "c3244fe609c2dad9620617ff1582921212d69272d1113706eb17c688781b26df",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "deepseek/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Commission permission and several purposes but omits the mandatory/full-applicable 'without prejudice' part and adds a public duty to distinguish, while B captures that preface but leaves the detection-and-labelling obligation less specifically tied to artificially generated or manipulated content.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A captures the Commission permission and several purposes but omits the mandatory/full-applicable 'without prejudice' part and adds a public duty to distinguish, while B captures that preface but leaves the detection-and-labelling obligation less specifically tied to artificially generated or manipu",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "opus/seed_1"
+ }
+}

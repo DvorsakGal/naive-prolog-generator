@@ -1,19 +1,19 @@
 {
- "key": "c33e3379a0f59a4e96cb0c7aa4d66fd3f867fcfa7d503992c30a4ed523a8ae5c",
+ "key": "3992b3b22b8d21ee62176a14d40df26d6cb8443f988db7559b31be6eefcc87c1",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B generally uses more direct obligation predicates, while A often adds or shifts conditions and parties, so they align clearly only on notified bodies accepting the form.\"\n}",
- "coverage_a": 0.583,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A and B cover the same provisions but B repeatedly changes or adds conditions and sometimes drops the obligation modality, while A is generally closer but less detailed on some content.\"\n}",
+ "coverage_a": 0.5,
  "coverage_b": 0.667,
  "jointly_captured": 6,
- "agreement": 0.167,
+ "agreement": 0.0,
  "overall": "different",
- "note": "B generally uses more direct obligation predicates, while A often adds or shifts conditions and parties, so they align clearly only on notified bodies accepting the form.",
+ "note": "A and B cover the same provisions but B repeatedly changes or adds conditions and sometimes drops the obligation modality, while A is generally closer but less detailed on some content.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -48,13 +48,13 @@
   },
   {
    "n": 6,
-   "a": "full",
+   "a": "partial",
    "b": "full",
-   "agree": "yes"
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

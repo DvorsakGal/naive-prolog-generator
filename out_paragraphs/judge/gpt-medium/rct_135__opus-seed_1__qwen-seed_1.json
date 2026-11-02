@@ -1,0 +1,30 @@
+{
+ "key": "a0016ec916178665b4ac4bc1927869339f64a9c62d2d8e6075f8d9d0fd751489",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Both modules capture the main permission and purposes, but A and B differ materially in how they represent the targeted obligations, the cooperation arrangements, and the conditions linking those elements.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "Both modules capture the main permission and purposes, but A and B differ materially in how they represent the targeted obligations, the cooperation arrangements, and the conditions linking those elements.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "5f9a113b30012f626607c3a9cece513bfc7bdd4804bd9777346ed697b855bdd3",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "kimi/seed_1",
+ "b": "opus/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A states the marking duties as explicit must_ensure facts about outputs, while B merely derives the marking properties from the duty and ties technical-solution qualities and feasibility loosely to it; exemption encoding differs in detail (A's non-alteration exemption is wrongly inverted).\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "A states the marking duties as explicit must_ensure facts about outputs, while B merely derives the marking properties from the duty and ties technical-solution qualities and feasibility loosely to it; exemption encoding differs in detail (A's non-alteration exemption is wrongly inverted).",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "kimi/seed_1"
+ }
+}

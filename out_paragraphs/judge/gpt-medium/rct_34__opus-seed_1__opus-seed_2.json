@@ -1,0 +1,48 @@
+{
+ "key": "7f7b1e65d660fc8ef18d9a264e3e641406540606d23fb80d12cebe9872b3b964",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "opus/seed_1",
+ "b": "opus/seed_2",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A more fully captures the authorization and reference-database conditions, while B more explicitly includes the specifically targeted individual but omits some evidence, law-enforcement, and use-case details.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.25,
+ "overall": "mostly_same",
+ "note": "A more fully captures the authorization and reference-database conditions, while B more explicitly includes the specifically targeted individual but omits some evidence, law-enforcement, and use-case details.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "opus/seed_2"
+ }
+}

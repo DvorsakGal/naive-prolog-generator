@@ -1,19 +1,19 @@
 {
- "key": "316520da992f885095b0aba8e03d21f3121de4a90e531cc9edaa0d6be1e7496b",
+ "key": "e7515e3d3481a15fe20a07b257fe3d793cdcdf6fd4ea9769963cf699fdae50c3",
  "kind": "within",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "kimi/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures more of the sentence's links to manipulated content and supporting arrangements, while B narrows the implementation purpose mainly to artificially generated content and represents the details differently.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A omits the manipulated-content part and the as-appropriate qualifier, while B includes those but structures several supporting arrangements differently and does not match A on the sentence's full meaning.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A captures more of the sentence's links to manipulated content and supporting arrangements, while B narrows the implementation purpose mainly to artificially generated content and represents the details differently.",
+ "note": "A omits the manipulated-content part and the as-appropriate qualifier, while B includes those but structures several supporting arrangements differently and does not match A on the sentence's full meaning.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_2"
  }
 }

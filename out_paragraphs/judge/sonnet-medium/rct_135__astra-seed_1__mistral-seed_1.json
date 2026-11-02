@@ -1,0 +1,30 @@
+{
+ "key": "d3521a3c5265182fde4793f5c8c5db442605d2d42d3877abfe6013d10dd0f6b2",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission to encourage codes of practice and their objectives. A models facilitation and Union level explicitly but adds conditions to the value-chain actors. B drops Union level and facilitation as a separate act, and treats dissemination and checking as separate purposes.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage codes of practice and their objectives. A models facilitation and Union level explicitly but adds conditions to the value-chain actors. B drops Union level and facilitation as a separate act, and treats dissemination and checking as separate purp",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "mistral/seed_1"
+ }
+}

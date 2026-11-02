@@ -1,19 +1,19 @@
 {
- "key": "1b360a9f17a610e0528aa027e4f04c34c0a8e6b02ee69327a1684544db3ad063",
+ "key": "41997bd793b3894c3351f8622bbc02935d1381a39749229383951d12386ddee1",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same three provisions, but B is more explicit about outputs and solution properties while A uses broader predicates and the two differ on several conditions and exception details\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models the marking details more explicitly but is broader on content type and thinner on sentence-2 factors, while B gets the synthetic audio/image/video/text scope and more of the feasibility/accounting factors but leaves the marking obligation and exceptions more abstract or differently scoped.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 0.0,
- "overall": "mostly_same",
- "note": "both modules cover the same three provisions, but B is more explicit about outputs and solution properties while A uses broader predicates and the two differ on several conditions and exception details",
+ "overall": "different",
+ "note": "A models the marking details more explicitly but is broader on content type and thinner on sentence-2 factors, while B gets the synthetic audio/image/video/text scope and more of the feasibility/accounting factors but leaves the marking obligation and exceptions more abstract or differently scoped.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
  }
 }

@@ -1,0 +1,42 @@
+{
+ "key": "981a76df5140d22008b24fad5ac3b362e085c81d0aea9cb5a1defd688eeac8db",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture all three sentences with the same obligations and exemptions; they differ in detail, such as whether the exemption negation is placed inside the obligation rules or in the applicability predicate, and how the state-of-the-art standard reference is modelled.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture all three sentences with the same obligations and exemptions; they differ in detail, such as whether the exemption negation is placed inside the obligation rules or in the applicability predicate, and how the state-of-the-art standard reference is modelled.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_1"
+ }
+}

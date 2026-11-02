@@ -1,19 +1,19 @@
 {
- "key": "ca3b272bba494b5340faba9f7a798d3f10c316be1eadbb076eeb6261be557f35",
+ "key": "3ead4f978274ce7d7abd50461f91eb84655022814439a0c1058c6922e1ed99f8",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "kimi/seed_1",
  "b": "kimi/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same three sentences with similar structure. B encodes the marking and detectability requirements explicitly and the technical-solution conditions in a rule body, while A leaves them as trivial derived facts. They differ in detail on the exemptions: A reads 'does not substantially alter' as a plain predicate, while B uses negated alteration predicates.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the marking obligation and exemptions similarly; they differ in how the technical-solution quality conditions are modelled (A uses input-fact conditions in the body, B uses trivially circular derived predicates) and in the exemption details.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.667,
  "jointly_captured": 3,
- "agreement": 1.0,
+ "agreement": 0.667,
  "overall": "mostly_same",
- "note": "Both capture the same three sentences with similar structure. B encodes the marking and detectability requirements explicitly and the technical-solution conditions in a rule body, while A leaves them as trivial derived facts. They differ in detail on the exemptions: A reads 'does not substantially a",
+ "note": "Both encode the marking obligation and exemptions similarly; they differ in how the technical-solution quality conditions are modelled (A uses input-fact conditions in the body, B uses trivially circular derived predicates) and in the exemption details.",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -26,7 +26,7 @@
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "kimi/seed_3"
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_1"
  }
 }

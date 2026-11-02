@@ -1,0 +1,48 @@
+{
+ "key": "af306ddbcbaa073e3f913a3bf43ad2b39d45a44c18c1ce9a7664d0513d3c99ca",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A models conditional permission/requirements tied to covered system use, while B often recasts the text as standalone obligations or facts and omits key links between conditions and the authorised use.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A models conditional permission/requirements tied to covered system use, while B often recasts the text as standalone obligations or facts and omits key links between conditions and the authorised use.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "8d8bab7b1f689f9b081bcc46cc001bfbe58a71f7c0a580d0e3a67c65cbf28cd4",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B captures the marking duty and the quality-solution duty more faithfully, with the 'taking into account' factors encoded and the machine-readable and detectable outputs as the duty content. A's marking rule is muddled, since machine-readable and detectable appear as conditions rather than the obligation. Both model the exemptions only roughly.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "B captures the marking duty and the quality-solution duty more faithfully, with the 'taking into account' factors encoded and the machine-readable and detectable outputs as the duty content. A's marking rule is muddled, since machine-readable and detectable appear as conditions rather than the oblig",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "opus/seed_1"
+ }
+}

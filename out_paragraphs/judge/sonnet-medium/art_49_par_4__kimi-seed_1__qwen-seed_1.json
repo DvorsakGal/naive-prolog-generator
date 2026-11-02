@@ -1,19 +1,19 @@
 {
- "key": "cc2bc8f36ff78d696ef106d8810b575118b43954bd75e5d64174fb5ea42cc862",
+ "key": "7dd6aa70d429a5bd6ce2f7f9c29faa77553b7c382a55e4094540f0c765d106cb",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same content with similar structure. A attaches the access restriction to a fixed section and adds an applicable_for gating condition. B links its registration information to systems only loosely and defines access through a vacuous section predicate.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same registration and access rules. A gives the info rules directly with concrete point lists, while B adds opaque applicable_for conditions and applies_to/used_in_area inputs, and its access rule is tied to a single section constant.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "coverage_b": 0.833,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules cover the same content with similar structure. A attaches the access restriction to a fixed section and adds an applicable_for gating condition. B links its registration information to systems only loosely and defines access through a vacuous section predicate.",
+ "note": "Both capture the same registration and access rules. A gives the info rules directly with concrete point lists, while B adds opaque applicable_for conditions and applies_to/used_in_area inputs, and its access rule is tied to a single section constant.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -25,25 +25,25 @@
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
  }
 }

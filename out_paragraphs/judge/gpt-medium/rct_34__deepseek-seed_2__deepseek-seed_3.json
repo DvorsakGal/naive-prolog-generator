@@ -1,19 +1,19 @@
 {
- "key": "c283b8bc2e7aa179bd2f371fb550e1dfd9c7e2e63c7c17bfa56c537983ea6a15",
+ "key": "760aa0c336f37abf9db45950f35f5cccb9179a57ee24536a3538a920ad15d043",
  "kind": "within",
  "text": "rct_34",
  "a": "deepseek/seed_2",
  "b": "deepseek/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same general topics, but B weakens or reshapes several conditions\u2014especially sentence 1 and the necessity limits in sentence 2\u2014while A more directly represents them.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A links responsible and proportionate use to taking listed factors into account, while B ties responsible/proportionate use to later deployment and authorisation rules and also differs from A on several sentence conditions.\"\n}",
  "coverage_a": 0.5,
- "coverage_b": 0.625,
+ "coverage_b": 0.5,
  "jointly_captured": 4,
  "agreement": 0.25,
- "overall": "mostly_same",
- "note": "both modules cover the same general topics, but B weakens or reshapes several conditions\u2014especially sentence 1 and the necessity limits in sentence 2\u2014while A more directly represents them.",
+ "overall": "different",
+ "note": "A links responsible and proportionate use to taking listed factors into account, while B ties responsible/proportionate use to later deployment and authorisation rules and also differs from A on several sentence conditions.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -25,7 +25,7 @@
   {
    "n": 2,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   },
   {
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_3",
-  "B": "deepseek/seed_2"
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_3"
  }
 }

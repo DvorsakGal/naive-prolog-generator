@@ -1,26 +1,26 @@
 {
- "key": "5250e9d12485d2dcf6154d06a89d74075624cae5347dcce2816c2e8f865c3d40",
+ "key": "e49fdb782348c840d5559c37fc5d62b43b0bb9851b6991448bc2794ee590ea8b",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_1",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules have the same structure; B requires placed_on_market or put_into_service as a condition and drops the notified-body provision, while A uses a generic event enumeration and keeps a distinct authority-and-body information predicate.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules have nearly the same structure; A adds a few conditions (placed_on_market, targeted at small enterprises, referred to in Art 11(1), conformity assessment purpose), while B hardcodes the form and opts_for facts and omits the small-enterprise and article-reference constraints.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "coverage_b": 0.75,
  "jointly_captured": 6,
- "agreement": 0.833,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules have the same structure; B requires placed_on_market or put_into_service as a condition and drops the notified-body provision, while A uses a generic event enumeration and keeps a distinct authority-and-body information predicate.",
+ "note": "Both modules have nearly the same structure; A adds a few conditions (placed_on_market, targeted at small enterprises, referred to in Art 11(1), conformity assessment purpose), while B hardcodes the form and opts_for facts and omits the small-enterprise and article-reference constraints.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -37,24 +37,24 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_1"
  }
 }

@@ -1,0 +1,30 @@
+{
+ "key": "dcd0b2ecbb6a723c1e9bfd9f34aaef3f53d3d110f13de90dfe32e41bd578fdfd",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice and their purposes, but B adds manipulated content, makes mandatory/fully_applicable generic over obligations, and models cooperation and distinction as purposes, while A has looser, weaker structure.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate codes of practice and their purposes, but B adds manipulated content, makes mandatory/fully_applicable generic over obligations, and models cooperation and distinction as purposes, while A has looser, weaker structure.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "astra/seed_1"
+ }
+}

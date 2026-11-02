@@ -1,19 +1,19 @@
 {
- "key": "6ad49211e19d7cedff2a2f84ecef410aaa4a72434af433fe588ea15fb71a3b41",
+ "key": "b7e68613fbc2175c913c81acdd1dac7843ebfed7d6b87f8f18e67699d81239f4",
  "kind": "within",
  "text": "rct_34",
  "a": "kimi/seed_1",
  "b": "kimi/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same four sentences with comparable partial fidelity; B is more detailed on limits and authorisation (e.g. ties the scope limits to evidence), while A uses simpler, partly vacuous bodies.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same four sentences only partially and with similar structure; A models the elements, limits and authorisation more concretely, while B uses generic or vacuous helper rules such as a stubbed exception and tautological appropriate_for.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 4,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both cover the same four sentences with comparable partial fidelity; B is more detailed on limits and authorisation (e.g. ties the scope limits to evidence), while A uses simpler, partly vacuous bodies.",
+ "note": "Both modules capture the same four sentences only partially and with similar structure; A models the elements, limits and authorisation more concretely, while B uses generic or vacuous helper rules such as a stubbed exception and tautological appropriate_for.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_2"
  }
 }

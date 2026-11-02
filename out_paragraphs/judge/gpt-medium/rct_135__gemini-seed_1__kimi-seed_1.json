@@ -1,30 +1,30 @@
 {
- "key": "688c7076fe478cbc6ff1d43726d1dfe08b2bf4b2308bdfdb15e5ead38bc818a0",
+ "key": "c706b8481696138e35718026fe48dd3a99d10312d99c7b5ee3607dd6e84f4e11",
  "kind": "across",
  "text": "rct_135",
  "a": "gemini/seed_1",
  "b": "kimi/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission\u2019s permission to encourage/facilitate Union-level codes of practice, but they differ materially in how the code objectives and supporting arrangements are conditioned and linked\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"yes\"\n    }\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both capture the Commission\u2019s permission to encourage and facilitate Union-level codes of practice and much of the transparency-related purpose, but A links effective implementation and support arrangements differently while B separates and expands the sub-arrangements.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
- "agreement": 0.0,
- "overall": "different",
- "note": "both modules capture the Commission\u2019s permission to encourage/facilitate Union-level codes of practice, but they differ materially in how the code objectives and supporting arrangements are conditioned and linked",
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "both capture the Commission\u2019s permission to encourage and facilitate Union-level codes of practice and much of the transparency-related purpose, but A links effective implementation and support arrangements differently while B separates and expands the sub-arrangements.",
  "sentences_judged": 1,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
  }
 }

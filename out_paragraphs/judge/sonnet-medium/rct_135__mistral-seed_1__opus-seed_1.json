@@ -1,0 +1,30 @@
+{
+ "key": "987820447e89c97d6a2c530811c0fc7d804c44aaf0d40ce88d8f1ca1cacea209",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "mistral/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage codes of practice and the purposes, but B models encourage and facilitate separately with Union level, while A omits Union level and the facilitate action and lumps the purposes differently; B treats cooperation partners as arrangement subtypes.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage codes of practice and the purposes, but B models encourage and facilitate separately with Union level, while A omits Union level and the facilitate action and lumps the purposes differently; B treats cooperation partners as arrangement subtypes.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "opus/seed_1"
+ }
+}

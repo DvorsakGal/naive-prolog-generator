@@ -1,24 +1,24 @@
 {
- "key": "b9220b2cdb891a55d2c14a73a2c1c11ea60e6890eb6bc3bc26b89bef380f896f",
+ "key": "2aca2d0adbf23a93431ce6b265df6471b54db2f91391ffe5a524f3fe75637f54",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "gemini/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same content. A requires the area-specific conjunction and eu_database_section facts, and its registration predicate is less tied to Article 49(1)-(3). B models the Article 49 registration and checks both national-authority and Article 74(8) status for access.\"}",
- "coverage_a": 0.917,
- "coverage_b": 0.833,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"none\",\"agree\":\"na\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the Article 49(1)-(3) registration articles and the (c) Annex VIII points 1-3 item explicitly, while B omits the article link and leaves (c) as a comment; the access rules differ only in details.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.75,
+ "jointly_captured": 5,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the same content. A requires the area-specific conjunction and eu_database_section facts, and its registration predicate is less tied to Article 49(1)-(3). B models the Article 49 registration and checks both national-authority and Article 74(8) status for access.",
+ "note": "A models the Article 49(1)-(3) registration articles and the (c) Annex VIII points 1-3 item explicitly, while B omits the article link and leaves (c) as a comment; the access rules differ only in details.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
@@ -37,8 +37,8 @@
   {
    "n": 4,
    "a": "full",
-   "b": "partial",
-   "agree": "yes"
+   "b": "none",
+   "agree": "na"
   },
   {
    "n": 5,
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_2",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "gemini/seed_2"
  }
 }

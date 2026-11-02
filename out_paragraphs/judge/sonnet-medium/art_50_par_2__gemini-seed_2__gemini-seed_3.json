@@ -1,24 +1,24 @@
 {
- "key": "a21a9c90c386a39c084c20abfbc4d07ca808c8593ba00c133238dffb82df799e",
+ "key": "0d1519679a093e6a7120367d1294f25bfbc30a16ee4fa7ae4091bed18aef048a",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "gemini/seed_2",
  "b": "gemini/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 differs: A's exemption for 'does not substantially alter' is wrongly encoded (negation as failure on a self-recursive predicate), while B encodes it directly; A also restricts content types and B adds a separate required_marking predicate.\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B models content types, outputs and technical feasibility in more detail, but its exemption for not substantially altering input is a negation-as-failure rule that fires by default; A uses a direct fact and omits feasibility.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
  "jointly_captured": 3,
- "agreement": 0.667,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Sentence 3 differs: A's exemption for 'does not substantially alter' is wrongly encoded (negation as failure on a self-recursive predicate), while B encodes it directly; A also restricts content types and B adds a separate required_marking predicate.",
+ "note": "B models content types, outputs and technical feasibility in more detail, but its exemption for not substantially altering input is a negation-as-failure rule that fires by default; A uses a direct fact and omits feasibility.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "full",
    "agree": "yes"
   },
@@ -31,12 +31,12 @@
   {
    "n": 3,
    "a": "full",
-   "b": "partial",
-   "agree": "no"
+   "b": "full",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_3",
-  "B": "gemini/seed_2"
+  "A": "gemini/seed_2",
+  "B": "gemini/seed_3"
  }
 }

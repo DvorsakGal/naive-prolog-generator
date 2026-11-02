@@ -1,0 +1,30 @@
+{
+ "key": "da63ea17caf8acbf836a00e93ce23a346ceff2e442fb5656904f6a455704e8a7",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "opus/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A explicitly models the accessible-detection and cooperation arrangements but is looser about the underlying obligations, while B ties the obligations to artificially generated or manipulated content more clearly but abstracts away those arrangement details.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A explicitly models the accessible-detection and cooperation arrangements but is looser about the underlying obligations, while B ties the obligations to artificially generated or manipulated content more clearly but abstracts away those arrangement details.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "opus/seed_3"
+ }
+}

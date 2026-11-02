@@ -8,6 +8,9 @@ In order to ensure that those systems are used in a responsible and proportionat
 
 | output | loads | module | clauses | preds | inputs | coverage | violations |
 |---|---|---|---|---|---|---|---|
+| astra/seed_1 | yes | real_time_remote_biometric_identification | 20 | 12 | 12 | 0.744 | 0 |
+| astra/seed_2 | yes | real_time_remote_biometric_identification | 17 | 9 | 13 | 0.756 | 0 |
+| astra/seed_3 | yes | real_time_remote_biometric_identification | 18 | 10 | 14 | 0.732 | 0 |
 | deepseek/seed_1 | NO | real_time_biometric_identification | 11 | 11 | 17 | 0.671 | 3 |
 | deepseek/seed_2 | NO | real_time_biometric_identification | 12 | 12 | 11 | 0.646 | 12 |
 | deepseek/seed_3 | yes | real_time_biometric_identification | 16 | 14 | 14 | 0.622 | 2 |
@@ -20,11 +23,371 @@ In order to ensure that those systems are used in a responsible and proportionat
 | mistral/seed_1 | NO | responsible_use_biometric_systems | 17 | 15 | 7 | 0.744 | 15 |
 | mistral/seed_2 | yes | responsible_use_biometric_systems | 14 | 8 | 19 | 0.744 | 2 |
 | mistral/seed_3 | NO | remote_biometric_identification_safeguards | 16 | 11 | 10 | 0.756 | 12 |
+| opus/seed_1 | yes | real_time_biometric_identification_use | 13 | 8 | 12 | 0.598 | 1 |
+| opus/seed_2 | yes | real_time_biometric_identification_safeguards | 11 | 6 | 11 | 0.537 | 0 |
+| opus/seed_3 | yes | real_time_biometric_identification_use | 13 | 8 | 12 | 0.537 | 2 |
 | qwen/seed_1 | yes | real_time_remote_biometric_identification | 21 | 17 | 9 | 0.732 | 6 |
 | qwen/seed_2 | yes | real_time_remote_biometric_identification | 16 | 14 | 10 | 0.671 | 2 |
 | qwen/seed_3 | NO | real_time_remote_biometric_identification | 8 | 6 | 15 | 0.549 | 5 |
 
-Within-model (3 seeds): deepseek: J_preds 0.25, J_clauses 0.0, consensus 0.054; gemini: J_preds 0.282, J_clauses 0.0, consensus 0.061; kimi: J_preds 0.109, J_clauses 0.016, consensus 0.0; mistral: J_preds 0.177, J_clauses 0.022, consensus 0.053; qwen: J_preds 0.189, J_clauses 0.03, consensus 0.127
+Within-model (3 seeds): astra: J_preds 0.226, J_clauses 0.0, consensus 0.0; deepseek: J_preds 0.25, J_clauses 0.0, consensus 0.054; gemini: J_preds 0.282, J_clauses 0.0, consensus 0.061; kimi: J_preds 0.109, J_clauses 0.016, consensus 0.0; mistral: J_preds 0.177, J_clauses 0.022, consensus 0.053; opus: J_preds 0.43, J_clauses 0.043, consensus 0.042; qwen: J_preds 0.189, J_clauses 0.03, consensus 0.127
+
+## astra seed 1
+
+```prolog
+:- module(real_time_remote_biometric_identification, [
+    objective_responsible_use/1,
+    objective_proportionate_use/1,
+    required_consideration/1,
+    required_identity_confirmation/1,
+    required_strict_necessity/1,
+    required_fundamental_rights_impact_assessment/1,
+    required_registration/1,
+    permitted_registration_omission/1,
+    required_appropriate_reference_database/1,
+    relevant_situation_applies/1,
+    law_enforcement_use_applies/1,
+    public_real_time_remote_biometric_identification_use_applies/1
+]).
+
+:- dynamic real_time_remote_biometric_identification_system/1.
+:- dynamic uses_system/2.
+:- dynamic publicly_accessible_space_applies/1.
+:- dynamic law_enforcement_purpose_applies/1.
+:- dynamic occurs_in_situation/2.
+:- dynamic exhaustively_listed/1.
+:- dynamic narrowly_defined/1.
+:- dynamic targets_individual/2.
+:- dynamic relevant_law_enforcement_authority/2.
+:- dynamic regulation_provides_registration_exception/1.
+:- dynamic uses_reference_database/2.
+:- dynamic concerns_use_case/2.
+
+public_real_time_remote_biometric_identification_use_applies(Use) :-
+    uses_system(Use, System),
+    real_time_remote_biometric_identification_system(System),
+    publicly_accessible_space_applies(Use).
+
+law_enforcement_use_applies(Use) :-
+    public_real_time_remote_biometric_identification_use_applies(Use),
+    law_enforcement_purpose_applies(Use).
+
+relevant_situation_applies(Use) :-
+    law_enforcement_use_applies(Use),
+    occurs_in_situation(Use, Situation),
+    exhaustively_listed(Situation),
+    narrowly_defined(Situation).
+
+objective_responsible_use(consideration_of_required_element(Use)) :-
+    relevant_situation_applies(Use).
+
+objective_proportionate_use(consideration_of_required_element(Use)) :-
+    relevant_situation_applies(Use).
+
+required_consideration(nature_of_situation_giving_rise_to_request(Use, Situation)) :-
+    relevant_situation_applies(Use),
+    occurs_in_situation(Use, Situation),
+    exhaustively_listed(Situation),
+    narrowly_defined(Situation).
+
+required_consideration(consequence_for_right_and_freedom_of_every_person_concerned(Use)) :-
+    relevant_situation_applies(Use).
+
+required_consideration(safeguard_provided_for(Use)) :-
+    relevant_situation_applies(Use).
+
+required_consideration(condition_provided_for(Use)) :-
+    relevant_situation_applies(Use).
+
+required_identity_confirmation(exclusive_purpose(Use, identity(Individual))) :-
+    law_enforcement_use_applies(Use),
+    targets_individual(Use, Individual).
+
+required_strict_necessity(time_period(Use)) :-
+    law_enforcement_use_applies(Use).
+
+required_strict_necessity(geographic_scope(Use)) :-
+    law_enforcement_use_applies(Use).
+
+required_strict_necessity(personal_scope(Use)) :-
+    law_enforcement_use_applies(Use).
+
+required_consideration(strict_necessity_assessment(Use, evidence_or_indication_regarding(threat))) :-
+    law_enforcement_use_applies(Use).
+
+required_consideration(strict_necessity_assessment(Use, evidence_or_indication_regarding(victim))) :-
+    law_enforcement_use_applies(Use).
+
+required_consideration(strict_necessity_assessment(Use, evidence_or_indication_regarding(perpetrator))) :-
+    law_enforcement_use_applies(Use).
+
+required_fundamental_rights_impact_assessment(
+    prerequisite(authorisation(Use), completed_by(Authority))
+) :-
+    public_real_time_remote_biometric_identification_use_applies(Use),
+    relevant_law_enforcement_authority(Use, Authority).
+
+permitted_registration_omission(Use) :-
+    public_real_time_remote_biometric_identification_use_applies(Use),
+    regulation_provides_registration_exception(Use).
+
+required_registration(
+    prerequisite(authorisation(Use),
+        completed_by(Authority, registration(System, database_as_set_out_in_regulation)))
+) :-
+    public_real_time_remote_biometric_identification_use_applies(Use),
+    relevant_law_enforcement_authority(Use, Authority),
+    uses_system(Use, System),
+    \+ permitted_registration_omission(Use).
+
+required_appropriate_reference_database(
+    reference_database_of_person(Database, use_case(UseCase), situation(Situation))
+) :-
+    relevant_situation_applies(Use),
+    occurs_in_situation(Use, Situation),
+    exhaustively_listed(Situation),
+    narrowly_defined(Situation),
+    concerns_use_case(Use, UseCase),
+    uses_reference_database(Use, Database).
+```
+
+## astra seed 2
+
+```prolog
+:- module(real_time_remote_biometric_identification, [
+    objective_responsible_use/1,
+    objective_proportionate_use/1,
+    required_consideration/1,
+    required_identity_confirmation_only/1,
+    required_strictly_necessary_limit/1,
+    required_fundamental_rights_impact_assessment/1,
+    required_prior_registration/1,
+    permitted_registration_exception/1,
+    required_appropriate_reference_database/1
+]).
+
+:- dynamic real_time/1.
+:- dynamic remote_biometric_identification_system/1.
+:- dynamic uses_system/2.
+:- dynamic publicly_accessible_space_applies/1.
+:- dynamic law_enforcement_purpose_applies/1.
+:- dynamic exhaustively_listed_situation_applies/1.
+:- dynamic narrowly_defined_situation_applies/1.
+:- dynamic requests_use/2.
+:- dynamic relevant_law_enforcement_authority_applies/1.
+:- dynamic authorisation_applies/1.
+:- dynamic registration_exception_under_regulation_applies/1.
+:- dynamic uses_reference_database/2.
+:- dynamic person_reference_database/1.
+
+objective_responsible_use(Use) :-
+    uses_system(Use, System),
+    real_time(System),
+    remote_biometric_identification_system(System),
+    publicly_accessible_space_applies(Use),
+    law_enforcement_purpose_applies(Use).
+
+objective_proportionate_use(Use) :-
+    objective_responsible_use(Use).
+
+required_consideration(nature_of_situation_giving_rise_to_request(Use)) :-
+    objective_responsible_use(Use),
+    exhaustively_listed_situation_applies(Use),
+    narrowly_defined_situation_applies(Use).
+
+required_consideration(consequence_for_right_and_freedom_of_every_person_concerned(Use)) :-
+    objective_responsible_use(Use),
+    exhaustively_listed_situation_applies(Use),
+    narrowly_defined_situation_applies(Use).
+
+required_consideration(safeguard_provided_for_use(Use)) :-
+    objective_responsible_use(Use),
+    exhaustively_listed_situation_applies(Use),
+    narrowly_defined_situation_applies(Use).
+
+required_consideration(condition_provided_for_use(Use)) :-
+    objective_responsible_use(Use),
+    exhaustively_listed_situation_applies(Use),
+    narrowly_defined_situation_applies(Use).
+
+required_identity_confirmation_only(
+    deployment(Use, identity_of_specifically_targeted_individual)
+) :-
+    objective_responsible_use(Use).
+
+required_strictly_necessary_limit(period_of_time(Use)) :-
+    objective_responsible_use(Use).
+
+required_strictly_necessary_limit(geographic_scope(Use)) :-
+    objective_responsible_use(Use).
+
+required_strictly_necessary_limit(personal_scope(Use)) :-
+    objective_responsible_use(Use).
+
+required_consideration(
+    evidence_or_indication_regarding_threat(Use, strictly_necessary_limit)
+) :-
+    objective_responsible_use(Use).
+
+required_consideration(
+    evidence_or_indication_regarding_victim(Use, strictly_necessary_limit)
+) :-
+    objective_responsible_use(Use).
+
+required_consideration(
+    evidence_or_indication_regarding_perpetrator(Use, strictly_necessary_limit)
+) :-
+    objective_responsible_use(Use).
+
+required_fundamental_rights_impact_assessment(
+    completed_before_authorisation(Authority, Use)
+) :-
+    uses_system(Use, System),
+    real_time(System),
+    remote_biometric_identification_system(System),
+    publicly_accessible_space_applies(Use),
+    authorisation_applies(Use),
+    requests_use(Authority, Use),
+    relevant_law_enforcement_authority_applies(Authority).
+
+permitted_registration_exception(Use) :-
+    registration_exception_under_regulation_applies(Use).
+
+required_prior_registration(
+    registration_by_authority_in_database_under_regulation(Authority, System, Use)
+) :-
+    uses_system(Use, System),
+    real_time(System),
+    remote_biometric_identification_system(System),
+    publicly_accessible_space_applies(Use),
+    authorisation_applies(Use),
+    requests_use(Authority, Use),
+    relevant_law_enforcement_authority_applies(Authority),
+    \+ permitted_registration_exception(Use).
+
+required_appropriate_reference_database(
+    reference_database_for_use_case(Database, Use)
+) :-
+    objective_responsible_use(Use),
+    exhaustively_listed_situation_applies(Use),
+    narrowly_defined_situation_applies(Use),
+    uses_reference_database(Use, Database),
+    person_reference_database(Database).
+```
+
+## astra seed 3
+
+```prolog
+:- module(real_time_remote_biometric_identification, [
+    regulated_use/1,
+    listed_situation_use/1,
+    objective_responsible_and_proportionate_use/1,
+    required_consideration/1,
+    required_identity_confirmation_only/1,
+    required_strict_necessity_limit/1,
+    required_completed_fundamental_rights_impact_assessment/1,
+    required_prior_system_registration/1,
+    permitted_registration_exception/1,
+    required_appropriate_reference_database/1
+]).
+
+:- dynamic uses_system/2.
+:- dynamic real_time/1.
+:- dynamic remote_biometric_identification/1.
+:- dynamic publicly_accessible_space_applies/1.
+:- dynamic objective_law_enforcement/1.
+:- dynamic situation_applies/1.
+:- dynamic exhaustively_listed/1.
+:- dynamic narrowly_defined/1.
+:- dynamic targets_individual/2.
+:- dynamic relevant_law_enforcement_authority_applies/1.
+:- dynamic authorisation_applies/1.
+:- dynamic registration_exception_provided_by_regulation_applies/1.
+:- dynamic uses_reference_database/2.
+:- dynamic use_case_applies/1.
+
+regulated_use(Use) :-
+    uses_system(Use, System),
+    real_time(System),
+    remote_biometric_identification(System),
+    publicly_accessible_space_applies(Use),
+    objective_law_enforcement(Use).
+
+listed_situation_use(Use) :-
+    regulated_use(Use),
+    situation_applies(use(Use, Situation)),
+    exhaustively_listed(Situation),
+    narrowly_defined(Situation).
+
+objective_responsible_and_proportionate_use(consideration_requirement(Use)) :-
+    listed_situation_use(Use).
+
+required_consideration(nature_of_situation_giving_rise_to_request(Use, Situation)) :-
+    listed_situation_use(Use),
+    situation_applies(use(Use, Situation)).
+
+required_consideration(consequence_for_right_and_freedom_of_every_person_concerned(Use)) :-
+    listed_situation_use(Use).
+
+required_consideration(safeguard_provided_for_with_use(Use)) :-
+    listed_situation_use(Use).
+
+required_consideration(condition_provided_for_with_use(Use)) :-
+    listed_situation_use(Use).
+
+required_identity_confirmation_only(deployment(Use, confirm_identity(Individual))) :-
+    regulated_use(Use),
+    targets_individual(Use, Individual).
+
+required_strict_necessity_limit(period_of_time(Use)) :-
+    regulated_use(Use).
+
+required_strict_necessity_limit(geographic_scope(Use)) :-
+    regulated_use(Use).
+
+required_strict_necessity_limit(personal_scope(Use)) :-
+    regulated_use(Use).
+
+required_consideration(evidence_or_indication_regarding_threat(Use)) :-
+    regulated_use(Use).
+
+required_consideration(evidence_or_indication_regarding_victim(Use)) :-
+    regulated_use(Use).
+
+required_consideration(evidence_or_indication_regarding_perpetrator(Use)) :-
+    regulated_use(Use).
+
+required_completed_fundamental_rights_impact_assessment(
+    prerequisite(authorisation(Use), completed_by(Authority))
+) :-
+    regulated_use(Use),
+    authorisation_applies(Use),
+    relevant_law_enforcement_authority_applies(use(Use, Authority)).
+
+permitted_registration_exception(Use) :-
+    regulated_use(Use),
+    registration_exception_provided_by_regulation_applies(Use).
+
+required_prior_system_registration(
+    prerequisite(
+        authorisation(Use),
+        registered_by(Authority, System, database_set_out_in_regulation)
+    )
+) :-
+    regulated_use(Use),
+    authorisation_applies(Use),
+    uses_system(Use, System),
+    relevant_law_enforcement_authority_applies(use(Use, Authority)),
+    \+ permitted_registration_exception(Use).
+
+required_appropriate_reference_database(
+    reference_database_of_person(Database, use_case(UseCase), situation(Situation))
+) :-
+    listed_situation_use(Use),
+    uses_reference_database(Use, Database),
+    use_case_applies(use(Use, UseCase)),
+    situation_applies(use(Use, Situation)).
+```
 
 ## deepseek seed 1
 
@@ -1356,6 +1719,254 @@ reference_database_appropriate(S, UseCase) :-
 :- dynamic authorised_use/2.
 :- dynamic provided_otherwise_in_regulation/1.
 :- dynamic use_case/2.
+```
+
+## opus seed 1
+
+```prolog
+:- module(real_time_biometric_identification_use, [
+    must_take_into_account/2,
+    permitted_deployment_purpose/1,
+    must_limit/2,
+    permitted_real_time_remote_biometric_identification/1,
+    registration_satisfied/1,
+    required_appropriate_reference_database/1,
+    objective_responsible_proportionate_use/1
+]).
+
+:- dynamic real_time_remote_biometric_identification_system/1.
+:- dynamic used_in_publicly_accessible_space/1.
+:- dynamic used_for_law_enforcement/1.
+:- dynamic listed_situation/2.
+:- dynamic deployment/2.
+:- dynamic law_enforcement_authority/1.
+:- dynamic uses_system/2.
+:- dynamic completed_fundamental_rights_impact_assessment/2.
+:- dynamic registered_in_database/2.
+:- dynamic registration_exempted_by_regulation/1.
+:- dynamic reference_database/2.
+:- dynamic use_case/2.
+
+% Covered use: real-time RBI in public spaces for law enforcement
+covered_use(S) :-
+    real_time_remote_biometric_identification_system(S),
+    used_in_publicly_accessible_space(S),
+    used_for_law_enforcement(S).
+
+objective_responsible_proportionate_use(S) :-
+    covered_use(S).
+
+% Elements to take into account in each listed situation
+must_take_into_account(Authority, nature_of_situation(Situation)) :-
+    uses_system(Authority, S),
+    listed_situation(S, Situation).
+must_take_into_account(Authority, consequences_for_rights_and_freedoms(S)) :-
+    uses_system(Authority, S),
+    listed_situation(S, _Situation).
+must_take_into_account(Authority, safeguards_and_conditions(S)) :-
+    uses_system(Authority, S),
+    listed_situation(S, _Situation).
+
+% Deployment only to confirm identity of specifically targeted individual
+permitted_deployment_purpose(deployment(S, confirm_identity(P))) :-
+    covered_use(S),
+    deployment(S, confirm_identity(P)).
+
+% Strict necessity limits, having regard to evidence on threats, victims, perpetrator
+must_limit(Authority, strictly_necessary(time_period(S), evidence(threat, victim, perpetrator))) :-
+    uses_system(Authority, S),
+    covered_use(S).
+must_limit(Authority, strictly_necessary(geographic_scope(S), evidence(threat, victim, perpetrator))) :-
+    uses_system(Authority, S),
+    covered_use(S).
+must_limit(Authority, strictly_necessary(personal_scope(S), evidence(threat, victim, perpetrator))) :-
+    uses_system(Authority, S),
+    covered_use(S).
+
+% Registration condition, unless the Regulation provides otherwise
+registration_satisfied(S) :-
+    uses_system(Authority, S),
+    registered_in_database(Authority, S).
+registration_satisfied(S) :-
+    registration_exempted_by_regulation(S).
+
+% Authorisation conditions
+permitted_real_time_remote_biometric_identification(S) :-
+    covered_use(S),
+    uses_system(Authority, S),
+    law_enforcement_authority(Authority),
+    completed_fundamental_rights_impact_assessment(Authority, S),
+    registration_satisfied(S).
+
+% Reference database must be appropriate for each use case in each situation
+required_appropriate_reference_database(reference_database(D, use_case(U))) :-
+    reference_database(S, D),
+    use_case(S, U),
+    listed_situation(S, _Situation).
+```
+
+## opus seed 2
+
+```prolog
+:- module(real_time_biometric_identification_safeguards, [
+    must_take_into_account/2,
+    permitted_deployment/1,
+    must_limit/2,
+    permitted_real_time_remote_biometric_identification/1,
+    registration_exempt_applies/1,
+    required_appropriate_reference_database/1
+]).
+
+:- dynamic real_time_remote_biometric_identification_system/1.
+:- dynamic used_in_publicly_accessible_space/1.
+:- dynamic law_enforcement_purpose/1.
+:- dynamic listed_situation/2.
+:- dynamic deploys/2.
+:- dynamic deployment/2.
+:- dynamic specifically_targeted/1.
+:- dynamic completed_fundamental_rights_impact_assessment/2.
+:- dynamic registered_in_database/2.
+:- dynamic regulation_provides_otherwise/1.
+:- dynamic reference_database/2.
+
+% Elements to be taken into account in each listed situation
+must_take_into_account(Authority, nature_of_situation(Situation)) :-
+    deploys(Authority, S),
+    listed_situation(S, Situation).
+must_take_into_account(Authority, consequences_for_rights_and_freedoms(S)) :-
+    deploys(Authority, S),
+    listed_situation(S, _Situation).
+must_take_into_account(Authority, safeguards_and_conditions(S)) :-
+    deploys(Authority, S),
+    listed_situation(S, _Situation).
+
+% Deployment only to confirm identity of specifically targeted individual
+permitted_deployment(S) :-
+    real_time_remote_biometric_identification_system(S),
+    used_in_publicly_accessible_space(S),
+    law_enforcement_purpose(S),
+    deployment(S, confirm_identity(P)),
+    specifically_targeted(P).
+
+% Limitation to what is strictly necessary
+must_limit(Authority, strictly_necessary(period_of_time(S))) :-
+    deploys(Authority, S),
+    real_time_remote_biometric_identification_system(S),
+    law_enforcement_purpose(S).
+must_limit(Authority, strictly_necessary(geographic_scope(S))) :-
+    deploys(Authority, S),
+    real_time_remote_biometric_identification_system(S),
+    law_enforcement_purpose(S).
+must_limit(Authority, strictly_necessary(personal_scope(S))) :-
+    deploys(Authority, S),
+    real_time_remote_biometric_identification_system(S),
+    law_enforcement_purpose(S).
+
+% Authorisation conditions
+permitted_real_time_remote_biometric_identification(S) :-
+    real_time_remote_biometric_identification_system(S),
+    used_in_publicly_accessible_space(S),
+    deploys(Authority, S),
+    completed_fundamental_rights_impact_assessment(Authority, S),
+    registered_in_database(Authority, S).
+permitted_real_time_remote_biometric_identification(S) :-
+    real_time_remote_biometric_identification_system(S),
+    used_in_publicly_accessible_space(S),
+    deploys(Authority, S),
+    completed_fundamental_rights_impact_assessment(Authority, S),
+    registration_exempt_applies(S).
+
+registration_exempt_applies(S) :-
+    regulation_provides_otherwise(S).
+
+% Reference database appropriateness
+required_appropriate_reference_database(S) :-
+    real_time_remote_biometric_identification_system(S),
+    listed_situation(S, _Situation),
+    reference_database(S, _Database).
+```
+
+## opus seed 3
+
+```prolog
+:- module(real_time_biometric_identification_use, [
+    must_take_into_account/2,
+    permitted_deployment/1,
+    must_limit/2,
+    permitted_real_time_remote_biometric_identification/1,
+    required_appropriate_reference_database/1,
+    exempt_registration/1
+]).
+
+:- dynamic real_time_remote_biometric_identification_system/1.
+:- dynamic used_in_publicly_accessible_space/1.
+:- dynamic used_for_law_enforcement/1.
+:- dynamic listed_situation/2.
+:- dynamic deployment/2.
+:- dynamic specifically_targeted/1.
+:- dynamic law_enforcement_authority/1.
+:- dynamic uses_system/2.
+:- dynamic completed_fundamental_rights_impact_assessment/2.
+:- dynamic registered_in_database/2.
+:- dynamic registration_otherwise_provided/1.
+:- dynamic reference_database/2.
+
+% Law enforcement use in publicly accessible spaces
+law_enforcement_use(S) :-
+    real_time_remote_biometric_identification_system(S),
+    used_in_publicly_accessible_space(S),
+    used_for_law_enforcement(S).
+
+% Elements to take into account in each listed situation
+must_take_into_account(Authority, nature_of_situation(Situation)) :-
+    uses_system(Authority, S),
+    listed_situation(S, Situation).
+must_take_into_account(Authority, consequences_for_rights_and_freedoms(S)) :-
+    uses_system(Authority, S),
+    listed_situation(S, _Situation).
+must_take_into_account(Authority, safeguards_and_conditions(S)) :-
+    uses_system(Authority, S),
+    listed_situation(S, _Situation).
+
+% Deployment only to confirm identity of specifically targeted individual
+permitted_deployment(deployment(S, confirm_identity(P))) :-
+    law_enforcement_use(S),
+    deployment(S, confirm_identity(P)),
+    specifically_targeted(P).
+
+% Limitation to what is strictly necessary
+must_limit(Authority, strictly_necessary(S, period_of_time)) :-
+    uses_system(Authority, S),
+    law_enforcement_use(S).
+must_limit(Authority, strictly_necessary(S, geographic_scope)) :-
+    uses_system(Authority, S),
+    law_enforcement_use(S).
+must_limit(Authority, strictly_necessary(S, personal_scope)) :-
+    uses_system(Authority, S),
+    law_enforcement_use(S).
+
+% Registration exemption where the Regulation provides otherwise
+exempt_registration(S) :-
+    registration_otherwise_provided(S).
+
+registration_satisfied(Authority, S) :-
+    registered_in_database(Authority, S).
+registration_satisfied(_Authority, S) :-
+    exempt_registration(S).
+
+% Authorisation conditions
+permitted_real_time_remote_biometric_identification(S) :-
+    law_enforcement_use(S),
+    law_enforcement_authority(Authority),
+    uses_system(Authority, S),
+    completed_fundamental_rights_impact_assessment(Authority, S),
+    registration_satisfied(Authority, S).
+
+% Reference database appropriate for each use case
+required_appropriate_reference_database(reference_database(S, Situation)) :-
+    law_enforcement_use(S),
+    listed_situation(S, Situation),
+    reference_database(S, Situation).
 ```
 
 ## qwen seed 1

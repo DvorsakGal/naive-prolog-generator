@@ -8,6 +8,9 @@ Providers of AI systems, including general-purpose AI systems, generating synthe
 
 | output | loads | module | clauses | preds | inputs | coverage | violations |
 |---|---|---|---|---|---|---|---|
+| astra/seed_1 | yes | synthetic_content_marking | 26 | 8 | 13 | 0.905 | 0 |
+| astra/seed_2 | yes | synthetic_content_marking | 26 | 9 | 13 | 0.841 | 0 |
+| astra/seed_3 | yes | synthetic_content_marking | 26 | 7 | 12 | 0.905 | 0 |
 | deepseek/seed_1 | NO | ai_output_marking | 12 | 10 | 14 | 0.667 | 14 |
 | deepseek/seed_2 | NO | ai_output_marking | 12 | 10 | 16 | 0.603 | 10 |
 | deepseek/seed_3 | NO | ai_output_marking | 19 | 9 | 11 | 0.81 | 9 |
@@ -20,11 +23,374 @@ Providers of AI systems, including general-purpose AI systems, generating synthe
 | mistral/seed_1 | yes | synthetic_content_marking | 26 | 14 | 26 | 0.825 | 13 |
 | mistral/seed_2 | yes | synthetic_content_marking | 29 | 20 | 23 | 0.825 | 18 |
 | mistral/seed_3 | yes | synthetic_content_marking | 16 | 8 | 9 | 0.556 | 7 |
+| opus/seed_1 | yes | synthetic_content_marking | 14 | 5 | 10 | 0.857 | 1 |
+| opus/seed_2 | yes | synthetic_content_marking | 16 | 6 | 14 | 0.714 | 2 |
+| opus/seed_3 | yes | synthetic_content_marking | 19 | 8 | 7 | 0.746 | 3 |
 | qwen/seed_1 | yes | synthetic_content_marking | 10 | 6 | 14 | 0.714 | 15 |
 | qwen/seed_2 | yes | synthetic_content_marking | 15 | 12 | 9 | 0.683 | 8 |
 | qwen/seed_3 | yes | ai_content_marking | 13 | 8 | 14 | 0.714 | 14 |
 
-Within-model (3 seeds): deepseek: J_preds 0.095, J_clauses 0.0, consensus 0.0; gemini: J_preds 0.373, J_clauses 0.0, consensus 0.083; kimi: J_preds 0.147, J_clauses 0.0, consensus 0.0; mistral: J_preds 0.246, J_clauses 0.035, consensus 0.033; qwen: J_preds 0.437, J_clauses 0.189, consensus 0.125
+Within-model (3 seeds): astra: J_preds 0.2, J_clauses 0.055, consensus 0.166; deepseek: J_preds 0.095, J_clauses 0.0, consensus 0.0; gemini: J_preds 0.373, J_clauses 0.0, consensus 0.083; kimi: J_preds 0.147, J_clauses 0.0, consensus 0.0; mistral: J_preds 0.246, J_clauses 0.035, consensus 0.033; opus: J_preds 0.381, J_clauses 0.168, consensus 0.218; qwen: J_preds 0.437, J_clauses 0.189, consensus 0.125
+
+## astra seed 1
+
+```prolog
+:- module(synthetic_content_marking, [
+    content_type_applies/1,
+    synthetic_content_obligation_applies/1,
+    permitted_exemption/1,
+    exempt_synthetic_content_obligation/1,
+    must_ensure/2,
+    must_take_into_account/2,
+    technical_quality_applies/1,
+    criminal_offence_purpose_applies/1
+]).
+
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic provides_system/2.
+:- dynamic generates_content/2.
+:- dynamic performs_assistive_function/2.
+:- dynamic does_not_substantially_alter/1.
+:- dynamic authorised_by_law/1.
+:- dynamic deployer_provided/1.
+:- dynamic implements_solution/2.
+:- dynamic technically_feasible/1.
+:- dynamic relevant_technical_standard/1.
+:- dynamic reflects_state_of_the_art/2.
+:- dynamic generally_acknowledged/1.
+
+content_type_applies(audio).
+content_type_applies(image).
+content_type_applies(video).
+content_type_applies(text).
+
+synthetic_content_obligation_applies(scope(System, Extent)) :-
+    ai_system(System),
+    generates_content(System, synthetic_content(Type, _Output, Extent)),
+    content_type_applies(Type),
+    \+ permitted_exemption(scope(System, Extent)).
+
+synthetic_content_obligation_applies(scope(System, Extent)) :-
+    general_purpose_ai_system(System),
+    generates_content(System, synthetic_content(Type, _Output, Extent)),
+    content_type_applies(Type),
+    \+ permitted_exemption(scope(System, Extent)).
+
+permitted_exemption(scope(System, Extent)) :-
+    performs_assistive_function(System, standard_editing(Extent)).
+
+permitted_exemption(scope(System, Extent)) :-
+    deployer_provided(input_data(System, Data, Extent)),
+    does_not_substantially_alter(input_data(System, Data, Extent)).
+
+permitted_exemption(scope(System, Extent)) :-
+    deployer_provided(input_data(System, Data, Extent)),
+    does_not_substantially_alter(semantics(System, Data, Extent)).
+
+permitted_exemption(scope(System, Extent)) :-
+    authorised_by_law(use(System, Extent, Purpose)),
+    criminal_offence_purpose_applies(Purpose).
+
+exempt_synthetic_content_obligation(scope(System, Extent)) :-
+    permitted_exemption(scope(System, Extent)).
+
+criminal_offence_purpose_applies(detect(criminal_offence)).
+criminal_offence_purpose_applies(prevent(criminal_offence)).
+criminal_offence_purpose_applies(investigate(criminal_offence)).
+criminal_offence_purpose_applies(prosecute(criminal_offence)).
+
+must_ensure(Provider, marked(Output, machine_readable_format, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    generates_content(System, synthetic_content(Type, Output, Extent)),
+    content_type_applies(Type).
+
+must_ensure(Provider, detectable(Output, artificially_generated_or_manipulated, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    generates_content(System, synthetic_content(Type, Output, Extent)),
+    content_type_applies(Type).
+
+technical_quality_applies(effective).
+technical_quality_applies(interoperable).
+technical_quality_applies(robust).
+technical_quality_applies(reliable).
+
+must_ensure(Provider, technical_quality(Solution, Quality, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    implements_solution(Provider, marking_solution(System, Solution, Extent)),
+    technical_quality_applies(Quality),
+    technically_feasible(technical_quality(Solution, Quality, Extent)).
+
+must_take_into_account(Provider, specificity_and_limitation(various_content_type, Solution, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    implements_solution(Provider, marking_solution(System, Solution, Extent)).
+
+must_take_into_account(Provider, implementation_cost(Solution, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    implements_solution(Provider, marking_solution(System, Solution, Extent)).
+
+must_take_into_account(Provider, generally_acknowledged_state_of_the_art(Solution, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    implements_solution(Provider, marking_solution(System, Solution, Extent)).
+
+must_take_into_account(Provider, state_of_the_art(Art, reflected_in(Standard), Solution, Extent)) :-
+    provides_system(Provider, System),
+    synthetic_content_obligation_applies(scope(System, Extent)),
+    implements_solution(Provider, marking_solution(System, Solution, Extent)),
+    relevant_technical_standard(Standard),
+    reflects_state_of_the_art(Standard, Art),
+    generally_acknowledged(Art).
+```
+
+## astra seed 2
+
+```prolog
+:- module(synthetic_content_marking, [
+    covered/1,
+    synthetic_content_generation_applies/1,
+    exempt_output_marking/1,
+    permitted_unmarked_output/1,
+    criminal_offence_purpose_applies/1,
+    must_ensure/2,
+    must_take_into_account/2,
+    required_technical_quality/1,
+    relevant_state_of_the_art_applies/1
+]).
+
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic provides_system/2.
+:- dynamic generates_content/2.
+:- dynamic output_of_system/2.
+:- dynamic performs_function/2.
+:- dynamic non_substantial_input_data_alteration_applies/1.
+:- dynamic non_substantial_input_semantics_alteration_applies/1.
+:- dynamic authorised_by_law/1.
+:- dynamic implements_solution/2.
+:- dynamic technically_feasible/1.
+:- dynamic relevant_technical_standard/1.
+:- dynamic reflects_state_of_the_art/2.
+
+covered(System) :-
+    ai_system(System),
+    synthetic_content_generation_applies(System).
+covered(System) :-
+    general_purpose_ai_system(System),
+    synthetic_content_generation_applies(System).
+
+synthetic_content_generation_applies(System) :-
+    generates_content(System, synthetic(audio)).
+synthetic_content_generation_applies(System) :-
+    generates_content(System, synthetic(image)).
+synthetic_content_generation_applies(System) :-
+    generates_content(System, synthetic(video)).
+synthetic_content_generation_applies(System) :-
+    generates_content(System, synthetic(text)).
+
+% Exceptions are limited to the relevant function or use of the system.
+exempt_output_marking(scope(System, Function)) :-
+    performs_function(System, Function),
+    Function = assistive(standard_editing).
+exempt_output_marking(scope(System, Function)) :-
+    performs_function(System, Function),
+    non_substantial_input_data_alteration_applies(
+        scope(System, Function, data_provided_by_deployer)).
+exempt_output_marking(scope(System, Function)) :-
+    performs_function(System, Function),
+    non_substantial_input_semantics_alteration_applies(
+        scope(System, Function, data_provided_by_deployer)).
+exempt_output_marking(scope(System, Function)) :-
+    performs_function(System, Function),
+    criminal_offence_purpose_applies(Function),
+    authorised_by_law(scope(System, Function)).
+
+criminal_offence_purpose_applies(detect(criminal_offence)).
+criminal_offence_purpose_applies(prevent(criminal_offence)).
+criminal_offence_purpose_applies(investigate(criminal_offence)).
+criminal_offence_purpose_applies(prosecute(criminal_offence)).
+
+permitted_unmarked_output(scope(System, Function)) :-
+    exempt_output_marking(scope(System, Function)).
+
+must_ensure(Provider, machine_readable_marking(Output)) :-
+    provides_system(Provider, System),
+    covered(System),
+    output_of_system(Output, scope(System, Function)),
+    \+ permitted_unmarked_output(scope(System, Function)).
+
+must_ensure(Provider, detectable(Output, artificially_generated_or_manipulated)) :-
+    provides_system(Provider, System),
+    covered(System),
+    output_of_system(Output, scope(System, Function)),
+    \+ permitted_unmarked_output(scope(System, Function)).
+
+required_technical_quality(effective).
+required_technical_quality(interoperable).
+required_technical_quality(robust).
+required_technical_quality(reliable).
+
+must_ensure(Provider, quality(Solution, Quality, FeasibleExtent)) :-
+    provides_system(Provider, System),
+    covered(System),
+    implements_solution(Provider, solution(Solution, scope(System, Function))),
+    \+ permitted_unmarked_output(scope(System, Function)),
+    required_technical_quality(Quality),
+    technically_feasible(quality(Solution, Quality, FeasibleExtent)).
+
+must_take_into_account(Provider, content_type_specificity_and_limitation(Solution)) :-
+    provides_system(Provider, System),
+    covered(System),
+    implements_solution(Provider, solution(Solution, scope(System, Function))),
+    \+ permitted_unmarked_output(scope(System, Function)).
+
+must_take_into_account(Provider, implementation_cost(Solution)) :-
+    provides_system(Provider, System),
+    covered(System),
+    implements_solution(Provider, solution(Solution, scope(System, Function))),
+    \+ permitted_unmarked_output(scope(System, Function)).
+
+must_take_into_account(Provider, generally_acknowledged_state_of_the_art(Solution)) :-
+    provides_system(Provider, System),
+    covered(System),
+    implements_solution(Provider, solution(Solution, scope(System, Function))),
+    \+ permitted_unmarked_output(scope(System, Function)).
+
+relevant_state_of_the_art_applies(reflection(StateOfTheArt, Standard)) :-
+    relevant_technical_standard(Standard),
+    reflects_state_of_the_art(Standard, StateOfTheArt).
+```
+
+## astra seed 3
+
+```prolog
+:- module(synthetic_content_marking, [
+    synthetic_content_system_applies/1,
+    permitted_non_compliance/1,
+    exempt_marking_obligation/1,
+    must_ensure/2,
+    must_take_into_account/2,
+    required_technical_quality/1,
+    permitted_state_of_the_art_reference/1
+]).
+
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic generates_content/2.
+:- dynamic provides_system/2.
+:- dynamic generates_output/2.
+:- dynamic performs_function/2.
+:- dynamic non_substantial_alteration_applies/1.
+:- dynamic authorised_by_law/2.
+:- dynamic implements_solution/2.
+:- dynamic technically_feasible/1.
+:- dynamic relevant_technical_standard/1.
+:- dynamic reflects_state_of_the_art/2.
+
+synthetic_content_system_applies(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(audio)).
+synthetic_content_system_applies(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(image)).
+synthetic_content_system_applies(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(video)).
+synthetic_content_system_applies(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(text)).
+synthetic_content_system_applies(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(audio)).
+synthetic_content_system_applies(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(image)).
+synthetic_content_system_applies(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(video)).
+synthetic_content_system_applies(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(text)).
+
+% Exceptions concern only the extent covered by the stated function,
+% lack of substantial alteration, or legal authorisation.
+permitted_non_compliance(scope(S, Extent)) :-
+    performs_function(S, within(Extent, assistive(standard_editing))).
+permitted_non_compliance(scope(S, Extent)) :-
+    non_substantial_alteration_applies(
+        scope(S, Extent, deployer_provided_input_data_and_its_semantics)).
+permitted_non_compliance(scope(S, Extent)) :-
+    authorised_by_law(S, within(Extent, detect(criminal_offence))).
+permitted_non_compliance(scope(S, Extent)) :-
+    authorised_by_law(S, within(Extent, prevent(criminal_offence))).
+permitted_non_compliance(scope(S, Extent)) :-
+    authorised_by_law(S, within(Extent, investigate(criminal_offence))).
+permitted_non_compliance(scope(S, Extent)) :-
+    authorised_by_law(S, within(Extent, prosecute(criminal_offence))).
+
+exempt_marking_obligation(scope(S, Extent)) :-
+    permitted_non_compliance(scope(S, Extent)).
+
+must_ensure(Provider, marked(Output, machine_readable_format)) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    generates_output(S, within(Extent, Output)),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+must_ensure(Provider, detectable(Output, artificially_generated_or_manipulated)) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    generates_output(S, within(Extent, Output)),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+required_technical_quality(effective).
+required_technical_quality(interoperable).
+required_technical_quality(robust).
+required_technical_quality(reliable).
+
+must_ensure(Provider, quality(Solution, Quality, within(Extent))) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    implements_solution(Provider, marking_solution(S, Solution, Extent)),
+    required_technical_quality(Quality),
+    technically_feasible(
+        quality(Solution, Quality, within(Extent),
+            taking_into_account(
+                content_type_specificity_and_limitation,
+                implementation_cost,
+                generally_acknowledged_state_of_the_art))),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+must_take_into_account(Provider,
+    solution(Solution, within(Extent), content_type_specificity_and_limitation)) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    implements_solution(Provider, marking_solution(S, Solution, Extent)),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+must_take_into_account(Provider,
+    solution(Solution, within(Extent), implementation_cost)) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    implements_solution(Provider, marking_solution(S, Solution, Extent)),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+must_take_into_account(Provider,
+    solution(Solution, within(Extent), generally_acknowledged_state_of_the_art)) :-
+    provides_system(Provider, S),
+    synthetic_content_system_applies(S),
+    implements_solution(Provider, marking_solution(S, Solution, Extent)),
+    \+ permitted_non_compliance(scope(S, Extent)).
+
+permitted_state_of_the_art_reference(Standard) :-
+    relevant_technical_standard(Standard),
+    reflects_state_of_the_art(Standard, generally_acknowledged_state_of_the_art).
+```
 
 ## deepseek seed 1
 
@@ -1316,6 +1682,240 @@ exempt_from_marking(Provider, Output) :-
 :- dynamic output_derived_from_input/2.
 :- dynamic substantially_alters/2.
 :- dynamic authorised_by_law/2.
+```
+
+## opus seed 1
+
+```prolog
+:- module(synthetic_content_marking, [
+    generates_synthetic_content/1,
+    must_ensure/2,
+    exempt_output_marking/1,
+    synthetic_content_type/1
+]).
+
+:- dynamic provider_of/2.
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic generates_content/2.
+:- dynamic performs_assistive_function/2.
+:- dynamic substantially_alters/2.
+:- dynamic authorised_by_law/2.
+:- dynamic technically_feasible/1.
+:- dynamic output_of/2.
+:- dynamic technical_solution_of/2.
+
+% Types of synthetic content
+synthetic_content_type(audio).
+synthetic_content_type(image).
+synthetic_content_type(video).
+synthetic_content_type(text).
+
+% AI systems, including general-purpose AI systems, generating synthetic content
+generates_synthetic_content(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(Type)),
+    synthetic_content_type(Type).
+generates_synthetic_content(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(Type)),
+    synthetic_content_type(Type).
+
+% Duty to mark outputs machine-readably and detectably
+must_ensure(Provider, marked(Output, machine_readable_format)) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    output_of(Output, S),
+    \+ exempt_output_marking(S).
+must_ensure(Provider, detectable(Output, artificially_generated_or_manipulated)) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    output_of(Output, S),
+    \+ exempt_output_marking(S).
+
+% Duty that technical solutions are effective, interoperable, robust and reliable,
+% as far as technically feasible, considering content specificities and limitations,
+% implementation costs and the generally acknowledged state of the art
+must_ensure(Provider, quality(Solution, [effective, interoperable, robust, reliable],
+        taking_into_account([content_specificities_and_limitations,
+                             implementation_costs,
+                             state_of_the_art(technical_standards)]))) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    technical_solution_of(Solution, S),
+    technically_feasible(Solution),
+    \+ exempt_output_marking(S).
+
+% Exemptions
+exempt_output_marking(S) :-
+    performs_assistive_function(S, standard_editing).
+exempt_output_marking(S) :-
+    ai_system(S),
+    \+ alters_input_substantially(S).
+exempt_output_marking(S) :-
+    authorised_by_law(S, detect_prevent_investigate_prosecute(criminal_offence)).
+
+alters_input_substantially(S) :-
+    substantially_alters(S, input_data(deployer)).
+alters_input_substantially(S) :-
+    substantially_alters(S, semantics(input_data(deployer))).
+```
+
+## opus seed 2
+
+```prolog
+:- module(synthetic_content_marking, [
+    generates_synthetic_content/1,
+    must_ensure/2,
+    exempt_output_marking/1,
+    technical_solution_standard_met/1
+]).
+
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic provider_of/2.
+:- dynamic generates_content/2.
+:- dynamic synthetic_content_type/1.
+:- dynamic performs_assistive_function_for_standard_editing/1.
+:- dynamic substantially_alters_input_data/1.
+:- dynamic substantially_alters_input_semantics/1.
+:- dynamic authorised_by_law_for_criminal_offence/1.
+:- dynamic technically_feasible/1.
+:- dynamic effective/1.
+:- dynamic interoperable/1.
+:- dynamic robust/1.
+:- dynamic reliable/1.
+:- dynamic technical_solution_of/2.
+
+% Synthetic content types
+synthetic_content_type(audio).
+synthetic_content_type(image).
+synthetic_content_type(video).
+synthetic_content_type(text).
+
+generates_synthetic_content(S) :-
+    ai_system(S),
+    generates_content(S, Type),
+    synthetic_content_type(Type).
+generates_synthetic_content(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, Type),
+    synthetic_content_type(Type).
+
+% Exemptions
+exempt_output_marking(S) :-
+    performs_assistive_function_for_standard_editing(S).
+exempt_output_marking(S) :-
+    generates_synthetic_content(S),
+    \+ alters_input(S).
+exempt_output_marking(S) :-
+    authorised_by_law_for_criminal_offence(S).
+
+alters_input(S) :- substantially_alters_input_data(S).
+alters_input(S) :- substantially_alters_input_semantics(S).
+
+% Marking obligation
+must_ensure(Provider, output_marked(S, machine_readable_format)) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    \+ exempt_output_marking(S).
+must_ensure(Provider, output_detectable(S, artificially_generated_or_manipulated)) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    \+ exempt_output_marking(S).
+
+% Quality of technical solutions, as far as technically feasible, taking into
+% account content specificities, implementation costs and state of the art
+must_ensure(Provider, technical_solution_quality(T, considering(content_specificity, implementation_cost, state_of_the_art))) :-
+    provider_of(Provider, S),
+    generates_synthetic_content(S),
+    technical_solution_of(T, S),
+    technically_feasible(T).
+
+technical_solution_standard_met(T) :-
+    effective(T),
+    interoperable(T),
+    robust(T),
+    reliable(T).
+
+alters_input(_) :- fail.
+```
+
+## opus seed 3
+
+```prolog
+:- module(synthetic_content_marking, [
+    generates_synthetic_content/1,
+    must_ensure/2,
+    exempt_marking_obligation/1,
+    marking_obligation_applies/1,
+    synthetic_content_type/1
+]).
+
+:- dynamic provider_of/2.
+:- dynamic ai_system/1.
+:- dynamic general_purpose_ai_system/1.
+:- dynamic generates_content/2.
+:- dynamic performs_assistive_function_for_standard_editing/1.
+:- dynamic substantially_alters_input_data/1.
+:- dynamic substantially_alters_input_semantics/1.
+:- dynamic authorised_by_law_for_criminal_offence_purpose/1.
+:- dynamic technically_feasible/1.
+
+% Types of synthetic content
+synthetic_content_type(audio).
+synthetic_content_type(image).
+synthetic_content_type(video).
+synthetic_content_type(text).
+
+% AI systems, including general-purpose AI systems, generating synthetic content
+generates_synthetic_content(S) :-
+    ai_system(S),
+    generates_content(S, synthetic(T)),
+    synthetic_content_type(T).
+generates_synthetic_content(S) :-
+    general_purpose_ai_system(S),
+    generates_content(S, synthetic(T)),
+    synthetic_content_type(T).
+
+% Exceptions to the obligation
+exempt_marking_obligation(S) :-
+    performs_assistive_function_for_standard_editing(S).
+exempt_marking_obligation(S) :-
+    generates_synthetic_content(S),
+    \+ substantially_alters_input_data(S),
+    \+ substantially_alters_input_semantics(S).
+exempt_marking_obligation(S) :-
+    authorised_by_law_for_criminal_offence_purpose(S).
+
+substantially_alters_input_data(_) :- fail.
+substantially_alters_input_semantics(_) :- fail.
+
+marking_obligation_applies(S) :-
+    generates_synthetic_content(S),
+    \+ exempt_marking_obligation(S).
+
+% Outputs marked machine-readably and detectable as artificially generated or manipulated
+must_ensure(P, marked(output(S), machine_readable_format)) :-
+    provider_of(P, S),
+    marking_obligation_applies(S).
+must_ensure(P, detectable(output(S), artificially_generated_or_manipulated)) :-
+    provider_of(P, S),
+    marking_obligation_applies(S).
+
+% Technical solutions effective, interoperable, robust, reliable as far as feasible,
+% taking into account content specificities and limitations, implementation costs,
+% and generally acknowledged state of the art (as reflected in technical standards)
+must_ensure(P, technical_solution(S, Quality, considering([content_specificities_and_limitations, implementation_cost, state_of_the_art(technical_standard)]))) :-
+    provider_of(P, S),
+    marking_obligation_applies(S),
+    technically_feasible(S),
+    member_quality(Quality).
+
+member_quality(effective).
+member_quality(interoperable).
+member_quality(robust).
+member_quality(reliable).
 ```
 
 ## qwen seed 1

@@ -1,60 +1,60 @@
 {
- "key": "683443c046b4a4a8f532b646500e4c79d383fe87bb1188ddec505715a6dc0bde",
+ "key": "ed6896ed98648238903009aceb9a616644957ed5ec757d7654c9fd05b2d03b94",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A abstracts the scope and information lists for all Annex III high-risk systems in the listed areas, while B specifically limits the scope to Annex III points 1, 6 and 7 and enumerates the information items.\"\n}",
- "coverage_a": 0.833,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules encode the same secure-registration scheme and information sets, but A models the database sections and access restriction more loosely while B states the Article 49(4) restricted-section access rule more directly.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.583,
  "jointly_captured": 6,
- "agreement": 0.0,
- "overall": "different",
- "note": "A abstracts the scope and information lists for all Annex III high-risk systems in the listed areas, while B specifically limits the scope to Annex III points 1, 6 and 7 and enumerates the information items.",
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "note": "Both modules encode the same secure-registration scheme and information sets, but A models the database sections and access restriction more loosely while B states the Article 49(4) restricted-section access rule more directly.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
  }
 }

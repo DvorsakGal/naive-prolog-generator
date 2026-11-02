@@ -1,0 +1,30 @@
+{
+ "key": "555eff9144907a003d0fdafea11a6441c7a043a4f64e54438b69a837b4c1d4e8",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A links the Commission's permission to union-level codes aimed at effective implementation and models cooperation/accessibility more broadly, while B makes the permission less conditioned and structures the detection-and-labelling purpose differently.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "A links the Commission's permission to union-level codes aimed at effective implementation and models cooperation/accessibility more broadly, while B makes the permission less conditioned and structures the detection-and-labelling purpose differently.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_1"
+ }
+}

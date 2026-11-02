@@ -1,0 +1,48 @@
+{
+ "key": "5a157520a4eb6f49a2e20de0131e2343ce02dcefa6a065109f5325e8e5c23b5e",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B models the conditions and deontic requirements more precisely, while A gives looser and sometimes underspecified versions of the same ideas.\"\n}",
+ "coverage_a": 0.875,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "B models the conditions and deontic requirements more precisely, while A gives looser and sometimes underspecified versions of the same ideas.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "astra/seed_1"
+ }
+}

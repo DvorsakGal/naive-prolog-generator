@@ -1,31 +1,31 @@
 {
- "key": "317a01a81485324feb2c79c5500d3920d598d3aafc5e5822571ff265babd35ff",
+ "key": "12fcf40dbc7382b9c0595b3f50ff4c3084b8310abf2a831d42e69518b697ffb4",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same three sentences with the same obligations and exemptions. B models the exemptions more precisely (negated substantial alteration, specific authorised purposes), while A's exemption conditions are muddled and its factor predicates are trivially derived.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models marking and technical-solution requirements with explicit input facts and separate exemption predicates; B encodes marking and quality properties as trivially self-derived from the obligation and gives the exemptions only loosely.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.667,
+ "coverage_b": 1.0,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both cover the same three sentences with the same obligations and exemptions. B models the exemptions more precisely (negated substantial alteration, specific authorised purposes), while A's exemption conditions are muddled and its factor predicates are trivially derived.",
+ "note": "A models marking and technical-solution requirements with explicit input facts and separate exemption predicates; B encodes marking and quality properties as trivially self-derived from the obligation and gives the exemptions only loosely.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

@@ -1,19 +1,19 @@
 {
- "key": "c0bf34142694899b34df1448bd1d19f2d6f6ce944876eb62ef7ed6237273485f",
+ "key": "748800c863038d2b686570befdf1fe5ce135ede7f96d5341d03fe54ffbc0c1ae",
  "kind": "within",
  "text": "rct_34",
  "a": "deepseek/seed_2",
  "b": "deepseek/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 is structured differently: A defines must_take_into_account per situation and makes responsible_use depend on the other conditions, while B ties responsible_use to the three must_take_into_account elements; B also adds an exemption from registration, whereas A's registration check is trivial.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 is modelled differently: A ties the take-into-account elements to the system inside responsible_and_proportionate_use, while B attaches them to situations and defines responsible/proportionate use as a conjunction of the other predicates. The other sentences are modelled similarly, with only small differences.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 4,
  "agreement": 0.75,
  "overall": "mostly_same",
- "note": "Sentence 1 is structured differently: A defines must_take_into_account per situation and makes responsible_use depend on the other conditions, while B ties responsible_use to the three must_take_into_account elements; B also adds an exemption from registration, whereas A's registration check is triv",
+ "note": "Sentence 1 is modelled differently: A ties the take-into-account elements to the system inside responsible_and_proportionate_use, while B attaches them to situations and defines responsible/proportionate use as a conjunction of the other predicates. The other sentences are modelled similarly, with o",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_3",
-  "B": "deepseek/seed_2"
+  "A": "deepseek/seed_2",
+  "B": "deepseek/seed_3"
  }
 }

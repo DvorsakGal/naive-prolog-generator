@@ -1,0 +1,42 @@
+{
+ "key": "ffb0fac4dcffc4a8c7a436757a6d79adef32ece85571567c1d92d4d5aaaf1480",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3's exemption is where they differ: B wrongly exempts any AI system that does not substantially alter input, even with no deployer input, and omits the 'to the extent' scoping and the separate criminal-offence purposes. A models these correctly, and the two also differ in how they structure the technical-quality and take-into-account duties.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.833,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Sentence 3's exemption is where they differ: B wrongly exempts any AI system that does not substantially alter input, even with no deployer input, and omits the 'to the extent' scoping and the separate criminal-offence purposes. A models these correctly, and the two also differ in how they structure",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "opus/seed_1"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "key": "ca0c66c41ca161fe07e8120da951536431a29a6d83dbf213154e6cabd28fd80d",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "deepseek/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice with their purposes, but B models the mandatory and fully applicable obligations and a purpose list, while A conflates the purposes with conditions in the permission rule.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both capture the Commission's permission to encourage and facilitate codes of practice with their purposes, but B models the mandatory and fully applicable obligations and a purpose list, while A conflates the purposes with conditions in the permission rule.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "astra/seed_1"
+ }
+}

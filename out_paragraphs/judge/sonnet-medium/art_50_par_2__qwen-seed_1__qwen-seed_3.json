@@ -1,26 +1,26 @@
 {
- "key": "ea24d82777ed4a0bf9f28f7857bf8bfe35e04695a562bc89bafaefe1d1905da2",
+ "key": "ba7dd606243a1e75b6a2d86e890e9e019195dd189f9f91946c098b947ffeb4f5",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "qwen/seed_1",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"The exemptions in sentence 3 are modelled the same way; for sentences 1 and 2 they differ in structure: A treats marking as a provider-output relation with a separate rule, B uses system and format objects and derives the properties effective, robust and so on from feasibility.\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both model the marking obligation and exemptions similarly, but they differ on how the technical-solution obligation is built: A conditions it on the 'takes into account' predicates and derives the quality properties from feasibility, while B requires the quality properties as conditions and derives the 'takes into account' predicates from feasibility.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
  "jointly_captured": 3,
- "agreement": 0.333,
+ "agreement": 0.667,
  "overall": "mostly_same",
- "note": "The exemptions in sentence 3 are modelled the same way; for sentences 1 and 2 they differ in structure: A treats marking as a provider-output relation with a separate rule, B uses system and format objects and derives the properties effective, robust and so on from feasibility.",
+ "note": "Both model the marking obligation and exemptions similarly, but they differ on how the technical-solution obligation is built: A conditions it on the 'takes into account' predicates and derives the quality properties from feasibility, while B requires the quality properties as conditions and derives",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -30,13 +30,13 @@
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_1"
  }
 }

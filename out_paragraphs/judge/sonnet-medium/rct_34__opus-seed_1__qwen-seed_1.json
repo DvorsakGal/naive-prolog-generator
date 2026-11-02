@@ -1,0 +1,48 @@
+{
+ "key": "fac49034ef01c761b1a3cddb82622decda1968ea7036b2be271ea1ae5b9caa1a",
+ "kind": "across",
+ "text": "rct_34",
+ "a": "opus/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models authorisation as a single permission rule with the impact assessment and a registration-or-exemption condition, while B uses weaker obligation predicates (the registration exemption is trivially self-defeating, and the confirm-identity and limit rules are mostly vacuous); both cover the same four sentences.\"}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "mostly_same",
+ "note": "A models authorisation as a single permission rule with the impact assessment and a registration-or-exemption condition, while B uses weaker obligation predicates (the registration exemption is trivially self-defeating, and the confirm-identity and limit rules are mostly vacuous); both cover the sam",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "key": "83ae4b19cfb272045e7f1fe81a9f66e17aa6b3eae566482e8dc946ac6d8afb11",
+ "model": "anthropic/claude-opus-5.5",
+ "provider": "openrouter",
+ "reasoning": "minimal",
+ "seed": 2,
+ "cached": false,
+ "prompt_tokens": 2239,
+ "completion_tokens": 1020,
+ "wall_s": 8.89,
+ "truncated": false,
+ "chars_out": 2406
+}

@@ -1,19 +1,19 @@
 {
- "key": "981c5395605082988adacb9d54cafffa1d20353121f4a7253a17ed75d66528dd",
+ "key": "0adfbda863c5fdd7f058a0111aa6638bcabf2f425760a5dab4bffa16a2f51f8b",
  "kind": "across",
  "text": "rct_135",
  "a": "deepseek/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the sentence only partially. A ties the Commission's permission to objectives about detection mechanisms, cooperation and distinguishing content, but never names the Commission and ignores the 'without prejudice' clause. B models the mandatory and fully applicable obligations, the Commission and the Union-level codes, but its practical-arrangement and distinction predicates are loose.\"\n}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both partially model the Commission's power to encourage and facilitate Union-level codes of practice. A adds the mandatory and fully applicable obligations and a looser purpose structure, while B models the objectives as sub-goals and defines the content notions in more detail, but omits the 'without prejudice' clause.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "mostly_same",
- "note": "Both capture the sentence only partially. A ties the Commission's permission to objectives about detection mechanisms, cooperation and distinguishing content, but never names the Commission and ignores the 'without prejudice' clause. B models the mandatory and fully applicable obligations, the Commi",
+ "note": "Both partially model the Commission's power to encourage and facilitate Union-level codes of practice. A adds the mandatory and fully applicable obligations and a looser purpose structure, while B models the objectives as sub-goals and defines the content notions in more detail, but omits the 'witho",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

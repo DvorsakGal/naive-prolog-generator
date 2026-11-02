@@ -1,0 +1,30 @@
+{
+ "key": "cec9b5d337aa30798d41876e0e0a98d31827c4b7ea9df93194ff05d472f13a9d",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "gemini/seed_1",
+ "b": "opus/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both partially capture the Commission's permission and the code-of-practice objectives, but they differ in how the practical arrangements and purpose links are represented and both omit the 'without prejudice' condition\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "note": "both partially capture the Commission's permission and the code-of-practice objectives, but they differ in how the practical arrangements and purpose links are represented and both omit the 'without prejudice' condition",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "gemini/seed_1",
+  "B": "opus/seed_1"
+ }
+}

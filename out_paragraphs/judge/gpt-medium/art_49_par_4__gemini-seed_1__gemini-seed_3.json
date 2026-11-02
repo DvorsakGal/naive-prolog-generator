@@ -1,13 +1,13 @@
 {
- "key": "2ad0a2e4add7cc41b0081bbc0949fddfc34924ff7773e7faec29939889d98b9b",
+ "key": "910c94ba1202caf93ccd4efafd676a1efb89bfaaa9fb54c5834456e27f5304f3",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
  "coverage_a": 0.833,
  "coverage_b": 0.833,
  "jointly_captured": 6,
@@ -36,8 +36,8 @@
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -48,13 +48,13 @@
   },
   {
    "n": 6,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "gemini/seed_3"
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
  }
 }

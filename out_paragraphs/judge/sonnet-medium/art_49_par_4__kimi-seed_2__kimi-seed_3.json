@@ -1,19 +1,19 @@
 {
- "key": "97475f0c3ec2dd41662f33f2213d56515664b28ac31a68d41bb15dae12c101b3",
+ "key": "77338679c9c3a3ba0dbe866c8c8bb8015f0918bf6fe4a2806531a98a3c996747",
  "kind": "within",
  "text": "art_49_par_4",
  "a": "kimi/seed_2",
  "b": "kimi/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same structure of registration, information items and access, but A leaves annex points as external inputs filtered via findall, while B hard-codes the point facts and its restricted-section and access logic differs in detail.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same structure loosely; A enumerates concrete point facts and ties access to Article 49(4), while B leaves point numbers as external inputs, derives the system classification from an input predicate and has weaker access rules.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the same structure of registration, information items and access, but A leaves annex points as external inputs filtered via findall, while B hard-codes the point facts and its restricted-section and access logic differs in detail.",
+ "note": "Both capture the same structure loosely; A enumerates concrete point facts and ties access to Article 49(4), while B leaves point numbers as external inputs, derives the system classification from an input predicate and has weaker access rules.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_3",
-  "B": "kimi/seed_2"
+  "A": "kimi/seed_2",
+  "B": "kimi/seed_3"
  }
 }

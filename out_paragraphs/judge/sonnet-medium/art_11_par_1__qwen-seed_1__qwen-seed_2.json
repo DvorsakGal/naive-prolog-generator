@@ -1,25 +1,25 @@
 {
- "key": "af25a8a5071bf0309b86271cade5e83d15610613e5ac3e7548b5ca1b3bc08a5a",
+ "key": "da966d400e6e05c9605b7be40a5c29015e1f6664315d280af313ea9d37f668e5",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B is slightly more detailed (both placement and service events, a conformity-assessment purpose, a form predicate), while A collapses these into constants; the core obligations are the same.\"}",
- "coverage_a": 0.75,
- "coverage_b": 0.583,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same obligations with near-identical rules. A adds an authorities-and-bodies reading of sentence 2 and a conformity-assessment purpose condition for sentence 6, and B asserts sme/startup/high_risk_ai_system as universally true.\"}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "B is slightly more detailed (both placement and service events, a conformity-assessment purpose, a form predicate), while A collapses these into constants; the core obligations are the same.",
+ "note": "Both modules capture the same obligations with near-identical rules. A adds an authorities-and-bodies reading of sentence 2 and a conformity-assessment purpose condition for sentence 6, and B asserts sme/startup/high_risk_ai_system as universally true.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -36,8 +36,8 @@
   },
   {
    "n": 4,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -49,12 +49,12 @@
   {
    "n": 6,
    "a": "full",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "qwen/seed_2"
  }
 }

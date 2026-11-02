@@ -1,0 +1,42 @@
+{
+ "key": "23b1ca78701a37361cc1f81d890a384775e462c5bdda9d0566ea868ea65138a2",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module A captures the same core marking duty but models feasibility, factors to consider, and exemption scope less precisely than module B\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "module A captures the same core marking duty but models feasibility, factors to consider, and exemption scope less precisely than module B",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "astra/seed_1"
+ }
+}

@@ -1,19 +1,19 @@
 {
- "key": "7ac10a27f798f09459fefcd4c85c653ddf26727d51eda90c3c53b31080c1697e",
+ "key": "d83af4708cea3758fd577e75609faff36ba46df51a26956f91fed763cee50f6c",
  "kind": "within",
  "text": "rct_34",
  "a": "mistral/seed_1",
  "b": "mistral/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 3 is the main difference: A defines authorised_use as requiring a completed assessment and registration, while B models the assessment and registration as obligations that depend on authorised_use, which reverses the dependency.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same four sentences with nearly the same predicates; B adds an explicit authorised_use rule and a targeted-individual condition, while A frames the assessment and registration as obligations on the authority.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 0.75,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Sentence 3 is the main difference: A defines authorised_use as requiring a completed assessment and registration, while B models the assessment and registration as obligations that depend on authorised_use, which reverses the dependency.",
+ "note": "Both modules encode the same four sentences with nearly the same predicates; B adds an explicit authorised_use rule and a targeted-individual condition, while A frames the assessment and registration as obligations on the authority.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -32,7 +32,7 @@
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 4,
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "mistral/seed_3"
+  "A": "mistral/seed_3",
+  "B": "mistral/seed_1"
  }
 }

@@ -1,30 +1,30 @@
 {
- "key": "07503d4c04bdb98078440ca67c4f5946a35901219daa8ef32c3f13c6949ecb49",
+ "key": "45d3c2df6f2824cf71511e7b812f0d67b2e4537ed26f620101dc09e9a15e53c1",
  "kind": "within",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "kimi/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A models detection and labelling of generated and manipulated content, the public distinguishing content, and the value-chain actions as separate predicates, while B folds the practical arrangements into one predicate and omits manipulated content.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both partially model the Commission's permission to encourage and facilitate Union-level codes of practice, but B also covers manipulated content and the public, while A omits manipulated content and has loosely structured arrangement rules.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
- "agreement": 0.0,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the Commission's permission to encourage and facilitate Union-level codes of practice, but A models detection and labelling of generated and manipulated content, the public distinguishing content, and the value-chain actions as separate predicates, while B folds the practical arrangemen",
+ "note": "Both partially model the Commission's permission to encourage and facilitate Union-level codes of practice, but B also covers manipulated content and the public, while A omits manipulated content and has loosely structured arrangement rules.",
  "sentences_judged": 1,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_2"
  }
 }

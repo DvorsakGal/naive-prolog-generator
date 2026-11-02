@@ -1,60 +1,60 @@
 {
- "key": "b379fbfd0a46825342b0b1e9f0cfc061354055cba0a79992d01a482dbc7ec3f0",
+ "key": "2876806451a6847f104e46ce99f48a721002b197a625d893762a5a7b9a93064a",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A omits the Article 71/49(4) database-section details and makes the information lists generic, while B adds article-specific mappings for the lists, including tying the Annex IX item to 49(4).\"\n}",
- "coverage_a": 0.833,
- "coverage_b": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both cover the restricted-registration regime and the listed information sets, but B drops some database/article-specific limits while A links the Annex IX item awkwardly and incompletely.\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
  "jointly_captured": 6,
- "agreement": 0.0,
+ "agreement": 0.667,
  "overall": "mostly_same",
- "note": "A omits the Article 71/49(4) database-section details and makes the information lists generic, while B adds article-specific mappings for the lists, including tying the Annex IX item to 49(4).",
+ "note": "Both cover the restricted-registration regime and the listed information sets, but B drops some database/article-specific limits while A links the Annex IX item awkwardly and incompletely.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "gemini/seed_1"
  }
 }

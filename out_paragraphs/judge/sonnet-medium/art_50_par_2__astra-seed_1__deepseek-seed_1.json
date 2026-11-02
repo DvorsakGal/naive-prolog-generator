@@ -1,0 +1,42 @@
+{
+ "key": "1e74c9a7fc9aec07341a38a8eb2d69df18193647eec8a9d116db6d1108384e6f",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "deepseek/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"B models content types, extent-scoped exemptions and the cost/specificity/state-of-the-art considerations; A is coarser, and its exemption for 'does not substantially alter' is wrongly formulated and omits the deployer qualifier and the cost/specificity factors.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "B models content types, extent-scoped exemptions and the cost/specificity/state-of-the-art considerations; A is coarser, and its exemption for 'does not substantially alter' is wrongly formulated and omits the deployer qualifier and the cost/specificity factors.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "astra/seed_1"
+ }
+}

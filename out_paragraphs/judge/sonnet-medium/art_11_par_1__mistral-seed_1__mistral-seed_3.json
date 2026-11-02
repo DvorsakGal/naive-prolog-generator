@@ -1,37 +1,37 @@
 {
- "key": "b4460ac2317392664ee6d1f63260683ac7fcfcf915d8d18e487f286ada0f7b2c",
+ "key": "18b1ca1f9c5e073031fd28a4fa98ca612e833a4bfae7c3089e5fad6aa6767e78",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "mistral/seed_1",
  "b": "mistral/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same sentences with the same modality; B is slightly weaker on the Commission's establishing and on notified bodies accepting the form, because it uses a generic purpose/1 fact rather than a real action, while A's must_use_simplified_form is unary and B's is binary.\"}",
- "coverage_a": 0.833,
- "coverage_b": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules share the same structure; B is more concrete on the Commission establishing the form and on notified bodies accepting it, and it defines the before-market helpers, while A has stubs and omits those. A's must_use_simplified_form/2 also does not match its exported /1.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.75,
  "jointly_captured": 6,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the same sentences with the same modality; B is slightly weaker on the Commission's establishing and on notified bodies accepting the form, because it uses a generic purpose/1 fact rather than a real action, while A's must_use_simplified_form is unary and B's is binary.",
+ "note": "Both modules share the same structure; B is more concrete on the Commission establishing the form and on notified bodies accepting it, and it defines the before-market helpers, while A has stubs and omits those. A's must_use_simplified_form/2 also does not match its exported /1.",
  "sentences_judged": 6,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_3",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "mistral/seed_3"
  }
 }

@@ -1,19 +1,19 @@
 {
- "key": "c311c2305c9d0f0df976d97ead1ced09103cd0d81588111272f0b8362cd86110",
+ "key": "431803af58e028aaf2f0046f1f0c0aa111d1841c05514cc245102f80ebad014a",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "deepseek/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all six sentences with similar partial renderings. They differ mainly in the Annex IV rule (B negates the SME exception in must_contain, A does not) and in how fully each captures the Commission's duty to establish the form and the \\\"before placing on market\\\" condition.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with similar structure; they differ in detail, e.g. A's must_contain is conditioned on the system not being eligible for simplification, and A's simplified provision is circular, while B uses a responsible entity and unconditional Annex IV elements.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.583,
+ "coverage_b": 0.5,
  "jointly_captured": 6,
  "agreement": 0.833,
  "overall": "mostly_same",
- "note": "Both modules cover all six sentences with similar partial renderings. They differ mainly in the Annex IV rule (B negates the SME exception in must_contain, A does not) and in how fully each captures the Commission's duty to establish the form and the \"before placing on market\" condition.",
+ "note": "Both cover the same sentences with similar structure; they differ in detail, e.g. A's must_contain is conditioned on the system not being eligible for simplification, and A's simplified provision is circular, while B uses a responsible entity and unconditional Annex IV elements.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -37,7 +37,7 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_3",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_3"
  }
 }

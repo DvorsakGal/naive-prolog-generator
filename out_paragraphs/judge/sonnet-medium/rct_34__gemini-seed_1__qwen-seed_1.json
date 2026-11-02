@@ -1,19 +1,19 @@
 {
- "key": "74901064e724b7ed4afce8af69e50f31c4414d554e7f622dfd99d25b33ae4837",
+ "key": "30bcfe5cd292799a252df471a7734708e7190015e659ccc3b2c14afae571a7e3",
  "kind": "across",
  "text": "rct_34",
  "a": "gemini/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B composes a single permitted_use/authorised_use chain with exemption handling, while A uses separate obligation predicates with trivially true stubs and a registration rule that does not actually require the registration fact.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models an authorised_use rule with an impact assessment and a registration-or-exempt condition, while B's assessment and registration rules are trivial and its exemption logic is broken.\"}",
  "coverage_a": 0.625,
  "coverage_b": 0.5,
  "jointly_captured": 4,
  "agreement": 0.75,
  "overall": "mostly_same",
- "note": "B composes a single permitted_use/authorised_use chain with exemption handling, while A uses separate obligation predicates with trivially true stubs and a registration rule that does not actually require the registration fact.",
+ "note": "A models an authorised_use rule with an impact assessment and a registration-or-exempt condition, while B's assessment and registration rules are trivial and its exemption logic is broken.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
  }
 }

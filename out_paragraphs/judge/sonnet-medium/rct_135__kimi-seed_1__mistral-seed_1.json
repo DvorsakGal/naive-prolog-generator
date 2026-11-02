@@ -1,19 +1,19 @@
 {
- "key": "fed93ed03217b39805497d430d04c4625ad2a39f344747261069f5d638d4ce6f",
+ "key": "038b45934ccc3b28b26856b7c04064f4ccab34fc7593c81628f97efb6050c1d0",
  "kind": "across",
  "text": "rct_135",
  "a": "kimi/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the mandatory/applicable obligations and the Commission's codes of practice with their purposes, but A models a permission to encourage and facilitate at Union level, while B omits Union level and facilitation and encodes the purposes as unconstrained facts.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the mandatory and fully applicable transparency obligations and the Commission's permission to encourage codes of practice, but B adds Union-level and a facilitate permission with a muddled grouping of practical arrangements, while A omits Union level and has a weak Commission rule.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "mostly_same",
- "note": "Both capture the mandatory/applicable obligations and the Commission's codes of practice with their purposes, but A models a permission to encourage and facilitate at Union level, while B omits Union level and facilitation and encodes the purposes as unconstrained facts.",
+ "note": "Both capture the mandatory and fully applicable transparency obligations and the Commission's permission to encourage codes of practice, but B adds Union-level and a facilitate permission with a muddled grouping of practical arrangements, while A omits Union level and has a weak Commission rule.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "kimi/seed_1"
  }
 }

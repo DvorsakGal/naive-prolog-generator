@@ -1,25 +1,25 @@
 {
- "key": "c81098202cd086c89fc794d9ae1f509febe84c2fa65e551e35c0e0cae34bb487",
+ "key": "5731e128993c5ed228d746172128f2f553d03d9a67122250291810370c494f6b",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "kimi/seed_2",
  "b": "kimi/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture all three sentences with similar partial coverage; B splits marking into separate obligations and its content-type and technical-solution conditions are modelled differently from A's.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same three sentences with similar structure and similar gaps; they differ in detail, for example A splits marking and detectability into separate obligations and B bundles them, and their exemption encodings differ slightly.\"}",
  "coverage_a": 0.667,
  "coverage_b": 0.667,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules capture all three sentences with similar partial coverage; B splits marking into separate obligations and its content-type and technical-solution conditions are modelled differently from A's.",
+ "note": "Both modules capture the same three sentences with similar structure and similar gaps; they differ in detail, for example A splits marking and detectability into separate obligations and B bundles them, and their exemption encodings differ slightly.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -30,13 +30,13 @@
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_3"
+  "A": "kimi/seed_3",
+  "B": "kimi/seed_2"
  }
 }

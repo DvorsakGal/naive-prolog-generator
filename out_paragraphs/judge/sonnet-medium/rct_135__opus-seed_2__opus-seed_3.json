@@ -1,0 +1,30 @@
+{
+ "key": "367472372d20002cd20ce5fc1e6f00021e72098ff8e30944b4efc6d62bd2fd07",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_2",
+ "b": "opus/seed_3",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the practical arrangements (accessible detection, cooperation with value chain actors, disseminators and authenticity checkers) and the public-distinction objective explicitly, while B collapses them into a chain of rules that all reduce to the effective-implementation objective.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "A models the practical arrangements (accessible detection, cooperation with value chain actors, disseminators and authenticity checkers) and the public-distinction objective explicitly, while B collapses them into a chain of rules that all reduce to the effective-implementation objective.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_2",
+  "B": "opus/seed_3"
+ }
+}

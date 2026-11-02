@@ -1,19 +1,19 @@
 {
- "key": "eb1e19e0b526c5d3641fb8eb4973c4723c15b223dfe69a9213d8ac0fc3eb65d4",
+ "key": "a8b793f0f47a31a39d17058287873e0b1f60f4c1a0bf7c122339f686c7eda90b",
  "kind": "across",
  "text": "rct_34",
  "a": "deepseek/seed_1",
  "b": "mistral/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both are loose, partial encodings of the same four sentences; B adds the 'unless provided otherwise' exception on registration and models the scope limits as separate predicates, while A treats registration as unconditional and ties scope limits to a single rule.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both are loose partial encodings with similar structure; A models the 'unless provided otherwise' exception for registration and ties rules to the situation variable, while B omits the exception and uses disconnected existential conditions.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 4,
- "agreement": 1.0,
+ "agreement": 0.75,
  "overall": "mostly_same",
- "note": "Both are loose, partial encodings of the same four sentences; B adds the 'unless provided otherwise' exception on registration and models the scope limits as separate predicates, while A treats registration as unconditional and ties scope limits to a single rule.",
+ "note": "Both are loose partial encodings with similar structure; A models the 'unless provided otherwise' exception for registration and ties rules to the situation variable, while B omits the exception and uses disconnected existential conditions.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -32,7 +32,7 @@
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "mistral/seed_1"
+  "A": "mistral/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

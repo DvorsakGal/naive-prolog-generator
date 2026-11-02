@@ -1,0 +1,30 @@
+{
+ "key": "296614a5eac9d9e05c45f7fdfc6423572ace9633db4778a50d3f997635c34b96",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "opus/seed_1",
+ "b": "opus/seed_2",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both encode the same permission, mandatory-obligation and purpose structure; A adds redundant encourages/facilitates predicates and a content argument in the distinguish objective, while B's objective_effective_implementation takes the obligation as an argument.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both encode the same permission, mandatory-obligation and purpose structure; A adds redundant encourages/facilitates predicates and a content argument in the distinguish objective, while B's objective_effective_implementation takes the obligation as an argument.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_2",
+  "B": "opus/seed_1"
+ }
+}

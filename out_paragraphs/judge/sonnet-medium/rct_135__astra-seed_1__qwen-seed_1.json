@@ -1,0 +1,30 @@
+{
+ "key": "0017e2ba121476a8347982ae78a185da9224d3290178ba4804d467e2b22a641c",
+ "kind": "across",
+ "text": "rct_135",
+ "a": "astra/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture mandatory/fully applicable obligations, the Commission's permission to encourage and facilitate Union-level codes, and the code purposes, but B models purposes more concretely and with an accessibility condition, while A uses loose generic predicates.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both capture mandatory/fully applicable obligations, the Commission's permission to encourage and facilitate Union-level codes, and the code purposes, but B models purposes more concretely and with an accessibility condition, while A uses loose generic predicates.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "qwen/seed_1",
+  "B": "astra/seed_1"
+ }
+}

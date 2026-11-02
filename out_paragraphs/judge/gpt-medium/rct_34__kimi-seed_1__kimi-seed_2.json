@@ -1,19 +1,19 @@
 {
- "key": "1d7efa06dbb745556d1baa5cc84fa834c09f3e40da4793e336a16fa40c31765c",
+ "key": "fa05122c685b02985829b9094c05e5e2979fa000cdc643372687ac99b84e5ed4",
  "kind": "within",
  "text": "rct_34",
  "a": "kimi/seed_1",
  "b": "kimi/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is more schematic and misses some specifics, especially the detailed factors in sentence 1 and the necessity/evidence limits in sentence 2, while B states those more explicitly.\"\n}",
- "coverage_a": 0.625,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is more schematic and misses several details in sentence 1, while A is less exact on the authorisation and reference-database requirements.\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
  "jointly_captured": 4,
- "agreement": 0.5,
+ "agreement": 0.75,
  "overall": "mostly_same",
- "note": "A is more schematic and misses some specifics, especially the detailed factors in sentence 1 and the necessity/evidence limits in sentence 2, while B states those more explicitly.",
+ "note": "B is more schematic and misses several details in sentence 1, while A is less exact on the authorisation and reference-database requirements.",
  "sentences_judged": 4,
  "judgement": [
   {
@@ -24,9 +24,9 @@
   },
   {
    "n": 2,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 3,
@@ -37,12 +37,12 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_2"
  }
 }

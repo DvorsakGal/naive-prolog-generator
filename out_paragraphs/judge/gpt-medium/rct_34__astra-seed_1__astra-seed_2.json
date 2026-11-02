@@ -1,0 +1,48 @@
+{
+ "key": "3087ccebd430e48d68f0ef430298d315e44068d53f7316d1128d988020dd31be",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "astra/seed_1",
+ "b": "astra/seed_2",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is that module B represents sentence 4 with explicit use-case and situation structure, while module A only ties appropriateness to a use in the relevant situations\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.875,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "note": "the main difference is that module B represents sentence 4 with explicit use-case and situation structure, while module A only ties appropriateness to a use in the relevant situations",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_2",
+  "B": "astra/seed_1"
+ }
+}

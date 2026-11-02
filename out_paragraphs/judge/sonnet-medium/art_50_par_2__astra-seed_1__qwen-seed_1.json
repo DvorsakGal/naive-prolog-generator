@@ -1,0 +1,42 @@
+{
+ "key": "0b7e0aca0282f527d99bd7d765eef6d47677c5e09ff6d08cf9f8d1924797f027",
+ "kind": "across",
+ "text": "art_50_par_2",
+ "a": "astra/seed_1",
+ "b": "qwen/seed_1",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A models the marking, quality, consideration and exemption rules in detail with scoped parameters. B is a coarser version: its first marking rule never checks marking, its second rule does not restrict by exemption, and its 'takes into account' rules are just technical feasibility.\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "A models the marking, quality, consideration and exemption rules in detail with scoped parameters. B is a coarser version: its first marking rule never checks marking, its second rule does not restrict by exemption, and its 'takes into account' rules are just technical feasibility.",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_1",
+  "B": "qwen/seed_1"
+ }
+}

@@ -1,24 +1,24 @@
 {
- "key": "cbf0ac8165eade1320489a0e7d650242b352ffed2ba4d8dad3bc9ce35f2e2c07",
+ "key": "a15f3b71fcaffc8469b30fb027164a2133d88bc4792dbb6418ef8287b6d571aa",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model a marking obligation, technical-solution properties and exemptions, but B's second must_mark_output clause makes marking depend on the output already being machine-readable and detectable, and its exemptions are looser; A models the exemption conditions more closely, though with an unusual structure.\"}",
- "coverage_a": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both capture the marking obligation, technical-solution requirements and exemptions only approximately. B has a more detailed exemption (criminal-offence purposes, AI-system based). A has a second marking rule that omits the exemption check, and its exemptions are looser.\"\n}",
+ "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both model a marking obligation, technical-solution properties and exemptions, but B's second must_mark_output clause makes marking depend on the output already being machine-readable and detectable, and its exemptions are looser; A models the exemption conditions more closely, though with an unusua",
+ "note": "Both capture the marking obligation, technical-solution requirements and exemptions only approximately. B has a more detailed exemption (criminal-offence purposes, AI-system based). A has a second marking rule that omits the exemption check, and its exemptions are looser.",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "qwen/seed_1"
+  "A": "qwen/seed_1",
+  "B": "kimi/seed_1"
  }
 }

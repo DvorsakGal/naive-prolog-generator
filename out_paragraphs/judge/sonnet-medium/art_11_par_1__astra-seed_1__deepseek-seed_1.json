@@ -1,0 +1,60 @@
+{
+ "key": "afc5e8dc88a0a9fabda2e58502f4e106f587919713356517058fd1a8deb9d7a6",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra/seed_1",
+ "b": "deepseek/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all six sentences, but A distorts several (the draw-up obligation is conditioned on the system already being on the market, the minimum content is negated when the simplified option applies, and the SME option is circular), while B renders them faithfully.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "note": "Both cover all six sentences, but A distorts several (the draw-up obligation is conditioned on the system already being on the market, the minimum content is negated when the simplified option applies, and the SME option is circular), while B renders them faithfully.",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "deepseek/seed_1",
+  "B": "astra/seed_1"
+ }
+}

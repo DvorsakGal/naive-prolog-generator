@@ -1,19 +1,19 @@
 {
- "key": "aea2c9de214bd4774a2f5a6d0179deabbf3264d0f6ccc5e596f923e5da06b137",
+ "key": "dab4ed998dcbd76f3f4253ef2ff89ad97c274121ce0886b128b7c0031efd92e9",
  "kind": "across",
  "text": "rct_135",
  "a": "gemini/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A and B both partially capture the Commission's permission to promote Union-level codes of practice, but they differ in structure and content: A includes more of the transparency/detection details while B ties the permission to implementation objectives and omits or generalises some specifics.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A links the Commission's permission to union-level codes aimed at implementation/support arrangements, while B separates that permission from the purpose clauses and models the support/cooperation details differently.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A and B both partially capture the Commission's permission to promote Union-level codes of practice, but they differ in structure and content: A includes more of the transparency/detection details while B ties the permission to implementation objectives and omits or generalises some specifics.",
+ "note": "A links the Commission's permission to union-level codes aimed at implementation/support arrangements, while B separates that permission from the purpose clauses and models the support/cooperation details differently.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
  }
 }

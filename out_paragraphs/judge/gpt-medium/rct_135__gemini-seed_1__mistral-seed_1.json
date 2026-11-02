@@ -1,19 +1,19 @@
 {
- "key": "9fefcae373a2245ddc5a02b090836c3af5c5efbe683dcc9841d7139b2560df36",
+ "key": "b4af2cfa249d8f231b815d012aef75daa8a931b9d8f25d7478ea33a49c637bb9",
  "kind": "across",
  "text": "rct_135",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the purposes and content-specific obligations more explicitly but misses parts of the Commission permission such as facilitation and Union level, while B captures the permission structure better but weakens or omits the link to artificially generated or manipulated content and some end-purpose details.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A and B both cover the Commission\u2019s permission and the transparency/code-of-practice purposes, but A ties the implementation objective to extra support-arrangement conditions while B omits parts like facilitating the drawing up at Union level and models the purposes differently.\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A captures the purposes and content-specific obligations more explicitly but misses parts of the Commission permission such as facilitation and Union level, while B captures the permission structure better but weakens or omits the link to artificially generated or manipulated content and some end-pu",
+ "note": "A and B both cover the Commission\u2019s permission and the transparency/code-of-practice purposes, but A ties the implementation objective to extra support-arrangement conditions while B omits parts like facilitating the drawing up at Union level and models the purposes differently.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
  }
 }

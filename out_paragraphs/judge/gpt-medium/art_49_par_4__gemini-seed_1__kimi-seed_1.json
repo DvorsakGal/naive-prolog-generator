@@ -1,19 +1,19 @@
 {
- "key": "87018c1015213bdf5f909ae1e8a78a925796596f8ca35e97bbf2b18cb11eca67",
+ "key": "aac42ffeb95f777673ecccbc269b77af01e1082994fb0f2c35521e060792a6a5",
  "kind": "across",
  "text": "art_49_par_4",
  "a": "gemini/seed_1",
  "b": "kimi/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A states the secure non-public section more explicitly, while B is vaguer about the database section and frames the listed data as permitted information rather than required included information.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B models the listed information categories as applicability-dependent inclusions, while A lists them more generally and is less explicit about the secure EU database section linkage.\"\n}",
  "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "coverage_b": 0.833,
  "jointly_captured": 6,
- "agreement": 1.0,
+ "agreement": 0.333,
  "overall": "mostly_same",
- "note": "A states the secure non-public section more explicitly, while B is vaguer about the database section and frames the listed data as permitted information rather than required included information.",
+ "note": "B models the listed information categories as applicability-dependent inclusions, while A lists them more generally and is less explicit about the secure EU database section linkage.",
  "sentences_judged": 6,
  "judgement": [
   {
@@ -25,26 +25,26 @@
   {
    "n": 2,
    "a": "partial",
-   "b": "partial",
-   "agree": "yes"
+   "b": "full",
+   "agree": "no"
   },
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
-   "agree": "yes"
+   "b": "full",
+   "agree": "no"
   },
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
-   "agree": "yes"
+   "b": "full",
+   "agree": "no"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
-   "agree": "yes"
+   "b": "full",
+   "agree": "no"
   },
   {
    "n": 6,
@@ -54,7 +54,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "kimi/seed_1"
  }
 }

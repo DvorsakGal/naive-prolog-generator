@@ -1,0 +1,48 @@
+{
+ "key": "bade27065025ee74cdce41093e0707337cf7b9923966621beed5f26baf9db3c9",
+ "kind": "within",
+ "text": "rct_34",
+ "a": "opus/seed_2",
+ "b": "opus/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Modules are structurally very similar; A also requires the actor to be a law enforcement authority and uses a structured deployment term, while B drops the law-enforcement requirement in sentence 3 and uses simpler argument forms.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Modules are structurally very similar; A also requires the actor to be a law enforcement authority and uses a structured deployment term, while B drops the law-enforcement requirement in sentence 3 and uses simpler argument forms.",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_3",
+  "B": "opus/seed_2"
+ }
+}

@@ -1,24 +1,24 @@
 {
- "key": "f58724a87b40678369092a7f3a5b81d6966c8635e5ed885e7c72721ac96a8b98",
+ "key": "672ce3379835c230d241d77dd66852e84ba0314812d5e13de26111d24e2e14f4",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "kimi/seed_1",
  "b": "kimi/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same three sentences only partially, with minor modelling differences: A uses richer parameterised inputs and a feasibility precondition, while B uses unary predicates with circular, trivially derived marking and technical-solution properties.\"}",
- "coverage_a": 0.5,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both model the marking obligation, technical-solution obligation and exemptions similarly; B has awkward extra conditions (e.g. requiring machine_readable_format and detectable_as_artificial as inputs) and models exemptions with more structure, while A uses trivially self-derived properties and a loose exemption (OR of the input conditions).\"}",
+ "coverage_a": 0.667,
  "coverage_b": 0.5,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the same three sentences only partially, with minor modelling differences: A uses richer parameterised inputs and a feasibility precondition, while B uses unary predicates with circular, trivially derived marking and technical-solution properties.",
+ "note": "Both model the marking obligation, technical-solution obligation and exemptions similarly; B has awkward extra conditions (e.g. requiring machine_readable_format and detectable_as_artificial as inputs) and models exemptions with more structure, while A uses trivially self-derived properties and a lo",
  "sentences_judged": 3,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_2",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_2"
  }
 }

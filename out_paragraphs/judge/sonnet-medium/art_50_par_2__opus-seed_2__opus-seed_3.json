@@ -1,0 +1,42 @@
+{
+ "key": "e52204b2ea0e2239a900458a33901b325d19a02f2a6c3a0c4e9de2c566fbe8a9",
+ "kind": "within",
+ "text": "art_50_par_2",
+ "a": "opus/seed_2",
+ "b": "opus/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules handle sentences 1 and 3 almost identically, but on sentence 2 A encodes effective/interoperable/robust/reliable inside the must_ensure obligation while B splits them into a separate technical_solution_standard_met predicate that the obligation does not link to. Both also have flawed exemption logic.\"}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
+ "jointly_captured": 3,
+ "agreement": 0.667,
+ "overall": "mostly_same",
+ "note": "Both modules handle sentences 1 and 3 almost identically, but on sentence 2 A encodes effective/interoperable/robust/reliable inside the must_ensure obligation while B splits them into a separate technical_solution_standard_met predicate that the obligation does not link to. Both also have flawed ex",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "opus/seed_3",
+  "B": "opus/seed_2"
+ }
+}

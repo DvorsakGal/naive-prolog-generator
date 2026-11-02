@@ -1,24 +1,24 @@
 {
- "key": "f648e717c0d3fdbf0d01638cf3b50e35fdf14587b19dde68a2cdee18a14fc430",
+ "key": "e948fddf882ec0a4985c3a6d46d01f8f9dc9f3f19d0d5e668be806ea7bad6ffd",
  "kind": "within",
  "text": "rct_34",
  "a": "deepseek/seed_1",
  "b": "deepseek/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"module A captures sentences 2 and 4 more completely, while module B adds or changes conditions for sentence 1 and makes sentence 2 less faithful\"\n}",
- "coverage_a": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is stronger on the sentence 1 situation qualifiers, while B more directly captures the operational limits and reference-database requirement in sentences 2 and 4.\"\n}",
+ "coverage_a": 0.625,
  "coverage_b": 0.75,
  "jointly_captured": 4,
  "agreement": 0.25,
- "overall": "different",
- "note": "module A captures sentences 2 and 4 more completely, while module B adds or changes conditions for sentence 1 and makes sentence 2 less faithful",
+ "overall": "mostly_same",
+ "note": "A is stronger on the sentence 1 situation qualifiers, while B more directly captures the operational limits and reference-database requirement in sentences 2 and 4.",
  "sentences_judged": 4,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   },
@@ -42,7 +42,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_3",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "deepseek/seed_3"
  }
 }

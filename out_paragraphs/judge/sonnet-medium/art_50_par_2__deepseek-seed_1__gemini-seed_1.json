@@ -1,19 +1,19 @@
 {
- "key": "fdb0c7c412e838526f69ddd939e9a92ef7e3c35cdd23f4d3aa330c357a47adb5",
+ "key": "fbfe52550c3092a9c28713eaf0e07b632d26549dcf152a9e4d38b00b333da93f",
  "kind": "across",
  "text": "art_50_par_2",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B models the machine-readable marking and detectability of sentence 1 and the quality criteria of sentence 2 more explicitly, while A has a weaker marked_and_detectable_output term and treats feasibility and cost as conditions; B's exemptions are provider-level and its input-alteration condition is oddly formulated.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the marking and detectability requirements explicitly but encodes the exemption conditions awkwardly (the 'does not substantially alter' exemption is a negated, unsound check), while B is cleaner on exemptions but abstracts marking/detectability into an opaque term and treats the quality criteria as a bare feasibility and consideration check.\"}",
  "coverage_a": 0.667,
  "coverage_b": 0.667,
  "jointly_captured": 3,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "B models the machine-readable marking and detectability of sentence 1 and the quality criteria of sentence 2 more explicitly, while A has a weaker marked_and_detectable_output term and treats feasibility and cost as conditions; B's exemptions are provider-level and its input-alteration condition is ",
+ "note": "A models the marking and detectability requirements explicitly but encodes the exemption conditions awkwardly (the 'does not substantially alter' exemption is a negated, unsound check), while B is cleaner on exemptions but abstracts marking/detectability into an opaque term and treats the quality cr",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -36,7 +36,7 @@
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "deepseek/seed_1"
+  "A": "deepseek/seed_1",
+  "B": "gemini/seed_1"
  }
 }

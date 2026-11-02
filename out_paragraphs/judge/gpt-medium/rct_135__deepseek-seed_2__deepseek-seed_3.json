@@ -1,19 +1,19 @@
 {
- "key": "e6b90a76fd401b79e2208fb1b3edf66f879a5bbbd6627927253a1d71d79cd842",
+ "key": "0203a65d76b3dbcab27e9ad9ade8e852fa1e6177b690b045d3a7acc4c786a78d",
  "kind": "within",
  "text": "rct_135",
  "a": "deepseek/seed_2",
  "b": "deepseek/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the Union-level codes and public distinction goal but only sketches accessibility and cooperation, while B captures accessibility and cooperation details more explicitly but omits Union level and does not clearly represent the public-distinction element.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"no\"\n    }\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission's permission to encourage or facilitate codes of practice and the transparency-obligation background, but they differ in important details such as Union level, how the detection and labelling objective is formalised, and the accessibility/cooperation/distinguishing subparts\"\n}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 0.0,
  "overall": "different",
- "note": "A captures the Union-level codes and public distinction goal but only sketches accessibility and cooperation, while B captures accessibility and cooperation details more explicitly but omits Union level and does not clearly represent the public-distinction element.",
+ "note": "both modules capture the Commission's permission to encourage or facilitate codes of practice and the transparency-obligation background, but they differ in important details such as Union level, how the detection and labelling objective is formalised, and the accessibility/cooperation/distinguishin",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_2",
-  "B": "deepseek/seed_3"
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_2"
  }
 }

@@ -1,0 +1,30 @@
+{
+ "key": "eb604a3de24298a8f3e3ec69221b1a012210509bb90e0cfc34b73b30bc03b23f",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra/seed_2",
+ "b": "astra/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both model Commission permission to encourage and facilitate Union-level codes and the objectives, but A adds conditions (objectives required for permission, content-type constraints), and B models actors with a different structure, requiring both authenticity and provenance checks.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "Both model Commission permission to encourage and facilitate Union-level codes and the objectives, but A adds conditions (objectives required for permission, content-type constraints), and B models actors with a different structure, requiring both authenticity and provenance checks.",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra/seed_3",
+  "B": "astra/seed_2"
+ }
+}

@@ -1,19 +1,19 @@
 {
- "key": "87c15abcea09fbb4d0d0c7b0513d3a5a84909c8b9403412576b1cb36ff51003a",
+ "key": "ff5f6fe7a1cc737ff02995f79d823524faccefccfe08d6aad0d997e1ba8d00e4",
  "kind": "within",
  "text": "rct_135",
  "a": "deepseek/seed_2",
  "b": "deepseek/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice plus the unaffected mandatory transparency obligations. They differ in how they model the objectives: A uses union-level codes and generic content predicates, while B models detection, labelling, authenticity, provenance and dissemination in more detail but omits union level.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the Commission's permission to encourage and facilitate codes of practice with similar objectives, but A omits the Union level and adds extra body conditions, while B includes Union level and has vaguer objective rules.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
  "jointly_captured": 1,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both capture the Commission's permission to encourage and facilitate codes of practice plus the unaffected mandatory transparency obligations. They differ in how they model the objectives: A uses union-level codes and generic content predicates, while B models detection, labelling, authenticity, pro",
+ "note": "Both capture the Commission's permission to encourage and facilitate codes of practice with similar objectives, but A omits the Union level and adds extra body conditions, while B includes Union level and has vaguer objective rules.",
  "sentences_judged": 1,
  "judgement": [
   {
@@ -24,7 +24,7 @@
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_2",
-  "B": "deepseek/seed_3"
+  "A": "deepseek/seed_3",
+  "B": "deepseek/seed_2"
  }
 }
