@@ -1,43 +1,43 @@
 {
- "key": "a7789c9b001e88258eb4f8be49fe1fa75e9be3447e33214ef5aa6bd4a9f4eb88",
+ "key": "9eb6d00f2366a083ed8d9afd8facba1b9028c97351117eaff35a4f602e4ac99f",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover every sentence in much the same way. B adds a provider as the obligated party and splits out recipients, while A states obligations on documents and has a weaker link to the Article 11(1) form. The differences are minor.\"}",
- "coverage_a": 1.0,
- "coverage_b": 1.0,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"For sentence 1, A drops the 'before placed on market' timing while B keeps it. Elsewhere both are similar, with small differences in how they model the SME and form details.\"}",
+ "coverage_a": 0.643,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Both cover every sentence in much the same way. B adds a provider as the obligated party and splits out recipients, while A states obligations on documents and has a weaker link to the Article 11(1) form. The differences are minor.",
- "sentences_judged": 6,
+ "note": "For sentence 1, A drops the 'before placed on market' timing while B keeps it. Elsewhere both are similar, with small differences in how they model the SME and form details.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -48,13 +48,19 @@
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "gemini/seed_3"
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
  }
 }

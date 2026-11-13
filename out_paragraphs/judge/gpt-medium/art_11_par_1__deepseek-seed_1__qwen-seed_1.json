@@ -1,5 +1,5 @@
 {
- "key": "3992b3b22b8d21ee62176a14d40df26d6cb8443f988db7559b31be6eefcc87c1",
+ "key": "cdc96fb0cb4eb155d495b1f61f1d7b2e71b8e09cd5214cb71e1a8dcbc2e356db",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A and B cover the same provisions but B repeatedly changes or adds conditions and sometimes drops the obligation modality, while A is generally closer but less detailed on some content.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"Module A is generally closer to the text, while module B repeatedly changes conditions or timing and sometimes weakens the required modality.\"\n}",
  "coverage_a": 0.5,
- "coverage_b": 0.667,
- "jointly_captured": 6,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
  "agreement": 0.0,
  "overall": "different",
- "note": "A and B cover the same provisions but B repeatedly changes or adds conditions and sometimes drops the obligation modality, while A is generally closer but less detailed on some content.",
- "sentences_judged": 6,
+ "note": "Module A is generally closer to the text, while module B repeatedly changes conditions or timing and sometimes weakens the required modality.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -31,7 +31,7 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "full",
    "agree": "no"

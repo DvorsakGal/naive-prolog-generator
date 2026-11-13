@@ -1,60 +1,66 @@
 {
- "key": "2e641378adf6c690d56eb975081f494108f8cbc1656098a7310a7a3c780edbc1",
+ "key": "72a8b61080e32d3a05ad4ba369a913f37e3e152752a154a41746ef67e547e953",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is generally more specific about conditions and beneficiaries, while A often states the same obligations more broadly.\"\n}",
- "coverage_a": 0.75,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.5,
- "overall": "mostly_same",
- "note": "B is generally more specific about conditions and beneficiaries, while A often states the same obligations more broadly.",
- "sentences_judged": 6,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"module B is much more underspecified and often omits the text\u2019s parties and conditions that module A tries to encode.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.571,
+ "jointly_captured": 7,
+ "agreement": 0.286,
+ "overall": "different",
+ "note": "module B is much more underspecified and often omits the text\u2019s parties and conditions that module A tries to encode.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "yes"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
    "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
  }
 }

@@ -1,0 +1,66 @@
+{
+ "key": "54b021dc69c08f342821d3bbbf998284b3babd7cdb398167f87ed0c94c2f9841",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra-medium/seed_1",
+ "b": "gemini/seed_1",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is much more schematic, often omitting Annex IV/chp_3 details, recipients and constraints, and it treats start-ups more broadly than SMEs in the simplified-documentation rules\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.429,
+ "overall": "mostly_same",
+ "note": "module B is much more schematic, often omitting Annex IV/chp_3 details, recipients and constraints, and it treats start-ups more broadly than SMEs in the simplified-documentation rules",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra-medium/seed_1",
+  "B": "gemini/seed_1"
+ }
+}

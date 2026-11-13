@@ -1,0 +1,66 @@
+{
+ "key": "507aa3a8b3dc274222671690548afc262bb1cd947b9437607ee88b1c90fcacd2",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "astra-medium/seed_2",
+ "b": "astra-medium/seed_3",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all seven sentences with the same modalities. They differ mainly in representation: A uses separate clarity and comprehensiveness predicates and nests chapter(3) and annex(4), while B bundles form(clear, comprehensive) and uses chp_3 and annex_iv. B also adds a documentation entity and start-up handling.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 7,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "note": "Both modules cover all seven sentences with the same modalities. They differ mainly in representation: A uses separate clarity and comprehensiveness predicates and nests chapter(3) and annex(4), while B bundles form(clear, comprehensive) and uses chp_3 and annex_iv. B also adds a documentation entit",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra-medium/seed_3",
+  "B": "astra-medium/seed_2"
+ }
+}

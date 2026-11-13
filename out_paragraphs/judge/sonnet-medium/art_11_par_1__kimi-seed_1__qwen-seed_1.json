@@ -1,60 +1,66 @@
 {
- "key": "866fee9eb2fbd3bbf3bec7d8787e9673037431759959130fc782a398bfb8f9f9",
+ "key": "1db660f670c2e5488be217e3b1ce759df88c23326b45897a21d82cc030a40054",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all six sentences with similar structure; B adds a provider role and clear-and-comprehensive condition and models the Commission's form for small and microenterprises more specifically, while A is more generic.\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.583,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models more detail (provider, authorities as recipients, small/microenterprise target, Article 11(1) form), while B is coarser, with generic unary obligations and no recipients or targeting; the core obligations are the same.\"}",
+ "coverage_a": 0.929,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules cover all six sentences with similar structure; B adds a provider role and clear-and-comprehensive condition and models the Commission's form for small and microenterprises more specifically, while A is more generic.",
- "sentences_judged": 6,
+ "note": "A models more detail (provider, authorities as recipients, small/microenterprise target, Article 11(1) form), while B is coarser, with generic unary obligations and no recipients or targeting; the core obligations are the same.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 6,
    "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "qwen/seed_1"
  }
 }

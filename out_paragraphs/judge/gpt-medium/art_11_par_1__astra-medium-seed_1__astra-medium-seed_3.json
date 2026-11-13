@@ -1,0 +1,66 @@
+{
+ "key": "be5eb40077df60e589af19b4007d00bd6b76d102cce99e5a7c5542f398535d71",
+ "kind": "within",
+ "text": "art_11_par_1",
+ "a": "astra-medium/seed_1",
+ "b": "astra-medium/seed_3",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main difference is sentence 6, where module A states the obligation to use the form under a broader and less specific opting condition than module B\"\n}",
+ "coverage_a": 0.929,
+ "coverage_b": 1.0,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "note": "the main difference is sentence 6, where module A states the obligation to use the form under a broader and less specific opting condition than module B",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra-medium/seed_1",
+  "B": "astra-medium/seed_3"
+ }
+}

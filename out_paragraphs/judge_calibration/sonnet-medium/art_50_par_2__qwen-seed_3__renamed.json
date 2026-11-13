@@ -1,0 +1,39 @@
+{
+ "key": "b3956a4476df453ab9d80a949663aa2c41c6312e3ada1648ae38f291ff3684d7",
+ "text": "art_50_par_2",
+ "model": "qwen",
+ "seed": 3,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(ai_material_marking, [\n    supplier/1,\n    ai_system/1,\n    general_purpose_ai_system/1,\n    generates_synthetic_material/2,\n    must_mark_generated_output/2,\n    machine_readable_format/1,\n    recognisable_as_artificially_generated/1,\n    must_guarantee_technical_solution_properties/2,\n    effective/1,\n    interoperable/1,\n    robust/1,\n    reliable/1,\n    technically_feasible/1,\n    takes_into_account_material_specificities/1,\n    takes_into_account_implementation_costs/1,\n    takes_into_account_state_of_the_art/1,\n    reflected_in_relevant_technical_standards/1,\n    exempt_marking_duty/1,\n    performs_assistive_function_for_standard_editing/1,\n    does_not_substantially_alter_input_data/1,\n    does_not_substantially_alter_semantics/1,\n    authorised_by_law_for_criminal_offences/1\n]).\n:- dynamic supplier/1.\n:- dynamic ai_system/1.\n:- dynamic general_purpose_ai_system/1.\n:- dynamic generates_synthetic_material/2.\n:- dynamic machine_readable_format/1.\n:- dynamic recognisable_as_artificially_generated/1.\n:- dynamic effective/1.\n:- dynamic interoperable/1.\n:- dynamic robust/1.\n:- dynamic reliable/1.\n:- dynamic technically_feasible/1.\n:- dynamic takes_into_account_material_specificities/1.\n:- dynamic takes_into_account_implementation_costs/1.\n:- dynamic takes_into_account_state_of_the_art/1.\n:- dynamic reflected_in_relevant_technical_standards/1.\n:- dynamic performs_assistive_function_for_standard_editing/1.\n:- dynamic does_not_substantially_alter_input_data/1.\n:- dynamic does_not_substantially_alter_semantics/1.\n:- dynamic authorised_by_law_for_criminal_offences/1.\n\nmust_mark_generated_output(XProvider, XSystem) :-\n    supplier(XProvider),\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    \\+ exempt_marking_duty(XSystem).\n\nrobust(solution(XSystem)) :-\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    technically_feasible(XSystem).\n\nmust_mark_generated_output(_Provider, generated_output(XSystem, XFormat)) :-\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    machine_readable_format(XFormat),\n    recognisable_as_artificially_generated(generated_output(XSystem, XFormat)).\n\nreliable(solution(XSystem)) :-\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    technically_feasible(XSystem).\n\nexempt_marking_duty(XSystem) :-\n    authorised_by_law_for_criminal_offences(XSystem).\n\nmust_guarantee_technical_solution_properties(XProvider, XSystem) :-\n    supplier(XProvider),\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    technically_feasible(XSystem),\n    takes_into_account_material_specificities(XSystem),\n    takes_into_account_implementation_costs(XSystem),\n    takes_into_account_state_of_the_art(XSystem).\n\nexempt_marking_duty(XSystem) :-\n    does_not_substantially_alter_input_data(XSystem).\n\nmust_mark_generated_output(XProvider, XSystem) :-\n    supplier(XProvider),\n    general_purpose_ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    \\+ exempt_marking_duty(XSystem).\n\ninteroperable(solution(XSystem)) :-\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    technically_feasible(XSystem).\n\nreflected_in_relevant_technical_standards(state_of_the_art) :-\n    takes_into_account_state_of_the_art(_System).\n\nexempt_marking_duty(XSystem) :-\n    performs_assistive_function_for_standard_editing(XSystem).\n\neffective(solution(XSystem)) :-\n    ai_system(XSystem),\n    generates_synthetic_material(XSystem, _Content),\n    technically_feasible(XSystem).\n\nexempt_marking_duty(XSystem) :-\n    does_not_substantially_alter_semantics(XSystem).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 3,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

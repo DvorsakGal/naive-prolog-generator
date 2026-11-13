@@ -1,5 +1,5 @@
 {
- "key": "9a60facba52b6d2e2e7231c238b48f71215f178ed2ddeb68bd0cfc488e45f062",
+ "key": "cca788fc47874cf504fb8cb427414f5d64f01c255dfcd5dbae9f312130fd90f3",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "deepseek/seed_2",
@@ -7,20 +7,20 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same provisions, but A is usually closer on timing and Annex IV/Article 11 conditions while B often weakens or shifts those details.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 0.167,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same section overall, but A is looser on the information/form details while B adds or changes conditions in sentences 4, 6 and 7.\"\n}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.429,
  "overall": "mostly_same",
- "note": "Both modules cover the same provisions, but A is usually closer on timing and Annex IV/Article 11 conditions while B often weakens or shifts those details.",
- "sentences_judged": 6,
+ "note": "Both modules cover the same section overall, but A is looser on the information/form details while B adds or changes conditions in sentences 4, 6 and 7.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "full",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "full",
-   "agree": "no"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 4,
    "a": "partial",
    "b": "full",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "partial",
    "agree": "no"

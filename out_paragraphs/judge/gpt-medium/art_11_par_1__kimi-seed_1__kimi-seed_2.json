@@ -1,5 +1,5 @@
 {
- "key": "7503a635f0a0351f2c624834f148869a40868356636ddeb3fae6612944939c44",
+ "key": "244ae08e2e3386465607c174f222c8ccf57607c67aebd5b1478fadd6527fd2c8",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Module A often states purposes as descriptive facts while module B more explicitly encodes obligations, most clearly for sentence 2.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"The main difference is in sentence 2, where module B frames the compliance and information points as obligations while module A states them more as properties of the documentation.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Module A often states purposes as descriptive facts while module B more explicitly encodes obligations, most clearly for sentence 2.",
- "sentences_judged": 6,
+ "note": "The main difference is in sentence 2, where module B frames the compliance and information points as obligations while module A states them more as properties of the documentation.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "yes"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 4,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

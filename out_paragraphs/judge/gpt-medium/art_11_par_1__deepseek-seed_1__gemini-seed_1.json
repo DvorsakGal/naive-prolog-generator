@@ -1,20 +1,20 @@
 {
- "key": "1bfc76665d67d0156fa32fc4adf73293899918652a769088a5752047aad09c16",
+ "key": "7eef4d0adf5a150c65d6898864a3e2c142a8114a9af672c804a6ecb2cb705304",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A repeatedly adds or changes conditions and roles, while B more closely follows the text's obligations and timing.\"\n}",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B repeatedly adds unstated conditions or weakens/changes the modality and timing, so even where both cover the same sentence they often do not mean the same thing.\"\n}",
  "coverage_a": 0.5,
- "coverage_b": 0.75,
- "jointly_captured": 6,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
  "agreement": 0.0,
  "overall": "different",
- "note": "A repeatedly adds or changes conditions and roles, while B more closely follows the text's obligations and timing.",
- "sentences_judged": 6,
+ "note": "B repeatedly adds unstated conditions or weakens/changes the modality and timing, so even where both cover the same sentence they often do not mean the same thing.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -37,24 +37,30 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "full",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

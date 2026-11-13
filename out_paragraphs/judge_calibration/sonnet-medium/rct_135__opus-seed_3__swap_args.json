@@ -1,0 +1,27 @@
+{
+ "key": "c72bdb6831d445fdd283fc17119eaab231591ace952356a059759da1bb55affb",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 3,
+ "probe": "swap_args",
+ "note": "The modules are nearly identical; the only difference is that B's facilitates_drawing_up has swapped argument order in the head (C, Commission), a minor slip.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_content_labelling, [\n    permitted_encouragement_of_code_of_practice/1,\n    permitted_facilitation_of_code_of_practice/1,\n    encourages_drawing_up/2,\n    facilitates_drawing_up/2,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_enable_public_distinction/1,\n    mandatory/1,\n    fully_applicable/1\n]).\n:- dynamic commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_obligation/1.\n:- dynamic concerns_detection_and_labelling/2.\n:- dynamic artificially_generated_or_manipulated_content/1.\n\nmandatory(O) :-\n    transparency_obligation(O).\n\nfully_applicable(O) :-\n    transparency_obligation(O).\n\npermitted_encouragement_of_code_of_practice(C) :-\n    code_of_practice(C),\n    union_level(C).\n\npermitted_facilitation_of_code_of_practice(C) :-\n    code_of_practice(C),\n    union_level(C).\n\nencourages_drawing_up(Commission, C) :-\n    commission(Commission),\n    permitted_encouragement_of_code_of_practice(C).\n\nfacilitates_drawing_up(C, Commission) :-\n    commission(Commission),\n    permitted_facilitation_of_code_of_practice(C).\n\nobjective_effective_implementation(C) :-\n    code_of_practice(C),\n    union_level(C),\n    transparency_obligation(O),\n    concerns_detection_and_labelling(O, Content),\n    artificially_generated_or_manipulated_content(Content).\n\nobjective_support_practical_arrangement(C) :-\n    objective_effective_implementation(C).\n\nobjective_enable_public_distinction(C) :-\n    objective_support_practical_arrangement(C).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"The modules are nearly identical; the only difference is that B's facilitates_drawing_up has swapped argument order in the head (C, Commission), a minor slip.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

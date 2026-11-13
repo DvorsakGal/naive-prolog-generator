@@ -1,0 +1,45 @@
+{
+ "key": "c54b6eaac283d67d1483fabb143cb1c4ab8de8952d0e5cdd350c6e707a16087a",
+ "text": "rct_34",
+ "model": "opus",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "Rules are identical; only A defines covered_use/1, which B calls but leaves undefined.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(real_time_biometric_identification_use, [\n    must_take_into_account/2,\n    permitted_deployment_purpose/1,\n    must_limit/2,\n    permitted_real_time_remote_biometric_identification/1,\n    registration_satisfied/1,\n    required_appropriate_reference_database/1,\n    objective_responsible_proportionate_use/1\n]).\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic used_in_publicly_accessible_space/1.\n:- dynamic used_for_law_enforcement/1.\n:- dynamic listed_situation/2.\n:- dynamic deployment/2.\n:- dynamic law_enforcement_authority/1.\n:- dynamic uses_system/2.\n:- dynamic completed_fundamental_rights_impact_assessment/2.\n:- dynamic registered_in_database/2.\n:- dynamic registration_exempted_by_regulation/1.\n:- dynamic reference_database/2.\n:- dynamic use_case/2.\n\nobjective_responsible_proportionate_use(S) :-\n    covered_use(S).\n\nmust_take_into_account(Authority, nature_of_situation(Situation)) :-\n    uses_system(Authority, S),\n    listed_situation(S, Situation).\n\nmust_take_into_account(Authority, consequences_for_rights_and_freedoms(S)) :-\n    uses_system(Authority, S),\n    listed_situation(S, _Situation).\n\nmust_take_into_account(Authority, safeguards_and_conditions(S)) :-\n    uses_system(Authority, S),\n    listed_situation(S, _Situation).\n\npermitted_deployment_purpose(deployment(S, confirm_identity(P))) :-\n    covered_use(S),\n    deployment(S, confirm_identity(P)).\n\nmust_limit(Authority, strictly_necessary(time_period(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nmust_limit(Authority, strictly_necessary(geographic_scope(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nmust_limit(Authority, strictly_necessary(personal_scope(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nregistration_satisfied(S) :-\n    uses_system(Authority, S),\n    registered_in_database(Authority, S).\n\nregistration_satisfied(S) :-\n    registration_exempted_by_regulation(S).\n\npermitted_real_time_remote_biometric_identification(S) :-\n    covered_use(S),\n    uses_system(Authority, S),\n    law_enforcement_authority(Authority),\n    completed_fundamental_rights_impact_assessment(Authority, S),\n    registration_satisfied(S).\n\nrequired_appropriate_reference_database(reference_database(D, use_case(U))) :-\n    reference_database(S, D),\n    use_case(S, U),\n    listed_situation(S, _Situation).\n",
+ "raw": "Both modules have the same rules. The only difference is that module B never defines `covered_use/1`, so every rule in B that calls it would raise an existence error at run time. Module A defines it. The task is to judge meaning, and B's intent is identical, but B's rules that depend on `covered_use` are formally incomplete.\n\nFor sentences 1 to 4, the rules map the same way in both modules:\n- **Sentence 1:** `must_take_into_account` and `objective_responsible_proportionate_use`.\n- **Sentence 2:** `permitted_deployment_purpose` and `must_limit`.\n- **Sentence 3:** `permitted_real_time_remote_biometric_identification` and `registration_satisfied`.\n- **Sentence 4:** `required_appropriate_reference_database`.\n\nEach sentence is only partly captured, and equally so in both modules, so the two modules agree on every sentence. A's coverage is marginally stronger because its `covered_use` is defined, but I rate both the same.\n\n```json\n{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"Rules are identical; only A defines covered_use/1, which B calls but leaves undefined.\"}\n```",
+ "coverage_a": 0.625,
+ "coverage_b": 0.625,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

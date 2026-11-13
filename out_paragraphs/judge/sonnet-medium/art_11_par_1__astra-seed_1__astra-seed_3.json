@@ -1,5 +1,5 @@
 {
- "key": "d94419558371f9802caf0a9ed6f324729d9bd722031906c4817202d9a2c56eeb",
+ "key": "ded11b3717f80eb38057945f20382564a8e2d3cf643d4f1f86d90a0c6be71757",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "astra/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
- "coverage_a": 1.0,
- "coverage_b": 1.0,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same obligations and permissions; they differ in detail, such as how updating is encoded and how start-ups are handled, and in A's extra purpose argument in must_establish.\"}",
+ "coverage_a": 0.929,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
  "agreement": 1.0,
- "overall": "same",
- "note": "none",
- "sentences_judged": 6,
+ "overall": "mostly_same",
+ "note": "Both modules cover the same obligations and permissions; they differ in detail, such as how updating is encoded and how start-ups are handled, and in A's extra purpose argument in must_establish.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -36,8 +36,8 @@
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

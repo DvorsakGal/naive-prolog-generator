@@ -1,0 +1,66 @@
+{
+ "key": "168b274678f4bef395ec0939c5b0ddef381621b34c868a69cc057add8855da86",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra-medium/seed_1",
+ "b": "kimi/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A conditions drawing up on the system already being placed on the market or in service and does not capture the 'before' timing, while B encodes the timing explicitly. Both capture the other sentences with minor differences in detail.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "note": "Sentence 1 differs: A conditions drawing up on the system already being placed on the market or in service and does not capture the 'before' timing, while B encodes the timing explicitly. Both capture the other sentences with minor differences in detail.",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "kimi/seed_1",
+  "B": "astra-medium/seed_1"
+ }
+}

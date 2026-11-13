@@ -1,5 +1,5 @@
 {
- "key": "9123fac22840e6f6da2a661511bd0250c29bfb5e62aff6ce352b88a62ad7c086",
+ "key": "36e1ea3193dde2ce24c5ff50466bb6c9ff2be8ddcf39fe08396fafa4fcba9461",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,47 +7,53 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A generally models the obligations more directly, while B often weakens or alters them by dropping modality or adding incorrect conditions, especially around Annex IV simplification and form use.\"\n}",
- "coverage_a": 0.583,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 0.167,
- "overall": "different",
- "note": "A generally models the obligations more directly, while B often weakens or alters them by dropping modality or adding incorrect conditions, especially around Annex IV simplification and form use.",
- "sentences_judged": 6,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B more often weakens or distorts the text by turning requirements into plain facts and by mishandling the SME simplified-documentation provisions.\"\n}",
+ "coverage_a": 0.571,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.571,
+ "overall": "mostly_same",
+ "note": "B more often weakens or distorts the text by turning requirements into plain facts and by mishandling the SME simplified-documentation provisions.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
-   "a": "partial",
-   "b": "full",
-   "agree": "no"
-  },
-  {
-   "n": 3,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
-   "n": 4,
+   "n": 3,
    "a": "partial",
    "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
    "agree": "no"
   },
   {
    "n": 5,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

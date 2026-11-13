@@ -1,0 +1,559 @@
+{
+ "scenarios": 26,
+ "passed": 5,
+ "pass_rate": 0.192,
+ "core_scenarios": 14,
+ "core_passed": 3,
+ "core_pass_rate": 0.214,
+ "query_accuracy": 0.333,
+ "correct": 11,
+ "false_positive": 0,
+ "missed": 8,
+ "unanswerable": 14,
+ "queries_total": 33,
+ "per_norm": {
+  "annex_iv_minimum": {
+   "passed": 0,
+   "of": 2,
+   "rate": 0.0
+  },
+  "commission_form": {
+   "passed": 0,
+   "of": 3,
+   "rate": 0.0
+  },
+  "demonstrate_compliance": {
+   "passed": 0,
+   "of": 2,
+   "rate": 0.0
+  },
+  "draw_up_before_entry": {
+   "passed": 0,
+   "of": 4,
+   "rate": 0.0
+  },
+  "duty_bearer": {
+   "passed": 1,
+   "of": 1,
+   "rate": 1.0
+  },
+  "keep_up_to_date": {
+   "passed": 0,
+   "of": 3,
+   "rate": 0.0
+  },
+  "notified_body_accepts_form": {
+   "passed": 0,
+   "of": 3,
+   "rate": 0.0
+  },
+  "provide_information": {
+   "passed": 1,
+   "of": 3,
+   "rate": 0.333
+  },
+  "sme_must_use_form": {
+   "passed": 1,
+   "of": 5,
+   "rate": 0.2
+  },
+  "sme_simplified_permission": {
+   "passed": 2,
+   "of": 4,
+   "rate": 0.5
+  }
+ },
+ "mapped_queries": [
+  "obligation/3",
+  "permission/2"
+ ],
+ "adapter_clauses": {
+  "input": 10,
+  "query": 9,
+  "background_facts": [
+   "commission(commission)"
+  ],
+  "dropped": [],
+  "auto_identity": [],
+  "unmapped_duties": []
+ },
+ "adapter_errors": [],
+ "load_errors": 18,
+ "detail": [
+  {
+   "id": "pre_launch_system_has_duty",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s1), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    },
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": false,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "late_documentation_is_a_breach_not_an_exemption",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s1), _)",
+     "expect": true,
+     "got": "true",
+     "verdict": "correct"
+    },
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "on_time_documentation_complies",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": false,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "deadline_is_the_earlier_event",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "duties_attach_only_to_own_systems",
+   "norms": [
+    "duty_bearer"
+   ],
+   "interpretive": true,
+   "pass": true,
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s2), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    },
+    {
+     "goal": "obligation(beta, draw_up(s1), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "sme_permitted_but_not_obliged_without_opt_in",
+   "norms": [
+    "sme_simplified_permission",
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "permission(tiny, simplify_annex_iv(s1))",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    },
+    {
+     "goal": "obligation(tiny, use_form(_, _), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "simplification_never_removes_annex_iv",
+   "norms": [
+    "annex_iv_minimum",
+    "sme_simplified_permission"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(tiny, include_annex_iv(s1), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    }
+   ]
+  },
+  {
+   "id": "opted_sme_using_wrong_form_breaches",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(tiny, use_form(s1, _))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "opt_in_is_per_system",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(tiny, use_form(s1, _), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    },
+    {
+     "goal": "obligation(tiny, use_form(s2, _), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "large_provider_not_permitted",
+   "norms": [
+    "sme_simplified_permission"
+   ],
+   "interpretive": false,
+   "pass": true,
+   "queries": [
+    {
+     "goal": "permission(big, simplify_annex_iv(s1))",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "start_up_above_sme_thresholds_not_permitted",
+   "norms": [
+    "sme_simplified_permission"
+   ],
+   "interpretive": true,
+   "pass": true,
+   "queries": [
+    {
+     "goal": "permission(scaleup, simplify_annex_iv(s1))",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "missing_annex_iv_is_a_breach",
+   "norms": [
+    "annex_iv_minimum"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, include_annex_iv(s1))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "change_without_update_is_a_breach",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "update_after_change_complies",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": false,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "no_finding_means_undetermined",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "status(acme, provide_information(s1, nb1), undetermined)",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "negative_finding_is_a_breach",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "status(acme, provide_information(s1, nb1), breached)",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "commission_duty_is_unconditional",
+   "norms": [
+    "commission_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(_), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    }
+   ]
+  },
+  {
+   "id": "acceptance_duty_only_for_assessing_body_and_submitted_form",
+   "norms": [
+    "notified_body_accepts_form"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(nb1, accept(d1, _), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    },
+    {
+     "goal": "obligation(nb2, accept(d1, _), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "rejecting_the_form_is_a_breach",
+   "norms": [
+    "notified_body_accepts_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(nb1, accept(d1, _))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "form_established_is_form_the_sme_must_use",
+   "norms": [
+    "commission_form",
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(F), _), obligation(tiny, use_form(s1, F), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    }
+   ]
+  },
+  {
+   "id": "form_established_is_form_the_body_must_accept",
+   "norms": [
+    "commission_form",
+    "notified_body_accepts_form"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(F), _), obligation(nb1, accept(d1, F), _)",
+     "expect": true,
+     "got": "false",
+     "verdict": "missed"
+    }
+   ]
+  },
+  {
+   "id": "information_duty_runs_to_both_recipients",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": false,
+   "pass": true,
+   "queries": [
+    {
+     "goal": "obligation(acme, provide_information(s1, nca1), _)",
+     "expect": true,
+     "got": "true",
+     "verdict": "correct"
+    },
+    {
+     "goal": "obligation(acme, provide_information(s1, nb1), _)",
+     "expect": true,
+     "got": "true",
+     "verdict": "correct"
+    }
+   ]
+  },
+  {
+   "id": "demonstrate_compliance_negative_finding_is_a_breach",
+   "norms": [
+    "demonstrate_compliance"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, demonstrate_compliance(s1))",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "demonstrate_compliance_undetermined_without_finding",
+   "norms": [
+    "demonstrate_compliance"
+   ],
+   "interpretive": true,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "status(acme, demonstrate_compliance(s1), undetermined)",
+     "expect": true,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "no_change_means_no_update_breach",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": false,
+   "pass": false,
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": false,
+     "got": "unmapped",
+     "verdict": "unanswerable"
+    }
+   ]
+  },
+  {
+   "id": "non_sme_has_no_form_duty",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "pass": true,
+   "queries": [
+    {
+     "goal": "obligation(big, use_form(s1, _), _)",
+     "expect": false,
+     "got": "false",
+     "verdict": "correct"
+    }
+   ]
+  }
+ ],
+ "adapter_source": "llm",
+ "adapter_model": "anthropic/claude-sonnet-5.5",
+ "adapter_reasoning": "medium",
+ "adapter_key": "559ac9d0cbb49acf0596bac2e4449efed939ef2d8c350eaeab17cb5b3f88a2df",
+ "adapter_calls": 2,
+ "adapter_cached": false,
+ "adapter_tokens": 1748,
+ "text": "art_11_par_1",
+ "model": "deepseek",
+ "seed": 3,
+ "module": "out_paragraphs/art_11_par_1/deepseek/seed_3.pl",
+ "adapter_text": "% INPUT clauses\nhigh_risk_ai_system(S) :- high_risk_ai_system(S).\nplaced_on_market(S) :- happens(placed_on_market(S), _).\nput_into_service(S) :- happens(put_into_service(S), _).\nsme(P) :- sme(P).\nstart_up(P) :- start_up(P).\nnational_competent_authority(A) :- national_competent_authority(A).\nnotified_body(B) :- notified_body(B).\ncommission(commission).\nannex_iv_elements(E) :- contains(_, E).\nprovides_simplified(P) :- opts_for_simplified(P, _).\n\n% QUERY clauses\nobligation(_P, draw_up(S), _D) :- must_draw_up_before(_E, technical_documentation(S)).\nobligation(_P, keep_up_to_date(S), _D) :- must_keep_up_to_date(_E, technical_documentation(S)).\nobligation(_P, demonstrate_compliance(S), _D) :- must_demonstrate_compliance(_Doc, S).\nobligation(_P, include_annex_iv(S), _D) :- must_contain(technical_documentation(S), _El).\nobligation(_P, provide_information(S, _R), _D) :- must_provide_information(_Doc, assessment_information(S, _C)).\nobligation(C, establish(F), _D) :- must_establish(C, F).\nobligation(P, use_form(_S, F), _D) :- must_use_form(P, F).\nobligation(B, accept(_Doc, F), _D) :- must_accept_form(B, F).\npermission(_P, simplify_annex_iv(_S)) :- may_provide_simplified(_Sme, _El).",
+ "cost": 0.000840972624
+}

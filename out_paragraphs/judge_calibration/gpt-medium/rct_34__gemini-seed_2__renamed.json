@@ -1,0 +1,45 @@
+{
+ "key": "b71ea5bb75dc6298e2408d3197b0ea67e87071bb04b79bb560e4b0efb0c6eb67",
+ "text": "rct_34",
+ "model": "gemini",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(real_time_remote_biometric_identification, [\n    permitted_deployment/1,\n    authorised_use/1,\n    required_consideration/1,\n    required_limitation/1,\n    appropriate_reference_database/1\n]).\n:- dynamic exhaustively_listed_situation/1.\n:- dynamic narrowly_defined_situation/1.\n:- dynamic considers_situation_nature/1.\n:- dynamic considers_rights_consequences/1.\n:- dynamic considers_safeguards_and_conditions/1.\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic publicly_accessible_space/1.\n:- dynamic objective_law_enforcement/1.\n:- dynamic strictly_necessary_temporal_scope/1.\n:- dynamic strictly_necessary_geographic_scope/1.\n:- dynamic strictly_necessary_personal_scope/1.\n:- dynamic targets_specific_individual_identity/1.\n:- dynamic law_enforcement_public_authority/1.\n:- dynamic completed_impact_assessment/2.\n:- dynamic registered_system/2.\n:- dynamic exempt_database_registration/1.\n:- dynamic reference_database_of_persons/1.\n:- dynamic appropriate_for_use_case/2.\n\nauthorised_use(XUse) :-\n    real_time_remote_biometric_identification_system(XUse),\n    publicly_accessible_space(XUse),\n    objective_law_enforcement(XUse),\n    law_enforcement_public_authority(XAuthority),\n    completed_impact_assessment(XAuthority, fundamental_rights(XUse)),\n    registered_system(XAuthority, database(XUse)).\n\npermitted_deployment(XUse) :-\n    real_time_remote_biometric_identification_system(XUse),\n    publicly_accessible_space(XUse),\n    objective_law_enforcement(XUse),\n    targets_specific_individual_identity(XUse),\n    required_limitation(XUse).\n\nappropriate_reference_database(XDatabase) :-\n    reference_database_of_persons(XDatabase),\n    appropriate_for_use_case(XDatabase, XUseCase),\n    exhaustively_listed_situation(XUseCase),\n    narrowly_defined_situation(XUseCase).\n\nauthorised_use(XUse) :-\n    real_time_remote_biometric_identification_system(XUse),\n    publicly_accessible_space(XUse),\n    objective_law_enforcement(XUse),\n    law_enforcement_public_authority(XAuthority),\n    completed_impact_assessment(XAuthority, fundamental_rights(XUse)),\n    exempt_database_registration(XUse).\n\nrequired_consideration(XSituation) :-\n    exhaustively_listed_situation(XSituation),\n    narrowly_defined_situation(XSituation),\n    considers_situation_nature(XSituation),\n    considers_rights_consequences(XSituation),\n    considers_safeguards_and_conditions(XSituation).\n\nrequired_limitation(XUse) :-\n    strictly_necessary_temporal_scope(XUse),\n    strictly_necessary_geographic_scope(XUse),\n    strictly_necessary_personal_scope(XUse).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.875,
+ "coverage_b": 0.875,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

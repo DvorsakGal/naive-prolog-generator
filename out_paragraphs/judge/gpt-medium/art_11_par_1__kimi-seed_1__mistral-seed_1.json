@@ -1,5 +1,5 @@
 {
- "key": "2ac7701a44fe9407e96c400fb02bc97e6ff395cb521cd6c807c0a71b889c564e",
+ "key": "69c8ac0c0a42faf79a2c8a95d095043a1a2cb7f27dfcfa1ee94a04d8086afc2b",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
@@ -7,32 +7,32 @@
  "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A more often encodes the obligations explicitly but weakens or alters some conditions, while B often captures the substantive content more cleanly but omits explicit modality in several sentences.\"\n}",
- "coverage_a": 0.583,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.333,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is more precise on the timing in sentence 1 and the Annex IV/Article 11(1) condition in sentence 6, while otherwise the modules mostly align\"\n}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "A more often encodes the obligations explicitly but weakens or alters some conditions, while B often captures the substantive content more cleanly but omits explicit modality in several sentences.",
- "sentences_judged": 6,
+ "note": "module B is more precise on the timing in sentence 1 and the Annex IV/Article 11(1) condition in sentence 6, while otherwise the modules mostly align",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 2,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 4,
@@ -42,12 +42,18 @@
   },
   {
    "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
    "a": "partial",
    "b": "full",
    "agree": "no"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

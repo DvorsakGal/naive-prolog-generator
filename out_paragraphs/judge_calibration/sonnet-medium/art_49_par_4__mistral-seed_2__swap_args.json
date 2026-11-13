@@ -1,0 +1,57 @@
+{
+ "key": "a97250d8799331d53eea670863d0c12845bf62c5f2e98d332b811f2d16da82f8",
+ "text": "art_49_par_4",
+ "model": "mistral",
+ "seed": 2,
+ "probe": "swap_args",
+ "note": "Modules are identical except that B's national-authority access rule swaps the argument order (Section, Authority), inconsistent with the Commission rule.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(high_risk_ai_registration, [\n    high_risk_ai_system/1,\n    registration_in_secure_non_public_section/2,\n    registration_includes_information/2,\n    permitted_access_to_restricted_section/2\n]).\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic eu_database/2.\n:- dynamic secure_non_public_section/2.\n:- dynamic registration_article_49/2.\n:- dynamic information_annex_viii_points_1_to_10_except_6_8_9/1.\n:- dynamic information_section_b_points_1_to_5_and_8_9/1.\n:- dynamic information_annex_viii_points_1_to_3/1.\n:- dynamic information_annex_ix_points_1_2_3_5/1.\n:- dynamic commission/1.\n:- dynamic restricted_section/1.\n:- dynamic eu_database_listed_in_article_49_4/1.\n:- dynamic national_authority_referred_to_in_article_74_8/1.\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, border_control_management).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, border_control_management).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, border_control_management).\n\nregistration_in_secure_non_public_section(S, Database) :-\n    high_risk_ai_system(S),\n    eu_database(Article71, Database),\n    secure_non_public_section(Database, Section),\n    registration_article_49(S, Section).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_viii_points_1_to_10_except_6_8_9(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_section_b_points_1_to_5_and_8_9(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_viii_points_1_to_3(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_ix_points_1_2_3_5(Information).\n\npermitted_access_to_restricted_section(Commission, Section) :-\n    commission(Commission),\n    restricted_section(Section),\n    eu_database_listed_in_article_49_4(Section).\n\npermitted_access_to_restricted_section(Section, Authority) :-\n    national_authority_referred_to_in_article_74_8(Authority),\n    restricted_section(Section),\n    eu_database_listed_in_article_49_4(Section).\n",
+ "raw": "The modules are nearly identical. The one real difference is in the second access rule. Module A has `permitted_access_to_restricted_section(Authority, Section)`, which puts the authority in the first argument and so matches the first rule. Module B has `permitted_access_to_restricted_section(Section, Authority)`, which swaps the arguments. That is a bug in B: the first argument is the section, but the body constrains the second argument as the authority. So B's access rule for national authorities is partly wrong, although the text's meaning is still roughly there.\n\nSentence 1 is covered by both modules in the same way, though partially (the classification and the registration location).\n\nSentences 2\u20135 are each covered only by a generic information predicate in both modules, so both are partial and agree. The information predicates do not distinguish the individual annex points, and the rules are disjunctive over all four lists rather than tied to each sub-item.\n\nSentence 6 is covered by both with the same access structure. A's rule is correct. B's second rule has the swapped argument order, so the two differ on how national authorities are represented. I mark both partial, since \"only\" is not captured as exclusivity, and I mark agreement as \"no\" because of the argument swap.\n\n\n{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Modules are identical except that B's national-authority access rule swaps the argument order (Section, Authority), inconsistent with the Commission rule.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ]
+}

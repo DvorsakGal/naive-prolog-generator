@@ -9,3 +9,7 @@ out*/cache/
 
 # Source corpus (182 MB), produced by the Datapact extractor. Not vendored here.
 20260922T172249_32024R1689_3f672e3e/
+
+/art_11_par_1
+
+LLM_prolog_generation.pdf

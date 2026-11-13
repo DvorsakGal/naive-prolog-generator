@@ -1,0 +1,66 @@
+{
+ "key": "1d77d5eed4945e9e65bf5b6e5c1a375e1785ca059c21a71b93526ef7c2203d3f",
+ "kind": "across",
+ "text": "art_11_par_1",
+ "a": "astra-medium/seed_1",
+ "b": "mistral/seed_1",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A models the before-market/service condition as negation-as-failure and treats up-to-date as a fact check, while B states the obligations directly. A also treats SMEs and start-ups as separate disjuncts, and B requires start-ups to be SMEs.\"}",
+ "coverage_a": 0.929,
+ "coverage_b": 0.857,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "note": "Sentence 1 differs: A models the before-market/service condition as negation-as-failure and treats up-to-date as a fact check, while B states the obligations directly. A also treats SMEs and start-ups as separate disjuncts, and B requires start-ups to be SMEs.",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "mistral/seed_1",
+  "B": "astra-medium/seed_1"
+ }
+}

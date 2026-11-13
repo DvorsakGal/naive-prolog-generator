@@ -1,0 +1,45 @@
+{
+ "key": "58515027a4530a1dbb98acfb2870d5011e1fe492d7501a3b6bbf72ae54ca5606",
+ "text": "rct_34",
+ "model": "gemini",
+ "seed": 2,
+ "probe": "drop_rule",
+ "note": "Module A calls required_limitation in permitted_deployment but never defines it, so the strictly-necessary time, geographic and personal limits in sentence 2 are not captured; Module B defines it.",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(real_time_remote_biometric_identification, [\n    permitted_deployment/1,\n    authorised_use/1,\n    required_consideration/1,\n    appropriate_reference_database/1\n]).\n:- dynamic exhaustively_listed_situation/1.\n:- dynamic narrowly_defined_situation/1.\n:- dynamic considers_situation_nature/1.\n:- dynamic considers_rights_consequences/1.\n:- dynamic considers_safeguards_and_conditions/1.\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic publicly_accessible_space/1.\n:- dynamic objective_law_enforcement/1.\n:- dynamic strictly_necessary_temporal_scope/1.\n:- dynamic strictly_necessary_geographic_scope/1.\n:- dynamic strictly_necessary_personal_scope/1.\n:- dynamic targets_specific_individual_identity/1.\n:- dynamic law_enforcement_authority/1.\n:- dynamic completed_impact_assessment/2.\n:- dynamic registered_system/2.\n:- dynamic exempt_database_registration/1.\n:- dynamic reference_database_of_persons/1.\n:- dynamic appropriate_for_use_case/2.\n\nrequired_consideration(Situation) :-\n    exhaustively_listed_situation(Situation),\n    narrowly_defined_situation(Situation),\n    considers_situation_nature(Situation),\n    considers_rights_consequences(Situation),\n    considers_safeguards_and_conditions(Situation).\n\npermitted_deployment(Use) :-\n    real_time_remote_biometric_identification_system(Use),\n    publicly_accessible_space(Use),\n    objective_law_enforcement(Use),\n    targets_specific_individual_identity(Use),\n    required_limitation(Use).\n\nauthorised_use(Use) :-\n    real_time_remote_biometric_identification_system(Use),\n    publicly_accessible_space(Use),\n    objective_law_enforcement(Use),\n    law_enforcement_authority(Authority),\n    completed_impact_assessment(Authority, fundamental_rights(Use)),\n    registered_system(Authority, database(Use)).\n\nauthorised_use(Use) :-\n    real_time_remote_biometric_identification_system(Use),\n    publicly_accessible_space(Use),\n    objective_law_enforcement(Use),\n    law_enforcement_authority(Authority),\n    completed_impact_assessment(Authority, fundamental_rights(Use)),\n    exempt_database_registration(Use).\n\nappropriate_reference_database(Database) :-\n    reference_database_of_persons(Database),\n    appropriate_for_use_case(Database, UseCase),\n    exhaustively_listed_situation(UseCase),\n    narrowly_defined_situation(UseCase).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A calls required_limitation in permitted_deployment but never defines it, so the strictly-necessary time, geographic and personal limits in sentence 2 are not captured; Module B defines it.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.875,
+ "jointly_captured": 4,
+ "agreement": 0.75,
+ "overall": "mostly_same",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

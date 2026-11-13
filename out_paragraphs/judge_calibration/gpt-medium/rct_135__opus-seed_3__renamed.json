@@ -1,0 +1,27 @@
+{
+ "key": "0f42b4db303ee3852c0caac9e1254a82b20ac32cbf8d2935ad7033dfa49abc8f",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 3,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_material_labelling, [\n    permitted_encouragement_of_code_of_practice/1,\n    permitted_facilitation_of_code_of_practice/1,\n    encourages_preparation/2,\n    facilitates_preparation/2,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_enable_public_distinction/1,\n    mandatory/1,\n    fully_applicable/1\n]).\n:- dynamic european_commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_duty/1.\n:- dynamic concerns_detection_and_labelling/2.\n:- dynamic artificially_generated_or_manipulated_material/1.\n\npermitted_encouragement_of_code_of_practice(XC) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nobjective_effective_implementation(XC) :-\n    code_of_practice(XC),\n    union_level(XC),\n    transparency_duty(XO),\n    concerns_detection_and_labelling(XO, XContent),\n    artificially_generated_or_manipulated_material(XContent).\n\nfacilitates_preparation(XCommission, XC) :-\n    european_commission(XCommission),\n    permitted_facilitation_of_code_of_practice(XC).\n\npermitted_facilitation_of_code_of_practice(XC) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nfully_applicable(XO) :-\n    transparency_duty(XO).\n\nobjective_support_practical_arrangement(XC) :-\n    objective_effective_implementation(XC).\n\nobjective_enable_public_distinction(XC) :-\n    objective_support_practical_arrangement(XC).\n\nmandatory(XO) :-\n    transparency_duty(XO).\n\nencourages_preparation(XCommission, XC) :-\n    european_commission(XCommission),\n    permitted_encouragement_of_code_of_practice(XC).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

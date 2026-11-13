@@ -1,5 +1,5 @@
 {
- "key": "9eb0b1b43f0f22b77f534cef0febd503ba3f364882ba6f201db7c4784caa7bba",
+ "key": "32610473e9471124f8fcfc34a9c0a9c06d96b225ac47c9420d306fc66980b3a3",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "deepseek/seed_2",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same obligations with similar structure. Module A splits sentence 1 into two rules, with an entity argument and a weak up-to-date rule. Module B is more explicit about authorities and notified bodies in sentence 2, but its rule is badly formed.\"}",
- "coverage_a": 0.75,
- "coverage_b": 0.75,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same seven sentences with the same structure; they differ in detail, such as A's responsible-entity argument versus B's system and documentation arguments, and in how the authorities and notified bodies are linked to the information requirement.\"}",
+ "coverage_a": 0.857,
+ "coverage_b": 0.857,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules cover the same obligations with similar structure. Module A splits sentence 1 into two rules, with an entity argument and a weak up-to-date rule. Module B is more explicit about authorities and notified bodies in sentence 2, but its rule is badly formed.",
- "sentences_judged": 6,
+ "note": "Both modules capture the same seven sentences with the same structure; they differ in detail, such as A's responsible-entity argument versus B's system and documentation arguments, and in how the authorities and notified bodies are linked to the information requirement.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,8 +30,8 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

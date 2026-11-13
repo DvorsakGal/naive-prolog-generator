@@ -1,0 +1,57 @@
+{
+ "key": "cfca5908370fe664ba3006a218240e2db6ce871887c56b2616a6f8c1b4b73eac",
+ "text": "art_49_par_4",
+ "model": "astra",
+ "seed": 1,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(restricted_database_registration, [\n    restricted_registration_applies/1,\n    covered_annex_point_applies/1,\n    covered_area_applies/1,\n    covered_registration_reference_applies/1,\n    listed_data_applies/1,\n    required_registration_location/1,\n    secure/1,\n    non_public/1,\n    required_registration_data/1,\n    permitted_registration_data/1,\n    prohibited_registration_data/1,\n    permitted_database_access/1,\n    prohibited_database_access/1\n]).\n:- dynamic elevated_risk/1.\n:- dynamic refers_to_annex_point/2.\n:- dynamic operates_in_area/2.\n:- dynamic registers_system/2.\n:- dynamic refers_to_article/2.\n:- dynamic applicable_data_applies/1.\n:- dynamic registration_data_applies/1.\n:- dynamic european_commission/1.\n:- dynamic national_public_authority/1.\n:- dynamic respective_restricted_section_applies/1.\n:- dynamic database_access_applies/1.\n\ncovered_registration_reference_applies(article(49, 3)).\n\nlisted_data_applies(annex_viii(section_b, point(1))).\n\nnon_public(secure_non_public_section(eu_database(article(71)))).\n\npermitted_database_access(access(XActor, XSection)) :-\n    european_commission(XActor),\n    respective_restricted_section_applies(access(XActor, XSection)),\n    refers_to_article(XSection, article(49, 4)).\n\nlisted_data_applies(annex_ix(point(1))).\n\nlisted_data_applies(annex_viii(point(10))).\n\ncovered_annex_point_applies(annex_iii(point(1))).\n\nlisted_data_applies(annex_viii(point(5))).\n\nlisted_data_applies(annex_viii(section_b, point(3))).\n\ncovered_registration_reference_applies(article(49, 1)).\n\nlisted_data_applies(annex_viii(point(3))).\n\nprohibited_database_access(access(XActor, XSection)) :-\n    database_access_applies(access(XActor, XSection)),\n    refers_to_article(XSection, article(49, 4)),\n    \\+ permitted_database_access(access(XActor, XSection)).\n\nlisted_data_applies(annex_viii(section_b, point(5))).\n\nrequired_registration_location(registration_location(XRegistration, XSection)) :-\n    restricted_registration_applies(XRegistration),\n    XSection = secure_non_public_section(eu_database(article(71))).\n\npermitted_registration_data(inclusion(XRegistration, XInformation)) :-\n    restricted_registration_applies(XRegistration),\n    listed_data_applies(XInformation),\n    applicable_data_applies(inclusion(XRegistration, XInformation)).\n\nlisted_data_applies(annex_viii(section_b, point(8))).\n\nlisted_data_applies(annex_viii(section_b, point(2))).\n\ncovered_registration_reference_applies(article(49, 2)).\n\nlisted_data_applies(annex_viii(point(4))).\n\nlisted_data_applies(annex_viii(point(3))).\n\nrequired_registration_data(inclusion(XRegistration, XInformation)) :-\n    restricted_registration_applies(XRegistration),\n    listed_data_applies(XInformation),\n    applicable_data_applies(inclusion(XRegistration, XInformation)).\n\npermitted_database_access(access(XActor, XSection)) :-\n    national_public_authority(XActor),\n    refers_to_article(XActor, article(74, 8)),\n    respective_restricted_section_applies(access(XActor, XSection)),\n    refers_to_article(XSection, article(49, 4)).\n\nlisted_data_applies(annex_ix(point(3))).\n\ncovered_area_applies(law_enforcement).\n\nlisted_data_applies(annex_viii(point(1))).\n\nlisted_data_applies(annex_ix(point(2))).\n\nlisted_data_applies(annex_viii(section_b, point(4))).\n\nlisted_data_applies(annex_ix(point(5))).\n\nlisted_data_applies(annex_viii(point(2))).\n\nprohibited_registration_data(inclusion(XRegistration, XInformation)) :-\n    restricted_registration_applies(XRegistration),\n    registration_data_applies(inclusion(XRegistration, XInformation)),\n    \\+ permitted_registration_data(inclusion(XRegistration, XInformation)).\n\nlisted_data_applies(annex_viii(point(1))).\n\nlisted_data_applies(annex_viii(point(7))).\n\nrestricted_registration_applies(XRegistration) :-\n    registers_system(XRegistration, XSystem),\n    elevated_risk(XSystem),\n    refers_to_annex_point(XSystem, XPoint),\n    covered_annex_point_applies(XPoint),\n    operates_in_area(XSystem, XArea),\n    covered_area_applies(XArea),\n    refers_to_article(XRegistration, XReference),\n    covered_registration_reference_applies(XReference).\n\ncovered_area_applies(migration).\n\ncovered_area_applies(border_control_management).\n\nlisted_data_applies(annex_viii(section_b, point(9))).\n\ncovered_area_applies(asylum).\n\nlisted_data_applies(annex_viii(point(2))).\n\ncovered_annex_point_applies(annex_iii(point(7))).\n\nsecure(secure_non_public_section(eu_database(article(71)))).\n\ncovered_annex_point_applies(annex_iii(point(6))).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

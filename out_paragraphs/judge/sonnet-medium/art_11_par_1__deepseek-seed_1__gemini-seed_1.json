@@ -1,26 +1,26 @@
 {
- "key": "8b5272f102b85656edaf23af3ef369500f5ebc3b51b6ba2c1afdb83d39e2c6f5",
+ "key": "411e3b313442208bf0f6914230ddac1d6ee92561db6b71e729f43a2fa39fb66a",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "gemini/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A adds conditions not in the text (e.g. must_contain only when not simplified, a convoluted may_provide_simplified), while B stays closer to the text, though both are fairly thin on timing and chapter 3.\"}",
- "coverage_a": 0.583,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 0.667,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all seven sentences with similar structure, but B adds conditions the text does not state (placed on market as a condition, must_contain only when not simplified, a circular simplified-provision rule), while A treats timing as an opaque term and attaches no conditions to the content requirement.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.571,
  "overall": "mostly_same",
- "note": "Module A adds conditions not in the text (e.g. must_contain only when not simplified, a convoluted may_provide_simplified), while B stays closer to the text, though both are fairly thin on timing and chapter 3.",
- "sentences_judged": 6,
+ "note": "Both cover all seven sentences with similar structure, but B adds conditions the text does not state (placed on market as a condition, must_contain only when not simplified, a circular simplified-provision rule), while A treats timing as an opaque term and attaches no conditions to the content requi",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
@@ -31,30 +31,36 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 5,
    "a": "partial",
    "b": "full",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

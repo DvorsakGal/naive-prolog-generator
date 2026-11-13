@@ -1,20 +1,20 @@
 {
- "key": "92446e6d3f69be2d2fcaa3f09dd33f84f93b3d1f97ce0c42c68647f9acc27b63",
+ "key": "a0085dee790c60295e32c157c7c6ecddfc42be921a37894ef64d2cd43b66cc63",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
  "b": "kimi/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B misstates the timing of drawing up the documentation and weakens or changes the SME simplification and form-use conditions, while A tracks those parts more closely.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 0.333,
- "overall": "different",
- "note": "B misstates the timing of drawing up the documentation and weakens or changes the SME simplification and form-use conditions, while A tracks those parts more closely.",
- "sentences_judged": 6,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is looser and sometimes misstates conditions, especially the timing in sentence 1, while B is stronger on the SME simplification rules but omits some detail and adds extra conditions in places.\"\n}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.286,
+ "overall": "mostly_same",
+ "note": "A is looser and sometimes misstates conditions, especially the timing in sentence 1, while B is stronger on the SME simplification rules but omits some detail and adds extra conditions in places.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -24,37 +24,43 @@
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 3,
-   "a": "partial",
+   "a": "full",
    "b": "full",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "partial",
    "b": "full",
    "agree": "no"
   },
   {
-   "n": 6,
+   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_3",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
  }
 }

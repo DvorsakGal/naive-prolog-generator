@@ -1,25 +1,25 @@
 {
- "key": "1652c28d2c4dcdd04de88fda4b33721a139c12632e5a0521257ef18a94606247",
+ "key": "40d00f447a810cafc837d823b64e662dfab7d637f270b323f6e789a4e4e3fabf",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "opus/seed_1",
  "b": "opus/seed_2",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same sentences overall, but they differ most on sentence 2 because A focuses on informing authorities while B focuses on providing assessment information.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"They mostly match, but they differ on the purpose/details in sentence 2 and B is weaker than A on the minimum-content requirement in sentence 3.\"\n}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "both modules cover the same sentences overall, but they differ most on sentence 2 because A focuses on informing authorities while B focuses on providing assessment information.",
- "sentences_judged": 6,
+ "note": "They mostly match, but they differ on the purpose/details in sentence 2 and B is weaker than A on the minimum-content requirement in sentence 3.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -30,31 +30,37 @@
   },
   {
    "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 4,
+   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "opus/seed_2",
-  "B": "opus/seed_1"
+  "A": "opus/seed_1",
+  "B": "opus/seed_2"
  }
 }

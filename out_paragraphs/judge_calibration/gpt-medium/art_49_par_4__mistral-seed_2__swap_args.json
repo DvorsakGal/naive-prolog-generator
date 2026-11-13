@@ -1,0 +1,57 @@
+{
+ "key": "fd1144f659ef0cb76da5943ecd705a53a95c83ffa4832c65d312e76bbfec6e30",
+ "text": "art_49_par_4",
+ "model": "mistral",
+ "seed": 2,
+ "probe": "swap_args",
+ "note": "The only substantive difference is in sentence 6, where module B reverses the arguments for national-authority access and so does not state the same access relation as module A.",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(high_risk_ai_registration, [\n    high_risk_ai_system/1,\n    registration_in_secure_non_public_section/2,\n    registration_includes_information/2,\n    permitted_access_to_restricted_section/2\n]).\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic eu_database/2.\n:- dynamic secure_non_public_section/2.\n:- dynamic registration_article_49/2.\n:- dynamic information_annex_viii_points_1_to_10_except_6_8_9/1.\n:- dynamic information_section_b_points_1_to_5_and_8_9/1.\n:- dynamic information_annex_viii_points_1_to_3/1.\n:- dynamic information_annex_ix_points_1_2_3_5/1.\n:- dynamic commission/1.\n:- dynamic restricted_section/1.\n:- dynamic eu_database_listed_in_article_49_4/1.\n:- dynamic national_authority_referred_to_in_article_74_8/1.\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1),\n    area(S, border_control_management).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6),\n    area(S, border_control_management).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, law_enforcement).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, migration).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, asylum).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7),\n    area(S, border_control_management).\n\nregistration_in_secure_non_public_section(S, Database) :-\n    high_risk_ai_system(S),\n    eu_database(Article71, Database),\n    secure_non_public_section(Database, Section),\n    registration_article_49(S, Section).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_viii_points_1_to_10_except_6_8_9(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_section_b_points_1_to_5_and_8_9(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_viii_points_1_to_3(Information).\n\nregistration_includes_information(S, Information) :-\n    high_risk_ai_system(S),\n    information_annex_ix_points_1_2_3_5(Information).\n\npermitted_access_to_restricted_section(Commission, Section) :-\n    commission(Commission),\n    restricted_section(Section),\n    eu_database_listed_in_article_49_4(Section).\n\npermitted_access_to_restricted_section(Section, Authority) :-\n    national_authority_referred_to_in_article_74_8(Authority),\n    restricted_section(Section),\n    eu_database_listed_in_article_49_4(Section).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"The only substantive difference is in sentence 6, where module B reverses the arguments for national-authority access and so does not state the same access relation as module A.\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ]
+}

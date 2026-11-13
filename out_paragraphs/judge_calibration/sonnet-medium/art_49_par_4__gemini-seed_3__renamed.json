@@ -1,0 +1,57 @@
+{
+ "key": "f42459fc6d3047924de12fa848f289e0e13bd88bc7089f51c893b518cf93035f",
+ "text": "art_49_par_4",
+ "model": "gemini",
+ "seed": 3,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(elevated_risk_ai_system_registration, [\n    required_registration/1,\n    secure_non_public_section/1,\n    permitted_registration_data/2,\n    permitted_access/2\n]).\n:- dynamic elevated_risk_ai_system/1.\n:- dynamic annex_iii_point_1/1.\n:- dynamic annex_iii_point_6/1.\n:- dynamic annex_iii_point_7/1.\n:- dynamic area_law_enforcement/1.\n:- dynamic area_migration/1.\n:- dynamic area_asylum/1.\n:- dynamic area_border_control_management/1.\n:- dynamic registration_article_49_1/2.\n:- dynamic registration_article_49_2/2.\n:- dynamic registration_article_49_3/2.\n:- dynamic data_annex_viii_section_a_point/2.\n:- dynamic data_annex_viii_section_b_point/2.\n:- dynamic data_annex_ix_point/2.\n:- dynamic european_commission/1.\n:- dynamic national_public_authority_article_74_8/1.\n:- dynamic restricted_section_article_49_4/1.\n\npermitted_registration_data(XRegistration, XInformation) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem),\n    allowed_data(XInformation).\n\nallowed_annex_viii_section_b_point(2).\n\nallowed_annex_viii_section_b_point(1).\n\nrelevant_area(XSystem) :- area_asylum(XSystem).\n\nallowed_annex_ix_point(3).\n\nallowed_annex_viii_section_a_point(1).\n\nallowed_annex_viii_section_b_point(3).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_6(XSystem).\n\nsecure_non_public_section(XRegistration) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem).\n\nallowed_annex_viii_section_a_point(4).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_1(XRegistration, XSystem).\n\nallowed_annex_viii_section_b_point(9).\n\nallowed_annex_ix_point(2).\n\nrelevant_area(XSystem) :- area_law_enforcement(XSystem).\n\nauthorised_actor(XActor) :-\n    national_public_authority_article_74_8(XActor).\n\nauthorised_actor(XActor) :-\n    european_commission(XActor).\n\nallowed_annex_viii_section_b_point(8).\n\nallowed_annex_viii_section_a_point(3).\n\npermitted_access(XActor, XSection) :-\n    restricted_section_article_49_4(XSection),\n    authorised_actor(XActor).\n\nallowed_annex_viii_section_b_point(4).\n\nallowed_annex_viii_section_b_point(5).\n\nrelevant_area(XSystem) :- area_border_control_management(XSystem).\n\nallowed_data(XInformation) :-\n    data_annex_viii_section_a_point(XInformation, XPoint),\n    allowed_annex_viii_section_a_point(XPoint).\n\nrelevant_area(XSystem) :- area_migration(XSystem).\n\nallowed_annex_viii_section_a_point(5).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_3(XRegistration, XSystem).\n\nallowed_annex_ix_point(1).\n\nallowed_data(XInformation) :-\n    data_annex_viii_section_b_point(XInformation, XPoint),\n    allowed_annex_viii_section_b_point(XPoint).\n\nallowed_data(XInformation) :-\n    data_annex_ix_point(XInformation, XPoint),\n    allowed_annex_ix_point(XPoint).\n\nallowed_annex_ix_point(5).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_1(XSystem).\n\nallowed_annex_viii_section_a_point(7).\n\nallowed_annex_viii_section_a_point(2).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_2(XRegistration, XSystem).\n\nrequired_registration(XRegistration) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem).\n\nallowed_annex_viii_section_a_point(10).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_7(XSystem).\n\nrelevant_elevated_risk_ai_system(XSystem) :-\n    elevated_risk_ai_system(XSystem),\n    relevant_annex_iii_point(XSystem),\n    relevant_area(XSystem).\n",
+ "raw": "The two modules appear to encode the same content, with only cosmetic differences.\n\nSentence 1: Both modules define the relevant system as high-risk (or \"elevated risk\"), in an Annex III point 1, 6 or 7, and in one of the four areas. Both cover registrations under Article 49(1), (2) and (3). Both state a secure non-public section and a permitted-information check. The only difference is spelling, so both are partial or full to the same degree and they agree. I rate both \"partial\", because the EU database is not modelled and the secure section is a rule on the registration.\n\nSentences 2-5: Both modules have identical allowed point sets.\n- Section A points: 1, 2, 3, 4, 5, 7, 10.\n- Section B points: 1, 2, 3, 4, 5, 8, 9.\n- Annex IX points: 1, 2, 3, 5.\n\nBoth merge sentences 2-5 into one union. Sentence 4 (Annex VIII points 1 to 3) is subsumed by the union. Each module represents these sentences only partially, since the points are not tied to separate subsets, and they agree.\n\nSentence 6: Both modules give access to the Commission and the Article 74(8) national authorities for the restricted sections. Both are full and agree.\n\n{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "coverage_a": 0.583,
+ "coverage_b": 0.583,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

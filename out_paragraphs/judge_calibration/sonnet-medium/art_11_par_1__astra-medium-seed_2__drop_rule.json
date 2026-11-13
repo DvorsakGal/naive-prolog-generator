@@ -1,0 +1,63 @@
+{
+ "key": "90a077a9424a9c873378cefb4fb608c90fac4385ae20b3134642c0ef6fb98533",
+ "text": "art_11_par_1",
+ "model": "astra-medium",
+ "seed": 2,
+ "probe": "drop_rule",
+ "note": "For sentence 4, A permits simplified provision for any SME (with a separate start-up clause), while B only permits it for SMEs that are also start-ups; the rest is identical.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(technical_documentation, [\n    required_technical_documentation/1,\n    technical_documentation_applies/1,\n    required_drafting/1,\n    required_updating/1,\n    required_compliance_demonstration/1,\n    required_information_provision/1,\n    required_minimum_content/1,\n    permitted_simplified_provision/1,\n    must_establish/2,\n    required_targeting/1,\n    identifies_form/2,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic artificial_intelligence_system/1.\n:- dynamic high_risk/1.\n:- dynamic technical_documentation/1.\n:- dynamic documents_system/2.\n:- dynamic national_competent_authority/1.\n:- dynamic notified_body/1.\n:- dynamic small_and_medium_sized_enterprise/1.\n:- dynamic start_up/1.\n:- dynamic provides_documentation/2.\n:- dynamic opts_for_simplified_provision/2.\n\nrequired_technical_documentation(System) :-\n    artificial_intelligence_system(System),\n    high_risk(System).\n\ntechnical_documentation_applies(documentation(Documentation, System)) :-\n    technical_documentation(Documentation),\n    documents_system(Documentation, System),\n    required_technical_documentation(System).\n\nrequired_drafting(drafting(Documentation, before(placing_on_market(System)))) :-\n    technical_documentation_applies(documentation(Documentation, System)).\n\nrequired_drafting(drafting(Documentation, before(putting_into_service(System)))) :-\n    technical_documentation_applies(documentation(Documentation, System)).\n\nrequired_updating(keeping_up_to_date(Documentation)) :-\n    technical_documentation_applies(documentation(Documentation, _System)).\n\nrequired_compliance_demonstration(\n    drafting(Documentation, demonstrates(compliance(System, requirement_set(chp_3))))\n) :-\n    technical_documentation_applies(documentation(Documentation, System)).\n\nrequired_information_provision(\n    provision(\n        Documentation,\n        Authority,\n        necessary_information(assessment(compliance(System, requirement_set(chp_3)))),\n        form(clear, comprehensive)\n    )\n) :-\n    technical_documentation_applies(documentation(Documentation, System)),\n    national_competent_authority(Authority).\n\nrequired_information_provision(\n    provision(\n        Documentation,\n        Body,\n        necessary_information(assessment(compliance(System, requirement_set(chp_3)))),\n        form(clear, comprehensive)\n    )\n) :-\n    technical_documentation_applies(documentation(Documentation, System)),\n    notified_body(Body).\n\nrequired_minimum_content(content(Documentation, element_set(annex_iv))) :-\n    technical_documentation_applies(documentation(Documentation, _System)).\n\npermitted_simplified_provision(\n    provision(Enterprise, Documentation, element_set(annex_iv))\n) :-\n    start_up(Enterprise),\n    small_and_medium_sized_enterprise(Enterprise),\n    provides_documentation(Enterprise, Documentation),\n    technical_documentation_applies(documentation(Documentation, _System)).\n\nmust_establish(commission, simplified_technical_documentation_form).\n\nrequired_targeting(\n    targeting(simplified_technical_documentation_form, need(small_enterprise))\n).\n\nrequired_targeting(\n    targeting(simplified_technical_documentation_form, need(microenterprise))\n).\n\nidentifies_form(article_11_1, simplified_technical_documentation_form).\n\nmust_use(Enterprise, Form) :-\n    small_and_medium_sized_enterprise(Enterprise),\n    opts_for_simplified_provision(\n        Enterprise,\n        required_information(Documentation, annex_iv)\n    ),\n    technical_documentation_applies(documentation(Documentation, _System)),\n    identifies_form(article_11_1, Form).\n\nmust_accept(Body, use(Form, purpose(conformity_assessment))) :-\n    notified_body(Body),\n    identifies_form(article_11_1, Form).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"For sentence 4, A permits simplified provision for any SME (with a separate start-up clause), while B only permits it for SMEs that are also start-ups; the rest is identical.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

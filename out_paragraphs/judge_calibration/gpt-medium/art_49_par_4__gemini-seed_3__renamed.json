@@ -1,0 +1,57 @@
+{
+ "key": "92d947dd7b15a2567c77f7e7d84697e452b88710650f43e8ce7f30962ef49038",
+ "text": "art_49_par_4",
+ "model": "gemini",
+ "seed": 3,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(elevated_risk_ai_system_registration, [\n    required_registration/1,\n    secure_non_public_section/1,\n    permitted_registration_data/2,\n    permitted_access/2\n]).\n:- dynamic elevated_risk_ai_system/1.\n:- dynamic annex_iii_point_1/1.\n:- dynamic annex_iii_point_6/1.\n:- dynamic annex_iii_point_7/1.\n:- dynamic area_law_enforcement/1.\n:- dynamic area_migration/1.\n:- dynamic area_asylum/1.\n:- dynamic area_border_control_management/1.\n:- dynamic registration_article_49_1/2.\n:- dynamic registration_article_49_2/2.\n:- dynamic registration_article_49_3/2.\n:- dynamic data_annex_viii_section_a_point/2.\n:- dynamic data_annex_viii_section_b_point/2.\n:- dynamic data_annex_ix_point/2.\n:- dynamic european_commission/1.\n:- dynamic national_public_authority_article_74_8/1.\n:- dynamic restricted_section_article_49_4/1.\n\npermitted_registration_data(XRegistration, XInformation) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem),\n    allowed_data(XInformation).\n\nallowed_annex_viii_section_b_point(2).\n\nallowed_annex_viii_section_b_point(1).\n\nrelevant_area(XSystem) :- area_asylum(XSystem).\n\nallowed_annex_ix_point(3).\n\nallowed_annex_viii_section_a_point(1).\n\nallowed_annex_viii_section_b_point(3).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_6(XSystem).\n\nsecure_non_public_section(XRegistration) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem).\n\nallowed_annex_viii_section_a_point(4).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_1(XRegistration, XSystem).\n\nallowed_annex_viii_section_b_point(9).\n\nallowed_annex_ix_point(2).\n\nrelevant_area(XSystem) :- area_law_enforcement(XSystem).\n\nauthorised_actor(XActor) :-\n    national_public_authority_article_74_8(XActor).\n\nauthorised_actor(XActor) :-\n    european_commission(XActor).\n\nallowed_annex_viii_section_b_point(8).\n\nallowed_annex_viii_section_a_point(3).\n\npermitted_access(XActor, XSection) :-\n    restricted_section_article_49_4(XSection),\n    authorised_actor(XActor).\n\nallowed_annex_viii_section_b_point(4).\n\nallowed_annex_viii_section_b_point(5).\n\nrelevant_area(XSystem) :- area_border_control_management(XSystem).\n\nallowed_data(XInformation) :-\n    data_annex_viii_section_a_point(XInformation, XPoint),\n    allowed_annex_viii_section_a_point(XPoint).\n\nrelevant_area(XSystem) :- area_migration(XSystem).\n\nallowed_annex_viii_section_a_point(5).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_3(XRegistration, XSystem).\n\nallowed_annex_ix_point(1).\n\nallowed_data(XInformation) :-\n    data_annex_viii_section_b_point(XInformation, XPoint),\n    allowed_annex_viii_section_b_point(XPoint).\n\nallowed_data(XInformation) :-\n    data_annex_ix_point(XInformation, XPoint),\n    allowed_annex_ix_point(XPoint).\n\nallowed_annex_ix_point(5).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_1(XSystem).\n\nallowed_annex_viii_section_a_point(7).\n\nallowed_annex_viii_section_a_point(2).\n\nregistration_article_49(XRegistration, XSystem) :-\n    registration_article_49_2(XRegistration, XSystem).\n\nrequired_registration(XRegistration) :-\n    registration_article_49(XRegistration, XSystem),\n    relevant_elevated_risk_ai_system(XSystem).\n\nallowed_annex_viii_section_a_point(10).\n\nrelevant_annex_iii_point(XSystem) :- annex_iii_point_7(XSystem).\n\nrelevant_elevated_risk_ai_system(XSystem) :-\n    elevated_risk_ai_system(XSystem),\n    relevant_annex_iii_point(XSystem),\n    relevant_area(XSystem).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

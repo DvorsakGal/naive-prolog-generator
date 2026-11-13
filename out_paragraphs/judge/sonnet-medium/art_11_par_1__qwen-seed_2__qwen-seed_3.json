@@ -1,26 +1,26 @@
 {
- "key": "f65677ed72cd2b1aaba49d03546d1d68c19727952782118cfc254e54ede023c5",
+ "key": "bd517c3bd11c15d9fad6568d87b6a58c5e58cfa92e534fd1835ebb58b7c68c44",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_2",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules share the same predicates and structure. B adds conditions and helper predicates (placed_on_market, targeted_at_small_and_microenterprises, referred_to_in_article_11_1) that are undefined, so B's rules cannot succeed. A uses fixed constants for the form and for the timing, and ignores the conformity-assessment purpose.\"}",
- "coverage_a": 0.5,
- "coverage_b": 0.5,
- "jointly_captured": 6,
- "agreement": 0.333,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Very similar structure; A adds placement/service conditions and form-property checks (targeted at small enterprises, Article 11(1) reference), while B uses simpler constants and unconditional sme/startup facts.\"}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules share the same predicates and structure. B adds conditions and helper predicates (placed_on_market, targeted_at_small_and_microenterprises, referred_to_in_article_11_1) that are undefined, so B's rules cannot succeed. A uses fixed constants for the form and for the timing, and ignores t",
- "sentences_judged": 6,
+ "note": "Very similar structure; A adds placement/service conditions and form-property checks (targeted at small enterprises, Article 11(1) reference), while B uses simpler constants and unconditional sme/startup facts.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -30,31 +30,37 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
  }
 }

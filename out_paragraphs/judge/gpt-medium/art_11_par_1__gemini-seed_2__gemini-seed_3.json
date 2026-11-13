@@ -1,5 +1,5 @@
 {
- "key": "1494123c5ed2d028dbd176f09ffa11d80b6dc6cb571015a909e1495365ca5814",
+ "key": "1cedafb92f8fffe3174253bb13e27b0542be2864849c9cefe8d5cb8b86547844",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "gemini/seed_2",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both cover the same article overall, but A is more generic in places while B omits or weakens some details such as recipients, targeting, and timing.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.333,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same provisions overall, but A often omits specific conditions or parties while B sometimes changes the triggering conditions or leaves recipients/details more implicit\"\n}",
+ "coverage_a": 0.643,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.571,
  "overall": "mostly_same",
- "note": "Both cover the same article overall, but A is more generic in places while B omits or weakens some details such as recipients, targeting, and timing.",
- "sentences_judged": 6,
+ "note": "both modules cover the same provisions overall, but A often omits specific conditions or parties while B sometimes changes the triggering conditions or leaves recipients/details more implicit",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "partial",
-   "agree": "no"
-  },
-  {
-   "n": 4,
-   "a": "partial",
-   "b": "full",
-   "agree": "no"
-  },
-  {
-   "n": 5,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

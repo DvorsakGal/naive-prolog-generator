@@ -1,0 +1,57 @@
+{
+ "key": "7cdf27b48e731848b559450cb8eeb8aaee8c41843d70edf39f024151a9eab9a3",
+ "text": "art_49_par_4",
+ "model": "opus",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "Module B omits the definition of annex_viii_point/1, so its Annex VIII points 1-10 minus 6, 8, 9 item (a) never succeeds; otherwise the modules are identical.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(secure_registration_law_enforcement, [\n    sensitive_area_system/1,\n    required_secure_non_public_registration/1,\n    registration_section/2,\n    permitted_registration_information/1,\n    registration_information_item/2,\n    permitted_restricted_section_access/1\n]).\n:- dynamic high_risk/1.\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic registration/3.\n:- dynamic commission/1.\n:- dynamic national_authority_article_74_8/1.\n:- dynamic applicable_information/2.\n\nsensitive_area_system(S) :-\n    high_risk(S),\n    annex_iii_point(S, point(N)),\n    member_point(N),\n    area(S, A),\n    sensitive_area(A).\n\nmember_point(1).\n\nmember_point(6).\n\nmember_point(7).\n\nsensitive_area(law_enforcement).\n\nsensitive_area(migration).\n\nsensitive_area(asylum).\n\nsensitive_area(border_control_management).\n\nregistration_article(article(49, paragraph(1))).\n\nregistration_article(article(49, paragraph(2))).\n\nregistration_article(article(49, paragraph(3))).\n\nrequired_secure_non_public_registration(R) :-\n    registration(R, S, Article),\n    registration_article(Article),\n    sensitive_area_system(S).\n\nregistration_section(R, secure_non_public_section(eu_database(article(71)))) :-\n    required_secure_non_public_registration(R).\n\nexcluded_annex_viii_point(6).\n\nexcluded_annex_viii_point(8).\n\nexcluded_annex_viii_point(9).\n\nbetween_points(L, H, L) :- L =< H.\n\nbetween_points(L, H, N) :- L < H, L1 is L + 1, between_points(L1, H, N).\n\nregistration_information_item(letter(a), annex_viii(point(N))) :- annex_viii_point(N).\n\nregistration_information_item(letter(b), annex_viii(section_b(point(N)))) :- between_points(1, 5, N).\n\nregistration_information_item(letter(b), annex_viii(section_b(point(8)))).\n\nregistration_information_item(letter(b), annex_viii(section_b(point(9)))).\n\nregistration_information_item(letter(c), annex_viii(point(N))) :- between_points(1, 3, N).\n\nregistration_information_item(letter(d), annex_ix(point(1))).\n\nregistration_information_item(letter(d), annex_ix(point(2))).\n\nregistration_information_item(letter(d), annex_ix(point(3))).\n\nregistration_information_item(letter(d), annex_ix(point(5))).\n\npermitted_registration_information(info(R, Item)) :-\n    required_secure_non_public_registration(R),\n    registration_information_item(_Letter, Item),\n    applicable_information(R, Item).\n\npermitted_restricted_section_access(access(Actor, restricted_section(eu_database(article(49, paragraph(4)))))) :-\n    commission(Actor).\n\npermitted_restricted_section_access(access(Actor, restricted_section(eu_database(article(49, paragraph(4)))))) :-\n    national_authority_article_74_8(Actor).\n",
+ "raw": "Module B is nearly identical to A, with one difference: B never defines annex_viii_point/1. It has the excluded_annex_viii_point facts and the between_points rules, but nothing that derives annex_viii_point(N). As a result, B's letter (a) item rule would fail, because annex_viii_point is undefined (in SWI-Prolog, an existence error).\n\nSentence 2 is item (a). A defines annex_viii_point with points 1 to 10 minus the exclusions, so A captures it fully. B has the exclusions but no definition, so its coverage of (a) is incomplete. I rate B \"partial\", and since the two modules then differ on this sentence, agree is \"no\".\n\nSentences 1, 3, 4, 5 and 6 are handled identically in the two modules. For sentence 1, both capture the scope, the registration articles and the secure section, and the \"only the following information\" restriction through the permitted-information rule. That rule adds an applicable_information condition, but both modules do the same, so I rate sentence 1 \"partial\" for each with agree \"yes\". Sentences 3, 4 and 5 are \"full\" in both.\n\nSentence 6 is also identical in both: access is limited to the Commission and the Article 74(8) authorities. Both attach it to Article 49(4), which matches the text, so I rate it \"full\" for each.\n\n```json\n{\"sentences\":[\n{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},\n{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},\n{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},\n{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},\n{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},\n{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}\n],\"overall\":\"mostly_same\",\"note\":\"Module B omits the definition of annex_viii_point/1, so its Annex VIII points 1-10 minus 6, 8, 9 item (a) never succeeds; otherwise the modules are identical.\"}\n```",
+ "coverage_a": 0.917,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 0.833,
+ "overall": "mostly_same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

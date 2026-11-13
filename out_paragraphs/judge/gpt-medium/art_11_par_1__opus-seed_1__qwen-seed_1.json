@@ -1,5 +1,5 @@
 {
- "key": "207a4ae0e3c4a92554a2901de10e422c512d626e4205d0b166e4db471e30c882",
+ "key": "8d478f0145bde77c2769141c596a3a28ee6d1918fd9371d923224d3b3d5a3767",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "opus/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A captures the startup and Article 11 form aspects more explicitly, while B captures the minimum/targeting structure better but adds a provider condition and omits several specific details.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.167,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"The modules overlap on the basic structure but differ on most sentences because A is more system/form-oriented while B often adds a provider actor and omits or changes key conditions such as Chapter 3, Annex IV scope, startup coverage, and the specific Article 11 form.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.143,
  "overall": "different",
- "note": "A captures the startup and Article 11 form aspects more explicitly, while B captures the minimum/targeting structure better but adds a provider condition and omits several specific details.",
- "sentences_judged": 6,
+ "note": "The modules overlap on the basic structure but differ on most sentences because A is more system/form-oriented while B often adds a provider actor and omits or changes key conditions such as Chapter 3, Annex IV scope, startup coverage, and the specific Article 11 form.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
-   "n": 5,
+   "n": 4,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

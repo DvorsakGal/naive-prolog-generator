@@ -1,5 +1,5 @@
 {
- "key": "e48bb6b3ef7c745078f9816e0fba35e2725f69e7f6053b5caffe1e33016624be",
+ "key": "c1165c8fd6c83c911a1393b68670dace12c393da3ea7740666be1511d50fe037",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A often shifts duties to providers or leaves key Annex IV/Article 11 form details underspecified, while B states the duties on the documentation/form more directly.\"\n}",
- "coverage_a": 0.75,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.333,
- "overall": "different",
- "note": "A often shifts duties to providers or leaves key Annex IV/Article 11 form details underspecified, while B states the duties on the documentation/form more directly.",
- "sentences_judged": 6,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A tends to attach duties to providers/SMEs and leaves some form references generic, while B models the documentation/form itself and is more specific in some places but omits details like Annex IV in others.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.571,
+ "overall": "mostly_same",
+ "note": "A tends to attach duties to providers/SMEs and leaves some form references generic, while B models the documentation/form itself and is more specific in some places but omits details like Annex IV in others.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -26,28 +26,34 @@
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

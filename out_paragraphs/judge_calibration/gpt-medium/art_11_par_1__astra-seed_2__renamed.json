@@ -1,0 +1,63 @@
+{
+ "key": "d601e090de4623c879753d6599ec90c573e70dc7f3cadc40d0da905c43024d18",
+ "text": "art_11_par_1",
+ "model": "astra",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(technical_file, [\n    required_technical_file/1,\n    required_preparation/1,\n    required_updating/1,\n    required_demonstration/1,\n    required_data/1,\n    required_material/1,\n    permitted_simplified_submission/1,\n    must_set_up/2,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic elevated_risk/1.\n:- dynamic artificial_intelligence_system/1.\n:- dynamic technical_file_applies/1.\n:- dynamic small_or_medium_undertaking/1.\n:- dynamic start_up/1.\n:- dynamic provides_documents/2.\n:- dynamic opts_for_simplified_submission/2.\n:- dynamic european_commission/1.\n:- dynamic notified_organisation/1.\n:- dynamic national_competent_public_authority/1.\n\nmust_set_up(XCommission,\n    simplified_technical_file_form(\n        article_11_1,\n        targeted_needs(small_undertaking, microenterprise))) :-\n    european_commission(XCommission).\n\nmust_accept(XBody,\n    form(article_11_1, purpose(conformity_assessment))) :-\n    notified_organisation(XBody).\n\nrequired_data(\n    provision(technical_file(XSystem), XBody,\n        necessary_data(\n            assess_compliance(XSystem, requirement(chp_3)),\n            clear_and_comprehensive_form)))\n    :-\n    required_technical_file(XSystem),\n    notified_organisation(XBody).\n\nrequired_updating(technical_file(XSystem)) :-\n    required_technical_file(XSystem).\n\nrequired_technical_file(XSystem) :-\n    artificial_intelligence_system(XSystem),\n    elevated_risk(XSystem).\n\nrequired_preparation(before(technical_file(XSystem), service_entry(XSystem))) :-\n    required_technical_file(XSystem).\n\nrequired_demonstration(\n    technical_file(XSystem, compliance(XSystem, requirement(chp_3))))\n    :-\n    required_technical_file(XSystem).\n\nrequired_data(\n    provision(technical_file(XSystem), XAuthority,\n        necessary_data(\n            assess_compliance(XSystem, requirement(chp_3)),\n            clear_and_comprehensive_form)))\n    :-\n    required_technical_file(XSystem),\n    national_competent_public_authority(XAuthority).\n\npermitted_simplified_submission(\n    submission(XEnterprise, technical_file(XSystem), element_set(annex_iv)))\n    :-\n    start_up(XEnterprise),\n    small_or_medium_undertaking(XEnterprise),\n    provides_documents(XEnterprise, XSystem),\n    required_technical_file(XSystem).\n\nmust_use(XEnterprise,\n    form(article_11_1, technical_file(XSystem))) :-\n    permitted_simplified_submission(\n        submission(XEnterprise, technical_file(XSystem), element_set(annex_iv))),\n    opts_for_simplified_submission(XEnterprise,\n        data(technical_file(XSystem), annex_iv)).\n\nrequired_material(\n    technical_file(XSystem, minimum_element_set(annex_iv)))\n    :-\n    required_technical_file(XSystem).\n\npermitted_simplified_submission(\n    submission(XEnterprise, technical_file(XSystem), element_set(annex_iv)))\n    :-\n    small_or_medium_undertaking(XEnterprise),\n    provides_documents(XEnterprise, XSystem),\n    required_technical_file(XSystem).\n\nrequired_preparation(before(technical_file(XSystem), market_placement(XSystem))) :-\n    required_technical_file(XSystem).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 7,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

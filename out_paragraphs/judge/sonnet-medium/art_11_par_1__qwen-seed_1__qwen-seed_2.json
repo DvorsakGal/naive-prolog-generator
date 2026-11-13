@@ -1,26 +1,26 @@
 {
- "key": "da966d400e6e05c9605b7be40a5c29015e1f6664315d280af313ea9d37f668e5",
+ "key": "58311d5da1500ce1368aa01ef793af8216b6e5d28b8834f9a2b57dc18197af9f",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_1",
  "b": "qwen/seed_2",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same obligations with near-identical rules. A adds an authorities-and-bodies reading of sentence 2 and a conformity-assessment purpose condition for sentence 6, and B asserts sme/startup/high_risk_ai_system as universally true.\"}",
- "coverage_a": 0.833,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Module B models both timing events (market placement and service) and the conformity-assessment purpose, while A collapses the timing into a single constant and omits the purpose; otherwise the two are largely the same.\"}",
+ "coverage_a": 0.857,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "Both modules capture the same obligations with near-identical rules. A adds an authorities-and-bodies reading of sentence 2 and a conformity-assessment purpose condition for sentence 6, and B asserts sme/startup/high_risk_ai_system as universally true.",
- "sentences_judged": 6,
+ "note": "Module B models both timing events (market placement and service) and the conformity-assessment purpose, while A collapses the timing into a single constant and omits the purpose; otherwise the two are largely the same.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 2,
@@ -30,8 +30,8 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -42,8 +42,8 @@
   },
   {
    "n": 5,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -51,10 +51,16 @@
    "a": "full",
    "b": "full",
    "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "qwen/seed_2"
+  "A": "qwen/seed_2",
+  "B": "qwen/seed_1"
  }
 }

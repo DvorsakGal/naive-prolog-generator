@@ -1,0 +1,726 @@
+{
+ "text": "art_11_par_1",
+ "source": "Converted from art_11_par_1/raw/suite/art11_scenarios.pl (19 plunit tests written by Claude Opus 5.5, 2026-11) plus 7 added scenarios. Expected answers are not legally validated; scenarios marked interpretive rest on a reading, see art_11_par_1/raw/README.md. Recipients changed from category atoms to entities (nca1, nb1) on 2026-11-13.",
+ "reference_module": "reference.pl",
+ "sentences": {
+  "S1": "The technical documentation of a high-risk AI system shall be drawn up before that system is placed on the market or put into service and shall be kept up-to date.",
+  "S2": "The technical documentation shall be drawn up in such a way as to demonstrate that the high-risk AI system complies with the requirements set out in this Section and to provide national competent authorities and notified bodies with the necessary information in a clear and comprehensive form to assess the compliance of the AI system with those requirements.",
+  "S3": "It shall contain, at a minimum, the elements set out in Annex IV.",
+  "S4": "SMEs, including start-ups, may provide the elements of the technical documentation specified in Annex IV in a simplified manner.",
+  "S5": "To that end, the Commission shall establish a simplified technical documentation form targeted at the needs of small and microenterprises.",
+  "S6": "Where an SME, including a start-up, opts to provide the information required in Annex IV in a simplified manner, it shall use the form referred to in this paragraph.",
+  "S7": "Notified bodies shall accept the form for the purposes of the conformity assessment."
+ },
+ "norms": {
+  "draw_up_before_entry": {
+   "sentence": "S1",
+   "desc": "documentation drawn up before the earlier of placing on the market and putting into service; late is a breach, the duty exists before launch"
+  },
+  "keep_up_to_date": {
+   "sentence": "S1",
+   "desc": "documentation updated after each change to the system"
+  },
+  "duty_bearer": {
+   "sentence": "S1",
+   "desc": "the provider duties bind the provider of that system only"
+  },
+  "demonstrate_compliance": {
+   "sentence": "S2",
+   "desc": "documentation demonstrates compliance with Chapter III Section 2; open-textured, decided by an assessor's finding"
+  },
+  "provide_information": {
+   "sentence": "S2",
+   "desc": "clear and comprehensive information for national competent authorities and notified bodies; open-textured"
+  },
+  "annex_iv_minimum": {
+   "sentence": "S3",
+   "desc": "documentation contains at least the Annex IV elements, also for SMEs"
+  },
+  "sme_simplified_permission": {
+   "sentence": "S4",
+   "desc": "SMEs (start-ups only if they are SMEs) may provide the Annex IV elements in a simplified manner"
+  },
+  "commission_form": {
+   "sentence": "S5",
+   "desc": "the Commission must establish the simplified form; unconditional"
+  },
+  "sme_must_use_form": {
+   "sentence": "S6",
+   "desc": "an SME that opts for the simplified manner for a system must use the Commission form for it"
+  },
+  "notified_body_accepts_form": {
+   "sentence": "S7",
+   "desc": "the notified body assessing a system must accept documentation submitted on the form"
+  }
+ },
+ "inputs": [
+  {
+   "pred": "high_risk_ai_system/1",
+   "meaning": "high_risk_ai_system(S): S is a high-risk AI system"
+  },
+  {
+   "pred": "provider/2",
+   "meaning": "provider(P, S): P is the provider of system S"
+  },
+  {
+   "pred": "sme/1",
+   "meaning": "sme(P): P is an SME (small or medium-sized enterprise)"
+  },
+  {
+   "pred": "start_up/1",
+   "meaning": "start_up(P): P is a start-up (does not by itself make P an SME)"
+  },
+  {
+   "pred": "happens/2",
+   "meaning": "happens(Event, Time): Event occurred at integer Time. Events: placed_on_market(S), put_into_service(S), documentation_drawn_up(S), system_changed(S), documentation_updated(S)"
+  },
+  {
+   "pred": "technical_documentation/2",
+   "meaning": "technical_documentation(S, Doc): Doc is the technical documentation of system S"
+  },
+  {
+   "pred": "contains/2",
+   "meaning": "contains(Doc, annex_iv_elements): Doc contains the Annex IV elements"
+  },
+  {
+   "pred": "finding/4",
+   "meaning": "finding(Doc, Criterion, Assessor, met|not_met): an assessor's finding on an open-textured criterion (clear_and_comprehensive, demonstrates_compliance)"
+  },
+  {
+   "pred": "opts_for_simplified/2",
+   "meaning": "opts_for_simplified(P, S): P opted to provide the Annex IV information for S in the simplified manner"
+  },
+  {
+   "pred": "submitted_using/2",
+   "meaning": "submitted_using(Doc, Form): Doc was submitted using Form (the Commission form is the constant commission_simplified_form)"
+  },
+  {
+   "pred": "notified_body/1",
+   "meaning": "notified_body(NB): NB is a notified body"
+  },
+  {
+   "pred": "national_competent_authority/1",
+   "meaning": "national_competent_authority(A): A is a national competent authority"
+  },
+  {
+   "pred": "assesses/2",
+   "meaning": "assesses(NB, S): NB conducts the conformity assessment of S"
+  },
+  {
+   "pred": "rejected_for_form/2",
+   "meaning": "rejected_for_form(NB, Doc): NB rejected Doc because of the form it was submitted on"
+  }
+ ],
+ "queries": [
+  {
+   "pred": "obligation/3",
+   "meaning": "obligation(Bearer, Action, Deadline): Bearer is under a duty to perform Action. Deadline is free text and is never queried with a constant; bind it to anything"
+  },
+  {
+   "pred": "permission/2",
+   "meaning": "permission(Bearer, Action): Bearer is permitted to perform Action"
+  },
+  {
+   "pred": "violation/2",
+   "meaning": "violation(Bearer, Action): Bearer has breached the duty to perform Action, derived from the facts"
+  },
+  {
+   "pred": "status/3",
+   "meaning": "status(Bearer, Action, breached|met|undetermined): three-valued state of a duty; undetermined when an open-textured criterion has no finding"
+  }
+ ],
+ "actions": [
+  "draw_up(S): draw up the technical documentation of S",
+  "keep_up_to_date(S): keep the technical documentation of S up to date",
+  "demonstrate_compliance(S): documentation of S demonstrates compliance with the Section's requirements",
+  "provide_information(S, Recipient): documentation of S provides the necessary information to Recipient, an entity that is a national competent authority or a notified body",
+  "include_annex_iv(S): documentation of S contains the Annex IV elements",
+  "simplify_annex_iv(S): provide the Annex IV elements for S in a simplified manner (a permission)",
+  "use_form(S, Form): use Form for the simplified documentation of S",
+  "establish(Form): establish the simplified documentation form",
+  "accept(Doc, Form): accept Doc submitted on Form for the conformity assessment"
+ ],
+ "scenarios": [
+  {
+   "id": "pre_launch_system_has_duty",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s1), _)",
+     "expect": true
+    },
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "The duty arises from high-risk status, not from launch; nothing is late yet"
+  },
+  {
+   "id": "late_documentation_is_a_breach_not_an_exemption",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(placed_on_market(s1), 5)",
+    "happens(documentation_drawn_up(s1), 7)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s1), _)",
+     "expect": true
+    },
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": true
+    }
+   ],
+   "reason": "Late documentation is a breach; the duty must not disappear"
+  },
+  {
+   "id": "on_time_documentation_complies",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(documentation_drawn_up(s1), 1)",
+    "happens(placed_on_market(s1), 5)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "Documented before the deadline"
+  },
+  {
+   "id": "deadline_is_the_earlier_event",
+   "norms": [
+    "draw_up_before_entry"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(put_into_service(s1), 2)",
+    "happens(documentation_drawn_up(s1), 3)",
+    "happens(placed_on_market(s1), 5)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, draw_up(s1))",
+     "expect": true
+    }
+   ],
+   "reason": "'Placed on the market or put into service': the deadline is the earlier event"
+  },
+  {
+   "id": "duties_attach_only_to_own_systems",
+   "norms": [
+    "duty_bearer"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "high_risk_ai_system(s2)",
+    "provider(beta, s2)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(acme, draw_up(s2), _)",
+     "expect": false
+    },
+    {
+     "goal": "obligation(beta, draw_up(s1), _)",
+     "expect": false
+    }
+   ],
+   "reason": "Duties bind the provider of that system (Article 16, not in the paragraph)"
+  },
+  {
+   "id": "sme_permitted_but_not_obliged_without_opt_in",
+   "norms": [
+    "sme_simplified_permission",
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)"
+   ],
+   "queries": [
+    {
+     "goal": "permission(tiny, simplify_annex_iv(s1))",
+     "expect": true
+    },
+    {
+     "goal": "obligation(tiny, use_form(_, _), _)",
+     "expect": false
+    }
+   ],
+   "reason": "'May' is a permission; the form duty applies only after opting in"
+  },
+  {
+   "id": "simplification_never_removes_annex_iv",
+   "norms": [
+    "annex_iv_minimum",
+    "sme_simplified_permission"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)",
+    "opts_for_simplified(tiny, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(tiny, include_annex_iv(s1), _)",
+     "expect": true
+    }
+   ],
+   "reason": "Simplification changes the presentation, not the Annex IV content"
+  },
+  {
+   "id": "opted_sme_using_wrong_form_breaches",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)",
+    "opts_for_simplified(tiny, s1)",
+    "technical_documentation(s1, d1)",
+    "submitted_using(d1, own_template)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(tiny, use_form(s1, _))",
+     "expect": true
+    }
+   ],
+   "reason": "Once opted in, the Commission form is mandatory"
+  },
+  {
+   "id": "opt_in_is_per_system",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "high_risk_ai_system(s2)",
+    "provider(tiny, s1)",
+    "provider(tiny, s2)",
+    "sme(tiny)",
+    "opts_for_simplified(tiny, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(tiny, use_form(s1, _), _)",
+     "expect": true
+    },
+    {
+     "goal": "obligation(tiny, use_form(s2, _), _)",
+     "expect": false
+    }
+   ],
+   "reason": "The choice is made per system's documentation"
+  },
+  {
+   "id": "large_provider_not_permitted",
+   "norms": [
+    "sme_simplified_permission"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(big, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "permission(big, simplify_annex_iv(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "The permission is limited to SMEs"
+  },
+  {
+   "id": "start_up_above_sme_thresholds_not_permitted",
+   "norms": [
+    "sme_simplified_permission"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(scaleup, s1)",
+    "start_up(scaleup)"
+   ],
+   "queries": [
+    {
+     "goal": "permission(scaleup, simplify_annex_iv(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "'SMEs, including start-ups': start-ups are a subset of SMEs"
+  },
+  {
+   "id": "missing_annex_iv_is_a_breach",
+   "norms": [
+    "annex_iv_minimum"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(placed_on_market(s1), 5)",
+    "technical_documentation(s1, d1)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, include_annex_iv(s1))",
+     "expect": true
+    }
+   ],
+   "reason": "The minimum content is missing once the system is on the market"
+  },
+  {
+   "id": "change_without_update_is_a_breach",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(system_changed(s1), 8)",
+    "happens(documentation_updated(s1), 6)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": true
+    }
+   ],
+   "reason": "A change after the last update makes the documentation outdated"
+  },
+  {
+   "id": "update_after_change_complies",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(system_changed(s1), 8)",
+    "happens(documentation_updated(s1), 9)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "Updated after the change"
+  },
+  {
+   "id": "no_finding_means_undetermined",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "technical_documentation(s1, d1)",
+    "notified_body(nb1)"
+   ],
+   "queries": [
+    {
+     "goal": "status(acme, provide_information(s1, nb1), undetermined)",
+     "expect": true
+    }
+   ],
+   "reason": "'Clear and comprehensive' is open-textured; the program must not decide it"
+  },
+  {
+   "id": "negative_finding_is_a_breach",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "technical_documentation(s1, d1)",
+    "finding(d1, clear_and_comprehensive, nb1, not_met)",
+    "notified_body(nb1)"
+   ],
+   "queries": [
+    {
+     "goal": "status(acme, provide_information(s1, nb1), breached)",
+     "expect": true
+    }
+   ],
+   "reason": "An assessor found the information not clear and comprehensive"
+  },
+  {
+   "id": "commission_duty_is_unconditional",
+   "norms": [
+    "commission_form"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [],
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(_), _)",
+     "expect": true
+    }
+   ],
+   "reason": "The Commission's duty does not depend on any fact about enterprises"
+  },
+  {
+   "id": "acceptance_duty_only_for_assessing_body_and_submitted_form",
+   "norms": [
+    "notified_body_accepts_form"
+   ],
+   "interpretive": true,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)",
+    "technical_documentation(s1, d1)",
+    "submitted_using(d1, commission_simplified_form)",
+    "notified_body(nb1)",
+    "notified_body(nb2)",
+    "assesses(nb1, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(nb1, accept(d1, _), _)",
+     "expect": true
+    },
+    {
+     "goal": "obligation(nb2, accept(d1, _), _)",
+     "expect": false
+    }
+   ],
+   "reason": "The duty arises for the body conducting the assessment, for documentation submitted on the form"
+  },
+  {
+   "id": "rejecting_the_form_is_a_breach",
+   "norms": [
+    "notified_body_accepts_form"
+   ],
+   "interpretive": false,
+   "origin": "opus_suite",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "technical_documentation(s1, d1)",
+    "submitted_using(d1, commission_simplified_form)",
+    "notified_body(nb1)",
+    "assesses(nb1, s1)",
+    "rejected_for_form(nb1, d1)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(nb1, accept(d1, _))",
+     "expect": true
+    }
+   ],
+   "reason": "Rejecting the form breaches the acceptance duty"
+  },
+  {
+   "id": "form_established_is_form_the_sme_must_use",
+   "norms": [
+    "commission_form",
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)",
+    "opts_for_simplified(tiny, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(F), _), obligation(tiny, use_form(s1, F), _)",
+     "expect": true
+    }
+   ],
+   "reason": "S5, S6 and S7 speak of one form: the term the Commission must establish is the term the SME must use"
+  },
+  {
+   "id": "form_established_is_form_the_body_must_accept",
+   "norms": [
+    "commission_form",
+    "notified_body_accepts_form"
+   ],
+   "interpretive": false,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(tiny, s1)",
+    "sme(tiny)",
+    "technical_documentation(s1, d1)",
+    "submitted_using(d1, commission_simplified_form)",
+    "notified_body(nb1)",
+    "assesses(nb1, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(commission, establish(F), _), obligation(nb1, accept(d1, F), _)",
+     "expect": true
+    }
+   ],
+   "reason": "Same form identity, between S5 and S7"
+  },
+  {
+   "id": "information_duty_runs_to_both_recipients",
+   "norms": [
+    "provide_information"
+   ],
+   "interpretive": false,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "national_competent_authority(nca1)",
+    "notified_body(nb1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(acme, provide_information(s1, nca1), _)",
+     "expect": true
+    },
+    {
+     "goal": "obligation(acme, provide_information(s1, nb1), _)",
+     "expect": true
+    }
+   ],
+   "reason": "S2 names two recipients; both are owed the information"
+  },
+  {
+   "id": "demonstrate_compliance_negative_finding_is_a_breach",
+   "norms": [
+    "demonstrate_compliance"
+   ],
+   "interpretive": true,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "technical_documentation(s1, d1)",
+    "finding(d1, demonstrates_compliance, nca1, not_met)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, demonstrate_compliance(s1))",
+     "expect": true
+    }
+   ],
+   "reason": "An assessor found that the documentation does not demonstrate compliance"
+  },
+  {
+   "id": "demonstrate_compliance_undetermined_without_finding",
+   "norms": [
+    "demonstrate_compliance"
+   ],
+   "interpretive": true,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "technical_documentation(s1, d1)"
+   ],
+   "queries": [
+    {
+     "goal": "status(acme, demonstrate_compliance(s1), undetermined)",
+     "expect": true
+    }
+   ],
+   "reason": "Open-textured: no finding, no verdict"
+  },
+  {
+   "id": "no_change_means_no_update_breach",
+   "norms": [
+    "keep_up_to_date"
+   ],
+   "interpretive": false,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(acme, s1)",
+    "happens(documentation_drawn_up(s1), 1)",
+    "happens(placed_on_market(s1), 5)"
+   ],
+   "queries": [
+    {
+     "goal": "violation(acme, keep_up_to_date(s1))",
+     "expect": false
+    }
+   ],
+   "reason": "Nothing changed, so nothing is outdated"
+  },
+  {
+   "id": "non_sme_has_no_form_duty",
+   "norms": [
+    "sme_must_use_form"
+   ],
+   "interpretive": false,
+   "origin": "added",
+   "facts": [
+    "high_risk_ai_system(s1)",
+    "provider(big, s1)",
+    "opts_for_simplified(big, s1)"
+   ],
+   "queries": [
+    {
+     "goal": "obligation(big, use_form(s1, _), _)",
+     "expect": false
+    }
+   ],
+   "reason": "Only an SME can opt for the simplified manner, so only an SME can be bound to the form"
+  }
+ ]
+}

@@ -1,20 +1,20 @@
 {
- "key": "4f91b2dd07cf6e0f0cc2e174fdfd9445ea18cd6b96d473d0961736e424554ea9",
+ "key": "d99d71ad7e81df8d494c0eae01ddfb0757ede5364558b99a6c59d0bbd421f580",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "astra/seed_1",
  "b": "gemini/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Module A is more text-faithful, while module B captures the same overall structure but omits several specifics such as chp_3, Annex IV links, recipients, and the exact trigger for using the form.\"\n}",
- "coverage_a": 0.917,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is generally more specific about Annex IV, chp_3, recipients and Article 11(1), while module A states broader generic duties and permissions\"\n}",
+ "coverage_a": 0.929,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.286,
  "overall": "mostly_same",
- "note": "Module A is more text-faithful, while module B captures the same overall structure but omits several specifics such as chp_3, Annex IV links, recipients, and the exact trigger for using the form.",
- "sentences_judged": 6,
+ "note": "module B is generally more specific about Annex IV, chp_3, recipients and Article 11(1), while module A states broader generic duties and permissions",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -36,25 +36,31 @@
   },
   {
    "n": 4,
-   "a": "partial",
-   "b": "full",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
    "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "astra/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "astra/seed_1"
  }
 }

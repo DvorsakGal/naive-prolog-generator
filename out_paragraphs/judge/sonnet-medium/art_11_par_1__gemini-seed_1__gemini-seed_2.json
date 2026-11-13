@@ -1,5 +1,5 @@
 {
- "key": "eb7069e8d98036eb942b41aa8042257ebb598580b695a218b8de9baf53cb4a42",
+ "key": "e91e26117d1b6d1f2d6059fccad2c8d26624b7863b9719bc2aed6586bc4ebfa9",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
@@ -7,20 +7,20 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules capture the same obligations; A models the draw-up duty with provider and market or service conditions, while B encodes the timing in a term and adds a documentation_of link.\"}",
- "coverage_a": 0.833,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all sentences with near-identical structure; they differ mainly in sentence 1, where A splits drawing up into separate market/service conditions and B encodes a combined before(...) term, and in how the form is represented in sentences 6-7.\"}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.571,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Both modules capture the same obligations; A models the draw-up duty with provider and market or service conditions, while B encodes the timing in a term and adds a documentation_of link.",
- "sentences_judged": 6,
+ "note": "Both cover all sentences with near-identical structure; they differ mainly in sentence 1, where A splits drawing up into separate market/service conditions and B encodes a combined before(...) term, and in how the form is represented in sentences 6-7.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
@@ -30,14 +30,14 @@
   },
   {
    "n": 3,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -49,7 +49,13 @@
   {
    "n": 6,
    "a": "full",
-   "b": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "partial",
    "agree": "yes"
   }
  ],

@@ -1,0 +1,39 @@
+{
+ "key": "679db3910c352d2e1ae39e40feb9f823f973177c29de89b0e32784ec6bbfcb09",
+ "text": "art_50_par_2",
+ "model": "qwen",
+ "seed": 3,
+ "probe": "drop_rule",
+ "note": "module B includes the exemption for systems that do not substantially alter semantics, which module A omits, and both modules only partially capture the technical-feasibility and marking details",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(ai_content_marking, [\n    provider/1,\n    ai_system/1,\n    general_purpose_ai_system/1,\n    generates_synthetic_content/2,\n    must_mark_output/2,\n    machine_readable_format/1,\n    detectable_as_artificially_generated/1,\n    must_ensure_technical_solution_properties/2,\n    effective/1,\n    interoperable/1,\n    robust/1,\n    reliable/1,\n    technically_feasible/1,\n    takes_into_account_content_specificities/1,\n    takes_into_account_implementation_costs/1,\n    takes_into_account_state_of_the_art/1,\n    reflected_in_relevant_technical_standards/1,\n    exempt_marking_obligation/1,\n    performs_assistive_function_for_standard_editing/1,\n    does_not_substantially_alter_input_data/1,\n    does_not_substantially_alter_semantics/1,\n    authorised_by_law_for_criminal_offences/1\n]).\n:- dynamic provider/1.\n:- dynamic ai_system/1.\n:- dynamic general_purpose_ai_system/1.\n:- dynamic generates_synthetic_content/2.\n:- dynamic machine_readable_format/1.\n:- dynamic detectable_as_artificially_generated/1.\n:- dynamic effective/1.\n:- dynamic interoperable/1.\n:- dynamic robust/1.\n:- dynamic reliable/1.\n:- dynamic technically_feasible/1.\n:- dynamic takes_into_account_content_specificities/1.\n:- dynamic takes_into_account_implementation_costs/1.\n:- dynamic takes_into_account_state_of_the_art/1.\n:- dynamic reflected_in_relevant_technical_standards/1.\n:- dynamic performs_assistive_function_for_standard_editing/1.\n:- dynamic does_not_substantially_alter_input_data/1.\n:- dynamic does_not_substantially_alter_semantics/1.\n:- dynamic authorised_by_law_for_criminal_offences/1.\n\nmust_mark_output(Provider, System) :-\n    provider(Provider),\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    \\+ exempt_marking_obligation(System).\n\nmust_mark_output(Provider, System) :-\n    provider(Provider),\n    general_purpose_ai_system(System),\n    generates_synthetic_content(System, _Content),\n    \\+ exempt_marking_obligation(System).\n\nmust_mark_output(_Provider, output(System, Format)) :-\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    machine_readable_format(Format),\n    detectable_as_artificially_generated(output(System, Format)).\n\nmust_ensure_technical_solution_properties(Provider, System) :-\n    provider(Provider),\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    technically_feasible(System),\n    takes_into_account_content_specificities(System),\n    takes_into_account_implementation_costs(System),\n    takes_into_account_state_of_the_art(System).\n\neffective(solution(System)) :-\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    technically_feasible(System).\n\ninteroperable(solution(System)) :-\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    technically_feasible(System).\n\nrobust(solution(System)) :-\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    technically_feasible(System).\n\nreliable(solution(System)) :-\n    ai_system(System),\n    generates_synthetic_content(System, _Content),\n    technically_feasible(System).\n\nreflected_in_relevant_technical_standards(state_of_the_art) :-\n    takes_into_account_state_of_the_art(_System).\n\nexempt_marking_obligation(System) :-\n    performs_assistive_function_for_standard_editing(System).\n\nexempt_marking_obligation(System) :-\n    does_not_substantially_alter_input_data(System).\n\nexempt_marking_obligation(System) :-\n    authorised_by_law_for_criminal_offences(System).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B includes the exemption for systems that do not substantially alter semantics, which module A omits, and both modules only partially capture the technical-feasibility and marking details\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 3,
+ "agreement": 0.333,
+ "overall": "mostly_same",
+ "sentences_judged": 3,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ]
+}

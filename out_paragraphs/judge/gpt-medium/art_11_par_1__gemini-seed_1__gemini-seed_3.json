@@ -1,20 +1,20 @@
 {
- "key": "2f5daecfa8b1799d3fd5b037ae7c86c7ad52fdd911e705c181a3e405104838be",
+ "key": "195d162650e11af547e55abd9e78163a368b077cf485d290d0e9f37412104ff8",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "gemini/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both modules cover the same provisions overall, but B omits or reshapes several details that A includes, especially the timing in sentence 1 and some annex/recipient specifics in sentences 2 and 3\"\n}",
- "coverage_a": 0.75,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is generally more schematic and omits specifics that module A includes, especially the timing in [1] and the Chapter 3, Annex IV, and recipient details in [2]-[3]\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.571,
  "overall": "mostly_same",
- "note": "both modules cover the same provisions overall, but B omits or reshapes several details that A includes, especially the timing in sentence 1 and some annex/recipient specifics in sentences 2 and 3",
- "sentences_judged": 6,
+ "note": "module B is generally more schematic and omits specifics that module A includes, especially the timing in [1] and the Chapter 3, Annex IV, and recipient details in [2]-[3]",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -31,30 +31,36 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "gemini/seed_1",
-  "B": "gemini/seed_3"
+  "A": "gemini/seed_3",
+  "B": "gemini/seed_1"
  }
 }

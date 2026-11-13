@@ -1,5 +1,5 @@
 {
- "key": "5aea49e918f0209dfdee4326b7cdfcf07a3acd151647ca7dcc228160f25bb78d",
+ "key": "dbd813f6caaaec5dd5f0da538cb86c98379a4df2b0dd7d1a4df12e227bfc7556",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "kimi/seed_2",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"A is closer on the timing and SME-use rules, while B changes or weakens several conditions, especially for drawing up documentation, simplified Annex IV provision, and use of the Article 11(1) form.\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 0.333,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"B reverses the timing of the draw-up duty in sentence 1 and is less faithful than A on the SME simplification and form-use provisions.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.857,
+ "jointly_captured": 7,
+ "agreement": 0.429,
  "overall": "different",
- "note": "A is closer on the timing and SME-use rules, while B changes or weakens several conditions, especially for drawing up documentation, simplified Annex IV provision, and use of the Article 11(1) form.",
- "sentences_judged": 6,
+ "note": "B reverses the timing of the draw-up duty in sentence 1 and is less faithful than A on the SME simplification and form-use provisions.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "full",
-   "agree": "no"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 4,
    "a": "partial",
    "b": "full",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

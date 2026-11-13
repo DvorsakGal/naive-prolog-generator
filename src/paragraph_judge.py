@@ -149,8 +149,10 @@ def split_sentences(text: str) -> list[str]:
     text = re.sub(r"\s(?=\([a-z]\)\s)", "\n", text)
     parts = []
     for chunk in text.split("\n"):
-        # split on sentence-final period followed by a capital, keeping abbreviations like 'No.' intact
-        for s in re.split(r"(?<=[a-z\)\]0-9])\.\s+(?=[A-Z])", chunk):
+        # split on sentence-final period followed by a capital, keeping abbreviations like 'No.' intact.
+        # The lookbehind accepts capitals too (2026-11-10): "Annex IV. SMEs" is a sentence
+        # boundary, and the old rule merged sentences 3 and 4 of art_11_par_1.
+        for s in re.split(r"(?<=[A-Za-z\)\]0-9])(?<!\bNo)(?<!\bArt)(?<!\be\.g)(?<!\bi\.e)\.\s+(?=[A-Z])", chunk):
             s = s.strip()
             if s:
                 parts.append(s if s.endswith((".", ";", ":")) else s + ".")

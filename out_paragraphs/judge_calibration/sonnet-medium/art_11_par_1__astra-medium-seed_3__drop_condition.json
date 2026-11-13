@@ -1,0 +1,63 @@
+{
+ "key": "f88f5bedc3f7a1f5780b454f401fe26c9ead554709606686386d4daa3c308ea6",
+ "text": "art_11_par_1",
+ "model": "astra-medium",
+ "seed": 3,
+ "probe": "drop_condition",
+ "note": "Only sentence 4 differs: A restricts the simplified-provision permission to SMEs, while B leaves the Enterprise unconstrained.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(technical_documentation, [\n    required_technical_documentation/1,\n    required_preparation/1,\n    required_up_to_date_documentation/1,\n    required_demonstration/1,\n    required_information/1,\n    required_clarity/1,\n    required_comprehensiveness/1,\n    required_minimum_content/1,\n    permitted_simplified_provision/1,\n    must_establish/2,\n    objective_meet_small_enterprise_need/1,\n    objective_meet_microenterprise_need/1,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic artificial_intelligence_system/1.\n:- dynamic high_risk/1.\n:- dynamic national_competent_authority/1.\n:- dynamic notified_body/1.\n:- dynamic small_or_medium_sized_enterprise/1.\n:- dynamic commission/1.\n:- dynamic opts_for_simplified_provision/2.\n\nrequired_technical_documentation(System) :-\n    artificial_intelligence_system(System),\n    high_risk(System).\n\nrequired_preparation(\n    preparation(technical_documentation(System), before(placing_on_market(System)))\n) :-\n    required_technical_documentation(System).\n\nrequired_preparation(\n    preparation(technical_documentation(System), before(putting_into_service(System)))\n) :-\n    required_technical_documentation(System).\n\nrequired_up_to_date_documentation(technical_documentation(System)) :-\n    required_technical_documentation(System).\n\nrequired_demonstration(\n    demonstration(\n        technical_documentation(System),\n        compliance(System, requirement_set(chapter(3)))\n    )\n) :-\n    required_technical_documentation(System).\n\nrequired_information(\n    provision(\n        technical_documentation(System),\n        Authority,\n        necessary_information_for(\n            assessment(compliance(System, requirement_set(chapter(3))))\n        )\n    )\n) :-\n    required_technical_documentation(System),\n    national_competent_authority(Authority).\n\nrequired_information(\n    provision(\n        technical_documentation(System),\n        Body,\n        necessary_information_for(\n            assessment(compliance(System, requirement_set(chapter(3))))\n        )\n    )\n) :-\n    required_technical_documentation(System),\n    notified_body(Body).\n\nrequired_clarity(Provision) :-\n    required_information(Provision).\n\nrequired_comprehensiveness(Provision) :-\n    required_information(Provision).\n\nrequired_minimum_content(\n    content(technical_documentation(System), element_set(annex(4)))\n) :-\n    required_technical_documentation(System).\n\npermitted_simplified_provision(provision(Enterprise, technical_documentation(System), element_set(annex(4)))) :-\n    required_technical_documentation(System).\n\nmust_establish(\n    Commission,\n    simplified_technical_documentation_form(article(11, 1))\n) :-\n    commission(Commission).\n\nobjective_meet_small_enterprise_need(\n    simplified_technical_documentation_form(article(11, 1))\n).\n\nobjective_meet_microenterprise_need(\n    simplified_technical_documentation_form(article(11, 1))\n).\n\nmust_use(\n    Enterprise,\n    form_for(\n        simplified_technical_documentation_form(article(11, 1)),\n        technical_documentation(System)\n    )\n) :-\n    small_or_medium_sized_enterprise(Enterprise),\n    required_technical_documentation(System),\n    opts_for_simplified_provision(\n        Enterprise,\n        information(technical_documentation(System), annex(4))\n    ).\n\nmust_accept(\n    Body,\n    form_for(\n        simplified_technical_documentation_form(article(11, 1)),\n        conformity_assessment\n    )\n) :-\n    notified_body(Body).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Only sentence 4 differs: A restricts the simplified-provision permission to SMEs, while B leaves the Enterprise unconstrained.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

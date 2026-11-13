@@ -1,0 +1,27 @@
+{
+ "key": "e9075b649c90485b968e3d86a9ddb24b432b0e21c641abbfcc5842d13a73e15d",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_ai_material_labelling, [\n    permitted_encouragement_of_code_of_practice/1,\n    permitted_facilitation_of_code_of_practice/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_public_distinguish_ai_generated_material/1,\n    mandatory/1,\n    fully_applicable/1,\n    encourages_preparation/2,\n    facilitates_preparation/2\n]).\n:- dynamic european_commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_duty/1.\n:- dynamic detection_and_labelling_duty/1.\n:- dynamic artificially_generated_or_manipulated_material/1.\n\nobjective_public_distinguish_ai_generated_material(distinguish(XCode, XContent)) :-\n    code_of_practice(XCode),\n    union_level(XCode),\n    artificially_generated_or_manipulated_material(XContent).\n\nobjective_effective_implementation(XCode) :-\n    code_of_practice(XCode),\n    union_level(XCode),\n    detection_and_labelling_duty(_O).\n\npermitted_facilitation_of_code_of_practice(facilitate(XC, XCode)) :-\n    european_commission(XC),\n    code_of_practice(XCode),\n    union_level(XCode).\n\nencourages_preparation(XC, XCode) :-\n    european_commission(XC),\n    code_of_practice(XCode),\n    union_level(XCode).\n\nmandatory(XO) :-\n    transparency_duty(XO).\n\npermitted_encouragement_of_code_of_practice(encourage(XC, XCode)) :-\n    european_commission(XC),\n    code_of_practice(XCode),\n    union_level(XCode).\n\nobjective_support_practical_arrangement(arrangement(XCode, cooperation(material_disseminator))) :-\n    code_of_practice(XCode),\n    union_level(XCode).\n\nfacilitates_preparation(XC, XCode) :-\n    european_commission(XC),\n    code_of_practice(XCode),\n    union_level(XCode).\n\nobjective_support_practical_arrangement(arrangement(XCode, accessible_detection_mechanism)) :-\n    code_of_practice(XCode),\n    union_level(XCode).\n\nfully_applicable(XO) :-\n    transparency_duty(XO).\n\nobjective_support_practical_arrangement(arrangement(XCode, cooperation(authenticity_and_provenance_checker))) :-\n    code_of_practice(XCode),\n    union_level(XCode).\n\nobjective_support_practical_arrangement(arrangement(XCode, cooperation(value_chain_actor))) :-\n    code_of_practice(XCode),\n    union_level(XCode).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "key": "4ae4daf7c3185dfc67892f0677eefe461c9891dc699efd5d3c101d57ce361ef4",
+ "key": "2d2daa3c2e74b868a49fc86c793a4e82b3edb1bffadf04f2da7c3a219a5b79b4",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "astra/seed_2",
@@ -7,14 +7,14 @@
  "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
  "coverage_a": 1.0,
  "coverage_b": 1.0,
- "jointly_captured": 6,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "same",
  "note": "none",
- "sentences_judged": 6,
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

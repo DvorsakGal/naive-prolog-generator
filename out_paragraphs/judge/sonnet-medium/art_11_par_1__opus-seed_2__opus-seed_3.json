@@ -1,5 +1,5 @@
 {
- "key": "0268d078a25eaa1f491f8d3e6c3e20e57dde24c96b901cc04286b5ebcebbe29a",
+ "key": "f124c943a5809464d3e268d464a449e54c41c2e970526ddb375a530f701e0f9e",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "opus/seed_2",
@@ -7,14 +7,14 @@
  "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B adds conditions (SME must provide a high-risk system, start-ups modelled as SMEs, documentation must exist) and ties the use of the form to Annex IV opt-in, while A is closer to the text.\"\n}",
- "coverage_a": 0.917,
- "coverage_b": 0.917,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B adds extra conditions to the SME permission (the SME must be a provider of a high-risk system) and defines sme to include start-ups, while A does not.\"}",
+ "coverage_a": 0.929,
+ "coverage_b": 0.857,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "B adds conditions (SME must provide a high-risk system, start-ups modelled as SMEs, documentation must exist) and ties the use of the form to Annex IV opt-in, while A is closer to the text.",
- "sentences_judged": 6,
+ "note": "Module B adds extra conditions to the SME permission (the SME must be a provider of a high-risk system) and defines sme to include start-ups, while A does not.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -37,8 +37,8 @@
   {
    "n": 4,
    "a": "full",
-   "b": "full",
-   "agree": "yes"
+   "b": "partial",
+   "agree": "no"
   },
   {
    "n": 5,
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

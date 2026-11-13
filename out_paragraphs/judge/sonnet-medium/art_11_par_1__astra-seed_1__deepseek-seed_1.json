@@ -1,5 +1,5 @@
 {
- "key": "afc5e8dc88a0a9fabda2e58502f4e106f587919713356517058fd1a8deb9d7a6",
+ "key": "964851e9b14e75eb6e6fedf0ca9815972bd3ea2bc32f53224d421e6f211f8e4b",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "astra/seed_1",
@@ -7,20 +7,20 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all six sentences, but A distorts several (the draw-up obligation is conditioned on the system already being on the market, the minimum content is negated when the simplified option applies, and the SME option is circular), while B renders them faithfully.\"}",
- "coverage_a": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B is more faithful: A makes must_contain conditional on not being simplified, ignores the requirement that the form be targeted at small and microenterprises, and does not encode the 'before' timing or the assessment purpose; B captures these.\"}",
+ "coverage_a": 0.929,
  "coverage_b": 0.5,
- "jointly_captured": 6,
- "agreement": 0.333,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "Both cover all six sentences, but A distorts several (the draw-up obligation is conditioned on the system already being on the market, the minimum content is negated when the simplified option applies, and the SME option is circular), while B renders them faithfully.",
- "sentences_judged": 6,
+ "note": "Module B is more faithful: A makes must_contain conditional on not being simplified, ignores the requirement that the form be targeted at small and microenterprises, and does not encode the 'before' timing or the assessment purpose; B captures these.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
@@ -38,7 +38,7 @@
    "n": 4,
    "a": "full",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 5,
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "partial",
    "agree": "yes"

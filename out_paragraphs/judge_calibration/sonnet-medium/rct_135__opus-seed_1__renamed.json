@@ -1,0 +1,27 @@
+{
+ "key": "96f5aa28a0b4fdede86d6b0d4364e35155a4de5c838011a39c26121e06f48845",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 1,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_material_labelling, [\n    permitted_encourage_code_of_practice/1,\n    permitted_facilitate_code_of_practice/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_public_distinguish_ai_generated_material/1,\n    mandatory/1,\n    fully_applicable/1\n]).\n:- dynamic european_commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_duty/1.\n:- dynamic material_detection_labelling_duty/1.\n\nobjective_support_practical_arrangement(arrangement(XC, cooperation(value_chain_actor))) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nfully_applicable(XO) :-\n    transparency_duty(XO).\n\npermitted_encourage_code_of_practice(preparation(XCommission, XC)) :-\n    european_commission(XCommission),\n    code_of_practice(XC),\n    union_level(XC).\n\nobjective_support_practical_arrangement(arrangement(XC, cooperation(material_disseminator))) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nobjective_support_practical_arrangement(arrangement(XC, accessible_detection_mechanism)) :-\n    code_of_practice(XC),\n    union_level(XC).\n\npermitted_facilitate_code_of_practice(preparation(XCommission, XC)) :-\n    european_commission(XCommission),\n    code_of_practice(XC),\n    union_level(XC).\n\nobjective_public_distinguish_ai_generated_material(XC) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nobjective_effective_implementation(implementation(XC, XO)) :-\n    code_of_practice(XC),\n    union_level(XC),\n    material_detection_labelling_duty(XO).\n\nobjective_support_practical_arrangement(arrangement(XC, cooperation(authenticity_provenance_checker))) :-\n    code_of_practice(XC),\n    union_level(XC).\n\nmandatory(XO) :-\n    transparency_duty(XO).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "key": "17708ade465a732eba9c7376f6301f0683725ae0393a9e8d3b8c9e12d8e04b33",
+ "text": "art_11_par_1",
+ "model": "gemini",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "the modules are substantively parallel and differ only in predicate naming, while sharing the same omissions of detail.",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(technical_file_elevated_risk_ai, [\n    required_technical_file/1,\n    must_prepare/2,\n    must_maintain/2,\n    demonstrates_compliance_chapter_three/1,\n    provides_assessment_data/1,\n    contains_minimum_annex_four_elements/1,\n    permitted_simplified_manner/2,\n    must_set_up/2,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic elevated_risk/1.\n:- dynamic ai_system/1.\n:- dynamic supplier/1.\n:- dynamic places_on_market/2.\n:- dynamic puts_into_service/2.\n:- dynamic small_medium_undertaking/1.\n:- dynamic start_up/1.\n:- dynamic european_commission/1.\n:- dynamic notified_organisation/1.\n:- dynamic opts_simplified_manner/2.\n:- dynamic form_referred_to_in_article_eleven_one/1.\n\nrequired_technical_file(technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem).\n\ndemonstrates_compliance_chapter_three(technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem).\n\nmust_maintain(XProvider, technical_file(XSystem)) :-\n    supplier(XProvider),\n    ai_system(XSystem),\n    elevated_risk(XSystem).\n\nmust_prepare(XProvider, technical_file(XSystem)) :-\n    supplier(XProvider),\n    ai_system(XSystem),\n    elevated_risk(XSystem),\n    puts_into_service(XProvider, XSystem).\n\nmust_prepare(XProvider, technical_file(XSystem)) :-\n    supplier(XProvider),\n    ai_system(XSystem),\n    elevated_risk(XSystem),\n    places_on_market(XProvider, XSystem).\n\ncontains_minimum_annex_four_elements(technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem).\n\nmust_use(XEnterprise, XForm) :-\n    small_medium_undertaking(XEnterprise),\n    opts_simplified_manner(XEnterprise, technical_file(XSystem)),\n    ai_system(XSystem),\n    form_referred_to_in_article_eleven_one(XForm).\n\npermitted_simplified_manner(XEnterprise, technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem),\n    start_up(XEnterprise).\n\nprovides_assessment_data(technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem).\n\nmust_use(XEnterprise, XForm) :-\n    start_up(XEnterprise),\n    opts_simplified_manner(XEnterprise, technical_file(XSystem)),\n    ai_system(XSystem),\n    form_referred_to_in_article_eleven_one(XForm).\n\nmust_accept(XNotifiedBody, form_conformity_assessment(XForm)) :-\n    notified_organisation(XNotifiedBody),\n    form_referred_to_in_article_eleven_one(XForm).\n\nmust_set_up(XCommission, simplified_form(small_and_microenterprises)) :-\n    european_commission(XCommission).\n\npermitted_simplified_manner(XEnterprise, technical_file(XSystem)) :-\n    ai_system(XSystem),\n    elevated_risk(XSystem),\n    small_medium_undertaking(XEnterprise).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"the modules are substantively parallel and differ only in predicate naming, while sharing the same omissions of detail.\"\n}",
+ "coverage_a": 0.643,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

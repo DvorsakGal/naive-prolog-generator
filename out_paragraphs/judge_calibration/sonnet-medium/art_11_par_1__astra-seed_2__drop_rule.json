@@ -1,0 +1,63 @@
+{
+ "key": "b2aa38bc94b2c4ff38ea7bdf55a2ea5fb6287861d70bb49d8afb3cc608a75bfc",
+ "text": "art_11_par_1",
+ "model": "astra",
+ "seed": 2,
+ "probe": "drop_rule",
+ "note": "Module A requires the documentation to be drawn up before both placing on the market and putting into service, while module B covers only putting into service, so B is partial on sentence 1.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(technical_documentation, [\n    required_technical_documentation/1,\n    required_drawing_up/1,\n    required_updating/1,\n    required_demonstration/1,\n    required_information/1,\n    required_content/1,\n    permitted_simplified_submission/1,\n    must_establish/2,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic high_risk/1.\n:- dynamic artificial_intelligence_system/1.\n:- dynamic technical_documentation_applies/1.\n:- dynamic small_or_medium_enterprise/1.\n:- dynamic start_up/1.\n:- dynamic provides_documentation/2.\n:- dynamic opts_for_simplified_submission/2.\n:- dynamic commission/1.\n:- dynamic notified_body/1.\n:- dynamic national_competent_authority/1.\n\nrequired_technical_documentation(System) :-\n    artificial_intelligence_system(System),\n    high_risk(System).\n\nrequired_drawing_up(before(technical_documentation(System), putting_into_service(System))) :-\n    required_technical_documentation(System).\n\nrequired_updating(technical_documentation(System)) :-\n    required_technical_documentation(System).\n\nrequired_demonstration(\n    technical_documentation(System, compliance(System, requirement(chp_3))))\n    :-\n    required_technical_documentation(System).\n\nrequired_information(\n    provision(technical_documentation(System), Authority,\n        necessary_information(\n            assess_compliance(System, requirement(chp_3)),\n            clear_and_comprehensive_form)))\n    :-\n    required_technical_documentation(System),\n    national_competent_authority(Authority).\n\nrequired_information(\n    provision(technical_documentation(System), Body,\n        necessary_information(\n            assess_compliance(System, requirement(chp_3)),\n            clear_and_comprehensive_form)))\n    :-\n    required_technical_documentation(System),\n    notified_body(Body).\n\nrequired_content(\n    technical_documentation(System, minimum_element_set(annex_iv)))\n    :-\n    required_technical_documentation(System).\n\npermitted_simplified_submission(\n    submission(Enterprise, technical_documentation(System), element_set(annex_iv)))\n    :-\n    small_or_medium_enterprise(Enterprise),\n    provides_documentation(Enterprise, System),\n    required_technical_documentation(System).\n\npermitted_simplified_submission(\n    submission(Enterprise, technical_documentation(System), element_set(annex_iv)))\n    :-\n    start_up(Enterprise),\n    small_or_medium_enterprise(Enterprise),\n    provides_documentation(Enterprise, System),\n    required_technical_documentation(System).\n\nmust_establish(Commission,\n    simplified_technical_documentation_form(\n        article_11_1,\n        targeted_needs(small_enterprise, microenterprise))) :-\n    commission(Commission).\n\nmust_use(Enterprise,\n    form(article_11_1, technical_documentation(System))) :-\n    permitted_simplified_submission(\n        submission(Enterprise, technical_documentation(System), element_set(annex_iv))),\n    opts_for_simplified_submission(Enterprise,\n        information(technical_documentation(System), annex_iv)).\n\nmust_accept(Body,\n    form(article_11_1, purpose(conformity_assessment))) :-\n    notified_body(Body).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A requires the documentation to be drawn up before both placing on the market and putting into service, while module B covers only putting into service, so B is partial on sentence 1.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

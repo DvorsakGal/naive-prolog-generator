@@ -1,0 +1,27 @@
+{
+ "key": "ab427df1f7e69f2c3962611ef1a0606034d31c3476fe51c9e2f9a7be34db6ff0",
+ "text": "rct_135",
+ "model": "astra",
+ "seed": 2,
+ "probe": "drop_rule",
+ "note": "Module B adds a fully_applicable/1 predicate for the transparency obligations' full applicability; Module A omits it, otherwise the modules are identical.",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(content_code_of_practice, [\n    mandatory/1,\n    permitted_encouragement/1,\n    permitted_facilitation/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_facilitate_cooperation/1,\n    objective_enable_public_distinction/1,\n    relevant_actor_applies/1\n]).\n:- dynamic commission/1.\n:- dynamic union_level_code_of_practice/1.\n:- dynamic transparency_obligation/1.\n:- dynamic detection_mechanism/1.\n:- dynamic appropriateness_applies/1.\n:- dynamic value_chain_actor/1.\n:- dynamic disseminates_content/2.\n:- dynamic checks_authenticity/2.\n:- dynamic checks_provenance/2.\n\nmandatory(Obligation) :-\n    transparency_obligation(Obligation).\n\npermitted_encouragement(encouragement(Commission, drawing_up(Code))) :-\n    commission(Commission),\n    union_level_code_of_practice(Code).\n\npermitted_facilitation(facilitation(Commission, drawing_up(Code))) :-\n    commission(Commission),\n    union_level_code_of_practice(Code).\n\nobjective_effective_implementation(\n    code_of_practice(Code, obligation(detection, artificially_generated_content))) :-\n    union_level_code_of_practice(Code).\n\nobjective_effective_implementation(\n    code_of_practice(Code, obligation(labelling, artificially_generated_content))) :-\n    union_level_code_of_practice(Code).\n\nobjective_effective_implementation(\n    code_of_practice(Code, obligation(detection, artificially_manipulated_content))) :-\n    union_level_code_of_practice(Code).\n\nobjective_effective_implementation(\n    code_of_practice(Code, obligation(labelling, artificially_manipulated_content))) :-\n    union_level_code_of_practice(Code).\n\nobjective_support_practical_arrangement(\n    code_of_practice(Code, making_accessible(Mechanism))) :-\n    union_level_code_of_practice(Code),\n    detection_mechanism(Mechanism),\n    appropriateness_applies(making_accessible(Mechanism)).\n\nobjective_facilitate_cooperation(\n    code_of_practice(Code, cooperation_with(Actor))) :-\n    union_level_code_of_practice(Code),\n    relevant_actor_applies(Actor).\n\nrelevant_actor_applies(Actor) :-\n    value_chain_actor(Actor).\n\nrelevant_actor_applies(Actor) :-\n    disseminates_content(Actor, _Content).\n\nrelevant_actor_applies(Actor) :-\n    checks_authenticity(Actor, Content),\n    checks_provenance(Actor, Content).\n\nobjective_enable_public_distinction(\n    code_of_practice(Code, effective_distinction(public, artificial_intelligence_generated_content))) :-\n    union_level_code_of_practice(Code).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B adds a fully_applicable/1 predicate for the transparency obligations' full applicability; Module A omits it, otherwise the modules are identical.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

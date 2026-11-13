@@ -1,0 +1,57 @@
+{
+ "key": "bad0c97652e124697d0ebc189275689c7d0514b3ff95c672ecd06eea29336780",
+ "text": "art_49_par_4",
+ "model": "opus",
+ "seed": 3,
+ "probe": "drop_rule",
+ "note": "Module A omits item (a), Annex VIII points 1 to 10 except 6, 8 and 9, while Module B includes it; the rest is identical.",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(restricted_registration_law_enforcement_migration, [\n    restricted_registration_applies/1,\n    required_secure_non_public_section/1,\n    must_include_only/2,\n    permitted_registration_information/1,\n    permitted_access_restricted_section/1,\n    prohibited_access_restricted_section/1\n]).\n:- dynamic high_risk_ai_system/1.\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic registration/2.\n:- dynamic commission/1.\n:- dynamic national_authority_article_74_8/1.\n:- dynamic seeks_access/2.\n\nrestricted_area(law_enforcement).\n\nrestricted_area(migration).\n\nrestricted_area(asylum).\n\nrestricted_area(border_control_management).\n\nrestricted_annex_point(1).\n\nrestricted_annex_point(6).\n\nrestricted_annex_point(7).\n\nrestricted_registration_applies(S) :-\n    high_risk_ai_system(S),\n    annex_iii_point(S, N),\n    restricted_annex_point(N),\n    area(S, A),\n    restricted_area(A).\n\nregistration_article(article(49, 1)).\n\nregistration_article(article(49, 2)).\n\nregistration_article(article(49, 3)).\n\nrequired_secure_non_public_section(registration(S, Art)) :-\n    restricted_registration_applies(S),\n    registration(S, Art),\n    registration_article(Art).\n\nmust_include_only(registration(S, Art), information(I)) :-\n    required_secure_non_public_section(registration(S, Art)),\n    permitted_registration_information(I).\n\npermitted_registration_information(annex_viii_section_b(N)) :-\n    member_point(N, [1, 2, 3, 4, 5, 8, 9]).\n\npermitted_registration_information(annex_viii(N)) :-\n    member_point(N, [1, 2, 3]).\n\npermitted_registration_information(annex_ix(N)) :-\n    member_point(N, [1, 2, 3, 5]).\n\nmember_point(X, [X|_]).\n\nmember_point(X, [_|T]) :-\n    member_point(X, T).\n\npermitted_access_restricted_section(P) :-\n    commission(P).\n\npermitted_access_restricted_section(P) :-\n    national_authority_article_74_8(P).\n\nprohibited_access_restricted_section(P) :-\n    seeks_access(P, restricted_section(eu_database)),\n    \\+ permitted_access_restricted_section(P).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"none\",\"b\":\"full\",\"agree\":\"na\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A omits item (a), Annex VIII points 1 to 10 except 6, 8 and 9, while Module B includes it; the rest is identical.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.833,
+ "jointly_captured": 5,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "none",
+   "b": "full",
+   "agree": "na"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

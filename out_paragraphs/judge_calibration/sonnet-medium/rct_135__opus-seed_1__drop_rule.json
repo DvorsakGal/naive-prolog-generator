@@ -1,0 +1,27 @@
+{
+ "key": "45e330cf6dd91a4341bf4c2098b5d2c30221a439e1a0daad6c96528fa4cf9ee6",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "A also defines mandatory/1 for transparency obligations, while B only states fully_applicable; everything else is identical.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_content_labelling, [\n    permitted_encourage_code_of_practice/1,\n    permitted_facilitate_code_of_practice/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_public_distinguish_ai_generated_content/1,\n    fully_applicable/1\n]).\n:- dynamic commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_obligation/1.\n:- dynamic content_detection_labelling_obligation/1.\n\nfully_applicable(O) :-\n    transparency_obligation(O).\n\npermitted_encourage_code_of_practice(drawing_up(Commission, C)) :-\n    commission(Commission),\n    code_of_practice(C),\n    union_level(C).\n\npermitted_facilitate_code_of_practice(drawing_up(Commission, C)) :-\n    commission(Commission),\n    code_of_practice(C),\n    union_level(C).\n\nobjective_effective_implementation(implementation(C, O)) :-\n    code_of_practice(C),\n    union_level(C),\n    content_detection_labelling_obligation(O).\n\nobjective_support_practical_arrangement(arrangement(C, accessible_detection_mechanism)) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(value_chain_actor))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(content_disseminator))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(authenticity_provenance_checker))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_public_distinguish_ai_generated_content(C) :-\n    code_of_practice(C),\n    union_level(C).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A also defines mandatory/1 for transparency obligations, while B only states fully_applicable; everything else is identical.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "key": "18b1ca1f9c5e073031fd28a4fa98ca612e833a4bfae7c3089e5fad6aa6767e78",
+ "key": "d3c2d4694011683653d79ab53a1b88c0c4d7defeca8882cc648d8daea8d1446e",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "mistral/seed_1",
@@ -7,19 +7,19 @@
  "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules share the same structure; B is more concrete on the Commission establishing the form and on notified bodies accepting it, and it defines the before-market helpers, while A has stubs and omits those. A's must_use_simplified_form/2 also does not match its exported /1.\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.75,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules have the same structure and cover the same sentences. They differ in detail: B names the commission as an actor, handles authority and body recipients through an enumeration, and gives helper rules for the 'before' timing. A uses purpose facts and ties the compliance requirements explicitly to chapter_3.\"}",
+ "coverage_a": 0.857,
+ "coverage_b": 0.929,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules share the same structure; B is more concrete on the Commission establishing the form and on notified bodies accepting it, and it defines the before-market helpers, while A has stubs and omits those. A's must_use_simplified_form/2 also does not match its exported /1.",
- "sentences_judged": 6,
+ "note": "Both modules have the same structure and cover the same sentences. They differ in detail: B names the commission as an actor, handles authority and body recipients through an enumeration, and gives helper rules for the 'before' timing. A uses purpose facts and ties the compliance requirements explic",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "yes"
-  },
-  {
-   "n": 4,
-   "a": "partial",
-   "b": "full",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "full",
    "agree": "yes"

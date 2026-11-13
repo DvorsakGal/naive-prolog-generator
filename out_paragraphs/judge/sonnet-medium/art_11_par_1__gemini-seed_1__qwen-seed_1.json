@@ -1,60 +1,66 @@
 {
- "key": "95f1bcda7bcf07ba65d2bfd87829b13bb3038b898fb424989aee21afa50dee5b",
+ "key": "758754022d5a5d78cbc39498e7f382c1a2527fb6be192787f3a2c611b34dba4f",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "qwen/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same obligations with similar generic rules; B ties documentation to the system and records the small/microenterprise target, while A is looser (no documentation entity, no target).\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.583,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same obligations at the same coarse level. A encodes more detail (the documentation-system link, the form's target and purpose), while B is looser, with trivially true auxiliary predicates and a generic form.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules encode the same obligations with similar generic rules; B ties documentation to the system and records the small/microenterprise target, while A is looser (no documentation entity, no target).",
- "sentences_judged": 6,
+ "note": "Both capture the same obligations at the same coarse level. A encodes more detail (the documentation-system link, the form's target and purpose), while B is looser, with trivially true auxiliary predicates and a generic form.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "yes"
-  },
-  {
-   "n": 4,
-   "a": "full",
-   "b": "partial",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
    "n": 6,
-   "a": "partial",
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
    "b": "partial",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "qwen/seed_1"
  }
 }

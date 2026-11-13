@@ -1,0 +1,27 @@
+{
+ "key": "2a9e33983857476e49ab71c052021b86837e7c047ce29bee994124a138850632",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 2,
+ "probe": "flip_modality",
+ "note": "Module A models the Commission's encouragement as permitted, matching 'may', while module B names it 'required_encouragement', changing the modality; the rest is identical.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_ai_content_labelling, [\n    required_encouragement_of_code_of_practice/1,\n    permitted_facilitation_of_code_of_practice/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_public_distinguish_ai_generated_content/1,\n    mandatory/1,\n    fully_applicable/1,\n    encourages_drawing_up/2,\n    facilitates_drawing_up/2\n]).\n:- dynamic commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_obligation/1.\n:- dynamic detection_and_labelling_obligation/1.\n:- dynamic artificially_generated_or_manipulated_content/1.\n\nmandatory(O) :-\n    transparency_obligation(O).\n\nfully_applicable(O) :-\n    transparency_obligation(O).\n\nrequired_encouragement_of_code_of_practice(encourage(C, Code)) :-\n    commission(C),\n    code_of_practice(Code),\n    union_level(Code).\n\npermitted_facilitation_of_code_of_practice(facilitate(C, Code)) :-\n    commission(C),\n    code_of_practice(Code),\n    union_level(Code).\n\nencourages_drawing_up(C, Code) :-\n    commission(C),\n    code_of_practice(Code),\n    union_level(Code).\n\nfacilitates_drawing_up(C, Code) :-\n    commission(C),\n    code_of_practice(Code),\n    union_level(Code).\n\nobjective_effective_implementation(Code) :-\n    code_of_practice(Code),\n    union_level(Code),\n    detection_and_labelling_obligation(_O).\n\nobjective_support_practical_arrangement(arrangement(Code, accessible_detection_mechanism)) :-\n    code_of_practice(Code),\n    union_level(Code).\n\nobjective_support_practical_arrangement(arrangement(Code, cooperation(value_chain_actor))) :-\n    code_of_practice(Code),\n    union_level(Code).\n\nobjective_support_practical_arrangement(arrangement(Code, cooperation(content_disseminator))) :-\n    code_of_practice(Code),\n    union_level(Code).\n\nobjective_support_practical_arrangement(arrangement(Code, cooperation(authenticity_and_provenance_checker))) :-\n    code_of_practice(Code),\n    union_level(Code).\n\nobjective_public_distinguish_ai_generated_content(distinguish(Code, Content)) :-\n    code_of_practice(Code),\n    union_level(Code),\n    artificially_generated_or_manipulated_content(Content).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"}],\"overall\":\"mostly_same\",\"note\":\"Module A models the Commission's encouragement as permitted, matching 'may', while module B names it 'required_encouragement', changing the modality; the rest is identical.\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ]
+}

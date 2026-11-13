@@ -1,26 +1,26 @@
 {
- "key": "05574950c5774e215aac3ed33ce2500a73330e4d8ef6ac96ce959e65a815518c",
+ "key": "bcfc4f9864ff014b75b9737d68648c5602d36c0a89eee976e86661a933356aaf",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "astra/seed_1",
  "b": "kimi/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A treats drawing up and keeping up to date more loosely: it has no 'before' timing, and it uses a disjunction of placed/put into service as a condition. Module B models the before-placement and before-service timing explicitly, and also models the necessary information and the targeting of the form more faithfully.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models sentence 1 with explicit before-placement and before-service obligations plus up-to-date status, while B conditions drawing up on the system already being placed or in service, which reverses the timing, and B's helper predicates are looser and more trivial.\"}",
  "coverage_a": 1.0,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Module A treats drawing up and keeping up to date more loosely: it has no 'before' timing, and it uses a disjunction of placed/put into service as a condition. Module B models the before-placement and before-service timing explicitly, and also models the necessary information and the targeting of th",
- "sentences_judged": 6,
+ "note": "A models sentence 1 with explicit before-placement and before-service obligations plus up-to-date status, while B conditions drawing up on the system already being placed or in service, which reverses the timing, and B's helper predicates are looser and more trivial.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
@@ -43,18 +43,24 @@
   {
    "n": 5,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_1",
-  "B": "astra/seed_1"
+  "A": "astra/seed_1",
+  "B": "kimi/seed_1"
  }
 }

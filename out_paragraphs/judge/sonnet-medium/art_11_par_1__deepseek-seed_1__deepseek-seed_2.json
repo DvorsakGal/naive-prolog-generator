@@ -1,5 +1,5 @@
 {
- "key": "be158a7a3e760641dfab532082dc7e6ab6bc808b906ccad978a1084ae3b0fd0b",
+ "key": "2c90c26dfd5f757ccbbe1266ef00c26c9b00ed675e583dd7652f533b9de63eb4",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with similar structure; B adds a spurious exclusion condition on the Annex IV minimum content and is weaker on the conformity-assessment and opt-in details, while A is more explicit.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover the same obligations in broadly similar form. B is weaker or distorted on the minimum Annex IV contents, where it adds a negated condition, and on the Commission's form, where it drops the form's target.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Both cover the same sentences with similar structure; B adds a spurious exclusion condition on the Annex IV minimum content and is weaker on the conformity-assessment and opt-in details, while A is more explicit.",
- "sentences_judged": 6,
+ "note": "Both modules cover the same obligations in broadly similar form. B is weaker or distorted on the minimum Annex IV contents, where it adds a negated condition, and on the Commission's form, where it drops the form's target.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -31,7 +31,7 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "no"
   },
   {
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "full",
    "agree": "yes"

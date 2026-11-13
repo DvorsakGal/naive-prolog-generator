@@ -1,0 +1,3855 @@
+{
+ "time_limit_s": 1.0,
+ "outputs": {
+  "art_11_par_1/astra/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11",
+    "chp_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/astra/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11",
+    "chp_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/astra/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11",
+    "chp_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/astra-medium/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11",
+    "chp_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/astra-medium/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11",
+    "chp_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/astra-medium/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article(1",
+    "chapter(3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/deepseek/seed_1": {
+   "pass": false,
+   "reasons": [
+    "undefined: ['complies_with/2', 'provides_clear_comprehensive_information/2']"
+   ],
+   "undefined": [
+    "complies_with/2",
+    "provides_clear_comprehensive_information/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 3,
+   "position_references": [
+    "_article_11",
+    "chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/deepseek/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 2 other 0",
+    "undefined: ['accepts_for_conformity_assessment/2', 'assess_compliance/2', 'complies_with/2', 'contains/2']",
+    "termination: timeout [] error ['must_contain_minimum_elements/1 error(existence_error(procedure,technical_documentation:technical_documentation/1)', 'must_demonstrate_compliance/2 error(existence_error(procedure,technical_documentation:technical_documentation/1),c']"
+   ],
+   "undefined": [
+    "accepts_for_conformity_assessment/2",
+    "assess_compliance/2",
+    "complies_with/2",
+    "contains/2",
+    "necessary_information/1",
+    "opts_for_simplified_manner/1",
+    "provides_simplified/2",
+    "simplified_technical_documentation_form/1",
+    "targeted_at/2",
+    "technical_documentation/1",
+    "uses/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 4,
+   "position_references": [
+    "_article_11",
+    "_chapter_3"
+   ],
+   "termination": {
+    "ok": false,
+    "timeout": [],
+    "error": [
+     "must_contain_minimum_elements/1 error(existence_error(procedure,technical_documentation:technical_documentation/1)",
+     "must_demonstrate_compliance/2 error(existence_error(procedure,technical_documentation:technical_documentation/1),c",
+     "must_keep_up_to_date/1 error(existence_error(procedure,technical_documentation:technical_documentation/1),context(",
+     "must_provide_information/2 error(existence_error(procedure,technical_documentation:technical_documentation/1),cont"
+    ]
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 3
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 2,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/deepseek/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 18 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 4,
+   "position_references": [
+    "_article_11",
+    "_chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 18,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "information_for_assessment/2",
+    "may_provide_simplified/2",
+    "must_accept_form/2",
+    "must_contain/2",
+    "must_demonstrate_compliance/2",
+    "must_draw_up_before/2",
+    "must_establish/2",
+    "must_keep_up_to_date/2",
+    "must_provide_information/2",
+    "must_use_form/2",
+    "opts_for_simplified/1",
+    "responsible_entity/2",
+    "technical_documentation_of/2"
+   ]
+  },
+  "art_11_par_1/gemini/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 24 errors",
+    "undefined: ['commission/1', 'documentation_of/2', 'high_risk/1', 'notified_body/1']"
+   ],
+   "undefined": [
+    "commission/1",
+    "documentation_of/2",
+    "high_risk/1",
+    "notified_body/1",
+    "opts_simplified_manner/1",
+    "small_medium_enterprise/1",
+    "start_up/1",
+    "technical_documentation/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_11"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 24,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/gemini/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/gemini/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['permitted_simplified_manner/2']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 3,
+   "position_references": [
+    "article_11",
+    "chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "permitted_simplified_manner/1"
+   ]
+  },
+  "art_11_par_1/kimi/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0",
+    "export without clause: ['annex_iv_elements/1', 'article_11_1_form/1', 'complies_with_requirements/1', 'high_risk_ai_system/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 5,
+   "position_references": [
+    "article_11"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "clear_and_comprehensive/1",
+    "commission/1",
+    "conformity_assessment_purpose/0",
+    "opts_for_simplified_manner/2",
+    "provider/2",
+    "small_microenterprise_needs/1"
+   ]
+  },
+  "art_11_par_1/kimi/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 2 errors",
+    "export without clause: ['annex_iv/1', 'article_11_1_form/1', 'chapter_3/1', 'commission/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 2,
+   "position_references": [
+    "article_11",
+    "chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 2,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "clear_and_comprehensive/1",
+    "entity/1",
+    "opts_for_simplified_manner/2",
+    "provider/1",
+    "provides_technical_documentation/2",
+    "small_microenterprise_needs/1",
+    "sme_including_start_up/1",
+    "used_for_purposes/2"
+   ]
+  },
+  "art_11_par_1/kimi/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 5 errors",
+    "export without clause: ['annex_iv_elements/1', 'article_11_1_form/1', 'complies_with_requirements/2', 'conformity_assessment/1']",
+    "undefined: ['high_risk_ai_system/1']"
+   ],
+   "undefined": [
+    "high_risk_ai_system/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 1,
+   "position_references": [
+    "_chp_3",
+    "article_11"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 5,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "drawn_up/2",
+    "opts_for_simplified/2",
+    "provider/2",
+    "sme_needs_targeted/1",
+    "used_for/2"
+   ]
+  },
+  "art_11_par_1/mistral/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['must_use_simplified_form/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 2,
+   "position_references": [
+    "article_11",
+    "chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "must_use_simplified_form/2"
+   ]
+  },
+  "art_11_par_1/mistral/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['must_use_simplified_form/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_11",
+    "_chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "must_use_simplified_form/2"
+   ]
+  },
+  "art_11_par_1/mistral/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_chapter_3",
+    "article_11"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "placed_on_market_before/2",
+    "put_into_service_before/2",
+    "recipient_type/1"
+   ]
+  },
+  "art_11_par_1/opus/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/opus/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/opus/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/qwen/seed_1": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['commission/1', 'high_risk_ai_system/1', 'national_competent_authority/1', 'notified_body/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_chapter_3",
+    "article_11"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "assessment_context/2",
+    "conformity_assessment_purpose/1",
+    "opts_for_simplified_manner/1",
+    "placement_or_service_event/1",
+    "simplified_technical_documentation_form/1"
+   ]
+  },
+  "art_11_par_1/qwen/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_11",
+    "_chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_11_par_1/qwen/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 3 errors",
+    "export without clause: ['high_risk_ai_system/1', 'sme/1', 'startup/1']",
+    "undefined: ['conformity_assessment_purpose/1', 'high_risk_ai_system/1', 'referred_to_in_article_11_1/1', 'simplified_technical_documentation_form/1']"
+   ],
+   "undefined": [
+    "conformity_assessment_purpose/1",
+    "high_risk_ai_system/1",
+    "referred_to_in_article_11_1/1",
+    "simplified_technical_documentation_form/1",
+    "sme/1",
+    "startup/1",
+    "targeted_at_small_and_microenterprises/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 2,
+   "position_references": [
+    "_article_11",
+    "_chapter_3"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 3,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "event_type/1"
+   ]
+  },
+  "art_49_par_4/astra/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article(4",
+    "article(7",
+    "point(1",
+    "point(2",
+    "point(3",
+    "point(4",
+    "point(5",
+    "point(6",
+    "point(7",
+    "point(8",
+    "point(9"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_49_par_4/astra/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article(4",
+    "article(7",
+    "point(1",
+    "point(2",
+    "point(3",
+    "point(4",
+    "point(5",
+    "point(7",
+    "point(8",
+    "point(9"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_49_par_4/astra/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article(4",
+    "article(7",
+    "point(1",
+    "point(2",
+    "point(3",
+    "point(4",
+    "point(5",
+    "point(6",
+    "point(7",
+    "point(8",
+    "point(9"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_49_par_4/deepseek/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 4 other 0",
+    "export without clause: ['annex_ix_point/1', 'annex_viii_point/1', 'commission/1', 'eu_database/1']",
+    "extensions: ['between']"
+   ],
+   "undefined": [],
+   "extensions": [
+    "between"
+   ],
+   "non_fol": [],
+   "disjunctions": 4,
+   "position_references": [
+    "_point(6",
+    "_point(8",
+    "_point(9",
+    "article_49",
+    "article_71",
+    "article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 6,
+    "singletons": 4
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 4,
+    "other": 0
+   },
+   "unexported": [
+    "applicable_information/2",
+    "excluded_annex_viii_point/1"
+   ]
+  },
+  "art_49_par_4/deepseek/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 2 errors",
+    "export without clause: ['commission/1', 'information_included/2', 'national_authority/1', 'restricted_section/1']",
+    "extensions: ['between']"
+   ],
+   "undefined": [],
+   "extensions": [
+    "between"
+   ],
+   "non_fol": [],
+   "disjunctions": 3,
+   "position_references": [
+    "article_49",
+    "article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 2,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "applicable_information/2",
+    "other_information_included/2"
+   ]
+  },
+  "art_49_par_4/deepseek/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['asylum_area/1', 'border_control_management_area/1', 'commission/1', 'eu_database/1']",
+    "extensions: ['between', 'findall']"
+   ],
+   "undefined": [],
+   "extensions": [
+    "between",
+    "findall"
+   ],
+   "non_fol": [],
+   "disjunctions": 4,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "annex_iii_point/2",
+    "eu_database/0",
+    "relevant_area/1"
+   ]
+  },
+  "art_49_par_4/gemini/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article(4",
+    "article_74",
+    "point(1",
+    "point(6",
+    "point(7"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "permitted_information_item/1"
+   ]
+  },
+  "art_49_par_4/gemini/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_74",
+    "_point_1",
+    "_point_6",
+    "_point_7",
+    "point(1",
+    "point(2",
+    "point(3",
+    "point(4",
+    "point(5",
+    "point(7",
+    "point(8",
+    "point(9"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_49_par_4/gemini/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_74",
+    "_point(1",
+    "_point(2",
+    "_point(3",
+    "_point(4",
+    "_point(5",
+    "_point(7",
+    "_point(8",
+    "_point(9",
+    "_point_1",
+    "_point_6",
+    "_point_7"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "allowed_annex_ix_point/1",
+    "allowed_annex_viii_section_a_point/1",
+    "allowed_annex_viii_section_b_point/1",
+    "allowed_information/1",
+    "authorised_actor/1",
+    "registration_article_49/2",
+    "relevant_annex_iii_point/1",
+    "relevant_area/1",
+    "relevant_high_risk_ai_system/1"
+   ]
+  },
+  "art_49_par_4/kimi/seed_1": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['commission/1', 'national_authority/1']",
+    "extensions: ['between']",
+    "non-FOL: ['is']"
+   ],
+   "undefined": [],
+   "extensions": [
+    "between"
+   ],
+   "non_fol": [
+    "is"
+   ],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_71",
+    "_article_74",
+    "article_49"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "between/3",
+    "covered_area/1",
+    "member/2"
+   ]
+  },
+  "art_49_par_4/kimi/seed_2": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['asylum_area/1', 'border_control_management_area/1', 'commission/1', 'high_risk_ai_system/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_71",
+    "_paragraph(1",
+    "_paragraph(2",
+    "_paragraph(3",
+    "_paragraph(4",
+    "_point(1",
+    "_point(2",
+    "_point(3",
+    "_point(4",
+    "_point(5",
+    "_point(6",
+    "_point(7",
+    "_point(8",
+    "_point(9",
+    "article_49",
+    "article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "annex_iii_point_applies/2",
+    "annex_viii_point_c/1",
+    "area/1",
+    "article_49_paragraph/1",
+    "article_74_8_applies/1",
+    "excluded_annex_viii_point_a/1",
+    "member/2",
+    "must_be_in_secure_section/1",
+    "relevant_area/2",
+    "section_of/2"
+   ]
+  },
+  "art_49_par_4/kimi/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['secure_non_public_section/1']",
+    "extensions: ['between', 'findall']"
+   ],
+   "undefined": [],
+   "extensions": [
+    "between",
+    "findall"
+   ],
+   "non_fol": [],
+   "disjunctions": 1,
+   "position_references": [
+    "_point(6",
+    "_point(8",
+    "_point(9",
+    "article(7",
+    "article_74",
+    "point(1",
+    "point(6",
+    "point(7"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 2,
+    "singletons": 2
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "used_in_area/2"
+   ]
+  },
+  "art_49_par_4/mistral/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_71",
+    "_article_74",
+    "article_49"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "applicable_information/2",
+    "authorised_accessor/1",
+    "high_risk_ai_system_annex_iii/1",
+    "member/2"
+   ]
+  },
+  "art_49_par_4/mistral/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_49_par_4/mistral/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['registration_includes_information/3']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "article_49",
+    "article_71",
+    "article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "registration_includes_information/2"
+   ]
+  },
+  "art_49_par_4/opus/seed_1": {
+   "pass": false,
+   "reasons": [
+    "non-FOL: ['is']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [
+    "is"
+   ],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_74",
+    "_point(1",
+    "_point(6",
+    "_point(7",
+    "_point(8",
+    "_point(9",
+    "article(4",
+    "article(7",
+    "paragraph(1",
+    "paragraph(2",
+    "paragraph(3",
+    "paragraph(4",
+    "point(1",
+    "point(2",
+    "point(3",
+    "point(5",
+    "point(8",
+    "point(9"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "annex_viii_point/1",
+    "between_points/3",
+    "excluded_annex_viii_point/1",
+    "member_point/1",
+    "registration_article/1",
+    "sensitive_area/1"
+   ]
+  },
+  "art_49_par_4/opus/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "annex_iii_listed/1",
+    "sensitive_area/1"
+   ]
+  },
+  "art_49_par_4/opus/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_74",
+    "_point(1",
+    "_point(6",
+    "_point(7",
+    "article(4"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "member_point/2",
+    "registration_article/1",
+    "restricted_annex_point/1",
+    "restricted_area/1"
+   ]
+  },
+  "art_49_par_4/qwen/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_74",
+    "_point_1",
+    "_point_6",
+    "_point_7"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "member/2",
+    "non_public_section/2",
+    "restricted_section_of_eu_database/1",
+    "secure_non_public_section/2",
+    "specified_area_applies/1"
+   ]
+  },
+  "art_49_par_4/qwen/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['annex_ix_points_1_2_3_5/1', 'annex_viii_points_1_to_10_excluding_6_8_9/1', 'annex_viii_points_1_to_3/1', 'annex_viii_section_b_points_1_to_5_and_8_9/1']",
+    "undefined: ['restricted_section_article_49_4/2', 'secure_non_public_section_of/2']"
+   ],
+   "undefined": [
+    "restricted_section_article_49_4/2",
+    "secure_non_public_section_of/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_49",
+    "_article_71",
+    "_article_74"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "applicable_area/1"
+   ]
+  },
+  "art_49_par_4/qwen/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0",
+    "undefined: ['area_of_asylum/1', 'area_of_border_control_management/1', 'area_of_law_enforcement/1', 'area_of_migration/1']"
+   ],
+   "undefined": [
+    "area_of_asylum/1",
+    "area_of_border_control_management/1",
+    "area_of_law_enforcement/1",
+    "area_of_migration/1",
+    "secure_non_public_section/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [
+    "_article_74",
+    "point(1",
+    "point(6",
+    "point(7"
+   ],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "in_specified_area/1",
+    "restricted_section_of_eu_database/1"
+   ]
+  },
+  "art_50_par_2/astra/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_50_par_2/astra/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_50_par_2/astra/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_50_par_2/deepseek/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 14 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 14,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "exempt_marking_obligation/1",
+    "marking_obligation_applies/1",
+    "must_be_detectable/2",
+    "must_be_effective/1",
+    "must_be_interoperable/1",
+    "must_be_marked/2",
+    "must_be_reliable/1",
+    "must_be_robust/1",
+    "must_ensure_marking/2",
+    "must_ensure_technical_solutions/2"
+   ]
+  },
+  "art_50_par_2/deepseek/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 24 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 24,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "assistive_function_for_standard_editing/1",
+    "does_not_substantially_alter/1",
+    "exempt_from_marking/1",
+    "marking_obligation_applies/1",
+    "must_ensure_marking/2",
+    "must_ensure_technical_solution/2",
+    "takes_into_account_costs/1",
+    "takes_into_account_specificities/1",
+    "takes_into_account_state_of_art/1",
+    "technically_feasible/1"
+   ]
+  },
+  "art_50_par_2/deepseek/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 16 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 16,
+    "warnings": 3,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "exemption_applies/1",
+    "must_ensure_effectiveness/2",
+    "must_ensure_interoperability/2",
+    "must_ensure_marking/2",
+    "must_ensure_reliability/2",
+    "must_ensure_robustness/2",
+    "permitted_non_marking/1",
+    "synthetic_content_type/1",
+    "technically_feasible/1"
+   ]
+  },
+  "art_50_par_2/gemini/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 30 errors",
+    "undefined: ['authorised_by_law_criminal_offence_purpose/1', 'does_not_substantially_alter_input_data_or_semantics/1', 'generates_synthetic_audio/1', 'generates_synthetic_image/1']"
+   ],
+   "undefined": [
+    "authorised_by_law_criminal_offence_purpose/1",
+    "does_not_substantially_alter_input_data_or_semantics/1",
+    "generates_synthetic_audio/1",
+    "generates_synthetic_image/1",
+    "generates_synthetic_text/1",
+    "generates_synthetic_video/1",
+    "performs_assistive_function_standard_editing/1",
+    "takes_into_account_content_specificities/1",
+    "takes_into_account_implementation_costs/1",
+    "takes_into_account_state_of_art/1",
+    "technically_feasible/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 30,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "effective_interoperable_robust_reliable/1",
+    "exempt_synthetic_content_obligation/1",
+    "generates_synthetic_content/1",
+    "must_ensure/2"
+   ]
+  },
+  "art_50_par_2/gemini/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 6 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 6,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "ai_system/1",
+    "exempt_synthetic_content_obligation/1",
+    "must_ensure/2",
+    "required_marking/1"
+   ]
+  },
+  "art_50_par_2/gemini/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 24 errors",
+    "undefined: ['ai_system/1', 'assistive_function_standard_editing/1', 'authorised_by_law_for_criminal_offences/1', 'generates_synthetic_content/2']"
+   ],
+   "undefined": [
+    "ai_system/1",
+    "assistive_function_standard_editing/1",
+    "authorised_by_law_for_criminal_offences/1",
+    "generates_synthetic_content/2",
+    "output_of/2",
+    "provider_of/2",
+    "technically_feasible/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 24,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "effective_interoperable_robust_reliable/1",
+    "exempt_synthetic_content_obligation/1",
+    "must_ensure/2",
+    "substantially_alters_input_data_or_semantics/1",
+    "synthetic_content_type/1"
+   ]
+  },
+  "art_50_par_2/kimi/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['assistive_function/1', 'authorised_by_law/1', 'does_not_substantially_alter/1', 'standard_editing/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "generates_synthetic_content/1"
+   ]
+  },
+  "art_50_par_2/kimi/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 2 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 2,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 2
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 2,
+    "other": 0
+   },
+   "unexported": [
+    "content_type/1",
+    "criminal_offence_purpose/1",
+    "technical_feasibility/2",
+    "technical_solution_properties/2"
+   ]
+  },
+  "art_50_par_2/kimi/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 15 errors",
+    "export without clause: ['alters_semantics/2', 'assistive_function/1', 'authorised_by_law/1', 'detect_criminal_offence/1']",
+    "undefined: ['alters_semantics/2', 'assistive_function/1', 'authorised_by_law/1', 'detect_criminal_offence/1']"
+   ],
+   "undefined": [
+    "alters_semantics/2",
+    "assistive_function/1",
+    "authorised_by_law/1",
+    "detect_criminal_offence/1",
+    "effective/1",
+    "interoperable/1",
+    "investigate_criminal_offence/1",
+    "prevent_criminal_offence/1",
+    "prosecute_criminal_offence/1",
+    "reliable/1",
+    "robust/1",
+    "standard_editing/1",
+    "substantially_alters/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 7,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 15,
+    "warnings": 5,
+    "singletons": 5
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "takes_into_account_costs/2",
+    "takes_into_account_limitations/2",
+    "takes_into_account_specificities/2",
+    "takes_into_account_state_of_the_art/1"
+   ]
+  },
+  "art_50_par_2/mistral/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "criminal_offence_purpose/1",
+    "exempt_marking/2",
+    "generates_synthetic_content/2",
+    "synthetic_content_type/1",
+    "takes_into_account_costs/1",
+    "takes_into_account_limitations/1",
+    "takes_into_account_specificities/1",
+    "takes_into_account_state_of_the_art/1",
+    "technically_feasible/2"
+   ]
+  },
+  "art_50_par_2/mistral/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "considers_content_limitations/1",
+    "considers_content_specificities/1",
+    "considers_implementation_costs/1",
+    "detectable_as_artificial/1",
+    "effective/1",
+    "generates_synthetic_content/1",
+    "interoperable/1",
+    "marked_machine_readable/1",
+    "obligation_applies/2",
+    "reflects_state_of_the_art/1",
+    "reflects_technical_standards/1",
+    "reliable/1",
+    "robust/1",
+    "synthetic_content_type/1",
+    "technically_feasible/1"
+   ]
+  },
+  "art_50_par_2/mistral/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "criminal_justice_purpose/1",
+    "exempt_from_marking/2",
+    "synthetic_content_type/1"
+   ]
+  },
+  "art_50_par_2/opus/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "alters_input_substantially/1"
+   ]
+  },
+  "art_50_par_2/opus/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "alters_input/1",
+    "synthetic_content_type/1"
+   ]
+  },
+  "art_50_par_2/opus/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "member_quality/1",
+    "substantially_alters_input_data/1",
+    "substantially_alters_input_semantics/1"
+   ]
+  },
+  "art_50_par_2/qwen/seed_1": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['authorised_by_law_for_criminal_offences/1', 'detectable_as_artificially_generated/1', 'does_not_substantially_alter_input_data/1', 'does_not_substantially_alter_semantics/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_50_par_2/qwen/seed_2": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['authorised_by_law_for_criminal_offences/1', 'does_not_substantially_alter_input_data/1', 'does_not_substantially_alter_semantics/1', 'generates_synthetic_content/2']",
+    "undefined: ['output_of/2', 'technical_solution_for_marking/2']"
+   ],
+   "undefined": [
+    "output_of/2",
+    "technical_solution_for_marking/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "art_50_par_2/qwen/seed_3": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['ai_system/1', 'authorised_by_law_for_criminal_offences/1', 'detectable_as_artificially_generated/1', 'does_not_substantially_alter_input_data/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/astra/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/astra/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/astra/seed_3": {
+   "pass": false,
+   "reasons": [
+    "termination: timeout ['objective_cooperation/1', 'objective_detection_mechanism_accessibility/1', 'objective_effective_implementation/1'] error []"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": false,
+    "timeout": [
+     "objective_cooperation/1",
+     "objective_detection_mechanism_accessibility/1",
+     "objective_effective_implementation/1",
+     "objective_practical_arrangement_support/1",
+     "objective_public_distinction/1"
+    ],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/deepseek/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "undefined: ['checking_authenticity/1', 'checking_provenance/1', 'detection_mechanisms/1', 'disseminating_content/1']"
+   ],
+   "undefined": [
+    "checking_authenticity/1",
+    "checking_provenance/1",
+    "detection_mechanisms/1",
+    "disseminating_content/1",
+    "generated_by_ai/1",
+    "manipulated_by_ai/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 4,
+    "singletons": 4
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "accessible/1",
+    "authenticity/1",
+    "cooperation/2",
+    "manipulated/1",
+    "must_distinguish/2",
+    "provenance/1"
+   ]
+  },
+  "rct_135/deepseek/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "must_distinguish/2",
+    "must_implement/2"
+   ]
+  },
+  "rct_135/deepseek/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 9 errors",
+    "export without clause: ['accessible/1', 'artificially_generated/1', 'checks_authenticity/1', 'checks_provenance/1']",
+    "undefined: ['accessible/1', 'artificially_generated/1', 'checks_authenticity/2', 'checks_provenance/2']"
+   ],
+   "undefined": [
+    "accessible/1",
+    "artificially_generated/1",
+    "checks_authenticity/2",
+    "checks_provenance/2",
+    "detection_mechanism/1",
+    "disseminates_content/2",
+    "manipulated/1",
+    "must_detect/2",
+    "must_label/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 9,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/gemini/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "objective_support_arrangements/2"
+   ]
+  },
+  "rct_135/gemini/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/gemini/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/kimi/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 5 errors",
+    "export without clause: ['ai_generated_content/1', 'checks_authenticity/1', 'checks_provenance/1', 'code_of_practice/1']",
+    "undefined: ['checks_authenticity/1', 'checks_provenance/1', 'disseminates_content/1', 'facilitates_cooperation/2']"
+   ],
+   "undefined": [
+    "checks_authenticity/1",
+    "checks_provenance/1",
+    "disseminates_content/1",
+    "facilitates_cooperation/2",
+    "makes_accessible/2"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 5,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/kimi/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 9 errors",
+    "export without clause: ['accessible_detection_mechanism/2', 'ai_generated_content/1', 'along_value_chain/2', 'code_of_practice/1']",
+    "undefined: ['code_of_practice/1', 'union_level/1']"
+   ],
+   "undefined": [
+    "code_of_practice/1",
+    "union_level/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 9,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/kimi/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 2 errors",
+    "export without clause: ['accessible/1', 'actor/1', 'ai_generated_content/1', 'checks_authenticity/1']",
+    "undefined: ['accessible/1', 'code_of_practice/1', 'union_level/1']"
+   ],
+   "undefined": [
+    "accessible/1",
+    "code_of_practice/1",
+    "union_level/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 2,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/mistral/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/mistral/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['detection_mechanism_accessible/2']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/mistral/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 1 errors",
+    "export without clause: ['purpose_detection_labelling/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 1,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "required_detection_labelling_obligation/1"
+   ]
+  },
+  "rct_135/opus/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/opus/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/opus/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/qwen/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 3 errors",
+    "export without clause: ['artificially_generated_or_manipulated_content/1', 'transparency_obligation/1', 'union_level_code_of_practice/1']",
+    "undefined: ['artificially_generated_or_manipulated_content/1', 'transparency_obligation/1', 'union_level_code_of_practice/1']"
+   ],
+   "undefined": [
+    "artificially_generated_or_manipulated_content/1",
+    "transparency_obligation/1",
+    "union_level_code_of_practice/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 3,
+    "warnings": 2,
+    "singletons": 2
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/qwen/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_135/qwen/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 2 errors",
+    "export without clause: ['union_level_code_of_practice/1']",
+    "undefined: ['union_level_code_of_practice/1']"
+   ],
+   "undefined": [
+    "union_level_code_of_practice/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 2,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/astra/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/astra/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/astra/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/deepseek/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 3 errors",
+    "export without clause: ['exhaustively_listed_situation/1', 'narrowly_defined_situation/1', 'nature_of_situation/1']",
+    "undefined: ['exhaustively_listed_situation/1', 'narrowly_defined_situation/1', 'nature_of_situation/1']"
+   ],
+   "undefined": [
+    "exhaustively_listed_situation/1",
+    "narrowly_defined_situation/1",
+    "nature_of_situation/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 3,
+    "warnings": 3,
+    "singletons": 3
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/deepseek/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: 2 errors",
+    "export without clause: ['completed_fundamental_rights_impact_assessment/1', 'must_take_into_account/2']",
+    "undefined: ['completed_fundamental_rights_impact_assessment/1', 'exempt_from_registration/1', 'must_take_into_account/2', 'reference_database/1']"
+   ],
+   "undefined": [
+    "completed_fundamental_rights_impact_assessment/1",
+    "exempt_from_registration/1",
+    "must_take_into_account/2",
+    "reference_database/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 2,
+    "warnings": 3,
+    "singletons": 3
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "must_be_appropriate_for/3",
+    "must_confirm_identity/2",
+    "must_have_regard_to/2",
+    "must_limit_geographic_scope/1",
+    "must_limit_period_of_time/1",
+    "must_limit_personal_scope/1"
+   ]
+  },
+  "rct_34/deepseek/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 2,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "appropriate_for/3",
+    "reference_database_of_persons/1"
+   ]
+  },
+  "rct_34/gemini/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "registered_or_exempt/2"
+   ]
+  },
+  "rct_34/gemini/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/gemini/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/kimi/seed_1": {
+   "pass": false,
+   "reasons": [
+    "export without clause: ['database_as_set_out_in_regulation/1', 'law_enforcement_purpose/1', 'perpetrator/1', 'publicly_accessible_space/1']"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 4,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 2,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 1,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "geographic_scope_limited/1",
+    "nature_of_situation_giving_rise_to_request/1",
+    "period_of_time_limited/1",
+    "personal_scope_limited/1"
+   ]
+  },
+  "rct_34/kimi/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 7 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 9,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 7,
+    "singletons": 7
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 7,
+    "other": 0
+   },
+   "unexported": [
+    "appropriate_for/2",
+    "exhaustively_listed/1",
+    "narrowly_defined/1",
+    "provided_otherwise_in_regulation/2",
+    "real_time_remote_biometric_identification/1",
+    "situation/1",
+    "specifically_targeted_individual/1",
+    "strictly_necessary/1"
+   ]
+  },
+  "rct_34/kimi/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 8 errors",
+    "export without clause: ['completed_fundamental_rights_impact_assessment/1', 'consequences_for_rights_and_freedoms/1', 'evidence_or_indications_perpetrator/1', 'evidence_or_indications_threats/1']",
+    "undefined: ['completed_fundamental_rights_impact_assessment/1']"
+   ],
+   "undefined": [
+    "completed_fundamental_rights_impact_assessment/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 8,
+    "warnings": 8,
+    "singletons": 8
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/mistral/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: 32 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 32,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "authorised_use/1",
+    "element_taken_into_account/2",
+    "evidence_regarding_perpetrator/1",
+    "evidence_regarding_threats/1",
+    "evidence_regarding_victims/1",
+    "fundamental_rights_impact_assessment_completed/1",
+    "law_enforcement_purpose/2",
+    "proportionate_use/1",
+    "real_time_remote_biometric_identification/1",
+    "reference_database_appropriate/2",
+    "responsible_use/1",
+    "strictly_necessary_geographic_scope/1",
+    "strictly_necessary_period/1",
+    "strictly_necessary_personal_scope/1",
+    "system_registered_in_database/1"
+   ]
+  },
+  "rct_34/mistral/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "element_to_consider/1",
+    "must_have_regard_to_evidence/2"
+   ]
+  },
+  "rct_34/mistral/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 32 errors"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 32,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "element_taken_into_account/2",
+    "having_regard_to/2",
+    "must_complete_fundamental_rights_impact_assessment/2",
+    "must_confirm_identity/2",
+    "must_register_system/3",
+    "proportionate_use/1",
+    "reference_database_appropriate/2",
+    "responsible_use/1",
+    "strictly_necessary_geographic_scope/1",
+    "strictly_necessary_period/1",
+    "strictly_necessary_personal_scope/1"
+   ]
+  },
+  "rct_34/opus/seed_1": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "covered_use/1"
+   ]
+  },
+  "rct_34/opus/seed_2": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  },
+  "rct_34/opus/seed_3": {
+   "pass": true,
+   "reasons": [],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": [
+    "law_enforcement_use/1",
+    "registration_satisfied/2"
+   ]
+  },
+  "rct_34/qwen/seed_1": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 1 other 0"
+   ],
+   "undefined": [],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 1,
+    "singletons": 1
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 1,
+    "other": 0
+   },
+   "unexported": [
+    "confirm_identity/1",
+    "provided_otherwise_in_regulation/1",
+    "strictly_necessary_geographic_scope/0",
+    "strictly_necessary_period_of_time/0",
+    "strictly_necessary_personal_scope/0"
+   ]
+  },
+  "rct_34/qwen/seed_2": {
+   "pass": false,
+   "reasons": [
+    "load: warnings singleton 3 other 0",
+    "undefined: ['provided_otherwise_in_regulation/1', 'reference_database_for_situation/3', 'uses_system_in_space/3']"
+   ],
+   "undefined": [
+    "provided_otherwise_in_regulation/1",
+    "reference_database_for_situation/3",
+    "uses_system_in_space/3"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 3,
+    "singletons": 3
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 3,
+    "other": 0
+   },
+   "unexported": [
+    "exempt_from_registration/1",
+    "uses_in_publicly_accessible_space_for_law_enforcement/1"
+   ]
+  },
+  "rct_34/qwen/seed_3": {
+   "pass": false,
+   "reasons": [
+    "load: 4 errors",
+    "export without clause: ['consequences_for_rights_and_freedoms_applies/1', 'evidence_or_indications_apply/1', 'nature_of_situation_applies/1', 'safeguards_and_conditions_apply/1']",
+    "undefined: ['consequences_for_rights_and_freedoms_applies/1', 'evidence_or_indications_apply/1', 'nature_of_situation_applies/1', 'safeguards_and_conditions_apply/1']"
+   ],
+   "undefined": [
+    "consequences_for_rights_and_freedoms_applies/1",
+    "evidence_or_indications_apply/1",
+    "nature_of_situation_applies/1",
+    "safeguards_and_conditions_apply/1"
+   ],
+   "extensions": [],
+   "non_fol": [],
+   "disjunctions": 0,
+   "position_references": [],
+   "termination": {
+    "ok": true,
+    "timeout": [],
+    "error": []
+   },
+   "load": {
+    "ok": false,
+    "errors": 4,
+    "warnings": 0,
+    "singletons": 0
+   },
+   "warnings": {
+    "discontiguous": 0,
+    "singleton": 0,
+    "other": 0
+   },
+   "unexported": []
+  }
+ },
+ "by_model": {
+  "astra": {
+   "outputs": 15,
+   "gate_pass_rate": 0.933,
+   "fail_counts": {
+    "load": 0,
+    "export": 0,
+    "undefined": 0,
+    "extensions": 0,
+    "non-FOL": 0,
+    "termination": 1,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 6,
+   "outputs_with_discontiguous_warning": 6,
+   "outputs_with_unexported_predicate": 0,
+   "disjunctions": 0
+  },
+  "astra-medium": {
+   "outputs": 3,
+   "gate_pass_rate": 1.0,
+   "fail_counts": {
+    "load": 0,
+    "export": 0,
+    "undefined": 0,
+    "extensions": 0,
+    "non-FOL": 0,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 3,
+   "outputs_with_discontiguous_warning": 0,
+   "outputs_with_unexported_predicate": 0,
+   "disjunctions": 0
+  },
+  "deepseek": {
+   "outputs": 15,
+   "gate_pass_rate": 0.067,
+   "fail_counts": {
+    "load": 13,
+    "export": 6,
+    "undefined": 6,
+    "extensions": 3,
+    "non-FOL": 0,
+    "termination": 1,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 5,
+   "outputs_with_discontiguous_warning": 1,
+   "outputs_with_unexported_predicate": 11,
+   "disjunctions": 24
+  },
+  "gemini": {
+   "outputs": 15,
+   "gate_pass_rate": 0.667,
+   "fail_counts": {
+    "load": 5,
+    "export": 1,
+    "undefined": 3,
+    "extensions": 0,
+    "non-FOL": 0,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 5,
+   "outputs_with_discontiguous_warning": 0,
+   "outputs_with_unexported_predicate": 8,
+   "disjunctions": 3
+  },
+  "kimi": {
+   "outputs": 15,
+   "gate_pass_rate": 0.0,
+   "fail_counts": {
+    "load": 12,
+    "export": 13,
+    "undefined": 6,
+    "extensions": 2,
+    "non-FOL": 1,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 6,
+   "outputs_with_discontiguous_warning": 2,
+   "outputs_with_unexported_predicate": 11,
+   "disjunctions": 31
+  },
+  "mistral": {
+   "outputs": 15,
+   "gate_pass_rate": 0.4,
+   "fail_counts": {
+    "load": 9,
+    "export": 5,
+    "undefined": 0,
+    "extensions": 0,
+    "non-FOL": 0,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 6,
+   "outputs_with_discontiguous_warning": 1,
+   "outputs_with_unexported_predicate": 12,
+   "disjunctions": 2
+  },
+  "opus": {
+   "outputs": 15,
+   "gate_pass_rate": 0.933,
+   "fail_counts": {
+    "load": 0,
+    "export": 0,
+    "undefined": 0,
+    "extensions": 0,
+    "non-FOL": 1,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 3,
+   "outputs_with_discontiguous_warning": 1,
+   "outputs_with_unexported_predicate": 8,
+   "disjunctions": 0
+  },
+  "qwen": {
+   "outputs": 15,
+   "gate_pass_rate": 0.133,
+   "fail_counts": {
+    "load": 9,
+    "export": 9,
+    "undefined": 8,
+    "extensions": 0,
+    "non-FOL": 0,
+    "termination": 0,
+    "no module": 0
+   },
+   "outputs_with_position_reference": 6,
+   "outputs_with_discontiguous_warning": 0,
+   "outputs_with_unexported_predicate": 7,
+   "disjunctions": 2
+  }
+ },
+ "by_model_text": {
+  "astra/art_11_par_1": 1.0,
+  "astra/art_49_par_4": 1.0,
+  "astra/art_50_par_2": 1.0,
+  "astra/rct_135": 0.667,
+  "astra/rct_34": 1.0,
+  "astra-medium/art_11_par_1": 1.0,
+  "deepseek/art_11_par_1": 0.0,
+  "deepseek/art_49_par_4": 0.0,
+  "deepseek/art_50_par_2": 0.0,
+  "deepseek/rct_135": 0.0,
+  "deepseek/rct_34": 0.333,
+  "gemini/art_11_par_1": 0.333,
+  "gemini/art_49_par_4": 1.0,
+  "gemini/art_50_par_2": 0.0,
+  "gemini/rct_135": 1.0,
+  "gemini/rct_34": 1.0,
+  "kimi/art_11_par_1": 0.0,
+  "kimi/art_49_par_4": 0.0,
+  "kimi/art_50_par_2": 0.0,
+  "kimi/rct_135": 0.0,
+  "kimi/rct_34": 0.0,
+  "mistral/art_11_par_1": 0.333,
+  "mistral/art_49_par_4": 0.333,
+  "mistral/art_50_par_2": 0.667,
+  "mistral/rct_135": 0.333,
+  "mistral/rct_34": 0.333,
+  "opus/art_11_par_1": 1.0,
+  "opus/art_49_par_4": 0.667,
+  "opus/art_50_par_2": 1.0,
+  "opus/rct_135": 1.0,
+  "opus/rct_34": 1.0,
+  "qwen/art_11_par_1": 0.333,
+  "qwen/art_49_par_4": 0.0,
+  "qwen/art_50_par_2": 0.0,
+  "qwen/rct_135": 0.333,
+  "qwen/rct_34": 0.0
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": "352c7648bfccc6ba37796cad5c54a45b99069e929732a69b2f62f82b2977a4fc",
+ "text": "art_49_par_4",
+ "model": "deepseek",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "module B omits sentence 3's Section B of Annex VIII points, while otherwise the modules largely match but both simplify the applicability/exclusivity details",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(high_risk_ai_registration, [\n    high_risk_ai_system/1,\n    law_enforcement_area/1,\n    migration_area/1,\n    asylum_area/1,\n    border_control_management_area/1,\n    must_register_in/2,\n    secure_non_public_section/1,\n    eu_database/1,\n    must_include_information/2,\n    annex_viii_point/1,\n    annex_ix_point/1,\n    section_b_point/1,\n    commission/1,\n    national_authority/1,\n    must_have_access_to/2,\n    restricted_section/1\n]).\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic article_71/1.\n:- dynamic article_74_8/1.\n:- dynamic article_49_4/1.\n:- dynamic annex_viii_point/1.\n:- dynamic annex_ix_point/1.\n:- dynamic section_b_point/1.\n:- dynamic commission/1.\n:- dynamic national_authority/1.\n:- dynamic eu_database/1.\n:- dynamic restricted_section/1.\n:- dynamic secure_non_public_section/1.\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 1).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 6).\n\nhigh_risk_ai_system(S) :-\n    annex_iii_point(S, 7).\n\nlaw_enforcement_area(S) :-\n    high_risk_ai_system(S),\n    area(S, law_enforcement).\n\nmigration_area(S) :-\n    high_risk_ai_system(S),\n    area(S, migration).\n\nasylum_area(S) :-\n    high_risk_ai_system(S),\n    area(S, asylum).\n\nborder_control_management_area(S) :-\n    high_risk_ai_system(S),\n    area(S, border_control_management).\n\nmust_register_in(S, secure_non_public_section(Database)) :-\n    high_risk_ai_system(S),\n    (   law_enforcement_area(S)\n    ;   migration_area(S)\n    ;   asylum_area(S)\n    ;   border_control_management_area(S)\n    ),\n    eu_database(Database),\n    article_71(Database).\n\nmust_include_information(S, Info) :-\n    must_register_in(S, _),\n    applicable_information(S, Info).\n\napplicable_information(S, annex_viii_point(P)) :-\n    annex_viii_point(P),\n    between(1, 10, P),\n    \\+ excluded_annex_viii_point(P).\n\nexcluded_annex_viii_point(6).\n\nexcluded_annex_viii_point(8).\n\nexcluded_annex_viii_point(9).\n\napplicable_information(S, annex_viii_point(P)) :-\n    annex_viii_point(P),\n    member(P, [1, 2, 3]).\n\napplicable_information(S, annex_ix_point(P)) :-\n    annex_ix_point(P),\n    member(P, [1, 2, 3, 5]).\n\nmust_have_access_to(Actor, restricted_section(Database)) :-\n    (   commission(Actor)\n    ;   national_authority(Actor)\n    ),\n    article_74_8(Actor),\n    eu_database(Database),\n    article_49_4(Database).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"none\", \"agree\": \"na\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B omits sentence 3's Section B of Annex VIII points, while otherwise the modules largely match but both simplify the applicability/exclusivity details\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.417,
+ "jointly_captured": 5,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "none",
+   "agree": "na"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

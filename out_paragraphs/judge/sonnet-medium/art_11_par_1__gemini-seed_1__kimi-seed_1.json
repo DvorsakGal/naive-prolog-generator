@@ -1,5 +1,5 @@
 {
- "key": "802d985808e63f5e9f8790381e843fa84ebc00a7b9d8488aa408ed580fc01084",
+ "key": "cee0df30bf2b103bf5507f3282fddb5fb08d5d2aa5ae909f3442ec42f24fa675",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
@@ -7,20 +7,20 @@
  "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all sentences at a similar level; B assigns obligations to a provider and adds extra conditions (a provider relation, clear_and_comprehensive), and splits sentence 1 into separate predicates, while A uses documentation-level predicates with fewer added conditions.\"}",
- "coverage_a": 0.75,
- "coverage_b": 0.583,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A splits sentence 1 into a drawn-up-before-market obligation and an up-to-date obligation; B conditions the drawing-up on the system already being placed on the market and adds provider conditions. Otherwise they are similar.\"}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.571,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Both cover all sentences at a similar level; B assigns obligations to a provider and adds extra conditions (a provider relation, clear_and_comprehensive), and splits sentence 1 into separate predicates, while A uses documentation-level predicates with fewer added conditions.",
- "sentences_judged": 6,
+ "note": "A splits sentence 1 into a drawn-up-before-market obligation and an up-to-date obligation; B conditions the drawing-up on the system already being placed on the market and adds provider conditions. Otherwise they are similar.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
@@ -36,7 +36,7 @@
   },
   {
    "n": 4,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "full",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

@@ -1,20 +1,20 @@
 {
- "key": "80f52c30268c0674d1275a780d5a52511bc1922021e97a82f9329e773b88c6d8",
+ "key": "141fd28617e77146cd50a94796e8c3f24713a0db03dd6f1e33ce899048b7e48d",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "qwen/seed_2",
  "b": "qwen/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module B is generally more specific about the simplified form and conformity-assessment details, while module A states those points more generically\"\n}",
- "coverage_a": 0.583,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules cover the same provisions overall, but B models the pre-market timing and the specific Article 11 form more directly, while A better captures the Commission form's target group and the conformity-assessment purpose.\"\n}",
+ "coverage_a": 0.643,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.571,
  "overall": "mostly_same",
- "note": "module B is generally more specific about the simplified form and conformity-assessment details, while module A states those points more generically",
- "sentences_judged": 6,
+ "note": "Both modules cover the same provisions overall, but B models the pre-market timing and the specific Article 11 form more directly, while A better captures the Commission form's target group and the conformity-assessment purpose.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,31 +30,37 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 4,
    "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
    "b": "full",
    "agree": "no"
   },
   {
-   "n": 5,
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "no"
   }
  ],
  "judge_frame": {
-  "A": "qwen/seed_2",
-  "B": "qwen/seed_3"
+  "A": "qwen/seed_3",
+  "B": "qwen/seed_2"
  }
 }

@@ -1,5 +1,5 @@
 {
- "key": "a8c1a258effdd59f24a7166934097e50277406bf60c47ea4aef291a08255e71f",
+ "key": "523185e467711b8c3f0285148c23f1aba1aa3e1a656dc5a3369af10d3d23ce01",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
@@ -7,47 +7,53 @@
  "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"module A mainly weakens sentence 1 by missing the explicit 'before placing on the market or putting into service' timing, while otherwise the modules mostly align with only minor detail omissions\"\n}",
- "coverage_a": 0.75,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"na\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"A is weaker on timing and several content details, while B is more explicit about the draw-up timing but more generic about some Annex IV and Chapter 3 details.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.643,
+ "jointly_captured": 7,
+ "agreement": 0.429,
  "overall": "mostly_same",
- "note": "module A mainly weakens sentence 1 by missing the explicit 'before placing on the market or putting into service' timing, while otherwise the modules mostly align with only minor detail omissions",
- "sentences_judged": 6,
+ "note": "A is weaker on timing and several content details, while B is more explicit about the draw-up timing but more generic about some Annex IV and Chapter 3 details.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "full",
    "b": "partial",
-   "agree": "no"
+   "agree": "na"
   },
   {
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 6,
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

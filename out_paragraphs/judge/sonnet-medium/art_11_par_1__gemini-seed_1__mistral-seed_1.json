@@ -1,31 +1,31 @@
 {
- "key": "035dc3e6c749808449617deab21bf96ac0418b5bf72ba1270fe005f7680bd7b9",
+ "key": "106ad0df8bcc8930b2421086e023616944adada970b966a39f8bf8d3250e0ead",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "gemini/seed_1",
  "b": "mistral/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A encodes the specific content of the documentation duties (chapter 3 compliance, authorities, Annex IV, timing negation) in separate predicates, while module B uses generic predicates with the same body that do not capture the content.\"}",
- "coverage_a": 0.75,
- "coverage_b": 0.917,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules cover all seven sentences with similar obligations. B models some conditions more concretely (sentence 1 drawing-up timing, sentence 2 compliance and information as separate predicates with parameters) but with a questionable negation-as-failure encoding. A uses generic placeholder predicates that carry little content.\"}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Module A encodes the specific content of the documentation duties (chapter 3 compliance, authorities, Annex IV, timing negation) in separate predicates, while module B uses generic predicates with the same body that do not capture the content.",
- "sentences_judged": 6,
+ "note": "Both modules cover all seven sentences with similar obligations. B models some conditions more concretely (sentence 1 drawing-up timing, sentence 2 compliance and information as separate predicates with parameters) but with a questionable negation-as-failure encoding. A uses generic placeholder pred",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 2,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -43,7 +43,7 @@
   {
    "n": 5,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -51,10 +51,16 @@
    "a": "full",
    "b": "full",
    "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "gemini/seed_1"
+  "A": "gemini/seed_1",
+  "B": "mistral/seed_1"
  }
 }

@@ -1,0 +1,45 @@
+{
+ "key": "58dff22443cce3db046a86fe0d80c5e1448d0810bc1b30abd16bd1ff23d4d15f",
+ "text": "rct_34",
+ "model": "mistral",
+ "seed": 2,
+ "probe": "drop_condition",
+ "note": "Modules are nearly identical; B omits the real-time biometric system condition in the impact assessment rule, a minor difference.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(responsible_use_biometric_systems, [\n    must_consider_elements/2,\n    must_confirm_targeted_identity/2,\n    must_limit_scope/2,\n    must_complete_fundamental_rights_impact_assessment/2,\n    must_register_system/2,\n    reference_database_appropriate/2\n]).\n:- dynamic exhaustively_listed_situation/1.\n:- dynamic narrowly_defined_situation/1.\n:- dynamic law_enforcement_authority/1.\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic publicly_accessible_space/1.\n:- dynamic purpose_of_use/2.\n:- dynamic specifically_targeted_individual/2.\n:- dynamic confirm_identity/2.\n:- dynamic strictly_necessary/1.\n:- dynamic scope_type/2.\n:- dynamic evidence_or_indication/2.\n:- dynamic authorised_use/2.\n:- dynamic completed_fundamental_rights_impact_assessment/2.\n:- dynamic provided_otherwise_in_regulation/1.\n:- dynamic registered_in_database/2.\n:- dynamic reference_database_of_persons/1.\n:- dynamic use_case/1.\n:- dynamic situation_applies_to_use_case/2.\n:- dynamic appropriate_for_use_case/2.\n\nmust_consider_elements(Situation, Element) :-\n    exhaustively_listed_situation(Situation),\n    narrowly_defined_situation(Situation),\n    element_to_consider(Element).\n\nelement_to_consider(nature(situation_giving_rise_to_request)).\n\nelement_to_consider(consequences_for_rights_and_freedoms(all_persons_concerned)).\n\nelement_to_consider(safeguards_and_conditions(use)).\n\nmust_confirm_targeted_identity(Authority, System) :-\n    law_enforcement_authority(Authority),\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    purpose_of_use(System, law_enforcement),\n    specifically_targeted_individual(System, Individual),\n    confirm_identity(System, Individual).\n\nmust_limit_scope(System, Scope) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    strictly_necessary(Scope),\n    scope_type(Scope, period_of_time).\n\nmust_limit_scope(System, Scope) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    strictly_necessary(Scope),\n    scope_type(Scope, geographic_scope).\n\nmust_limit_scope(System, Scope) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    strictly_necessary(Scope),\n    scope_type(Scope, personal_scope).\n\nmust_have_regard_to_evidence(System, Evidence) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    evidence_or_indication(Evidence, threats).\n\nmust_have_regard_to_evidence(System, Evidence) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    evidence_or_indication(Evidence, victims).\n\nmust_have_regard_to_evidence(System, Evidence) :-\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    evidence_or_indication(Evidence, perpetrator).\n\nmust_complete_fundamental_rights_impact_assessment(Authority, System) :-\n    law_enforcement_authority(Authority),\n    publicly_accessible_space(System),\n    authorised_use(Authority, System),\n    completed_fundamental_rights_impact_assessment(Authority, System).\n\nmust_register_system(Authority, System) :-\n    law_enforcement_authority(Authority),\n    real_time_remote_biometric_identification_system(System),\n    publicly_accessible_space(System),\n    authorised_use(Authority, System),\n    \\+ provided_otherwise_in_regulation(System),\n    registered_in_database(Authority, System).\n\nreference_database_appropriate(Database, UseCase) :-\n    reference_database_of_persons(Database),\n    use_case(UseCase),\n    exhaustively_listed_situation(Situation),\n    narrowly_defined_situation(Situation),\n    situation_applies_to_use_case(Situation, UseCase),\n    appropriate_for_use_case(Database, UseCase).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"Modules are nearly identical; B omits the real-time biometric system condition in the impact assessment rule, a minor difference.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

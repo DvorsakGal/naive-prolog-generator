@@ -1,0 +1,63 @@
+{
+ "key": "b23681c4fc647e2894ae5e43dc06885e11a012c90da56d4ed815656457b55e49",
+ "text": "art_11_par_1",
+ "model": "astra-medium",
+ "seed": 1,
+ "probe": "renamed",
+ "note": "Nearly identical structure; B's needs_alignment covers small_undertaking and microenterprise, as A does for small and micro. The only differences are naming (technical_file vs technical_documentation, commission vs european_commission).",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(technical_file, [\n    required_pre_market_documents/1,\n    required_pre_service_documents/1,\n    required_current_documents/1,\n    required_compliance_demonstration/1,\n    required_data_provision/1,\n    required_minimum_material/1,\n    eligible_for_simplified_documents/1,\n    permitted_simplified_documents/1,\n    must_set_up/2,\n    required_needs_alignment/1,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic elevated_risk_artificial_intelligence_system/1.\n:- dynamic national_competent_public_authority/1.\n:- dynamic notified_organisation/1.\n:- dynamic small_or_medium_sized_undertaking/1.\n:- dynamic start_up/1.\n:- dynamic opts_for_simplified_documents/2.\n\nrequired_data_provision(\n    provision(\n        technical_file(XSystem),\n        XBody,\n        necessary_data(assess_compliance(XSystem, requirement_set(chp_3))),\n        form(clear, comprehensive)\n    )\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem),\n    notified_organisation(XBody).\n\nrequired_data_provision(\n    provision(\n        technical_file(XSystem),\n        XAuthority,\n        necessary_data(assess_compliance(XSystem, requirement_set(chp_3))),\n        form(clear, comprehensive)\n    )\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem),\n    national_competent_public_authority(XAuthority).\n\npermitted_simplified_documents(\n    provision(\n        XEnterprise,\n        technical_file(XSystem),\n        element_set(annex_iv),\n        simplified_manner\n    )\n) :-\n    eligible_for_simplified_documents(XEnterprise),\n    elevated_risk_artificial_intelligence_system(XSystem).\n\neligible_for_simplified_documents(XEnterprise) :-\n    small_or_medium_sized_undertaking(XEnterprise).\n\nmust_use(\n    XEnterprise,\n    form_for(\n        simplified_technical_file_form(article_11(1)),\n        provision(\n            technical_file(XSystem),\n            required_data(annex_iv),\n            simplified_manner\n        )\n    )\n) :-\n    eligible_for_simplified_documents(XEnterprise),\n    elevated_risk_artificial_intelligence_system(XSystem),\n    opts_for_simplified_documents(XEnterprise, technical_file(XSystem)).\n\nrequired_compliance_demonstration(\n    preparation(\n        technical_file(XSystem),\n        demonstrate(compliance(XSystem, requirement_set(chp_3)))\n    )\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem).\n\nrequired_needs_alignment(\n    alignment(\n        simplified_technical_file_form(article_11(1)),\n        need_set(small_undertaking)\n    )\n).\n\nmust_accept(\n    XBody,\n    form_for(\n        simplified_technical_file_form(article_11(1)),\n        conformity_assessment\n    )\n) :-\n    notified_organisation(XBody).\n\neligible_for_simplified_documents(XEnterprise) :-\n    small_or_medium_sized_undertaking(XEnterprise),\n    start_up(XEnterprise).\n\nrequired_minimum_material(\n    material(technical_file(XSystem), element_set(annex_iv))\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem).\n\nrequired_pre_service_documents(\n    preparation(technical_file(XSystem), before(service_entry(XSystem)))\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem).\n\nrequired_pre_market_documents(\n    preparation(technical_file(XSystem), before(placement_on_market(XSystem)))\n) :-\n    elevated_risk_artificial_intelligence_system(XSystem).\n\nmust_set_up(\n    european_commission,\n    simplified_technical_file_form(article_11(1))\n).\n\nrequired_current_documents(technical_file(XSystem)) :-\n    elevated_risk_artificial_intelligence_system(XSystem).\n\nrequired_needs_alignment(\n    alignment(\n        simplified_technical_file_form(article_11(1)),\n        need_set(microenterprise)\n    )\n).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Nearly identical structure; B's needs_alignment covers small_undertaking and microenterprise, as A does for small and micro. The only differences are naming (technical_file vs technical_documentation, commission vs european_commission).\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 7,
+ "agreement": 1.0,
+ "overall": "mostly_same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

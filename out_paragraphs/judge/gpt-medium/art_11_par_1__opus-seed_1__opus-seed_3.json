@@ -1,20 +1,20 @@
 {
- "key": "4255b4458cdaa82381d86311d53ea994ba1d299ce4b7b16ab7cbb8b167ac7af9",
+ "key": "867661a2949c35e7404da09ce16bba01c949a40306a17b13e36879317d798e7e",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "opus/seed_1",
  "b": "opus/seed_3",
- "swapped": false,
+ "swapped": true,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is generally more specific about SMEs/start-ups and Annex IV-triggered use of the form, while A is looser about those conditions and about who must receive the compliance information.\"\n}",
- "coverage_a": 0.75,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"The main difference is that module B captures the Annex IV minimum-content requirement more accurately, while module A is looser there and adds extra provider-specific conditions for the SME simplification permission.\"\n}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "B is generally more specific about SMEs/start-ups and Annex IV-triggered use of the form, while A is looser about those conditions and about who must receive the compliance information.",
- "sentences_judged": 6,
+ "note": "The main difference is that module B captures the Annex IV minimum-content requirement more accurately, while module A is looser there and adds extra provider-specific conditions for the SME simplification permission.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -26,35 +26,41 @@
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "no"
+   "agree": "yes"
   },
   {
    "n": 3,
-   "a": "partial",
+   "a": "full",
    "b": "partial",
    "agree": "no"
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
-   "agree": "yes"
-  },
-  {
-   "n": 5,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "opus/seed_1",
-  "B": "opus/seed_3"
+  "A": "opus/seed_3",
+  "B": "opus/seed_1"
  }
 }

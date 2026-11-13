@@ -1,0 +1,45 @@
+{
+ "key": "17b2ed3e3c5e6bf1ddbc9279afe6619bd44750694a4405bdfb0604e8284986c6",
+ "text": "rct_34",
+ "model": "mistral",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "modules are substantively identical, with only a naming difference for the law-enforcement authority predicate",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(responsible_use_biometric_systems, [\n    must_consider_elements/2,\n    must_confirm_targeted_identity/2,\n    must_limit_scope/2,\n    must_complete_fundamental_rights_impact_assessment/2,\n    must_register_system/2,\n    reference_database_appropriate/2\n]).\n:- dynamic exhaustively_listed_situation/1.\n:- dynamic narrowly_defined_situation/1.\n:- dynamic law_enforcement_public_authority/1.\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic publicly_accessible_space/1.\n:- dynamic purpose_of_use/2.\n:- dynamic specifically_targeted_individual/2.\n:- dynamic confirm_identity/2.\n:- dynamic strictly_necessary/1.\n:- dynamic scope_type/2.\n:- dynamic evidence_or_indication/2.\n:- dynamic authorised_use/2.\n:- dynamic completed_fundamental_rights_impact_assessment/2.\n:- dynamic provided_otherwise_in_regulation/1.\n:- dynamic registered_in_database/2.\n:- dynamic reference_database_of_persons/1.\n:- dynamic use_case/1.\n:- dynamic situation_applies_to_use_case/2.\n:- dynamic appropriate_for_use_case/2.\n\nelement_to_consider(nature(situation_giving_rise_to_request)).\n\nmust_register_system(XAuthority, XSystem) :-\n    law_enforcement_public_authority(XAuthority),\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    authorised_use(XAuthority, XSystem),\n    \\+ provided_otherwise_in_regulation(XSystem),\n    registered_in_database(XAuthority, XSystem).\n\nelement_to_consider(safeguards_and_conditions(use)).\n\nmust_have_regard_to_evidence(XSystem, XEvidence) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    evidence_or_indication(XEvidence, perpetrator).\n\nmust_have_regard_to_evidence(XSystem, XEvidence) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    evidence_or_indication(XEvidence, victims).\n\nmust_complete_fundamental_rights_impact_assessment(XAuthority, XSystem) :-\n    law_enforcement_public_authority(XAuthority),\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    authorised_use(XAuthority, XSystem),\n    completed_fundamental_rights_impact_assessment(XAuthority, XSystem).\n\nmust_confirm_targeted_identity(XAuthority, XSystem) :-\n    law_enforcement_public_authority(XAuthority),\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    purpose_of_use(XSystem, law_enforcement),\n    specifically_targeted_individual(XSystem, XIndividual),\n    confirm_identity(XSystem, XIndividual).\n\nmust_limit_scope(XSystem, XScope) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    strictly_necessary(XScope),\n    scope_type(XScope, geographic_scope).\n\nmust_limit_scope(XSystem, XScope) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    strictly_necessary(XScope),\n    scope_type(XScope, period_of_time).\n\nreference_database_appropriate(XDatabase, XUseCase) :-\n    reference_database_of_persons(XDatabase),\n    use_case(XUseCase),\n    exhaustively_listed_situation(XSituation),\n    narrowly_defined_situation(XSituation),\n    situation_applies_to_use_case(XSituation, XUseCase),\n    appropriate_for_use_case(XDatabase, XUseCase).\n\nmust_limit_scope(XSystem, XScope) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    strictly_necessary(XScope),\n    scope_type(XScope, personal_scope).\n\nmust_consider_elements(XSituation, XElement) :-\n    exhaustively_listed_situation(XSituation),\n    narrowly_defined_situation(XSituation),\n    element_to_consider(XElement).\n\nelement_to_consider(consequences_for_rights_and_freedoms(all_persons_concerned)).\n\nmust_have_regard_to_evidence(XSystem, XEvidence) :-\n    real_time_remote_biometric_identification_system(XSystem),\n    publicly_accessible_space(XSystem),\n    evidence_or_indication(XEvidence, threats).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"modules are substantively identical, with only a naming difference for the law-enforcement authority predicate\"\n}",
+ "coverage_a": 0.75,
+ "coverage_b": 0.75,
+ "jointly_captured": 4,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

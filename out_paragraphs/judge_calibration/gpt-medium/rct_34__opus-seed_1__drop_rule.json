@@ -1,0 +1,45 @@
+{
+ "key": "b72d05dabeb21370957919ed5f97184e647eef98c4f80661649a1af801d1bc10",
+ "text": "rct_34",
+ "model": "opus",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "module B leaves the key scope condition for the covered use undefined, so its purpose and authorisation rules do not clearly match A's public-space law-enforcement biometric-use conditions",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(real_time_biometric_identification_use, [\n    must_take_into_account/2,\n    permitted_deployment_purpose/1,\n    must_limit/2,\n    permitted_real_time_remote_biometric_identification/1,\n    registration_satisfied/1,\n    required_appropriate_reference_database/1,\n    objective_responsible_proportionate_use/1\n]).\n:- dynamic real_time_remote_biometric_identification_system/1.\n:- dynamic used_in_publicly_accessible_space/1.\n:- dynamic used_for_law_enforcement/1.\n:- dynamic listed_situation/2.\n:- dynamic deployment/2.\n:- dynamic law_enforcement_authority/1.\n:- dynamic uses_system/2.\n:- dynamic completed_fundamental_rights_impact_assessment/2.\n:- dynamic registered_in_database/2.\n:- dynamic registration_exempted_by_regulation/1.\n:- dynamic reference_database/2.\n:- dynamic use_case/2.\n\nobjective_responsible_proportionate_use(S) :-\n    covered_use(S).\n\nmust_take_into_account(Authority, nature_of_situation(Situation)) :-\n    uses_system(Authority, S),\n    listed_situation(S, Situation).\n\nmust_take_into_account(Authority, consequences_for_rights_and_freedoms(S)) :-\n    uses_system(Authority, S),\n    listed_situation(S, _Situation).\n\nmust_take_into_account(Authority, safeguards_and_conditions(S)) :-\n    uses_system(Authority, S),\n    listed_situation(S, _Situation).\n\npermitted_deployment_purpose(deployment(S, confirm_identity(P))) :-\n    covered_use(S),\n    deployment(S, confirm_identity(P)).\n\nmust_limit(Authority, strictly_necessary(time_period(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nmust_limit(Authority, strictly_necessary(geographic_scope(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nmust_limit(Authority, strictly_necessary(personal_scope(S), evidence(threat, victim, perpetrator))) :-\n    uses_system(Authority, S),\n    covered_use(S).\n\nregistration_satisfied(S) :-\n    uses_system(Authority, S),\n    registered_in_database(Authority, S).\n\nregistration_satisfied(S) :-\n    registration_exempted_by_regulation(S).\n\npermitted_real_time_remote_biometric_identification(S) :-\n    covered_use(S),\n    uses_system(Authority, S),\n    law_enforcement_authority(Authority),\n    completed_fundamental_rights_impact_assessment(Authority, S),\n    registration_satisfied(S).\n\nrequired_appropriate_reference_database(reference_database(D, use_case(U))) :-\n    reference_database(S, D),\n    use_case(S, U),\n    listed_situation(S, _Situation).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"module B leaves the key scope condition for the covered use undefined, so its purpose and authorisation rules do not clearly match A's public-space law-enforcement biometric-use conditions\"\n}",
+ "coverage_a": 0.625,
+ "coverage_b": 0.5,
+ "jointly_captured": 4,
+ "agreement": 0.5,
+ "overall": "different",
+ "sentences_judged": 4,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

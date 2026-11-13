@@ -1,5 +1,5 @@
 {
- "key": "19a5696b3d527643dedb069230c69fdefc0ccceae693983191b592d06e219245",
+ "key": "1851054acabcc9cd76c4236182efac566e2665f75fa79c1798e8f73e64da8eab",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,49 +7,55 @@
  "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B models the sentences more faithfully (explicit minimum-contents rule, SME option and form-use condition), while A adds odd conditions such as contents required only when simplification is not allowed, and its drawing-up rule lacks the before-timing.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B is more faithful on sentences 2-4 and 6; A adds wrong conditions (e.g. must_contain only when not simplified, and requiring the system to be placed on the market), while both treat sentence 1 inaccurately in different ways.\"}",
  "coverage_a": 0.5,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.429,
  "overall": "mostly_same",
- "note": "Module B models the sentences more faithfully (explicit minimum-contents rule, SME option and form-use condition), while A adds odd conditions such as contents required only when simplification is not allowed, and its drawing-up rule lacks the before-timing.",
- "sentences_judged": 6,
+ "note": "B is more faithful on sentences 2-4 and 6; A adds wrong conditions (e.g. must_contain only when not simplified, and requiring the system to be placed on the market), while both treat sentence 1 inaccurately in different ways.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 2,
    "a": "partial",
    "b": "full",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
    "a": "partial",
    "b": "full",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 4,
    "a": "partial",
-   "b": "partial",
-   "agree": "yes"
+   "b": "full",
+   "agree": "no"
   },
   {
    "n": 5,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 6,
    "a": "partial",
    "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   }
  ],

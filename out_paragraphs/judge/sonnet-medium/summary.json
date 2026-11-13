@@ -1,52 +1,59 @@
 {
  "judge": "sonnet-medium",
- "pairs": 209,
+ "pairs": 219,
  "within_by_model": {
   "astra": {
    "n": 15,
    "agreement": 0.867,
-   "same": 4,
-   "mostly_same": 11,
+   "same": 3,
+   "mostly_same": 12,
+   "different": 0
+  },
+  "astra-medium": {
+   "n": 3,
+   "agreement": 1.0,
+   "same": 2,
+   "mostly_same": 1,
    "different": 0
   },
   "deepseek": {
    "n": 15,
-   "agreement": 0.678,
+   "agreement": 0.681,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "gemini": {
    "n": 15,
-   "agreement": 0.853,
+   "agreement": 0.826,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "kimi": {
    "n": 15,
-   "agreement": 0.944,
+   "agreement": 0.948,
    "same": 0,
    "mostly_same": 15,
    "different": 0
   },
   "mistral": {
    "n": 14,
-   "agreement": 0.815,
+   "agreement": 0.805,
    "same": 0,
    "mostly_same": 14,
    "different": 0
   },
   "opus": {
    "n": 15,
-   "agreement": 0.822,
+   "agreement": 0.813,
    "same": 1,
    "mostly_same": 14,
    "different": 0
   },
   "qwen": {
    "n": 15,
-   "agreement": 0.856,
+   "agreement": 0.881,
    "same": 0,
    "mostly_same": 15,
    "different": 0
@@ -54,10 +61,10 @@
  },
  "across_by_text": {
   "art_11_par_1": {
-   "n": 21,
+   "n": 28,
    "agreement": 0.857,
-   "same": 0,
-   "mostly_same": 21,
+   "same": 1,
+   "mostly_same": 27,
    "different": 0
   },
   "art_49_par_4": {
@@ -90,9 +97,58 @@
   }
  },
  "across_by_model_pair": {
+  "astra-medium~deepseek": {
+   "n": 1,
+   "agreement": 0.286,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra-medium~gemini": {
+   "n": 1,
+   "agreement": 1.0,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra-medium~kimi": {
+   "n": 1,
+   "agreement": 0.857,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra-medium~mistral": {
+   "n": 1,
+   "agreement": 0.857,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra-medium~opus": {
+   "n": 1,
+   "agreement": 0.857,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra-medium~qwen": {
+   "n": 1,
+   "agreement": 1.0,
+   "same": 0,
+   "mostly_same": 1,
+   "different": 0
+  },
+  "astra~astra-medium": {
+   "n": 1,
+   "agreement": 1.0,
+   "same": 1,
+   "mostly_same": 0,
+   "different": 0
+  },
   "astra~deepseek": {
    "n": 5,
-   "agreement": 0.483,
+   "agreement": 0.56,
    "same": 0,
    "mostly_same": 5,
    "different": 0
@@ -106,77 +162,77 @@
   },
   "astra~kimi": {
    "n": 5,
-   "agreement": 1.0,
+   "agreement": 0.971,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "astra~mistral": {
    "n": 5,
-   "agreement": 0.867,
+   "agreement": 0.871,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "astra~opus": {
    "n": 5,
-   "agreement": 0.767,
+   "agreement": 0.8,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "astra~qwen": {
    "n": 5,
-   "agreement": 0.8,
+   "agreement": 0.867,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "deepseek~gemini": {
    "n": 5,
-   "agreement": 0.733,
+   "agreement": 0.714,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "deepseek~kimi": {
    "n": 5,
-   "agreement": 0.683,
+   "agreement": 0.717,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "deepseek~mistral": {
    "n": 5,
-   "agreement": 0.75,
+   "agreement": 0.636,
    "same": 0,
    "mostly_same": 4,
    "different": 1
   },
   "deepseek~opus": {
    "n": 5,
-   "agreement": 0.667,
+   "agreement": 0.619,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "deepseek~qwen": {
    "n": 5,
-   "agreement": 0.717,
+   "agreement": 0.693,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "gemini~kimi": {
    "n": 5,
-   "agreement": 0.833,
+   "agreement": 0.805,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   },
   "gemini~mistral": {
    "n": 5,
-   "agreement": 0.533,
+   "agreement": 0.567,
    "same": 0,
    "mostly_same": 4,
    "different": 1
@@ -197,7 +253,7 @@
   },
   "kimi~mistral": {
    "n": 5,
-   "agreement": 0.767,
+   "agreement": 0.771,
    "same": 0,
    "mostly_same": 5,
    "different": 0
@@ -218,7 +274,7 @@
   },
   "mistral~opus": {
    "n": 5,
-   "agreement": 0.7,
+   "agreement": 0.671,
    "same": 0,
    "mostly_same": 5,
    "different": 0
@@ -232,33 +288,34 @@
   },
   "opus~qwen": {
    "n": 5,
-   "agreement": 0.833,
+   "agreement": 0.9,
    "same": 0,
    "mostly_same": 5,
    "different": 0
   }
  },
  "coverage_by_model": {
-  "astra": 0.828,
+  "astra": 0.827,
+  "astra-medium": 0.995,
   "deepseek": 0.593,
-  "gemini": 0.72,
-  "kimi": 0.577,
-  "mistral": 0.65,
+  "gemini": 0.696,
+  "kimi": 0.578,
+  "mistral": 0.656,
   "opus": 0.772,
-  "qwen": 0.567
+  "qwen": 0.584
  },
  "across_all": {
-  "n": 105,
-  "agreement": 0.75,
-  "same": 0,
-  "mostly_same": 103,
+  "n": 112,
+  "agreement": 0.757,
+  "same": 1,
+  "mostly_same": 109,
   "different": 2
  },
  "within_all": {
-  "n": 104,
-  "agreement": 0.834,
-  "same": 5,
-  "mostly_same": 99,
+  "n": 107,
+  "agreement": 0.836,
+  "same": 6,
+  "mostly_same": 101,
   "different": 0
  }
 }

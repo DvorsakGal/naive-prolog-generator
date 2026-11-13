@@ -1,5 +1,5 @@
 {
- "key": "081d07cce25e75992bc0c7e108aa5053eb73a25da33d28901ea550b1ea0e0a99",
+ "key": "26b921a10c6a6143b01094c020d02aa5d20028b41723b82cb45b3bdbee21ac36",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "opus/seed_2",
@@ -7,14 +7,14 @@
  "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 6, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"the main differences are in the SME/start-up simplified-documentation provisions, where B is more specific about start-ups and Annex IV conditions while A states a looser version\"\n}",
- "coverage_a": 0.667,
- "coverage_b": 0.667,
- "jointly_captured": 6,
- "agreement": 0.667,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"},\n    {\"n\": 7, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"B is more explicit about start-ups and Annex IV-based simplified provision/use of the form, while A states those simplification rules more generically.\"\n}",
+ "coverage_a": 0.714,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "the main differences are in the SME/start-up simplified-documentation provisions, where B is more specific about start-ups and Annex IV conditions while A states a looser version",
- "sentences_judged": 6,
+ "note": "B is more explicit about start-ups and Annex IV-based simplified provision/use of the form, while A states those simplification rules more generically.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -30,24 +30,30 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
-  },
-  {
-   "n": 4,
    "a": "full",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 4,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

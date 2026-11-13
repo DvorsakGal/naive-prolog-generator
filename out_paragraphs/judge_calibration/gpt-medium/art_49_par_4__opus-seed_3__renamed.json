@@ -1,0 +1,57 @@
+{
+ "key": "2db16d024a80440ebee931801df4d9f44ce98da4fa9fc32841ffb092e282e82e",
+ "text": "art_49_par_4",
+ "model": "opus",
+ "seed": 3,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(restricted_registration_law_enforcement_migration, [\n    restricted_registration_applies/1,\n    required_secure_non_public_section/1,\n    must_include_only/2,\n    permitted_registration_data/1,\n    permitted_access_restricted_section/1,\n    prohibited_access_restricted_section/1\n]).\n:- dynamic elevated_risk_ai_system/1.\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic registration/2.\n:- dynamic european_commission/1.\n:- dynamic national_public_authority_article_74_8/1.\n:- dynamic seeks_access/2.\n\nrestricted_area(law_enforcement).\n\nmember_point(XX, [_|XT]) :-\n    member_point(XX, XT).\n\nmust_include_only(registration(XS, XArt), data(XI)) :-\n    required_secure_non_public_section(registration(XS, XArt)),\n    permitted_registration_data(XI).\n\npermitted_registration_data(annex_viii(XN)) :-\n    member_point(XN, [1, 2, 3, 4, 5, 7, 10]).\n\nrestricted_registration_applies(XS) :-\n    elevated_risk_ai_system(XS),\n    annex_iii_point(XS, XN),\n    restricted_annex_point(XN),\n    area(XS, XA),\n    restricted_area(XA).\n\nregistration_article(article(49, 2)).\n\nrestricted_area(migration).\n\nregistration_article(article(49, 1)).\n\nrestricted_area(border_control_management).\n\nprohibited_access_restricted_section(XP) :-\n    seeks_access(XP, restricted_section(eu_database)),\n    \\+ permitted_access_restricted_section(XP).\n\npermitted_registration_data(annex_ix(XN)) :-\n    member_point(XN, [1, 2, 3, 5]).\n\nrestricted_annex_point(1).\n\nrequired_secure_non_public_section(registration(XS, XArt)) :-\n    restricted_registration_applies(XS),\n    registration(XS, XArt),\n    registration_article(XArt).\n\nregistration_article(article(49, 3)).\n\npermitted_registration_data(annex_viii_section_b(XN)) :-\n    member_point(XN, [1, 2, 3, 4, 5, 8, 9]).\n\nrestricted_area(asylum).\n\npermitted_access_restricted_section(XP) :-\n    national_public_authority_article_74_8(XP).\n\npermitted_registration_data(annex_viii(XN)) :-\n    member_point(XN, [1, 2, 3]).\n\nmember_point(XX, [XX|_]).\n\nrestricted_annex_point(6).\n\npermitted_access_restricted_section(XP) :-\n    european_commission(XP).\n\nrestricted_annex_point(7).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.833,
+ "coverage_b": 0.833,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

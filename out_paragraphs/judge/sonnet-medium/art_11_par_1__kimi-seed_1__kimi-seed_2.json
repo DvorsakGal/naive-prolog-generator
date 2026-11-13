@@ -1,5 +1,5 @@
 {
- "key": "cb2b38f73a5a041d8649fa8b1f52ea1ffdf31108a96bb9c352e6767ad7e21fc8",
+ "key": "a01dd77c953d8f04ecd90e5d620d453ba08d74ec5f6f6c1ca55bc71e54369414",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules encode the same obligations in nearly the same structure; B adds a required_technical_documentation rule and hardcodes the commission, while A defines more supporting predicates and routes through a provider/entity hierarchy.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both modules model the same obligations in nearly the same way; they differ in small details such as A's permission predicate taking a system rather than documentation, A's odd provider definitions, and B's extra required_technical_documentation rule.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
- "jointly_captured": 6,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both modules encode the same obligations in nearly the same structure; B adds a required_technical_documentation rule and hardcodes the commission, while A defines more supporting predicates and routes through a provider/entity hierarchy.",
- "sentences_judged": 6,
+ "note": "Both modules model the same obligations in nearly the same way; they differ in small details such as A's permission predicate taking a system rather than documentation, A's odd provider definitions, and B's extra required_technical_documentation rule.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "partial",
    "agree": "yes"

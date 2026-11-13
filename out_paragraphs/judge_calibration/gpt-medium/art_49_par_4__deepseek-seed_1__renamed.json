@@ -1,0 +1,57 @@
+{
+ "key": "f01e8098c1890789d044a80a22c1d8d9bfcd6366f76a748aecd2381ecce7bf72",
+ "text": "art_49_par_4",
+ "model": "deepseek",
+ "seed": 1,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(elevated_risk_ai_registration, [\n    elevated_risk_ai_system/1,\n    law_enforcement_area/1,\n    migration_area/1,\n    asylum_area/1,\n    border_control_management_area/1,\n    must_register_in/2,\n    secure_non_public_section/1,\n    eu_database/1,\n    must_include_data/2,\n    annex_viii_point/1,\n    annex_ix_point/1,\n    section_b_point/1,\n    european_commission/1,\n    national_public_authority/1,\n    must_have_access_to/2,\n    restricted_section/1\n]).\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic article_71/1.\n:- dynamic article_74_8/1.\n:- dynamic article_49_4/1.\n:- dynamic annex_viii_point/1.\n:- dynamic annex_ix_point/1.\n:- dynamic section_b_point/1.\n:- dynamic european_commission/1.\n:- dynamic national_public_authority/1.\n:- dynamic eu_database/1.\n:- dynamic restricted_section/1.\n:- dynamic secure_non_public_section/1.\n\napplicable_data(XS, annex_ix_point(XP)) :-\n    annex_ix_point(XP),\n    member(XP, [1, 2, 3, 5]).\n\nexcluded_annex_viii_point(9).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 7).\n\napplicable_data(XS, section_b_point(XP)) :-\n    section_b_point(XP),\n    member(XP, [1, 2, 3, 4, 5, 8, 9]).\n\nmust_have_access_to(XActor, restricted_section(XDatabase)) :-\n    (   european_commission(XActor)\n    ;   national_public_authority(XActor)\n    ),\n    article_74_8(XActor),\n    eu_database(XDatabase),\n    article_49_4(XDatabase).\n\nlaw_enforcement_area(XS) :-\n    elevated_risk_ai_system(XS),\n    area(XS, law_enforcement).\n\nmust_include_data(XS, XInfo) :-\n    must_register_in(XS, _),\n    applicable_data(XS, XInfo).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 6).\n\nasylum_area(XS) :-\n    elevated_risk_ai_system(XS),\n    area(XS, asylum).\n\nborder_control_management_area(XS) :-\n    elevated_risk_ai_system(XS),\n    area(XS, border_control_management).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 1).\n\nexcluded_annex_viii_point(6).\n\nexcluded_annex_viii_point(8).\n\nmigration_area(XS) :-\n    elevated_risk_ai_system(XS),\n    area(XS, migration).\n\napplicable_data(XS, annex_viii_point(XP)) :-\n    annex_viii_point(XP),\n    member(XP, [1, 2, 3]).\n\nmust_register_in(XS, secure_non_public_section(XDatabase)) :-\n    elevated_risk_ai_system(XS),\n    (   law_enforcement_area(XS)\n    ;   migration_area(XS)\n    ;   asylum_area(XS)\n    ;   border_control_management_area(XS)\n    ),\n    eu_database(XDatabase),\n    article_71(XDatabase).\n\napplicable_data(XS, annex_viii_point(XP)) :-\n    annex_viii_point(XP),\n    between(1, 10, XP),\n    \\+ excluded_annex_viii_point(XP).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

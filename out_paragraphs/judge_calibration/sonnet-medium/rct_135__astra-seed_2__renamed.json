@@ -1,0 +1,27 @@
+{
+ "key": "909a6dbcbc03a05120e3d7d43e32503c96288c90f185f85a0aba757bb8ff43e2",
+ "text": "rct_135",
+ "model": "astra",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "none",
+ "swapped": true,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(material_code_of_practice, [\n    mandatory/1,\n    fully_applicable/1,\n    permitted_encouragement/1,\n    permitted_facilitation/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_facilitate_cooperation/1,\n    objective_enable_public_distinction/1,\n    relevant_actor_applies/1\n]).\n:- dynamic european_commission/1.\n:- dynamic union_level_code_of_practice/1.\n:- dynamic transparency_duty/1.\n:- dynamic detection_mechanism/1.\n:- dynamic appropriateness_applies/1.\n:- dynamic value_chain_actor/1.\n:- dynamic disseminates_material/2.\n:- dynamic checks_authenticity/2.\n:- dynamic checks_provenance/2.\n\nrelevant_actor_applies(XActor) :-\n    value_chain_actor(XActor).\n\nmandatory(XObligation) :-\n    transparency_duty(XObligation).\n\nobjective_support_practical_arrangement(\n    code_of_practice(XCode, making_accessible(XMechanism))) :-\n    union_level_code_of_practice(XCode),\n    detection_mechanism(XMechanism),\n    appropriateness_applies(making_accessible(XMechanism)).\n\nrelevant_actor_applies(XActor) :-\n    checks_authenticity(XActor, XContent),\n    checks_provenance(XActor, XContent).\n\npermitted_encouragement(encouragement(XCommission, preparation(XCode))) :-\n    european_commission(XCommission),\n    union_level_code_of_practice(XCode).\n\npermitted_facilitation(facilitation(XCommission, preparation(XCode))) :-\n    european_commission(XCommission),\n    union_level_code_of_practice(XCode).\n\nobjective_effective_implementation(\n    code_of_practice(XCode, duty(detection, artificially_manipulated_material))) :-\n    union_level_code_of_practice(XCode).\n\nrelevant_actor_applies(XActor) :-\n    disseminates_material(XActor, _Content).\n\nobjective_effective_implementation(\n    code_of_practice(XCode, duty(detection, artificially_generated_material))) :-\n    union_level_code_of_practice(XCode).\n\nobjective_enable_public_distinction(\n    code_of_practice(XCode, effective_distinction(public, artificial_intelligence_generated_material))) :-\n    union_level_code_of_practice(XCode).\n\nobjective_effective_implementation(\n    code_of_practice(XCode, duty(labelling, artificially_manipulated_material))) :-\n    union_level_code_of_practice(XCode).\n\nobjective_facilitate_cooperation(\n    code_of_practice(XCode, cooperation_with(XActor))) :-\n    union_level_code_of_practice(XCode),\n    relevant_actor_applies(XActor).\n\nobjective_effective_implementation(\n    code_of_practice(XCode, duty(labelling, artificially_generated_material))) :-\n    union_level_code_of_practice(XCode).\n\nfully_applicable(XObligation) :-\n    transparency_duty(XObligation).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"same\",\"note\":\"none\"}",
+ "coverage_a": 1.0,
+ "coverage_b": 1.0,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

@@ -1,20 +1,20 @@
 {
- "key": "e28eec7dd5a5bc4699afb1ac6e3e31c13e82c229332a4fbd26123a3aeb18bbd0",
+ "key": "75ff2ab6aee9a6dfae580a9fbb46cd40f18dc7a073513f9652810f000718b0f5",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
  "b": "opus/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences, but A models sentence 1 weakly (no provider, no 'before' timing) and gives must_contain an odd negation on simplified provision, while B encodes the timing and the provider obligations more directly.\"}",
- "coverage_a": 0.667,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 0.667,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the drawing-up timing and the minimum Annex IV content more faithfully, while B misreads the drawing-up condition (requires it to be already placed on the market) and has odd conditions in must_contain and may_provide_simplified.\"}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.429,
  "overall": "mostly_same",
- "note": "Both cover the same sentences, but A models sentence 1 weakly (no provider, no 'before' timing) and gives must_contain an odd negation on simplified provision, while B encodes the timing and the provider obligations more directly.",
- "sentences_judged": 6,
+ "note": "A models the drawing-up timing and the minimum Annex IV content more faithfully, while B misreads the drawing-up condition (requires it to be already placed on the market) and has odd conditions in must_contain and may_provide_simplified.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -26,35 +26,41 @@
    "n": 2,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
+   "a": "partial",
+   "b": "full",
+   "agree": "no"
+  },
+  {
+   "n": 4,
    "a": "partial",
    "b": "partial",
    "agree": "no"
   },
   {
-   "n": 4,
-   "a": "full",
+   "n": 5,
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   },
   {
-   "n": 5,
+   "n": 6,
    "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
   {
-   "n": 6,
-   "a": "full",
+   "n": 7,
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "deepseek/seed_1",
-  "B": "opus/seed_1"
+  "A": "opus/seed_1",
+  "B": "deepseek/seed_1"
  }
 }

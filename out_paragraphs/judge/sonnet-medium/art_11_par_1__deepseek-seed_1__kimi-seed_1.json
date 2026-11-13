@@ -1,5 +1,5 @@
 {
- "key": "bb00ebff354506e3af9a42050fde3f167d3785ce1d48ef0caef51cb93ae4b248",
+ "key": "97b8d8620bf6bfa93403fa68e4556dfef1f3f01a5f17d1223920c8f9d9aab81a",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with similar structure; B adds an odd negation on Annex IV content and a mis-modelled SME actor equal to the system, while A models provider links and a separate SME permission.\"}",
- "coverage_a": 0.583,
- "coverage_b": 0.583,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover all sentences with similar structure; B adds odd conditions (e.g. must_contain negated by simplified permission, may_provide_simplified requiring Actor=System) while A is more direct but adds a provider condition.\"}",
+ "coverage_a": 0.643,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 1.0,
  "overall": "mostly_same",
- "note": "Both cover the same sentences with similar structure; B adds an odd negation on Annex IV content and a mis-modelled SME actor equal to the system, while A models provider links and a separate SME permission.",
- "sentences_judged": 6,
+ "note": "Both cover all sentences with similar structure; B adds odd conditions (e.g. must_contain negated by simplified permission, may_provide_simplified requiring Actor=System) while A is more direct but adds a provider condition.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -31,8 +31,8 @@
   {
    "n": 3,
    "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "b": "full",
+   "agree": "yes"
   },
   {
    "n": 4,
@@ -42,12 +42,18 @@
   },
   {
    "n": 5,
-   "a": "partial",
-   "b": "partial",
+   "a": "full",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"

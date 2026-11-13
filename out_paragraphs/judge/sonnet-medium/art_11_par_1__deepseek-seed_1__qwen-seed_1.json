@@ -1,5 +1,5 @@
 {
- "key": "1702ef110276a409e2acbf78e1a316a6f64f478746b0efaa66bbef5bf555ec70",
+ "key": "e9c5bcc9c757c34b771448d5191b9ca897d0e72d5704e8fa7db5a586327db767",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "deepseek/seed_1",
@@ -7,14 +7,14 @@
  "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both capture the same obligations loosely, but B adds conditions and a questionable exception (must_contain excludes SMEs, a circular simplified rule), while A states them unconditionally.\"}",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both give a similar skeleton of obligations. B adds odd conditions: the Annex IV contents are excluded for simplified providers, and the SME permission is tied to provides_information. A's simplified-documentation permission is unconditional for SMEs and start-ups.\"}",
  "coverage_a": 0.5,
  "coverage_b": 0.5,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "jointly_captured": 7,
+ "agreement": 0.714,
  "overall": "mostly_same",
- "note": "Both capture the same obligations loosely, but B adds conditions and a questionable exception (must_contain excludes SMEs, a circular simplified rule), while A states them unconditionally.",
- "sentences_judged": 6,
+ "note": "Both give a similar skeleton of obligations. B adds odd conditions: the Annex IV contents are excluded for simplified providers, and the SME permission is tied to provides_information. A's simplified-documentation permission is unconditional for SMEs and start-ups.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -38,7 +38,7 @@
    "n": 4,
    "a": "partial",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 5,
@@ -48,6 +48,12 @@
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "partial",
    "b": "partial",
    "agree": "yes"

@@ -1,20 +1,20 @@
 {
- "key": "988799285d1f2e6a00a63051dcef84250c0811672b69541bc84b8dacdc38a733",
+ "key": "cb45d15a94825eb4e9445ddb3e741ead3f17f9b082a99fd2fbeb056b8ec3d682",
  "kind": "within",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
  "b": "kimi/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A requires drawing up only when the system is NOT yet placed on the market and ties keeping up to date to being drawn up, whereas B uses placed_on_market OR put_into_service (reversed timing) and keeps up to date unconditionally; the rest is similar.\"}",
- "coverage_a": 0.75,
- "coverage_b": 0.75,
- "jointly_captured": 6,
- "agreement": 0.833,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Sentence 1 differs: A requires drawing up when the system is placed on market or in service, while B requires it only when not yet placed, which is closer to 'before'; B also conditions keep-up-to-date on drawing up.\"}",
+ "coverage_a": 0.571,
+ "coverage_b": 0.571,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "Sentence 1 differs: A requires drawing up only when the system is NOT yet placed on the market and ties keeping up to date to being drawn up, whereas B uses placed_on_market OR put_into_service (reversed timing) and keeps up to date unconditionally; the rest is similar.",
- "sentences_judged": 6,
+ "note": "Sentence 1 differs: A requires drawing up when the system is placed on market or in service, while B requires it only when not yet placed, which is closer to 'before'; B also conditions keep-up-to-date on drawing up.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
@@ -36,14 +36,14 @@
   },
   {
    "n": 4,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
-   "b": "full",
+   "a": "partial",
+   "b": "partial",
    "agree": "yes"
   },
   {
@@ -51,10 +51,16 @@
    "a": "partial",
    "b": "partial",
    "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "kimi/seed_3",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "kimi/seed_3"
  }
 }

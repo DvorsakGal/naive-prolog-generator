@@ -1,0 +1,57 @@
+{
+ "key": "45d27bc2685bb9b6a7f5c0decdfe60d2a4b9b15b24f7f7f8efd75e20e3c6a8bb",
+ "text": "art_49_par_4",
+ "model": "mistral",
+ "seed": 2,
+ "probe": "renamed",
+ "note": "both modules capture the same rules overall, but both omit key exclusivity details such as 'only' and leave some article-specific conditions underspecified",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(elevated_risk_ai_registration, [\n    elevated_risk_ai_system/1,\n    registration_in_secure_non_public_section/2,\n    registration_includes_data/2,\n    permitted_access_to_restricted_section/2\n]).\n:- dynamic annex_iii_point/2.\n:- dynamic area/2.\n:- dynamic eu_database/2.\n:- dynamic secure_non_public_section/2.\n:- dynamic registration_article_49/2.\n:- dynamic data_annex_viii_points_1_to_10_except_6_8_9/1.\n:- dynamic data_section_b_points_1_to_5_and_8_9/1.\n:- dynamic data_annex_viii_points_1_to_3/1.\n:- dynamic data_annex_ix_points_1_2_3_5/1.\n:- dynamic european_commission/1.\n:- dynamic restricted_section/1.\n:- dynamic eu_database_listed_in_article_49_4/1.\n:- dynamic national_public_authority_referred_to_in_article_74_8/1.\n\nregistration_includes_data(XS, XInformation) :-\n    elevated_risk_ai_system(XS),\n    data_annex_viii_points_1_to_3(XInformation).\n\nregistration_includes_data(XS, XInformation) :-\n    elevated_risk_ai_system(XS),\n    data_section_b_points_1_to_5_and_8_9(XInformation).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 7),\n    area(XS, border_control_management).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 6),\n    area(XS, migration).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 1),\n    area(XS, asylum).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 6),\n    area(XS, asylum).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 6),\n    area(XS, border_control_management).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 1),\n    area(XS, migration).\n\nregistration_includes_data(XS, XInformation) :-\n    elevated_risk_ai_system(XS),\n    data_annex_ix_points_1_2_3_5(XInformation).\n\nregistration_includes_data(XS, XInformation) :-\n    elevated_risk_ai_system(XS),\n    data_annex_viii_points_1_to_10_except_6_8_9(XInformation).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 7),\n    area(XS, law_enforcement).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 6),\n    area(XS, law_enforcement).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 7),\n    area(XS, migration).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 1),\n    area(XS, border_control_management).\n\npermitted_access_to_restricted_section(XCommission, XSection) :-\n    european_commission(XCommission),\n    restricted_section(XSection),\n    eu_database_listed_in_article_49_4(XSection).\n\nregistration_in_secure_non_public_section(XS, XDatabase) :-\n    elevated_risk_ai_system(XS),\n    eu_database(XArticle71, XDatabase),\n    secure_non_public_section(XDatabase, XSection),\n    registration_article_49(XS, XSection).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 1),\n    area(XS, law_enforcement).\n\nelevated_risk_ai_system(XS) :-\n    annex_iii_point(XS, 7),\n    area(XS, asylum).\n\npermitted_access_to_restricted_section(XAuthority, XSection) :-\n    national_public_authority_referred_to_in_article_74_8(XAuthority),\n    restricted_section(XSection),\n    eu_database_listed_in_article_49_4(XSection).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 4, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 5, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 6, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"both modules capture the same rules overall, but both omit key exclusivity details such as 'only' and leave some article-specific conditions underspecified\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 6,
+ "agreement": 1.0,
+ "overall": "same",
+ "sentences_judged": 6,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 5,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ]
+}

@@ -1,32 +1,32 @@
 {
- "key": "32f85fec17c22b36e39a8f7522798b866ddc002ca818a1603c5b2a804e9e4781",
+ "key": "62aadd9cf4afa6a53866dc3a30662edb70def95a8cbb79fd1a390b8e6d0d5031",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "mistral/seed_1",
  "b": "opus/seed_1",
- "swapped": false,
+ "swapped": true,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"A models the documentation's compliance-demonstration and information-provision purposes with more detail, while B gives them only as bare objective predicates. A also covers start-ups explicitly, and A's drawing-up rule uses odd negated conditions.\"}",
- "coverage_a": 0.917,
- "coverage_b": 0.833,
- "jointly_captured": 6,
- "agreement": 1.0,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"no\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module A captures the purposes in sentence 2 only as bare predicates with no authorities or clear-and-comprehensive content, while B models them fully. B's drawing-up rule uses odd negation conditions, and it has an arity mismatch in must_use_simplified_form.\"}",
+ "coverage_a": 0.786,
+ "coverage_b": 0.857,
+ "jointly_captured": 7,
+ "agreement": 0.857,
  "overall": "mostly_same",
- "note": "A models the documentation's compliance-demonstration and information-provision purposes with more detail, while B gives them only as bare objective predicates. A also covers start-ups explicitly, and A's drawing-up rule uses odd negated conditions.",
- "sentences_judged": 6,
+ "note": "Module A captures the purposes in sentence 2 only as bare predicates with no authorities or clear-and-comprehensive content, while B models them fully. B's drawing-up rule uses odd negation conditions, and it has an arity mismatch in must_use_simplified_form.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "partial",
+   "b": "full",
    "agree": "yes"
   },
   {
    "n": 2,
    "a": "full",
    "b": "partial",
-   "agree": "yes"
+   "agree": "no"
   },
   {
    "n": 3,
@@ -37,24 +37,30 @@
   {
    "n": 4,
    "a": "full",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   },
   {
    "n": 6,
+   "a": "partial",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
    "a": "full",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "mistral/seed_1",
-  "B": "opus/seed_1"
+  "A": "opus/seed_1",
+  "B": "mistral/seed_1"
  }
 }

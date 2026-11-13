@@ -1,0 +1,27 @@
+{
+ "key": "4821332b8c89c92cd6a3cab09efe68c9a273843feb3385261c373806bc13b2d8",
+ "text": "rct_135",
+ "model": "opus",
+ "seed": 1,
+ "probe": "drop_rule",
+ "note": "both modules capture the Commission\u2019s permission to encourage and facilitate Union-level codes of practice and their objectives, but module B omits the mandatory nature of the transparency obligations that module A includes",
+ "swapped": false,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "variant": ":- module(code_of_practice_content_labelling, [\n    permitted_encourage_code_of_practice/1,\n    permitted_facilitate_code_of_practice/1,\n    objective_effective_implementation/1,\n    objective_support_practical_arrangement/1,\n    objective_public_distinguish_ai_generated_content/1,\n    fully_applicable/1\n]).\n:- dynamic commission/1.\n:- dynamic code_of_practice/1.\n:- dynamic union_level/1.\n:- dynamic transparency_obligation/1.\n:- dynamic content_detection_labelling_obligation/1.\n\nfully_applicable(O) :-\n    transparency_obligation(O).\n\npermitted_encourage_code_of_practice(drawing_up(Commission, C)) :-\n    commission(Commission),\n    code_of_practice(C),\n    union_level(C).\n\npermitted_facilitate_code_of_practice(drawing_up(Commission, C)) :-\n    commission(Commission),\n    code_of_practice(C),\n    union_level(C).\n\nobjective_effective_implementation(implementation(C, O)) :-\n    code_of_practice(C),\n    union_level(C),\n    content_detection_labelling_obligation(O).\n\nobjective_support_practical_arrangement(arrangement(C, accessible_detection_mechanism)) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(value_chain_actor))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(content_disseminator))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_support_practical_arrangement(arrangement(C, cooperation(authenticity_provenance_checker))) :-\n    code_of_practice(C),\n    union_level(C).\n\nobjective_public_distinguish_ai_generated_content(C) :-\n    code_of_practice(C),\n    union_level(C).\n",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"different\",\n  \"note\": \"both modules capture the Commission\u2019s permission to encourage and facilitate Union-level codes of practice and their objectives, but module B omits the mandatory nature of the transparency obligations that module A includes\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "different",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "no"
+  }
+ ]
+}

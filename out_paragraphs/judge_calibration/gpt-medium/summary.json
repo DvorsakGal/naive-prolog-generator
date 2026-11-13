@@ -1,0 +1,71 @@
+{
+ "judge": "gpt-medium",
+ "specificity": {
+  "n": 20,
+  "label_same": 1.0,
+  "strict_same": 1.0,
+  "mean_agreement": 1.0
+ },
+ "sensitivity": {
+  "n": 20,
+  "label_not_same": 0.95,
+  "detected": 0.95,
+  "by_op": {
+   "drop_rule": {
+    "n": 12,
+    "detected": 1.0,
+    "label_not_same": 1.0
+   },
+   "flip_modality": {
+    "n": 2,
+    "detected": 1.0,
+    "label_not_same": 1.0
+   },
+   "drop_condition": {
+    "n": 4,
+    "detected": 1.0,
+    "label_not_same": 1.0
+   },
+   "swap_args": {
+    "n": 2,
+    "detected": 0.5,
+    "label_not_same": 0.5
+   }
+  }
+ },
+ "by_model": {
+  "astra": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  },
+  "astra-medium": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  },
+  "deepseek": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  },
+  "gemini": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  },
+  "mistral": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  },
+  "opus": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 0.857
+  },
+  "qwen": {
+   "renamed_strict_same": 1.0,
+   "mutant_detected": 1.0
+  }
+ },
+ "label_distribution": {
+  "same": 21,
+  "mostly_same": 15,
+  "different": 4
+ }
+}

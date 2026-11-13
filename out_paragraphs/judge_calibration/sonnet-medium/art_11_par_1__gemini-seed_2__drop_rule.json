@@ -1,0 +1,63 @@
+{
+ "key": "0b4fa4f424c483116eff6d420a546cb3d199a98ae194b1c62451633bc8e8da23",
+ "text": "art_11_par_1",
+ "model": "gemini",
+ "seed": 2,
+ "probe": "drop_rule",
+ "note": "Module B's permitted_simplified_manner covers only start-ups, omitting the SME clause that Module A includes; otherwise the modules are identical.",
+ "swapped": false,
+ "judge": "anthropic/claude-sonnet-5.5",
+ "reasoning": "medium",
+ "variant": ":- module(technical_documentation_high_risk_ai, [\n    required_technical_documentation/1,\n    must_draw_up/2,\n    must_keep_up_to_date/2,\n    demonstrates_compliance_chapter_three/1,\n    provides_assessment_information/1,\n    contains_minimum_annex_four_elements/1,\n    permitted_simplified_manner/2,\n    must_establish/2,\n    must_use/2,\n    must_accept/2\n]).\n:- dynamic high_risk/1.\n:- dynamic ai_system/1.\n:- dynamic provider/1.\n:- dynamic places_on_market/2.\n:- dynamic puts_into_service/2.\n:- dynamic small_medium_enterprise/1.\n:- dynamic start_up/1.\n:- dynamic commission/1.\n:- dynamic notified_body/1.\n:- dynamic opts_simplified_manner/2.\n:- dynamic form_referred_to_in_article_eleven_one/1.\n\nrequired_technical_documentation(technical_documentation(System)) :-\n    ai_system(System),\n    high_risk(System).\n\nmust_draw_up(Provider, technical_documentation(System)) :-\n    provider(Provider),\n    ai_system(System),\n    high_risk(System),\n    places_on_market(Provider, System).\n\nmust_draw_up(Provider, technical_documentation(System)) :-\n    provider(Provider),\n    ai_system(System),\n    high_risk(System),\n    puts_into_service(Provider, System).\n\nmust_keep_up_to_date(Provider, technical_documentation(System)) :-\n    provider(Provider),\n    ai_system(System),\n    high_risk(System).\n\ndemonstrates_compliance_chapter_three(technical_documentation(System)) :-\n    ai_system(System),\n    high_risk(System).\n\nprovides_assessment_information(technical_documentation(System)) :-\n    ai_system(System),\n    high_risk(System).\n\ncontains_minimum_annex_four_elements(technical_documentation(System)) :-\n    ai_system(System),\n    high_risk(System).\n\npermitted_simplified_manner(Enterprise, technical_documentation(System)) :-\n    ai_system(System),\n    high_risk(System),\n    start_up(Enterprise).\n\nmust_establish(Commission, simplified_form(small_and_microenterprises)) :-\n    commission(Commission).\n\nmust_use(Enterprise, Form) :-\n    small_medium_enterprise(Enterprise),\n    opts_simplified_manner(Enterprise, technical_documentation(System)),\n    ai_system(System),\n    form_referred_to_in_article_eleven_one(Form).\n\nmust_use(Enterprise, Form) :-\n    start_up(Enterprise),\n    opts_simplified_manner(Enterprise, technical_documentation(System)),\n    ai_system(System),\n    form_referred_to_in_article_eleven_one(Form).\n\nmust_accept(NotifiedBody, form_conformity_assessment(Form)) :-\n    notified_body(NotifiedBody),\n    form_referred_to_in_article_eleven_one(Form).\n",
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"no\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Module B's permitted_simplified_manner covers only start-ups, omitting the SME clause that Module A includes; otherwise the modules are identical.\"}",
+ "coverage_a": 0.857,
+ "coverage_b": 0.786,
+ "jointly_captured": 7,
+ "agreement": 0.857,
+ "overall": "mostly_same",
+ "sentences_judged": 7,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 2,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 3,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 4,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  },
+  {
+   "n": 5,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 6,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
+  }
+ ]
+}

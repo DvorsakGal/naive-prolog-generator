@@ -1,30 +1,30 @@
 {
- "key": "5ddc20edfe56dae0ebf00349c83f12a4f5064f5b0358097e490927106e603500",
+ "key": "69c3ac6e65d7d3f1fc8db77dfbc2c31a08d9e7dc61b3d817438f61b0447e186d",
  "kind": "across",
  "text": "art_11_par_1",
  "a": "kimi/seed_1",
  "b": "opus/seed_1",
- "swapped": true,
+ "swapped": false,
  "judge": "anthropic/claude-sonnet-5.5",
  "reasoning": "medium",
- "raw": "{\"sentences\":[{\"n\":1,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"full\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"B adds extra conditions, for example requiring the system to be already placed on the market or in service, and spells out chp_3 requirements and authorities in sentence 2. A captures sentence 2 only as vague objective predicates.\"}",
- "coverage_a": 0.833,
- "coverage_b": 0.917,
- "jointly_captured": 6,
+ "raw": "{\"sentences\":[{\"n\":1,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":2,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":3,\"a\":\"full\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":4,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":5,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"},{\"n\":6,\"a\":\"partial\",\"b\":\"partial\",\"agree\":\"yes\"},{\"n\":7,\"a\":\"partial\",\"b\":\"full\",\"agree\":\"yes\"}],\"overall\":\"mostly_same\",\"note\":\"Both cover the same sentences with similar modality; A adds extra conditions (placed on market, clear and comprehensive, authority targets) while B is more abstract and leaves the authorities and bodies out of the purposes.\"}",
+ "coverage_a": 0.571,
+ "coverage_b": 0.714,
+ "jointly_captured": 7,
  "agreement": 1.0,
  "overall": "mostly_same",
- "note": "B adds extra conditions, for example requiring the system to be already placed on the market or in service, and spells out chp_3 requirements and authorities in sentence 2. A captures sentence 2 only as vague objective predicates.",
- "sentences_judged": 6,
+ "note": "Both cover the same sentences with similar modality; A adds extra conditions (placed on market, clear and comprehensive, authority targets) while B is more abstract and leaves the authorities and bodies out of the purposes.",
+ "sentences_judged": 7,
  "judgement": [
   {
    "n": 1,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 2,
-   "a": "full",
+   "a": "partial",
    "b": "partial",
    "agree": "yes"
   },
@@ -37,24 +37,30 @@
   {
    "n": 4,
    "a": "partial",
-   "b": "full",
+   "b": "partial",
    "agree": "yes"
   },
   {
    "n": 5,
-   "a": "full",
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   },
   {
    "n": 6,
-   "a": "full",
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  },
+  {
+   "n": 7,
+   "a": "partial",
    "b": "full",
    "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "opus/seed_1",
-  "B": "kimi/seed_1"
+  "A": "kimi/seed_1",
+  "B": "opus/seed_1"
  }
 }
