@@ -1,0 +1,30 @@
+{
+ "key": "5cef3501ae3b54dbfb68db85bf08072579e334662ebe43a3ea0dced75b5ac929",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra-medium/seed_2",
+ "b": "astra-medium/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\n      \"n\": 1,\n      \"a\": \"partial\",\n      \"b\": \"partial\",\n      \"agree\": \"yes\"\n    }\n  ],\n  \"overall\": \"same\",\n  \"note\": \"both modules capture the Commission's permission to encourage and facilitate Union-level codes of practice and their main purposes, but neither makes the 'without prejudice to' relationship explicit\"\n}",
+ "coverage_a": 0.5,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 1.0,
+ "overall": "same",
+ "note": "both modules capture the Commission's permission to encourage and facilitate Union-level codes of practice and their main purposes, but neither makes the 'without prejudice to' relationship explicit",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "partial",
+   "b": "partial",
+   "agree": "yes"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra-medium/seed_3",
+  "B": "astra-medium/seed_2"
+ }
+}

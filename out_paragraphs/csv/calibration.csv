@@ -1,0 +1,81 @@
+judge,text,model,seed,probe,overall,agreement,coverage_original,coverage_variant,difference_detected,correct,note
+gpt-medium,art_11_par_1,astra-medium,1,drop_condition,mostly_same,0.857,0.929,0.857,True,True,"A and B are almost identical, but A weakens sentence 2 by omitting the high-risk-system condition in the rule about providing information to notified bodies."
+gpt-medium,art_11_par_1,astra-medium,1,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_11_par_1,astra-medium,2,drop_rule,mostly_same,0.857,1.0,0.929,True,True,"module B narrows sentence 4 to start-ups that are SMEs, while module A covers SMEs generally as the text requires"
+gpt-medium,art_11_par_1,astra-medium,2,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_11_par_1,astra-medium,3,drop_condition,mostly_same,0.857,1.0,0.929,True,True,"The main difference is sentence 4, where module B allows simplified provision without restricting it to SMEs."
+gpt-medium,art_11_par_1,astra-medium,3,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_11_par_1,astra,2,drop_rule,mostly_same,0.857,1.0,0.929,True,True,module B omits the requirement in sentence 1 that the technical documentation be drawn up before the system is placed on the market
+gpt-medium,art_11_par_1,astra,2,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_11_par_1,gemini,2,drop_rule,mostly_same,0.857,0.714,0.714,True,True,"the main difference is sentence 4, where module A allows SMEs generally (and start-ups) to use the simplified manner, while module B limits that permission to start-ups only"
+gpt-medium,art_11_par_1,gemini,2,renamed,same,1.0,0.643,0.643,False,True,"the modules are substantively parallel and differ only in predicate naming, while sharing the same omissions of detail."
+gpt-medium,art_49_par_4,astra,1,drop_rule,mostly_same,0.833,1.0,0.917,True,True,"Module A lacks the rule that links the covered high-risk systems, areas and Article 49 registrations into the restricted-registration condition that Module B states explicitly."
+gpt-medium,art_49_par_4,astra,1,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_49_par_4,deepseek,1,drop_rule,mostly_same,1.0,0.5,0.417,True,True,"module B omits sentence 3's Section B of Annex VIII points, while otherwise the modules largely match but both simplify the applicability/exclusivity details"
+gpt-medium,art_49_par_4,deepseek,1,renamed,same,1.0,0.5,0.5,False,True,none
+gpt-medium,art_49_par_4,gemini,3,flip_modality,mostly_same,0.833,0.5,0.5,True,True,"The modules are otherwise the same, but A treats the relevant registrations as permitted while B treats them as required."
+gpt-medium,art_49_par_4,gemini,3,renamed,same,1.0,0.75,0.75,False,True,none
+gpt-medium,art_49_par_4,mistral,2,renamed,same,1.0,0.5,0.5,False,True,"both modules capture the same rules overall, but both omit key exclusivity details such as 'only' and leave some article-specific conditions underspecified"
+gpt-medium,art_49_par_4,mistral,2,swap_args,mostly_same,0.833,0.833,0.833,True,True,"The only substantive difference is in sentence 6, where module B reverses the arguments for national-authority access and so does not state the same access relation as module A."
+gpt-medium,art_49_par_4,opus,1,drop_rule,mostly_same,0.667,1.0,0.833,True,True,"Module B omits the rule that actually defines Annex VIII points 1 to 10 except 6, 8 and 9, so its capture of item (a) and the corresponding part of sentence 1 is incomplete."
+gpt-medium,art_49_par_4,opus,1,renamed,same,1.0,1.0,1.0,False,True,none
+gpt-medium,art_49_par_4,opus,2,drop_condition,mostly_same,0.833,0.917,0.833,True,True,"A does not properly link the secure non-public registration requirement to a specific registration of a qualifying high-risk system, while B does; otherwise they largely match."
+gpt-medium,art_49_par_4,opus,2,renamed,same,1.0,0.833,0.833,False,True,none
+gpt-medium,art_49_par_4,opus,3,drop_rule,mostly_same,0.833,0.917,0.833,True,True,"module A omits most of sentence 2's Annex VIII point set, while module B captures that item fully"
+gpt-medium,art_49_par_4,opus,3,renamed,same,1.0,0.833,0.833,False,True,none
+gpt-medium,art_50_par_2,qwen,3,drop_rule,mostly_same,0.333,0.5,0.5,True,True,"module B includes the exemption for systems that do not substantially alter semantics, which module A omits, and both modules only partially capture the technical-feasibility and marking details"
+gpt-medium,art_50_par_2,qwen,3,renamed,same,1.0,0.5,0.5,False,True,none
+gpt-medium,rct_135,astra,2,drop_rule,different,0.0,0.5,0.5,True,True,"module B adds the full-applicability aspect of the transparency obligations, while both modules otherwise model the permission and objectives similarly but omit an explicit without-prejudice relation"
+gpt-medium,rct_135,astra,2,renamed,same,1.0,0.5,0.5,False,True,"both modules capture the Commission's permission and the listed code-of-practice objectives, but both leave the 'without prejudice' linkage and the actor conditions only loosely represented"
+gpt-medium,rct_135,opus,1,drop_rule,different,0.0,0.5,0.5,True,True,"both modules capture the Commission’s permission to encourage and facilitate Union-level codes of practice and their objectives, but module B omits the mandatory nature of the transparency obligations that module A includes"
+gpt-medium,rct_135,opus,1,renamed,same,1.0,0.5,0.5,False,True,none
+gpt-medium,rct_135,opus,2,flip_modality,different,0.0,1.0,0.5,True,True,"B makes the Commission's encouragement of Union-level codes of practice mandatory rather than permitted, whereas A models the sentence's main modality correctly."
+gpt-medium,rct_135,opus,2,renamed,same,1.0,0.5,0.5,False,True,both modules capture the main permission and purposes but omit qualifiers like the without-prejudice relation and appropriateness
+gpt-medium,rct_135,opus,3,renamed,same,1.0,0.5,0.5,False,True,none
+gpt-medium,rct_135,opus,3,swap_args,same,1.0,0.5,0.5,False,False,"both modules capture the Commission's permission to encourage and facilitate Union-level codes of practice and the general objectives, but both omit the detailed arrangements about accessibility of detection mechanisms and cooperation along the value chain"
+gpt-medium,rct_34,gemini,2,drop_rule,mostly_same,0.75,0.875,0.875,True,True,"A leaves sentence 2's strict temporal/geographic/personal limitation underspecified, while B defines that limitation explicitly."
+gpt-medium,rct_34,gemini,2,renamed,same,1.0,0.875,0.875,False,True,none
+gpt-medium,rct_34,mistral,2,drop_condition,mostly_same,0.75,0.75,0.625,True,True,the main difference is that module B weakens sentence 3 by omitting the real-time biometric system condition from the impact-assessment requirement.
+gpt-medium,rct_34,mistral,2,renamed,same,1.0,0.75,0.75,False,True,"modules are substantively identical, with only a naming difference for the law-enforcement authority predicate"
+gpt-medium,rct_34,opus,1,drop_rule,different,0.5,0.625,0.5,True,True,"module B leaves the key scope condition for the covered use undefined, so its purpose and authorisation rules do not clearly match A's public-space law-enforcement biometric-use conditions"
+gpt-medium,rct_34,opus,1,renamed,same,1.0,0.75,0.75,False,True,none
+sonnet-medium,art_11_par_1,astra-medium,1,drop_condition,same,1.0,1.0,1.0,False,False,Only difference: A's notified-body clause for information provision omits the high-risk-system condition that B includes.
+sonnet-medium,art_11_par_1,astra-medium,1,renamed,mostly_same,1.0,1.0,1.0,True,False,"Nearly identical structure; B's needs_alignment covers small_undertaking and microenterprise, as A does for small and micro. The only differences are naming (technical_file vs technical_documentation, commission vs european_commission)."
+sonnet-medium,art_11_par_1,astra-medium,2,drop_rule,mostly_same,0.857,1.0,0.929,True,True,"For sentence 4, A permits simplified provision for any SME (with a separate start-up clause), while B only permits it for SMEs that are also start-ups; the rest is identical."
+sonnet-medium,art_11_par_1,astra-medium,2,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,art_11_par_1,astra-medium,3,drop_condition,mostly_same,0.857,1.0,0.929,True,True,"Only sentence 4 differs: A restricts the simplified-provision permission to SMEs, while B leaves the Enterprise unconstrained."
+sonnet-medium,art_11_par_1,astra-medium,3,renamed,same,1.0,0.929,0.929,False,True,none
+sonnet-medium,art_11_par_1,astra,2,drop_rule,mostly_same,0.857,1.0,0.929,True,True,"Module A requires the documentation to be drawn up before both placing on the market and putting into service, while module B covers only putting into service, so B is partial on sentence 1."
+sonnet-medium,art_11_par_1,astra,2,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,art_11_par_1,gemini,2,drop_rule,mostly_same,0.857,0.857,0.786,True,True,"Module B's permitted_simplified_manner covers only start-ups, omitting the SME clause that Module A includes; otherwise the modules are identical."
+sonnet-medium,art_11_par_1,gemini,2,renamed,same,1.0,0.857,0.857,False,True,none
+sonnet-medium,art_49_par_4,astra,1,drop_rule,mostly_same,0.833,1.0,0.917,True,True,"Module A never defines restricted_registration_applies, so its location and information rules cannot fire. Module B defines it from the covered annex points, areas and article references. The other sentences are identical."
+sonnet-medium,art_49_par_4,astra,1,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,art_49_par_4,deepseek,1,drop_rule,mostly_same,1.0,1.0,0.833,True,True,"Module A encodes Section B points 1-5, 8 and 9 of Annex VIII (sentence 3), which Module B omits; the rest is identical."
+sonnet-medium,art_49_par_4,deepseek,1,renamed,mostly_same,1.0,1.0,0.833,True,False,"Module A omits excluded Annex VIII point 9 (so sentence 2 is wrong) and has a malformed elevated-risk system definition, whereas B is correct and complete; the remaining content is equivalent."
+sonnet-medium,art_49_par_4,gemini,3,flip_modality,same,1.0,0.583,0.583,False,False,"The modules are logically identical; the only difference is the exported predicate name (permitted_registration in A, required_registration in B), which is a naming and modality-label difference only."
+sonnet-medium,art_49_par_4,gemini,3,renamed,same,1.0,0.583,0.583,False,True,none
+sonnet-medium,art_49_par_4,mistral,2,renamed,same,1.0,0.833,0.833,False,True,none
+sonnet-medium,art_49_par_4,mistral,2,swap_args,mostly_same,0.833,0.5,0.5,True,True,"Modules are identical except that B's national-authority access rule swaps the argument order (Section, Authority), inconsistent with the Commission rule."
+sonnet-medium,art_49_par_4,opus,1,drop_rule,mostly_same,0.833,0.917,0.833,True,True,"Module B omits the definition of annex_viii_point/1, so its Annex VIII points 1-10 minus 6, 8, 9 item (a) never succeeds; otherwise the modules are identical."
+sonnet-medium,art_49_par_4,opus,1,renamed,same,1.0,0.583,0.583,False,True,none
+sonnet-medium,art_49_par_4,opus,2,drop_condition,mostly_same,0.833,0.917,0.917,True,True,"The modules differ only in required_secure_non_public_registration: A ignores the registration R and links it to no system (its body has a singleton S), while B ties R to a system via registration(R,S)."
+sonnet-medium,art_49_par_4,opus,2,renamed,same,1.0,0.917,0.917,False,True,none
+sonnet-medium,art_49_par_4,opus,3,drop_rule,mostly_same,1.0,1.0,0.833,True,True,"Module A omits item (a), Annex VIII points 1 to 10 except 6, 8 and 9, while Module B includes it; the rest is identical."
+sonnet-medium,art_49_par_4,opus,3,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,art_50_par_2,qwen,3,drop_rule,mostly_same,1.0,0.5,0.5,True,True,"B includes an exemption clause for does_not_substantially_alter_semantics, which A omits, but the two modules are otherwise identical."
+sonnet-medium,art_50_par_2,qwen,3,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,rct_135,astra,2,drop_rule,mostly_same,1.0,1.0,1.0,True,True,"Module B adds a fully_applicable/1 predicate for the transparency obligations' full applicability; Module A omits it, otherwise the modules are identical."
+sonnet-medium,rct_135,astra,2,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,rct_135,opus,1,drop_rule,mostly_same,1.0,1.0,1.0,True,True,"A also defines mandatory/1 for transparency obligations, while B only states fully_applicable; everything else is identical."
+sonnet-medium,rct_135,opus,1,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,rct_135,opus,2,flip_modality,mostly_same,0.0,1.0,0.5,True,True,"Module A models the Commission's encouragement as permitted, matching 'may', while module B names it 'required_encouragement', changing the modality; the rest is identical."
+sonnet-medium,rct_135,opus,2,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,rct_135,opus,3,renamed,same,1.0,0.5,0.5,False,True,none
+sonnet-medium,rct_135,opus,3,swap_args,mostly_same,1.0,0.5,0.5,True,True,"The modules are nearly identical; the only difference is that B's facilitates_drawing_up has swapped argument order in the head (C, Commission), a minor slip."
+sonnet-medium,rct_34,gemini,2,drop_rule,mostly_same,0.75,1.0,0.875,True,True,"Module A calls required_limitation in permitted_deployment but never defines it, so the strictly-necessary time, geographic and personal limits in sentence 2 are not captured; Module B defines it."
+sonnet-medium,rct_34,gemini,2,renamed,same,1.0,1.0,1.0,False,True,none
+sonnet-medium,rct_34,mistral,2,drop_condition,same,1.0,0.5,0.5,False,False,"Modules are nearly identical; B omits the real-time biometric system condition in the impact assessment rule, a minor difference."
+sonnet-medium,rct_34,mistral,2,renamed,same,1.0,0.5,0.5,False,True,none
+sonnet-medium,rct_34,opus,1,drop_rule,same,1.0,0.625,0.625,False,False,"Rules are identical; only A defines covered_use/1, which B calls but leaves undefined."
+sonnet-medium,rct_34,opus,1,renamed,same,1.0,1.0,1.0,False,True,none

@@ -1,0 +1,13 @@
+{
+ "key": "3ed8f6bc9051026090a4f295500a1ef5a07337563ff0da57e13d36944d12a7a7",
+ "model": "openai/gpt-6-astra",
+ "provider": "openrouter",
+ "reasoning": "minimal",
+ "seed": 4,
+ "cached": false,
+ "prompt_tokens": 1556,
+ "completion_tokens": 1263,
+ "wall_s": 17.61,
+ "truncated": false,
+ "chars_out": 4878
+}

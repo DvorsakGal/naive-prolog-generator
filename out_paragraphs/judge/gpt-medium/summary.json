@@ -1,19 +1,19 @@
 {
  "judge": "gpt-medium",
- "pairs": 220,
+ "pairs": 236,
  "within_by_model": {
   "astra": {
    "n": 15,
-   "agreement": 0.687,
-   "same": 6,
-   "mostly_same": 6,
+   "agreement": 0.709,
+   "same": 7,
+   "mostly_same": 5,
    "different": 3
   },
   "astra-medium": {
-   "n": 3,
-   "agreement": 0.905,
-   "same": 1,
-   "mostly_same": 2,
+   "n": 15,
+   "agreement": 0.753,
+   "same": 5,
+   "mostly_same": 10,
    "different": 0
   },
   "deepseek": {
@@ -68,30 +68,30 @@
    "different": 13
   },
   "art_49_par_4": {
-   "n": 21,
-   "agreement": 0.508,
-   "same": 0,
+   "n": 22,
+   "agreement": 0.53,
+   "same": 1,
    "mostly_same": 17,
    "different": 4
   },
   "art_50_par_2": {
-   "n": 21,
-   "agreement": 0.159,
+   "n": 22,
+   "agreement": 0.182,
    "same": 0,
-   "mostly_same": 8,
+   "mostly_same": 9,
    "different": 13
   },
   "rct_135": {
-   "n": 21,
-   "agreement": 0.095,
+   "n": 22,
+   "agreement": 0.091,
    "same": 1,
    "mostly_same": 1,
-   "different": 19
+   "different": 20
   },
   "rct_34": {
-   "n": 21,
-   "agreement": 0.202,
-   "same": 0,
+   "n": 22,
+   "agreement": 0.239,
+   "same": 1,
    "mostly_same": 8,
    "different": 13
   }
@@ -140,11 +140,11 @@
    "different": 1
   },
   "astra~astra-medium": {
-   "n": 1,
-   "agreement": 0.857,
-   "same": 0,
-   "mostly_same": 1,
-   "different": 0
+   "n": 5,
+   "agreement": 0.705,
+   "same": 2,
+   "mostly_same": 2,
+   "different": 1
   },
   "astra~deepseek": {
    "n": 5,
@@ -295,8 +295,8 @@
   }
  },
  "coverage_by_model": {
-  "astra": 0.856,
-  "astra-medium": 0.978,
+  "astra": 0.87,
+  "astra-medium": 0.848,
   "deepseek": 0.586,
   "gemini": 0.62,
   "kimi": 0.642,
@@ -305,17 +305,17 @@
   "qwen": 0.581
  },
  "across_all": {
-  "n": 112,
-  "agreement": 0.259,
-  "same": 1,
-  "mostly_same": 49,
-  "different": 62
+  "n": 116,
+  "agreement": 0.273,
+  "same": 3,
+  "mostly_same": 50,
+  "different": 63
  },
  "within_all": {
-  "n": 108,
-  "agreement": 0.423,
-  "same": 10,
-  "mostly_same": 61,
+  "n": 120,
+  "agreement": 0.455,
+  "same": 15,
+  "mostly_same": 68,
   "different": 37
  }
 }

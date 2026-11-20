@@ -226,6 +226,10 @@ How to read the results:
   if neither is.
 
 Results of the first full run (2026-11-13, $2.63): see `stage1_results.md`.
+Stage 2 results (2026-11-20, $7.54): `stage2_results.md`. Medium reasoning is frozen for stage 3.
+
+`venv/bin/python src/export_csv.py` flattens every result into `out_paragraphs/csv/*.csv`
+(one row per output, per query, per norm, per judged pair) for notebook analysis.
 
 ## Budget
 

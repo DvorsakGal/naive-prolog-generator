@@ -10,8 +10,25 @@ The technical documentation shall be drawn up in such a way as to demonstrate th
 | output | loads | module | clauses | preds | inputs | coverage | violations |
 |---|---|---|---|---|---|---|---|
 | astra/seed_1 | yes | technical_documentation | 14 | 11 | 10 | 0.784 | 0 |
+| astra/seed_10 | yes | technical_documentation | 12 | 10 | 8 | 0.706 | 0 |
 | astra/seed_2 | yes | technical_documentation | 13 | 10 | 9 | 0.745 | 0 |
 | astra/seed_3 | yes | technical_documentation | 11 | 9 | 7 | 0.725 | 0 |
+| astra/seed_4 | yes | technical_documentation | 12 | 10 | 9 | 0.745 | 0 |
+| astra/seed_5 | NO | technical_documentation | 5 | 4 | 3 | 0.216 | 6 |
+| astra/seed_6 | yes | technical_documentation | 11 | 10 | 8 | 0.745 | 0 |
+| astra/seed_7 | yes | technical_documentation | 15 | 11 | 7 | 0.686 | 0 |
+| astra/seed_8 | yes | technical_documentation | 13 | 10 | 7 | 0.745 | 0 |
+| astra/seed_9 | yes | technical_documentation | 14 | 11 | 8 | 0.706 | 0 |
+| astra-medium/seed_1 | yes | technical_documentation | 15 | 12 | 6 | 0.725 | 0 |
+| astra-medium/seed_10 | yes | technical_documentation | 16 | 13 | 5 | 0.647 | 0 |
+| astra-medium/seed_2 | yes | technical_documentation | 17 | 13 | 10 | 0.725 | 0 |
+| astra-medium/seed_3 | yes | technical_documentation | 16 | 14 | 7 | 0.647 | 0 |
+| astra-medium/seed_4 | yes | technical_documentation | 13 | 11 | 6 | 0.686 | 0 |
+| astra-medium/seed_5 | NO | technical_documentation | 5 | 4 | 2 | 0.176 | 10 |
+| astra-medium/seed_6 | yes | technical_documentation | 15 | 12 | 6 | 0.745 | 0 |
+| astra-medium/seed_7 | yes | technical_documentation | 15 | 12 | 8 | 0.745 | 0 |
+| astra-medium/seed_8 | yes | technical_documentation | 14 | 11 | 6 | 0.745 | 0 |
+| astra-medium/seed_9 | yes | technical_documentation | 15 | 12 | 5 | 0.627 | 0 |
 | deepseek/seed_1 | yes | technical_documentation | 9 | 9 | 11 | 0.608 | 1 |
 | deepseek/seed_2 | yes | technical_documentation | 9 | 9 | 22 | 0.725 | 7 |
 | deepseek/seed_3 | NO | technical_documentation | 13 | 13 | 15 | 0.647 | 15 |
@@ -31,7 +48,7 @@ The technical documentation shall be drawn up in such a way as to demonstrate th
 | qwen/seed_2 | yes | high_risk_ai_technical_documentation | 13 | 12 | 3 | 0.529 | 5 |
 | qwen/seed_3 | NO | high_risk_ai_technical_documentation | 12 | 10 | 12 | 0.667 | 10 |
 
-Within-model (3 seeds): astra: J_preds 0.507, J_clauses 0.0, consensus 0.0; deepseek: J_preds 0.173, J_clauses 0.0, consensus 0.0; gemini: J_preds 0.295, J_clauses 0.0, consensus 0.0; kimi: J_preds 0.299, J_clauses 0.01, consensus 0.022; mistral: J_preds 0.412, J_clauses 0.045, consensus 0.065; opus: J_preds 0.717, J_clauses 0.128, consensus 0.333; qwen: J_preds 0.545, J_clauses 0.247, consensus 0.425
+Within-model (3 seeds): astra: J_preds 0.452, J_clauses 0.009, consensus 0.034; astra-medium: J_preds 0.284, J_clauses 0.009, consensus 0.041; deepseek: J_preds 0.173, J_clauses 0.0, consensus 0.0; gemini: J_preds 0.295, J_clauses 0.0, consensus 0.0; kimi: J_preds 0.299, J_clauses 0.01, consensus 0.022; mistral: J_preds 0.412, J_clauses 0.045, consensus 0.065; opus: J_preds 0.717, J_clauses 0.128, consensus 0.333; qwen: J_preds 0.545, J_clauses 0.247, consensus 0.425
 
 ## astra seed 1
 
@@ -353,6 +370,2133 @@ must_accept(
         purpose(conformity_assessment)
     )
 ) :-
+    notified_body(Body).
+```
+
+## astra seed 4
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_drawing_up/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_information/1,
+    required_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system/1.
+:- dynamic technical_documentation_of/2.
+:- dynamic small_or_medium_enterprise/1.
+:- dynamic provides_documentation/2.
+:- dynamic opts_for_simplified_provision/2.
+:- dynamic commission/1.
+:- dynamic notified_body/1.
+:- dynamic national_competent_authority/1.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system(System),
+    high_risk(System).
+
+required_drawing_up(before(Documentation, placing_on_market(System))) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System).
+
+required_drawing_up(before(Documentation, putting_into_service(System))) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System).
+
+required_updating(keeping_up_to_date(Documentation)) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System).
+
+required_demonstration(
+    documentation(Documentation, compliance(System, requirement(chapter(3))))
+) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System).
+
+required_information(
+    documentation(
+        Documentation,
+        recipient(Authority),
+        necessary_information(
+            assessment(compliance(System, requirement(chapter(3)))),
+            clear_and_comprehensive_form
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System),
+    national_competent_authority(Authority).
+
+required_information(
+    documentation(
+        Documentation,
+        recipient(Body),
+        necessary_information(
+            assessment(compliance(System, requirement(chapter(3)))),
+            clear_and_comprehensive_form
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System),
+    notified_body(Body).
+
+required_content(
+    documentation(Documentation, minimum(element_set(annex(iv))))
+) :-
+    required_technical_documentation(System),
+    technical_documentation_of(Documentation, System).
+
+% Small or medium enterprises include those that are start-ups.
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex(iv)))
+) :-
+    small_or_medium_enterprise(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    technical_documentation_of(Documentation, System),
+    required_technical_documentation(System).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(
+        reference(article(11, 1)),
+        targeted_at(needs(small_enterprise, microenterprise)),
+        purpose(simplified_provision(element_set(annex(iv))))
+    )
+) :-
+    commission(Commission).
+
+must_use(
+    Enterprise,
+    form(
+        reference(article(11, 1)),
+        provision(Documentation, information_required(annex(iv)))
+    )
+) :-
+    permitted_simplified_provision(
+        provision(Enterprise, Documentation, element_set(annex(iv)))
+    ),
+    opts_for_simplified_provision(
+        Enterprise,
+        provision(Documentation, information_required(annex(iv)))
+    ).
+
+must_accept(
+    Body,
+    form(reference(article(11, 1)), purpose(conformity_assessment))
+) :-
+    notified_body(Body).
+```
+
+## astra seed 5
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_drawing_up/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system/1.
+:- dynamic technical_documentation_applies/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_and_medium_sized_enterprise/1.
+:- dynamic commission/1.
+:- dynamic provides_technical_documentation/2.
+:- dynamic opts_for/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system(System),
+    high_risk(System).
+
+required_drawing_up(before(Documentation, placing_on_market(System))) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_drawing_up(before(Documentation, putting_into_service(System))) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_updating(Documentation) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_compliance_demonstration(
+    documentation(Documentation, compliance(System, requirement(chp_3)))
+) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_information_provision(
+    documentation(Documentation, recipient(Authority),
+        necessary_information(
+            clear_and_comprehensive,
+            assessment(compliance(System, requirement(chp_3))))))
+) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)),
+    national_competent_authority(Authority).
+
+required_information_provision(
+    documentation(Documentation, recipient(Body),
+        necessary_information(
+            clear_and_comprehensive,
+            assessment(compliance(System, requirement(chp_3))))))
+) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)),
+    notified_body(Body).
+
+required_minimum_content(documentation(Documentation, element_set(annex_iv))) :-
+    required_technical_documentation(System),
+    technical_documentation_applies(documentation(Documentation, System)).
+
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex_iv))
+) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    provides_technical_documentation(Enterprise, Documentation),
+    required_minimum_content(documentation(Documentation, element_set(annex_iv))).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(
+        article_11_1,
+        targeted_at(need(small_enterprise), need(microenterprise))))
+) :-
+    commission(Commission).
+
+must_use(Enterprise, form(article_11_1, Documentation)) :-
+    permitted_simplified_provision(
+        provision(Enterprise, Documentation, element_set(annex_iv))),
+    opts_for(Enterprise,
+        simplified_provision(Documentation, element_set(annex_iv))).
+
+must_accept(Body, form(article_11_1, purpose(conformity_assessment))) :-
+    notified_body(Body).
+```
+
+## astra seed 6
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_drawing_up/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_provision/1,
+    required_inclusion/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic ai_system/1.
+:- dynamic technical_documentation_applies/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_and_medium_sized_enterprise/1.
+:- dynamic commission/1.
+:- dynamic opts_for_simplified_provision/2.
+
+required_technical_documentation(System) :-
+    ai_system(System),
+    high_risk(System).
+
+required_drawing_up(
+    technical_documentation(
+        System,
+        before(placing_on_market(System)),
+        before(putting_into_service(System))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_updating(technical_documentation(System, kept_up_to_date)) :-
+    required_technical_documentation(System).
+
+required_demonstration(
+    technical_documentation(
+        System,
+        compliance_with(requirement(chapter(3)))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_provision(
+    information(
+        technical_documentation(System),
+        recipient(Authority),
+        necessary_for(assessment(compliance(System, requirement(chapter(3))))),
+        form(clear_and_comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    national_competent_authority(Authority).
+
+required_provision(
+    information(
+        technical_documentation(System),
+        recipient(Body),
+        necessary_for(assessment(compliance(System, requirement(chapter(3))))),
+        form(clear_and_comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    notified_body(Body).
+
+required_inclusion(
+    technical_documentation(System, minimum(element_set(annex(iv))))
+) :-
+    required_technical_documentation(System).
+
+permitted_simplified_provision(
+    provision(
+        Enterprise,
+        technical_documentation(System, element_set(annex(iv))),
+        simplified_manner
+    )
+) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System),
+    technical_documentation_applies(enterprise_system(Enterprise, System)).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(
+        reference(article(11, 1)),
+        targeted_at(need(small_enterprise)),
+        targeted_at(need(microenterprise))
+    )
+) :-
+    commission(Commission).
+
+must_use(
+    Enterprise,
+    form(
+        reference(article(11, 1)),
+        provision(technical_documentation(System, element_set(annex(iv))))
+    )
+) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System),
+    opts_for_simplified_provision(
+        Enterprise,
+        technical_documentation(System, information_required(annex(iv)))
+    ).
+
+must_accept(
+    Body,
+    simplified_technical_documentation_form(
+        reference(article(11, 1)),
+        purpose(conformity_assessment)
+    )
+) :-
+    notified_body(Body).
+```
+
+## astra seed 7
+
+```prolog
+:- module(technical_documentation, [
+    required_preparation/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    small_or_medium_enterprise_applies/1,
+    must_establish/2,
+    objective_meeting_need/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic technical_documentation_applies/1.
+:- dynamic high_risk_artificial_intelligence_system_applies/1.
+:- dynamic small_or_medium_enterprise/1.
+:- dynamic start_up/1.
+:- dynamic provides_documentation/2.
+:- dynamic opts_for_simplified_provision/2.
+:- dynamic notified_body/1.
+
+required_preparation(preparation(Documentation, before(placement_on_market(System)))) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_preparation(preparation(Documentation, before(putting_into_service(System)))) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_updating(Documentation) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_compliance_demonstration(
+    preparation(Documentation, demonstrating(compliance(System, requirement(chp_3))))
+) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_information_provision(
+    preparation(Documentation,
+        providing(national_competent_authority,
+            necessary_information(
+                assessment(compliance(System, requirement(chp_3))),
+                clear_and_comprehensive_form)))
+) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_information_provision(
+    preparation(Documentation,
+        providing(notified_body,
+            necessary_information(
+                assessment(compliance(System, requirement(chp_3))),
+                clear_and_comprehensive_form)))
+) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+required_minimum_content(content(Documentation, element_set(annex_iv))) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+small_or_medium_enterprise_applies(Enterprise) :-
+    small_or_medium_enterprise(Enterprise).
+
+small_or_medium_enterprise_applies(Enterprise) :-
+    start_up(Enterprise),
+    small_or_medium_enterprise(Enterprise).
+
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex_iv))
+) :-
+    small_or_medium_enterprise_applies(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    technical_documentation_applies(documentation(Documentation, System)),
+    high_risk_artificial_intelligence_system_applies(System).
+
+must_establish(commission, simplified_technical_documentation_form(article_11_1)).
+
+objective_meeting_need(
+    targeting(simplified_technical_documentation_form(article_11_1), small_enterprise)
+).
+
+objective_meeting_need(
+    targeting(simplified_technical_documentation_form(article_11_1), microenterprise)
+).
+
+must_use(Enterprise,
+    form_for(
+        simplified_technical_documentation_form(article_11_1),
+        provision(Documentation, required_information(annex_iv))))
+ :-
+    permitted_simplified_provision(
+        provision(Enterprise, Documentation, element_set(annex_iv))),
+    opts_for_simplified_provision(
+        Enterprise, provision(Documentation, required_information(annex_iv))).
+
+must_accept(Body,
+    form_for(
+        simplified_technical_documentation_form(article_11_1),
+        conformity_assessment)) :-
+    notified_body(Body).
+```
+
+## astra seed 8
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_preparation/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_information/1,
+    required_content/1,
+    permitted_simplified_submission/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic ai_system_applies/1.
+:- dynamic high_risk/1.
+:- dynamic small_and_medium_enterprise_applies/1.
+:- dynamic start_up/1.
+:- dynamic commission_applies/1.
+:- dynamic notified_body_applies/1.
+:- dynamic opts_for/2.
+
+required_technical_documentation(System) :-
+    ai_system_applies(System),
+    high_risk(System).
+
+required_preparation(
+    technical_documentation(System, before(placing_on_market(System)))
+) :-
+    required_technical_documentation(System).
+
+required_preparation(
+    technical_documentation(System, before(putting_into_service(System)))
+) :-
+    required_technical_documentation(System).
+
+required_updating(technical_documentation(System, kept_up_to_date)) :-
+    required_technical_documentation(System).
+
+required_demonstration(
+    technical_documentation(System, compliance(System, requirement(chp_3)))
+) :-
+    required_technical_documentation(System).
+
+required_information(
+    technical_documentation(
+        System,
+        information(
+            recipient(national_competent_authority),
+            necessary_for(assessing(compliance(System, requirement(chp_3)))),
+            form(clear, comprehensive)
+        )
+    )
+) :-
+    required_technical_documentation(System).
+
+required_information(
+    technical_documentation(
+        System,
+        information(
+            recipient(notified_body),
+            necessary_for(assessing(compliance(System, requirement(chp_3)))),
+            form(clear, comprehensive)
+        )
+    )
+) :-
+    required_technical_documentation(System).
+
+required_content(
+    technical_documentation(System, minimum(element_set(annex_iv)))
+) :-
+    required_technical_documentation(System).
+
+permitted_simplified_submission(
+    submission(Enterprise, technical_documentation(System), element_set(annex_iv))
+) :-
+    small_and_medium_enterprise_applies(Enterprise),
+    required_technical_documentation(System).
+
+permitted_simplified_submission(
+    submission(Enterprise, technical_documentation(System), element_set(annex_iv))
+) :-
+    small_and_medium_enterprise_applies(Enterprise),
+    start_up(Enterprise),
+    required_technical_documentation(System).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(
+        article_11_1,
+        targeted_at(needs(small_enterprise, microenterprise))
+    )
+) :-
+    commission_applies(Commission).
+
+must_use(
+    Enterprise,
+    form(
+        article_11_1,
+        simplified_submission(
+            technical_documentation(System),
+            information_required(annex_iv)
+        )
+    )
+) :-
+    small_and_medium_enterprise_applies(Enterprise),
+    required_technical_documentation(System),
+    opts_for(
+        Enterprise,
+        simplified_submission(
+            technical_documentation(System),
+            information_required(annex_iv)
+        )
+    ).
+
+must_accept(
+    NotifiedBody,
+    simplified_technical_documentation_form(
+        article_11_1,
+        purpose(conformity_assessment)
+    )
+) :-
+    notified_body_applies(NotifiedBody).
+```
+
+## astra seed 9
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_drawing_up/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_information/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2,
+    targeted/1
+]).
+
+:- dynamic high_risk/1.
+:- dynamic ai_system/1.
+:- dynamic technical_documentation_of/2.
+:- dynamic small_and_medium_sized_enterprise/1.
+:- dynamic provides_documentation/2.
+:- dynamic opts_for_simplified_provision/2.
+:- dynamic commission/1.
+:- dynamic notified_body/1.
+
+required_technical_documentation(System) :-
+    ai_system(System),
+    high_risk(System).
+
+required_drawing_up(before(technical_documentation(System), placing_on_market(System))) :-
+    ai_system(System),
+    high_risk(System).
+
+required_drawing_up(before(technical_documentation(System), putting_into_service(System))) :-
+    ai_system(System),
+    high_risk(System).
+
+required_updating(technical_documentation(System)) :-
+    ai_system(System),
+    high_risk(System).
+
+required_demonstration(documentation(Documentation, compliance(System, requirement(chp_3)))) :-
+    technical_documentation_of(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+required_information(documentation(
+    Documentation,
+    recipient(national_competent_authority),
+    necessary_information(assess(compliance(System, requirement(chp_3)))),
+    form(clear, comprehensive))) :-
+    technical_documentation_of(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+required_information(documentation(
+    Documentation,
+    recipient(notified_body),
+    necessary_information(assess(compliance(System, requirement(chp_3)))),
+    form(clear, comprehensive))) :-
+    technical_documentation_of(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+required_minimum_content(documentation(Documentation, element_set(annex_iv))) :-
+    technical_documentation_of(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+% Small and medium-sized enterprises include qualifying start-ups.
+permitted_simplified_provision(provision(
+    Enterprise, Documentation, element_set(annex_iv))) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    technical_documentation_of(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+must_establish(Commission, simplified_technical_documentation_form(article_11(1))) :-
+    commission(Commission).
+
+targeted(form(
+    simplified_technical_documentation_form(article_11(1)),
+    need(small_enterprise))).
+
+targeted(form(
+    simplified_technical_documentation_form(article_11(1)),
+    need(microenterprise))).
+
+must_use(Enterprise, form_for(
+    simplified_technical_documentation_form(article_11(1)),
+    Documentation)) :-
+    permitted_simplified_provision(provision(
+        Enterprise, Documentation, element_set(annex_iv))),
+    opts_for_simplified_provision(
+        Enterprise, information(Documentation, annex_iv)).
+
+must_accept(Body, form_for(
+    simplified_technical_documentation_form(article_11(1)),
+    conformity_assessment)) :-
+    notified_body(Body).
+```
+
+## astra seed 10
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_preparation/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    must_provide/2,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic ai_system/1.
+:- dynamic documents_system/2.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_or_medium_sized_enterprise/1.
+:- dynamic provides_documentation/2.
+:- dynamic opts_for_simplified_provision/2.
+
+required_technical_documentation(System) :-
+    ai_system(System),
+    high_risk(System).
+
+required_preparation(
+    technical_documentation(Documentation, before(placing_on_market(System)))
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System).
+
+required_preparation(
+    technical_documentation(Documentation, before(putting_into_service(System)))
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System).
+
+required_updating(Documentation) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System).
+
+required_compliance_demonstration(
+    technical_documentation(Documentation, compliance(System, requirement(chapter(3))))
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System).
+
+must_provide(
+    Documentation,
+    information(
+        Authority,
+        necessary_for(assessing(compliance(System, requirement(chapter(3))))),
+        form(clear, comprehensive)
+    )
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System),
+    national_competent_authority(Authority).
+
+must_provide(
+    Documentation,
+    information(
+        Body,
+        necessary_for(assessing(compliance(System, requirement(chapter(3))))),
+        form(clear, comprehensive)
+    )
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System),
+    notified_body(Body).
+
+required_minimum_content(
+    technical_documentation(Documentation, element_set(annex(iv)))
+) :-
+    ai_system(System),
+    high_risk(System),
+    documents_system(Documentation, System).
+
+% Small or medium-sized enterprise status includes qualifying start-ups.
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex(iv)))
+) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    documents_system(Documentation, System),
+    ai_system(System),
+    high_risk(System).
+
+must_establish(
+    commission,
+    simplified_technical_documentation_form(
+        article(11, 1),
+        targeted_at(needs(small_enterprise, microenterprise))
+    )
+).
+
+must_use(
+    Enterprise,
+    form(article(11, 1), for(Documentation))
+) :-
+    permitted_simplified_provision(
+        provision(Enterprise, Documentation, element_set(annex(iv)))
+    ),
+    opts_for_simplified_provision(
+        Enterprise,
+        information(Documentation, annex(iv))
+    ).
+
+must_accept(
+    Body,
+    form(article(11, 1), for(conformity_assessment))
+) :-
+    notified_body(Body).
+```
+
+## astra-medium seed 1
+
+```prolog
+:- module(technical_documentation, [
+    required_pre_market_documentation/1,
+    required_pre_service_documentation/1,
+    required_up_to_date_documentation/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    eligible_for_simplified_documentation/1,
+    permitted_simplified_documentation/1,
+    must_establish/2,
+    required_needs_alignment/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk_artificial_intelligence_system/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_or_medium_sized_enterprise/1.
+:- dynamic start_up/1.
+:- dynamic opts_for_simplified_documentation/2.
+
+required_pre_market_documentation(
+    drawing_up(technical_documentation(System), before(placement_on_market(System)))
+) :-
+    high_risk_artificial_intelligence_system(System).
+
+required_pre_service_documentation(
+    drawing_up(technical_documentation(System), before(putting_into_service(System)))
+) :-
+    high_risk_artificial_intelligence_system(System).
+
+required_up_to_date_documentation(technical_documentation(System)) :-
+    high_risk_artificial_intelligence_system(System).
+
+required_compliance_demonstration(
+    drawing_up(
+        technical_documentation(System),
+        demonstrate(compliance(System, requirement_set(chp_3)))
+    )
+) :-
+    high_risk_artificial_intelligence_system(System).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Authority,
+        necessary_information(assess_compliance(System, requirement_set(chp_3))),
+        form(clear, comprehensive)
+    )
+) :-
+    high_risk_artificial_intelligence_system(System),
+    national_competent_authority(Authority).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Body,
+        necessary_information(assess_compliance(System, requirement_set(chp_3))),
+        form(clear, comprehensive)
+    )
+) :-
+    high_risk_artificial_intelligence_system(System),
+    notified_body(Body).
+
+required_minimum_content(
+    content(technical_documentation(System), element_set(annex_iv))
+) :-
+    high_risk_artificial_intelligence_system(System).
+
+eligible_for_simplified_documentation(Enterprise) :-
+    small_or_medium_sized_enterprise(Enterprise).
+
+eligible_for_simplified_documentation(Enterprise) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    start_up(Enterprise).
+
+permitted_simplified_documentation(
+    provision(
+        Enterprise,
+        technical_documentation(System),
+        element_set(annex_iv),
+        simplified_manner
+    )
+) :-
+    eligible_for_simplified_documentation(Enterprise),
+    high_risk_artificial_intelligence_system(System).
+
+must_establish(
+    commission,
+    simplified_technical_documentation_form(article_11(1))
+).
+
+required_needs_alignment(
+    alignment(
+        simplified_technical_documentation_form(article_11(1)),
+        need_set(small_enterprise)
+    )
+).
+
+required_needs_alignment(
+    alignment(
+        simplified_technical_documentation_form(article_11(1)),
+        need_set(microenterprise)
+    )
+).
+
+must_use(
+    Enterprise,
+    form_for(
+        simplified_technical_documentation_form(article_11(1)),
+        provision(
+            technical_documentation(System),
+            required_information(annex_iv),
+            simplified_manner
+        )
+    )
+) :-
+    eligible_for_simplified_documentation(Enterprise),
+    high_risk_artificial_intelligence_system(System),
+    opts_for_simplified_documentation(Enterprise, technical_documentation(System)).
+
+must_accept(
+    Body,
+    form_for(
+        simplified_technical_documentation_form(article_11(1)),
+        conformity_assessment
+    )
+) :-
+    notified_body(Body).
+```
+
+## astra-medium seed 2
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    technical_documentation_applies/1,
+    required_drafting/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    required_targeting/1,
+    identifies_form/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic artificial_intelligence_system/1.
+:- dynamic high_risk/1.
+:- dynamic technical_documentation/1.
+:- dynamic documents_system/2.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_and_medium_sized_enterprise/1.
+:- dynamic start_up/1.
+:- dynamic provides_documentation/2.
+:- dynamic opts_for_simplified_provision/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system(System),
+    high_risk(System).
+
+technical_documentation_applies(documentation(Documentation, System)) :-
+    technical_documentation(Documentation),
+    documents_system(Documentation, System),
+    required_technical_documentation(System).
+
+required_drafting(drafting(Documentation, before(placing_on_market(System)))) :-
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_drafting(drafting(Documentation, before(putting_into_service(System)))) :-
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_updating(keeping_up_to_date(Documentation)) :-
+    technical_documentation_applies(documentation(Documentation, _System)).
+
+required_compliance_demonstration(
+    drafting(Documentation, demonstrates(compliance(System, requirement_set(chp_3))))
+) :-
+    technical_documentation_applies(documentation(Documentation, System)).
+
+required_information_provision(
+    provision(
+        Documentation,
+        Authority,
+        necessary_information(assessment(compliance(System, requirement_set(chp_3)))),
+        form(clear, comprehensive)
+    )
+) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    national_competent_authority(Authority).
+
+required_information_provision(
+    provision(
+        Documentation,
+        Body,
+        necessary_information(assessment(compliance(System, requirement_set(chp_3)))),
+        form(clear, comprehensive)
+    )
+) :-
+    technical_documentation_applies(documentation(Documentation, System)),
+    notified_body(Body).
+
+required_minimum_content(content(Documentation, element_set(annex_iv))) :-
+    technical_documentation_applies(documentation(Documentation, _System)).
+
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex_iv))
+) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    technical_documentation_applies(documentation(Documentation, _System)).
+
+% Start-ups that are SMEs are included in the permission.
+permitted_simplified_provision(
+    provision(Enterprise, Documentation, element_set(annex_iv))
+) :-
+    start_up(Enterprise),
+    small_and_medium_sized_enterprise(Enterprise),
+    provides_documentation(Enterprise, Documentation),
+    technical_documentation_applies(documentation(Documentation, _System)).
+
+must_establish(commission, simplified_technical_documentation_form).
+
+required_targeting(
+    targeting(simplified_technical_documentation_form, need(small_enterprise))
+).
+
+required_targeting(
+    targeting(simplified_technical_documentation_form, need(microenterprise))
+).
+
+identifies_form(article_11_1, simplified_technical_documentation_form).
+
+must_use(Enterprise, Form) :-
+    small_and_medium_sized_enterprise(Enterprise),
+    opts_for_simplified_provision(
+        Enterprise,
+        required_information(Documentation, annex_iv)
+    ),
+    technical_documentation_applies(documentation(Documentation, _System)),
+    identifies_form(article_11_1, Form).
+
+must_accept(Body, use(Form, purpose(conformity_assessment))) :-
+    notified_body(Body),
+    identifies_form(article_11_1, Form).
+```
+
+## astra-medium seed 3
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_preparation/1,
+    required_up_to_date_documentation/1,
+    required_demonstration/1,
+    required_information/1,
+    required_clarity/1,
+    required_comprehensiveness/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    objective_meet_small_enterprise_need/1,
+    objective_meet_microenterprise_need/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic artificial_intelligence_system/1.
+:- dynamic high_risk/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_or_medium_sized_enterprise/1.
+:- dynamic commission/1.
+:- dynamic opts_for_simplified_provision/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system(System),
+    high_risk(System).
+
+required_preparation(
+    preparation(technical_documentation(System), before(placing_on_market(System)))
+) :-
+    required_technical_documentation(System).
+
+required_preparation(
+    preparation(technical_documentation(System), before(putting_into_service(System)))
+) :-
+    required_technical_documentation(System).
+
+required_up_to_date_documentation(technical_documentation(System)) :-
+    required_technical_documentation(System).
+
+required_demonstration(
+    demonstration(
+        technical_documentation(System),
+        compliance(System, requirement_set(chapter(3)))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_information(
+    provision(
+        technical_documentation(System),
+        Authority,
+        necessary_information_for(
+            assessment(compliance(System, requirement_set(chapter(3))))
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    national_competent_authority(Authority).
+
+required_information(
+    provision(
+        technical_documentation(System),
+        Body,
+        necessary_information_for(
+            assessment(compliance(System, requirement_set(chapter(3))))
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    notified_body(Body).
+
+required_clarity(Provision) :-
+    required_information(Provision).
+
+required_comprehensiveness(Provision) :-
+    required_information(Provision).
+
+required_minimum_content(
+    content(technical_documentation(System), element_set(annex(4)))
+) :-
+    required_technical_documentation(System).
+
+% Small or medium-sized enterprises include start-ups that qualify as such.
+permitted_simplified_provision(
+    provision(
+        Enterprise,
+        technical_documentation(System),
+        element_set(annex(4))
+    )
+) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(article(11, 1))
+) :-
+    commission(Commission).
+
+objective_meet_small_enterprise_need(
+    simplified_technical_documentation_form(article(11, 1))
+).
+
+objective_meet_microenterprise_need(
+    simplified_technical_documentation_form(article(11, 1))
+).
+
+must_use(
+    Enterprise,
+    form_for(
+        simplified_technical_documentation_form(article(11, 1)),
+        technical_documentation(System)
+    )
+) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System),
+    opts_for_simplified_provision(
+        Enterprise,
+        information(technical_documentation(System), annex(4))
+    ).
+
+must_accept(
+    Body,
+    form_for(
+        simplified_technical_documentation_form(article(11, 1)),
+        conformity_assessment
+    )
+) :-
+    notified_body(Body).
+```
+
+## astra-medium seed 4
+
+```prolog
+:- module(technical_documentation, [
+    required_preparation/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    objective_meeting_small_and_microenterprise_need/1,
+    refers_to_form/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system_applies/1.
+:- dynamic small_and_medium_sized_enterprise_applies/1.
+:- dynamic national_competent_authority_applies/1.
+:- dynamic notified_body_applies/1.
+:- dynamic opts_for/2.
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(placing_on_market(System))
+    )
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(putting_into_service(System))
+    )
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_updating(technical_documentation(System)) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_compliance_demonstration(
+    demonstration(
+        technical_documentation(System),
+        compliance(System, requirement_set(chp_3))
+    )
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Authority,
+        necessary_information(
+            assessment(compliance(System, requirement_set(chp_3)))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System),
+    national_competent_authority_applies(Authority).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Body,
+        necessary_information(
+            assessment(compliance(System, requirement_set(chp_3)))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System),
+    notified_body_applies(Body).
+
+required_minimum_content(
+    content(technical_documentation(System), element_set(annex_iv))
+) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+% Small and medium-sized enterprise status includes qualifying start-ups.
+permitted_simplified_provision(
+    provision(
+        Enterprise,
+        annex_iv_element_set(technical_documentation(System)),
+        simplified_manner
+    )
+) :-
+    small_and_medium_sized_enterprise_applies(Enterprise),
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+must_establish(commission, simplified_technical_documentation_form).
+
+objective_meeting_small_and_microenterprise_need(
+    simplified_technical_documentation_form
+).
+
+refers_to_form(article_11_1, simplified_technical_documentation_form).
+
+must_use(
+    Enterprise,
+    form(
+        simplified_technical_documentation_form,
+        provision(
+            annex_iv_element_set(technical_documentation(System)),
+            simplified_manner
+        )
+    )
+) :-
+    permitted_simplified_provision(
+        provision(
+            Enterprise,
+            annex_iv_element_set(technical_documentation(System)),
+            simplified_manner
+        )
+    ),
+    opts_for(
+        Enterprise,
+        provision(
+            annex_iv_element_set(technical_documentation(System)),
+            simplified_manner
+        )
+    ).
+
+must_accept(
+    Body,
+    form(
+        simplified_technical_documentation_form,
+        purpose(conformity_assessment)
+    )
+) :-
+    notified_body_applies(Body).
+```
+
+## astra-medium seed 5
+
+```prolog
+:- module(technical_documentation, [
+    technical_documentation_applies/1,
+    required_technical_documentation/1,
+    required_drawing_up/1,
+    required_up_to_date/1,
+    required_compliance_demonstration/1,
+    documentation_information_applies/1,
+    required_information_provision/1,
+    required_clear_form/1,
+    required_comprehensive_form/1,
+    must_contain/2,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic artificial_intelligence_system_applies/1.
+:- dynamic high_risk/1.
+:- dynamic small_or_medium_sized_enterprise_applies/1.
+:- dynamic opts_for_provision/2.
+:- dynamic notified_body_applies/1.
+
+technical_documentation_applies(technical_documentation(System)) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_technical_documentation(System) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+required_drawing_up(
+    drawing_up(technical_documentation(System),
+               before(placing_on_market(System)))
+) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+required_drawing_up(
+    drawing_up(technical_documentation(System),
+               before(putting_into_service(System)))
+) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+required_up_to_date(Documentation) :-
+    technical_documentation_applies(Documentation).
+
+required_compliance_demonstration(
+    demonstration(technical_documentation(System),
+                  compliance(System, requirement_set(chapter(3)))))
+) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+documentation_information_applies(
+    information(technical_documentation(System),
+                recipient(national_competent_authority),
+                necessary_for(assessment(
+                    compliance(System, requirement_set(chapter(3)))))))
+) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+documentation_information_applies(
+    information(technical_documentation(System),
+                recipient(notified_body),
+                necessary_for(assessment(
+                    compliance(System, requirement_set(chapter(3)))))))
+) :-
+    technical_documentation_applies(technical_documentation(System)).
+
+required_information_provision(Information) :-
+    documentation_information_applies(Information).
+
+required_clear_form(Information) :-
+    documentation_information_applies(Information).
+
+required_comprehensive_form(Information) :-
+    documentation_information_applies(Information).
+
+must_contain(Documentation, minimum_element_set(annex(iv))) :-
+    technical_documentation_applies(Documentation).
+
+% The enterprise category includes start-ups that are small or medium-sized.
+permitted_simplified_provision(
+    provision(Enterprise,
+              annex_element_set(annex(iv), technical_documentation(System)),
+              simplified_manner)
+) :-
+    small_or_medium_sized_enterprise_applies(Enterprise),
+    technical_documentation_applies(technical_documentation(System)).
+
+must_establish(
+    commission,
+    simplified_technical_documentation_form(
+        article(11, 1),
+        targeted_at(need(small_enterprise), need(microenterprise)))
+).
+
+must_use(
+    Enterprise,
+    simplified_technical_documentation_form(article(11, 1))
+) :-
+    permitted_simplified_provision(
+        provision(Enterprise,
+                  annex_element_set(annex(iv), technical_documentation(System)),
+                  simplified_manner)),
+    opts_for_provision(
+        Enterprise,
+        provision(
+            annex_element_set(annex(iv), technical_documentation(System)),
+            simplified_manner)).
+
+must_accept(
+    Body,
+    use(simplified_technical_documentation_form(article(11, 1)),
+        purpose(conformity_assessment))
+) :-
+    notified_body_applies(Body).
+```
+
+## astra-medium seed 6
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_prior_drawing_up/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    simplified/1,
+    objective_address_enterprise_need/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic artificial_intelligence_system_applies/1.
+:- dynamic high_risk/1.
+:- dynamic national_competent_authority_applies/1.
+:- dynamic notified_body_applies/1.
+:- dynamic small_or_medium_sized_enterprise_applies/1.
+:- dynamic opts_to_provide_information/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_prior_drawing_up(
+    drawing_up(technical_documentation(System), before(placing_on_market(System)))
+) :-
+    required_technical_documentation(System).
+
+required_prior_drawing_up(
+    drawing_up(technical_documentation(System), before(putting_into_service(System)))
+) :-
+    required_technical_documentation(System).
+
+required_updating(keeping_up_to_date(technical_documentation(System))) :-
+    required_technical_documentation(System).
+
+required_compliance_demonstration(
+    demonstration(
+        technical_documentation(System),
+        compliance(System, requirement_set(chp_3))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Authority,
+        necessary_information(
+            assess_compliance(System, requirement_set(chp_3)),
+            form(clear, comprehensive)
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    national_competent_authority_applies(Authority).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Body,
+        necessary_information(
+            assess_compliance(System, requirement_set(chp_3)),
+            form(clear, comprehensive)
+        )
+    )
+) :-
+    required_technical_documentation(System),
+    notified_body_applies(Body).
+
+required_minimum_content(
+    content(technical_documentation(System), element_set(annex_iv))
+) :-
+    required_technical_documentation(System).
+
+% The enterprise condition includes start-ups that are small or medium-sized enterprises.
+permitted_simplified_provision(
+    provision(
+        Enterprise,
+        element_set(annex_iv, technical_documentation(System)),
+        simplified_manner
+    )
+) :-
+    small_or_medium_sized_enterprise_applies(Enterprise),
+    required_technical_documentation(System).
+
+must_establish(
+    commission,
+    technical_documentation_form(article(11, 1))
+).
+
+simplified(technical_documentation_form(article(11, 1))).
+
+objective_address_enterprise_need(
+    purpose(
+        technical_documentation_form(article(11, 1)),
+        need(small_enterprise)
+    )
+).
+
+objective_address_enterprise_need(
+    purpose(
+        technical_documentation_form(article(11, 1)),
+        need(microenterprise)
+    )
+).
+
+must_use(
+    Enterprise,
+    documentation_form(
+        technical_documentation_form(article(11, 1)),
+        technical_documentation(System)
+    )
+) :-
+    small_or_medium_sized_enterprise_applies(Enterprise),
+    opts_to_provide_information(
+        Enterprise,
+        provision(
+            element_set(annex_iv, technical_documentation(System)),
+            simplified_manner
+        )
+    ).
+
+must_accept(
+    Body,
+    form_for_purpose(
+        technical_documentation_form(article(11, 1)),
+        conformity_assessment
+    )
+) :-
+    notified_body_applies(Body).
+```
+
+## astra-medium seed 7
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_preparation/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_information_provision/1,
+    required_minimum_content/1,
+    small_or_medium_sized/1,
+    permitted_simplified_documentation/1,
+    must_establish/2,
+    required_targeting/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system_applies/1.
+:- dynamic small_or_medium_sized_enterprise_applies/1.
+:- dynamic small_or_medium_sized_start_up_applies/1.
+:- dynamic national_competent_authority_applies/1.
+:- dynamic notified_body_applies/1.
+:- dynamic commission_applies/1.
+:- dynamic opts_to_provide/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system_applies(System),
+    high_risk(System).
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(placing_on_market(System))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(putting_into_service(System))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_updating(technical_documentation(System)) :-
+    required_technical_documentation(System).
+
+required_demonstration(
+    demonstration(
+        technical_documentation(System),
+        compliance(System, requirements(chp_3))
+    )
+) :-
+    required_technical_documentation(System).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Authority,
+        necessary_information(
+            assessment(compliance(System, requirements(chp_3)))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    national_competent_authority_applies(Authority).
+
+required_information_provision(
+    provision(
+        technical_documentation(System),
+        Body,
+        necessary_information(
+            assessment(compliance(System, requirements(chp_3)))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    notified_body_applies(Body).
+
+required_minimum_content(
+    content(technical_documentation(System), element_set(annex_iv))
+) :-
+    required_technical_documentation(System).
+
+small_or_medium_sized(Enterprise) :-
+    small_or_medium_sized_enterprise_applies(Enterprise).
+
+small_or_medium_sized(Enterprise) :-
+    small_or_medium_sized_start_up_applies(Enterprise).
+
+permitted_simplified_documentation(
+    provision(
+        Enterprise,
+        technical_documentation(System),
+        element_set(annex_iv),
+        simplified_manner
+    )
+) :-
+    small_or_medium_sized(Enterprise),
+    required_technical_documentation(System).
+
+must_establish(
+    Commission,
+    simplified_technical_documentation_form(article(11, 1))
+) :-
+    commission_applies(Commission).
+
+required_targeting(
+    targeting(
+        simplified_technical_documentation_form(article(11, 1)),
+        needs(small_enterprise, microenterprise)
+    )
+).
+
+must_use(
+    Enterprise,
+    use(
+        simplified_technical_documentation_form(article(11, 1)),
+        provision(
+            technical_documentation(System),
+            required_information(annex_iv),
+            simplified_manner
+        )
+    )
+) :-
+    small_or_medium_sized(Enterprise),
+    required_technical_documentation(System),
+    opts_to_provide(
+        Enterprise,
+        provision(
+            technical_documentation(System),
+            required_information(annex_iv),
+            simplified_manner
+        )
+    ).
+
+must_accept(
+    Body,
+    acceptance(
+        simplified_technical_documentation_form(article(11, 1)),
+        purpose(conformity_assessment)
+    )
+) :-
+    notified_body_applies(Body).
+```
+
+## astra-medium seed 8
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_prior_drawing_up/1,
+    required_up_to_date_maintenance/1,
+    must_demonstrate/2,
+    must_provide/2,
+    must_contain/2,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    objective_meeting_need/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic artificial_intelligence_system/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_or_medium_sized_enterprise/1.
+:- dynamic opts_for/2.
+
+required_technical_documentation(System) :-
+    artificial_intelligence_system(System),
+    high_risk(System).
+
+required_prior_drawing_up(
+    drawing_up(technical_documentation(System),
+               before(placing_on_market(System)))
+) :-
+    required_technical_documentation(System).
+
+required_prior_drawing_up(
+    drawing_up(technical_documentation(System),
+               before(putting_into_service(System)))
+) :-
+    required_technical_documentation(System).
+
+required_up_to_date_maintenance(technical_documentation(System)) :-
+    required_technical_documentation(System).
+
+must_demonstrate(
+    technical_documentation(System),
+    compliance(System, requirement_set(chp_3))
+) :-
+    required_technical_documentation(System).
+
+must_provide(
+    technical_documentation(System),
+    information(
+        recipient(Authority),
+        necessary_for(assessment(compliance(System, requirement_set(chp_3)))),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    national_competent_authority(Authority).
+
+must_provide(
+    technical_documentation(System),
+    information(
+        recipient(Body),
+        necessary_for(assessment(compliance(System, requirement_set(chp_3)))),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(System),
+    notified_body(Body).
+
+must_contain(
+    technical_documentation(System),
+    minimum_content(element_set(annex_iv))
+) :-
+    required_technical_documentation(System).
+
+% The enterprise condition includes start-ups that are SMEs.
+permitted_simplified_provision(
+    provision(
+        Enterprise,
+        element_set(technical_documentation(System), annex_iv),
+        manner(simplified)
+    )
+) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System).
+
+must_establish(
+    commission,
+    simplified_technical_documentation_form(article_11_1)
+).
+
+objective_meeting_need(
+    purpose(
+        simplified_technical_documentation_form(article_11_1),
+        need(small_enterprise)
+    )
+).
+
+objective_meeting_need(
+    purpose(
+        simplified_technical_documentation_form(article_11_1),
+        need(microenterprise)
+    )
+).
+
+must_use(
+    Enterprise,
+    simplified_technical_documentation_form(article_11_1)
+) :-
+    small_or_medium_sized_enterprise(Enterprise),
+    required_technical_documentation(System),
+    opts_for(
+        Enterprise,
+        provision(
+            Enterprise,
+            element_set(technical_documentation(System), annex_iv),
+            manner(simplified)
+        )
+    ).
+
+must_accept(
+    Body,
+    use(
+        simplified_technical_documentation_form(article_11_1),
+        purpose(conformity_assessment)
+    )
+) :-
+    notified_body(Body).
+```
+
+## astra-medium seed 9
+
+```prolog
+:- module(technical_documentation, [
+    required_technical_documentation/1,
+    required_preparation/1,
+    required_updating/1,
+    required_demonstration/1,
+    required_information/1,
+    required_inclusion/1,
+    eligible_for_simplified_technical_documentation/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    objective_meet_small_and_microenterprise_need/1,
+    must_use/2,
+    must_accept/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic small_or_medium_sized_enterprise_applies/1.
+:- dynamic small_or_medium_sized_start_up_applies/1.
+:- dynamic opts_for_simplified_provision/2.
+:- dynamic notified_body_applies/1.
+
+required_technical_documentation(technical_documentation(System)) :-
+    high_risk(System).
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(placement_on_market(System))
+    )
+) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_preparation(
+    preparation(
+        technical_documentation(System),
+        before(putting_into_service(System))
+    )
+) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_updating(technical_documentation(System)) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_demonstration(
+    demonstration(
+        technical_documentation(System),
+        compliance(System, requirement_set(chapter(3)))
+    )
+) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_information(
+    information(
+        technical_documentation(System),
+        recipient(national_competent_authority),
+        necessary_for(
+            assessment(compliance(System, requirement_set(chapter(3))))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_information(
+    information(
+        technical_documentation(System),
+        recipient(notified_body),
+        necessary_for(
+            assessment(compliance(System, requirement_set(chapter(3))))
+        ),
+        form(clear, comprehensive)
+    )
+) :-
+    required_technical_documentation(technical_documentation(System)).
+
+required_inclusion(
+    inclusion(Documentation, minimum(element_set(annex(iv))))
+) :-
+    required_technical_documentation(Documentation).
+
+eligible_for_simplified_technical_documentation(Enterprise) :-
+    small_or_medium_sized_enterprise_applies(Enterprise).
+
+eligible_for_simplified_technical_documentation(Enterprise) :-
+    small_or_medium_sized_start_up_applies(Enterprise).
+
+permitted_simplified_provision(
+    provision(Enterprise, annex_iv_element_set(Documentation))
+) :-
+    eligible_for_simplified_technical_documentation(Enterprise),
+    required_technical_documentation(Documentation).
+
+must_establish(
+    commission,
+    simplified_technical_documentation_form(article(11, 1))
+).
+
+objective_meet_small_and_microenterprise_need(
+    simplified_technical_documentation_form(article(11, 1))
+).
+
+must_use(
+    Enterprise,
+    form_for(
+        simplified_technical_documentation_form(article(11, 1)),
+        provision(annex_iv_information(Documentation))
+    )
+) :-
+    eligible_for_simplified_technical_documentation(Enterprise),
+    required_technical_documentation(Documentation),
+    opts_for_simplified_provision(
+        Enterprise,
+        annex_iv_information(Documentation)
+    ).
+
+must_accept(
+    Body,
+    form_for(
+        simplified_technical_documentation_form(article(11, 1)),
+        conformity_assessment
+    )
+) :-
+    notified_body_applies(Body).
+```
+
+## astra-medium seed 10
+
+```prolog
+:- module(technical_documentation, [
+    required_preparation/1,
+    required_updating/1,
+    required_compliance_demonstration/1,
+    required_information_provision/1,
+    required_clarity/1,
+    required_comprehensiveness/1,
+    required_inclusion/1,
+    permitted_simplified_provision/1,
+    must_establish/2,
+    objective_meeting_enterprise_need/1,
+    must_use/2,
+    must_accept/2,
+    identifies_form/2
+]).
+
+:- dynamic high_risk/1.
+:- dynamic national_competent_authority/1.
+:- dynamic notified_body/1.
+:- dynamic small_or_medium_sized/1.
+:- dynamic opts_for_simplified_provision/2.
+
+required_preparation(
+    preparation(technical_documentation(System),
+                before(placing_on_market(System)))
+) :-
+    high_risk(System).
+
+required_preparation(
+    preparation(technical_documentation(System),
+                before(putting_into_service(System)))
+) :-
+    high_risk(System).
+
+required_updating(technical_documentation(System)) :-
+    high_risk(System).
+
+required_compliance_demonstration(
+    demonstration(technical_documentation(System),
+                  compliance(System, requirement_set(chapter(3)))))
+    :-
+    high_risk(System).
+
+required_information_provision(
+    provision(technical_documentation(System),
+              Authority,
+              necessary_information(
+                  assessment(compliance(System, requirement_set(chapter(3)))))))
+    :-
+    high_risk(System),
+    national_competent_authority(Authority).
+
+required_information_provision(
+    provision(technical_documentation(System),
+              Body,
+              necessary_information(
+                  assessment(compliance(System, requirement_set(chapter(3)))))))
+    :-
+    high_risk(System),
+    notified_body(Body).
+
+required_clarity(Provision) :-
+    required_information_provision(Provision).
+
+required_comprehensiveness(Provision) :-
+    required_information_provision(Provision).
+
+required_inclusion(
+    minimum_content(technical_documentation(System),
+                    element_set(annex(4))))
+    :-
+    high_risk(System).
+
+% Small or medium-sized enterprises include start-ups that are SMEs.
+permitted_simplified_provision(
+    provision(Enterprise,
+              element_set(annex(4), technical_documentation(System))))
+    :-
+    small_or_medium_sized(Enterprise),
+    high_risk(System).
+
+must_establish(commission, simplified_technical_documentation_form).
+
+objective_meeting_enterprise_need(
+    targeted_form(simplified_technical_documentation_form,
+                  small_enterprise)).
+
+objective_meeting_enterprise_need(
+    targeted_form(simplified_technical_documentation_form,
+                  microenterprise)).
+
+identifies_form(article(11, 1), simplified_technical_documentation_form).
+
+must_use(
+    Enterprise,
+    form(simplified_technical_documentation_form,
+         provision(element_set(annex(4), technical_documentation(System)))))
+    :-
+    small_or_medium_sized(Enterprise),
+    high_risk(System),
+    opts_for_simplified_provision(
+        Enterprise,
+        element_set(annex(4), technical_documentation(System))).
+
+must_accept(
+    Body,
+    form(simplified_technical_documentation_form,
+         purpose(conformity_assessment)))
+    :-
     notified_body(Body).
 ```
 

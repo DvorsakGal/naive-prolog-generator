@@ -1,11 +1,11 @@
 {
  "gpt-medium~sonnet-medium": {
   "pairs": 219,
-  "same_overall_label": 0.507,
-  "same_coverage_cell": 0.59,
-  "same_agree_cell": 0.543,
+  "same_overall_label": 0.502,
+  "same_coverage_cell": 0.589,
+  "same_agree_cell": 0.544,
   "mean_abs_coverage_diff": 0.108,
-  "mean_abs_agreement_diff": 0.461
+  "mean_abs_agreement_diff": 0.46
  },
  "gpt-medium~sonnet-low": {
   "pairs": 25,

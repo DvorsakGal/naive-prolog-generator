@@ -1,0 +1,30 @@
+{
+ "key": "bd93b2447fcc00c3e6ac41d3ee49b80d006dcf7b5aa143710ccf21b49fe826d2",
+ "kind": "within",
+ "text": "rct_135",
+ "a": "astra-medium/seed_1",
+ "b": "astra-medium/seed_3",
+ "swapped": true,
+ "judge": "openai/gpt-5.4",
+ "reasoning": "medium",
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"full\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"both encode the Commission's permission to encourage and facilitate Union-level codes of practice and their objectives, but A does not explicitly capture the 'without prejudice' preservation of the transparency obligations that B does\"\n}",
+ "coverage_a": 1.0,
+ "coverage_b": 0.5,
+ "jointly_captured": 1,
+ "agreement": 0.0,
+ "overall": "mostly_same",
+ "note": "both encode the Commission's permission to encourage and facilitate Union-level codes of practice and their objectives, but A does not explicitly capture the 'without prejudice' preservation of the transparency obligations that B does",
+ "sentences_judged": 1,
+ "judgement": [
+  {
+   "n": 1,
+   "a": "full",
+   "b": "partial",
+   "agree": "no"
+  }
+ ],
+ "judge_frame": {
+  "A": "astra-medium/seed_3",
+  "B": "astra-medium/seed_1"
+ }
+}

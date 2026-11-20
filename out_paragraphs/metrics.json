@@ -31,6 +31,33 @@
      "coverage": 0.784,
      "chars": 3590
     },
+    "astra/seed_10": {
+     "module": "technical_documentation",
+     "exports": 10,
+     "dynamic": 8,
+     "predicates": 10,
+     "inputs": 8,
+     "clauses": 12,
+     "facts": 1,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.706,
+     "chars": 3212
+    },
     "astra/seed_2": {
      "module": "technical_documentation",
      "exports": 10,
@@ -84,6 +111,438 @@
      },
      "coverage": 0.725,
      "chars": 3228
+    },
+    "astra/seed_4": {
+     "module": "technical_documentation",
+     "exports": 10,
+     "dynamic": 9,
+     "predicates": 10,
+     "inputs": 9,
+     "clauses": 12,
+     "facts": 0,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3597
+    },
+    "astra/seed_5": {
+     "module": "technical_documentation",
+     "exports": 10,
+     "dynamic": 9,
+     "predicates": 4,
+     "inputs": 3,
+     "clauses": 5,
+     "facts": 0,
+     "rules": 5,
+     "unparsed": 1,
+     "fenced": false,
+     "load": {
+      "ok": false,
+      "errors": 5,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 6
+     },
+     "coverage": 0.216,
+     "chars": 3392
+    },
+    "astra/seed_6": {
+     "module": "technical_documentation",
+     "exports": 10,
+     "dynamic": 8,
+     "predicates": 10,
+     "inputs": 8,
+     "clauses": 11,
+     "facts": 0,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3115
+    },
+    "astra/seed_7": {
+     "module": "technical_documentation",
+     "exports": 11,
+     "dynamic": 7,
+     "predicates": 11,
+     "inputs": 7,
+     "clauses": 15,
+     "facts": 3,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.686,
+     "chars": 3976
+    },
+    "astra/seed_8": {
+     "module": "technical_documentation",
+     "exports": 10,
+     "dynamic": 7,
+     "predicates": 10,
+     "inputs": 7,
+     "clauses": 13,
+     "facts": 0,
+     "rules": 13,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3305
+    },
+    "astra/seed_9": {
+     "module": "technical_documentation",
+     "exports": 11,
+     "dynamic": 8,
+     "predicates": 11,
+     "inputs": 8,
+     "clauses": 14,
+     "facts": 2,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.706,
+     "chars": 3229
+    },
+    "astra-medium/seed_1": {
+     "module": "technical_documentation",
+     "exports": 12,
+     "dynamic": 6,
+     "predicates": 12,
+     "inputs": 6,
+     "clauses": 15,
+     "facts": 3,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.725,
+     "chars": 3747
+    },
+    "astra-medium/seed_10": {
+     "module": "technical_documentation",
+     "exports": 13,
+     "dynamic": 5,
+     "predicates": 13,
+     "inputs": 5,
+     "clauses": 16,
+     "facts": 4,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.647,
+     "chars": 3215
+    },
+    "astra-medium/seed_2": {
+     "module": "technical_documentation",
+     "exports": 13,
+     "dynamic": 10,
+     "predicates": 13,
+     "inputs": 10,
+     "clauses": 17,
+     "facts": 4,
+     "rules": 13,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.725,
+     "chars": 4018
+    },
+    "astra-medium/seed_3": {
+     "module": "technical_documentation",
+     "exports": 14,
+     "dynamic": 7,
+     "predicates": 14,
+     "inputs": 7,
+     "clauses": 16,
+     "facts": 2,
+     "rules": 14,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.647,
+     "chars": 3583
+    },
+    "astra-medium/seed_4": {
+     "module": "technical_documentation",
+     "exports": 11,
+     "dynamic": 6,
+     "predicates": 11,
+     "inputs": 6,
+     "clauses": 13,
+     "facts": 3,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.686,
+     "chars": 3702
+    },
+    "astra-medium/seed_5": {
+     "module": "technical_documentation",
+     "exports": 14,
+     "dynamic": 5,
+     "predicates": 4,
+     "inputs": 2,
+     "clauses": 5,
+     "facts": 0,
+     "rules": 5,
+     "unparsed": 1,
+     "fenced": false,
+     "load": {
+      "ok": false,
+      "errors": 5,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 10
+     },
+     "coverage": 0.176,
+     "chars": 3862
+    },
+    "astra-medium/seed_6": {
+     "module": "technical_documentation",
+     "exports": 12,
+     "dynamic": 6,
+     "predicates": 12,
+     "inputs": 6,
+     "clauses": 15,
+     "facts": 4,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3647
+    },
+    "astra-medium/seed_7": {
+     "module": "technical_documentation",
+     "exports": 12,
+     "dynamic": 8,
+     "predicates": 12,
+     "inputs": 8,
+     "clauses": 15,
+     "facts": 1,
+     "rules": 14,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3814
+    },
+    "astra-medium/seed_8": {
+     "module": "technical_documentation",
+     "exports": 11,
+     "dynamic": 6,
+     "predicates": 11,
+     "inputs": 6,
+     "clauses": 14,
+     "facts": 3,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3293
+    },
+    "astra-medium/seed_9": {
+     "module": "technical_documentation",
+     "exports": 12,
+     "dynamic": 5,
+     "predicates": 12,
+     "inputs": 5,
+     "clauses": 15,
+     "facts": 2,
+     "rules": 13,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.627,
+     "chars": 3563
     },
     "deepseek/seed_1": {
      "module": "technical_documentation",
@@ -574,9 +1033,14 @@
    },
    "within": {
     "astra": {
-     "jaccard_preds": 0.507,
-     "jaccard_clauses": 0.0,
-     "consensus": 0.0
+     "jaccard_preds": 0.452,
+     "jaccard_clauses": 0.009,
+     "consensus": 0.034
+    },
+    "astra-medium": {
+     "jaccard_preds": 0.284,
+     "jaccard_clauses": 0.009,
+     "consensus": 0.041
     },
     "deepseek": {
      "jaccard_preds": 0.173,
@@ -610,18 +1074,23 @@
     }
    },
    "across": {
+    "astra~astra-medium": {
+     "jaccard_preds": 0.323,
+     "jaccard_clauses": 0.005,
+     "consensus": 0.02
+    },
     "astra~deepseek": {
-     "jaccard_preds": 0.034,
+     "jaccard_preds": 0.03,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~gemini": {
-     "jaccard_preds": 0.197,
+     "jaccard_preds": 0.195,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~kimi": {
-     "jaccard_preds": 0.074,
+     "jaccard_preds": 0.072,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -631,12 +1100,42 @@
      "consensus": 0.0
     },
     "astra~opus": {
-     "jaccard_preds": 0.193,
+     "jaccard_preds": 0.191,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~qwen": {
      "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~deepseek": {
+     "jaccard_preds": 0.031,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~gemini": {
+     "jaccard_preds": 0.177,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.003
+    },
+    "astra-medium~kimi": {
+     "jaccard_preds": 0.071,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.002
+    },
+    "astra-medium~mistral": {
+     "jaccard_preds": 0.003,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~opus": {
+     "jaccard_preds": 0.179,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~qwen": {
+     "jaccard_preds": 0.009,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -748,6 +1247,33 @@
      "coverage": 0.774,
      "chars": 4681
     },
+    "astra/seed_10": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 15,
+     "predicates": 13,
+     "inputs": 15,
+     "clauses": 38,
+     "facts": 18,
+     "rules": 20,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.774,
+     "chars": 5032
+    },
     "astra/seed_2": {
      "module": "restricted_registration",
      "exports": 13,
@@ -801,6 +1327,438 @@
      },
      "coverage": 0.71,
      "chars": 4440
+    },
+    "astra/seed_4": {
+     "module": "restricted_registration",
+     "exports": 14,
+     "dynamic": 14,
+     "predicates": 14,
+     "inputs": 14,
+     "clauses": 39,
+     "facts": 28,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 4879
+    },
+    "astra/seed_5": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 11,
+     "predicates": 13,
+     "inputs": 11,
+     "clauses": 38,
+     "facts": 28,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 4664
+    },
+    "astra/seed_6": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 12,
+     "predicates": 13,
+     "inputs": 12,
+     "clauses": 38,
+     "facts": 30,
+     "rules": 8,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.71,
+     "chars": 4545
+    },
+    "astra/seed_7": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 13,
+     "predicates": 13,
+     "inputs": 13,
+     "clauses": 41,
+     "facts": 33,
+     "rules": 8,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.774,
+     "chars": 4797
+    },
+    "astra/seed_8": {
+     "module": "restricted_registration",
+     "exports": 14,
+     "dynamic": 12,
+     "predicates": 14,
+     "inputs": 12,
+     "clauses": 39,
+     "facts": 20,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.71,
+     "chars": 5011
+    },
+    "astra/seed_9": {
+     "module": "restricted_registration",
+     "exports": 14,
+     "dynamic": 14,
+     "predicates": 14,
+     "inputs": 14,
+     "clauses": 39,
+     "facts": 30,
+     "rules": 9,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.774,
+     "chars": 5047
+    },
+    "astra-medium/seed_1": {
+     "module": "restricted_registration",
+     "exports": 12,
+     "dynamic": 13,
+     "predicates": 12,
+     "inputs": 13,
+     "clauses": 37,
+     "facts": 28,
+     "rules": 9,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 4709
+    },
+    "astra-medium/seed_10": {
+     "module": "restricted_registration",
+     "exports": 15,
+     "dynamic": 13,
+     "predicates": 15,
+     "inputs": 13,
+     "clauses": 40,
+     "facts": 30,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.71,
+     "chars": 5366
+    },
+    "astra-medium/seed_2": {
+     "module": "restricted_registration",
+     "exports": 15,
+     "dynamic": 15,
+     "predicates": 15,
+     "inputs": 15,
+     "clauses": 40,
+     "facts": 20,
+     "rules": 20,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 5456
+    },
+    "astra-medium/seed_3": {
+     "module": "restricted_registration",
+     "exports": 14,
+     "dynamic": 12,
+     "predicates": 14,
+     "inputs": 12,
+     "clauses": 40,
+     "facts": 28,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.774,
+     "chars": 5318
+    },
+    "astra-medium/seed_4": {
+     "module": "restricted_registration",
+     "exports": 15,
+     "dynamic": 11,
+     "predicates": 15,
+     "inputs": 11,
+     "clauses": 40,
+     "facts": 30,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 4947
+    },
+    "astra-medium/seed_5": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 12,
+     "predicates": 13,
+     "inputs": 12,
+     "clauses": 38,
+     "facts": 28,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 5307
+    },
+    "astra-medium/seed_6": {
+     "module": "restricted_registration",
+     "exports": 13,
+     "dynamic": 13,
+     "predicates": 13,
+     "inputs": 13,
+     "clauses": 38,
+     "facts": 28,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.774,
+     "chars": 4644
+    },
+    "astra-medium/seed_7": {
+     "module": "restricted_registration",
+     "exports": 15,
+     "dynamic": 13,
+     "predicates": 15,
+     "inputs": 13,
+     "clauses": 40,
+     "facts": 18,
+     "rules": 22,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.71,
+     "chars": 4979
+    },
+    "astra-medium/seed_8": {
+     "module": "restricted_registration",
+     "exports": 15,
+     "dynamic": 14,
+     "predicates": 15,
+     "inputs": 14,
+     "clauses": 40,
+     "facts": 28,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.742,
+     "chars": 4754
+    },
+    "astra-medium/seed_9": {
+     "module": "restricted_registration",
+     "exports": 12,
+     "dynamic": 14,
+     "predicates": 12,
+     "inputs": 14,
+     "clauses": 37,
+     "facts": 28,
+     "rules": 9,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.71,
+     "chars": 4897
     },
     "deepseek/seed_1": {
      "module": "high_risk_ai_registration",
@@ -1291,9 +2249,14 @@
    },
    "within": {
     "astra": {
-     "jaccard_preds": 0.456,
-     "jaccard_clauses": 0.018,
-     "consensus": 0.075
+     "jaccard_preds": 0.384,
+     "jaccard_clauses": 0.06,
+     "consensus": 0.125
+    },
+    "astra-medium": {
+     "jaccard_preds": 0.296,
+     "jaccard_clauses": 0.011,
+     "consensus": 0.101
     },
     "deepseek": {
      "jaccard_preds": 0.156,
@@ -1327,8 +2290,13 @@
     }
    },
    "across": {
+    "astra~astra-medium": {
+     "jaccard_preds": 0.241,
+     "jaccard_clauses": 0.022,
+     "consensus": 0.067
+    },
     "astra~deepseek": {
-     "jaccard_preds": 0.0,
+     "jaccard_preds": 0.001,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -1338,9 +2306,9 @@
      "consensus": 0.0
     },
     "astra~kimi": {
-     "jaccard_preds": 0.0,
+     "jaccard_preds": 0.001,
      "jaccard_clauses": 0.0,
-     "consensus": 0.007
+     "consensus": 0.006
     },
     "astra~mistral": {
      "jaccard_preds": 0.0,
@@ -1348,12 +2316,42 @@
      "consensus": 0.0
     },
     "astra~opus": {
-     "jaccard_preds": 0.061,
+     "jaccard_preds": 0.059,
      "jaccard_clauses": 0.0,
-     "consensus": 0.01
+     "consensus": 0.003
     },
     "astra~qwen": {
      "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~deepseek": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~gemini": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~kimi": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~mistral": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~opus": {
+     "jaccard_preds": 0.038,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.003
+    },
+    "astra-medium~qwen": {
+     "jaccard_preds": 0.001,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -1465,6 +2463,33 @@
      "coverage": 0.905,
      "chars": 4690
     },
+    "astra/seed_10": {
+     "module": "synthetic_content_marking",
+     "exports": 7,
+     "dynamic": 10,
+     "predicates": 7,
+     "inputs": 10,
+     "clauses": 19,
+     "facts": 8,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.905,
+     "chars": 3314
+    },
     "astra/seed_2": {
      "module": "synthetic_content_marking",
      "exports": 9,
@@ -1518,6 +2543,438 @@
      },
      "coverage": 0.905,
      "chars": 4878
+    },
+    "astra/seed_4": {
+     "module": "synthetic_content_marking",
+     "exports": 8,
+     "dynamic": 18,
+     "predicates": 8,
+     "inputs": 18,
+     "clauses": 26,
+     "facts": 4,
+     "rules": 22,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.889,
+     "chars": 4980
+    },
+    "astra/seed_5": {
+     "module": "synthetic_content_marking",
+     "exports": 8,
+     "dynamic": 18,
+     "predicates": 8,
+     "inputs": 18,
+     "clauses": 24,
+     "facts": 0,
+     "rules": 24,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.873,
+     "chars": 5169
+    },
+    "astra/seed_6": {
+     "module": "synthetic_content_marking",
+     "exports": 9,
+     "dynamic": 12,
+     "predicates": 9,
+     "inputs": 12,
+     "clauses": 26,
+     "facts": 12,
+     "rules": 14,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.857,
+     "chars": 4332
+    },
+    "astra/seed_7": {
+     "module": "synthetic_content_marking",
+     "exports": 9,
+     "dynamic": 12,
+     "predicates": 9,
+     "inputs": 12,
+     "clauses": 26,
+     "facts": 12,
+     "rules": 14,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.921,
+     "chars": 3961
+    },
+    "astra/seed_8": {
+     "module": "synthetic_content_transparency",
+     "exports": 9,
+     "dynamic": 19,
+     "predicates": 9,
+     "inputs": 19,
+     "clauses": 27,
+     "facts": 8,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.905,
+     "chars": 5143
+    },
+    "astra/seed_9": {
+     "module": "synthetic_content_marking",
+     "exports": 7,
+     "dynamic": 11,
+     "predicates": 7,
+     "inputs": 11,
+     "clauses": 25,
+     "facts": 0,
+     "rules": 25,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.857,
+     "chars": 5255
+    },
+    "astra-medium/seed_1": {
+     "module": "synthetic_content_transparency",
+     "exports": 10,
+     "dynamic": 13,
+     "predicates": 10,
+     "inputs": 13,
+     "clauses": 27,
+     "facts": 16,
+     "rules": 11,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.921,
+     "chars": 4946
+    },
+    "astra-medium/seed_10": {
+     "module": "synthetic_content_transparency",
+     "exports": 9,
+     "dynamic": 18,
+     "predicates": 9,
+     "inputs": 18,
+     "clauses": 28,
+     "facts": 4,
+     "rules": 24,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.889,
+     "chars": 6121
+    },
+    "astra-medium/seed_2": {
+     "module": "synthetic_content_transparency",
+     "exports": 10,
+     "dynamic": 17,
+     "predicates": 10,
+     "inputs": 17,
+     "clauses": 26,
+     "facts": 8,
+     "rules": 18,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.873,
+     "chars": 4850
+    },
+    "astra-medium/seed_3": {
+     "module": "synthetic_content_marking",
+     "exports": 8,
+     "dynamic": 14,
+     "predicates": 8,
+     "inputs": 14,
+     "clauses": 26,
+     "facts": 4,
+     "rules": 22,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.873,
+     "chars": 4809
+    },
+    "astra-medium/seed_4": {
+     "module": "synthetic_content_transparency",
+     "exports": 6,
+     "dynamic": 10,
+     "predicates": 6,
+     "inputs": 10,
+     "clauses": 23,
+     "facts": 8,
+     "rules": 15,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.873,
+     "chars": 4520
+    },
+    "astra-medium/seed_5": {
+     "module": "synthetic_content_transparency",
+     "exports": 11,
+     "dynamic": 8,
+     "predicates": 11,
+     "inputs": 8,
+     "clauses": 29,
+     "facts": 13,
+     "rules": 16,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.905,
+     "chars": 5342
+    },
+    "astra-medium/seed_6": {
+     "module": "synthetic_content_marking",
+     "exports": 9,
+     "dynamic": 12,
+     "predicates": 9,
+     "inputs": 12,
+     "clauses": 26,
+     "facts": 4,
+     "rules": 22,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.857,
+     "chars": 5047
+    },
+    "astra-medium/seed_7": {
+     "module": "synthetic_content_transparency",
+     "exports": 10,
+     "dynamic": 13,
+     "predicates": 10,
+     "inputs": 13,
+     "clauses": 28,
+     "facts": 12,
+     "rules": 16,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.873,
+     "chars": 5270
+    },
+    "astra-medium/seed_8": {
+     "module": "synthetic_content_marking",
+     "exports": 8,
+     "dynamic": 14,
+     "predicates": 8,
+     "inputs": 14,
+     "clauses": 26,
+     "facts": 0,
+     "rules": 26,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.857,
+     "chars": 5414
+    },
+    "astra-medium/seed_9": {
+     "module": "synthetic_content_marking",
+     "exports": 9,
+     "dynamic": 14,
+     "predicates": 9,
+     "inputs": 14,
+     "clauses": 27,
+     "facts": 4,
+     "rules": 23,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.921,
+     "chars": 6051
     },
     "deepseek/seed_1": {
      "module": "ai_output_marking",
@@ -2008,9 +3465,14 @@
    },
    "within": {
     "astra": {
-     "jaccard_preds": 0.2,
-     "jaccard_clauses": 0.055,
-     "consensus": 0.166
+     "jaccard_preds": 0.19,
+     "jaccard_clauses": 0.042,
+     "consensus": 0.096
+    },
+    "astra-medium": {
+     "jaccard_preds": 0.191,
+     "jaccard_clauses": 0.024,
+     "consensus": 0.066
     },
     "deepseek": {
      "jaccard_preds": 0.095,
@@ -2044,33 +3506,68 @@
     }
    },
    "across": {
+    "astra~astra-medium": {
+     "jaccard_preds": 0.177,
+     "jaccard_clauses": 0.027,
+     "consensus": 0.066
+    },
     "astra~deepseek": {
-     "jaccard_preds": 0.007,
+     "jaccard_preds": 0.012,
      "jaccard_clauses": 0.0,
-     "consensus": 0.013
+     "consensus": 0.019
     },
     "astra~gemini": {
-     "jaccard_preds": 0.124,
+     "jaccard_preds": 0.099,
      "jaccard_clauses": 0.0,
-     "consensus": 0.018
+     "consensus": 0.027
     },
     "astra~kimi": {
      "jaccard_preds": 0.0,
      "jaccard_clauses": 0.0,
-     "consensus": 0.015
+     "consensus": 0.03
     },
     "astra~mistral": {
      "jaccard_preds": 0.0,
      "jaccard_clauses": 0.0,
-     "consensus": 0.025
+     "consensus": 0.036
     },
     "astra~opus": {
-     "jaccard_preds": 0.104,
+     "jaccard_preds": 0.118,
      "jaccard_clauses": 0.0,
-     "consensus": 0.048
+     "consensus": 0.071
     },
     "astra~qwen": {
-     "jaccard_preds": 0.023,
+     "jaccard_preds": 0.013,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~deepseek": {
+     "jaccard_preds": 0.006,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.019
+    },
+    "astra-medium~gemini": {
+     "jaccard_preds": 0.082,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.026
+    },
+    "astra-medium~kimi": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.026
+    },
+    "astra-medium~mistral": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.035
+    },
+    "astra-medium~opus": {
+     "jaccard_preds": 0.088,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.069
+    },
+    "astra-medium~qwen": {
+     "jaccard_preds": 0.007,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -2182,6 +3679,33 @@
      "coverage": 0.787,
      "chars": 2664
     },
+    "astra/seed_10": {
+     "module": "content_transparency",
+     "exports": 11,
+     "dynamic": 5,
+     "predicates": 11,
+     "inputs": 5,
+     "clauses": 16,
+     "facts": 3,
+     "rules": 13,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.766,
+     "chars": 2726
+    },
     "astra/seed_2": {
      "module": "content_code_of_practice",
      "exports": 9,
@@ -2235,6 +3759,438 @@
      },
      "coverage": 0.787,
      "chars": 3298
+    },
+    "astra/seed_4": {
+     "module": "content_transparency",
+     "exports": 10,
+     "dynamic": 0,
+     "predicates": 10,
+     "inputs": 0,
+     "clauses": 18,
+     "facts": 18,
+     "rules": 0,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.872,
+     "chars": 2894
+    },
+    "astra/seed_5": {
+     "module": "content_transparency",
+     "exports": 12,
+     "dynamic": 14,
+     "predicates": 12,
+     "inputs": 14,
+     "clauses": 17,
+     "facts": 0,
+     "rules": 17,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.851,
+     "chars": 3360
+    },
+    "astra/seed_6": {
+     "module": "artificial_content_code_of_practice",
+     "exports": 11,
+     "dynamic": 7,
+     "predicates": 11,
+     "inputs": 7,
+     "clauses": 16,
+     "facts": 6,
+     "rules": 10,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 2606
+    },
+    "astra/seed_7": {
+     "module": "content_transparency",
+     "exports": 10,
+     "dynamic": 6,
+     "predicates": 10,
+     "inputs": 6,
+     "clauses": 15,
+     "facts": 9,
+     "rules": 6,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.809,
+     "chars": 2476
+    },
+    "astra/seed_8": {
+     "module": "content_transparency",
+     "exports": 12,
+     "dynamic": 7,
+     "predicates": 12,
+     "inputs": 7,
+     "clauses": 17,
+     "facts": 5,
+     "rules": 12,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.787,
+     "chars": 2328
+    },
+    "astra/seed_9": {
+     "module": "content_transparency",
+     "exports": 11,
+     "dynamic": 6,
+     "predicates": 11,
+     "inputs": 6,
+     "clauses": 17,
+     "facts": 9,
+     "rules": 8,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.766,
+     "chars": 2969
+    },
+    "astra-medium/seed_1": {
+     "module": "content_transparency_code",
+     "exports": 6,
+     "dynamic": 1,
+     "predicates": 6,
+     "inputs": 1,
+     "clauses": 15,
+     "facts": 14,
+     "rules": 1,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.83,
+     "chars": 2190
+    },
+    "astra-medium/seed_10": {
+     "module": "content_transparency_code",
+     "exports": 9,
+     "dynamic": 1,
+     "predicates": 9,
+     "inputs": 1,
+     "clauses": 15,
+     "facts": 14,
+     "rules": 1,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.809,
+     "chars": 3075
+    },
+    "astra-medium/seed_2": {
+     "module": "content_transparency_code",
+     "exports": 10,
+     "dynamic": 7,
+     "predicates": 10,
+     "inputs": 7,
+     "clauses": 16,
+     "facts": 7,
+     "rules": 9,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.766,
+     "chars": 2878
+    },
+    "astra-medium/seed_3": {
+     "module": "content_transparency_code",
+     "exports": 13,
+     "dynamic": 5,
+     "predicates": 13,
+     "inputs": 5,
+     "clauses": 20,
+     "facts": 15,
+     "rules": 5,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 3089
+    },
+    "astra-medium/seed_4": {
+     "module": "content_transparency_code",
+     "exports": 5,
+     "dynamic": 2,
+     "predicates": 5,
+     "inputs": 2,
+     "clauses": 13,
+     "facts": 10,
+     "rules": 3,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.809,
+     "chars": 2258
+    },
+    "astra-medium/seed_5": {
+     "module": "content_code_of_practice",
+     "exports": 14,
+     "dynamic": 2,
+     "predicates": 14,
+     "inputs": 2,
+     "clauses": 18,
+     "facts": 1,
+     "rules": 17,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.787,
+     "chars": 2791
+    },
+    "astra-medium/seed_6": {
+     "module": "content_transparency_code",
+     "exports": 10,
+     "dynamic": 3,
+     "predicates": 10,
+     "inputs": 3,
+     "clauses": 15,
+     "facts": 9,
+     "rules": 6,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.787,
+     "chars": 3119
+    },
+    "astra-medium/seed_7": {
+     "module": "content_transparency_code",
+     "exports": 13,
+     "dynamic": 10,
+     "predicates": 13,
+     "inputs": 10,
+     "clauses": 17,
+     "facts": 2,
+     "rules": 15,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.745,
+     "chars": 2990
+    },
+    "astra-medium/seed_8": {
+     "module": "content_transparency_code",
+     "exports": 9,
+     "dynamic": 1,
+     "predicates": 9,
+     "inputs": 1,
+     "clauses": 11,
+     "facts": 3,
+     "rules": 8,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.83,
+     "chars": 2475
+    },
+    "astra-medium/seed_9": {
+     "module": "artificial_content_code_of_practice",
+     "exports": 8,
+     "dynamic": 0,
+     "predicates": 8,
+     "inputs": 0,
+     "clauses": 18,
+     "facts": 11,
+     "rules": 7,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.851,
+     "chars": 3126
     },
     "deepseek/seed_1": {
      "module": "codes_of_practice",
@@ -2725,9 +4681,14 @@
    },
    "within": {
     "astra": {
-     "jaccard_preds": 0.442,
-     "jaccard_clauses": 0.077,
-     "consensus": 0.215
+     "jaccard_preds": 0.477,
+     "jaccard_clauses": 0.031,
+     "consensus": 0.094
+    },
+    "astra-medium": {
+     "jaccard_preds": 0.36,
+     "jaccard_clauses": 0.029,
+     "consensus": 0.109
     },
     "deepseek": {
      "jaccard_preds": 0.162,
@@ -2761,8 +4722,13 @@
     }
    },
    "across": {
+    "astra~astra-medium": {
+     "jaccard_preds": 0.369,
+     "jaccard_clauses": 0.028,
+     "consensus": 0.104
+    },
     "astra~deepseek": {
-     "jaccard_preds": 0.059,
+     "jaccard_preds": 0.053,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -2772,7 +4738,7 @@
      "consensus": 0.0
     },
     "astra~kimi": {
-     "jaccard_preds": 0.034,
+     "jaccard_preds": 0.033,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -2782,14 +4748,44 @@
      "consensus": 0.0
     },
     "astra~opus": {
-     "jaccard_preds": 0.275,
-     "jaccard_clauses": 0.09,
-     "consensus": 0.241
+     "jaccard_preds": 0.262,
+     "jaccard_clauses": 0.035,
+     "consensus": 0.114
     },
     "astra~qwen": {
-     "jaccard_preds": 0.005,
+     "jaccard_preds": 0.007,
      "jaccard_clauses": 0.0,
-     "consensus": 0.041
+     "consensus": 0.018
+    },
+    "astra-medium~deepseek": {
+     "jaccard_preds": 0.037,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~gemini": {
+     "jaccard_preds": 0.028,
+     "jaccard_clauses": 0.002,
+     "consensus": 0.013
+    },
+    "astra-medium~kimi": {
+     "jaccard_preds": 0.033,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~mistral": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~opus": {
+     "jaccard_preds": 0.196,
+     "jaccard_clauses": 0.02,
+     "consensus": 0.086
+    },
+    "astra-medium~qwen": {
+     "jaccard_preds": 0.001,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.018
     },
     "deepseek~gemini": {
      "jaccard_preds": 0.033,
@@ -2899,6 +4895,33 @@
      "coverage": 0.744,
      "chars": 4308
     },
+    "astra/seed_10": {
+     "module": "remote_biometric_identification_use",
+     "exports": 10,
+     "dynamic": 14,
+     "predicates": 10,
+     "inputs": 14,
+     "clauses": 19,
+     "facts": 0,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.732,
+     "chars": 3962
+    },
     "astra/seed_2": {
      "module": "real_time_remote_biometric_identification",
      "exports": 9,
@@ -2952,6 +4975,438 @@
      },
      "coverage": 0.732,
      "chars": 3696
+    },
+    "astra/seed_4": {
+     "module": "remote_biometric_identification_use",
+     "exports": 15,
+     "dynamic": 23,
+     "predicates": 15,
+     "inputs": 23,
+     "clauses": 28,
+     "facts": 0,
+     "rules": 28,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.744,
+     "chars": 6072
+    },
+    "astra/seed_5": {
+     "module": "real_time_remote_biometric_identification",
+     "exports": 10,
+     "dynamic": 13,
+     "predicates": 10,
+     "inputs": 13,
+     "clauses": 18,
+     "facts": 0,
+     "rules": 18,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.707,
+     "chars": 4127
+    },
+    "astra/seed_6": {
+     "module": "remote_biometric_identification_use",
+     "exports": 11,
+     "dynamic": 22,
+     "predicates": 11,
+     "inputs": 22,
+     "clauses": 19,
+     "facts": 0,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.732,
+     "chars": 4597
+    },
+    "astra/seed_7": {
+     "module": "real_time_remote_biometric_identification",
+     "exports": 14,
+     "dynamic": 20,
+     "predicates": 15,
+     "inputs": 20,
+     "clauses": 23,
+     "facts": 0,
+     "rules": 23,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 1,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 1
+     },
+     "coverage": 0.707,
+     "chars": 5518
+    },
+    "astra/seed_8": {
+     "module": "real_time_remote_biometric_identification",
+     "exports": 10,
+     "dynamic": 13,
+     "predicates": 10,
+     "inputs": 13,
+     "clauses": 19,
+     "facts": 0,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.756,
+     "chars": 4692
+    },
+    "astra/seed_9": {
+     "module": "real_time_remote_biometric_identification",
+     "exports": 11,
+     "dynamic": 15,
+     "predicates": 11,
+     "inputs": 15,
+     "clauses": 19,
+     "facts": 0,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.732,
+     "chars": 3747
+    },
+    "astra-medium/seed_1": {
+     "module": "real_time_identification_safeguard",
+     "exports": 11,
+     "dynamic": 14,
+     "predicates": 11,
+     "inputs": 14,
+     "clauses": 19,
+     "facts": 0,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.756,
+     "chars": 4062
+    },
+    "astra-medium/seed_10": {
+     "module": "responsible_biometric_identification",
+     "exports": 16,
+     "dynamic": 12,
+     "predicates": 16,
+     "inputs": 12,
+     "clauses": 25,
+     "facts": 0,
+     "rules": 25,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.768,
+     "chars": 5464
+    },
+    "astra-medium/seed_2": {
+     "module": "real_time_biometric_use",
+     "exports": 15,
+     "dynamic": 25,
+     "predicates": 15,
+     "inputs": 25,
+     "clauses": 23,
+     "facts": 0,
+     "rules": 23,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.756,
+     "chars": 5871
+    },
+    "astra-medium/seed_3": {
+     "module": "real_time_biometric_use",
+     "exports": 12,
+     "dynamic": 14,
+     "predicates": 12,
+     "inputs": 14,
+     "clauses": 22,
+     "facts": 2,
+     "rules": 20,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.72,
+     "chars": 4532
+    },
+    "astra-medium/seed_4": {
+     "module": "remote_biometric_identification_use",
+     "exports": 14,
+     "dynamic": 17,
+     "predicates": 9,
+     "inputs": 11,
+     "clauses": 13,
+     "facts": 0,
+     "rules": 13,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": false,
+      "errors": 6,
+      "warnings": 1,
+      "singletons": 1
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 1,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 7
+     },
+     "coverage": 0.463,
+     "chars": 2839
+    },
+    "astra-medium/seed_5": {
+     "module": "remote_biometric_identification_use",
+     "exports": 13,
+     "dynamic": 13,
+     "predicates": 13,
+     "inputs": 13,
+     "clauses": 22,
+     "facts": 0,
+     "rules": 22,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.756,
+     "chars": 5025
+    },
+    "astra-medium/seed_6": {
+     "module": "real_time_remote_biometric_identification",
+     "exports": 12,
+     "dynamic": 13,
+     "predicates": 12,
+     "inputs": 13,
+     "clauses": 21,
+     "facts": 1,
+     "rules": 20,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.744,
+     "chars": 4219
+    },
+    "astra-medium/seed_7": {
+     "module": "remote_biometric_identification_use",
+     "exports": 11,
+     "dynamic": 12,
+     "predicates": 11,
+     "inputs": 12,
+     "clauses": 21,
+     "facts": 0,
+     "rules": 21,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.756,
+     "chars": 4350
+    },
+    "astra-medium/seed_8": {
+     "module": "remote_biometric_identification_use",
+     "exports": 11,
+     "dynamic": 14,
+     "predicates": 11,
+     "inputs": 14,
+     "clauses": 17,
+     "facts": 0,
+     "rules": 17,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.744,
+     "chars": 4168
+    },
+    "astra-medium/seed_9": {
+     "module": "remote_biometric_identification_use",
+     "exports": 12,
+     "dynamic": 13,
+     "predicates": 12,
+     "inputs": 13,
+     "clauses": 21,
+     "facts": 2,
+     "rules": 19,
+     "unparsed": 0,
+     "fenced": false,
+     "load": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 2,
+      "singletons": 0
+     },
+     "standards": {
+      "number_in_name": 0,
+      "modality_arity": 0,
+      "uppercase_or_digit_start": 0,
+      "american_spelling": 0,
+      "export_mismatch": 0
+     },
+     "coverage": 0.732,
+     "chars": 4964
     },
     "deepseek/seed_1": {
      "module": "real_time_biometric_identification",
@@ -3442,9 +5897,14 @@
    },
    "within": {
     "astra": {
-     "jaccard_preds": 0.226,
-     "jaccard_clauses": 0.0,
-     "consensus": 0.0
+     "jaccard_preds": 0.337,
+     "jaccard_clauses": 0.006,
+     "consensus": 0.053
+    },
+    "astra-medium": {
+     "jaccard_preds": 0.31,
+     "jaccard_clauses": 0.007,
+     "consensus": 0.045
     },
     "deepseek": {
      "jaccard_preds": 0.25,
@@ -3478,18 +5938,23 @@
     }
    },
    "across": {
+    "astra~astra-medium": {
+     "jaccard_preds": 0.251,
+     "jaccard_clauses": 0.004,
+     "consensus": 0.02
+    },
     "astra~deepseek": {
      "jaccard_preds": 0.0,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~gemini": {
-     "jaccard_preds": 0.023,
+     "jaccard_preds": 0.022,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~kimi": {
-     "jaccard_preds": 0.0,
+     "jaccard_preds": 0.001,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
@@ -3499,11 +5964,41 @@
      "consensus": 0.0
     },
     "astra~opus": {
-     "jaccard_preds": 0.061,
+     "jaccard_preds": 0.058,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
     },
     "astra~qwen": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~deepseek": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~gemini": {
+     "jaccard_preds": 0.023,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~kimi": {
+     "jaccard_preds": 0.01,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~mistral": {
+     "jaccard_preds": 0.0,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~opus": {
+     "jaccard_preds": 0.036,
+     "jaccard_clauses": 0.0,
+     "consensus": 0.0
+    },
+    "astra-medium~qwen": {
      "jaccard_preds": 0.0,
      "jaccard_clauses": 0.0,
      "consensus": 0.0
@@ -3588,31 +6083,59 @@
  },
  "models": {
   "astra": {
-   "outputs": 15,
-   "load_ok": 1.0,
+   "outputs": 50,
+   "load_ok": 0.98,
    "module_directive": 1.0,
    "fenced": 0,
-   "mean_clauses": 22.067,
-   "mean_predicates": 10.2,
-   "mean_inputs": 11.267,
-   "mean_coverage": 0.782,
+   "mean_clauses": 22.38,
+   "mean_predicates": 10.58,
+   "mean_inputs": 11.5,
+   "mean_coverage": 0.768,
    "standard_violations": {
     "number_in_name": 0,
-    "modality_arity": 0,
+    "modality_arity": 1,
     "uppercase_or_digit_start": 0,
     "american_spelling": 0,
-    "export_mismatch": 0
+    "export_mismatch": 7
    },
    "singletons": 0,
    "within": {
-    "jaccard_preds": 0.366,
+    "jaccard_preds": 0.368,
     "jaccard_clauses": 0.03,
-    "consensus": 0.091
+    "consensus": 0.08
    },
    "across": {
-    "jaccard_preds": 0.044,
+    "jaccard_preds": 0.075,
     "jaccard_clauses": 0.003,
-    "consensus": 0.014
+    "consensus": 0.017
+   }
+  },
+  "astra-medium": {
+   "outputs": 50,
+   "load_ok": 0.96,
+   "module_directive": 1.0,
+   "fenced": 0,
+   "mean_clauses": 23.18,
+   "mean_predicates": 11.24,
+   "mean_inputs": 9.94,
+   "mean_coverage": 0.757,
+   "standard_violations": {
+    "number_in_name": 0,
+    "modality_arity": 1,
+    "uppercase_or_digit_start": 0,
+    "american_spelling": 0,
+    "export_mismatch": 17
+   },
+   "singletons": 1,
+   "within": {
+    "jaccard_preds": 0.288,
+    "jaccard_clauses": 0.016,
+    "consensus": 0.072
+   },
+   "across": {
+    "jaccard_preds": 0.069,
+    "jaccard_clauses": 0.003,
+    "consensus": 0.016
    }
   },
   "deepseek": {
@@ -3638,7 +6161,7 @@
     "consensus": 0.056
    },
    "across": {
-    "jaccard_preds": 0.043,
+    "jaccard_preds": 0.039,
     "jaccard_clauses": 0.003,
     "consensus": 0.006
    }
@@ -3666,8 +6189,8 @@
     "consensus": 0.088
    },
    "across": {
-    "jaccard_preds": 0.049,
-    "jaccard_clauses": 0.005,
+    "jaccard_preds": 0.05,
+    "jaccard_clauses": 0.004,
     "consensus": 0.01
    }
   },
@@ -3694,9 +6217,9 @@
     "consensus": 0.018
    },
    "across": {
-    "jaccard_preds": 0.046,
-    "jaccard_clauses": 0.002,
-    "consensus": 0.012
+    "jaccard_preds": 0.043,
+    "jaccard_clauses": 0.001,
+    "consensus": 0.011
    }
   },
   "mistral": {
@@ -3722,8 +6245,8 @@
     "consensus": 0.056
    },
    "across": {
-    "jaccard_preds": 0.026,
-    "jaccard_clauses": 0.006,
+    "jaccard_preds": 0.022,
+    "jaccard_clauses": 0.005,
     "consensus": 0.01
    }
   },
@@ -3750,9 +6273,9 @@
     "consensus": 0.174
    },
    "across": {
-    "jaccard_preds": 0.07,
-    "jaccard_clauses": 0.01,
-    "consensus": 0.023
+    "jaccard_preds": 0.075,
+    "jaccard_clauses": 0.007,
+    "consensus": 0.021
    }
   },
   "qwen": {
@@ -3778,9 +6301,9 @@
     "consensus": 0.185
    },
    "across": {
-    "jaccard_preds": 0.024,
-    "jaccard_clauses": 0.002,
-    "consensus": 0.007
+    "jaccard_preds": 0.021,
+    "jaccard_clauses": 0.001,
+    "consensus": 0.005
    }
   }
  },
@@ -3788,8 +6311,16 @@
   {
    "text": "art_11_par_1",
    "a": "astra",
+   "b": "astra-medium",
+   "jaccard_preds": 0.323,
+   "jaccard_clauses": 0.005,
+   "consensus": 0.02
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra",
    "b": "deepseek",
-   "jaccard_preds": 0.034,
+   "jaccard_preds": 0.03,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3797,7 +6328,7 @@
    "text": "art_11_par_1",
    "a": "astra",
    "b": "gemini",
-   "jaccard_preds": 0.197,
+   "jaccard_preds": 0.195,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3805,7 +6336,7 @@
    "text": "art_11_par_1",
    "a": "astra",
    "b": "kimi",
-   "jaccard_preds": 0.074,
+   "jaccard_preds": 0.072,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3821,7 +6352,7 @@
    "text": "art_11_par_1",
    "a": "astra",
    "b": "opus",
-   "jaccard_preds": 0.193,
+   "jaccard_preds": 0.191,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3830,6 +6361,54 @@
    "a": "astra",
    "b": "qwen",
    "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "deepseek",
+   "jaccard_preds": 0.031,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "gemini",
+   "jaccard_preds": 0.177,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.003
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "kimi",
+   "jaccard_preds": 0.071,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.002
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "mistral",
+   "jaccard_preds": 0.003,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "opus",
+   "jaccard_preds": 0.179,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_11_par_1",
+   "a": "astra-medium",
+   "b": "qwen",
+   "jaccard_preds": 0.009,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3956,8 +6535,16 @@
   {
    "text": "art_49_par_4",
    "a": "astra",
+   "b": "astra-medium",
+   "jaccard_preds": 0.241,
+   "jaccard_clauses": 0.022,
+   "consensus": 0.067
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra",
    "b": "deepseek",
-   "jaccard_preds": 0.0,
+   "jaccard_preds": 0.001,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -3973,9 +6560,9 @@
    "text": "art_49_par_4",
    "a": "astra",
    "b": "kimi",
-   "jaccard_preds": 0.0,
+   "jaccard_preds": 0.001,
    "jaccard_clauses": 0.0,
-   "consensus": 0.007
+   "consensus": 0.006
   },
   {
    "text": "art_49_par_4",
@@ -3989,15 +6576,63 @@
    "text": "art_49_par_4",
    "a": "astra",
    "b": "opus",
-   "jaccard_preds": 0.061,
+   "jaccard_preds": 0.059,
    "jaccard_clauses": 0.0,
-   "consensus": 0.01
+   "consensus": 0.003
   },
   {
    "text": "art_49_par_4",
    "a": "astra",
    "b": "qwen",
    "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "deepseek",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "gemini",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "kimi",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "mistral",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "opus",
+   "jaccard_preds": 0.038,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.003
+  },
+  {
+   "text": "art_49_par_4",
+   "a": "astra-medium",
+   "b": "qwen",
+   "jaccard_preds": 0.001,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4124,18 +6759,26 @@
   {
    "text": "art_50_par_2",
    "a": "astra",
+   "b": "astra-medium",
+   "jaccard_preds": 0.177,
+   "jaccard_clauses": 0.027,
+   "consensus": 0.066
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra",
    "b": "deepseek",
-   "jaccard_preds": 0.007,
+   "jaccard_preds": 0.012,
    "jaccard_clauses": 0.0,
-   "consensus": 0.013
+   "consensus": 0.019
   },
   {
    "text": "art_50_par_2",
    "a": "astra",
    "b": "gemini",
-   "jaccard_preds": 0.124,
+   "jaccard_preds": 0.099,
    "jaccard_clauses": 0.0,
-   "consensus": 0.018
+   "consensus": 0.027
   },
   {
    "text": "art_50_par_2",
@@ -4143,7 +6786,7 @@
    "b": "kimi",
    "jaccard_preds": 0.0,
    "jaccard_clauses": 0.0,
-   "consensus": 0.015
+   "consensus": 0.03
   },
   {
    "text": "art_50_par_2",
@@ -4151,21 +6794,69 @@
    "b": "mistral",
    "jaccard_preds": 0.0,
    "jaccard_clauses": 0.0,
-   "consensus": 0.025
+   "consensus": 0.036
   },
   {
    "text": "art_50_par_2",
    "a": "astra",
    "b": "opus",
-   "jaccard_preds": 0.104,
+   "jaccard_preds": 0.118,
    "jaccard_clauses": 0.0,
-   "consensus": 0.048
+   "consensus": 0.071
   },
   {
    "text": "art_50_par_2",
    "a": "astra",
    "b": "qwen",
-   "jaccard_preds": 0.023,
+   "jaccard_preds": 0.013,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "deepseek",
+   "jaccard_preds": 0.006,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.019
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "gemini",
+   "jaccard_preds": 0.082,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.026
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "kimi",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.026
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "mistral",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.035
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "opus",
+   "jaccard_preds": 0.088,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.069
+  },
+  {
+   "text": "art_50_par_2",
+   "a": "astra-medium",
+   "b": "qwen",
+   "jaccard_preds": 0.007,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4292,8 +6983,16 @@
   {
    "text": "rct_135",
    "a": "astra",
+   "b": "astra-medium",
+   "jaccard_preds": 0.369,
+   "jaccard_clauses": 0.028,
+   "consensus": 0.104
+  },
+  {
+   "text": "rct_135",
+   "a": "astra",
    "b": "deepseek",
-   "jaccard_preds": 0.059,
+   "jaccard_preds": 0.053,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4309,7 +7008,7 @@
    "text": "rct_135",
    "a": "astra",
    "b": "kimi",
-   "jaccard_preds": 0.034,
+   "jaccard_preds": 0.033,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4325,17 +7024,65 @@
    "text": "rct_135",
    "a": "astra",
    "b": "opus",
-   "jaccard_preds": 0.275,
-   "jaccard_clauses": 0.09,
-   "consensus": 0.241
+   "jaccard_preds": 0.262,
+   "jaccard_clauses": 0.035,
+   "consensus": 0.114
   },
   {
    "text": "rct_135",
    "a": "astra",
    "b": "qwen",
-   "jaccard_preds": 0.005,
+   "jaccard_preds": 0.007,
    "jaccard_clauses": 0.0,
-   "consensus": 0.041
+   "consensus": 0.018
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "deepseek",
+   "jaccard_preds": 0.037,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "gemini",
+   "jaccard_preds": 0.028,
+   "jaccard_clauses": 0.002,
+   "consensus": 0.013
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "kimi",
+   "jaccard_preds": 0.033,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "mistral",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "opus",
+   "jaccard_preds": 0.196,
+   "jaccard_clauses": 0.02,
+   "consensus": 0.086
+  },
+  {
+   "text": "rct_135",
+   "a": "astra-medium",
+   "b": "qwen",
+   "jaccard_preds": 0.001,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.018
   },
   {
    "text": "rct_135",
@@ -4460,6 +7207,14 @@
   {
    "text": "rct_34",
    "a": "astra",
+   "b": "astra-medium",
+   "jaccard_preds": 0.251,
+   "jaccard_clauses": 0.004,
+   "consensus": 0.02
+  },
+  {
+   "text": "rct_34",
+   "a": "astra",
    "b": "deepseek",
    "jaccard_preds": 0.0,
    "jaccard_clauses": 0.0,
@@ -4469,7 +7224,7 @@
    "text": "rct_34",
    "a": "astra",
    "b": "gemini",
-   "jaccard_preds": 0.023,
+   "jaccard_preds": 0.022,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4477,7 +7232,7 @@
    "text": "rct_34",
    "a": "astra",
    "b": "kimi",
-   "jaccard_preds": 0.0,
+   "jaccard_preds": 0.001,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
@@ -4493,13 +7248,61 @@
    "text": "rct_34",
    "a": "astra",
    "b": "opus",
-   "jaccard_preds": 0.061,
+   "jaccard_preds": 0.058,
    "jaccard_clauses": 0.0,
    "consensus": 0.0
   },
   {
    "text": "rct_34",
    "a": "astra",
+   "b": "qwen",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
+   "b": "deepseek",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
+   "b": "gemini",
+   "jaccard_preds": 0.023,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
+   "b": "kimi",
+   "jaccard_preds": 0.01,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
+   "b": "mistral",
+   "jaccard_preds": 0.0,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
+   "b": "opus",
+   "jaccard_preds": 0.036,
+   "jaccard_clauses": 0.0,
+   "consensus": 0.0
+  },
+  {
+   "text": "rct_34",
+   "a": "astra-medium",
    "b": "qwen",
    "jaccard_preds": 0.0,
    "jaccard_clauses": 0.0,

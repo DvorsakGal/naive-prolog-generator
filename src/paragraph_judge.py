@@ -224,13 +224,19 @@ def score_pair(j: dict, n_sentences: int, swapped: bool) -> dict:
 
 # ------------------------------------------------------------------- pairs
 
-def list_pairs(root: Path, texts: list[str]) -> list[tuple[str, str, str, str, str]]:
-    """(kind, text, label_a, label_b, ...) with labels like 'kimi/seed_2'."""
+def list_pairs(root: Path, texts: list[str], max_seeds: int | None = None) -> list[tuple[str, str, str, str, str]]:
+    """(kind, text, label_a, label_b, ...) with labels like 'kimi/seed_2'.
+
+    `max_seeds` caps the within-model pairs to the lowest N seeds of each model: with 10
+    seeds the 45 pairs per text and model are not worth paying for, since the scenario
+    answer agreement measures the same thing without a call."""
     pairs = []
     for tid in texts:
         models = sorted(d.name for d in (root / tid).iterdir() if d.is_dir())
         for m in models:
             seeds = sorted(int(f.stem.split("_")[1]) for f in (root / tid / m).glob("seed_*.pl"))
+            if max_seeds:
+                seeds = seeds[:max_seeds]
             for s1, s2 in combinations(seeds, 2):
                 pairs.append(("within", tid, f"{m}/seed_{s1}", f"{m}/seed_{s2}"))
         for m1, m2 in combinations(models, 2):
@@ -256,9 +262,12 @@ async def run(args: argparse.Namespace) -> int:
     if args.only:
         texts = {k: v for k, v in texts.items() if k in set(args.only.split(","))}
     sentences = {tid: split_sentences(t) for tid, t in texts.items()}
-    pairs = list_pairs(root, sorted(texts))
+    pairs = list_pairs(root, sorted(texts), args.max_seeds)
     if args.kind != "both":
         pairs = [p for p in pairs if p[0] == args.kind]
+    if args.models:
+        keep = set(args.models)
+        pairs = [p for p in pairs if p[2].split("/")[0] in keep and p[3].split("/")[0] in keep]
     rng = random.Random(ORDER_SEED)
     order = {(p[1], p[2], p[3]): rng.random() < 0.5 for p in pairs}      # True = swap A/B
 
@@ -446,6 +455,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--kind", choices=("within", "across", "both"), default="both")
     p.add_argument("--only", default="", help="comma-separated text ids")
     p.add_argument("--concurrency", type=int, default=4)
+    p.add_argument("--max-seeds", type=int, default=3,
+                   help="within-model pairs use only the lowest N seeds per model (default 3); 0 = all")
+    p.add_argument("--models", nargs="*", default=None, help="restrict to these model folders")
     p.add_argument("--force", action="store_true")
     p.add_argument("--summary-only", action="store_true", help="recompute the summary from stored judgements")
     return p

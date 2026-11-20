@@ -1,19 +1,19 @@
 {
- "key": "d65901f3ae7410e2dd806817fe506b634322b799d0a60a11d2987cf8af508e38",
+ "key": "b4a60baf0cb204006365c3d1a57068e3a0d7a83e0d702bf9f509de33d4d5e52c",
  "kind": "within",
  "text": "art_50_par_2",
  "a": "astra/seed_2",
  "b": "astra/seed_3",
- "swapped": true,
+ "swapped": false,
  "judge": "openai/gpt-5.4",
  "reasoning": "medium",
- "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"no\"}\n  ],\n  \"overall\": \"mostly_same\",\n  \"note\": \"Both modules represent the main marking and technical-quality obligations similarly, but they differ on the exemptions, especially because A collapses non-substantial alteration of input data and semantics into one condition while B separates them and adds broader function-scoping requirements.\"\n}",
- "coverage_a": 0.5,
- "coverage_b": 0.5,
+ "raw": "{\n  \"sentences\": [\n    {\"n\": 1, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 2, \"a\": \"partial\", \"b\": \"partial\", \"agree\": \"yes\"},\n    {\"n\": 3, \"a\": \"full\", \"b\": \"full\", \"agree\": \"yes\"}\n  ],\n  \"overall\": \"same\",\n  \"note\": \"none\"\n}",
+ "coverage_a": 0.667,
+ "coverage_b": 0.667,
  "jointly_captured": 3,
- "agreement": 0.667,
- "overall": "mostly_same",
- "note": "Both modules represent the main marking and technical-quality obligations similarly, but they differ on the exemptions, especially because A collapses non-substantial alteration of input data and semantics into one condition while B separates them and adds broader function-scoping requirements.",
+ "agreement": 1.0,
+ "overall": "same",
+ "note": "none",
  "sentences_judged": 3,
  "judgement": [
   {
@@ -30,13 +30,13 @@
   },
   {
    "n": 3,
-   "a": "partial",
-   "b": "partial",
-   "agree": "no"
+   "a": "full",
+   "b": "full",
+   "agree": "yes"
   }
  ],
  "judge_frame": {
-  "A": "astra/seed_3",
-  "B": "astra/seed_2"
+  "A": "astra/seed_2",
+  "B": "astra/seed_3"
  }
 }

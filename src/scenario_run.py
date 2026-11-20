@@ -705,6 +705,16 @@ def mean(xs):
     return round(sum(xs) / len(xs), 3) if xs else None
 
 
+def norm_spread(rates: list) -> dict:
+    """Per-norm pass rate over seeds: mean, min, max, and how many seeds pass it fully
+    or fail it entirely. 'always 0' is a prompt problem, 'some seeds' a stability one."""
+    xs = [x for x in rates if x is not None]
+    if not xs:
+        return {"mean": None}
+    return {"mean": round(sum(xs) / len(xs), 3), "min": min(xs), "max": max(xs),
+            "seeds": len(xs), "seeds_full": sum(x == 1.0 for x in xs), "seeds_zero": sum(x == 0.0 for x in xs)}
+
+
 def summarise(root: Path, specs: dict[str, Spec]) -> None:
     sdir = root / "scenarios"
     rows = [json.loads(f.read_text()) for f in sorted(sdir.glob("*/*/seed_*.json"))]
@@ -737,7 +747,7 @@ def summarise(root: Path, specs: dict[str, Spec]) -> None:
                 "adapter_dropped": sum(len(r["adapter_clauses"]["dropped"]) for r in rs),
                 "cost_total": round(sum(cost), 4) if cost else None,
                 "cost_per_passed_scenario": round(sum(cost) / passed, 4) if cost and passed else None,
-                "per_norm": {n: mean([r["per_norm"].get(n, {}).get("rate") for r in rs]) for n in specs[tid].norms},
+                "per_norm": {n: norm_spread([r["per_norm"].get(n, {}).get("rate") for r in rs]) for n in specs[tid].norms},
             }
         # across models: answer agreement, seed 1 vs seed 1 and all pairs
         across = {}
@@ -761,6 +771,19 @@ def summarise(root: Path, specs: dict[str, Spec]) -> None:
                   f"{v['false_positive']:>4}{v['missed']:>5}{v['unanswerable']:>6}{ag:>7}{v['adapter_dropped']:>5}{cp:>8}")
         print("  pass = mean scenario pass rate over seeds; core = without interpretive scenarios; fp/miss/unans summed over")
         print("  all queries of all seeds; agree = within-model answer agreement over seed pairs; drop = adapter clauses dropped by lint")
+    for src, s in summary.items():
+        for tid, spec in specs.items():
+            keys = [k for k in s["by_text_model"] if k.startswith(tid + "/")]
+            if not keys:
+                continue
+            print(f"\n== per norm, {tid}, adapters: {src}  (mean pass rate over seeds; F = seeds passing fully, Z = seeds at zero) ==")
+            print(f"  {'norm':<28}" + "".join(f"{k.split('/')[1][:14]:>18}" for k in keys))
+            for n in spec.norms:
+                cells = []
+                for k in keys:
+                    v = s["by_text_model"][k]["per_norm"][n]
+                    cells.append("-" if v["mean"] is None else f"{v['mean']:.2f} F{v['seeds_full']}/Z{v['seeds_zero']}/{v['seeds']}")
+                print(f"  {n:<28}" + "".join(f"{c:>18}" for c in cells))
     for tid, spec in specs.items():
         write_review(sdir, tid, spec, [r for r in rows if r["text"] == tid])
     print(f"\nwrote {sdir / 'summary.json'} and {sdir}/<text>.md")
